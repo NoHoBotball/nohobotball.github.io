@@ -38,7 +38,7 @@
         </header>
 
 
-        <main style="padding-left:16px">
+        <main class="container">
             <h1><strong>Contact Us</strong></h1>
             <h5>We will get back to you as soon as possible</h5>
             <form id="emailForm" onsubmit="sendTheMail()">
@@ -105,13 +105,13 @@
 
                 function log(obj) {
                     $('#response').text(JSON.stringify(obj));
+                    alert("Message sent! We will get back to you soon!");
                     location.reload();
                 }
             </script>
         </main>
 
-
-        <footer class="page-footer" style="background-color:#607D8B">
+        <footer class="page-footer blue-grey">
             <div class="container">
                 <div class="row">
                     <div class="col l6 s12">
