@@ -17,53 +17,97 @@
         <header>
             <nav>
                 <div class="nav-wrapper" style="background-color:#009688">
-                    <a href="#!" class="brand-logo" id="top">NHHS Botball Team</a>
+                    <a href="index.html" class="brand-logo" id="top" style="padding-left:16px">NHHS Botball Team</a>
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down">
                         <li><a href="">Our Team</a></li>
                         <li><a href="">What We Do</a></li>
                         <li><a href="">About</a></li>
-                        <li><a href="">Donate</a></li>
+                        <li><a href="">Support Us</a></li>
+                        <li class="active"><a href="">Contact</a></li>
                     </ul>
                     <ul class="side-nav" id="mobile-demo">
                         <li><a href="">Our Team</a></li>
                         <li><a href="">What We Do</a></li>
                         <li><a href="">About</a></li>
-                        <li><a href="">Donate</a></li>
+                        <li><a href="">Support Us</a></li>
+                        <li class="active"><a href="">Contact</a></li>
                     </ul>
                 </div>
             </nav>
         </header>
 
 
-        <main>
+        <main style="padding-left:16px">
             <h1><strong>Contact Us</strong></h1>
             <h5>We will get back to you as soon as possible</h5>
-            <script language="javascript">var sa_email_id = '65195-fd68d';var sa_sent_text = 'Thank you for contacting us. We will get back to you soon.';</script>
-            <script language="javascript" src="http://s1.smartaddon.com/sa_htmlform.js"></script>
-            <div id="sa_contactdiv">
-                <form name=sa_htmlform style="margin:0px" onsubmit="return sa_contactform()">
-                    <table>
-                        <tr><td>
-                            <label>Name <span style="color:#D70000">*</span></label>
-                            <input type="text" name="name" required="true" />
-                        </td></tr>
-                        <tr><td>
-                            <label>E-mail Address <span style="color:#D70000">*</span></label>
-                            <input type="text" name="email" required="true" />
-                        </td></tr>
-                        <tr><td>
-                            <label>Subject <span style="color:#D70000">*</span></label><br>
-                            <input type="text" name="subject" required="true" />
-                        </td></tr>
-                        <tr><td>
-                            <label for="textArea1">Message <span style="color:#D70000">*</span></label>
-                            <textarea class="materialize-textarea" name="message" cols="42" rows="9" required="true"></textarea>
-                        </td></tr>
-                        <tr><td><input type="submit" class="btn waves-effect waves-light" value="Send Message"></td></tr>
-                    </table>
-                </form>
-            </div>
+            <form id="emailForm" onsubmit="sendTheMail()">
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="first_name" type="text" class="validate" required>
+                                <label for="first_name">Name *</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="email" type="email" class="validate" required>
+                                <label for="email">Email *</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="subjecta" type="text" class="validate" required>
+                                <label for="subjecta">Subject *</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea id="message" class="validate materialize-textarea" required></textarea>
+                                <label for="message">Message *</label>
+                            </div>
+                        </div>
+                        <button class="btn waves-effect waves-light" type="submit">Submit
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </form>
+                </div>
+            </form>
+
+            <script type="text/javascript" src="https://mandrillapp.com/api/docs/js/mandrill.js"></script>
+            <script>
+                $( "#emailForm" ).submit(function( event ) {
+                    event.preventDefault();
+                });
+                function sendTheMail() {
+                    var m = new mandrill.Mandrill('dZ5RmxDlVK75u2-mrX0Xxg');
+                    var subject = document.getElementById('subjecta').value;
+                    var senderName = document.getElementById('first_name').value;
+                    var senderEmail = document.getElementById('email').value;
+                    var messageText = "Name: " + senderName + "\nEmail: " + senderEmail + "\nMessage:\n\n" + document.getElementById('message').value;
+
+                    // create a variable for the API call parameters
+                    var params = {
+                        "message": {
+                            "from_email":"contact@nohobotball.org",
+                            "from_name":"Contact Us - nohobotball.org",
+                            "to":[{"email":"donate@nohobotball.org"}],
+                            "subject": "Message from " + senderEmail + ": " + subject,
+                            "text": messageText
+                        }
+                    };
+
+                    m.messages.send(params, function(res) {
+                        log(res);
+                    }, function(err) {
+                        log(err);
+                    });
+                }
+
+                function log(obj) {
+                    $('#response').text(JSON.stringify(obj));
+                    location.reload();
+                }
+            </script>
         </main>
 
 
