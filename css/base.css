@@ -2,11 +2,11 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-  }
+}
 
 main {
     flex: 1 0 auto;
-  }
+}
 
 .header {
     font-weight: 300;
@@ -16,4 +16,30 @@ main {
     font-size: 1.25rem;
     font-weight: 300;
     margin-bottom: 30px;
+}
+
+.bold > a{
+    font-weight: bold;
+}
+
+.sponsor {
+    width: 100%;
+}
+.sponsor i {
+    margin: 40px 0;
+    font-size: large;
+    display: block;
+}
+
+.sponsor-caption {
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.navicon {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
