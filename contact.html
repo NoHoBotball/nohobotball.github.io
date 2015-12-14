@@ -8,7 +8,7 @@
         
         <title>NHHS Botball Team</title>
 
-        <meta name="theme-color" content="#00796b">
+        <meta name="theme-color" content="#0097A7">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
@@ -18,24 +18,24 @@
 
         <header>
             <nav>
-                <div class="nav-wrapper teal">
+                <div class="nav-wrapper cyan">
                     <a style="padding-left:16px" href="index.html" class="brand-logo" id="top">NHHS Botball Team</a>
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down">
-                        <li><a href="">Our Team</a></li>
-                        <li><a href="">What We Do</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="donate.html">Support Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li class="waves-effect"><a href="">Our Team</a></li>
+                        <li class="waves-effect"><a href="">What We Do</a></li>
+                        <li class="waves-effect"><a href="">About</a></li>
+                        <li class="waves-effect"><a href="donate.html">Support Us</a></li>
+                        <li class="waves-effect active"><a href="contact.html">Contact</a></li>
                     </ul>
                     <ul class="side-nav" id="mobile-demo">
-                        <li class="bold"><a href=""><i class="material-icons left navicon">menu</i>NHHS Botball Team</a></li>
-                        <li class="active"><a href="index.html"><i class="material-icons left navicon">home</i>Home</a></li>
-                        <li><a href=""><i class="material-icons left navicon">group</i>Our Team</a></li>
-                        <li><a href=""><i class="material-icons left navicon">help</i>What We Do</a></li>
-                        <li><a href=""><i class="material-icons left navicon">info</i>About</a></li>
-                        <li><a href="donate.html"><i class="material-icons left navicon">tag_faces</i>Support Us</a></li>
-                        <li><a href="contact.html"><i class="material-icons left navicon">mail</i>Contact</a></li>
+                        <li class="cyan"><a class="waves-effect white-text" href=""><i class="material-icons left navicon">menu</i>NHHS Botball Team</a></li>
+                        <li><a class="waves-effect" href="index.html"><i class="material-icons left navicon">home</i>Home</a></li>
+                        <li><a class="waves-effect" href=""><i class="material-icons left navicon">group</i>Our Team</a></li>
+                        <li><a class="waves-effect" href=""><i class="material-icons left navicon">help</i>What We Do</a></li>
+                        <li><a class="waves-effect" href=""><i class="material-icons left navicon">info</i>About</a></li>
+                        <li><a class="waves-effect" href="donate.html"><i class="material-icons left navicon">tag_faces</i>Support Us</a></li>
+                        <li class="cyan lighten-3"><a class="waves-effect" href="contact.html"><i class="material-icons left navicon">mail</i>Contact</a></li>
                     </ul>
                 </div>
             </nav>
@@ -43,8 +43,8 @@
 
 
         <main class="container">
-            <h1><strong>Contact Us</strong></h1>
-            <h5>We will get back to you as soon as possible</h5>
+            <h1 class="header cyan-text">Contact Us</h1>
+            <h5 class="header">We will get back to you as soon as possible</h5>
             <form id="emailForm" onsubmit="sendTheMail()">
                 <div class="row">
                     <form class="col s12">
@@ -70,7 +70,7 @@
                                 <label for="message">Message *</label>
                             </div>
                         </div>
-                        <button class="btn waves-effect waves-light" type="submit">Submit
+                        <button class="btn waves-effect waves-light cyan" type="submit">Submit
                             <i class="material-icons right">send</i>
                         </button>
                     </form>
@@ -115,19 +115,19 @@
             </script>
         </main>
 
-        <footer class="page-footer blue-grey">
+<footer class="page-footer blue-grey">
             <div class="container">
                 <div class="row">
                     <div class="col l6 s12">
                         <h5 class="white-text">NHHS Botball Team</h5>
-                        <p class="grey-text text-lighten-4">We work hard to build robots for the Botball competition. This text is temporary.</p>
+                        <p class="grey-text text-lighten-4">We are a completely student-run robotics club which builds and programs robots for the KIPR Botball competition.</p>
                     </div>
                     <div class="col l4 offset-l2 s12">
                         <h5 class="white-text">Links</h5>
                         <ul>
-                            <li><a class="grey-text text-lighten-3" href="#!">About</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Donate</a></li>
-
+                            <li><a class="grey-text text-lighten-3 waves-effect waves-light" href="">About</a></li>
+                            <li><a class="grey-text text-lighten-3 waves-effect waves-light" href="donate.html">Support Us</a></li>
+                            <li><a class="grey-text text-lighten-3 waves-effect waves-light" href="http://materializecss.com/">Materialize CSS</a></li>
                         </ul>
                     </div>
                 </div>
@@ -135,10 +135,11 @@
             <div class="footer-copyright" style="background-color:">
                 <div class="container">
                     © 2015 North Hollywood High School Botball Team
-                    <a class="grey-text text-lighten-4 right" href="#top">Back to Top</a>
+                    <a class="grey-text text-lighten-4 right waves-effect waves-light" href="#top">Back to Top</a>
                 </div>
             </div>
         </footer>
+
 
         <script>
             $( document ).ready(function(){

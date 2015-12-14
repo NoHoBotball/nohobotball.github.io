@@ -57,3 +57,7 @@ main {
 .cardtext {
     font-size: medium;
 }
+
+.multicard {
+    height: 1px;
+}
