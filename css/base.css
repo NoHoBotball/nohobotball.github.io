@@ -48,13 +48,13 @@ main {
     padding-bottom: 10px;
 }
 
-.navicon {
+.center-vert {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.paypal {
+.center-horiz {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
