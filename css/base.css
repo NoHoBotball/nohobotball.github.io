@@ -32,14 +32,28 @@ main {
 }
 
 .sponsor-caption {
-    font-size: 1.7rem;
+    font-size: 22px;
     font-weight: 500;
     margin-top: 5px;
     margin-bottom: 0;
+}
+
+.sponsortext {
+    font-size: 18px;
+    font-weight: 200;
+    margin-top: 0;
+}
+
+.sponsor {
+    padding-bottom: 10px;
 }
 
 .navicon {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+}
+
+.cardtext {
+    font-size: medium;
 }
