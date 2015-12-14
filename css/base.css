@@ -54,6 +54,12 @@ main {
     transform: translateY(-50%);
 }
 
+.paypal {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .cardtext {
     font-size: medium;
 }
