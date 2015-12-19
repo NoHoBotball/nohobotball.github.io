@@ -5,7 +5,7 @@
         <link type="text/css" rel="stylesheet" href="css/base.css">
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
         <link rel="icon" href="http://imgur.com/4np8bri.png">
-        
+
         <title>NHHS Botball Team</title>
 
         <meta name="theme-color" content="#0097A7">
@@ -45,83 +45,61 @@
             <h1 class="header cyan-text">Contact Us</h1>
             <h5 class="header">We will get back to you as soon as possible</h5>
             <h2 class="header">Email</h2>
-            <form id="emailForm" onsubmit="sendTheMail()">
+            <!--<form id="emailForm" onsubmit="sendTheMail()">-->
+            <form id="emailForm" method="POST" action="http://formspree.io/contact@nohobotball.org">
                 <div class="row">
                     <form class="col s12">
                         <div class="row">
                             <div class="input-field col s6">
-                                <input id="first_name" type="text" class="validate" required>
+                                <input id="first_name" type="text" class="validate" name="Name" required>
                                 <label for="first_name">Name *</label>
                             </div>
                             <div class="input-field col s6">
-                                <input id="email" type="email" class="validate" required>
+                                <input id="email" type="email" class="validate" name="Email" required>
                                 <label for="email">Email *</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="subjecta" type="text" class="validate" required>
+                                <input id="subjecta" type="text" class="validate" name="_subject" required>
                                 <label for="subjecta">Subject *</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <textarea id="message" class="validate materialize-textarea" required></textarea>
+                                <textarea id="message" class="validate materialize-textarea" name="Message" required></textarea>
                                 <label for="message">Message *</label>
                             </div>
                         </div>
                         <button class="btn waves-effect waves-light cyan" type="submit">Submit
                             <i class="material-icons right">send</i>
                         </button>
+                        <input type="text" name="_gotcha" style="display:none">
+                        <input type="hidden" name="_next" value="http://nohobotball.org/contact.html?sent=1" style="display:none">
                     </form>
                 </div>
             </form>
 
             <h2 class="header">Call</h2>
             <h5>You can call North Hollywood High School during school hours (8:00-3:15 M-F) at (818) 753-6200. Ask for Mr. Lewis, our club sponsor.</h5>
-            
+
             <h2 class="header">Mail</h2>
             <h5>You can send mail to North Hollywood High School with this address:<br><br>North Hollywood High School<br>ATN: Mr. Lewis, Botball Club<br>5231 Colfax Avenue<br>North Hollywood, CA 91601</h5>
-            
-            <script type="text/javascript" src="https://mandrillapp.com/api/docs/js/mandrill.js"></script>
+
             <script>
-                $( "#emailForm" ).submit(function( event ) {
-                    event.preventDefault();
-                });
-                function sendTheMail() {
-                    var m = new mandrill.Mandrill('dZ5RmxDlVK75u2-mrX0Xxg');
-                    var subject = document.getElementById('subjecta').value;
-                    var senderName = document.getElementById('first_name').value;
-                    var senderEmail = document.getElementById('email').value;
-                    var messageText = "Name: " + senderName + "\nEmail: " + senderEmail + "\nMessage:\n\n" + document.getElementById('message').value;
-
-                    // create a variable for the API call parameters
-                    var params = {
-                        "message": {
-                            "from_email":"contact@nohobotball.org",
-                            "from_name":"Contact Us - nohobotball.org",
-                            "to":[{"email":"donate@nohobotball.org"}, {"email":"donate@aopell.me"}],
-                            "subject": "Message from " + senderEmail + ": " + subject,
-                            "text": messageText
-                        }
-                    };
-
-                    m.messages.send(params, function(res) {
-                        log(res);
-                    }, function(err) {
-                        log(err);
-                    });
-                }
-
-                function log(obj) {
-                    $('#response').text(JSON.stringify(obj));
-                    alert("Message sent! We will get back to you soon!");
-                    location.reload();
+                if (window.location.search.indexOf('sent=1') > -1) {
+                    Materialize.toast('Message Sent', 2500);
+                    setTimeout(function(){
+                        Materialize.toast('Thanks for contacting us!', 5000);
+                    }, 2500);
+                    setTimeout(function(){
+                        Materialize.toast("We'll get back to you soon!", 5000);
+                    }, 5000);
                 }
             </script>
         </main>
 
-<footer class="page-footer blue-grey">
+        <footer class="page-footer blue-grey">
             <div class="container">
                 <div class="row">
                     <div class="col l6 s12">
