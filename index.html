@@ -118,6 +118,16 @@
                     </a>
                 </div>
             </div>
+            <div id="promo-video" class="modal" style="max-height:90%;height:90%;top:5%;bottom:5%;width:80%">
+                <div class="modal-content" style="width:100%;height:85%">
+                    <h4>Watch Our Promo Video!</h4>
+                    <iframe class="center-horiz" src="https://drive.google.com/file/d/0B7IWZ3_cz16oX0FkcnVfVjRYTGs/preview?" width="100%" height="100%"></iframe>
+                    <p style="margin-bottom:0; padding-bottom:0;">You can toggle captions by clicking the CC button in the video settings. Click outside this window to close.</p>
+                </div>
+                <div class="modal-footer" style="margin:0;padding:0">
+
+                </div>
+            </div>
             <!--h4 class="center">And A Big Thank You Too Our Other Smaller Sponsors!</h4-->
         </main>
 
@@ -148,6 +158,11 @@
         </footer>
 
         <script>
+            var rand = Math.random();
+            if(rand < 0.2) {
+                $('#promo-video').openModal();
+            }
+
             $( document ).ready(function(){
                 $(".button-collapse").sideNav();
                 $('.slider').slider({full_width: true, interval: 5000, height: 600});
