@@ -44,6 +44,15 @@
         <main class="container">
             <h1 class="teal-text header">Welcome</h1>
             <h2 class="header">To the North Hollywood High School Botball Team</h2>
+
+            <div class="row" id="watch-vid">
+                <div class="col s12">
+                    <div class="card-panel deep-orange">
+                        <h4 class="white-text">Watch Our Promo Video!<a class="waves-effect btn-flat right white-text" id="close-vid" style="font-size:50%">close</a></h4>
+                        <a class="deep-orange darken-4 waves-effect btn btn-large modal-trigger" href="#promo-video" style="width:100%">Watch Now!</a>
+                    </div>
+                </div>
+            </div>
             <div class="slider">
                 <ul class="slides">
                     <li>
@@ -118,13 +127,13 @@
                     </a>
                 </div>
             </div>
-            <div id="promo-video" class="modal">
-                <div class="modal-content">
+            <div id="promo-video" class="modal" style="max-height:90%;height:90%;top:5%;bottom:5%;width:80%">
+                <div class="modal-content" style="width:100%;height:85%">
                     <h4>Watch Our Promo Video!<a class="modal-action modal-close waves-effect waves-red btn-flat right" style="font-size:50%">close</a></h4>
-                    <a class="teal waves-effect btn btn-large" href="donate.html" style="width:100%">Watch Now!</a>
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/r_EpzX9w-Tg" frameborder="0"></iframe>
+                    <p style="margin-bottom:0; padding-bottom:0;">You can toggle captions by clicking the CC button in the video settings. Click outside this window to close.</p>
                 </div>
             </div>
-            <!--h4 class="center">And A Big Thank You Too Our Other Smaller Sponsors!</h4-->
         </main>
 
 
@@ -154,15 +163,14 @@
         </footer>
 
         <script>
-            var rand = Math.random();
-            if(rand < 0.25) {
-                $('#promo-video').openModal();
-            }
-
             $( document ).ready(function(){
                 $(".button-collapse").sideNav();
                 $('.slider').slider({full_width: true, interval: 5000, height: 600});
-            })
+                $("#close-vid").click(function() {
+                    $("#watch-vid").remove(); 
+                });
+                $('.modal-trigger').leanModal();
+            });
         </script>
     </body>
 </html>
