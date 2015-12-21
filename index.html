@@ -169,14 +169,16 @@
                 $("#close-vid").click(function() {
                     $("#watch-vid").remove();
                     setCookie("showVideo","false",30);
-                    Materialize.toast('If you change your mind:', 2500);
-                    Materialize.toast('You can still watch it on our Support Us page!', 2500);
+                    Materialize.toast('If you change your mind', 5000);
+                    setTimeout(function(){
+                    Materialize.toast('You can still watch it on our Support Us page!', 5000);
+                    }, 2000);
                 });
                 $('.modal-trigger').leanModal();
             });
 
-            checkCookie();
-            
+            checkVideoCookie();
+
             function setCookie(cname, cvalue, exdays) {
                 var d = new Date();
                 d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -195,7 +197,7 @@
                 return "";
             }
 
-            function checkCookie() {
+            function checkVideoCookie() {
                 var user = getCookie("showVideo");
                 if (user == "false") {
                     $("#watch-vid").remove();
