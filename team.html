@@ -46,6 +46,17 @@
             <h1 class="green-text header">Our Team</h1>
             <h2 class="header">Info about our team members coming soon</h2>
             <h5  class="header">Teamwork is key to building a succesful robot. We have to work together and coordinate in order to face the time and material restrictions placed upon us.<br>Here is what some of our team has to say about Botball.</h5>
+
+            <div id="not-finished" class="modal">
+                <div class="modal-content">
+                    <h3 class="header">Sorry!</h3>
+                    <h5 class="header">This page isn't ready yet and will be finished in January when school resumes.</h5>
+                </div>
+                <div class="modal-footer">
+                    <a href="index.html" class="modal-action modal-close waves-effect waves-red btn-flat">Go Back Home</a>
+                </div>
+            </div>
+
             <div class="row">
                 <div class="col s12 m6">
                     <div class="card waves-effect waves-block green">
@@ -222,6 +233,10 @@
 
 
         <script>
+            $('#not-finished').openModal({
+                dismissible: false,
+            });
+
             $( document ).ready(function(){
                 $(".button-collapse").sideNav();
             })
