@@ -167,7 +167,9 @@
                 $(".button-collapse").sideNav();
                 $('.slider').slider({full_width: true, interval: 5000, height: 600});
                 $("#close-vid").click(function() {
-                    $("#watch-vid").remove(); 
+                    $("#watch-vid").remove();
+                    Materialize.toast('If you change your mind:', 2500);
+                    Materialize.toast('You can still watch it on our Support Us page!', 2500);
                 });
                 $('.modal-trigger').leanModal();
             });
