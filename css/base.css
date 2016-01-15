@@ -48,6 +48,10 @@ main {
     padding-bottom: 10px;
 }
 
+.sponsor-pic {
+    padding-top: 13px;
+}
+
 .center-vert {
     position: relative;
     top: 50%;
