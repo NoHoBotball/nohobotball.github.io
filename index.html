@@ -15,6 +15,7 @@
     <body>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript" src="js/mix.js"></script>
 
         <header>
             <nav>
@@ -176,6 +177,7 @@
                 $('.slider').slider({full_width: true, interval: 5000, height: 600});
                 $("#close-vid").click(function() {
                     $("#watch-vid").remove();
+                    mixpanel.track("Video Close home");
                     setCookie("showVideo","false",30);
                     Materialize.toast('If you change your mind', 5000);
                     setTimeout(function(){
@@ -209,6 +211,7 @@
                 var user = getCookie("showVideo");
                 if (user == "false") {
                     $("#watch-vid").remove();
+                    mixpanel.track("Home page revisit");
                 }
             }
         </script>
