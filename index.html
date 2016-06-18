@@ -63,7 +63,7 @@
                     </div>
                 </div>
             </div-->
-        <div class="slider">
+        <div class="slider" style="height: 100%;">
             <ul class="slides">
                 <li>
                     <img src="http://i.imgur.com/5eXrqoF.jpg">
@@ -245,7 +245,7 @@
     <script>
             $( document ).ready(function(){
                 $(".button-collapse").sideNav();
-                $('.slider').slider({full_width: true, interval: 5000, height: 600});
+                $('.slider').slider({full_width: true, interval: 5000, height: 800});
                 $("#close-vid").click(function() {
                     $("#watch-vid").remove();
                     mixpanel.track("Video Close home");
