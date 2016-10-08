@@ -81,6 +81,17 @@
 
         </div>
 
+        <div id="new-supportus-page" class="modal">
+            <div class="modal-content">
+                <h4 class="header">Visit our new Support Us page!</h4>
+                <p>Our new and improved support us page has much more information about what you can do to support us!</p>
+            </div>
+            <div class="modal-footer">
+                <a href="supportus.html" class="modal-action modal-close waves-effect btn-flat blue-text">Go Now!</a>
+                <a class="modal-action modal-close waves-effect btn-flat waves-red">Stay Here</a>
+            </div>
+        </div>
+
         <!-- Modal Structure -->
         <div id="donate-now" class="modal modal-fixed-footer">
             <div class="modal-content">
@@ -284,6 +295,7 @@
             $( document ).ready(function(){
                 $(".button-collapse").sideNav();
                 $('.modal-trigger').leanModal();
+                $("#new-supportus-page").openModal();
             })
     </script>
 </body>
