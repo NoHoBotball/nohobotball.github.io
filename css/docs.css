@@ -10,7 +10,9 @@
     color: green;
 }
 
-.Indent i, :not(pre)>code {
+ :not(pre)>code i,
+code~i,
+ :not(pre)>code {
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
     border-collapse: collapse;
