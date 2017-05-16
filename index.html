@@ -25,8 +25,9 @@
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li class="waves-effect active"><a href="index.html">Home</a></li>
-                    <!--li class="waves-effect"><a href="team.html">Our Team</a></li-->
+                    <!--<li class="waves-effect"><a href="team.html">Our Team</a></li>-->
                     <li class="waves-effect"><a href="about.html">What We Do</a></li>
+                    <li class="waves-effect"><a href="achievements.html">Achievements</a></li>
                     <li class="waves-effect"><a href="join.html">Join Our Team</a></li>
                     <li class="waves-effect"><a href="supportus.html">Support Us</a></li>
                     <li class="waves-effect"><a href="contact.html">Contact</a></li>
@@ -34,8 +35,9 @@
                 <ul class="side-nav" id="mobile-demo">
                     <li class="red"><a class="waves-effect white-text" href=""><i class="material-icons left center-vert">menu</i>NHHS Botball Team</a></li>
                     <li class="red lighten-3"><a class="waves-effect" href="index.html"><i class="material-icons left center-vert">home</i>Home</a></li>
-                    <!--li><a class="waves-effect" href="team.html"><i class="material-icons left center-vert">group</i>Our Team</a></li-->
+                    <!--<li><a class="waves-effect" href="team.html"><i class="material-icons left center-vert">group</i>Our Team</a></li>-->
                     <li><a class="waves-effect" href="about.html"><i class="material-icons left center-vert">help</i>What We Do</a></li>
+                    <li><a class="waves-effect" href="achievements.html"><i class="material-icons left center-vert">star</i>Achievements</a></li>
                     <li><a class="waves-effect" href="join.html"><i class="material-icons left center-vert">person_add</i>Join Our Team</a></li>
                     <li><a class="waves-effect" href="supportus.html"><i class="material-icons left center-vert">tag_faces</i>Support Us</a></li>
                     <li><a class="waves-effect" href="contact.html"><i class="material-icons left center-vert">mail</i>Contact</a></li>
@@ -57,16 +59,29 @@
                 </div>
             </div>
         </div>
-        <!--div class="row" id="school-out">
-                <div class="col s12">
-                    <div class="card-panel deep-orange">
-                        <h4 class="white-text">School Resumes January 11</h4>
-                        <p class="white-text cardtext">Donations will be recieved and processed when we return.</p>
-                    </div>
-                </div>
-            </div-->
         <div class="slider" style="height: 100%;">
             <ul class="slides">
+                <li>
+                    <img src="imgs/homepage/2017competition_2.jpg">
+                    <div class="caption left-align" style="background-color:rgba(0,0,0,0.5); width: 20%; position: absolute; top: 20%; left: 2%">
+                        <h5>Our Team</h5>
+                        <h6 class="light white-text">At the 2017 Competition</h6>
+                    </div>
+                </li>
+                <li>
+                    <img src="imgs/homepage/2017competition.png">
+                    <div class="caption center-align" style="background-color:rgba(0,0,0,0.5); width: 40%; position: absolute; top: 65%; left: 50%">
+                        <h5>Our Robots</h5>
+                        <h6 class="light white-text">After winning the double elimination round in 2017</h6>
+                    </div>
+                </li>
+                <li>
+                    <img src="imgs/awards/trophies-2017.jpg">
+                    <div class="caption right-align" style="background-color:rgba(0,0,0,0.5); width: 25%; position: absolute; top: 15%; left: 70%">
+                        <h5>2nd Place Overall&nbsp;</h5>
+                        <h6 class="light white-text">At the 2017 Competition&nbsp;</h6>
+                    </div>
+                </li>
                 <li>
                     <img src="imgs/homepage/2015competition.jpg">
                     <div class="caption left-align" style="background-color:rgba(0,0,0,0.5); width: 20%; position: absolute; top: 70%; left: 10%">
@@ -238,56 +253,56 @@
         </div>
         <div class="footer-copyright" style="background-color:">
             <div class="container">
-                © 2016 North Hollywood High School Botball Team
+                &copy; 2017 North Hollywood High School Botball Team
                 <a class="grey-text text-lighten-4 right waves-effect waves-light" href="#top">Back to Top</a>
             </div>
         </div>
     </footer>
 
     <script>
-            $( document ).ready(function(){
-                $(".button-collapse").sideNav();
-                $('.slider').slider({full_width: true, interval: 5000, height: 800});
-                $("#close-vid").click(function() {
-                    $("#watch-vid").remove();
-                    mixpanel.track("Video Close home");
-                    setCookie("showVideo","false",30);
-                    Materialize.toast('If you change your mind', 5000);
-                    setTimeout(function(){
-                        Materialize.toast('You can still watch it on our Support Us page!', 5000);
-                    }, 2000);
-                });
-                $('.modal-trigger').leanModal();
+        $(document).ready(function () {
+            $(".button-collapse").sideNav();
+            $('.slider').slider({ full_width: true, interval: 5000, height: 800 });
+            $("#close-vid").click(function () {
+                $("#watch-vid").remove();
+                mixpanel.track("Video Close home");
+                setCookie("showVideo", "false", 30);
+                Materialize.toast('If you change your mind', 5000);
+                setTimeout(function () {
+                    Materialize.toast('You can still watch it on our Support Us page!', 5000);
+                }, 2000);
             });
+            $('.modal-trigger').leanModal();
+        });
 
-            checkVideoCookie();
+        checkVideoCookie();
 
-            function setCookie(cname, cvalue, exdays) {
-                var d = new Date();
-                d.setTime(d.getTime() + (exdays*24*60*60*1000));
-                var expires = "expires="+d.toUTCString();
-                document.cookie = cname + "=" + cvalue + "; " + expires;
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + "; " + expires;
+        }
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1);
+                if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
             }
+            return "";
+        }
 
-            function getCookie(cname) {
-                var name = cname + "=";
-                var ca = document.cookie.split(';');
-                for(var i=0; i<ca.length; i++) {
-                    var c = ca[i];
-                    while (c.charAt(0)==' ') c = c.substring(1);
-                    if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
-                }
-                return "";
+        function checkVideoCookie() {
+            var user = getCookie("showVideo");
+            if (user == "false") {
+                $("#watch-vid").remove();
+                mixpanel.track("Home page revisit");
             }
-
-            function checkVideoCookie() {
-                var user = getCookie("showVideo");
-                if (user == "false") {
-                    $("#watch-vid").remove();
-                    mixpanel.track("Home page revisit");
-                }
-            }
-        </script>
+        }
+    </script>
 </body>
 
 </html>
