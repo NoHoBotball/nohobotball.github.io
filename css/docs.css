@@ -1,0 +1,66 @@
+.CVariable {
+    color: blue;
+}
+
+.Preprocessor {
+    color: blueviolet;
+}
+
+.Comment {
+    color: green;
+}
+
+.Indent i, :not(pre)>code {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-collapse: collapse;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    box-sizing: border-box;
+    color: rgb(36, 41, 46);
+    background-color: #dedede;
+    display: inline;
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 13.6px;
+    line-height: 20.4px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-bottom: 2.72px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 2.72px;
+    word-wrap: break-word;
+    -webkit-border-horizontal-spacing: 0px;
+    -webkit-border-vertical-spacing: 0px;
+}
+
+pre {
+    background-color: #1d1f21;
+    color: #c5c8c6;
+    transition: box-shadow .25s;
+    box-shadow: 0;
+    padding: 24px;
+    margin: 0.5rem 0 1rem 0;
+    border-radius: 2px;
+}
+
+pre:hover {
+    transition: box-shadow .25s;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+pre .CVariable {
+    color: #81a2be;
+}
+
+pre .Preprocessor {
+    color: #b294bb;
+}
+
+pre .Comment {
+    color: #969896;
+}
+
+pre .Quote {
+    color: #b5bd68;
+}
