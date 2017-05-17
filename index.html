@@ -1,309 +1,248 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/base.css">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection">
     <link rel="icon" href="imgs/logos/botguy.png">
-
     <title>NHHS Botball Team</title>
-
     <meta name="theme-color" content="#f44336">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
-
-<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/mix.js"></script>
-
     <header>
-        <nav>
-            <div class="nav-wrapper red">
-                <a style="padding-left:16px" href="index.html" class="brand-logo waves-effect" id="top">NHHS Botball Team</a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li class="waves-effect active"><a href="index.html">Home</a></li>
-                    <!--<li class="waves-effect"><a href="team.html">Our Team</a></li>-->
-                    <li class="waves-effect"><a href="about.html">What We Do</a></li>
-                    <li class="waves-effect"><a href="achievements.html">Achievements</a></li>
-                    <li class="waves-effect"><a href="join.html">Join Our Team</a></li>
-                    <li class="waves-effect"><a href="supportus.html">Support Us</a></li>
-                    <li class="waves-effect"><a href="contact.html">Contact</a></li>
-                </ul>
-                <ul class="side-nav" id="mobile-demo">
-                    <li class="red"><a class="waves-effect white-text" href=""><i class="material-icons left center-vert">menu</i>NHHS Botball Team</a></li>
-                    <li class="red lighten-3"><a class="waves-effect" href="index.html"><i class="material-icons left center-vert">home</i>Home</a></li>
-                    <!--<li><a class="waves-effect" href="team.html"><i class="material-icons left center-vert">group</i>Our Team</a></li>-->
-                    <li><a class="waves-effect" href="about.html"><i class="material-icons left center-vert">help</i>What We Do</a></li>
-                    <li><a class="waves-effect" href="achievements.html"><i class="material-icons left center-vert">star</i>Achievements</a></li>
-                    <li><a class="waves-effect" href="join.html"><i class="material-icons left center-vert">person_add</i>Join Our Team</a></li>
-                    <li><a class="waves-effect" href="supportus.html"><i class="material-icons left center-vert">tag_faces</i>Support Us</a></li>
-                    <li><a class="waves-effect" href="contact.html"><i class="material-icons left center-vert">mail</i>Contact</a></li>
-                </ul>
-            </div>
-        </nav>
+      <nav>
+        <div class="nav-wrapper red"><a class="brand-logo waves-effect" id="top" style="padding-left:16px;" href="index.html">NHHS Botball Team</a><a class="button-collapse" href="#" data-activates="mobile-demo"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li class="waves-effect active"><a href="index.html">Home</a></li>
+            <!-- <li class="waves-effect"><a href="team.html">Our Team</a></li>-->
+            <li class="waves-effect"><a href="about.html">What We Do</a></li>
+            <li class="waves-effect"><a href="achievements.html">Achievements</a></li>
+            <li class="waves-effect"><a href="join.html">Join Our Team</a></li>
+            <li class="waves-effect"><a href="supportus.html">Support Us</a></li>
+            <li class="waves-effect"><a href="contact.html">Contact</a></li>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li class="red"><a class="waves-effect white-text" href=""><i class="material-icons left center-vert">menu</i>NHHS Botball Team</a></li>
+            <li class="red lighten-3"><a class="waves-effect" href="index.html"><i class="material-icons left center-vert">home</i>Home</a></li>
+            <!-- <li><a class="waves-effect" href="team.html"><i class="material-icons left center-vert">group</i>Our Team</a></li>-->
+            <li><a class="waves-effect" href="about.html"><i class="material-icons left center-vert">help</i>What We Do</a></li>
+            <li><a class="waves-effect" href="achievements.html"><i class="material-icons left center-vert">star</i>Achievements</a></li>
+            <li><a class="waves-effect" href="join.html"><i class="material-icons left center-vert">person_add</i>Join Our Team</a></li>
+            <li><a class="waves-effect" href="supportus.html"><i class="material-icons left center-vert">tag_faces</i>Support Us</a></li>
+            <li><a class="waves-effect" href="contact.html"><i class="material-icons left center-vert">mail</i>Contact</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
-
-
     <main class="container">
-        <h1 class="red-text header">Welcome</h1>
-        <h2 class="header">To the North Hollywood High School Botball Team</h2>
-
-        <div class="row" id="watch-vid">
-            <div class="col s12">
-                <div class="card-panel deep-orange">
-                    <h4 class="white-text">Watch Our Promo Video!<a class="waves-effect btn-flat right white-text" id="close-vid" style="font-size:50%">close</a></h4>
-                    <a class="deep-orange darken-4 waves-effect btn btn-large modal-trigger" href="#promo-video" style="width:100%">Watch Now!</a>
-                </div>
-            </div>
+      <h1 class="red-text header">Welcome</h1>
+      <h2 class="header">To the North Hollywood High School Botball Team</h2>
+      <div class="row" id="watch-vid">
+        <div class="col s12">
+          <div class="card-panel deep-orange">
+            <h4 class="white-text">Watch Our Promo Video!<a class="waves-effect btn-flat right white-text" id="close-vid" style="font-size:50%;">close</a></h4><a class="deep-orange darken-4 waves-effect btn btn-large modal-trigger" href="#promo-video" style="width:100%;">Watch Now!</a>
+          </div>
         </div>
-        <div class="slider" style="height: 100%;">
-            <ul class="slides">
-                <li>
-                    <img src="imgs/homepage/2017competition_2.jpg">
-                    <div class="caption left-align" style="background-color:rgba(0,0,0,0.5); width: 20%; position: absolute; top: 20%; left: 2%">
-                        <h5>Our Team</h5>
-                        <h6 class="light white-text">At the 2017 Competition</h6>
-                    </div>
-                </li>
-                <li>
-                    <img src="imgs/homepage/2017competition.png">
-                    <div class="caption center-align" style="background-color:rgba(0,0,0,0.5); width: 40%; position: absolute; top: 65%; left: 50%">
-                        <h5>Our Robots</h5>
-                        <h6 class="light white-text">After winning the double elimination round in 2017</h6>
-                    </div>
-                </li>
-                <li>
-                    <img src="imgs/awards/trophies-2017.jpg">
-                    <div class="caption right-align" style="background-color:rgba(0,0,0,0.5); width: 25%; position: absolute; top: 15%; left: 70%">
-                        <h5>2nd Place Overall&nbsp;</h5>
-                        <h6 class="light white-text">At the 2017 Competition&nbsp;</h6>
-                    </div>
-                </li>
-                <li>
-                    <img src="imgs/homepage/2015competition.jpg">
-                    <div class="caption left-align" style="background-color:rgba(0,0,0,0.5); width: 20%; position: absolute; top: 70%; left: 10%">
-                        <h5>Our Robot</h5>
-                        <h6 class="light white-text">In the 2015 Competition</h6>
-                    </div>
-                </li>
-                <li>
-                    <img src="imgs/homepage/2014greaterla.jpg">
-                    <div class="caption right-align" style="position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5)">
-                        <h5>3rd Place</h5>
-                        <h6 class="light white-text">Greater Los Angeles 2014</h6>
-                    </div>
-                </li>
-                <li>
-                    <img src="imgs/homepage/2016competition.png">
-                    <div class="caption center-align" style="position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5)">
-                        <h5>Our Team</h5>
-                        <h6 class="light white-text">After the 2016 Competition</h6>
-                    </div>
-                </li>
-                <li>
-                    <img src="imgs/homepage/2014school.png">
-                    <div class="caption left-align" style="position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5)">
-                        <h5>Our Team</h5>
-                        <h6 class="light white-text">From the 2014-2015 School Year</h6>
-                    </div>
-                </li>
-                <li>
-                    <img src="imgs/homepage/2016competition_2.png">
-                    <div class="caption right-align" style="position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5)">
-                        <h5>The Game Board</h5>
-                        <h6 class="light white-text">At the 2016 Competition</h6>
-                    </div>
-                </li>
-                <li>
-                    <img src="imgs/homepage/2016competition_3.png">
-                    <div class="caption center-align" style="position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5)">
-                        <h5>Our Robots</h5>
-                        <h6 class="light white-text">In the 2016 Competition</h6>
-                    </div>
-                </li>
-                <li>
-                    <img src="imgs/homepage/2015school.jpg">
-                    <div class="caption left-align" style="position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5)">
-                        <h5>Our Team</h5>
-                        <h6 class="light white-text">From the 2015-2016 School Year</h6>
-                    </div>
-                </li>
-                <li>
-                    <img src="imgs/homepage/2016competition_4.jpg">
-                    <div class="caption right-align" style="position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5)">
-                        <h5>Strategizing</h5>
-                        <h6 class="light white-text">For the 2016 Competition</h6>
-                    </div>
-                </li>
-                <li>
-                    <img src="imgs/homepage/gameboard.jpg">
-                    <div class="caption center-align" style="position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5)">
-                        <h5>Building</h5>
-                        <h6 class="light white-text">Our 2016 Practice Game Board</h6>
-                    </div>
-                </li>
-                <li>
-                    <img src="imgs/homepage/2016robots.jpg">
-                    <div class="caption left-align" style="position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5)">
-                        <h5>Early Testing</h5>
-                        <h6 class="light white-text">Of Robots from 2016</h6>
-                    </div>
-                </li>
-                <li>
-                    <img src="imgs/homepage/2016robots_2.jpg">
-                    <div class="caption right-align" style="position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5)">
-                        <h5>Programming</h5>
-                        <h6 class="light white-text">Robots for the 2016 Competition</h6>
-                    </div>
-                </li>
-                <li>
-                    <img src="imgs/homepage/teamwork.jpg">
-                    <div class="caption center-align" style="position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5)">
-                        <h5>Teamwork</h5>
-                        <h6 class="light white-text">Is Key to Generate Success</h6>
-                    </div>
-                </li>
-            </ul>
+      </div>
+      <div class="slider" style="height: 100%;">
+        <ul class="slides">
+          <li><img src="imgs/homepage/2017competition_2.jpg">
+            <div class="caption left-align" style="background-color:rgba(0,0,0,0.5); width: 20%; position: absolute; top: 20%; left: 2%;">
+              <h5>Our Team</h5>
+              <h6 class="light white-text">At the 2017 Competition</h6>
+            </div>
+          </li>
+          <li><img src="imgs/homepage/2017competition.png">
+            <div class="caption center-align" style="background-color:rgba(0,0,0,0.5); width: 40%; position: absolute; top: 65%; left: 50%;">
+              <h5>Our Robots</h5>
+              <h6 class="light white-text">After winning the double elimination round in 2017</h6>
+            </div>
+          </li>
+          <li><img src="imgs/awards/trophies-2017.jpg">
+            <div class="caption right-align" style="background-color:rgba(0,0,0,0.5); width: 25%; position: absolute; top: 15%; left: 70%;">
+              <h5>2nd Place Overall </h5>
+              <h6 class="light white-text">At the 2017 Competition </h6>
+            </div>
+          </li>
+          <li><img src="imgs/homepage/2015competition.jpg">
+            <div class="caption left-align" style="background-color:rgba(0,0,0,0.5); width: 20%; position: absolute; top: 70%; left: 10%;">
+              <h5>Our Robot</h5>
+              <h6 class="light white-text">In the 2015 Competition</h6>
+            </div>
+          </li>
+          <li><img src="imgs/homepage/2014greaterla.jpg">
+            <div class="caption right-align" style="position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5);">
+              <h5>3rd Place</h5>
+              <h6 class="light white-text">Greater Los Angeles 2014</h6>
+            </div>
+          </li>
+          <li><img src="imgs/homepage/2016competition.png">
+            <div class="caption center-align" style="position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5);">
+              <h5>Our Team</h5>
+              <h6 class="light white-text">After the 2016 Competition</h6>
+            </div>
+          </li>
+          <li><img src="imgs/homepage/2014school.png">
+            <div class="caption left-align" style="position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5);">
+              <h5>Our Team</h5>
+              <h6 class="light white-text">From the 2014-2015 School Year</h6>
+            </div>
+          </li>
+          <li><img src="imgs/homepage/2016competition_2.png">
+            <div class="caption right-align" style="position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5);">
+              <h5>The Game Board</h5>
+              <h6 class="light white-text">At the 2016 Competition</h6>
+            </div>
+          </li>
+          <li><img src="imgs/homepage/2016competition_3.png">
+            <div class="caption center-align" style="position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5);">
+              <h5>Our Robots</h5>
+              <h6 class="light white-text">In the 2016 Competition</h6>
+            </div>
+          </li>
+          <li><img src="imgs/homepage/2015school.jpg">
+            <div class="caption left-align" style="position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5);">
+              <h5>Our Team</h5>
+              <h6 class="light white-text">From the 2015-2016 School Year</h6>
+            </div>
+          </li>
+          <li><img src="imgs/homepage/2016competition_4.jpg">
+            <div class="caption right-align" style="position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5);">
+              <h5>Strategizing</h5>
+              <h6 class="light white-text">For the 2016 Competition</h6>
+            </div>
+          </li>
+          <li><img src="imgs/homepage/gameboard.jpg">
+            <div class="caption center-align" style="position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5);">
+              <h5>Building</h5>
+              <h6 class="light white-text">Our 2016 Practice Game Board</h6>
+            </div>
+          </li>
+          <li><img src="imgs/homepage/2016robots.jpg">
+            <div class="caption left-align" style="position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5);">
+              <h5>Early Testing</h5>
+              <h6 class="light white-text">Of Robots from 2016</h6>
+            </div>
+          </li>
+          <li><img src="imgs/homepage/2016robots_2.jpg">
+            <div class="caption right-align" style="position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5);">
+              <h5>Programming</h5>
+              <h6 class="light white-text">Robots for the 2016 Competition</h6>
+            </div>
+          </li>
+          <li><img src="imgs/homepage/teamwork.jpg">
+            <div class="caption center-align" style="position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5);">
+              <h5>Teamwork</h5>
+              <h6 class="light white-text">Is Key to Generate Success</h6>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="row">
+        <h3 class="col s12 center">A Big Thank You To Our Sponsors</h3>
+        <div class="col m4 s6 center promo hoverable"><a class="black-text" href="http://www.solidworks.com/"><img class="sponsor-pic" alt="SolidWorks" src="imgs/logos/solidworks.png" width="" height="96px">
+            <div class="sponsor">
+              <p class="sponsor-caption" style="font-weight:400;"><strong style="font-weight:500;">Solid</strong>Works</p>
+            </div></a></div>
+        <div class="col m4 s6 center promo hoverable"><a class="black-text" href="supportus.html"><i class="large material-icons red-text sponsor-pic">help</i>
+            <div class="sponsor">
+              <h6 class="sponsor-caption header">Your Logo Here</h6>
+              <h6 class="sponsortext header">Your Custom Text Line Here</h6>
+            </div></a></div>
+        <div class="col m4 s6 center promo hoverable"><a class="black-text" href="supportus.html"><i class="large material-icons red-text sponsor-pic">help</i>
+            <div class="sponsor">
+              <h6 class="sponsor-caption header">Your Logo Here</h6>
+              <h6 class="sponsortext header">Your Custom Text Line Here</h6>
+            </div></a></div>
+        <div class="col m4 s6 center promo hoverable"><a class="black-text" href="supportus.html"><i class="large material-icons red-text sponsor-pic">help</i>
+            <div class="sponsor">
+              <h6 class="sponsor-caption header">Your Logo Here</h6>
+              <h6 class="sponsortext header">Your Custom Text Line Here</h6>
+            </div></a></div>
+        <div class="col m4 s6 center promo hoverable"><a class="black-text" href="supportus.html"><i class="large material-icons red-text sponsor-pic">help</i>
+            <div class="sponsor">
+              <h6 class="sponsor-caption header">Your Logo Here</h6>
+              <h6 class="sponsortext header">Your Custom Text Line Here</h6>
+            </div></a></div>
+        <div class="col m4 s6 center promo hoverable"><a class="black-text" href="supportus.html"><i class="large material-icons red-text sponsor-pic">help</i>
+            <div class="sponsor">
+              <h6 class="sponsor-caption header">Your Logo Here</h6>
+              <h6 class="sponsortext header">Your Custom Text Line Here</h6>
+            </div></a></div>
+      </div>
+      <div class="modal" id="promo-video" style="max-height:90%;height:90%;top:5%;bottom:5%;width:80%;">
+        <div class="modal-content" style="width:100%;height:85%;">
+          <h4>Watch Our Promo Video!<a class="modal-action modal-close waves-effect waves-red btn-flat right" style="font-size:50%;">close</a></h4>
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/r_EpzX9w-Tg" frameborder="0"></iframe>
+          <p style="margin-bottom:0; padding-bottom:0;">You can toggle captions by clicking the CC button in the video settings. Click outside this window to close.</p>
         </div>
-        <div class="row">
-            <h3 class="col s12 center">A Big Thank You To Our Sponsors</h3>
-            <div class="col m4 s6 center promo hoverable">
-                <a class="black-text" href="http://www.solidworks.com/">
-                    <img alt="SolidWorks" src="imgs/logos/solidworks.png" width="" height="96px" class="sponsor-pic" />
-                    <div class="sponsor">
-                        <p class="sponsor-caption" style="font-weight:400"><strong style="font-weight:500">Solid</strong>Works</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col m4 s6 center promo hoverable">
-                <a class="black-text" href="supportus.html">
-                    <i class="large material-icons red-text sponsor-pic">help</i>
-                    <div class="sponsor">
-                        <h6 class="sponsor-caption header">Your Logo Here</h6>
-                        <h6 class="sponsortext header">Your Custom Text Line Here</h6>
-                    </div>
-                </a>
-            </div>
-            <div class="col m4 s6 center promo hoverable">
-                <a class="black-text" href="supportus.html">
-                    <i class="large material-icons red-text sponsor-pic">help</i>
-                    <div class="sponsor">
-                        <h6 class="sponsor-caption header">Your Logo Here</h6>
-                        <h6 class="sponsortext header">Your Custom Text Line Here</h6>
-                    </div>
-                </a>
-            </div>
-            <div class="col m4 s6 center promo hoverable">
-                <a class="black-text" href="supportus.html">
-                    <i class="large material-icons red-text sponsor-pic">help</i>
-                    <div class="sponsor">
-                        <h6 class="sponsor-caption header">Your Logo Here</h6>
-                        <h6 class="sponsortext header">Your Custom Text Line Here</h6>
-                    </div>
-                </a>
-            </div>
-            <div class="col m4 s6 center promo hoverable">
-                <a class="black-text" href="supportus.html">
-                    <i class="large material-icons red-text sponsor-pic">help</i>
-                    <div class="sponsor">
-                        <h6 class="sponsor-caption header">Your Logo Here</h6>
-                        <h6 class="sponsortext header">Your Custom Text Line Here</h6>
-                    </div>
-                </a>
-            </div>
-            <div class="col m4 s6 center promo hoverable">
-                <a class="black-text" href="supportus.html">
-                    <i class="large material-icons red-text sponsor-pic">help</i>
-                    <div class="sponsor">
-                        <h6 class="sponsor-caption header">Your Logo Here</h6>
-                        <h6 class="sponsortext header">Your Custom Text Line Here</h6>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div id="promo-video" class="modal" style="max-height:90%;height:90%;top:5%;bottom:5%;width:80%">
-            <div class="modal-content" style="width:100%;height:85%">
-                <h4>Watch Our Promo Video!<a class="modal-action modal-close waves-effect waves-red btn-flat right" style="font-size:50%">close</a></h4>
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/r_EpzX9w-Tg" frameborder="0"></iframe>
-                <p style="margin-bottom:0; padding-bottom:0;">You can toggle captions by clicking the CC button in the video settings. Click outside this window to close.</p>
-            </div>
-        </div>
+      </div>
     </main>
-
-
     <footer class="page-footer blue-grey">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">NHHS Botball Team</h5>
-                    <p class="grey-text text-lighten-4">We are a completely student-run robotics team which builds and programs robots for the KIPR Botball competition.</p>
-                </div>
-                <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Links</h5>
-                    <ul>
-                        <li><a class="grey-text text-lighten-3 waves-effect waves-light" href="about.html">About</a></li>
-                        <li><a class="grey-text text-lighten-3 waves-effect waves-light" href="supportus.html">Support Us</a></li>
-                        <li><a class="grey-text text-lighten-3 waves-effect waves-light" href="http://materializecss.com/">Materialize CSS</a></li>
-                    </ul>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">NHHS Botball Team</h5>
+            <p class="grey-text text-lighten-4">We are a completely student-run robotics team which builds and programs robots for the KIPR Botball competition.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3 waves-effect waves-light" href="about.html">About</a></li>
+              <li><a class="grey-text text-lighten-3 waves-effect waves-light" href="supportus.html">Support Us</a></li>
+              <li><a class="grey-text text-lighten-3 waves-effect waves-light" href="http://materializecss.com/">Materialize CSS</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="footer-copyright" style="background-color:">
-            <div class="container">
-                &copy; 2017 North Hollywood High School Botball Team
-                <a class="grey-text text-lighten-4 right waves-effect waves-light" href="#top">Back to Top</a>
-            </div>
-        </div>
+      </div>
+      <div class="footer-copyright" style="background-color:;">
+        <div class="container">© 2017 North Hollywood High School Botball Team<a class="grey-text text-lighten-4 right waves-effect waves-light" href="#top">Back to Top</a></div>
+      </div>
     </footer>
-
     <script>
-        $(document).ready(function () {
-            $(".button-collapse").sideNav();
-            $('.slider').slider({ full_width: true, interval: 5000, height: 800 });
-            $("#close-vid").click(function () {
-                $("#watch-vid").remove();
-                mixpanel.track("Video Close home");
-                setCookie("showVideo", "false", 30);
-                Materialize.toast('If you change your mind', 5000);
-                setTimeout(function () {
-                    Materialize.toast('You can still watch it on our What We Do page!', 5000);
-                }, 2000);
-            });
-            $('.modal-trigger').leanModal();
-        });
-        $('.modal-trigger').leanModal();
-
-        checkVideoCookie();
-
-        function setCookie(cname, cvalue, exdays) {
-            var d = new Date();
-            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-            var expires = "expires=" + d.toUTCString();
-            document.cookie = cname + "=" + cvalue + "; " + expires;
-        }
-
-        function getCookie(cname) {
-            var name = cname + "=";
-            var ca = document.cookie.split(';');
-            for (var i = 0; i < ca.length; i++) {
-                var c = ca[i];
-                while (c.charAt(0) == ' ') c = c.substring(1);
-                if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
-            }
-            return "";
-        }
-
-        function checkVideoCookie() {
-            var user = getCookie("showVideo");
-            if (user == "false") {
-                $("#watch-vid").remove();
-                mixpanel.track("Home page revisit");
-            }
-        }
+      $(document).ready(function () {
+      $(".button-collapse").sideNav();
+      $('.slider').slider({ full_width: true, interval: 5000, height: 800 });
+      $("#close-vid").click(function () {
+      $("#watch-vid").remove();
+      mixpanel.track("Video Close home");
+      setCookie("showVideo", "false", 30);
+      Materialize.toast('If you change your mind', 5000);
+      setTimeout(function () {
+      Materialize.toast('You can still watch it on our What We Do page!', 5000);
+      }, 2000);
+      });
+      $('.modal-trigger').leanModal();
+      });
+      $('.modal-trigger').leanModal();
+      checkVideoCookie();
+      function setCookie(cname, cvalue, exdays) {
+      var d = new Date();
+      d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+      var expires = "expires=" + d.toUTCString();
+      document.cookie = cname + "=" + cvalue + "; " + expires;
+      }
+      function getCookie(cname) {
+      var name = cname + "=";
+      var ca = document.cookie.split(';');
+      for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') c = c.substring(1);
+      if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+      }
+      return "";
+      }
+      function checkVideoCookie() {
+      var user = getCookie("showVideo");
+      if (user == "false") {
+      $("#watch-vid").remove();
+      mixpanel.track("Home page revisit");
+      }
+      }
     </script>
-</body>
-
+  </body>
 </html>

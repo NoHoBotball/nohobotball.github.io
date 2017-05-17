@@ -1,0 +1,286 @@
+doctype html
+html
+  head
+    link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    link(type='text/css', rel='stylesheet', href='css/base.css')
+    link(type='text/css', rel='stylesheet', href='css/materialize.min.css', media='screen,projection')
+    link(rel='icon', href='imgs/logos/botguy.png')
+    title NHHS Botball Team
+    meta(name='theme-color', content='#1976D2')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  body
+    script(type='text/javascript', src='https://code.jquery.com/jquery-2.1.1.min.js')
+    script(type='text/javascript', src='js/materialize.min.js')
+    header
+      nav#nav
+        .nav-wrapper.blue
+          a#top.brand-logo.waves-effect(style='padding-left:16px', href='index.html') NHHS Botball Team
+          a.button-collapse(href='#', data-activates='mobile-demo')
+            i.material-icons menu
+          ul.right.hide-on-med-and-down
+            li.waves-effect
+              a(href='index.html') Home
+            // <li class="waves-effect"><a href="team.html">Our Team</a></li>
+            li.waves-effect
+              a(href='about.html') What We Do
+            li.waves-effect
+              a(href='achievements.html') Achievements
+            li.waves-effect
+              a(href='join.html') Join Our Team
+            li.waves-effect.active
+              a(href='supportus.html') Support Us
+            li.waves-effect
+              a(href='contact.html') Contact
+          ul#mobile-demo.side-nav
+            li.blue
+              a.waves-effect.white-text(href='')
+                i.material-icons.left.center-vert menu
+                | NHHS Botball Team
+            li
+              a.waves-effect(href='index.html')
+                i.material-icons.left.center-vert home
+                | Home
+            // <li><a class="waves-effect" href="team.html"><i class="material-icons left center-vert">group</i>Our Team</a></li>
+            li
+              a.waves-effect(href='about.html')
+                i.material-icons.left.center-vert help
+                | What We Do
+            li
+              a.waves-effect(href='achievements.html')
+                i.material-icons.left.center-vert star
+                | Achievements
+            li
+              a.waves-effect(href='join.html')
+                i.material-icons.left.center-vert person_add
+                | Join Our Team
+            li.blue.lighten-3
+              a.waves-effect(href='supportus.html')
+                i.material-icons.left.center-vert tag_faces
+                | Support Us
+            li
+              a.waves-effect(href='contact.html')
+                i.material-icons.left.center-vert mail
+                | Contact
+    main.container
+      #donate-with-check.modal
+        .modal-content
+          h4.header Thank you for your interest in donating!
+          h5.header You have two options when donating with a check:
+          p
+            | 1. Give the check to a Botball team member directly (preferably at a Friday meeting)
+          p 2. Mail the check to the school
+          p
+            | If you choose option 2, click on the Contact Us button below to see the mailing address for the school that will get
+            | the check to us.
+        .modal-footer
+          a.modal-action.modal-close.waves-effect.btn-flat.blue-text(href='contact.html') Contact Us
+      #title.section.scrollspy.row
+        h1.blue-text.header
+          | We Need 
+          span(style='font-weight: 500') Your
+          |  Support
+        h4.header To be able to compete in the Botball Competition
+        h5.header There are many ways that you can help our team. Here are a few suggestions.
+        .col.s12.m6.l3
+          .card.red.lighten-2.hoverable
+            .card-content.white-text(style='height: 175px')
+              i.material-icons(style='font-size:20px ') playlist_add_check
+              span.card-title  Wish List
+              p.cardtext
+                | Take a look at our wishlist to see if you can provide any of the tools and equipment we need.
+            .card-action
+              a.white-text.waves-effect(href='#wishlist') Learn More
+        .col.s12.m6.l3
+          .card.green.lighten-2.hoverable
+            .card-content.white-text(style='height: 175px')
+              i.material-icons(style='font-size:20px') account_circle
+              span.card-title  Mentorship
+              p.cardtext
+                | We would love it if you or anyone you know can teach us new methods of building or programming robots!
+            .card-action
+              a.white-text.waves-effect(href='#mentorship') Learn More
+        .col.s12.m6.l3
+          .card.blue.lighten-2.hoverable
+            .card-content.white-text(style='height: 175px')
+              i.material-icons(style='font-size:20px ') business
+              span.card-title  Sponsorships
+              p.cardtext
+                | If your business would be willing to support our team with a sponsorship, please let us know!
+            .card-action
+              a.white-text.waves-effect(href='#sponsorships') Learn More
+        .col.s12.m6.l3
+          .card.orange.lighten-1.hoverable
+            .card-content.white-text(style='height: 175px')
+              i.material-icons(style='font-size:20px') attach_money
+              span.card-title  Donations
+              p.cardtext
+                | You can find instructions for how to donate here. We are very grateful for donations of any amount.
+            .card-action
+              a.white-text.waves-effect(href='#donations') Learn More
+      .row
+        .col.s12.m12.l11
+          #wishlist.section.scrollspy.col.s12.row
+            h1.red-text.text-lighten-2
+              i.material-icons(style='font-size: 50px') playlist_add_check
+              |  Wish List
+            h5.header
+              | Here are some items that we would like to have. Click more info to see why we need them.
+          #mentorship.section.scrollspy.col.s12
+            h1.green-text.text-lighten-2
+              i.material-icons(style='font-size: 50px') account_circle
+              |  Mentorship
+            .row
+              .col.s12.m10.offset-m1
+                h3.header Bring your skills
+                h5.header To help us improve ours
+                .col.s12.l6
+                  .small.card.teal.darken-1.hoverable
+                    .card-content.white-text
+                      i.material-icons(style='font-size:20px') code
+                      span.card-title  Programming
+                      p.cardtext
+                        | If you have knowledge of programming C or C++, we would love if you could teach us how to write code that makes
+                        | our robots complete complex actions, such as working out how to determine location based on sensor data.
+                    .card-action
+                      a.white-text.waves-effect(href='contact.html') Contact Us
+                .col.s12.l6
+                  .small.card.indigo.lighten-1.hoverable
+                    .card-content.white-text
+                      i.material-icons(style='font-size:20px') build
+                      span.card-title  Engineering
+                      p.cardtext
+                        | If you have knowledge in engineering, especially robot assembly, we would appreciate if you could help us build
+                        | complex designs for our robots based on the competition guidelines and objectives.
+                    .card-action
+                      a.white-text.waves-effect(href='contact.html') Contact Us
+          #sponsorships.section.scrollspy.col.s12
+            h1#sponsorships.blue-text.text-lighten-2
+              i.material-icons(style='font-size: 50px') business
+              |  Sponsorships
+            .row
+              .col.s12.m10.offset-m1
+                h3.header Why Should You Sponsor Us?
+                h5.header
+                  | We work together and teach each other concepts of teamwork, programming, and engineering that can applied later in
+                  | jobs in the ever-growing STEM field.
+                .row
+                  .col.s12.l6
+                    .card-panel.hoverable.blue.darken-3(style='height: 200px')
+                      h4.white-text You Get
+                      span.white-text
+                        h6.cardtext
+                          | Your company's logo on our team t-shirts, our website, and even our robot. The logo on our website will link to your website and has a customizable line of text underneath.
+                  .col.s12.l6
+                    .card-panel.hoverable.blue(style='height: 200px')
+                      h4.white-text We Get
+                      span.white-text
+                        h6.cardtext
+                          | Funding for our team. Since this is a student-run club, we need funding for competition fees, transportation, building our practice game board, and other miscellaneous costs.
+                  h5.header Anything you can give goes a long way.
+              .col.s12.m6.offset-m3
+                a.btn.waves-effect.center-horiz.cyan(href='contact.html', style='width: 80%') Contact Us
+          #donations.section.scrollspy.col.s12
+            .row
+              h1#donations.orange-text.text-lighten-1
+                i.material-icons(style='font-size: 50px') attach_money
+                |  Donations
+              .col.s12.m10.offset-m1
+                h3.header Any donation goes a long way
+                p
+                  | All donations are tax-deductable. Our nonprofit tax id number is 95-1916048. If you want to donate with a check, you
+                  | can find all contact information on the contact us page. All checks should be made payable to North Hollywood High
+                  | School Student Body and the check should mention "Botball" in the memo section. That way you can make sure the money
+                  | gets to us.
+                  br
+                  | Example:
+                img.center-horiz.hoverable(src='imgs/check.png', width='75%')
+                p
+                  | You can also donate through PayPal. We don't recommend this method for smaller amounts since PayPal takes 3% of the
+                  | donation. Also, since the PayPal account is for our school, it is not as easy for us to access. 
+                  strong
+                    | If you do donate through PayPal, state that the donation is for Botball
+                    | somewhere in the seller instructions.
+                .col.s12.m6
+                  form(action='https://www.paypal.com/cgi-bin/webscr', method='post', target='_top')
+                    input(type='hidden', name='cmd', value='_s-xclick')
+                    input(type='hidden', name='hosted_button_id', value='5Z343A74B35XW')
+                    button.btn.waves-effect.center-horiz.orange.lighten-1(type='submit', style='width: 70%') Donate With PayPal
+                .col.s12.m6
+                  a.btn.waves-effect.center-horiz.orange.darken-2(onclick='$("#donate-with-check").openModal();', style='width: 70%') Send A Check
+          #toc.col.pinned.l1.hide-on-med-and-down(style='right: 100px; position: fixed; top: 100px')
+            ul.section.table-of-contents
+              li
+                a(style='font-weight: 500') Contents
+              li
+                a(href='#title') Support Us
+              li
+                a(href='#wishlist') Wish List
+              li
+                a(href='#mentorship') Mentorship
+              li
+                a(href='#sponsorships') Sponsorships
+              li
+                a(href='#donations') Donations
+    footer.page-footer.blue-grey
+      .container
+        .row
+          .col.l6.s12
+            h5.white-text NHHS Botball Team
+            p.grey-text.text-lighten-4
+              | We are a completely student-run robotics team which builds and programs robots for the KIPR Botball competition.
+          .col.l4.offset-l2.s12
+            h5.white-text Links
+            ul
+              li
+                a.grey-text.text-lighten-3.waves-effect.waves-light(href='about.html') About
+              li
+                a.grey-text.text-lighten-3.waves-effect.waves-light(href='supportus.html') Support Us
+              li
+                a.grey-text.text-lighten-3.waves-effect.waves-light(href='http://materializecss.com/') Materialize CSS
+      .footer-copyright(style='background-color:')
+        .container
+          | © 2017 North Hollywood High School Botball Team
+          a.grey-text.text-lighten-4.right.waves-effect.waves-light(href='#top') Back to Top
+    script.
+      $( document ).ready(function(){
+      $(".button-collapse").sideNav();
+      $('.scrollspy').scrollSpy({scrollOffset: 0});
+      $('#nav').scroll(function() {
+      $('#toc').animate({top:$(this).scrollTop()},100,"linear");
+      })
+      })
+      httpGetAsync("wishlist.json",callback);
+      function httpGetAsync(theUrl, callback) {
+      var xmlHttp = new XMLHttpRequest();
+      xmlHttp.onreadystatechange = function () {
+      if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+      callback(xmlHttp.responseText);
+      }
+      xmlHttp.open("GET", theUrl, true); // true for asynchronous
+      xmlHttp.send(null);
+      }
+      function callback(response) {
+      var data = JSON.parse(response);
+      data.forEach((item) => {
+      $("#wishlist").append(`<div class="col s12 m6 l4">
+      <div class="large card sticky-action hoverable">
+      <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="${item.image}" height="294" title=""
+      style="">
+      </div>
+      <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">${item.name}<i class="material-icons waves-effect right">more_vert</i></span>
+      </div>
+      <div class="card-reveal" style="display: none; transform: translateY(0px);">
+      <span class="card-title grey-text text-darken-4">${item.name}<i class="material-icons right">close</i></span>
+      <span><strong>$${item.price}</strong></span>
+      <p>${item.description}</p>
+      </div>
+      <div class="card-action">
+      <a href="${item.link}" class="waves-effect red-text text-lighten-2">Product Link</a>
+      <a class="activator waves-effect red-text text-lighten-2">More Info</a>
+      </div>
+      </div>
+      </div>`);
+      });
+      }

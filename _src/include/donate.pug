@@ -1,0 +1,251 @@
+doctype html
+html
+  head
+    link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    link(type='text/css', rel='stylesheet', href='css/base.css')
+    link(type='text/css', rel='stylesheet', href='css/materialize.min.css', media='screen,projection')
+    link(rel='icon', href='imgs/logos/botguy.png')
+    title NHHS Botball Team
+    meta(name='theme-color', content='#1976D2')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  body
+    script(type='text/javascript', src='https://code.jquery.com/jquery-2.1.1.min.js')
+    script(type='text/javascript', src='js/materialize.min.js')
+    header
+      nav
+        .nav-wrapper.blue
+          a#top.brand-logo.waves-effect(style='padding-left:16px', href='index.html') NHHS Botball Team
+          a.button-collapse(href='#', data-activates='mobile-demo')
+            i.material-icons menu
+          ul.right.hide-on-med-and-down
+            li.waves-effect
+              a(href='index.html') Home
+            // <li class="waves-effect"><a href="team.html">Our Team</a></li>
+            li.waves-effect
+              a(href='about.html') What We Do
+            li.waves-effect
+              a(href='achievements.html') Achievements
+            li.waves-effect
+              a(href='join.html') Join Our Team
+            li.waves-effect
+              a(href='supportus.html') Support Us
+            li.waves-effect
+              a(href='contact.html') Contact
+          ul#mobile-demo.side-nav
+            li.blue
+              a.waves-effect.white-text(href='')
+                i.material-icons.left.center-vert menu
+                | NHHS Botball Team
+            li
+              a.waves-effect(href='index.html')
+                i.material-icons.left.center-vert home
+                | Home
+            // <li><a class="waves-effect" href="team.html"><i class="material-icons left center-vert">group</i>Our Team</a></li>
+            li
+              a.waves-effect(href='about.html')
+                i.material-icons.left.center-vert help
+                | What We Do
+            li
+              a.waves-effect(href='achievements.html')
+                i.material-icons.left.center-vert star
+                | Achievements
+            li
+              a.waves-effect(href='join.html')
+                i.material-icons.left.center-vert person_add
+                | Join Our Team
+            li
+              a.waves-effect(href='supportus.html')
+                i.material-icons.left.center-vert tag_faces
+                | Support Us
+            li
+              a.waves-effect(href='contact.html')
+                i.material-icons.left.center-vert mail
+                | Contact
+    main.container
+      h1.blue-text.header We Need Your Help
+      h4.header To be able to compete in the Botball Competition
+      h5.header
+        | The registration fee for the Los Angeles competition is $2200. Costs increase if we qualify for further rounds of
+        | the competition.
+      // Modal Trigger
+      //
+        div class="row" id="school-out">
+        <div class="col s12">
+        <div class="card-panel deep-orange">
+        <h4 class="white-text">School Resumes January 11</h4>
+        <p class="white-text cardtext">Donations will be received and processed when we return.</p>
+        </div>
+        </div>
+        </div
+      .video-container
+        iframe(width='853', height='480', src='http://www.youtube.com/embed/r_EpzX9w-Tg?rel=0', frameborder='0', allowfullscreen='')
+      #watch-vid.row
+        .col.s12
+          .card-panel.blue.darken-1
+            h4.white-text Donate Now!
+            p.white-text.cardtext Information on how you can make your tax-deductable donation today!
+            a.blue.darken-4.waves-effect.btn.btn-large.modal-trigger(href='#donate-now', style='width:100%') Donate Now!
+      .row
+        //
+          a class="col s12 blue waves-effect waves-light btn btn-large modal-trigger" href="#promo-video" style="padding-bottom:10px">Watch Our Promo Video</a>
+          <p>&nbsp;</p
+      #new-supportus-page.modal
+        .modal-content
+          h4.header Visit our new Support Us page!
+          p
+            | Our new and improved support us page has much more information about what you can do to support us!
+        .modal-footer
+          a.modal-action.modal-close.waves-effect.btn-flat.blue-text(href='supportus.html') Go Now!
+          a.modal-action.modal-close.waves-effect.btn-flat.waves-red Stay Here
+      // Modal Structure
+      #donate-now.modal.modal-fixed-footer
+        .modal-content
+          h4.header Thank You For Your Interest In Donating!
+          p
+            | Any donation goes a long way.
+            br
+            | All donations are tax-deductable. Our nonprofit tax id number is 95-1916048. If you want to donate
+            |                     with a check, you can find all contact information on the contact us page. All checks should be made
+            |                     payable to North Hollywood High School Student Body and the check should mention "Botball" in the memo
+            |                     section. That way you can make sure the money gets to us.
+            br
+            | Example:
+          img.center-horiz(src='imgs/check.png', width='85%')
+          p
+            | You can also donate through PayPal. We don't recommend this method since PayPal takes a large percentage
+            | of the donation. Also, since the PayPal account is for our school, it is not as easy for us to access.
+            | If you do donate through PayPal, state that the donation is for Botball somewhere in the seller instructions.
+          form(action='https://www.paypal.com/cgi-bin/webscr', method='post', target='_top')
+            input(type='hidden', name='cmd', value='_s-xclick')
+            input(type='hidden', name='hosted_button_id', value='5Z343A74B35XW')
+            button.btn.waves-effect.center-horiz(type='submit', style='width:70%') Donate With PayPal
+        .modal-footer
+          a.modal-action.modal-close.waves-effect.waves-green.btn-flat(href='contact.html') Donate with check
+      h2.header Why Donate?
+      h5.header
+        | The Botball competition is very expensive - registration for the Los Angeles competition costs $2200. There are also
+        | other costs, like building our own game board for practicing. Not only that, but the cost only goes up should
+        | we make it past round one. We would need to cover transportation and lodging costs.
+      .row
+        .col.s12.m6
+          .card-panel.hoverable.blue.darken-3
+            h4.white-text You Get
+            span.white-text
+              h6.cardtext
+                | Your company's logo on our team t-shirts (if we raise over $200 total), our website, and even our robot. The logo on our website will link to your website and has a customizable line of text underneath.
+        .col.s12.m6
+          .card-panel.hoverable.blue
+            h4.white-text We Get
+            span.white-text
+              h6.cardtext
+                | Funding for our team. Since this is a student-run club, we need funding for transportaion, competition fees, website hosting fees, and building our practice game board. Anything you can give goes a long way.
+      h2.header If You Donate
+      .row
+        .col.s12.m6
+          .card-panel.hoverable.blue.lighten-3(style='height:175px')
+            h4.white-text $12 - Virtual Hug
+            span.white-text
+              h6.cardtext
+                | The title explains it all. You get our happiness, along with a personalized thank you message, your name on our T-Shirt (minimum $200 Raised) and a virtual hug!
+        .col.s12.m6
+          .card-panel.hoverable.blue.lighten-2(style='height:175px')
+            h4.white-text $36 - Team T-Shirt
+            span.white-text
+              h6.cardtext
+                | You get a personalized thank you message and your very own team T-shirt featuring your name! (Shipping provided for continental US only)
+        .col.s12.m6
+          .card-panel.hoverable.blue.lighten-1(style='height:200px')
+            h4.white-text $110 - 5% of the Total Cost
+            span.white-text
+              h6.cardtext
+                | You cover 5% of the registration costs for the Los Angeles Regional Botball Competion. You get a logo icon on our t-shirts, a logo icon on our website, a team t-shirt, and access to competition photos.
+        .col.s12.m6
+          .card-panel.hoverable.blue(style='height:200px')
+            h4.white-text $220 - 10% of the Total Cost
+            span.white-text
+              h6.cardtext
+                | You cover the cost of 10% of the registration fee for the Los Angeles Regional Botball Competition. You can also have a full logo printed on our t-shirts, a logo on our website, a team t-shirt, and access to competition photos.
+        .col.s12.m6
+          .card-panel.hoverable.blue.darken-1(style='height:200px')
+            h4.white-text $550 - Logo on Robot!
+            span.white-text
+              h6.cardtext
+                | You cover 25% of the registration fee for the Los Angeles Regional Botball Competition. You can have a full logo printed on our t-shirts, a full logo on our website, a team t-shirt, access to competition photos, and an easily visible logo on one of our robots in the competition!.
+        .col.s12.m6
+          .card-panel.hoverable.blue.darken-2(style='height:200px')
+            h4.white-text $1100 - Gold Sponsor
+            span.white-text
+              h6.cardtext
+                | You cover 50% of the registration fee for the Los Angeles Regional Botball Competition. You can have a large logo printed on our t-shirts, a large logo on our website in the gold sponsor category, a team t-shirt, access to competition photos, and an easily visible logo on all of our competing robots!
+        .col.s12
+          .card-panel.hoverable.blue.darken-4
+            h4.white-text Top Donor
+            span.white-text
+              h6.cardtext
+                | The top donor will receive all of the aforementioned rewards - your logo on our website, t-shirts, and robots, a team t-shirt, and access to competition photos - but your company will be featured as our premiere sponsor and will be listed at the top of our list of sponsors everywhere logos are displayed. Your logo will also be larger than any other as a way for us to show our gratitude for your donation.
+      .row
+        h3.col.s12.center Our Sponsors
+        .col.m4.s6.center.promo.hoverable
+          a.black-text(href='http://www.solidworks.com/')
+            img.sponsor-pic(alt='SolidWorks', src='imgs/logos/solidworks.png', width='', height='96px')
+            .sponsor
+              p.sponsor-caption(style='font-weight:400')
+                strong(style='font-weight:500') Solid
+                | Works
+        .col.m4.s6.center.promo.hoverable
+          a.black-text(href='supportus.html')
+            i.large.material-icons.teal-text.sponsor-pic help
+            .sponsor
+              h6.sponsor-caption.header Your Logo Here
+              h6.sponsortext.header Your Custom Text Line Here
+        .col.m4.s6.center.promo.hoverable
+          a.black-text(href='supportus.html')
+            i.large.material-icons.teal-text.sponsor-pic help
+            .sponsor
+              h6.sponsor-caption.header Your Logo Here
+              h6.sponsortext.header Your Custom Text Line Here
+        .col.m4.s6.center.promo.hoverable
+          a.black-text(href='supportus.html')
+            i.large.material-icons.teal-text.sponsor-pic help
+            .sponsor
+              h6.sponsor-caption.header Your Logo Here
+              h6.sponsortext.header Your Custom Text Line Here
+        .col.m4.s6.center.promo.hoverable
+          a.black-text(href='supportus.html')
+            i.large.material-icons.teal-text.sponsor-pic help
+            .sponsor
+              h6.sponsor-caption.header Your Logo Here
+              h6.sponsortext.header Your Custom Text Line Here
+        .col.m4.s6.center.promo.hoverable
+          a.black-text(href='supportus.html')
+            i.large.material-icons.teal-text.sponsor-pic help
+            .sponsor
+              h6.sponsor-caption.header Your Logo Here
+              h6.sponsortext.header Your Custom Text Line Here
+    footer.page-footer.blue-grey
+      .container
+        .row
+          .col.l6.s12
+            h5.white-text NHHS Botball Team
+            p.grey-text.text-lighten-4
+              | We are a completely student-run robotics team which builds and programs robots for the KIPR Botball competition.
+          .col.l4.offset-l2.s12
+            h5.white-text Links
+            ul
+              li
+                a.grey-text.text-lighten-3.waves-effect.waves-light(href='about.html') About
+              li
+                a.grey-text.text-lighten-3.waves-effect.waves-light(href='supportus.html') Support Us
+              li
+                a.grey-text.text-lighten-3.waves-effect.waves-light(href='http://materializecss.com/') Materialize CSS
+      .footer-copyright(style='background-color:')
+        .container
+          | © 2017 North Hollywood High School Botball Team
+          a.grey-text.text-lighten-4.right.waves-effect.waves-light(href='#top') Back to Top
+    script.
+      //$('#promo-video').openModal();
+      $( document ).ready(function(){
+      $(".button-collapse").sideNav();
+      $('.modal-trigger').leanModal();
+      $("#new-supportus-page").openModal();
+      })

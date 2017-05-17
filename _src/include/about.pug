@@ -1,0 +1,173 @@
+doctype html
+html
+  head
+    link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    link(type='text/css', rel='stylesheet', href='css/base.css')
+    link(type='text/css', rel='stylesheet', href='css/materialize.min.css', media='screen,projection')
+    link(rel='icon', href='imgs/logos/botguy.png')
+    title NHHS Botball Team
+    meta(name='theme-color', content='#303F9F')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  body
+    script(type='text/javascript', src='https://code.jquery.com/jquery-2.1.1.min.js')
+    script(type='text/javascript', src='js/materialize.min.js')
+    header
+      nav
+        .nav-wrapper.indigo
+          a#top.brand-logo.waves-effect(style='padding-left:16px', href='index.html') NHHS Botball Team
+          a.button-collapse(href='#', data-activates='mobile-demo')
+            i.material-icons menu
+          ul.right.hide-on-med-and-down
+            li.waves-effect
+              a(href='index.html') Home
+            // <li class="waves-effect"><a href="team.html">Our Team</a></li>
+            li.waves-effect.active
+              a(href='about.html') What We Do
+            li.waves-effect
+              a(href='achievements.html') Achievements
+            li.waves-effect
+              a(href='join.html') Join Our Team
+            li.waves-effect
+              a(href='supportus.html') Support Us
+            li.waves-effect
+              a(href='contact.html') Contact
+          ul#mobile-demo.side-nav
+            li.indigo
+              a.waves-effect.white-text(href='')
+                i.material-icons.left.center-vert menu
+                | NHHS Botball Team
+            li
+              a.waves-effect(href='index.html')
+                i.material-icons.left.center-vert home
+                | Home
+            // <li><a class="waves-effect" href="team.html"><i class="material-icons left center-vert">group</i>Our Team</a></li>
+            li.indigo.lighten-3
+              a.waves-effect(href='about.html')
+                i.material-icons.left.center-vert help
+                | What We Do
+            li
+              a.waves-effect(href='achievements.html')
+                i.material-icons.left.center-vert star
+                | Achievements
+            li
+              a.waves-effect(href='join.html')
+                i.material-icons.left.center-vert person_add
+                | Join Our Team
+            li
+              a.waves-effect(href='supportus.html')
+                i.material-icons.left.center-vert tag_faces
+                | Support Us
+            li
+              a.waves-effect(href='contact.html')
+                i.material-icons.left.center-vert mail
+                | Contact
+    main.container
+      h1.indigo-text.header What We Do
+      h4.header
+        | We are a completely student-run robotics club which builds and programs robots for the KIPR Botball competition.
+      .row
+        iframe.col.s12(width='854', height='450', src='https://www.youtube.com/embed/r_EpzX9w-Tg', frameborder='0', allowfullscreen='')
+      h2.header What is Botball?
+      h5.header
+        a.black-text.waves-effect.hoverable.header(href='http://botball.org/what-is-botball') Text taken from botball.org
+      .row
+        .col.s12.m6
+          .card-panel.indigo.lighten-1.hoverable.valign-wrapper(style='height: 175px')
+            span.white-text.cardtext.valign
+              | The Botball® Educational Robotics Program engages middle and high school aged students in a team-oriented robotics competition, and serves as a perfect way to meet today's new common core standards.
+        .col.s12.m6
+          .card-panel.indigo.hoverable.valign-wrapper(style='height: 175px')
+            span.white-text.cardtext.valign
+              | By exposing students to an inquiry-based, learn-by-doing activity that appeals to their hearts as well as their minds, Botball® addresses our nation's need for a well-prepared, creative, yet disciplined workforce with leadership and teamwork experience.
+        .col.s12.m6
+          .card.indigo.darken-2.hoverable
+            .card-image
+              img(src='imgs/homepage/working.jpg')
+            .card-content
+              p.cardtext.white-text
+                | In January, February, and March, the Botball® Educator Workshops provide team leaders and mentors
+                | with technology training and introduce the details of that year's game.
+        .col.s12.m6
+          .card.indigo.darken-3.hoverable
+            .card-image
+              img(src='imgs/homepage/competition.jpg')
+            .card-content
+              p.cardtext.white-text
+                | Then, after a build period of about 7 weeks, students bring their robots to their regional tournament
+                | to compete against other students in the current season's game challenge.
+      h5.header
+        | Students use science, engineering, technology, math, and writing skills to design, build, program, and document robots
+        | in a hands-on project that reinforces their learning by:
+      .row
+        .col.s12.m6
+          .card.red.lighten-2.hoverable
+            .card-content.white-text
+              i.material-icons(style='font-size:20px') code
+              span.card-title  Programming
+              p.cardtext
+                | The robots are always autonomous! Botball® gives students the tools to develop sophisticated
+                | strategies using artificial intelligence with embedded systems. Students will learn to program
+                | their robots in advance using C, C++, and Java.
+            .card-action
+              a.white-text.waves-effect(href='http://www.botball.org/what-is-botball#autonomous') Learn More
+        .col.s12.m6
+          .card.green.lighten-2.hoverable
+            .card-content.white-text
+              i.material-icons(style='font-size:20px') build
+              span.card-title  Engineering
+              p.cardtext
+                | No need for power tools or a machine shop. Competitors are at a level playing field with access to
+                | all resources. The Botball® game kit provides various parts and pieces that get you going
+                | toward building a working robot.
+            .card-action
+              a.white-text.waves-effect(href='http://www.botball.org/what-is-botball#engineering') Learn More
+      .row
+        h3.col.s12.center Botball National Sponsors
+        .col.m4.s6.center.promo.hoverable
+          img.sponsor-pic(src='http://www.botball.org/sites/default/files/nasalarge.png', height='96px')
+          .sponsor
+            h6.sponsor-caption.header NASA
+        .col.m4.s6.center.promo.hoverable
+          img.sponsor-pic(src='http://www.botball.org/sites/default/files/igus.png', height='96px')
+          .sponsor
+            h6.sponsor-caption.header igus
+        .col.m4.s6.center.promo.hoverable
+          img.sponsor-pic(src='http://www.botball.org/sites/default/files/irobot.png', height='96px', width='80%')
+          .sponsor
+            h6.sponsor-caption.header iRobot
+        .col.m4.s6.center.promo.hoverable
+          img.sponsor-pic(src='http://www.botball.org/sites/default/files/solidworks.png', height='96px', width='80%')
+          .sponsor
+            h6.sponsor-caption.header SolidWorks
+        .col.m4.s6.center.promo.hoverable
+          img.sponsor-pic(src='http://www.botball.org/sites/default/files/commonsense.png', height='96px', width='80%')
+          .sponsor
+            h6.sponsor-caption.header Common Sense RC
+        .col.m4.s6.center.promo.hoverable
+          img.sponsor-pic(src='imgs/logos/kipr.png', height='96px', width='50%')
+          .sponsor
+            h6.sponsor-caption.header Kiss Institute for Practical Robotics
+    footer.page-footer.blue-grey
+      .container
+        .row
+          .col.l6.s12
+            h5.white-text NHHS Botball Team
+            p.grey-text.text-lighten-4
+              | We are a completely student-run robotics team which builds and programs robots for the KIPR Botball competition.
+          .col.l4.offset-l2.s12
+            h5.white-text Links
+            ul
+              li
+                a.grey-text.text-lighten-3.waves-effect.waves-light(href='about.html') About
+              li
+                a.grey-text.text-lighten-3.waves-effect.waves-light(href='supportus.html') Support Us
+              li
+                a.grey-text.text-lighten-3.waves-effect.waves-light(href='http://materializecss.com/') Materialize CSS
+      .footer-copyright(style='background-color:')
+        .container
+          | © 2017 North Hollywood High School Botball Team
+          a.grey-text.text-lighten-4.right.waves-effect.waves-light(href='#top') Back to Top
+    script.
+      $( document ).ready(function(){
+      $(".button-collapse").sideNav();
+      $(".active").parent().parent().siblings()[0].click() })

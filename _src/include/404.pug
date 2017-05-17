@@ -1,0 +1,91 @@
+doctype html
+html
+  head
+    link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    link(type='text/css', rel='stylesheet', href='css/base.css')
+    link(type='text/css', rel='stylesheet', href='css/materialize.min.css', media='screen,projection')
+    link(rel='icon', href='imgs/logos/botguy.png')
+    title NHHS Botball Team
+    meta(name='theme-color', content='#00796b')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  body
+    script(type='text/javascript', src='https://code.jquery.com/jquery-2.1.1.min.js')
+    script(type='text/javascript', src='js/materialize.min.js')
+    header
+      nav
+        .nav-wrapper.red
+          a#top.brand-logo.waves-effect(style='padding-left:16px', href='index.html') NHHS Botball Team
+          a.button-collapse(href='#', data-activates='mobile-demo')
+            i.material-icons menu
+          ul.right.hide-on-med-and-down
+            li.waves-effect
+              a(href='index.html') Home
+            // <li class="waves-effect"><a href="team.html">Our Team</a></li>
+            li.waves-effect
+              a(href='about.html') What We Do
+            li.waves-effect
+              a(href='achievements.html') Achievements
+            li.waves-effect
+              a(href='join.html') Join Our Team
+            li.waves-effect
+              a(href='supportus.html') Support Us
+            li.waves-effect
+              a(href='contact.html') Contact
+          ul#mobile-demo.side-nav
+            li.red
+              a.waves-effect.white-text(href='')
+                i.material-icons.left.center-vert menu
+                | NHHS Botball Team
+            li
+              a.waves-effect(href='index.html')
+                i.material-icons.left.center-vert home
+                | Home
+            // <li><a class="waves-effect" href="team.html"><i class="material-icons left center-vert">group</i>Our Team</a></li>
+            li
+              a.waves-effect(href='about.html')
+                i.material-icons.left.center-vert help
+                | What We Do
+            li
+              a.waves-effect(href='achievements.html')
+                i.material-icons.left.center-vert star
+                | Achievements
+            li
+              a.waves-effect(href='join.html')
+                i.material-icons.left.center-vert person_add
+                | Join Our Team
+            li
+              a.waves-effect(href='supportus.html')
+                i.material-icons.left.center-vert tag_faces
+                | Support Us
+            li
+              a.waves-effect(href='contact.html')
+                i.material-icons.left.center-vert mail
+                | Contact
+    main.container
+      h1.header.red-text 404: Page not found :(
+      h3.header.red-text Don't worry, here's a cat to cheer you up.
+      img(src='imgs/errorcat.jpg', style='width: 100%')
+    footer.page-footer.blue-grey
+      .container
+        .row
+          .col.l6.s12
+            h5.white-text NHHS Botball Team
+            p.grey-text.text-lighten-4
+              | We are a completely student-run robotics team which builds and programs robots for the KIPR Botball competition.
+          .col.l4.offset-l2.s12
+            h5.white-text Links
+            ul
+              li
+                a.grey-text.text-lighten-3.waves-effect.waves-light(href='') About
+              li
+                a.grey-text.text-lighten-3.waves-effect.waves-light(href='donate.html') Support Us
+              li
+                a.grey-text.text-lighten-3.waves-effect.waves-light(href='http://materializecss.com/') Materialize CSS
+      .footer-copyright(style='background-color:')
+        .container
+          | © 2017 North Hollywood High School Botball Team
+          a.grey-text.text-lighten-4.right.waves-effect.waves-light(href='#top') Back to Top
+    script.
+      $( document ).ready(function(){
+      $(".button-collapse").sideNav();
+      })

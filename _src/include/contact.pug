@@ -1,0 +1,160 @@
+doctype html
+html
+  head
+    link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    link(type='text/css', rel='stylesheet', href='css/base.css')
+    link(type='text/css', rel='stylesheet', href='css/materialize.min.css', media='screen,projection')
+    link(rel='icon', href='imgs/logos/botguy.png')
+    title NHHS Botball Team
+    meta(name='theme-color', content='#0097A7')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  body
+    script(type='text/javascript', src='https://code.jquery.com/jquery-2.1.1.min.js')
+    script(type='text/javascript', src='js/materialize.min.js')
+    header
+      nav
+        .nav-wrapper.cyan
+          a#top.brand-logo.waves-effect(style='padding-left:16px', href='index.html') NHHS Botball Team
+          a.button-collapse(href='#', data-activates='mobile-demo')
+            i.material-icons menu
+          ul.right.hide-on-med-and-down
+            li.waves-effect
+              a(href='index.html') Home
+            // <li class="waves-effect"><a href="team.html">Our Team</a></li>
+            li.waves-effect
+              a(href='about.html') What We Do
+            li.waves-effect
+              a(href='achievements.html') Achievements
+            li.waves-effect
+              a(href='join.html') Join Our Team
+            li.waves-effect
+              a(href='supportus.html') Support Us
+            li.waves-effect.active
+              a(href='contact.html') Contact
+          ul#mobile-demo.side-nav
+            li.cyan
+              a.waves-effect.white-text(href='')
+                i.material-icons.left.center-vert menu
+                | NHHS Botball Team
+            li
+              a.waves-effect(href='index.html')
+                i.material-icons.left.center-vert home
+                | Home
+            // <li><a class="waves-effect" href="team.html"><i class="material-icons left center-vert">group</i>Our Team</a></li>
+            li
+              a.waves-effect(href='about.html')
+                i.material-icons.left.center-vert help
+                | What We Do
+            li
+              a.waves-effect(href='achievements.html')
+                i.material-icons.left.center-vert star
+                | Achievements
+            li
+              a.waves-effect(href='join.html')
+                i.material-icons.left.center-vert person_add
+                | Join Our Team
+            li
+              a.waves-effect(href='supportus.html')
+                i.material-icons.left.center-vert tag_faces
+                | Support Us
+            li.cyan.lighten-3
+              a.waves-effect(href='contact.html')
+                i.material-icons.left.center-vert mail
+                | Contact
+    main.container
+      h1.header.cyan-text Contact Us
+      h4.header We will get back to you as soon as possible
+      //
+        div class="row" id="school-out">
+        <div class="col s12">
+        <div class="card-panel deep-orange">
+        <h4 class="white-text">School Resumes January 11</h4>
+        <p class="white-text cardtext">Donations will be recieved and processed when we return. However, we will still receive emails.</p>
+        </div>
+        </div>
+        </div
+      h2.header Email
+      // <form id="emailForm" onsubmit="sendTheMail()">
+      form#emailForm(method='POST', action='http://formspree.io/contact@nohobotball.org')
+        .row
+          form.col.s12
+            .row
+              .input-field.col.s6
+                input#first_name.validate(type='text', name='Name', required='')
+                label(for='first_name') Name *
+              .input-field.col.s6
+                input#email.validate(type='email', name='Email', required='')
+                label(for='email') Email *
+            .row
+              .input-field.col.s12
+                input#subjecta.validate(type='text', name='_subject', required='')
+                label(for='subjecta') Subject *
+            .row
+              .input-field.col.s12
+                textarea#message.validate.materialize-textarea(name='Message', required='')
+                label(for='message') Message *
+            button.btn.waves-effect.waves-light.cyan(type='submit')
+              | Submit
+              i.material-icons.right send
+            input(type='text', name='_gotcha', style='display:none')
+            input(type='hidden', name='_next', value='http://nohobotball.org/contact.html?sent=1', style='display:none')
+      .card.hoverable
+        .card-content.cyan-text
+          span.card-title Call
+          .divider
+          p.black-text
+            | You can call North Hollywood High School during school hours (8:00-3:15 M-F) at (818) 753-6200. Ask for Mr.
+            | Lewis, our team sponsor.
+      .card.hoverable
+        .card-content.cyan-text
+          span.card-title Mail
+          .divider
+          p.black-text
+            | You can send mail to North Hollywood High School with this address:
+            br
+            br
+            | North Hollywood High School
+            br
+            | ATN:
+            |                     Mr. Lewis, Botball Team
+            br
+            | 5231 Colfax Avenue
+            br
+            | North Hollywood, CA 91601
+      script.
+        if (window.location.search.indexOf('sent=1') > -1) {
+        setTimeout(function(){
+        Materialize.toast('Message Sent', 2500);
+        }, 1000);
+        setTimeout(function(){
+        Materialize.toast('Thanks for contacting us!', 5000);
+        }, 3500);
+        setTimeout(function(){
+        Materialize.toast("We'll get back to you soon!", 5000);
+        }, 6000);
+        }
+    footer.page-footer.blue-grey
+      .container
+        .row
+          .col.l6.s12
+            h5.white-text NHHS Botball Team
+            p.grey-text.text-lighten-4
+              | We are a completely student-run robotics team which builds and programs robots for the KIPR Botball competition.
+          .col.l4.offset-l2.s12
+            h5.white-text Links
+            ul
+              li
+                a.grey-text.text-lighten-3.waves-effect.waves-light(href='about.html') About
+              li
+                a.grey-text.text-lighten-3.waves-effect.waves-light(href='supportus.html') Support Us
+              li
+                a.grey-text.text-lighten-3.waves-effect.waves-light(href='http://materializecss.com/') Materialize CSS
+      .footer-copyright(style='background-color:')
+        .container
+          | © 2017 North Hollywood High School Botball Team
+          a.grey-text.text-lighten-4.right.waves-effect.waves-light(href='#top') Back to Top
+    script.
+      $( document ).ready(function(){
+      $(".button-collapse").sideNav();
+      $('.slider').slider({full_width: true});
+      })

@@ -1,0 +1,17 @@
+{
+  "name": "nhhsbotball",
+  "version": "0.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "clean": "rm -f ../*.html",
+    "build": "npm run clean && ./node_modules/.bin/pug include --out .. -P",
+    "build-min": "npm run clean && ./node_modules/.bin/pug include --out .."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pug": "^2.0.0-alpha6",
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}
