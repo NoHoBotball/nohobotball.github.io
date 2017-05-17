@@ -1,0 +1,245 @@
+<html>
+
+<head>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/css/base.css">
+    <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="/css/docs.css" />
+    <link rel="icon" href="../imgs/logos/botguy.png">
+
+    <title>Botball Documentation - Tutorial</title>
+
+    <meta name="theme-color" content="#00796b">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.button-collapse').sideNav({
+                draggable: true
+            });
+        $(".active").parent().parent().siblings()[0].click() })
+    </script>
+
+    <header>
+        <ul id="slide-out" class="side-nav fixed">
+            <li style="height: 130px" class="red lighten-1">
+                <div class="userView">
+                    <h5 class="white-text"><a href="/docs/index.html" class="white-text">Index</a></h5>
+                </div>
+            </li>
+            <li><a href="/docs/tutorial.html">Tutorial</a></li>
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Data Objects</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/data-objects/index.html">Introduction</a></li>
+                                <li><a href="/docs/data-objects/variables.html">Variables</a></li>
+                                <li><a href="/docs/data-objects/constants.html">Constants</a></li>
+                                <li><a href="/docs/data-objects/data-types.html">Data Types</a></li>
+                                <li class="active"><a href="/docs/data-objects/pointers.html">Pointers</a></li>
+                                <li><a href="/docs/data-objects/arrays.html">Arrays</a></li>
+                                <li><a href="/docs/data-objects/structures.html">Structures</a></li>
+                                <li><a href="/docs/data-objects/initialization-examples.html">Initialization Examples</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Statements and Expressions</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/statements-and-expressions/index.html">Introduction</a></li>
+                                <li><a href="/docs/statements-and-expressions/operators.html">Operators</a></li>
+                                <li><a href="/docs/statements-and-expressions/control-flow.html">Control Flow</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="/docs/tutorial.html">Style</a></li>
+            <li><a href="/docs/tutorial.html">Debugging</a></li>
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Printing</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/printing/index.html">Introduction</a></li>
+                                <li><a href="/docs/printing/examples.html">Examples</a></li>
+                                <li><a href="/docs/printing/printf-codes.html">printf Codes</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Preprocessor</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/preprocessor/index.html">Introduction</a></li>
+                                <li><a href="/docs/preprocessor/directives.html">Directives</a></li>
+                                <li><a href="/docs/preprocessor/include.html">Include</a></li>
+                                <li><a href="/docs/preprocessor/macros.html">Macros</a></li>
+                                <li><a href="/docs/preprocessor/conditional-compilation.html">Conditional Compilation</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="/docs/lib/math.html">Math Library</a></li>
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>KIPR Wallaby/Link</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/lib/kipr/common-functions.html">Common Functions</a></li>
+                                <li><a href="/docs/lib/kipr/functions.html">Functions List</a></li>
+                                <li><a href="/docs/lib/kipr/camera.html">Camera Functions</a></li>
+                                <li><a href="/docs/lib/kipr/graphics.html">Graphics Functions</a></li>
+                                <li><a href="/docs/lib/kipr/depth.html">Depth Sensor Functions</a></li>
+                                <li><a href="/docs/lib/kipr/usb.html">File I/O Functions</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>iRobot Create</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/lib/kipr/create/index.html">Introduction</a></li>
+                                <li><a href="/docs/lib/kipr/create/serial.html">Serial Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/configuration.html">Configuration Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/movement.html">Movement Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/sensors.html">Sensor Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/battery.html">Battery Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/built-ins.html">Built-In Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/music-leds.html">LED and Music Functions</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="/docs/lib/kipr/botball.html">Botball Functions</a></li>
+            <li><a href="/docs/lib/kipr/threads.html">Threads</a></li>
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Motors and Sensors</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/lib/kipr/info/digital-analog-sensors.html">Analog and Digital Sensors</a></li>
+                                <li><a href="/docs/lib/kipr/info/usb-sensors.html">USB Sensors</a></li>
+                                <li><a href="/docs/lib/kipr/info/motors-servos.html">Motors and Servos</a></li>
+                                <li><a href="/docs/lib/kipr/info/simulator.html">Simulator</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="/docs/full.html">Full Documentation</a></li>
+        </ul>
+        <nav class="nav-extended red lighten-2">
+            <div class="nav-wrapper">
+                <div class="col s12">
+                    <a href="#" data-activates="slide-out" class="button-collapse" style="font-size: 50px"><i class="material-icons">menu</i></a>
+                    <a href="/docs/index.html" class="brand-logo waves-effect" id="top">Botball Documentation</a>
+                </div>
+            </div>
+            <div class="nav-wrapper">
+                <div class="col s12">
+                    <a href="/docs/data-objects/index.html" class="breadcrumb">Data Objects</a>
+                    <a href="#!" class="breadcrumb">Pointers</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="row">
+
+        <div class="container col s12">
+            <!-- END HEADER -->
+
+            <!--Pointers-->
+
+            <a name="PointersM"></a>
+            <h3>Pointers</h3>
+
+            <p>A pointer is the (numeric) address of the location in memory where a data element is stored. Memory addresses
+                begin at 0 and increase by 1 for each byte of memory. Limited arithmetic operations may be performed on pointers,
+                but the value of the resulting pointer depends on the data type pointed to. For example, adding 1 to the
+                pointer for a
+                <font class="CVariable">char</font> data item increases the pointer value by 1 since that advances the pointer to the next character
+                in memory. In contrast, adding 1 to an
+                <font class="CVariable">int</font> pointer increases its value by 4 since that advances the pointer to the next integer in memory.
+                Using a pointer to try to access memory not allocated to a program will probably cause a system error or
+                crash, so it is important to insure that pointers used in a program address valid objects in memory.</p>
+
+            <p>A pointer data type can be defined for any allowed data type, included user-defined data types. When used as
+                a unary operator (one argument), <code>*</code> is the indirection (or "value at address") operator, and
+                is used for defining and dereferencing pointer variables. For example,</p>
+
+            <div class="Indent"><code><font class="CVariable">int</font> *p;</code></div>
+
+            <p>defines <code>p</code> to be a variable whose value is a pointer to a memory location holding an integer.
+            </p>
+
+            <p>When used as a unary operator, <code>&</code> is the memory address operator. The address of a variable named
+                <code>x</code> is given by <code>&x</code> and so if <code>x</code> is an integer variable,</p>
+
+            <div class="Indent"><code>p=&x;</code></div>
+
+            <p>assigns the memory address of variable <code>x</code> to the (integer) pointer variable <code>p</code>.
+            </p>
+
+            <p>Retrieving the value pointed to is known as <i>dereferencing</i> the pointer and is given by <code>*p</code>                for pointer variable <code>p</code>. For the example above, both variable <code>x</code> and <code>*p</code>                represent the same value in memory. <code>*(p+1)</code> retrieves the (integer) value of the next integer
+                in memory (which is 4 bytes further along than <code>x</code>). Furthermore, the contents of the address
+                can be changed by assigning a value to the dereferenced address; e.g., </p>
+
+            <div class="Indent"><code>*(p+1) = *p + 1;</code></div>
+
+            <p>It is often useful to deal with pointers to objects, but great care must be taken to insure that the pointers
+                used at any point in your code really do point to valid objects in memory. It is easy to get confused by
+                what a pointer is addressing when it is taken from a complex structure with pointers to pointers or something
+                similar.</p>
+
+            <p>Pointers are often used instead of global variables to provide a function with access to data external to the
+                function. If a pointer is passed to a function as an argument, the function then has access to the memory
+                location for the pointer, which could also represent a local variable external to the function. If the function
+                uses the pointer to change the value in the memory location, it will also have changed the value of the external
+                local variable.</p>
+
+            <p>For C, the scope of function parameters is local to the function, with values assigned to them only when the
+                function is called. Programming languages typically employ one or more evaluation strategies for function
+                parameters. The ones usually cited are <i>call by value</i>, <i>call by reference</i>, and
+                <i>call by name</i>.
+                <ul>
+                    <li>For <i>call by value</i>, the parameter is treated as a local variable initialized using the value supplied
+                        for the parameter when the function is called. This is the approach used for C.</li>
+                    <li>For <i>call by reference</i>, no local version of the parameter is created, which means it represents
+                        storage for the calling agent, even if the supplied parameter is a constant (i.e., a poorly written
+                        function could change the value of a constant passed to it by reference, which was a real problem
+                        for the early programming language FORTRAN). Although C does not use
+                        <c>call by reference</i> in the strict sense, it accomplishes the same objective by use of pointer variables
+                            as parameters. When a pointer variable is used as a parameter for a function in C, by dereferencing
+                            the parameter (whose scope is local) the function can access and possibly modify the value of
+                            an external variable having the same address.</li>
+                    <li>For <i>call by name</i> the actual name supplied as the parameter is substituted throughout the function,
+                        much as the C preprocessors does for
+                        <font class=Preprocessor>#define</font> macros. <i>Call by name</i> is not supported by C in any meaningful sense.</li>
+                </ul>
+            </p>
+
+
+            <!-- START FOOTER -->
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,495 @@
+<html>
+
+<head>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/css/base.css">
+    <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="/css/docs.css" />
+    <link rel="icon" href="../imgs/logos/botguy.png">
+
+    <title>Botball Documentation - Tutorial</title>
+
+    <meta name="theme-color" content="#00796b">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.button-collapse').sideNav({
+                draggable: true
+            });
+        $(".active").parent().parent().siblings()[0].click() })
+    </script>
+
+    <header>
+        <ul id="slide-out" class="side-nav fixed">
+            <li style="height: 130px" class="red lighten-1">
+                <div class="userView">
+                    <h5 class="white-text"><a href="/docs/index.html" class="white-text">Index</a></h5>
+                </div>
+            </li>
+            <li><a href="/docs/tutorial.html">Tutorial</a></li>
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Data Objects</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/data-objects/index.html">Introduction</a></li>
+                                <li><a href="/docs/data-objects/variables.html">Variables</a></li>
+                                <li><a href="/docs/data-objects/constants.html">Constants</a></li>
+                                <li><a href="/docs/data-objects/data-types.html">Data Types</a></li>
+                                <li><a href="/docs/data-objects/arrays.html">Arrays</a></li>
+                                <li><a href="/docs/data-objects/structures.html">Structures</a></li>
+                                <li><a href="/docs/data-objects/initialization-examples.html">Initialization Examples</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Statements and Expressions</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/statements-and-expressions/index.html">Introduction</a></li>
+                                <li class="active"><a href="/docs/statements-and-expressions/operators.html">Operators</a></li>
+                                <li><a href="/docs/statements-and-expressions/control-flow.html">Control Flow</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="/docs/tutorial.html">Style</a></li>
+            <li><a href="/docs/tutorial.html">Debugging</a></li>
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Printing</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/printing/index.html">Introduction</a></li>
+                                <li><a href="/docs/printing/examples.html">Examples</a></li>
+                                <li><a href="/docs/printing/printf-codes.html">printf Codes</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Preprocessor</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/preprocessor/index.html">Introduction</a></li>
+                                <li><a href="/docs/preprocessor/directives.html">Directives</a></li>
+                                <li><a href="/docs/preprocessor/include.html">Include</a></li>
+                                <li><a href="/docs/preprocessor/macros.html">Macros</a></li>
+                                <li><a href="/docs/preprocessor/conditional-compilation.html">Conditional Compilation</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="/docs/lib/math.html">Math Library</a></li>
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>KIPR Wallaby/Link</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/lib/kipr/common-functions.html">Common Functions</a></li>
+                                <li><a href="/docs/lib/kipr/functions.html">Functions List</a></li>
+                                <li><a href="/docs/lib/kipr/camera.html">Camera Functions</a></li>
+                                <li><a href="/docs/lib/kipr/graphics.html">Graphics Functions</a></li>
+                                <li><a href="/docs/lib/kipr/depth.html">Depth Sensor Functions</a></li>
+                                <li><a href="/docs/lib/kipr/usb.html">File I/O Functions</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>iRobot Create</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/lib/kipr/create/index.html">Introduction</a></li>
+                                <li><a href="/docs/lib/kipr/create/serial.html">Serial Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/configuration.html">Configuration Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/movement.html">Movement Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/sensors.html">Sensor Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/battery.html">Battery Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/built-ins.html">Built-In Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/music-leds.html">LED and Music Functions</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="/docs/lib/kipr/botball.html">Botball Functions</a></li>
+            <li><a href="/docs/lib/kipr/threads.html">Threads</a></li>
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Motors and Sensors</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/lib/kipr/info/digital-analog-sensors.html">Analog and Digital Sensors</a></li>
+                                <li><a href="/docs/lib/kipr/info/usb-sensors.html">USB Sensors</a></li>
+                                <li><a href="/docs/lib/kipr/info/motors-servos.html">Motors and Servos</a></li>
+                                <li><a href="/docs/lib/kipr/info/simulator.html">Simulator</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="/docs/full.html">Full Documentation</a></li>
+        </ul>
+        <nav class="nav-extended red lighten-2">
+            <div class="nav-wrapper">
+                <div class="col s12">
+                    <a href="#" data-activates="slide-out" class="button-collapse" style="font-size: 50px"><i class="material-icons">menu</i></a>
+                    <a href="/docs/index.html" class="brand-logo waves-effect" id="top">Botball Documentation</a>
+                </div>
+            </div>
+            <div class="nav-wrapper">
+                <div class="col s12">
+                    <a href="/docs/statements-and-expressions/index.html" class="breadcrumb">Statements and Expressions</a>
+                    <a href="#!" class="breadcrumb">Operators</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="row">
+
+        <div class="container col s12">
+            <!-- END HEADER -->
+
+            <!--Operators-->
+
+            <a name="Operators"></a>
+            <h3>Operators</h3>
+
+            <p>Each of the data types has a set of operators for operations that may be performed on expressions for that data
+                type (e.g., <code>x + y</code> is an expression).</p>
+
+            <!--Integer_Operations-->
+
+            <a name="Integer_Operations"></a>
+            <div class="indent">
+                <h4>Integer Operators</h4>
+
+                <p>The following operators are provided for integer data:</p>
+
+                <ul>
+                    <li>
+                        <h5>Binary</h5>
+                        <ul>
+                            <li><b>Arithmetic</b>: addition
+                                <font face="Courier"><code>+</code></font>, subtraction
+                                <font face="Courier"><code>-</code></font>, multiplication
+                                <font face="Courier"><code>*</code></font>, division
+                                <font face="Courier"><code>/</code></font>. </li>
+                            <li><b>Relational (comparison)</b>: greater-than
+                                <font face="Courier"><code>&gt;</code></font>, less-than
+                                <font face="Courier"><code>&lt;</code></font>, equality
+                                <font face="Courier"><code>==</code></font>, greater-than-equal
+                                <font face="Courier"><code>&gt;=</code></font>, less-than-equal
+                                <font face="Courier"><code>&lt;=</code></font>, modulus
+                                <font face="Courier"><code>%</code></font>. </li>
+                            <li><b>Logical (Boolean)</b>: logical-OR
+                                <font face="Courier"><code>||</code></font>, logical-AND
+                                <font face="Courier"><code>&amp;&amp;</code></font>, logical-NOT
+                                <font face="Courier"><code>!</code></font>.
+                                <li><b>Bitwise</b>: bitwise-AND
+                                    <font face="Courier"><code>&amp;</code></font>, bitwise-OR
+                                    <font face="Courier"><code>|</code></font>, bitwise-exclusive-OR
+                                    <font face="Courier"><code>^</code></font>, bitwise-NOT (one's complement)
+                                    <font face="Courier"><code>~</code></font>, left shift
+                                    <font face="Courier"><code><<</code></font>, right shift
+                                    <font face="Courier"><code>>></code></font>. </li>
+                        </ul>
+                        </li>
+                        <li>
+                            <h5>Unary</h5>
+                            <ul>
+                                <li>integer promotion
+                                    <font face="Courier"><code>+</code></font>, additive inverse
+                                    <font face="Courier"><code>-</code></font>, increment (prefix or postfix)
+                                    <font face="Courier"><code>++</code></font>, decrement (prefix or postfix)
+                                    <font face="Courier"><code>--</code></font>
+                                </li>
+                            </ul>
+                </ul>
+
+                In C, an integer used in a Boolean expression represents FALSE if it is 0 and TRUE if it is non-zero. In determining the
+                result of the logical operation <code>x && y</code>, if x is FALSE, the value returned by
+                the operation is FALSE without checking y since logically this is enough to determine the result has to be
+                FALSE. Similarly, for <code>x || y</code>, if x is TRUE, the value returned by the operation is TRUE without
+                checking y since logically that is sufficient for determining the result is TRUE</font>. In all other cases,
+                the value for both operands is checked. This can be useful if x is being used as a TRUE/FALSE flag where
+                y may initially be invalid when x is FALSE.</li>
+                </ul>
+                <p>Integer promotion is the action of "promoting" an arithmetic operand to a 32 bit integer, similar to type
+                    casting or coercion. Unlike its counterpart, unary <code>-</code>, it is seldom used.</p>
+
+                <!--Floating_Point_Numbers-->
+
+                <a name="Floating_Point_Numbers"></a>
+                <h4>Floating Point Operators</h4>
+
+                <p>The following subset of integer operators are provided for floating point data:</p>
+
+                <ul>
+                    <li><b>Arithmetic</b>: addition
+                        <font face="Courier"><code>+</code></font>, subtraction
+                        <font face="Courier"><code>-</code></font>, multiplication
+                        <font face="Courier"><code>*</code></font>, division
+                        <font face="Courier"><code>/</code></font>. </li>
+                    <li><b>Relational (comparison)</b>: greater-than
+                        <font face="Courier"><code>&gt;</code></font>, less-than
+                        <font face="Courier"><code>&lt;</code></font>, equality
+                        <font face="Courier"><code>==</code></font>, greater-than-equal
+                        <font face="Courier"><code>&gt;=</code></font>, less-than-equal
+                        <font face="Courier"><code>&lt;=</code></font>. </li>
+
+                </ul>
+                <p>
+
+                    For the KIPR Robot Controller, floating point operations are implemented in software, which means they are significantly
+                    more resource intensive than integer operations. For this reason, floating point values should not be
+                    substituted for integers in iterative processes (such as a loop counter).</p>
+
+                <p>There is a large selection of math functions in the C library for performing calculations that are inherently
+                    floating point. For example,</p>
+                <pre><code><font class="CVariable">double</font> a,x,y;
+x = sqrt(2); <font class="Comment">// x is assigned the square of 2</font>
+x = log(5);  <font class="Comment">// x is assigned the base e logarithm of 5</font>
+x = log2(8); <font class="Comment">// x is assigned the base 2 logarithm of 5</font>
+x = exp(3);  <font class="Comment">// x is assigned e cubed</font>
+x = exp2(3); <font class="Comment">// x is assigned 2 cubed</font>
+y = pow(x,0.333333); <font class="Comment">// y is assigned the (approximate) cube root of x</font>
+x = sin(3);  <font class="Comment">// x is assigned the sine of 3 (radians)</font>
+a = asin(0.123); <font class="Comment">// a is assigned the primary angle (in radians) having sine 0.123</font>
+</code></pre>
+                <p>
+
+                    There are many more functions in each of these categories, plus functions for other kinds of manipulation of floating point
+                    data. The section below for <a href="KIPRWallabyManualBody.htm#Functions" target="ManualFrame">KIPR Robot Controller Library Functions</a>                    includes many of these under the "Math" category designation.</p>
+
+                <!--Characters-->
+
+                <a name="Characters"></a>
+                <h4>Characters</h4>
+
+                <p>For C, a character is an 8-bit unsigned integer whose value is one of the 256 ASCII character codes (ASCII
+                    is the acronym for <i>American Standard Code for Information Interchange</i>). Integer operations can
+                    be performed on character data since if a character variable is used in an integer operation, it is automatically
+                    coerced from an 8-bit unsigned integer into a (positive) 32-bit integer for the computation. ASCII encodes
+                    0 ... 9 in order, then later A ... Z in order, and then later a ... z in order, to enable easy alphabetizing
+                    using integer comparison. Adding 32 to an upper case character will convert it to lower case.</p>
+
+                <p>When a value is stored into a character variable, it is coerced into an 8-bit character (by truncating the
+                    upper bits). Since character data occurs in 8-bit bytes, character string data is stored in consecutive
+                    byte locations in memory; i.e., treating memory as character data provides a means to address and step
+                    through memory one byte at a time.</p>
+
+                <!--Compound Assignment Operators-->
+
+                <a name="Compound_Assignment_Operators"></a>
+                <h4>Compound Assignment Operators</h4>
+
+                <p>The basic assignment operator is <code>=</code>. The following statement adds 2 to the value of a.
+                </p>
+
+                <div class="Indent"><code>a = a + 2;</code></div>
+
+                <p>The compound assignment operator <code>+=</code> does exactly the same thing; i.e.,</p>
+
+                <div class="Indent"><code>a += 2;</code></div>
+
+                <p>All of the following binary operators can be used in a compound assignment:</p>
+
+                <div class="Indent"><code>+, -, *, /, %, &lt;&lt;, &gt;&gt;, &amp;, ^, |</code></div>
+
+                <!--Increment_and_Decrement_Operators-->
+
+                <a name="Increment_and_Decrement_Operators"></a>
+                <h4>Unary Increment and Decrement</h4>
+
+                <p>The increment operator <code>++</code> increments its operand by 1. When used prefix (<code>++x</code>) it
+                    has a different semantic interpretation then when used postfix (<code>x++</code>). The simple cases
+
+                    <pre><code>x++;
+++x;
+x = x + 1;
+x+=1;</code></pre>
+
+                    <p>are all equivalent.</p>
+
+                    When used in a more complex expression, the value of <code>++x</code> and <code>x</code> change
+                    <i>before</i> the result is used in the expression. For <code>x++</code>, the value of <code>x++</code>                    and <code>x</code> change <i>after</i> the result is used in the expression. For example, for the following
+                    constructions using <code>++x</code> and <code>x++</code>
+                    <p>
+
+                        <pre><code>x = 3; printf</font>(<font class="Quote">"%d  %d\n"</font>, x, ++x);
+x = 3; printf</font>(<font class="Quote">"%d  %d\n"</font>, ++x, x);
+x = 3; printf</font>(<font class="Quote">"%d  %d\n"</font>, x, x++);
+x = 3; printf</font>(<font class="Quote">"%d  %d\n"</font>, x++, x);
+x = 3; printf</font>(<font class="Quote">"%d  %d\n"</font>, x, x+1);
+</code></pre>
+                        <p>
+
+                            the displayed text will be
+                            <div class="Indent"><code> 4  4<br>
+ 4  4<br>
+ 4  3<br>
+ 3  3<br>
+ 3  4</code>
+                            </div>
+
+                            <p>Confusing? To understand this you also have to know the arguments of
+                                <printf</code> are evaluated from right to left in setting values passed. Here's a (long-winded) explanation
+                                    for how the outcome above is produced by each program line:
+                                    <dl>
+                                        <dt>Line 1: The <code>++x</code> argument is cleared before values are passed to <code>printf</code>                                            and by incrementing beforehand both argument values are set to 4.</dt>
+                                        <dt>Line 2: Just as for Line 1, the <code>++x</code> argument is cleared before values
+                                            are passed to <code>printf</code>.
+                                            <dt>Line 3: The <code>x++</code> argument is rightmost and gets the current value
+                                                3 of
+                                                <code>x</code> because the increment occurs afterwards. The new value of
+                                                <code>x</code> (4) then becomes the value used for the <code>x</code> argument.</dt>
+                                            <dt>Line 4: The <code>x</code> argument is rightmost and has value 3. The <code>x++</code>                                                argument sets the value 3 before it increments. The value of x subsequent
+                                                to the
+                                                <code>printf</code> is 4.</dt>
+                                            <dt>Line 5: This is the most intuitive case, because it doesn't use <code>++</code>,
+                                                but notice it also doesn't increment x.</dt>
+                                    </dl>
+                                    The difficulty for explaining what appears at first glance to be straight forward code illustrates why the use of these operators
+                                    in normally limited to the simpler cases.</p>
+                            </dl>
+
+                            <p>The interpretation for a combination such as <code>x+++y</code> is dependent on the compiler
+                                being used so such variations are avoided, although not prohibited. [<i>So which is it? <code>(x++)+y</code> or <code>x+(++y)</code>? The answer could be neither!</i>]
+                            </p>
+
+                            <p>The decrement operator <code>--</code> decrements its operation by 1. Its semantics mirror those
+                                of <code>++</code>.</p>
+
+                            <!--Data_Access_Operators-->
+                            <a name="Data_Access_Operators"></a>
+                            <h4>Data Access Operators</h4>
+
+                            Data access operators are ones used to manipulate components of arrays and data structures, or to directly manipulate data
+                            via memory addresses.</p>
+
+                        <ul>
+                            <li>The unary reference operator (<code>&amp;</code>) returns the memory address pointing to a variable,
+                                array component, structure component, or function regardless of its data type.</li>
+                            <li>The unary dereferencing (or indirection) operator (<code>*</code>) applied to a pointer accesses
+                                the referenced address as an object for the data type of the pointer, either for assigning
+                                a value to it, or for utilizing its value.</li>
+                            <li>The array subscript (<code><code>[ ]</code></code>) brackets operator accesses the component
+                                of the array given by the index enclosed within the brackets.</li>
+                            <li>The structure component (<code>.</code>) dot operator accesses, by name, the specified component.
+                                <li>The structure dereference (<code><code>-></code></code>) arrow operator applied to a pointer
+                                    to the structure accesses the referenced component (by name) of a structure (for structure
+                                    <code>ds</code> with component named component <code>i</code>, <code>ds.i</code> and
+                                    <code>(&amp;ds)<code>->i</code></code>
+                                    are equivalent.</li>
+                        </ul>
+
+                        <!--Precedence_and_Order_of_Evaluation-->
+
+                        <a name="Precedence_and_Order_of_Evaluation"></a>
+                        <h4>Precedence and Order of Evaluation</h4>
+                        </font>
+
+                        <p>As per Kernighan and Ritchie's book, the following table summarizes the rules for precedence and
+                            associativity for the C operators. Operators listed earlier in the table have higher precedence;
+                            operators on the same line of the table have equal precedence and when used without parentheses
+                            are cleared left to right.</p>
+
+                        <div class="Indent">
+                            <table class="bordered">
+                                <thead>
+                                    <tr>
+                                        <td align="center"><b>Operator</b></font>
+                                        </td>
+                                        <td><b>Associativity</b></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code> () [] -> .</code></td>
+                                        <td align="center">left to right</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code> ! ~ ++ -- - * &amp; (&lt;</code><i>data-type</i><code>&gt;)  sizeof </code></td>
+                                        <td align="center">right to left</font>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td> <code>* / %</code></td>
+                                        <td align="center">left to right</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code> + -</code></td>
+                                        <td align="center">left to right</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code> &lt;&lt; &gt;&gt;</code></td>
+                                        <td align="center">left to right</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code> &lt; &lt;= &gt; &gt;=</code></td>
+                                        <td align="center">left to right</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code> == !=</code></td>
+                                        <td align="center">left to right</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code> &amp;</code></td>
+                                        <td align="center">left to right</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code> ^</code></td>
+                                        <td align="center">left to right</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code> |</code></td>
+                                        <td align="center">left to right</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code> &amp;&amp;</code></td>
+                                        <td align="center">left to right</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code> ||</code></td>
+                                        <td align="center">left to right</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code> ?:</code></td>
+                                        <td align="center">right to left</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code> = += -= *= /= %= &= ^= |= <<= >>= </code></td>
+                                        <td align="center">right to left</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code> ,</code></td>
+                                        <td align="center">left to right</td>
+                                    </tr>
+                            </table>
+
+                            Unary <code>+, -, </code>and <code>*</code> have higher precedence than their binary forms.
+                        </div>
+            </div>
+
+            <!-- START FOOTER -->
+        </div>
+    </main>
+</body>
+
+</html>

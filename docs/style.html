@@ -1,0 +1,292 @@
+<html>
+
+<head>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/css/base.css">
+    <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="/css/docs.css" />
+    <link rel="icon" href="../imgs/logos/botguy.png">
+
+    <title>Botball Documentation - Tutorial</title>
+
+    <meta name="theme-color" content="#00796b">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.button-collapse').sideNav({
+                draggable: true
+            });
+        $(".active").parent().parent().siblings()[0].click() })
+    </script>
+
+    <header>
+        <ul id="slide-out" class="side-nav fixed">
+            <li style="height: 130px" class="red lighten-1">
+                <div class="userView">
+                    <h5 class="white-text"><a href="/docs/index.html" class="white-text">Index</a></h5>
+                </div>
+            </li>
+            <li><a href="/docs/tutorial.html">Tutorial</a></li>
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Data Objects</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/data-objects/index.html">Introduction</a></li>
+                                <li><a href="/docs/data-objects/variables.html">Variables</a></li>
+                                <li><a href="/docs/data-objects/constants.html">Constants</a></li>
+                                <li><a href="/docs/data-objects/data-types.html">Data Types</a></li>
+                                <li><a href="/docs/data-objects/arrays.html">Arrays</a></li>
+                                <li><a href="/docs/data-objects/structures.html">Structures</a></li>
+                                <li><a href="/docs/data-objects/initialization-examples.html">Initialization Examples</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Statements and Expressions</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/statements-and-expressions/index.html">Introduction</a></li>
+                                <li><a href="/docs/statements-and-expressions/operators.html">Operators</a></li>
+                                <li><a href="/docs/statements-and-expressions/control-flow.html">Control Flow</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="active"><a href="/docs/tutorial.html">Style</a></li>
+            <li><a href="/docs/tutorial.html">Debugging</a></li>
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Printing</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/printing/index.html">Introduction</a></li>
+                                <li><a href="/docs/printing/examples.html">Examples</a></li>
+                                <li><a href="/docs/printing/printf-codes.html">printf Codes</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Preprocessor</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/preprocessor/index.html">Introduction</a></li>
+                                <li><a href="/docs/preprocessor/directives.html">Directives</a></li>
+                                <li><a href="/docs/preprocessor/include.html">Include</a></li>
+                                <li><a href="/docs/preprocessor/macros.html">Macros</a></li>
+                                <li><a href="/docs/preprocessor/conditional-compilation.html">Conditional Compilation</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="/docs/lib/math.html">Math Library</a></li>
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>KIPR Wallaby/Link</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/lib/kipr/common-functions.html">Common Functions</a></li>
+                                <li><a href="/docs/lib/kipr/functions.html">Functions List</a></li>
+                                <li><a href="/docs/lib/kipr/camera.html">Camera Functions</a></li>
+                                <li><a href="/docs/lib/kipr/graphics.html">Graphics Functions</a></li>
+                                <li><a href="/docs/lib/kipr/depth.html">Depth Sensor Functions</a></li>
+                                <li><a href="/docs/lib/kipr/usb.html">File I/O Functions</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>iRobot Create</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/lib/kipr/create/index.html">Introduction</a></li>
+                                <li><a href="/docs/lib/kipr/create/serial.html">Serial Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/configuration.html">Configuration Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/movement.html">Movement Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/sensors.html">Sensor Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/battery.html">Battery Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/built-ins.html">Built-In Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/music-leds.html">LED and Music Functions</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="/docs/lib/kipr/botball.html">Botball Functions</a></li>
+            <li><a href="/docs/lib/kipr/threads.html">Threads</a></li>
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Motors and Sensors</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/lib/kipr/info/digital-analog-sensors.html">Analog and Digital Sensors</a></li>
+                                <li><a href="/docs/lib/kipr/info/usb-sensors.html">USB Sensors</a></li>
+                                <li><a href="/docs/lib/kipr/info/motors-servos.html">Motors and Servos</a></li>
+                                <li><a href="/docs/lib/kipr/info/simulator.html">Simulator</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="/docs/full.html">Full Documentation</a></li>
+        </ul>
+        <nav class="nav-extended red lighten-2">
+            <div class="nav-wrapper">
+                <div class="col s12">
+                    <a href="#" data-activates="slide-out" class="button-collapse" style="font-size: 50px"><i class="material-icons">menu</i></a>
+                    <a href="/docs/index.html" class="brand-logo waves-effect" id="top">Botball Documentation</a>
+                </div>
+            </div>
+            <div class="nav-wrapper">
+                <div class="col s12">
+                    <a href="#!" class="breadcrumb">Style</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="row">
+
+        <div class="container col s12">
+            <!-- END HEADER -->
+
+            <!--Style-->
+
+            <a name="Programming_Style"></a>
+            <h2>Programming Style</h2>
+
+            <p>Many authors have expressed opinions on programming style, which for C generally consists of how key elements
+                of a program are exhibited, how comments are handled, and how white space is employed, most notably in how
+                block structures are offset by placement and indentation. The manner in which a program is written affects
+                its readability, ease of understanding, and effort for debugging, enhancement, and maintenance. </p>
+
+            <p>The most commonly used style, K&R Style, reflects how programs are presented in Kernighan and Ritchie's book
+                on C (<a href="http://www.amazon.com/C-Programming-Language-2nd-Edition/dp/0131103628">The C Programming Language (2nd Edition)</a>).
+                This style, or a variant, is advocated by most C programming experts and is the style observed in this manual.
+            </p>
+
+            <!--White Space-->
+
+            <a name="White_Space"></a>
+            <h4>White Space</h4>
+
+            <p>As noted earlier, the term "white space" references combinations of characters that when printed produce a blank
+                area on the display. For C, white space is formed by using characters such as spaces, new lines, and tabs.
+                The white space characters in C are</p>
+
+            <div class="Indent">
+                <table class="striped">
+                    <thead>
+                        <tr>
+                            <td align="center"><b>Character</b></td>
+                            <td><b>Print Action</b></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code> ' ' </code></td>
+                            <td align="center">space</td>
+                        </tr>
+                        <tr>
+                            <td><code>  '\n' </code></td>
+                            <td align="center">new line</td>
+                        </tr>
+                        <tr>
+                            <td><code> '\t' </code></td>
+                            <td align="center">horizontal tab</td>
+                        </tr>
+                        <tr>
+                            <td><code> '\v' </code></td>
+                            <td align="center">vertical tab</td>
+                        </tr>
+                        <tr>
+                            <td><code> '\r' </code></td>
+                            <td align="center">carriage return</td>
+                        </tr>
+                        <tr>
+                            <td><code> '\f' </code></td>
+                            <td align="center">formfeed</td>
+                        </tr>
+                </table>
+                <br>The print result may differ from one display device to another (for example, while <code>'\n'</code>                has the same outcome for almost every device, <code>'\r'</code> may behave the same as <code>'\n'</code>                for some devices but on others simply reposition printing at the start of the current line).
+            </div>
+
+            <p>The C compiler either ignores white space that is not imbedded inside double quote marks, or collapses it to
+                a single generic white space character for compilation purposes. This means that other than for character
+                strings, white space can be used for things like indentation that improve program readability. White space
+                is required where it is needed to separate adjacent objects, but if another separator such as a parenthesis,
+                comma, curly brace, square bracket, semi-colon, etc is present, white space is not required.
+
+                <!--Indentation-->
+
+                <a name="Indentation"></a>
+                <h4>Indentation</h4>
+
+                <p>Good use of indentation offsets program blocks, not only making a program more easily understood, but making
+                    it easier to determine if the curly braces are matched and block structures will produce the desired
+                    semantic results. From the C compiler's point of view, </p>
+
+                <pre><code><font class="Comment">/* Simple example: C Programmer's Manual */</font>
+<font class="CVariable">int</font> main()
+{
+    printf(<font class="Quote">&quot;Hello, world!\n&quot;</font>); <font class="Comment">/* simple example */</font>
+}
+</code></pre>
+
+                <p>and</p>
+
+                <pre><code><font class="Comment">/* Simple example: C Programmer's Manual */</font><font class="CVariable">int</font> main(){printf(<font class="Quote">&quot;Hello, world!\n&quot;</font>);} <font class="Comment">/* simple example */</font>
+</code></pre>
+
+                <p>are equivalent, but it is pretty clear the use of white space to set off the elements of the program in the
+                    first version makes it more understandable than for the second. This distinction becomes even more important
+                    when nested selection and iteration statements are being employed. For an admittedly extreme example,
+                    the following construction as presented will compile, but from a human readability point of view is almost
+                    incomprehensible:</p>
+
+                <div class="Indent"><code><font clas"Indent"><font class="CVariable">switch</font>(i){<font class="CVariable">case</font> 0:<font class="CVariable">while</font>(j++<100){k++;<font class="CVariable">if</font>(k>10)<font class="CVariable">break</font>;}<font class="CVariable">break</font>;<font class="CVariable">case</font> 1:<font class="CVariable">if</font>(j>50)k--;<font class="CVariable">else</font> <font class="CVariable">while</font>(j-->=0)k++;<font class="CVariable">break</font>;}
+</code></div>
+
+                <p>In addition to better presenting overall program logic, use of a consistent programming style facilitates
+                    debugging programs. Just as writers develop styles intended to make the text they produce more easily
+                    read and understood, programmers develop styles for making their programs easier to read and understand,
+                    but with the added objective of making them easier to debug. The KISS IDE program editor provides facilities
+                    for automatic indentation that reflects common practice for C programmers.</p>
+
+                <!--Commenting Style-->
+
+                <a name="Commenting_Style"></a>
+                <h4>Commenting</h4>
+
+                <p>Comments are the means for programmers to integrate documentation into a program. The lead comment typically
+                    specifies the purpose of the program. For large projects, it is a common practice to also include a (bracketed)
+                    comment on program history, in particular reflecting the changes that have been made to the program,
+                    including by whom, when, and where in the program.
+                    <p>
+
+                        <p>Multi-line comments are typically used to offset description and purpose of major program components.
+                            Single-line comments are useful for provide an explanation of logic or reasoning that might be
+                            subsequently useful if that part of the program needs to be revisited for debugging or other
+                            purposes.
+                        </p>
+
+                        <!-- START FOOTER -->
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,372 @@
+<html>
+
+<head>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/css/base.css">
+    <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="/css/docs.css" />
+    <link rel="icon" href="../imgs/logos/botguy.png">
+
+    <title>Botball Documentation - Tutorial</title>
+
+    <meta name="theme-color" content="#00796b">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.button-collapse').sideNav({
+                draggable: true
+            });
+        $(".active").parent().parent().siblings()[0].click() })
+    </script>
+
+    <header>
+        <ul id="slide-out" class="side-nav fixed">
+            <li style="height: 130px" class="red lighten-1">
+                <div class="userView">
+                    <h5 class="white-text"><a href="/docs/index.html" class="white-text">Index</a></h5>
+                </div>
+            </li>
+            <li><a href="/docs/tutorial.html">Tutorial</a></li>
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Data Objects</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/data-objects/index.html">Introduction</a></li>
+                                <li><a href="/docs/data-objects/variables.html">Variables</a></li>
+                                <li><a href="/docs/data-objects/constants.html">Constants</a></li>
+                                <li><a href="/docs/data-objects/data-types.html">Data Types</a></li>
+                                <li><a href="/docs/data-objects/arrays.html">Arrays</a></li>
+                                <li><a href="/docs/data-objects/structures.html">Structures</a></li>
+                                <li><a href="/docs/data-objects/initialization-examples.html">Initialization Examples</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Statements and Expressions</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/statements-and-expressions/index.html">Introduction</a></li>
+                                <li><a href="/docs/statements-and-expressions/operators.html">Operators</a></li>
+                                <li><a href="/docs/statements-and-expressions/control-flow.html">Control Flow</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="/docs/tutorial.html">Style</a></li>
+            <li><a href="/docs/tutorial.html">Debugging</a></li>
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Printing</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/printing/index.html">Introduction</a></li>
+                                <li><a href="/docs/printing/examples.html">Examples</a></li>
+                                <li><a href="/docs/printing/printf-codes.html">printf Codes</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Preprocessor</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/preprocessor/index.html">Introduction</a></li>
+                                <li><a href="/docs/preprocessor/directives.html">Directives</a></li>
+                                <li><a href="/docs/preprocessor/include.html">Include</a></li>
+                                <li><a href="/docs/preprocessor/macros.html">Macros</a></li>
+                                <li><a href="/docs/preprocessor/conditional-compilation.html">Conditional Compilation</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="/docs/lib/math.html">Math Library</a></li>
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>KIPR Wallaby/Link</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/lib/kipr/common-functions.html">Common Functions</a></li>
+                                <li><a href="/docs/lib/kipr/functions.html">Functions List</a></li>
+                                <li><a href="/docs/lib/kipr/camera.html">Camera Functions</a></li>
+                                <li><a href="/docs/lib/kipr/graphics.html">Graphics Functions</a></li>
+                                <li><a href="/docs/lib/kipr/depth.html">Depth Sensor Functions</a></li>
+                                <li><a href="/docs/lib/kipr/usb.html">File I/O Functions</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>iRobot Create</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/lib/kipr/create/index.html">Introduction</a></li>
+                                <li><a href="/docs/lib/kipr/create/serial.html">Serial Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/configuration.html">Configuration Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/movement.html">Movement Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/sensors.html">Sensor Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/battery.html">Battery Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/built-ins.html">Built-In Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/music-leds.html">LED and Music Functions</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="/docs/lib/kipr/botball.html">Botball Functions</a></li>
+            <li><a href="/docs/lib/kipr/threads.html">Threads</a></li>
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Motors and Sensors</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li class="active"><a href="/docs/lib/kipr/info/digital-analog-sensors.html">Analog and Digital Sensors</a></li>
+                                <li><a href="/docs/lib/kipr/info/usb-sensors.html">USB Sensors</a></li>
+                                <li><a href="/docs/lib/kipr/info/motors-servos.html">Motors and Servos</a></li>
+                                <li><a href="/docs/lib/kipr/info/simulator.html">Simulator</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="/docs/full.html">Full Documentation</a></li>
+        </ul>
+        <nav class="nav-extended red lighten-2">
+            <div class="nav-wrapper">
+                <div class="col s12">
+                    <a href="#" data-activates="slide-out" class="button-collapse" style="font-size: 50px"><i class="material-icons">menu</i></a>
+                    <a href="/docs/index.html" class="brand-logo waves-effect" id="top">Botball Documentation</a>
+                </div>
+            </div>
+            <div class="nav-wrapper">
+                <div class="col s12">
+                    <a href="#!" class="breadcrumb">Motors and Sensors</a>
+                    <a href="#!" class="breadcrumb">Analog and Digital Sensors</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="row">
+
+        <div class="container col s12">
+            <!-- END HEADER -->
+
+            <!--KIPR Robot Controller Images-->
+
+            <a name="LinkImages"></a>
+            <h2>KIPR Robot Controller Images</h2>
+            <div class="Indent">
+
+                <!--digital and analog sensors-->
+
+                <a name="LinkSensors"></a>
+                <h3>Analog and Digital Sensor Images</h3>
+
+                <p>The image below is the front of the KIPR Robot Controller showing where the analog and digital sensor ports
+                    are located.
+                </p>
+
+                <!--<img class="center" src="images/Link_sensor_ports.gif" width="70%"></img>-->
+
+                <p class="center"><br>Examples of digital and analog sensors used with the KIPR Robot Controller</p>
+
+                <table class="centerTable" border="1" cellpadding="5" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td align="center" valign="center"><a href="#light_sensor"><br>
+      <img border="0" src="images/LightSensor.gif" width=60%><br>
+      IR light sensor<br>
+      </a> (analog)
+                            </td>
+                            <td align="center" valign="center"> <a href="#reflectance_sensors"> <img border="0" src="images/Reflectance_sensors.gif" width="60%"><br>
+      IR reflectance sensors<br>
+      </a> (analog)</font>
+                            </td>
+                            <td align="center" valign="center"> <a href="#ET_sensor"> <img border="0" src="images/ET.gif" width="60%"><br>
+      IR "E.T." Distance Sensor<br>
+      </a> (floating analog)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" valign="center" colspan="2"><a href="#touch_sensors"><br>
+      <img border="0" src="images/TouchSensors.gif"><br>
+      Touch Sensors<br>
+      </a> (digital)
+                            </td>
+                            <td align="center" valign="center"><a href="#break_beam_sensor"><br>
+      <img border="0" src="images/BreakBeam.gif"><br>
+      IR "Break Beam" Sensor<br>
+      </a> (digital)</font>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" valign="center"><a href="#analog_slider"><br>
+      <img border="0" src="images/AnalogSlider.gif"/><br>
+      Slider sensor<br>
+      </a> (analog)
+                            </td>
+                            <td align="center" valign="center"><a href="#analog_pot"><br>
+      <img border="0" src="images/AnalogPot.gif"><br>
+      Potentiometer (Pot) Sensor<br>
+      </a> (analog)
+                            </td>
+                            <td align="center" valign="center"><a href="#sensors"><br>
+      <img border="0" height="120" width="60" src="images/sonar.jpg"><br>
+      Ultrasonic rangefinder (SONAR)
+      </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                </p>
+
+                <!--light_sensor-->
+
+                <div class="Indent">
+                    <a name="light_sensor"></a>
+                    <h4>Infrared light sensor (analog)</h4>
+
+                    <img border="0" src="images/LightSensor.gif" width="40%"><br>
+                    <ul>
+                        <li>Analog sensor</li>
+                        <li>Connect to ports 0-7</li>
+                        <li>Access with function <code><a href="#analog">analog</a>(&lt;</code><i>port#</i><code>&gt;) </code></li>
+                        <li>Low values indicate lots of Infrared</li>
+                        <li>High values indicate low Infrared</li>
+                        <li>Sensor is somewhat directional and can be made more so using an opaque tube or Lego to block out
+                            extraneous light. Sensor can be attenuated by placing paper in front.
+                        </li>
+                    </ul>
+
+                    <!--Reflectance Sensors-->
+
+                    <a name="reflectance_sensors"></a>
+                    <h4>Infrared large and small reflectance sensors (analog)</h4>
+
+                    <img border="0" src="images/Reflectance_sensors.gif" width="30%"><br>
+                    <ul>
+                        <li>Analog sensor</li>
+                        <li>Connect to ports 0-7</li>
+                        <li>Access with function <code><a href="#analog">analog</a>(&lt;</code><i>port#</i><code>&gt;);</code></li>
+                        <li>Values measure IR reflection from a surface, allowing a robot to detect surface features such as
+                            a black tape line</li>
+                        <li>Dark surfaces produce high readings (low IR reflectivity) and light surfaces produce low readings
+                            (high IR reflectivity)</i>
+                            <li>Proximity of sensor to surface affects the difference in readings, so can be used to detect drop-offs</li>
+                            <li>Sensor has a reflectance range of about 3 inches</li>
+                    </ul>
+
+                    <!--ET_sensor-->
+                    <a name="ET_sensor"></a>
+                    <h4>Infrared "E.T." Distance Sensor (floating analog)</h4>
+
+                    <img border="0" src="images/ET.gif"><br>
+                    <ul>
+                        <li>Floating analog sensor (pullup resistor for port must be disabled for readings to be meaningful)
+                        </li>
+                        <li>Connect to port 0-7</li>
+                        <li>Access with function <code><a href="#analog">analog_et</a></font>(&lt;</code><i>port#</i><code>&gt;)</code>;</li>
+                        <li>Low values indicate large distance</li>
+                        <li>High values indicate distance approaching ~4 inches</li>
+                        <li>Range is 4-30 inches. Result is approximately 1/(d)^2. Objects closer than 4 inches will have the
+                            same readings as those far away.</li>
+                        <li>Sharp Electronics part number GP2D12</li>
+                        <li>Sensor shines a narrow infrared beam, and measures the angle of the beam return using a position-sensitive
+                            detector (PSD):</li>
+                    </ul>
+
+                    <!--touch_sensor-->
+
+                    <a name="touch_sensors"></a>
+                    <h4>Touch sensors (digital)</h4>
+
+                    <img border="0" src="images/TouchSensors.gif"><br>
+                    <ul>
+                        <li>Digital switch sensors</li>
+                        <li>Connect to ports 8-15</li>
+                        <li>Access with function <code><a href="#digital">digital</a>(&lt;</code><i>port#</i><code>&gt;);</code></li>
+                        <li>1 indicates switch is closed</li>
+                        <li>0 indicates switch is open</li>
+                        <li>These make good bumpers and can be used for limit switches on an actuator</li>
+                    </ul>
+
+                    <!--break_beam_sensor-->
+
+                    <a name="break_beam_sensor"></a>
+                    <h4>Infrared "Break Beam" Sensor (digital)</h4>
+
+                    <img border="0" src="images/image010.gif"><br>
+                    <ul>
+                        <li>Digital sensor</li>
+                        <li>Connect to ports 8-15</li>
+                        <li>Access with function <code><font class="CFunction"><a href="#digital">digital</a></font>(&lt;</code><i>port#</i><code>&gt;)</code>                            </li>
+                        <li>1 indicates slot is empty</li>
+                        <li>0 indicates slot is blocked</li>
+                        <li>Can be used for alignment; e.g., a winch with a pin which when blocking the slot indicates alignment
+                            is reached</li>
+                        <li>Can also be used for encoders, where the edge of a wheel with holes around its perimeter passes through
+                            the slot, alternately breaking the beam</li>
+                    </ul>
+
+                    <!--sonar_sensor-->
+                    <!--
+<a name="sonar_sensor"></a>
+<h4>Sonar (Ultrasonic Rangefinder)</h4>
+
+<img border="0" height="180" width="90" src="images/sonar.jpg">
+<br>
+
+<ul>
+  <li>Timed analog sensor. Sends a "ping" of high-pitched sound and listens for an echo</li>
+  <li>Connect to ports 0-7</li>
+  <li>Access with function <font class="CFunction"><a href="#analog">analog</a></font>(&lt;port#&gt;) </li>
+  <li>Returned value is distance in inches to closest object in field of view</li>
+  <li>Range is approximately 10-250 inches</li>
+  <li>When first powered up, make sure there is nothing within 24
+  inches (60cm) so sonar can self calibrate.
+ <li>The sonar field of view is an approximately 30 degree teardrop:</li>
+</ul>
+-->
+                    <a name="analog_slider"></a>
+                    <h4>Analog slider</h4>
+
+                    <img border="0" height="66" width="200" src="images/AnalogSlider.gif"><br>
+                    <ul>
+                        <li>Analog sensor</li>
+                        <li>Connect to ports 0-7</li>
+                        <li>Access with function <code><a href="#analog">analog</a>(&lt;</code><i>port#</i><code>&gt;);</code></li>
+                        <li>Values range from 0 to 2047</li>
+                    </ul>
+
+                    <a name="analog_pot"></a>
+                    <h4>Analog pot (potentiometer)</h4>
+
+                    <img border="0" height="128" width="100" src="images/AnalogPot.gif"><br>
+                    <ul>
+                        <li>Analog sensor</li>
+                        <li>Connect to ports 0-7</li>
+                        <li>Access with function <code><a href="#analog">analog</a>(&lt;</code><i>port#</i><code>&gt;);</code></li>
+                        <li>Values range from 0 to 2047</li>
+                    </ul>
+                </div>
+
+                <!-- START FOOTER -->
+            </div>
+    </main>
+</body>
+
+</html>

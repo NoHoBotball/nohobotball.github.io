@@ -1,0 +1,343 @@
+<html>
+
+<head>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/css/base.css">
+    <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="/css/docs.css" />
+    <link rel="icon" href="../imgs/logos/botguy.png">
+
+    <title>Botball Documentation - Tutorial</title>
+
+    <meta name="theme-color" content="#00796b">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.button-collapse').sideNav({
+                draggable: true
+            });
+        $(".active").parent().parent().siblings()[0].click() })
+    </script>
+
+    <header>
+        <ul id="slide-out" class="side-nav fixed">
+            <li style="height: 130px" class="red lighten-1">
+                <div class="userView">
+                    <h5 class="white-text"><a href="/docs/index.html" class="white-text">Index</a></h5>
+                </div>
+            </li>
+            <li><a href="/docs/tutorial.html">Tutorial</a></li>
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Data Objects</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/data-objects/index.html">Introduction</a></li>
+                                <li><a href="/docs/data-objects/variables.html">Variables</a></li>
+                                <li><a href="/docs/data-objects/constants.html">Constants</a></li>
+                                <li><a href="/docs/data-objects/data-types.html">Data Types</a></li>
+                                <li><a href="/docs/data-objects/arrays.html">Arrays</a></li>
+                                <li><a href="/docs/data-objects/structures.html">Structures</a></li>
+                                <li><a href="/docs/data-objects/initialization-examples.html">Initialization Examples</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Statements and Expressions</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/statements-and-expressions/index.html">Introduction</a></li>
+                                <li><a href="/docs/statements-and-expressions/operators.html">Operators</a></li>
+                                <li><a href="/docs/statements-and-expressions/control-flow.html">Control Flow</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="/docs/tutorial.html">Style</a></li>
+            <li><a href="/docs/tutorial.html">Debugging</a></li>
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Printing</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/printing/index.html">Introduction</a></li>
+                                <li><a href="/docs/printing/examples.html">Examples</a></li>
+                                <li><a href="/docs/printing/printf-codes.html">printf Codes</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Preprocessor</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/preprocessor/index.html">Introduction</a></li>
+                                <li><a href="/docs/preprocessor/directives.html">Directives</a></li>
+                                <li><a href="/docs/preprocessor/include.html">Include</a></li>
+                                <li><a href="/docs/preprocessor/macros.html">Macros</a></li>
+                                <li><a href="/docs/preprocessor/conditional-compilation.html">Conditional Compilation</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="/docs/lib/math.html">Math Library</a></li>
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>KIPR Wallaby/Link</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/lib/kipr/common-functions.html">Common Functions</a></li>
+                                <li><a href="/docs/lib/kipr/functions.html">Functions List</a></li>
+                                <li><a href="/docs/lib/kipr/camera.html">Camera Functions</a></li>
+                                <li><a href="/docs/lib/kipr/graphics.html">Graphics Functions</a></li>
+                                <li><a href="/docs/lib/kipr/depth.html">Depth Sensor Functions</a></li>
+                                <li><a href="/docs/lib/kipr/usb.html">File I/O Functions</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>iRobot Create</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/lib/kipr/create/index.html">Introduction</a></li>
+                                <li><a href="/docs/lib/kipr/create/serial.html">Serial Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/configuration.html">Configuration Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/movement.html">Movement Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/sensors.html">Sensor Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/battery.html">Battery Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/built-ins.html">Built-In Functions</a></li>
+                                <li class="active"><a href="/docs/lib/kipr/create/music-leds.html">LED and Music Functions</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="/docs/lib/kipr/botball.html">Botball Functions</a></li>
+            <li><a href="/docs/lib/kipr/threads.html">Threads</a></li>
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Motors and Sensors</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/lib/kipr/info/digital-analog-sensors.html">Analog and Digital Sensors</a></li>
+                                <li><a href="/docs/lib/kipr/info/usb-sensors.html">USB Sensors</a></li>
+                                <li><a href="/docs/lib/kipr/info/motors-servos.html">Motors and Servos</a></li>
+                                <li><a href="/docs/lib/kipr/info/simulator.html">Simulator</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="/docs/full.html">Full Documentation</a></li>
+        </ul>
+        <nav class="nav-extended red lighten-2">
+            <div class="nav-wrapper">
+                <div class="col s12">
+                    <a href="#" data-activates="slide-out" class="button-collapse" style="font-size: 50px"><i class="material-icons">menu</i></a>
+                    <a href="/docs/index.html" class="brand-logo waves-effect" id="top">Botball Documentation</a>
+                </div>
+            </div>
+            <div class="nav-wrapper">
+                <div class="col s12">
+                    <a href="/docs/lib/kipr/create/index.html" class="breadcrumb">iRobot Create</a>
+                    <a href="#!" class="breadcrumb">LED and Music Functions</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="row">
+
+        <div class="container col s12">
+            <!-- END HEADER -->
+
+            <!-- Create music functions -->
+
+            <a name="Music_LED_functions"></a>
+            <h4>Create LED and Music Functions</h4>
+
+            <table>
+                <tbody>
+                    <tr>
+                        <td><a name="create_advance_led"></a></td>
+                        <td><code>create_advance_led </code> [Category: Create Music/LED Function]
+                            <dl>
+                                <dd>
+                                    Format: <code><font class="CVariable">void</font> create_advance_led(<font class="CVariable">int</font> on);</code><br>                                    The value 1 causes the Advance LED light (<code>>></code>|) to turn on, 0 to turn it
+                                    off.
+                                </dd>
+                            </dl>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a name="create_play_led"></a></td>
+                        <td><code>create_play_led </code> [Category: Create Music/LED Function]
+                            <dl>
+                                <dd>
+                                    Format: <code><font class="CVariable">void</font> create_play_led(<font class="CVariable">int</font> on);</code><br>                                    The value 1 causes the Play LED (>) to turn on, 0 to turn it off.
+                                </dd>
+                            </dl>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a name="create_play_song"></a></td>
+                        <td><code>create_play_song </code> [Category: Create Music/LED Function]
+                            <dl>
+                                <dd>
+                                    Format: <code><font class="CVariable">void</font> create_play_song(<font class="CVariable">int</font> num);</code><br>                                    Plays the specified song that has been loaded onto the Create.
+                                </dd>
+                            </dl>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a name="create_power_led"></a></td>
+                        <td><code>create_power_led </code> [Category: Create Music/LED Function]
+                            <dl>
+                                <dd>
+                                    Format: <code><font class="CVariable">void</font> create_power_led(<font class="CVariable">int</font> color, int brightness);</code><br>                                    The value 0 causes the I/O power LED to turn red, 255 to turn green. Brightness ranges
+                                    from 0 to 255 with 0 representing off.
+                                </dd>
+                            </dl>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a name="get_create_song_number"></a></td>
+                        <td><code>get_create_song_number</code> [Category: Create Music/LED Function]
+                            <dl>
+                                <dd>
+                                    <dd>
+                                        Format: <code><font class="CVariable">int</font> get_create_song_number();</code><br>                                        Returns the number of the song currently selected (0 to 15).
+                                    </dd>
+                            </dl>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a name="get_create_song_playing"></a></td>
+                        <td><code>get_create_song_playing</code> [Category: Create Music/LED Function]
+                            <dl>
+                                <dd>
+                                    <dd>
+                                        Format: <code><font class="CVariable">int</font> get_create_song_playing();</code><br>                                        Returns 1 if a song is playing, 0 otherwise.
+                                    </dd>
+                            </dl>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a name="create_load_song"></a></td>
+                        <td><code>create_load_song </code> [Category: Create Music/LED Function]
+                            <dl>
+                                <dd>
+                                    Format: <code><font class="CVariable">void</font> create_load_song(<font class="CVariable">int</font> num);</code><br>                                    Loads a song from an internal 16 by 33 working array of integers to the Create, where
+                                    the first column for each song is the number of notes (max is 16). The remaining columns
+                                    alternate between pitch and duration. See (
+                                    <a href="http://www.irobot.com/filelibrary/pdfs/hrd/create/Create%20Open%20Interface_v2.pdf">Create Open Interface Manual</a>                                    for details.
+                                </dd>
+                            </dl>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <div class="Indent">
+                <h4>Example program for using the KIPR Robot Controller to control a Create module</h4>
+
+                <a name="MoveCreate"></a>
+                <pre><code><font class="Comment">/* This is a program to make the iRobot Create drive in a circle with a radius of 0.25 meters at a speed of 200 mm/sec for 10 seconds, displaying the distance traveled around the circle and the angle that the turn covered */</font>
+<font class="CVariable">int</font> main()
+{
+    printf(<font class="Quote">"connecting to Create\n"</font>);
+    create_connect();
+    set_create_distance(0); <font class="Comment">// reset the cumulative distance traveled</font>
+    set_create_total_angle(0); <font class="Comment">// reset the cumulative angle turned through</font>
+    create_drive(200, 250); <font class="Comment">// start move in an arc</font>
+    msleep(10000); <font class="Comment">// sleep for 10 seconds and stop</font>
+    create_stop();
+    printf(<font class="Quote">"\nResults:\n"</font>);
+    printf(<font class="Quote">"  distance = %d mm\n"</font>, get_create_distance(0.1));
+    printf(<font class="Quote">"  angle = %d degrees\n"</font>, get_create_total_angle(0.1));
+    printf(<font class="Quote">"\ndisconnecting from Create\n"</font>);
+    create_disconnect();
+}
+</code></pre>
+            </div>
+
+            <div class="Indent">
+                <a name="Create_script_example"></a>
+                <h4>Example Create script definition using the KIPR Robot Controller</h4>
+
+                <p>The iRobot Create has several built in scripts, mostly to serve the needs of its cousin, the iRobot Roomba.
+                    The Open Interface provides byte code commands for running these. It also has a byte code command for
+                    loading a user defined script onto the iRobot Create along with a byte code command to start it running.
+                    The user defined script remains available until the iRobot Create is power cycled.</p>
+
+                <p>Unlike high level languages, scripts for the iRobot Create have no provision for flow of control commands
+                    such as if and while, but can use commands to wait for an elapsed time, or for a specified distance or
+                    angle to be reached, or for an event such as a bump (wait commands are not available except within scripts).</p>
+
+                <p>Memory for storing a user defined script is limited to 100 bytes.</p>
+
+                <p>In this example, a function is used to download a sequence of byte commands to the iRobot Create to load
+                    a script. The example script is designed to cause the Create to move 1/2 meter at 500 mm/sec (uninterruptible).
+                    The script definition follows the first two bytes sent to the Create (byte command 152, and a byte whose
+                    numeric value gives the number of bytes that follow). Note that the number of bytes for the script is
+                    just the count of the <code>create_write_byte</code> function calls used after the first two. See the
+                    <a href="http://www.irobot.com/filelibrary/pdfs/hrd/create/Create%20Open%20Interface_v2.pdf">Create Open Interface manual</a>                    for information on the byte commands.</p>
+
+                <a name="CreateScriptExample"></a>
+                <pre><code><font class="Preprocessor">#define RUN_SCRIPT create_write_byte(153)</font> <font class="Comment">// macro to run the currently loaded script</font>
+<font class="CVariable">void</font> make_drive_script(<font class="CVariable">int</font> dist, <font class="CVariable">int</font> speed) {
+   create_write_byte(152);        <font class="Comment">// specifies start of script definition</font>
+   create_write_byte(13);         <font class="Comment">// specifies number of bytes to follow,(defining the script)</font>
+   create_write_byte(137);        <font class="Comment">// drive command (speed and turn radius in next 4 bytes)</font>
+   create_write_byte(speed >> 8); <font class="Comment">// send speed high byte (bits 8-15 shifted to 0-7)</font>
+   create_write_byte(speed);      <font class="Comment">// send speed low byte</font>
+   create_write_byte(128);        <font class="Comment">// send hex 80</font>
+   create_write_byte(0);          <font class="Comment">// send hex 00 (special case: turn radius hex 8000 or 7FFF is straight)</font>
+   create_write_byte(156);        <font class="Comment">// wait for distance done (in mm)</font>
+   create_write_byte(dist >> 8);  <font class="Comment">// send dist high byte</font>
+   create_write_byte(dist);       <font class="Comment">// send dist low byte</font>
+   create_write_byte(137);        <font class="Comment">// stop move by changing speed and radius to 0</font>
+   create_write_byte(0);          <font class="Comment">// send high byte (0 speed)</font>
+   create_write_byte(0);          <font class="Comment">// send low byte (0 speed)</font>
+   create_write_byte(0);          <font class="Comment">// null turn radius</font>
+   create_write_byte(0);          <font class="Comment">// null turn radius</font>
+   <font class="Comment">// end of script (13 bytes)</font>
+}
+<font class="CVariable">int</font> main()
+{
+   <font class="Comment">// program to load and test the above script</font>
+   create_connect();
+   set_create_distance(0);
+   set_create_total_angle(0);
+   make_drive_script(500, 500); <font class="Comment">// script to move 0.5m at 500 mm/sec</font>
+   msleep(500); <font class="Comment">// give serial connection some time</font>
+   RUN_SCRIPT;
+   msleep(2000); <font class="Comment">// allow time for the script to finish (+ some extra)</font>
+   printf(<font class="Quote">"  distance traveled = %d mm\n"</font>, get_create_distance());
+   printf(<font class="Quote">"  angle turned = %d degrees\n"</font>, get_create_total_angle());
+   create_disconnect();
+}
+</code></pre>
+            </div>
+
+            <!-- START FOOTER -->
+        </div>
+    </main>
+</body>
+
+</html>

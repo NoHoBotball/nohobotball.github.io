@@ -1,0 +1,587 @@
+<html>
+
+<head>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/css/base.css">
+    <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="/css/docs.css" />
+    <link rel="icon" href="../imgs/logos/botguy.png">
+
+    <title>Botball Documentation - Tutorial</title>
+
+    <meta name="theme-color" content="#00796b">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.button-collapse').sideNav({
+                draggable: true
+            });
+        $(".active").parent().parent().siblings()[0].click() })
+    </script>
+
+    <header>
+        <ul id="slide-out" class="side-nav fixed">
+            <li style="height: 130px" class="red lighten-1">
+                <div class="userView">
+                    <h5 class="white-text"><a href="/docs/index.html" class="white-text">Index</a></h5>
+                </div>
+            </li>
+            <li><a href="/docs/tutorial.html">Tutorial</a></li>
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Data Objects</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/data-objects/index.html">Introduction</a></li>
+                                <li><a href="/docs/data-objects/variables.html">Variables</a></li>
+                                <li><a href="/docs/data-objects/constants.html">Constants</a></li>
+                                <li><a href="/docs/data-objects/data-types.html">Data Types</a></li>
+                                <li><a href="/docs/data-objects/arrays.html">Arrays</a></li>
+                                <li><a href="/docs/data-objects/structures.html">Structures</a></li>
+                                <li><a href="/docs/data-objects/initialization-examples.html">Initialization Examples</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Statements and Expressions</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/statements-and-expressions/index.html">Introduction</a></li>
+                                <li><a href="/docs/statements-and-expressions/operators.html">Operators</a></li>
+                                <li class="active"><a href="/docs/statements-and-expressions/control-flow.html">Control Flow</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="/docs/tutorial.html">Style</a></li>
+            <li><a href="/docs/tutorial.html">Debugging</a></li>
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Printing</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/printing/index.html">Introduction</a></li>
+                                <li><a href="/docs/printing/examples.html">Examples</a></li>
+                                <li><a href="/docs/printing/printf-codes.html">printf Codes</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Preprocessor</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/preprocessor/index.html">Introduction</a></li>
+                                <li><a href="/docs/preprocessor/directives.html">Directives</a></li>
+                                <li><a href="/docs/preprocessor/include.html">Include</a></li>
+                                <li><a href="/docs/preprocessor/macros.html">Macros</a></li>
+                                <li><a href="/docs/preprocessor/conditional-compilation.html">Conditional Compilation</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="/docs/lib/math.html">Math Library</a></li>
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>KIPR Wallaby/Link</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/lib/kipr/common-functions.html">Common Functions</a></li>
+                                <li><a href="/docs/lib/kipr/functions.html">Functions List</a></li>
+                                <li><a href="/docs/lib/kipr/camera.html">Camera Functions</a></li>
+                                <li><a href="/docs/lib/kipr/graphics.html">Graphics Functions</a></li>
+                                <li><a href="/docs/lib/kipr/depth.html">Depth Sensor Functions</a></li>
+                                <li><a href="/docs/lib/kipr/usb.html">File I/O Functions</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>iRobot Create</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/lib/kipr/create/index.html">Introduction</a></li>
+                                <li><a href="/docs/lib/kipr/create/serial.html">Serial Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/configuration.html">Configuration Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/movement.html">Movement Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/sensors.html">Sensor Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/battery.html">Battery Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/built-ins.html">Built-In Functions</a></li>
+                                <li><a href="/docs/lib/kipr/create/music-leds.html">LED and Music Functions</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="/docs/lib/kipr/botball.html">Botball Functions</a></li>
+            <li><a href="/docs/lib/kipr/threads.html">Threads</a></li>
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Motors and Sensors</a>
+                        <div class="collapsible-body" style="display: block">
+                            <ul>
+                                <li><a href="/docs/lib/kipr/info/digital-analog-sensors.html">Analog and Digital Sensors</a></li>
+                                <li><a href="/docs/lib/kipr/info/usb-sensors.html">USB Sensors</a></li>
+                                <li><a href="/docs/lib/kipr/info/motors-servos.html">Motors and Servos</a></li>
+                                <li><a href="/docs/lib/kipr/info/simulator.html">Simulator</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="/docs/full.html">Full Documentation</a></li>
+        </ul>
+        <nav class="nav-extended red lighten-2">
+            <div class="nav-wrapper">
+                <div class="col s12">
+                    <a href="#" data-activates="slide-out" class="button-collapse" style="font-size: 50px"><i class="material-icons">menu</i></a>
+                    <a href="/docs/index.html" class="brand-logo waves-effect" id="top">Botball Documentation</a>
+                </div>
+            </div>
+            <div class="nav-wrapper">
+                <div class="col s12">
+                    <a href="/docs/statements-and-expressions/index.html" class="breadcrumb">Statements and Expressions</a>
+                    <a href="#!" class="breadcrumb">Control Flow</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="row">
+
+        <div class="container col s12">
+            <!-- END HEADER -->
+
+            <!--Control_Flow-->
+
+            <a name="Control_Flow"></a>
+            <h3>Control Flow</h3>
+
+            <p>The order in which a computer executes machine-level operations stored in memory is normally sequential, with
+                the exception of those operations which redirect the flow of executrion to continue elsewhere in computer
+                memory. This capability is reflected in C programs by control flow statements which serve to redirect the
+                sequential step by step flow the program would follow otherwise. There are two classes of control flow commands,
+                <i>selection</i> and <i>iteration</i>. Selection commands use a condition test to determine what statement
+                or block of statements to execute next (<code><font class="Cvariable">if</font>-<font class="Cvariable">else</font></code>,
+                <font class="Cvariable">switch</font>, and the ternary operator <code>?:</code>). Iteration commands use a condition test to determine
+                how many times to repeat the execution of a statement or block of statements (
+                <font class="Cvariable">while</font>,
+                <font class="Cvariable">for</font>, <code><font class="Cvariable">do</font>-<font class="Cvariable">while</font></code>). C also
+                provides means for exiting a control flow program structure independent of the condition test (
+                <font class="Cvariable">break</font>) and to skip the rest of a block, continuing to the next iteration (
+                <font class="Cvariable">continue</font>).</p>
+
+            <div class="Indent">
+
+                <!--Statements_and_Blocks-->
+
+                <a name="Statements_and_Blocks"></a>
+                <h4>Statements and Blocks</h4>
+
+                <p>Each C statement is terminated by a semicolon. A program block is a sequence of statements grouped together
+                    inside curly braces. Variables may be defined inside a block and are local to the block (their scope
+                    does not extend outside of the block). The object for a control flow statement may be a single statement
+                    or a block of statements, except for <code>?:</code>, which as an operator applies to expressions rather
+                    than statements.</p>
+
+                <!--If-Else-->
+
+                <a name="If-Else"></a>
+                <h4>If-Else</h4>
+
+                <p>The
+                    <font class="CVariable">if</font> statement is a selection statement for making yes/no and either/or decisions, For an either/or
+                    decision, the
+                    <font class="CVariable">if</font> statement is paired with an
+                    <font class="CVariable">else</font> statement (which can only be used in a pairing with
+                    <font class="CVariable">if</font>).
+
+                    <p>The syntax for
+                        <font class="CVariable">if</font> is</p>
+
+                    <pre><code><font class="CVariable">if</font> (&lt;<i>expression</i>&gt;)
+    &lt;<i>statement or block</i>&gt;
+</code></pre>
+                    <p>
+
+                        When paired with
+                        <font class="CVariable">else</font> the syntax is
+
+                        <pre><code><font class="CVariable">if</font> (&lt;<i>expression</i>&gt;)
+    &lt;<i>statement or block</i>&gt;
+<font class="CVariable">else</font>
+    &lt;<i>statement or block</i>&gt;
+</code></pre>
+                        <p>
+
+                            When the <code>&lt;</code><i>expression</i><code>&gt;</code> evaluates as TRUE (i.e., is not
+                            equal to zero), then the <code>&lt;</code><i>statement or block</i><code>&gt;</code> that follows
+                            <font class="CVariable">if</font> is executed.</p>
+
+                        <p>When the <code>&lt;</code><i>expression</i><code>&gt;</code> evaluates as FALSE (i.e., is equal to
+                            0), then the <code>&lt;</code><i>statement or block</i><code>&gt;</code> that follows
+                            <font class="CVariable">if</font> is not executed and if there is an
+                            <font class="CVariable">else</font> paired with
+                            <font class="CVariable">if</font>, then the <code>&lt;</code><i>statement or block</i><code>&gt;</code>; that follows
+                            <font class="CVariable">else</font> is executed.</p>
+
+                        <p>In effect, these constructions use syntax that corresponds to how similar logic is expressed in English,
+                            such as</p>
+
+                        <ul>
+                            <li>"If the fever is over 100F then schedule a doctor's appointment" (yes/no or do/don't do)</li>
+                            <li>"If the manuscript is acceptable then pay for it, otherwise return it to the author" (either/or)</li>
+                        </ul>
+
+                        <a name="TernaryOperator"></a>
+                        <h4>Ternary Operator <code>?:</code></h4>
+
+                        <p>The ternary operator <code>?:</code> provides a compact means for expressing if-else logic where
+                            assignment statements are employed as the if-else actions. For example, the following
+                            <code><font class="CVariable">if</font>-<font class="CVariable">else</font></code> construction
+                            assigns the larger of variables <code>x</code> and <code>y</code> to variable
+                            <code>z</code>:
+
+                            <pre><code><font class="CVariable">if</font> (x &gt; y)
+    z = x;
+<font class="CVariable">else</font>
+    z = y;
+</code></pre>
+                            <p>
+
+                                This same construction can be implemented by using the ternary operator <code>?:</code></p>
+
+                            <p>
+                                <div class="Indent"><code>z = (x > y) ? x : y;</code></div>
+                            </p>
+
+                            <p>The ternary expression is formed from a condition test (<code>x &lt; y</code>) followed by a
+                                question mark (<code>?</code>), then the expression (<code>x</code>) to assign to <code>z</code>                                if the condition evaluates as TRUE, separated by a colon (<code>:</code>) and then the expression
+                                (
+                                <code>y</code>) to assign to <code>z</code> if the condition evaluates as FALSE. Strictly
+                                speaking, given the low precedence level of the operator, the parentheses around the condition
+                                could be omitted, but are advisable to facilitate identifying the operator's three operands.</p>
+
+                            <p>ANSI C requires that only the expression whose value is to be assigned to z be evaluated, just
+                                as in the <code><font class="CVariable">if</font>-<font class="CVariable">else</font></code>                                equivalent. The ternary operator is frequently used for obtaining absolute value; e.g.,</p>
+
+                            <p>
+                                <div class="Indent"><code>absx = (x < 0) ? -x : x;</code></div>
+                            </p>
+
+                            <!--While-->
+
+                            <a name="While"></a>
+                            <h4>While</h4>
+
+                            <p>The
+                                <font class="CVariable">while</font> statement in C is the iteration statement most commonly used for managing program
+                                loops. A <i>loop</i> is a sequence of program logic that is repeated multiple times (0 or
+                                more); for example,, a loop might be used to print out the elapsed time second by second
+                                while waiting for a button to be pressed.</p>
+
+                            <p>The syntax for a
+                                <font class="CVariable">while</font> statement loop is </p>
+
+                            <pre><code><font class="CVariable">while</font> (&lt;<i>expression</i>&gt;)
+    &lt;<i>statement or block</i>&gt;
+</code></pre>
+
+                            <p>When the <code>&lt;</code><i>expression</i><code>&gt;</code> evaluates as TRUE (i.e., is not
+                                equal to zero), then the <code>&lt;</code><i>statement or block</i><code>&gt;</code> that
+                                follows
+                                <font class="CVariable">while</font> is executed, after which the process repeats, starting with evaluation of the
+                                <code>&lt;</code><i>expression</i><code>&gt;</code> again.</p>
+
+                            <p>When the <code>&lt;</code><i>expression</i><code>&gt;</code> evaluates as FALSE (i.e., is equal
+                                to 0), then the <code>&lt;</code><i>statement or block</i><code>&gt;</code> that follows
+                                <font class="CVariable">while</font> is not executed and the program moves on to the statement following the <code>&lt;</code><i>statement or block</i><code>&gt;</code>                                for the
+                                <font class="CVariable">while</font>.</p>
+
+                            <p>Note that the loop continues until something happens that causes the <code>&lt;</code><i>expression</i><code>&gt;</code>                                to evaluate as FALSE (e.g., a button is pressed or a counting variable has exceeded its limit).
+                                It is up to the programmer to ensure that within the body of the loop (or otherwise) the
+                                condition will eventually be FALSE (otherwise the loop will continue until the program is
+                                halted by external intervention).
+                            </p>
+
+                            <p>A loop that doesn't terminate is termed an <i>infinite loop</i>. An infinite loop is one that
+                                will continue its iteration until the program is halted. An <i>indefinite loop</i> is one
+                                whose iteration will continue until some external action occurs (such as a button press).
+                                It is easy to create an infinite loop using
+                                <font class="CVariable">while</font>. For example,
+
+                                <div class="Indent"><code><font class="CVariable">while</font>(1);</code></div>
+
+                                <p>forms an infinite loop because the <code>&lt;</code><i>expression</i><code>&gt;</code> for
+                                    the
+                                    <font class="CVariable">while</font> is 1 which is always TRUE, and the <code>&lt;</code><i>statement or block</i><code>&gt;</code>                                    is empty (<code>;</code>), providing no means other than a forced program halt to end
+                                    the ongoing loop iteration (which is repeatedly doing nothing).</p>
+
+                                <p>A common error to avoid when programming a
+                                    <font class="CVariable">while</font> statement loop is exemplified by the following:
+
+                                    <pre><code><font class="CVariable">while</font> (i < 10); <font class="Comment">// misplaced semi-colon</font>
+    x[i++] = i;
+</code></pre>
+
+                                    <p>In this case, the misplaced semi-colon for the
+                                        <font class="CVariable">while</font> has made its <code>&lt;</code><i>statement or block</i><code>&gt;</code>                                        component empty. Assuming <code>i</code> is less than 10 when the loop starts, this
+                                        semantic error makes the loop infinite and the program will "hang" at this point,
+                                        requiring a forced halt to end it. For ideas on how to locate this kind of semantic
+                                        error for a program, see the section below on <a href="KIPRWallabyManualBody.htm#Program_Debugging"
+                                            target="ManualFrame">program debugging</a>.</p>
+
+                                    <!--Break-->
+
+                                    <a name="Break"></a>
+                                    <h4>Break</h4>
+
+                                    <p>The
+                                        <font class="CVariable">break</font> statement in C provides a means for a program to break out of executing
+                                        statements within a loop structure or a multi-way selection to proceed with execution
+                                        of the program statements that come next. A condition test for
+                                        <font class="CVariable">break</font> is sometimes used within what would otherwise be an infinite loop to
+                                        break out of it. The
+                                        <font class="CVariable">break</font> statement applies to
+                                        <font class="CVariable">while</font>,
+                                        <font class="CVariable">for</font>, <code><font class="CVariable">do</font>-<font class="CVariable">while</font></code>,
+                                        and
+                                        <font class="CVariable">switch</font>.</p>
+
+                                    <p>For example,</p>
+
+                                    <pre><font class="CVariable">int</font> i; <font class="Comment">// counter will need some initial value</font>
+<font class="CVariable">while</font> (i &lt; 100) { <font class="Comment">// has the counter reached its limit?</font>
+    printf(<font class="Quote">"cnt = %d\n"</font>, i++); <font class="Comment">// show the counter and increment it</font>
+    <font class="CVariable">if</font> (side_button() != 0) break; <font class="Comment">// exit if the side_button is pressed</font>
+    msleep(1000); <font class="Comment">// pause for one second</font>
+}</pre>
+
+                                    <p>uses a
+                                        <font class="CVariable">break</font> to exit the
+                                        <font class="CVariable">while</font> loop.</p>
+
+                                    <!--Continue-->
+
+                                    <a name="Continue"></a>
+                                    <h4>Continue</h4>
+
+                                    <p>The
+                                        <font class="CVariable">continue</font> statement in C provides a means for a program in a
+                                        <font class="CVariable">while</font>,
+                                        <font class="CVariable">for</font>, or <code><font class="CVariable">do</font>-<font class="CVariable">while</font></code>                                        loop to skip the balance of the current iteration, continuing to the next iteration
+                                        if the loop condition test doesn't end the loop.</p>
+
+                                    <p>For example,</p>
+
+                                    <pre><font class="CVariable">int</font> i; <font class="Comment">// counter will need some initial value</font>
+<font class="CVariable">while</font> (i &lt; 100) { <font class="Comment">// has the counter reached its limit?</font>
+    <font class="CVariable">if</font> (i &lt;= 0) { <font class="Comment">// don't start cnt until i reaches 1</font>
+       i+=1;
+       <font class="CVariable">continue</font>;
+    }
+    printf(<font class="Quote">"cnt = %d\n"</font>, i++); <font class="Comment">// show the counter and increment it</font>
+    <font class="CVariable">if</font> (side_button() != 0) break; <font class="Comment">// exit if the side_button is pressed</font>
+    msleep(1000); <font class="Comment">// pause for one second</font>
+}</pre>
+
+                                    <!--Return-->
+
+                                    <a name="Return"></a>
+                                    <h4>Return</h4>
+
+                                    <p>
+                                        <p>The
+                                            <font class="CVariable">return</font> statement in C both ends a function and provides a means for the
+                                            function to return a value to the calling function. A function also ends once
+                                            its terminating brace is reached or if a
+                                            <font class="CVariable">return</font> statement having no return value is executed. The calling function
+                                            can ignore a returned value in any case.</p>
+
+                                        <!--For-->
+                                        <a name="For"></a>
+                                        <h4>For</h4>
+
+                                        <p>The
+                                            <font class="CVariable">for</font> statement in C is normally used for managing loops that employ an
+                                            iteration counter. A
+                                            <font class="CVariable">while</font> statement loop could also be used for this purpose, but in many
+                                            cases the program logic is clearer if a
+                                            <font class="CVariable">for</font> statement is employed to control the loop.</p>
+
+                                        <p>The syntax for a
+                                            <font class="CVariable">for</font> statement loop is
+
+                                            <pre><code><font class="CVariable">for</font> (&lt;<i>expr-1</i>&gt;;&lt;<i>expr-2</i>&gt;;&lt;<fi>expr-3</i>&gt;)
+    &lt;<i>statement or block</i>&gt;
+</code></pre>
+
+                                            <p>The behavior of the
+                                                <font class="CVariable">for</font> statement loop is equivalent to that of the following
+                                                <font class="CVariable">while</font> statement loop:</p>
+
+                                            <pre><code>&lt;<i>expr-1</i>&gt;; <font class="Comment">// initialize the counter (prime the pump)</font>
+<font class="CVariable">while</font> (&lt;<i>expr-2</i>&gt;) { <font class="Comment">// has the counter reached its limit? (have we pumped enough in?)</font>
+    &lt;<i>statement or block</i>&gt;
+    &lt;<i>expr-3</i>&gt;; <font class="Comment">// increment the counter (pump some more in)</font>
+}</code></pre>
+
+                                            <p>For example, the following code counts assigns values from 0 to 99 to an integer
+                                                array
+                                            </p>
+
+                                            <pre><code><font class="CVariable">int</font> i, arr[100];
+<font class="CVariable">for</font> (i = 0; i &lt; 100; i++)
+    arr[i] = i;
+</code></pre>
+
+                                            <!--Switch-->
+
+                                            <a name="Switch"></a>
+                                            <h4>Switch-Case</h4>
+
+                                            <p>The
+                                                <font class="CVariable">switch</font> selection statement for C is used to select one of a series
+                                                of
+                                                <font class="CVariable">case</font> targets. The
+                                                <font class="CVariable">case</font> targets for a
+                                                <font class="CVariable">switch</font> statement are grouped together inside curly braces as a program
+                                                block. Each
+                                                <font class="CVariable">case</font> target is followed by a series of C statements which represent
+                                                that case. The
+                                                <font class="CVariable">switch</font> selection in effect skips past cases until it reaches the one
+                                                selected, and program execution continues from there. If a
+                                                <font class="CVariable">break</font> statement is in the statements following a
+                                                <font class="CVariable">case</font> target, then the program exits the
+                                                <font class="CVariable">switch</font> statement's block at that point, in effect skipping any remaining
+                                                cases.
+                                            </p>
+
+                                            <p>
+                                                <font class="CVariable">if else</font> selection is used to select one of two cases.
+                                                <font class="CVariable">switch</font> selection is used to select 0 or more cases.
+
+                                                <p>The syntax for a
+                                                    <font class="CVariable">switch</font> statement is as follows:</p>
+
+                                                <pre><code><font class="CVariable">switch</font> (&lt;<i>expression</i>&gt;) { <font class="Comment">// switch to the case target whose &lt;<i>constant</i>&gt; matches the value of the &lt;<i>expression</i>&gt; </font>
+<font class="CVariable">case</font> &lt;<i>constant</i>&gt;:
+    &lt;<i>0 or more C statements</i>&gt;
+    <font class="CVariable">break</font>; <font class="Comment">// optional - otherwise, program execution continues with the next case </font>
+
+&lt;<i>additional case targets</i>&gt;
+
+<font class="CVariable">default</font>: <font class="Comment">// optional target used when selection didn't match any case target </font>
+    &lt;<i>0 or more C statements</i>&gt;
+    <font class="CVariable">break</font>; <font class="Comment">// optional - otherwise, program execution continues with the next case </font>
+}</code></pre>
+
+                                                <p>The first
+                                                    <font class="CVariable">case</font> target whose <code>&lt;</code><i>constant</i><code>&gt;</code>                                                    matches the value of the
+                                                    <font class="CVariable">expression</font> for the
+                                                    <font class="CVariable">switch</font> statement is the one selected. Program execution continues
+                                                    from the selected
+                                                    <font class="CVariable">case</font> target until either a
+                                                    <font class="CVariable">break</font> statement is encountered, or the end of the
+                                                    <font class="CVariable">switch</font> program block is reached. If there is no
+                                                    <font class="CVariable">case</font> match, then the
+                                                    <font class="CVariable">default</font> target is selected. Absent a
+                                                    <font class="CVariable">default</font> target and a
+                                                    <font class="CVariable">case</font> match, the
+                                                    <font class="CVariable">switch</font> program block is skipped. Putting in a
+                                                    <font class="CVariable">default</font> case with a
+                                                    <font class="CVariable">break</font> statement is considered to be good form, and recognizes
+                                                    the likelihood of more cases being added under program maintenance.</p>
+
+                                                <p>Normally, each
+                                                    <font class="CVariable">case</font> is ended with a
+                                                    <font class="CVariable">break</font> statement since the primary purpose of the
+                                                    <font class="CVariable">switch</font> statement is to make the choice of one of several possible
+                                                    cases to execute; for example,</p>
+
+                                                <pre><code><font class="CVariable">char</font> answer[81];
+<font class="CVariable">switch</font>(answer[0])
+{
+    <font class="CVariable">case</font> 'y':
+        printf</font>(<font class="Quote">"answer was yes\n"</font>);
+        <font class="CVariable">break</font>;
+    <font class="CVariable">case</font> 'n':
+        printf(<font class="Quote">"answer was no\n"</font>);
+        <font class="CVariable">break</font>;
+    <font class="CVariable">default</font>:
+        printf(<font class="Quote">"answer was not understood\n"</font>);
+}</code></pre>
+
+                                                <p>If user input "yes sir" is captured in the character string <code>answer</code>,
+                                                    then the text "answer was yes" will be printed to the screen. If if was
+                                                    "no sir", then the "answer was no" would have been printed, and if it
+                                                    was "No sir", the text "answer was not understood" would have been printed
+                                                    (since C is case sensitive, 'n' &ne; 'N').
+
+
+                                                    <!--Do-While-->
+
+                                                    <a name="Do-While"></a>
+                                                    <h4>Do-While</h4>
+
+                                                    <p>The
+                                                        <font class="CVariable">do-while</font> statement in C is less commonly used for controlling
+                                                        loop iteration than the
+                                                        <font class="CVariable">while</font> and
+                                                        <font class="CVariable">for</font> statements.</p>
+
+                                                    <p>The syntax of a
+                                                        <font class="CVariable">do</font>-
+                                                        <font class="CVariable">while</font> statement is as follows:</p>
+
+                                                    <pre><code><font class="CVariable">do</font>
+    &lt;<i>statement or block</i>&gt;
+<font class="CVariable">while</font> (&lt;<i>expression</i>&gt;);
+</code></pre>
+
+                                                    <p>In contrast to the
+                                                        <font class="CVariable">while</font> and
+                                                        <font class="CVariable">for</font> statements, the body of the loop for a
+                                                        <font class="CVariable">do-while</font> statement will be executed at least once since the
+                                                        <code>&lt;</code><i>expression</i><code>&gt;</code> controlling loop
+                                                        iteration is evaluated at the end of the loop rather than at its
+                                                        beginning. Sometimes program logic for a loop is best expressed by
+                                                        having the condition test occur at the bottom of the loop. For example,</p>
+
+
+                                                    <pre><code><font class="CVariable">do</font>
+    printf(<font class="Quote">"."</font>);
+<font class="CVariable">while</font> (seconds() < 5);
+</code></pre>
+
+                                                    <p>The logic insures that "." will be printed at least once (so something
+                                                        will always be printed), in contrast to</p>
+
+                                                    <pre><code><font class="CVariable">while</font> (seconds() < 5)
+    printf(<font class="Quote">"."</font>);
+</code></pre>
+
+                                                    <p>for which nothing will be printed if the value returned by the function
+                                                        <code>seconds</code> already exceeds 5.</p>
+
+            </div>
+
+            <!-- START FOOTER -->
+        </div>
+    </main>
+</body>
+
+</html>
