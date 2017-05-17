@@ -13,8 +13,8 @@ block content
       .card-panel(class=color)
         h4.white-text
           | Watch Our Promo Video!
-          a#close-vid.waves-effect.btn-flat.right.white-text(style='font-size:50%') close
-        a.darken-4.waves-effect.btn.btn-large.modal-trigger(href='#promo-video', style='width:100%', class=color) Watch Now!
+          a#close-vid.waves-effect.btn-flat.right.white-text(style='font-size:50%', href='#promo-video') close
+        a.darken-4.waves-effect.btn.btn-large(href='#promo-video', style='width:100%', class=color) Watch Now!
   .slider(style='height: 100%;')
     ul.slides
       li
@@ -30,8 +30,8 @@ block content
       li
         img(src='imgs/awards/trophies-2017.jpg')
         .caption.right-align(style='background-color:rgba(0,0,0,0.5); width: 25%; position: absolute; top: 15%; left: 70%')
-          h5 2nd Place Overall 
-          h6.light.white-text At the 2017 Competition 
+          h5 2nd Place Overall
+          h6.light.white-text At the 2017 Competition
       li
         img(src='imgs/homepage/2015competition.jpg')
         .caption.left-align(style='background-color:rgba(0,0,0,0.5); width: 20%; position: absolute; top: 70%; left: 10%')
@@ -143,6 +143,7 @@ block content
 block scripts
   script.
     $(document).ready(function () {
+        $(".button-collapse").sideNav();
         $('.slider').slider({ full_width: true, interval: 5000, height: 800 });
         $("#close-vid").click(function () {
             $("#watch-vid").remove();
@@ -153,9 +154,9 @@ block scripts
                 Materialize.toast('You can still watch it on our What We Do page!', 5000);
             }, 2000);
         });
-        $('.modal-trigger').leanModal();
+        $('.modal').modal();
     });
-    $('.modal-trigger').leanModal();
+    $('.modal').modal();
     checkVideoCookie();
     function setCookie(cname, cvalue, exdays) {
         var d = new Date();

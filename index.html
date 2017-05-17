@@ -42,7 +42,7 @@
       <div class="row" id="watch-vid">
         <div class="col s12">
           <div class="card-panel deep-orange">
-            <h4 class="white-text">Watch Our Promo Video!<a class="waves-effect btn-flat right white-text" id="close-vid" style="font-size:50%;">close</a></h4><a class="darken-4 waves-effect btn btn-large modal-trigger deep-orange" href="#promo-video" style="width:100%;">Watch Now!</a>
+            <h4 class="white-text">Watch Our Promo Video!<a class="waves-effect btn-flat right white-text" id="close-vid" style="font-size:50%;" href="#promo-video">close</a></h4><a class="darken-4 waves-effect btn btn-large deep-orange" href="#promo-video" style="width:100%;">Watch Now!</a>
           </div>
         </div>
       </div>
@@ -62,8 +62,8 @@
           </li>
           <li><img src="imgs/awards/trophies-2017.jpg">
             <div class="caption right-align" style="background-color:rgba(0,0,0,0.5); width: 25%; position: absolute; top: 15%; left: 70%;">
-              <h5>2nd Place Overall </h5>
-              <h6 class="light white-text">At the 2017 Competition </h6>
+              <h5>2nd Place Overall</h5>
+              <h6 class="light white-text">At the 2017 Competition</h6>
             </div>
           </li>
           <li><img src="imgs/homepage/2015competition.jpg">
@@ -208,6 +208,7 @@
     </script>
     <script>
       $(document).ready(function () {
+          $(".button-collapse").sideNav();
           $('.slider').slider({ full_width: true, interval: 5000, height: 800 });
           $("#close-vid").click(function () {
               $("#watch-vid").remove();
@@ -218,9 +219,9 @@
                   Materialize.toast('You can still watch it on our What We Do page!', 5000);
               }, 2000);
           });
-          $('.modal-trigger').leanModal();
+          $('.modal').modal();
       });
-      $('.modal-trigger').leanModal();
+      $('.modal').modal();
       checkVideoCookie();
       function setCookie(cname, cvalue, exdays) {
           var d = new Date();
