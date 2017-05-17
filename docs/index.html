@@ -1,656 +1,479 @@
+<!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="/css/base.css">
-    <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection" />
-    <link type="text/css" rel="stylesheet" href="/css/docs.css" />
+    <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection">
+    <link type="text/css" rel="stylesheet" href="/css/docs.css">
     <link rel="icon" href="../imgs/logos/botguy.png">
-
     <title>Botball Documentation - Tutorial</title>
-
     <meta name="theme-color" content="#00796b">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
-
-<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="/js/materialize.min.js"></script>
     <script>
-        $(document).ready(function () {
-            $('.button-collapse').sideNav({
-                draggable: true
-            });
-        $(".active").parent().parent().siblings()[0].click() })
+      $(document).ready(function () {
+      $('.button-collapse').sideNav({
+      draggable: true
+      });
+      $('.active').parent().parent().siblings()[0].click() })
     </script>
-
     <header>
-        <ul id="slide-out" class="side-nav fixed">
-            <li style="height: 130px" class="red lighten-1">
-                <div class="userView">
-                    <h5 class="white-text"><a href="/docs/index.html" class="white-text">Index</a></h5>
-                </div>
+      <ul class="side-nav fixed" id="slide-out">
+        <li class="lighten-1 red" style="height: 130px;">
+          <div class="userView">
+            <h5 class="white-text"><a class="white-text" href="/docs/index.html">Index</a></h5>
+          </div>
+        </li>
+        <li><a href="/docs/tutorial.html">Tutorial</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Data Objects</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/data-objects/index.html">Introduction</a></li>
+                  <li><a href="/docs/data-objects/variables.html">Variables</a></li>
+                  <li><a href="/docs/data-objects/constants.html">Constants</a></li>
+                  <li><a href="/docs/data-objects/data-types.html">Data Types</a></li>
+                  <li><a href="/docs/data-objects/arrays.html">Arrays</a></li>
+                  <li><a href="/docs/data-objects/structures.html">Structures</a></li>
+                  <li><a href="/docs/data-objects/initialization-examples.html">Initialization Examples</a></li>
+                </ul>
+              </div>
             </li>
-            <li><a href="/docs/tutorial.html">Tutorial</a></li>
-            <li class="no-padding">
-                <ul class="collapsible collapsible-accordion">
-                    <li>
-                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Data Objects</a>
-                        <div class="collapsible-body" style="display: block">
-                            <ul>
-                                <li><a href="/docs/data-objects/index.html">Introduction</a></li>
-                                <li><a href="/docs/data-objects/variables.html">Variables</a></li>
-                                <li><a href="/docs/data-objects/constants.html">Constants</a></li>
-                                <li><a href="/docs/data-objects/data-types.html">Data Types</a></li>
-                                <li><a href="/docs/data-objects/arrays.html">Arrays</a></li>
-                                <li><a href="/docs/data-objects/structures.html">Structures</a></li>
-                                <li><a href="/docs/data-objects/initialization-examples.html">Initialization Examples</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Statements and Expressions</a>
-                        <div class="collapsible-body" style="display: block">
-                            <ul>
-                                <li><a href="/docs/statements-and-expressions/index.html">Introduction</a></li>
-                                <li><a href="/docs/statements-and-expressions/operators.html">Operators</a></li>
-                                <li><a href="/docs/statements-and-expressions/control-flow.html">Control Flow</a></li>
-                            </ul>
-                        </div>
-                    </li>
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Statements and Expressions</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/statements-and-expressions/index.html">Introduction</a></li>
+                  <li><a href="/docs/statements-and-expressions/operators.html">Operators</a></li>
+                  <li><a href="/docs/statements-and-expressions/control-flow.html">Control Flow</a></li>
                 </ul>
+              </div>
             </li>
-            <li><a href="/docs/tutorial.html">Style</a></li>
-            <li><a href="/docs/tutorial.html">Debugging</a></li>
-            <li class="no-padding">
-                <ul class="collapsible collapsible-accordion">
-                    <li>
-                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Printing</a>
-                        <div class="collapsible-body" style="display: block">
-                            <ul>
-                                <li><a href="/docs/printing/index.html">Introduction</a></li>
-                                <li><a href="/docs/printing/examples.html">Examples</a></li>
-                                <li><a href="/docs/printing/printf-codes.html">printf Codes</a></li>
-                            </ul>
-                        </div>
-                    </li>
+          </ul>
+        </li>
+        <li><a href="/docs/style.html">Style</a></li>
+        <li><a href="/docs/debugging.html">Debugging</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Printing</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/printing/index.html">Introduction</a></li>
+                  <li><a href="/docs/printing/examples.html">Examples</a></li>
+                  <li><a href="/docs/printing/printf-codes.html">printf Codes</a></li>
                 </ul>
-                <ul class="collapsible collapsible-accordion">
-                    <li>
-                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Preprocessor</a>
-                        <div class="collapsible-body" style="display: block">
-                            <ul>
-                                <li><a href="/docs/preprocessor/index.html">Introduction</a></li>
-                                <li><a href="/docs/preprocessor/directives.html">Directives</a></li>
-                                <li><a href="/docs/preprocessor/include.html">Include</a></li>
-                                <li><a href="/docs/preprocessor/macros.html">Macros</a></li>
-                                <li><a href="/docs/preprocessor/conditional-compilation.html">Conditional Compilation</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
+              </div>
             </li>
-            <li><a href="/docs/lib/math.html">Math Library</a></li>
-            <li class="no-padding">
-                <ul class="collapsible collapsible-accordion">
-                    <li>
-                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>KIPR Wallaby/Link</a>
-                        <div class="collapsible-body" style="display: block">
-                            <ul>
-                                <li><a href="/docs/lib/kipr/common-functions.html">Common Functions</a></li>
-                                <li><a href="/docs/lib/kipr/functions.html">Functions List</a></li>
-                                <li><a href="/docs/lib/kipr/camera.html">Camera Functions</a></li>
-                                <li><a href="/docs/lib/kipr/graphics.html">Graphics Functions</a></li>
-                                <li><a href="/docs/lib/kipr/depth.html">Depth Sensor Functions</a></li>
-                                <li><a href="/docs/lib/kipr/usb.html">File I/O Functions</a></li>
-                            </ul>
-                        </div>
-                    </li>
+          </ul>
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Preprocessor</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/preprocessor/index.html">Introduction</a></li>
+                  <li><a href="/docs/preprocessor/directives.html">Directives</a></li>
+                  <li><a href="/docs/preprocessor/include.html">Include</a></li>
+                  <li><a href="/docs/preprocessor/macros.html">Macros</a></li>
+                  <li><a href="/docs/preprocessor/conditional-compilation.html">Conditional Compilation</a></li>
                 </ul>
-                <ul class="collapsible collapsible-accordion">
-                    <li>
-                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>iRobot Create</a>
-                        <div class="collapsible-body" style="display: block">
-                            <ul>
-                                <li><a href="/docs/lib/kipr/create/index.html">Introduction</a></li>
-                                <li><a href="/docs/lib/kipr/create/serial.html">Serial Functions</a></li>
-                                <li><a href="/docs/lib/kipr/create/configuration.html">Configuration Functions</a></li>
-                                <li><a href="/docs/lib/kipr/create/movement.html">Movement Functions</a></li>
-                                <li><a href="/docs/lib/kipr/create/sensors.html">Sensor Functions</a></li>
-                                <li><a href="/docs/lib/kipr/create/battery.html">Battery Functions</a></li>
-                                <li><a href="/docs/lib/kipr/create/built-ins.html">Built-In Functions</a></li>
-                                <li><a href="/docs/lib/kipr/create/music-leds.html">LED and Music Functions</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
+              </div>
             </li>
-            <li><a href="/docs/lib/kipr/botball.html">Botball Functions</a></li>
-            <li><a href="/docs/lib/kipr/threads.html">Threads</a></li>
-            <li class="no-padding">
-                <ul class="collapsible collapsible-accordion">
-                    <li>
-                        <a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Motors and Sensors</a>
-                        <div class="collapsible-body" style="display: block">
-                            <ul>
-                                <li><a href="/docs/lib/kipr/info/digital-analog-sensors.html">Analog and Digital Sensors</a></li>
-                                <li><a href="/docs/lib/kipr/info/usb-sensors.html">USB Sensors</a></li>
-                                <li><a href="/docs/lib/kipr/info/motors-servos.html">Motors and Servos</a></li>
-                                <li><a href="/docs/lib/kipr/info/simulator.html">Simulator</a></li>
-                            </ul>
-                        </div>
-                    </li>
+          </ul>
+        </li>
+        <li><a href="/docs/lib/math.html">Math Library</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>KIPR Wallaby/Link</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/lib/kipr/common-functions.html">Common Functions</a></li>
+                  <li><a href="/docs/lib/kipr/functions.html">Functions List</a></li>
+                  <li><a href="/docs/lib/kipr/camera.html">Camera Functions</a></li>
+                  <li><a href="/docs/lib/kipr/graphics.html">Graphics Functions</a></li>
+                  <li><a href="/docs/lib/kipr/depth.html">Depth Sensor Functions</a></li>
+                  <li><a href="/docs/lib/kipr/usb.html">File I/O Functions</a></li>
                 </ul>
+              </div>
             </li>
-            <li><a href="/docs/full.html">Full Documentation</a></li>
-        </ul>
-        <nav class="nav-extended red lighten-2">
-            <div class="nav-wrapper">
-                <div class="col s12">
-                    <a href="#" data-activates="slide-out" class="button-collapse" style="font-size: 50px"><i class="material-icons">menu</i></a>
-                    <a href="/docs/index.html" class="brand-logo waves-effect" id="top">Botball Documentation</a>
-                </div>
-            </div>
-            <div class="nav-wrapper">
-                <div class="col s12">
-                    <a href="#!" class="breadcrumb">Index</a>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main class="row">
-
-        <div class="container col s12">
-            <!-- END HEADER -->
-
-<!--Functions Categorized-->
-
-    <a name="FunctionsCategorized"></a>
-    <h3>Categorized Function List (cross-linked)</h3>
-    Each function listed is provided with a cross link to its library description.
-
-    <div class="indent">
-
-      <a name="CategoryBotball"></a>
-      <h4>Botball</h4>
-      <code>
-                                      <table>
-                                        <tbody>
-                                          <tr>
-                                            <td>
-                                              <ul>
-      <li><font class="CVariable">void</font> run_for(<font class="CVariable">double</font> delay, &lt;<em>function_name</em>&gt;);  [<a href="#run_for">&sect;</a>]</li>
-      <li><font class="CVariable">void</font> shut_down_in(<font class="CVariable">double</font> delay);  [<a href="#Botball">&sect;</a>]</li>
-<!--
-	  <li><font class="CVariable">int</font> target_cha_in_chb(<font class="CVariable">int</font> cha, <font class="CVariable">int</font> chb, <font class="CVariable">int</font> *x, <font class="CVariable">int</font> *y)</li>
--->
-      <li><font class="CVariable">void</font> wait_for_light(<font class="CVariable">int</font> light_port_);  [<a href="#Botball">&sect;</a>]</li>
-      </code>
+          </ul>
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>iRobot Create</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/lib/kipr/create/index.html">Introduction</a></li>
+                  <li><a href="/docs/lib/kipr/create/serial.html">Serial Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/configuration.html">Configuration Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/movement.html">Movement Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/sensors.html">Sensor Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/battery.html">Battery Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/built-ins.html">Built-In Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/music-leds.html">LED and Music Functions</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/docs/lib/kipr/botball.html">Botball Functions</a></li>
+        <li><a href="/docs/lib/kipr/threads.html">Threads</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Motors and Sensors</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/lib/kipr/info/digital-analog-sensors.html">Analog and Digital Sensors</a></li>
+                  <li><a href="/docs/lib/kipr/info/usb-sensors.html">USB Sensors</a></li>
+                  <li><a href="/docs/lib/kipr/info/motors-servos.html">Motors and Servos</a></li>
+                  <li><a href="/docs/lib/kipr/info/simulator.html">Simulator</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/docs/full.html">Full Documentation</a></li>
       </ul>
-      </td>
-      </tr>
-      </tbody>
-      </table>
-      </code>
-
-      <a name="CategoryCreate"></a>
-      <h4>Create</h4>
-
-      <table>
-        <tbody>
-          <tr>
-            <td alignment="top">
-              <ul><b>Serial Interface</b><code>
-                                                <li>
-                                                  <font class="CVariable">void</font> create_clear_serial_buffer(); [<a href="#create_clear_serial_buffer">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> create_connect(); [<a href="#create_connect">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">void </font> create_disconnect(); [<a href="#create_disconnect">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> create_read_block(
-                                                  <font class="CVariable">char</font> *data,
-                                                  <font class="CVariable">int</font> count); [<a href="#create_read_block">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">void</font> create_write_byte(
-                                                  <font class="CVariable">char</font> byte); [<a href="#create_write_byte">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">void </font> create_full(); [<a href="#create_full">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">void </font> create_start(); [<a href="#create_start">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">void </font> create_passive(); [<a href="#create_passive">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">void</font> create_safe(); [<a href="#create_safe">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_mode(); [<a href="#get_create_mode">&sect;</a>]</li>
-                                                </code><b>Movement</b><code>
-                                                <li>
-                                                  <font class="CVariable">void</font> create_drive(
-                                                  <font class="CVariable">int</font> speed,
-                                                  <font class="CVariable">int</font> radius); [<a href="#create_drive">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">void</font> create_drive_direct(
-                                                  <font class="CVariable">int</font> r_speed,
-                                                  <font class="CVariable">int</font> l_speed); [<a href="#create_drive_direct">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">void</font> create_drive_straight(
-                                                  <font class="CVariable">int</font> speed); [<a href="#create_drive_straight">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">void</font> create_spin_CCW(
-                                                  <font class="CVariable">int</font> speed); [<a href="#create_spin_CCW">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">void</font> create_spin_CW(
-                                                  <font class="CVariable">int</font> speed); [<a href="#create_spin_CW">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">void</font> create_stop(); [<a href="#create_stop">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_distance(); [<a href="#get_create_distance">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_normalized_angle(); [<a href="#get_create_normalized_angle">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_overcurrents(); [<a href="#get_create_overcurrents">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_requested_left_velocity(); [<a href="#get_create_requested_left_velocity">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_requested_radius(); [<a href="#get_create_requested_radius">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_requested_right_velocity(); [<a href="#get_create_requested_right_velocity">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_requested_velocity(); [<a href="#get_create_requested_velocity">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_total_angle(); [<a href="#get_create_total_angle">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">void</font> set_create_distance(
-                                                  <font class="CVariable">int</font> dist); [<a href="#set_create_distance">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">void</font> set_create_normalized_angle(
-                                                  <font class="CVariable">int</font> angle); [<a href="#set_create_normalized_angle">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">void</font> set_create_total_angle(
-                                                  <font class="CVariable">int</font> angle); [<a href="#set_create_total_angle">&sect;</a>]</li>
-                                                </code><b>Battery</b><code>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_battery_capacity(); [<a href="#get_create_battery_capacity">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_battery_charge(); [<a href="#get_create_battery_charge">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_charging_state(); [<a href="#get_create_charging_state">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_battery_current(); [<a href="#get_create_battery_current">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_battery_temp(); [<a href="#get_create_battery_temp">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_battery_voltage(); [<a href="#get_create_battery_voltage">&sect;</a>]</li>
-                                                </code>
-              </ul>
-            </td>
-            <td>
-              <ul><code>
-</code><b>Sensors</b><code>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_advance_button(); [<a href="#get_create_advance_button">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_bay_DI(); [<a href="#get_create_bay_DI">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_bay_AI(); [<a href="#get_create_bay_AI">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_cwdrop(); [<a href="#get_create_cwdrop">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_infrared(); [<a href="#get_create_infrared">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_lbump(); [<a href="#get_create_lbump">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_lcliff(); [<a href="#get_create_lcliff">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_lcliff_amt(); [<a href="#get_create_lcliff_amt">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_lfcliff(); [<a href="#get_create_lfcliff">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_lfcliff_amt(); [<a href="#get_create_lfcliff_amt">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_lwdrop(); [<a href="#get_create_lwdrop">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_number_of_stream_packets(); [<a href="#get_create_number_of_stream_packets">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_play_button(); [<a href="#get_create_play_button">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_rbump(); [<a href="#get_create_rbump">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_rcliff(); [<a href="#get_create_rcliff">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_rcliff_amt(); [<a href="#get_create_rcliff_amt">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_rfcliff(); [<a href="#get_create_rfcliff">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_rfcliff_amt(); [<a href="#get_create_rfcliff_amt">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_rlwdrop(); [<a href="#get_create_rlwdrop">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_vwall(); [<a href="#get_create_vwall">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_wall(); [<a href="#get_create_wall">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_wall_amt(); [<a href="#get_create_wall_amt">&sect;</a>]</li>
-                                                </code><b>Built in Scripts</b><code>
-                                                <li>
-                                                  <font class="CVariable">void </font> create_spot(); [<a href="#create_spot">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">void </font> create_cover(); [<a href="#create_cover">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">void </font> create_demo(
-                                                  <font class="CVariable">int </font> d); [<a href="#create_demo">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">void</font> create_cover_dock(); [<a href="#create_cover_dock">&sect;</a>]</li>
-                                                </code><b>LEDs and Music</b><code>
-                                                <li>
-                                                  <font class="CVariable">void</font> create_advance_led(
-                                                  <font class="CVariable">int</font> on); [<a href="#create_advance_led">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_song_number(); [<a href="#get_create_song_number">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">int</font> get_create_song_playing(); [<a href="#get_create_song_playing">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">void</font> create_load_song(
-                                                  <font class="CVariable">int</font> num); [<a href="#create_load_song">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">void</font> create_play_led(
-                                                  <font class="CVariable">int</font> on); [<a href="#create_play_led">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">void</font> create_play_song(
-                                                  <font class="CVariable">int</font> num); [<a href="#create_play_song">&sect;</a>]</li>
-                                                <li>
-                                                  <font class="CVariable">void</font> create_power_led(
-                                                  <font class="CVariable">int</font> color, int brightness); [<a href="#create_power_led">&sect;</a>]</li>
-                                                </code>
-              </ul>
-            </td>
-          </tr>
-      </table>
-
-      <a name="CategoryGraphics"></a>
-      <h4>Graphics</h4>
-
-      <table>
-        <tbody>
-          <tr>
-            <td>
-              <ul><code>
-        <li><font class="CVariable">int</font> graphics_open(<font class="CVariable">int</font> width, <font class="CVariable">int</font> height);  [<a href="#graphics_open">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> graphics_close();  [<a href="#graphics_close">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> graphics_update();  [<a href="#graphics_update">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> graphics_clear();  [<a href="#graphics_clear">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> graphics_fill(<font class="CVariable">int</font> r, <font class="CVariable">int</font> g, <font class="CVariable">int</font> b);  [<a href="#graphics_fill">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> graphics_pixel(<font class="CVariable">int</font> x, <font class="CVariable">int</font> y, <font class="CVariable">int</font> r, <font class="CVariable">int</font> g, <font class="CVariable">int</font> b);  [<a href="graphics_pixel">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> graphics_line(<font class="CVariable">int</font> x1, <font class="CVariable">int</font> y1, <font class="CVariable">int</font> x2, <font class="CVariable">int</font> y2, <font class="CVariable">int</font> r, <font class="CVariable">int</font> g, <font class="CVariable">int</font> b);  [<a href="#graphics_line">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> graphics_circle(<font class="CVariable">int</font> cx, <font class="CVariable">int</font> cy, <font class="CVariable">int</font> radius, <font class="CVariable">int</font> r, <font class="CVariable">int</font> g, <font class="CVariable">int</font> b);  [<a href="#graphics_circle">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> graphics_circle_fill(<font class="CVariable">int</font> cx, <font class="CVariable">int</font> cy, <font class="CVariable">int</font> radius, <font class="CVariable">int</font> r, <font class="CVariable">int</font> g, <font class="CVariable">int</font> b);  [<a href="#graphics_circle_fill">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> graphics_rectangle(<font class="CVariable">int</font> x1, <font class="CVariable">int</font> y1, <font class="CVariable">int</font> x2, <font class="CVariable">int</font> y2, <font class="CVariable">int</font> r, <font class="CVariable">int</font> g, <font class="CVariable">int</font> b);  [<a href="#graphics_rectangle">&sect;</a>]</li>
-		<li><font class="CVariable">void</font> graphics_rectangle_fill(<font class="CVariable">int</font> x1, <font class="CVariable">int</font> y1, <font class="CVariable">int</font> x2, <font class="CVariable">int</font> y2, <font class="CVariable">int</font> r, <font class="CVariable">int</font> g, <font class="CVariable">int</font> b);  [<a href="#graphics_rectangle_fill">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> graphics_triangle(<font class="CVariable">int</font> x1, <font class="CVariable">int</font> y1, <font class="CVariable">int</font> x2, <font class="CVariable">int</font> y2, <font class="CVariable">int</font> x3, <font class="CVariable">int</font> y3, <font class="CVariable">int</font> r, <font class="CVariable">int</font> g, <font class="CVariable">int</font> b);  [<a href="graphics_triangle">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> graphics_triangle_fill(<font class="CVariable">int</font> x1, <font class="CVariable">int</font> y1, <font class="CVariable">int</font> x2, <font class="CVariable">int</font> y2, <font class="CVariable">int</font> x3, <font class="CVariable">int</font> y3, <font class="CVariable">int</font> r, <font class="CVariable">int</font> g, <font class="CVariable">int</font> b);  [<a href="graphics_triangle_fill">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> get_mouse_position(<font class="CVariable">int</font> *x, <font class="CVariable">int</font> *y);  [<a href="#get_mouse_position">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> get_mouse_left_button();  [<a href="#get_mouse_left_button">&sect;</a>]</li>
-        </code>
-              </ul>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-      <a name="CategoryMath"></a>
-      <h4>Math</h4>
-
-      <table>
-        <tbody>
-          <tr>
-            <td>
-              <ul><code>
-        <li><font class="CVariable">double</font> atan(<font class="CVariable">double</font> angle);  [<a href="#atan">&sect;</a>]</li>
-        <li><font class="CVariable">double</font> cos(<font class="CVariable">double</font> angle);  [<a href="#cos">&sect;</a>]</li>
-        <li><font class="CVariable">double</font> exp(<font class="CVariable">double</font> num);  [<a href="#exp">&sect;</a>]</li>
-        <li><font class="CVariable">double</font> exp10(<font class="CVariable">double</font> num);  [<a href="#exp10">&sect;</a>]</li>
-        <li><font class="CVariable">double</font> log(<font class="CVariable">double</font> num);  [<a href="#log">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> log10(<font class="CVariable">double</font> num);  [<a href="#log10">&sect;</a>]</li>
-        <li><font class="CVariable">double</font> pow(<font class="CVariable">double</font> x, <font class="CVariable">double</font> y);  [<a href="#pow">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> rand(<font class="CVariable">int</font> m);  [<a href="#rand">&sect;</a>]</li>
-        <li><font class="CVariable">double</font> sin(<font class="CVariable">double</font> angle);  [<a href="#sin">&sect;</a>]</li>
-        <li><font class="CVariable">double</font> sqrt(<font class="CVariable">double</font> num);  [<a href="#sqrt">&sect;</a>]</li>
-		<li><font class="CVariable">void</font> srand(<font class="CVariable">int</font> s);  [<a href="#srand">&sect;</a>]</li>
-        <li><font class="CVariable">double</font> tan(<font class="CVariable">double</font> angle);  [<a href="#tan">&sect;</a>]</li>
-        </code>
-              </ul>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-      <a name="CategoryMotors"></a>
-      <h4>Motors</h4>
-
-      <table>
-        <tbody>
-          <tr>
-            <td>
-              <ul><code>
-        <li><font class="CVariable">void</font> alloff();  [<a href="#alloff">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> ao();  [<a href="#ao">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> bk(<font class="CVariable">int</font> m);  [<a href="#bk">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> block_motor_done(<font class="CVariable">int</font> m);  [<a href="#block_motor_done">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> bmd(<font class="CVariable">int</font> m);  [<a href="#bmd">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> get_motor_done(<font class="CVariable">int</font> m);  [<a href="#get_motor_done">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> clear_motor_position_counter(<font class="CVariable">int</font> motor_nbr);  [<a href="#clear_motor_position_counter">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> fd(<font class="CVariable">int</font> m);  [<a href="#fd">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> freeze(<font class="CVariable">int</font> m);  [<a href="#freeze">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> get_motor_done(<font class="CVariable">int</font> m);  [<a href="#get_motor_done">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> get_motor_position_counter(<font class="CVariable">int</font> m);  [<a href="#get_motor_position_counter">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> get_pid_gains(<font class="CVariable">int</font> motor, <font class="CVariable">int</font> p, <font class="CVariable">int</font> i, <font class="CVariable">int</font> d, <font class="CVariable">int</font> pd, <font class="CVariable">int</font> id, <font class="CVariable">int</font> dd);  [<a href="#get_pid_gains">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> mav(<font class="CVariable">int</font> m, <font class="CVariable">int</font> vel);  [<a href="#mav">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> motor(<font class="CVariable">int</font> m, <font class="CVariable">int</font> p);  [<a href="#motor">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> move_at_velocity(<font class="CVariable">int</font> m, <font class="CVariable">int</font> vel);  [<a href="#move_at_velocity">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> move_relative_position(<font class="CVariable">int</font> m, <font class="CVariable">int</font> speed, <font class="CVariable">int</font> pos);  [<a href="#move_relative_position">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> move_to_position(<font class="CVariable">int</font> m, <font class="CVariable">int</font> speed, <font class="CVariable">int</font> pos);  [<a href="#move_to_position">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> mrp(<font class="CVariable">int</font> m, <font class="CVariable">int</font> vel, <font class="CVariable">int</font> pos);  [<a href="#mrp">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> mtp(<font class="CVariable">int</font> m, <font class="CVariable">int</font> vel, <font class="CVariable">int</font> pos);  [<a href="#mtp">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> off(<font class="CVariable">int</font> m);  [<a href="#off">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> set_pid_gains(<font class="CVariable">int</font> motor, <font class="CVariable">int</font> p, <font class="CVariable">int</font> i, <font class="CVariable">int</font> d, <font class="CVariable">int</font> pd, <font class="CVariable">int</font> id, <font class="CVariable">int</font> dd);  [<a href="#set_pid_gains">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> setpwm(<font class="CVariable">int </font>m, <font class="CVariable">int</font> dutycycle);  [<a href="#setpwm">&sect;</a>]</li>
-        </code>
-              </ul>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-      <a name="CategoryOutput"></a>
-      <h4>Output</h4>
-
-      <table>
-        <tbody>
-          <tr>
-            <td>
-              <ul><code>
-        <li><font class="CVariable">void</font> beep();  [<a href="#beep">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> console_clear();  [<a href="#console_clear">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> display_clear();  [<a href="#display_clear">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> display_printf(<font class="CVariable">int</font> col, <font class="CVariable">int</font> row, <font class="CVariable">char</font> s[], . . .);  [<a href="#display_printf">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> extra_buttons_show();  [<a href="#extra_buttons_show">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> extra_buttons_hide();  [<a href="#extra_buttons_hide">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> set_a_button_text(<font class="CVariable">char</font> txt[]);  [<a href="#set_a_button_text">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> set_b_button_text(<font class="CVariable">char</font> txt[]);  [<a href="#set_b_button_text">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> set_c_button_text(<font class="CVariable">char</font> txt[]);  [<a href="#set_c_button_text">&sect;</a>]</li>
-		<li><font class="CVariable">void</font> set_digital_output(<font class="CVariable">int</font> port, <font class="CVariable">int</font> inout);  [<a href="#set_digital_output">&sect;</a>]</li>
-		<li><font class="CVariable">void</font> set_digital_value(<font class="CVariable">int</font> port, <font class="CVariable">int</font> value);  [<a href="#set_digital_value">&sect;</a>]</li>
-		<li><font class="CVariable">void</font> set_x_button_text(<font class="CVariable">char</font> txt[]);  [<a href="#set_x_button_text">&sect;</a>]</li>
-		<li><font class="CVariable">void</font> set_y_button_text(<font class="CVariable">char</font> txt[]);  [<a href="#set_y_button_text">&sect;</a>]</li>
-		<li><font class="CVariable">void</font> set_z_button_text(<font class="CVariable">char</font> txt[]);  [<a href="#set_z_button_text">&sect;</a>]</li>
-		</code>
-              </ul>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-      <a name="CategoryThreads"></a>
-      <h4>Threads</h4>
-
-      <table>
-        <tbody>
-          <tr>
-            <td>
-              <ul><code>
-        <li><font class="CVariable">thread</font> thread_create(&lt;<em>function_name</em>&gt;);  [<a href="#thread_create">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> thread_destroy(&lt;<em>thread id</em>>&gt;);  [<a href="#thread_destroy">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> thread_start(&lt;<em>thread id</em>&gt;);  [<a href="#thread_start">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> thread_wait(&lt;<em>thread id</em>&gt;);  [<a href="#thread_wait">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> run_for(<font class="CVariable">double</font> sec, <font class="CVariable">void</font> &lt;<em>function_name</em>&gt;);  [<a href="#run_for">&sect;</a>]</li>
-        </code>
-              </ul>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-      <a name="CategorySensors"></a>
-      <h4>Sensors</h4>
-
-      <table>
-        <tbody>
-          <tr>
-            <td>
-              <ul><code>
-        <li><font class="CVariable">int</font> a_button();  [<a href="#a_button">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> a_button_clicked();  [<a href="#a_button_clicked">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> accel_x();  [<a href="#accel_x">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> accel_y();  [<a href="#accel_y">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> accel_z();  [<a href="#accel_z">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> analog(<font class="CVariable">int</font> p);  [<a href="#analog">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> analog_et(<font class="CVariable">int</font> p);  [<a href="#analog_et">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> analog8(<font class="CVariable">int</font> p);  [<a href="#analog8">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> analog10(<font class="CVariable">int</font> p);  [<a href="#analog10">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> any_button();  [<a href="#any_button">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> b_button();  [<a href="#b_button">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> b_button_clicked();  [<a href="#b_button_clicked">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> c_button();  [<a href="#c_button">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> c_button_clicked();  [<a href="#c_button_clicked">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> digital(<font class="CVariable">int</font> p);  [<a href="#digital">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> get_analog_pullup(<font class="CVariable">int</font> port);  [<a href="#get_analog_pullup">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> get_digital_pullup(<font class="CVariable">int</font> port);  [<a href="#get_digital_pullup">&sect;</a>]</li>
-        <li><font class="CVariable">double</font> power_level();  [<a href="#power_level">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> get_extra_buttons_visible();  [<a href="#get_extra_buttons_visible">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> set_analog_pullup(<font class="CVariable">int</font> port, <font class="CVariable">int</font> pullupTF);  [<a href="#set_analog_pullup">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> set_digital_pullup(<font class="CVariable">int</font> port, <font class="CVariable">int</font> pullupTF);  [<a href="#set_digital_pullup">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> side_button();  [<a href="#side_button">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> side_button_clicked();  [<a href="#side_button_clicked">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> x_button();  [<a href="#x_button">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> x_button_clicked();  [<a href="#x_button_clicked">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> y_button();  [<a href="#y_button">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> y_button_clicked();  [<a href="#y_button_clicked">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> z_button();  [<a href="#z_button">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> z_button_clicked();  [<a href="#z_button_clicked">&sect;</a>]</li>
-        </code>
-              </ul>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-      <a name="CategoryServos"></a>
-      <h4>Servos</h4>
-
-      <table>
-        <tbody>
-          <tr>
-            <td>
-              <ul><code>
-        <li><font class="CVariable">void</font> disable_servo(<font class="CVariable">int</font> p);  [<a href="#disable_servo">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> disable_servos();  [<a href="#disable_servos">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> enable_servo(<font class="CVariable">int</font> p);  [<a href="#enable_servo">&sect;</a>]</li>
-        <li><font class="CVariable">void</font> enable_servos();  [<a href="#enable_servos">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> get_servo_enabled(<font class="CVariable">int</font> srv);  [<a href="#get_servo_enabled">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> get_servo_position(<font class="CVariable">int</font> srv);  [<a href="#get_servo_position">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> set_servo_position(<font class="CVariable">int</font> srv, <font class="CVariable">int</font> pos);  [<a href="#set_servo_position">&sect;</a>]</li>
-        </code>
-              </ul>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-      <a name="CategoryTime"></a>
-      <h4>Time</h4>
-
-      <table>
-        <tbody>
-          <tr>
-            <td>
-              <ul><code>
-        <li><font class="CVariable">void</font> msleep(<font class="CVariable">int</font> msec);  [<a href="#msleep">&sect;</a>]</li>
-        <li><font class="CVariable">double</font> seconds();  [<a href="#seconds">&sect;</a>]</li>
-        </code>
-              </ul>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-      <a name="CategoryVision"></a>
-      <h4>Vision</h4>
-
-      <table>
-        <tbody>
-          <tr>
-            <td>
-              <ul><code>
-        <li><font class="CVariable">void</font> camera_close();  [<a href="#camera_close">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> camera_load_config(<font class="CVariable">char</font> name[]);   [<a href="#camera_load_config">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> camera_open();  [<a href="#camera_open">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> camera_open_at_res(<font class="CVariable">int</font> res_numb);  [<a href="#camera_open_at_res">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> camera_open_device(<font class="CVariable">int</font> number,<font class="CVariable"> int</font> res_numb);  [<a href="#camera_open_device">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> camera_update();  [<a href="#camera_update">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> get_channel_count();  [<a href="#get_channel_count">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> get_object_area(<font class="CVariable">int</font> channel,<font class="CVariable"> int</font> object);  [<a href="#get_object_area">&sect;</a>]</li>
-        <li><font class="CVariable">rectangle</font> get_object_bbox</font>(<font class="CVariable">int</font> channel,<font class="CVariable"> int</font> object);  [<a href="#get_object_bbox">&sect;</a>]</li>
-        <li><font class="CVariable">point2</font> get_object_center</font>(<font class="CVariable">int</font> channel,<font class="CVariable"> int</font> object);  [<a href="#get_object_center">&sect;</a>]</li>
-        <li><font class="CVariable">point2</font> get_object_centroid</font>(<font class="CVariable">int</font> channel,<font class="CVariable"> int</font> object);  [<a href="#get_object_centroid">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> get_code_num(<font class="CVariable">int</font> channel, int</font> object);  [<a href="#get_code_num">&sect;</a>]</li>
-        <li><font class="CVariable">double</font> get_object_confidence</font>(<font class="CVariable">int</font> channel,<font class="CVariable"> int</font> object);  [<a href="#get_object_confidence">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> get_object_count</font>(<font class="CVariable">int</font> channel);  [<a href="#get_object_count">&sect;</a>]</li>
-        <li><font class="CVariable">char</font> *get_object_data</font>(<font class="CVariable">int</font> channel,<font class="CVariable"> int</font> object);  [<a href="#get_object_data">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> get_object_data_length</font>(<font class="CVariable">int</font> channel,<font class="CVariable"> int</font> object);  [<a href="#get_object_data_length">&sect;</a>]</li>
-        </code>
-              </ul>
-            </td>
-          </tr>
-      </table>
-
-      <a name="CategoryDepth"></a>
-      <h4>Depth</h4>
-
-      <table>
-        <tbody>
-          <tr>
-            <td>
-              <ul><code>
-        <li><font class="CVariable">void</font> depth_close();  [<a href="#depth_close">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> depth_open();  [<a href="#depth_open">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> depth_update();  [<a href="#depth_update">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> get_depth_value(<font class="CVariable">int</font> row, <font class="CVariable">int</font> col);  [<a href="#get_depth_value">&sect;</a>]</li>
-        <li>point3 get_depth_world_point(<font class="CVariable">int</font> row, <font class="CVariable">int</font> col);  [<a href="#get_depth_world_point">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> get_depth_world_point_x(<font class="CVariable">int</font> row, <font class="CVariable">int</font> col);  [<a href="#get_depth_world_point_x">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> get_depth_world_point_y(<font class="CVariable">int</font> row, <font class="CVariable">int</font> col);  [<a href="#get_depth_world_point_y">&sect;</a>]</li>
-        <li><font class="CVariable">int</font> get_depth_world_point_z(<font class="CVariable">int</font> row, <font class="CVariable">int</font> col);  [<a href="#get_depth_world_point_z">&sect;</a>]</li>
-        </code>
-              </ul>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-            <!-- START FOOTER -->
+      <nav class="nav-extended lighten-2 red">
+        <div class="nav-wrapper">
+          <div class="col s12"><a class="button-collapse" href="#" data-activates="slide-out" style="font-size: 50px;"><i class="material-icons">menu</i></a><a class="brand-logo waves-effect" id="top" href="/docs/index.html">Botball Documentation</a></div>
         </div>
+        <div class="nav-wrapper">
+          <div class="col s12"><a class="breadcrumb" href="#!">First</a><a class="breadcrumb" href="#!">Second</a><a class="breadcrumb" href="#!">Third</a></div>
+        </div>
+      </nav>
+    </header>
+    <main class="row">
+      <div class="container col s12">
+        <!-- Functions Categorized--><a name="FunctionsCategorized"></a>
+        <h3>Categorized Function List (cross-linked)</h3>    Each function listed is provided with a cross link to its library description.
+        <div class="indent"><a name="CategoryBotball"></a>
+          <h4>Botball</h4><code>
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <ul>
+                      <li><font class="CVariable">void</font> run_for(<font class="CVariable">double</font> delay, <<em>function_name</em>>);  [<a href="#run_for">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> shut_down_in(<font class="CVariable">double</font> delay);  [<a href="#Botball">&sect;</a>]</li>
+                      <!--<li><font class="CVariable">int</font> target_cha_in_chb(<font class="CVariable">int</font> cha, <font class="CVariable">int</font> chb, <font class="CVariable">int</font> *x, <font class="CVariable">int</font> *y)</li>
+                      -->
+                      <li><font class="CVariable">void</font> wait_for_light(<font class="CVariable">int</font> light_port_);  [<a href="#Botball">&sect;</a>]</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table></code><a name="CategoryCreate"></a>
+          <h4>Create</h4>
+          <table>
+            <tbody>
+              <tr>
+                <td alignment="top">
+                  <ul><b>Serial Interface</b><code>
+                      <li><font class="CVariable">void</font> create_clear_serial_buffer(); [<a href="#create_clear_serial_buffer">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> create_connect(); [<a href="#create_connect">&sect;</a>]</li>
+                      <li><font class="CVariable">void </font> create_disconnect(); [<a href="#create_disconnect">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> create_read_block(<font class="CVariable">char</font> *data,<font class="CVariable">int</font> count); [<a href="#create_read_block">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> create_write_byte(<font class="CVariable">char</font> byte); [<a href="#create_write_byte">&sect;</a>]</li>
+                      <li><font class="CVariable">void </font> create_full(); [<a href="#create_full">&sect;</a>]</li>
+                      <li><font class="CVariable">void </font> create_start(); [<a href="#create_start">&sect;</a>]</li>
+                      <li><font class="CVariable">void </font> create_passive(); [<a href="#create_passive">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> create_safe(); [<a href="#create_safe">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_mode(); [<a href="#get_create_mode">&sect;</a>]</li></code><b>Movement</b><code>
+                      <li><font class="CVariable">void</font> create_drive(<font class="CVariable">int</font> speed,<font class="CVariable">int</font> radius); [<a href="#create_drive">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> create_drive_direct(<font class="CVariable">int</font> r_speed,<font class="CVariable">int</font> l_speed); [<a href="#create_drive_direct">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> create_drive_straight(<font class="CVariable">int</font> speed); [<a href="#create_drive_straight">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> create_spin_CCW(<font class="CVariable">int</font> speed); [<a href="#create_spin_CCW">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> create_spin_CW(<font class="CVariable">int</font> speed); [<a href="#create_spin_CW">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> create_stop(); [<a href="#create_stop">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_distance(); [<a href="#get_create_distance">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_normalized_angle(); [<a href="#get_create_normalized_angle">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_overcurrents(); [<a href="#get_create_overcurrents">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_requested_left_velocity(); [<a href="#get_create_requested_left_velocity">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_requested_radius(); [<a href="#get_create_requested_radius">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_requested_right_velocity(); [<a href="#get_create_requested_right_velocity">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_requested_velocity(); [<a href="#get_create_requested_velocity">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_total_angle(); [<a href="#get_create_total_angle">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> set_create_distance(<font class="CVariable">int</font> dist); [<a href="#set_create_distance">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> set_create_normalized_angle(<font class="CVariable">int</font> angle); [<a href="#set_create_normalized_angle">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> set_create_total_angle(<font class="CVariable">int</font> angle); [<a href="#set_create_total_angle">&sect;</a>]</li></code><b>Battery</b><code>
+                      <li><font class="CVariable">int</font> get_create_battery_capacity(); [<a href="#get_create_battery_capacity">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_battery_charge(); [<a href="#get_create_battery_charge">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_charging_state(); [<a href="#get_create_charging_state">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_battery_current(); [<a href="#get_create_battery_current">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_battery_temp(); [<a href="#get_create_battery_temp">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_battery_voltage(); [<a href="#get_create_battery_voltage">&sect;</a>]</li></code></ul>
+                </td>
+                <td>
+                  <ul><code></code><b>Sensors</b><code>
+                      <li><font class="CVariable">int</font> get_create_advance_button(); [<a href="#get_create_advance_button">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_bay_DI(); [<a href="#get_create_bay_DI">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_bay_AI(); [<a href="#get_create_bay_AI">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_cwdrop(); [<a href="#get_create_cwdrop">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_infrared(); [<a href="#get_create_infrared">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_lbump(); [<a href="#get_create_lbump">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_lcliff(); [<a href="#get_create_lcliff">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_lcliff_amt(); [<a href="#get_create_lcliff_amt">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_lfcliff(); [<a href="#get_create_lfcliff">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_lfcliff_amt(); [<a href="#get_create_lfcliff_amt">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_lwdrop(); [<a href="#get_create_lwdrop">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_number_of_stream_packets(); [<a href="#get_create_number_of_stream_packets">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_play_button(); [<a href="#get_create_play_button">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_rbump(); [<a href="#get_create_rbump">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_rcliff(); [<a href="#get_create_rcliff">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_rcliff_amt(); [<a href="#get_create_rcliff_amt">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_rfcliff(); [<a href="#get_create_rfcliff">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_rfcliff_amt(); [<a href="#get_create_rfcliff_amt">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_rlwdrop(); [<a href="#get_create_rlwdrop">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_vwall(); [<a href="#get_create_vwall">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_wall(); [<a href="#get_create_wall">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_wall_amt(); [<a href="#get_create_wall_amt">&sect;</a>]</li></code><b>Built in Scripts</b><code>
+                      <li><font class="CVariable">void </font> create_spot(); [<a href="#create_spot">&sect;</a>]</li>
+                      <li><font class="CVariable">void </font> create_cover(); [<a href="#create_cover">&sect;</a>]</li>
+                      <li><font class="CVariable">void </font> create_demo(<font class="CVariable">int </font> d); [<a href="#create_demo">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> create_cover_dock(); [<a href="#create_cover_dock">&sect;</a>]</li></code><b>LEDs and Music</b><code>
+                      <li><font class="CVariable">void</font> create_advance_led(<font class="CVariable">int</font> on); [<a href="#create_advance_led">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_song_number(); [<a href="#get_create_song_number">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_create_song_playing(); [<a href="#get_create_song_playing">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> create_load_song(<font class="CVariable">int</font> num); [<a href="#create_load_song">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> create_play_led(<font class="CVariable">int</font> on); [<a href="#create_play_led">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> create_play_song(<font class="CVariable">int</font> num); [<a href="#create_play_song">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> create_power_led(<font class="CVariable">int</font> color, int brightness); [<a href="#create_power_led">&sect;</a>]</li></code></ul>
+                </td>
+              </tr>
+            </tbody>
+          </table><a name="CategoryGraphics"></a>
+          <h4>Graphics</h4>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <ul><code>
+                      <li><font class="CVariable">int</font> graphics_open(<font class="CVariable">int</font> width, <font class="CVariable">int</font> height);  [<a href="#graphics_open">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> graphics_close();  [<a href="#graphics_close">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> graphics_update();  [<a href="#graphics_update">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> graphics_clear();  [<a href="#graphics_clear">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> graphics_fill(<font class="CVariable">int</font> r, <font class="CVariable">int</font> g, <font class="CVariable">int</font> b);  [<a href="#graphics_fill">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> graphics_pixel(<font class="CVariable">int</font> x, <font class="CVariable">int</font> y, <font class="CVariable">int</font> r, <font class="CVariable">int</font> g, <font class="CVariable">int</font> b);  [<a href="graphics_pixel">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> graphics_line(<font class="CVariable">int</font> x1, <font class="CVariable">int</font> y1, <font class="CVariable">int</font> x2, <font class="CVariable">int</font> y2, <font class="CVariable">int</font> r, <font class="CVariable">int</font> g, <font class="CVariable">int</font> b);  [<a href="#graphics_line">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> graphics_circle(<font class="CVariable">int</font> cx, <font class="CVariable">int</font> cy, <font class="CVariable">int</font> radius, <font class="CVariable">int</font> r, <font class="CVariable">int</font> g, <font class="CVariable">int</font> b);  [<a href="#graphics_circle">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> graphics_circle_fill(<font class="CVariable">int</font> cx, <font class="CVariable">int</font> cy, <font class="CVariable">int</font> radius, <font class="CVariable">int</font> r, <font class="CVariable">int</font> g, <font class="CVariable">int</font> b);  [<a href="#graphics_circle_fill">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> graphics_rectangle(<font class="CVariable">int</font> x1, <font class="CVariable">int</font> y1, <font class="CVariable">int</font> x2, <font class="CVariable">int</font> y2, <font class="CVariable">int</font> r, <font class="CVariable">int</font> g, <font class="CVariable">int</font> b);  [<a href="#graphics_rectangle">&sect;</a>]</li>&#x9;&#x9;
+                      <li><font class="CVariable">void</font> graphics_rectangle_fill(<font class="CVariable">int</font> x1, <font class="CVariable">int</font> y1, <font class="CVariable">int</font> x2, <font class="CVariable">int</font> y2, <font class="CVariable">int</font> r, <font class="CVariable">int</font> g, <font class="CVariable">int</font> b);  [<a href="#graphics_rectangle_fill">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> graphics_triangle(<font class="CVariable">int</font> x1, <font class="CVariable">int</font> y1, <font class="CVariable">int</font> x2, <font class="CVariable">int</font> y2, <font class="CVariable">int</font> x3, <font class="CVariable">int</font> y3, <font class="CVariable">int</font> r, <font class="CVariable">int</font> g, <font class="CVariable">int</font> b);  [<a href="graphics_triangle">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> graphics_triangle_fill(<font class="CVariable">int</font> x1, <font class="CVariable">int</font> y1, <font class="CVariable">int</font> x2, <font class="CVariable">int</font> y2, <font class="CVariable">int</font> x3, <font class="CVariable">int</font> y3, <font class="CVariable">int</font> r, <font class="CVariable">int</font> g, <font class="CVariable">int</font> b);  [<a href="graphics_triangle_fill">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_mouse_position(<font class="CVariable">int</font> *x, <font class="CVariable">int</font> *y);  [<a href="#get_mouse_position">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_mouse_left_button();  [<a href="#get_mouse_left_button">&sect;</a>]</li></code></ul>
+                </td>
+              </tr>
+            </tbody>
+          </table><a name="CategoryMath"></a>
+          <h4>Math</h4>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <ul><code>
+                      <li><font class="CVariable">double</font> atan(<font class="CVariable">double</font> angle);  [<a href="#atan">&sect;</a>]</li>
+                      <li><font class="CVariable">double</font> cos(<font class="CVariable">double</font> angle);  [<a href="#cos">&sect;</a>]</li>
+                      <li><font class="CVariable">double</font> exp(<font class="CVariable">double</font> num);  [<a href="#exp">&sect;</a>]</li>
+                      <li><font class="CVariable">double</font> exp10(<font class="CVariable">double</font> num);  [<a href="#exp10">&sect;</a>]</li>
+                      <li><font class="CVariable">double</font> log(<font class="CVariable">double</font> num);  [<a href="#log">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> log10(<font class="CVariable">double</font> num);  [<a href="#log10">&sect;</a>]</li>
+                      <li><font class="CVariable">double</font> pow(<font class="CVariable">double</font> x, <font class="CVariable">double</font> y);  [<a href="#pow">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> rand(<font class="CVariable">int</font> m);  [<a href="#rand">&sect;</a>]</li>
+                      <li><font class="CVariable">double</font> sin(<font class="CVariable">double</font> angle);  [<a href="#sin">&sect;</a>]</li>
+                      <li><font class="CVariable">double</font> sqrt(<font class="CVariable">double</font> num);  [<a href="#sqrt">&sect;</a>]</li>&#x9;&#x9;
+                      <li><font class="CVariable">void</font> srand(<font class="CVariable">int</font> s);  [<a href="#srand">&sect;</a>]</li>
+                      <li><font class="CVariable">double</font> tan(<font class="CVariable">double</font> angle);  [<a href="#tan">&sect;</a>]</li></code></ul>
+                </td>
+              </tr>
+            </tbody>
+          </table><a name="CategoryMotors"></a>
+          <h4>Motors</h4>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <ul><code>
+                      <li><font class="CVariable">void</font> alloff();  [<a href="#alloff">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> ao();  [<a href="#ao">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> bk(<font class="CVariable">int</font> m);  [<a href="#bk">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> block_motor_done(<font class="CVariable">int</font> m);  [<a href="#block_motor_done">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> bmd(<font class="CVariable">int</font> m);  [<a href="#bmd">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_motor_done(<font class="CVariable">int</font> m);  [<a href="#get_motor_done">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> clear_motor_position_counter(<font class="CVariable">int</font> motor_nbr);  [<a href="#clear_motor_position_counter">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> fd(<font class="CVariable">int</font> m);  [<a href="#fd">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> freeze(<font class="CVariable">int</font> m);  [<a href="#freeze">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_motor_done(<font class="CVariable">int</font> m);  [<a href="#get_motor_done">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_motor_position_counter(<font class="CVariable">int</font> m);  [<a href="#get_motor_position_counter">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_pid_gains(<font class="CVariable">int</font> motor, <font class="CVariable">int</font> p, <font class="CVariable">int</font> i, <font class="CVariable">int</font> d, <font class="CVariable">int</font> pd, <font class="CVariable">int</font> id, <font class="CVariable">int</font> dd);  [<a href="#get_pid_gains">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> mav(<font class="CVariable">int</font> m, <font class="CVariable">int</font> vel);  [<a href="#mav">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> motor(<font class="CVariable">int</font> m, <font class="CVariable">int</font> p);  [<a href="#motor">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> move_at_velocity(<font class="CVariable">int</font> m, <font class="CVariable">int</font> vel);  [<a href="#move_at_velocity">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> move_relative_position(<font class="CVariable">int</font> m, <font class="CVariable">int</font> speed, <font class="CVariable">int</font> pos);  [<a href="#move_relative_position">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> move_to_position(<font class="CVariable">int</font> m, <font class="CVariable">int</font> speed, <font class="CVariable">int</font> pos);  [<a href="#move_to_position">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> mrp(<font class="CVariable">int</font> m, <font class="CVariable">int</font> vel, <font class="CVariable">int</font> pos);  [<a href="#mrp">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> mtp(<font class="CVariable">int</font> m, <font class="CVariable">int</font> vel, <font class="CVariable">int</font> pos);  [<a href="#mtp">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> off(<font class="CVariable">int</font> m);  [<a href="#off">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> set_pid_gains(<font class="CVariable">int</font> motor, <font class="CVariable">int</font> p, <font class="CVariable">int</font> i, <font class="CVariable">int</font> d, <font class="CVariable">int</font> pd, <font class="CVariable">int</font> id, <font class="CVariable">int</font> dd);  [<a href="#set_pid_gains">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> setpwm(<font class="CVariable">int </font>m, <font class="CVariable">int</font> dutycycle);  [<a href="#setpwm">&sect;</a>]</li></code></ul>
+                </td>
+              </tr>
+            </tbody>
+          </table><a name="CategoryOutput"></a>
+          <h4>Output</h4>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <ul><code>
+                      <li><font class="CVariable">void</font> beep();  [<a href="#beep">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> console_clear();  [<a href="#console_clear">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> display_clear();  [<a href="#display_clear">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> display_printf(<font class="CVariable">int</font> col, <font class="CVariable">int</font> row, <font class="CVariable">char</font> s[], . . .);  [<a href="#display_printf">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> extra_buttons_show();  [<a href="#extra_buttons_show">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> extra_buttons_hide();  [<a href="#extra_buttons_hide">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> set_a_button_text(<font class="CVariable">char</font> txt[]);  [<a href="#set_a_button_text">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> set_b_button_text(<font class="CVariable">char</font> txt[]);  [<a href="#set_b_button_text">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> set_c_button_text(<font class="CVariable">char</font> txt[]);  [<a href="#set_c_button_text">&sect;</a>]</li>&#x9;&#x9;
+                      <li><font class="CVariable">void</font> set_digital_output(<font class="CVariable">int</font> port, <font class="CVariable">int</font> inout);  [<a href="#set_digital_output">&sect;</a>]</li>&#x9;&#x9;
+                      <li><font class="CVariable">void</font> set_digital_value(<font class="CVariable">int</font> port, <font class="CVariable">int</font> value);  [<a href="#set_digital_value">&sect;</a>]</li>&#x9;&#x9;
+                      <li><font class="CVariable">void</font> set_x_button_text(<font class="CVariable">char</font> txt[]);  [<a href="#set_x_button_text">&sect;</a>]</li>&#x9;&#x9;
+                      <li><font class="CVariable">void</font> set_y_button_text(<font class="CVariable">char</font> txt[]);  [<a href="#set_y_button_text">&sect;</a>]</li>&#x9;&#x9;
+                      <li><font class="CVariable">void</font> set_z_button_text(<font class="CVariable">char</font> txt[]);  [<a href="#set_z_button_text">&sect;</a>]</li></code></ul>
+                </td>
+              </tr>
+            </tbody>
+          </table><a name="CategoryThreads"></a>
+          <h4>Threads</h4>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <ul><code>
+                      <li><font class="CVariable">thread</font> thread_create(<<em>function_name</em>>);  [<a href="#thread_create">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> thread_destroy(<<em>thread id</em>>>);  [<a href="#thread_destroy">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> thread_start(<<em>thread id</em>>);  [<a href="#thread_start">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> thread_wait(<<em>thread id</em>>);  [<a href="#thread_wait">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> run_for(<font class="CVariable">double</font> sec, <font class="CVariable">void</font> <<em>function_name</em>>);  [<a href="#run_for">&sect;</a>]</li></code></ul>
+                </td>
+              </tr>
+            </tbody>
+          </table><a name="CategorySensors"></a>
+          <h4>Sensors</h4>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <ul><code>
+                      <li><font class="CVariable">int</font> a_button();  [<a href="#a_button">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> a_button_clicked();  [<a href="#a_button_clicked">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> accel_x();  [<a href="#accel_x">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> accel_y();  [<a href="#accel_y">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> accel_z();  [<a href="#accel_z">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> analog(<font class="CVariable">int</font> p);  [<a href="#analog">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> analog_et(<font class="CVariable">int</font> p);  [<a href="#analog_et">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> analog8(<font class="CVariable">int</font> p);  [<a href="#analog8">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> analog10(<font class="CVariable">int</font> p);  [<a href="#analog10">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> any_button();  [<a href="#any_button">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> b_button();  [<a href="#b_button">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> b_button_clicked();  [<a href="#b_button_clicked">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> c_button();  [<a href="#c_button">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> c_button_clicked();  [<a href="#c_button_clicked">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> digital(<font class="CVariable">int</font> p);  [<a href="#digital">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_analog_pullup(<font class="CVariable">int</font> port);  [<a href="#get_analog_pullup">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_digital_pullup(<font class="CVariable">int</font> port);  [<a href="#get_digital_pullup">&sect;</a>]</li>
+                      <li><font class="CVariable">double</font> power_level();  [<a href="#power_level">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_extra_buttons_visible();  [<a href="#get_extra_buttons_visible">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> set_analog_pullup(<font class="CVariable">int</font> port, <font class="CVariable">int</font> pullupTF);  [<a href="#set_analog_pullup">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> set_digital_pullup(<font class="CVariable">int</font> port, <font class="CVariable">int</font> pullupTF);  [<a href="#set_digital_pullup">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> side_button();  [<a href="#side_button">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> side_button_clicked();  [<a href="#side_button_clicked">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> x_button();  [<a href="#x_button">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> x_button_clicked();  [<a href="#x_button_clicked">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> y_button();  [<a href="#y_button">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> y_button_clicked();  [<a href="#y_button_clicked">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> z_button();  [<a href="#z_button">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> z_button_clicked();  [<a href="#z_button_clicked">&sect;</a>]</li></code></ul>
+                </td>
+              </tr>
+            </tbody>
+          </table><a name="CategoryServos"></a>
+          <h4>Servos</h4>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <ul><code>
+                      <li><font class="CVariable">void</font> disable_servo(<font class="CVariable">int</font> p);  [<a href="#disable_servo">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> disable_servos();  [<a href="#disable_servos">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> enable_servo(<font class="CVariable">int</font> p);  [<a href="#enable_servo">&sect;</a>]</li>
+                      <li><font class="CVariable">void</font> enable_servos();  [<a href="#enable_servos">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_servo_enabled(<font class="CVariable">int</font> srv);  [<a href="#get_servo_enabled">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_servo_position(<font class="CVariable">int</font> srv);  [<a href="#get_servo_position">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> set_servo_position(<font class="CVariable">int</font> srv, <font class="CVariable">int</font> pos);  [<a href="#set_servo_position">&sect;</a>]</li></code></ul>
+                </td>
+              </tr>
+            </tbody>
+          </table><a name="CategoryTime"></a>
+          <h4>Time</h4>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <ul><code>
+                      <li><font class="CVariable">void</font> msleep(<font class="CVariable">int</font> msec);  [<a href="#msleep">&sect;</a>]</li>
+                      <li><font class="CVariable">double</font> seconds();  [<a href="#seconds">&sect;</a>]</li></code></ul>
+                </td>
+              </tr>
+            </tbody>
+          </table><a name="CategoryVision"></a>
+          <h4>Vision</h4>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <ul><code>
+                      <li><font class="CVariable">void</font> camera_close();  [<a href="#camera_close">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> camera_load_config(<font class="CVariable">char</font> name[]);   [<a href="#camera_load_config">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> camera_open();  [<a href="#camera_open">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> camera_open_at_res(<font class="CVariable">int</font> res_numb);  [<a href="#camera_open_at_res">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> camera_open_device(<font class="CVariable">int</font> number,<font class="CVariable"> int</font> res_numb);  [<a href="#camera_open_device">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> camera_update();  [<a href="#camera_update">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_channel_count();  [<a href="#get_channel_count">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_object_area(<font class="CVariable">int</font> channel,<font class="CVariable"> int</font> object);  [<a href="#get_object_area">&sect;</a>]</li>
+                      <li><font class="CVariable">rectangle</font> get_object_bbox(<font class="CVariable">int</font> channel,<font class="CVariable"> int</font> object);  [<a href="#get_object_bbox">&sect;</a>]</li>
+                      <li><font class="CVariable">point2</font> get_object_center(<font class="CVariable">int</font> channel,<font class="CVariable"> int</font> object);  [<a href="#get_object_center">&sect;</a>]</li>
+                      <li><font class="CVariable">point2</font> get_object_centroid(<font class="CVariable">int</font> channel,<font class="CVariable"> int</font> object);  [<a href="#get_object_centroid">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_code_num(<font class="CVariable">int</font> channel, int object);  [<a href="#get_code_num">&sect;</a>]</li>
+                      <li><font class="CVariable">double</font> get_object_confidence(<font class="CVariable">int</font> channel,<font class="CVariable"> int</font> object);  [<a href="#get_object_confidence">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_object_count(<font class="CVariable">int</font> channel);  [<a href="#get_object_count">&sect;</a>]</li>
+                      <li><font class="CVariable">char</font> *get_object_data(<font class="CVariable">int</font> channel,<font class="CVariable"> int</font> object);  [<a href="#get_object_data">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_object_data_length(<font class="CVariable">int</font> channel,<font class="CVariable"> int</font> object);  [<a href="#get_object_data_length">&sect;</a>]</li></code></ul>
+                </td>
+              </tr>
+            </tbody>
+          </table><a name="CategoryDepth"></a>
+          <h4>Depth</h4>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <ul><code>
+                      <li><font class="CVariable">void</font> depth_close();  [<a href="#depth_close">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> depth_open();  [<a href="#depth_open">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> depth_update();  [<a href="#depth_update">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_depth_value(<font class="CVariable">int</font> row, <font class="CVariable">int</font> col);  [<a href="#get_depth_value">&sect;</a>]</li>
+                      <li>point3 get_depth_world_point(<font class="CVariable">int</font> row, <font class="CVariable">int</font> col);  [<a href="#get_depth_world_point">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_depth_world_point_x(<font class="CVariable">int</font> row, <font class="CVariable">int</font> col);  [<a href="#get_depth_world_point_x">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_depth_world_point_y(<font class="CVariable">int</font> row, <font class="CVariable">int</font> col);  [<a href="#get_depth_world_point_y">&sect;</a>]</li>
+                      <li><font class="CVariable">int</font> get_depth_world_point_z(<font class="CVariable">int</font> row, <font class="CVariable">int</font> col);  [<a href="#get_depth_world_point_z">&sect;</a>]</li></code></ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </main>
-</body>
-
+  </body>
 </html>

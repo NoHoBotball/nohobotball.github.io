@@ -1,0 +1,1546 @@
+extends ../../exclude/docbase
+
+block vars
+  - var selected = "index"
+
+block content
+  // Functions Categorized
+  a(name='FunctionsCategorized')
+  h3 Categorized Function List (cross-linked)
+  |     Each function listed is provided with a cross link to its library description.
+  .indent
+    a(name='CategoryBotball')
+    h4 Botball
+    code
+      table
+        tbody
+          tr
+            td
+              ul
+                li
+                  font.CVariable void
+                  |  run_for(
+                  font.CVariable double
+                  |  delay, <
+                  em function_name
+                  | >);  [
+                  a(href='#run_for') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  shut_down_in(
+                  font.CVariable double
+                  |  delay);  [
+                  a(href='#Botball') &sect;
+                  | ]
+                //
+                  <li><font class="CVariable">int</font> target_cha_in_chb(<font class="CVariable">int</font> cha, <font class="CVariable">int</font> chb, <font class="CVariable">int</font> *x, <font class="CVariable">int</font> *y)</li>
+                li
+                  font.CVariable void
+                  |  wait_for_light(
+                  font.CVariable int
+                  |  light_port_);  [
+                  a(href='#Botball') &sect;
+                  | ]
+    a(name='CategoryCreate')
+    h4 Create
+    table
+      tbody
+        tr
+          td(alignment='top')
+            ul
+              b Serial Interface
+              code
+                li
+                  font.CVariable void
+                  |  create_clear_serial_buffer(); [
+                  a(href='#create_clear_serial_buffer') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  create_connect(); [
+                  a(href='#create_connect') &sect;
+                  | ]
+                li
+                  font.CVariable void 
+                  |  create_disconnect(); [
+                  a(href='#create_disconnect') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  create_read_block(
+                  font.CVariable char
+                  |  *data,
+                  font.CVariable int
+                  |  count); [
+                  a(href='#create_read_block') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  create_write_byte(
+                  font.CVariable char
+                  |  byte); [
+                  a(href='#create_write_byte') &sect;
+                  | ]
+                li
+                  font.CVariable void 
+                  |  create_full(); [
+                  a(href='#create_full') &sect;
+                  | ]
+                li
+                  font.CVariable void 
+                  |  create_start(); [
+                  a(href='#create_start') &sect;
+                  | ]
+                li
+                  font.CVariable void 
+                  |  create_passive(); [
+                  a(href='#create_passive') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  create_safe(); [
+                  a(href='#create_safe') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_mode(); [
+                  a(href='#get_create_mode') &sect;
+                  | ]
+              b Movement
+              code
+                li
+                  font.CVariable void
+                  |  create_drive(
+                  font.CVariable int
+                  |  speed,
+                  font.CVariable int
+                  |  radius); [
+                  a(href='#create_drive') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  create_drive_direct(
+                  font.CVariable int
+                  |  r_speed,
+                  font.CVariable int
+                  |  l_speed); [
+                  a(href='#create_drive_direct') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  create_drive_straight(
+                  font.CVariable int
+                  |  speed); [
+                  a(href='#create_drive_straight') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  create_spin_CCW(
+                  font.CVariable int
+                  |  speed); [
+                  a(href='#create_spin_CCW') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  create_spin_CW(
+                  font.CVariable int
+                  |  speed); [
+                  a(href='#create_spin_CW') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  create_stop(); [
+                  a(href='#create_stop') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_distance(); [
+                  a(href='#get_create_distance') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_normalized_angle(); [
+                  a(href='#get_create_normalized_angle') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_overcurrents(); [
+                  a(href='#get_create_overcurrents') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_requested_left_velocity(); [
+                  a(href='#get_create_requested_left_velocity') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_requested_radius(); [
+                  a(href='#get_create_requested_radius') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_requested_right_velocity(); [
+                  a(href='#get_create_requested_right_velocity') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_requested_velocity(); [
+                  a(href='#get_create_requested_velocity') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_total_angle(); [
+                  a(href='#get_create_total_angle') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  set_create_distance(
+                  font.CVariable int
+                  |  dist); [
+                  a(href='#set_create_distance') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  set_create_normalized_angle(
+                  font.CVariable int
+                  |  angle); [
+                  a(href='#set_create_normalized_angle') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  set_create_total_angle(
+                  font.CVariable int
+                  |  angle); [
+                  a(href='#set_create_total_angle') &sect;
+                  | ]
+              b Battery
+              code
+                li
+                  font.CVariable int
+                  |  get_create_battery_capacity(); [
+                  a(href='#get_create_battery_capacity') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_battery_charge(); [
+                  a(href='#get_create_battery_charge') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_charging_state(); [
+                  a(href='#get_create_charging_state') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_battery_current(); [
+                  a(href='#get_create_battery_current') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_battery_temp(); [
+                  a(href='#get_create_battery_temp') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_battery_voltage(); [
+                  a(href='#get_create_battery_voltage') &sect;
+                  | ]
+          td
+            ul
+              code
+              b Sensors
+              code
+                li
+                  font.CVariable int
+                  |  get_create_advance_button(); [
+                  a(href='#get_create_advance_button') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_bay_DI(); [
+                  a(href='#get_create_bay_DI') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_bay_AI(); [
+                  a(href='#get_create_bay_AI') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_cwdrop(); [
+                  a(href='#get_create_cwdrop') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_infrared(); [
+                  a(href='#get_create_infrared') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_lbump(); [
+                  a(href='#get_create_lbump') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_lcliff(); [
+                  a(href='#get_create_lcliff') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_lcliff_amt(); [
+                  a(href='#get_create_lcliff_amt') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_lfcliff(); [
+                  a(href='#get_create_lfcliff') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_lfcliff_amt(); [
+                  a(href='#get_create_lfcliff_amt') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_lwdrop(); [
+                  a(href='#get_create_lwdrop') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_number_of_stream_packets(); [
+                  a(href='#get_create_number_of_stream_packets') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_play_button(); [
+                  a(href='#get_create_play_button') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_rbump(); [
+                  a(href='#get_create_rbump') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_rcliff(); [
+                  a(href='#get_create_rcliff') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_rcliff_amt(); [
+                  a(href='#get_create_rcliff_amt') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_rfcliff(); [
+                  a(href='#get_create_rfcliff') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_rfcliff_amt(); [
+                  a(href='#get_create_rfcliff_amt') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_rlwdrop(); [
+                  a(href='#get_create_rlwdrop') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_vwall(); [
+                  a(href='#get_create_vwall') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_wall(); [
+                  a(href='#get_create_wall') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_wall_amt(); [
+                  a(href='#get_create_wall_amt') &sect;
+                  | ]
+              b Built in Scripts
+              code
+                li
+                  font.CVariable void 
+                  |  create_spot(); [
+                  a(href='#create_spot') &sect;
+                  | ]
+                li
+                  font.CVariable void 
+                  |  create_cover(); [
+                  a(href='#create_cover') &sect;
+                  | ]
+                li
+                  font.CVariable void 
+                  |  create_demo(
+                  font.CVariable int 
+                  |  d); [
+                  a(href='#create_demo') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  create_cover_dock(); [
+                  a(href='#create_cover_dock') &sect;
+                  | ]
+              b LEDs and Music
+              code
+                li
+                  font.CVariable void
+                  |  create_advance_led(
+                  font.CVariable int
+                  |  on); [
+                  a(href='#create_advance_led') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_song_number(); [
+                  a(href='#get_create_song_number') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_create_song_playing(); [
+                  a(href='#get_create_song_playing') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  create_load_song(
+                  font.CVariable int
+                  |  num); [
+                  a(href='#create_load_song') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  create_play_led(
+                  font.CVariable int
+                  |  on); [
+                  a(href='#create_play_led') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  create_play_song(
+                  font.CVariable int
+                  |  num); [
+                  a(href='#create_play_song') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  create_power_led(
+                  font.CVariable int
+                  |  color, int brightness); [
+                  a(href='#create_power_led') &sect;
+                  | ]
+    a(name='CategoryGraphics')
+    h4 Graphics
+    table
+      tbody
+        tr
+          td
+            ul
+              code
+                li
+                  font.CVariable int
+                  |  graphics_open(
+                  font.CVariable int
+                  |  width, 
+                  font.CVariable int
+                  |  height);  [
+                  a(href='#graphics_open') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  graphics_close();  [
+                  a(href='#graphics_close') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  graphics_update();  [
+                  a(href='#graphics_update') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  graphics_clear();  [
+                  a(href='#graphics_clear') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  graphics_fill(
+                  font.CVariable int
+                  |  r, 
+                  font.CVariable int
+                  |  g, 
+                  font.CVariable int
+                  |  b);  [
+                  a(href='#graphics_fill') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  graphics_pixel(
+                  font.CVariable int
+                  |  x, 
+                  font.CVariable int
+                  |  y, 
+                  font.CVariable int
+                  |  r, 
+                  font.CVariable int
+                  |  g, 
+                  font.CVariable int
+                  |  b);  [
+                  a(href='graphics_pixel') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  graphics_line(
+                  font.CVariable int
+                  |  x1, 
+                  font.CVariable int
+                  |  y1, 
+                  font.CVariable int
+                  |  x2, 
+                  font.CVariable int
+                  |  y2, 
+                  font.CVariable int
+                  |  r, 
+                  font.CVariable int
+                  |  g, 
+                  font.CVariable int
+                  |  b);  [
+                  a(href='#graphics_line') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  graphics_circle(
+                  font.CVariable int
+                  |  cx, 
+                  font.CVariable int
+                  |  cy, 
+                  font.CVariable int
+                  |  radius, 
+                  font.CVariable int
+                  |  r, 
+                  font.CVariable int
+                  |  g, 
+                  font.CVariable int
+                  |  b);  [
+                  a(href='#graphics_circle') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  graphics_circle_fill(
+                  font.CVariable int
+                  |  cx, 
+                  font.CVariable int
+                  |  cy, 
+                  font.CVariable int
+                  |  radius, 
+                  font.CVariable int
+                  |  r, 
+                  font.CVariable int
+                  |  g, 
+                  font.CVariable int
+                  |  b);  [
+                  a(href='#graphics_circle_fill') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  graphics_rectangle(
+                  font.CVariable int
+                  |  x1, 
+                  font.CVariable int
+                  |  y1, 
+                  font.CVariable int
+                  |  x2, 
+                  font.CVariable int
+                  |  y2, 
+                  font.CVariable int
+                  |  r, 
+                  font.CVariable int
+                  |  g, 
+                  font.CVariable int
+                  |  b);  [
+                  a(href='#graphics_rectangle') &sect;
+                  | ]
+                | &#x9;&#x9;
+                li
+                  font.CVariable void
+                  |  graphics_rectangle_fill(
+                  font.CVariable int
+                  |  x1, 
+                  font.CVariable int
+                  |  y1, 
+                  font.CVariable int
+                  |  x2, 
+                  font.CVariable int
+                  |  y2, 
+                  font.CVariable int
+                  |  r, 
+                  font.CVariable int
+                  |  g, 
+                  font.CVariable int
+                  |  b);  [
+                  a(href='#graphics_rectangle_fill') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  graphics_triangle(
+                  font.CVariable int
+                  |  x1, 
+                  font.CVariable int
+                  |  y1, 
+                  font.CVariable int
+                  |  x2, 
+                  font.CVariable int
+                  |  y2, 
+                  font.CVariable int
+                  |  x3, 
+                  font.CVariable int
+                  |  y3, 
+                  font.CVariable int
+                  |  r, 
+                  font.CVariable int
+                  |  g, 
+                  font.CVariable int
+                  |  b);  [
+                  a(href='graphics_triangle') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  graphics_triangle_fill(
+                  font.CVariable int
+                  |  x1, 
+                  font.CVariable int
+                  |  y1, 
+                  font.CVariable int
+                  |  x2, 
+                  font.CVariable int
+                  |  y2, 
+                  font.CVariable int
+                  |  x3, 
+                  font.CVariable int
+                  |  y3, 
+                  font.CVariable int
+                  |  r, 
+                  font.CVariable int
+                  |  g, 
+                  font.CVariable int
+                  |  b);  [
+                  a(href='graphics_triangle_fill') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_mouse_position(
+                  font.CVariable int
+                  |  *x, 
+                  font.CVariable int
+                  |  *y);  [
+                  a(href='#get_mouse_position') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_mouse_left_button();  [
+                  a(href='#get_mouse_left_button') &sect;
+                  | ]
+    a(name='CategoryMath')
+    h4 Math
+    table
+      tbody
+        tr
+          td
+            ul
+              code
+                li
+                  font.CVariable double
+                  |  atan(
+                  font.CVariable double
+                  |  angle);  [
+                  a(href='#atan') &sect;
+                  | ]
+                li
+                  font.CVariable double
+                  |  cos(
+                  font.CVariable double
+                  |  angle);  [
+                  a(href='#cos') &sect;
+                  | ]
+                li
+                  font.CVariable double
+                  |  exp(
+                  font.CVariable double
+                  |  num);  [
+                  a(href='#exp') &sect;
+                  | ]
+                li
+                  font.CVariable double
+                  |  exp10(
+                  font.CVariable double
+                  |  num);  [
+                  a(href='#exp10') &sect;
+                  | ]
+                li
+                  font.CVariable double
+                  |  log(
+                  font.CVariable double
+                  |  num);  [
+                  a(href='#log') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  log10(
+                  font.CVariable double
+                  |  num);  [
+                  a(href='#log10') &sect;
+                  | ]
+                li
+                  font.CVariable double
+                  |  pow(
+                  font.CVariable double
+                  |  x, 
+                  font.CVariable double
+                  |  y);  [
+                  a(href='#pow') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  rand(
+                  font.CVariable int
+                  |  m);  [
+                  a(href='#rand') &sect;
+                  | ]
+                li
+                  font.CVariable double
+                  |  sin(
+                  font.CVariable double
+                  |  angle);  [
+                  a(href='#sin') &sect;
+                  | ]
+                li
+                  font.CVariable double
+                  |  sqrt(
+                  font.CVariable double
+                  |  num);  [
+                  a(href='#sqrt') &sect;
+                  | ]
+                | &#x9;&#x9;
+                li
+                  font.CVariable void
+                  |  srand(
+                  font.CVariable int
+                  |  s);  [
+                  a(href='#srand') &sect;
+                  | ]
+                li
+                  font.CVariable double
+                  |  tan(
+                  font.CVariable double
+                  |  angle);  [
+                  a(href='#tan') &sect;
+                  | ]
+    a(name='CategoryMotors')
+    h4 Motors
+    table
+      tbody
+        tr
+          td
+            ul
+              code
+                li
+                  font.CVariable void
+                  |  alloff();  [
+                  a(href='#alloff') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  ao();  [
+                  a(href='#ao') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  bk(
+                  font.CVariable int
+                  |  m);  [
+                  a(href='#bk') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  block_motor_done(
+                  font.CVariable int
+                  |  m);  [
+                  a(href='#block_motor_done') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  bmd(
+                  font.CVariable int
+                  |  m);  [
+                  a(href='#bmd') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_motor_done(
+                  font.CVariable int
+                  |  m);  [
+                  a(href='#get_motor_done') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  clear_motor_position_counter(
+                  font.CVariable int
+                  |  motor_nbr);  [
+                  a(href='#clear_motor_position_counter') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  fd(
+                  font.CVariable int
+                  |  m);  [
+                  a(href='#fd') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  freeze(
+                  font.CVariable int
+                  |  m);  [
+                  a(href='#freeze') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_motor_done(
+                  font.CVariable int
+                  |  m);  [
+                  a(href='#get_motor_done') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_motor_position_counter(
+                  font.CVariable int
+                  |  m);  [
+                  a(href='#get_motor_position_counter') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_pid_gains(
+                  font.CVariable int
+                  |  motor, 
+                  font.CVariable int
+                  |  p, 
+                  font.CVariable int
+                  |  i, 
+                  font.CVariable int
+                  |  d, 
+                  font.CVariable int
+                  |  pd, 
+                  font.CVariable int
+                  |  id, 
+                  font.CVariable int
+                  |  dd);  [
+                  a(href='#get_pid_gains') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  mav(
+                  font.CVariable int
+                  |  m, 
+                  font.CVariable int
+                  |  vel);  [
+                  a(href='#mav') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  motor(
+                  font.CVariable int
+                  |  m, 
+                  font.CVariable int
+                  |  p);  [
+                  a(href='#motor') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  move_at_velocity(
+                  font.CVariable int
+                  |  m, 
+                  font.CVariable int
+                  |  vel);  [
+                  a(href='#move_at_velocity') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  move_relative_position(
+                  font.CVariable int
+                  |  m, 
+                  font.CVariable int
+                  |  speed, 
+                  font.CVariable int
+                  |  pos);  [
+                  a(href='#move_relative_position') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  move_to_position(
+                  font.CVariable int
+                  |  m, 
+                  font.CVariable int
+                  |  speed, 
+                  font.CVariable int
+                  |  pos);  [
+                  a(href='#move_to_position') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  mrp(
+                  font.CVariable int
+                  |  m, 
+                  font.CVariable int
+                  |  vel, 
+                  font.CVariable int
+                  |  pos);  [
+                  a(href='#mrp') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  mtp(
+                  font.CVariable int
+                  |  m, 
+                  font.CVariable int
+                  |  vel, 
+                  font.CVariable int
+                  |  pos);  [
+                  a(href='#mtp') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  off(
+                  font.CVariable int
+                  |  m);  [
+                  a(href='#off') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  set_pid_gains(
+                  font.CVariable int
+                  |  motor, 
+                  font.CVariable int
+                  |  p, 
+                  font.CVariable int
+                  |  i, 
+                  font.CVariable int
+                  |  d, 
+                  font.CVariable int
+                  |  pd, 
+                  font.CVariable int
+                  |  id, 
+                  font.CVariable int
+                  |  dd);  [
+                  a(href='#set_pid_gains') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  setpwm(
+                  font.CVariable int 
+                  | m, 
+                  font.CVariable int
+                  |  dutycycle);  [
+                  a(href='#setpwm') &sect;
+                  | ]
+    a(name='CategoryOutput')
+    h4 Output
+    table
+      tbody
+        tr
+          td
+            ul
+              code
+                li
+                  font.CVariable void
+                  |  beep();  [
+                  a(href='#beep') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  console_clear();  [
+                  a(href='#console_clear') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  display_clear();  [
+                  a(href='#display_clear') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  display_printf(
+                  font.CVariable int
+                  |  col, 
+                  font.CVariable int
+                  |  row, 
+                  font.CVariable char
+                  |  s[], . . .);  [
+                  a(href='#display_printf') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  extra_buttons_show();  [
+                  a(href='#extra_buttons_show') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  extra_buttons_hide();  [
+                  a(href='#extra_buttons_hide') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  set_a_button_text(
+                  font.CVariable char
+                  |  txt[]);  [
+                  a(href='#set_a_button_text') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  set_b_button_text(
+                  font.CVariable char
+                  |  txt[]);  [
+                  a(href='#set_b_button_text') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  set_c_button_text(
+                  font.CVariable char
+                  |  txt[]);  [
+                  a(href='#set_c_button_text') &sect;
+                  | ]
+                | &#x9;&#x9;
+                li
+                  font.CVariable void
+                  |  set_digital_output(
+                  font.CVariable int
+                  |  port, 
+                  font.CVariable int
+                  |  inout);  [
+                  a(href='#set_digital_output') &sect;
+                  | ]
+                | &#x9;&#x9;
+                li
+                  font.CVariable void
+                  |  set_digital_value(
+                  font.CVariable int
+                  |  port, 
+                  font.CVariable int
+                  |  value);  [
+                  a(href='#set_digital_value') &sect;
+                  | ]
+                | &#x9;&#x9;
+                li
+                  font.CVariable void
+                  |  set_x_button_text(
+                  font.CVariable char
+                  |  txt[]);  [
+                  a(href='#set_x_button_text') &sect;
+                  | ]
+                | &#x9;&#x9;
+                li
+                  font.CVariable void
+                  |  set_y_button_text(
+                  font.CVariable char
+                  |  txt[]);  [
+                  a(href='#set_y_button_text') &sect;
+                  | ]
+                | &#x9;&#x9;
+                li
+                  font.CVariable void
+                  |  set_z_button_text(
+                  font.CVariable char
+                  |  txt[]);  [
+                  a(href='#set_z_button_text') &sect;
+                  | ]
+    a(name='CategoryThreads')
+    h4 Threads
+    table
+      tbody
+        tr
+          td
+            ul
+              code
+                li
+                  font.CVariable thread
+                  |  thread_create(<
+                  em function_name
+                  | >);  [
+                  a(href='#thread_create') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  thread_destroy(<
+                  em thread id
+                  | >>);  [
+                  a(href='#thread_destroy') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  thread_start(<
+                  em thread id
+                  | >);  [
+                  a(href='#thread_start') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  thread_wait(<
+                  em thread id
+                  | >);  [
+                  a(href='#thread_wait') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  run_for(
+                  font.CVariable double
+                  |  sec, 
+                  font.CVariable void
+                  |  <
+                  em function_name
+                  | >);  [
+                  a(href='#run_for') &sect;
+                  | ]
+    a(name='CategorySensors')
+    h4 Sensors
+    table
+      tbody
+        tr
+          td
+            ul
+              code
+                li
+                  font.CVariable int
+                  |  a_button();  [
+                  a(href='#a_button') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  a_button_clicked();  [
+                  a(href='#a_button_clicked') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  accel_x();  [
+                  a(href='#accel_x') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  accel_y();  [
+                  a(href='#accel_y') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  accel_z();  [
+                  a(href='#accel_z') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  analog(
+                  font.CVariable int
+                  |  p);  [
+                  a(href='#analog') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  analog_et(
+                  font.CVariable int
+                  |  p);  [
+                  a(href='#analog_et') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  analog8(
+                  font.CVariable int
+                  |  p);  [
+                  a(href='#analog8') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  analog10(
+                  font.CVariable int
+                  |  p);  [
+                  a(href='#analog10') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  any_button();  [
+                  a(href='#any_button') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  b_button();  [
+                  a(href='#b_button') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  b_button_clicked();  [
+                  a(href='#b_button_clicked') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  c_button();  [
+                  a(href='#c_button') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  c_button_clicked();  [
+                  a(href='#c_button_clicked') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  digital(
+                  font.CVariable int
+                  |  p);  [
+                  a(href='#digital') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_analog_pullup(
+                  font.CVariable int
+                  |  port);  [
+                  a(href='#get_analog_pullup') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_digital_pullup(
+                  font.CVariable int
+                  |  port);  [
+                  a(href='#get_digital_pullup') &sect;
+                  | ]
+                li
+                  font.CVariable double
+                  |  power_level();  [
+                  a(href='#power_level') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_extra_buttons_visible();  [
+                  a(href='#get_extra_buttons_visible') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  set_analog_pullup(
+                  font.CVariable int
+                  |  port, 
+                  font.CVariable int
+                  |  pullupTF);  [
+                  a(href='#set_analog_pullup') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  set_digital_pullup(
+                  font.CVariable int
+                  |  port, 
+                  font.CVariable int
+                  |  pullupTF);  [
+                  a(href='#set_digital_pullup') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  side_button();  [
+                  a(href='#side_button') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  side_button_clicked();  [
+                  a(href='#side_button_clicked') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  x_button();  [
+                  a(href='#x_button') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  x_button_clicked();  [
+                  a(href='#x_button_clicked') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  y_button();  [
+                  a(href='#y_button') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  y_button_clicked();  [
+                  a(href='#y_button_clicked') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  z_button();  [
+                  a(href='#z_button') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  z_button_clicked();  [
+                  a(href='#z_button_clicked') &sect;
+                  | ]
+    a(name='CategoryServos')
+    h4 Servos
+    table
+      tbody
+        tr
+          td
+            ul
+              code
+                li
+                  font.CVariable void
+                  |  disable_servo(
+                  font.CVariable int
+                  |  p);  [
+                  a(href='#disable_servo') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  disable_servos();  [
+                  a(href='#disable_servos') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  enable_servo(
+                  font.CVariable int
+                  |  p);  [
+                  a(href='#enable_servo') &sect;
+                  | ]
+                li
+                  font.CVariable void
+                  |  enable_servos();  [
+                  a(href='#enable_servos') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_servo_enabled(
+                  font.CVariable int
+                  |  srv);  [
+                  a(href='#get_servo_enabled') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_servo_position(
+                  font.CVariable int
+                  |  srv);  [
+                  a(href='#get_servo_position') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  set_servo_position(
+                  font.CVariable int
+                  |  srv, 
+                  font.CVariable int
+                  |  pos);  [
+                  a(href='#set_servo_position') &sect;
+                  | ]
+    a(name='CategoryTime')
+    h4 Time
+    table
+      tbody
+        tr
+          td
+            ul
+              code
+                li
+                  font.CVariable void
+                  |  msleep(
+                  font.CVariable int
+                  |  msec);  [
+                  a(href='#msleep') &sect;
+                  | ]
+                li
+                  font.CVariable double
+                  |  seconds();  [
+                  a(href='#seconds') &sect;
+                  | ]
+    a(name='CategoryVision')
+    h4 Vision
+    table
+      tbody
+        tr
+          td
+            ul
+              code
+                li
+                  font.CVariable void
+                  |  camera_close();  [
+                  a(href='#camera_close') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  camera_load_config(
+                  font.CVariable char
+                  |  name[]);   [
+                  a(href='#camera_load_config') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  camera_open();  [
+                  a(href='#camera_open') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  camera_open_at_res(
+                  font.CVariable int
+                  |  res_numb);  [
+                  a(href='#camera_open_at_res') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  camera_open_device(
+                  font.CVariable int
+                  |  number,
+                  font.CVariable  int
+                  |  res_numb);  [
+                  a(href='#camera_open_device') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  camera_update();  [
+                  a(href='#camera_update') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_channel_count();  [
+                  a(href='#get_channel_count') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_object_area(
+                  font.CVariable int
+                  |  channel,
+                  font.CVariable  int
+                  |  object);  [
+                  a(href='#get_object_area') &sect;
+                  | ]
+                li
+                  font.CVariable rectangle
+                  |  get_object_bbox(
+                  font.CVariable int
+                  |  channel,
+                  font.CVariable  int
+                  |  object);  [
+                  a(href='#get_object_bbox') &sect;
+                  | ]
+                li
+                  font.CVariable point2
+                  |  get_object_center(
+                  font.CVariable int
+                  |  channel,
+                  font.CVariable  int
+                  |  object);  [
+                  a(href='#get_object_center') &sect;
+                  | ]
+                li
+                  font.CVariable point2
+                  |  get_object_centroid(
+                  font.CVariable int
+                  |  channel,
+                  font.CVariable  int
+                  |  object);  [
+                  a(href='#get_object_centroid') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_code_num(
+                  font.CVariable int
+                  |  channel, int object);  [
+                  a(href='#get_code_num') &sect;
+                  | ]
+                li
+                  font.CVariable double
+                  |  get_object_confidence(
+                  font.CVariable int
+                  |  channel,
+                  font.CVariable  int
+                  |  object);  [
+                  a(href='#get_object_confidence') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_object_count(
+                  font.CVariable int
+                  |  channel);  [
+                  a(href='#get_object_count') &sect;
+                  | ]
+                li
+                  font.CVariable char
+                  |  *get_object_data(
+                  font.CVariable int
+                  |  channel,
+                  font.CVariable  int
+                  |  object);  [
+                  a(href='#get_object_data') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_object_data_length(
+                  font.CVariable int
+                  |  channel,
+                  font.CVariable  int
+                  |  object);  [
+                  a(href='#get_object_data_length') &sect;
+                  | ]
+    a(name='CategoryDepth')
+    h4 Depth
+    table
+      tbody
+        tr
+          td
+            ul
+              code
+                li
+                  font.CVariable void
+                  |  depth_close();  [
+                  a(href='#depth_close') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  depth_open();  [
+                  a(href='#depth_open') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  depth_update();  [
+                  a(href='#depth_update') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_depth_value(
+                  font.CVariable int
+                  |  row, 
+                  font.CVariable int
+                  |  col);  [
+                  a(href='#get_depth_value') &sect;
+                  | ]
+                li
+                  | point3 get_depth_world_point(
+                  font.CVariable int
+                  |  row, 
+                  font.CVariable int
+                  |  col);  [
+                  a(href='#get_depth_world_point') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_depth_world_point_x(
+                  font.CVariable int
+                  |  row, 
+                  font.CVariable int
+                  |  col);  [
+                  a(href='#get_depth_world_point_x') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_depth_world_point_y(
+                  font.CVariable int
+                  |  row, 
+                  font.CVariable int
+                  |  col);  [
+                  a(href='#get_depth_world_point_y') &sect;
+                  | ]
+                li
+                  font.CVariable int
+                  |  get_depth_world_point_z(
+                  font.CVariable int
+                  |  row, 
+                  font.CVariable int
+                  |  col);  [
+                  a(href='#get_depth_world_point_z') &sect;
+                  | ]
