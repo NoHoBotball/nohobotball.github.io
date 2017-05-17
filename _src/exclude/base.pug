@@ -1,3 +1,8 @@
+block vars
+  - var selected = "none"
+  - var color = "teal"
+  - var themeColor = "#00796b"
+
 doctype html
 html
   head
@@ -6,41 +11,40 @@ html
     link(type='text/css', rel='stylesheet', href='css/materialize.min.css', media='screen,projection')
     link(rel='icon', href='imgs/logos/botguy.png')
     title NHHS Botball Team
-    meta(name='theme-color', content='#00796b')
+    meta(name='theme-color', content=themeColor)
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
   body
     script(type='text/javascript', src='https://code.jquery.com/jquery-2.1.1.min.js')
     script(type='text/javascript', src='js/materialize.min.js')
+    script(type='text/javascript', src='js/mix.js')
     header
       nav
-        .nav-wrapper.teal
+        .nav-wrapper(class=color)
           a#top.brand-logo.waves-effect(style='padding-left:16px', href='index.html') NHHS Botball Team
           a.button-collapse(href='#', data-activates='mobile-demo')
             i.material-icons menu
           ul.right.hide-on-med-and-down
-            li.waves-effect
+            li.waves-effect(class=(selected === "index" ? "active" : ""))
               a(href='index.html') Home
-            // <li class="waves-effect"><a href="team.html">Our Team</a></li>
-            li.waves-effect
+            li.waves-effect(class=(selected === "about" ? "active" : ""))
               a(href='about.html') What We Do
-            li.waves-effect
+            li.waves-effect(class=(selected === "achievements" ? "active" : ""))
               a(href='achievements.html') Achievements
-            li.waves-effect
+            li.waves-effect(class=(selected === "join" ? "active" : ""))
               a(href='join.html') Join Our Team
-            li.waves-effect
+            li.waves-effect(class=(selected === "supportus" ? "active" : ""))
               a(href='supportus.html') Support Us
-            li.waves-effect
+            li.waves-effect(class=(selected === "contact" ? "active" : ""))
               a(href='contact.html') Contact
           ul#mobile-demo.side-nav
-            li.teal
+            li(class=color)
               a.waves-effect.white-text(href='')
                 i.material-icons.left.center-vert menu
                 | NHHS Botball Team
-            li.teal.lighten-3
+            li.lighten-3(class=color)
               a.waves-effect(href='index.html')
                 i.material-icons.left.center-vert home
                 | Home
-            // <li><a class="waves-effect" href="team.html"><i class="material-icons left center-vert">group</i>Our Team</a></li>
             li
               a.waves-effect(href='about.html')
                 i.material-icons.left.center-vert help
@@ -62,9 +66,8 @@ html
                 i.material-icons.left.center-vert mail
                 | Contact
     main.container
-      h1.teal-text.header Base Page
-      h2.header This is the base page for this site
-      h3.caption Customize this page to create new pages
+      block content
+        p BASE TEXT, SHOULD NOT BE VISIBLE ON ANY SITE
     footer.page-footer.blue-grey
       .container
         .row
@@ -76,7 +79,7 @@ html
             h5.white-text Links
             ul
               li
-                a.grey-text.text-lighten-3.waves-effect.waves-light(href='') About
+                a.grey-text.text-lighten-3.waves-effect.waves-light(href='about.html') About
               li
                 a.grey-text.text-lighten-3.waves-effect.waves-light(href='supportus.html') Support Us
               li
@@ -87,5 +90,6 @@ html
           a.grey-text.text-lighten-4.right.waves-effect.waves-light(href='#top') Back to Top
     script.
       $(document).ready(function () {
-      $(".button-collapse").sideNav();
+        $(".button-collapse").sideNav();
       })
+    block scripts

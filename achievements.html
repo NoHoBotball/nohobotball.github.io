@@ -12,12 +12,12 @@
   <body>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/mix.js"></script>
     <header>
       <nav>
         <div class="nav-wrapper purple"><a class="brand-logo waves-effect" id="top" style="padding-left:16px;" href="index.html">NHHS Botball Team</a><a class="button-collapse" href="#" data-activates="mobile-demo"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
             <li class="waves-effect"><a href="index.html">Home</a></li>
-            <!-- <li class="waves-effect"><a href="team.html">Our Team</a></li>-->
             <li class="waves-effect"><a href="about.html">What We Do</a></li>
             <li class="waves-effect active"><a href="achievements.html">Achievements</a></li>
             <li class="waves-effect"><a href="join.html">Join Our Team</a></li>
@@ -26,10 +26,9 @@
           </ul>
           <ul class="side-nav" id="mobile-demo">
             <li class="purple"><a class="waves-effect white-text" href=""><i class="material-icons left center-vert">menu</i>NHHS Botball Team</a></li>
-            <li><a class="waves-effect" href="index.html"><i class="material-icons left center-vert">home</i>Home</a></li>
-            <!-- <li><a class="waves-effect" href="team.html"><i class="material-icons left center-vert">group</i>Our Team</a></li>-->
+            <li class="lighten-3 purple"><a class="waves-effect" href="index.html"><i class="material-icons left center-vert">home</i>Home</a></li>
             <li><a class="waves-effect" href="about.html"><i class="material-icons left center-vert">help</i>What We Do</a></li>
-            <li class="purple lighten-3"><a class="waves-effect" href="achievements.html"><i class="material-icons left center-vert">star</i>Achievements</a></li>
+            <li><a class="waves-effect" href="achievements.html"><i class="material-icons left center-vert">star</i>Achievements</a></li>
             <li><a class="waves-effect" href="join.html"><i class="material-icons left center-vert">person_add</i>Join Our Team</a></li>
             <li><a class="waves-effect" href="supportus.html"><i class="material-icons left center-vert">tag_faces</i>Support Us</a></li>
             <li><a class="waves-effect" href="contact.html"><i class="material-icons left center-vert">mail</i>Contact</a></li>
@@ -38,7 +37,7 @@
       </nav>
     </header>
     <main class="container">
-      <h1 class="purple-text header">Achievements</h1>
+      <h1 class="header purple-text">Achievements</h1>
       <div class="row">
         <div class="col s12">
           <h2 class="header center">2017 Greater Los Angeles Competition</h2>
@@ -119,7 +118,7 @@
           <div class="col l4 offset-l2 s12">
             <h5 class="white-text">Links</h5>
             <ul>
-              <li><a class="grey-text text-lighten-3 waves-effect waves-light" href="">About</a></li>
+              <li><a class="grey-text text-lighten-3 waves-effect waves-light" href="about.html">About</a></li>
               <li><a class="grey-text text-lighten-3 waves-effect waves-light" href="supportus.html">Support Us</a></li>
               <li><a class="grey-text text-lighten-3 waves-effect waves-light" href="http://materializecss.com/">Materialize CSS</a></li>
             </ul>
@@ -132,7 +131,11 @@
     </footer>
     <script>
       $(document).ready(function () {
-      $(".button-collapse").sideNav();
+        $(".button-collapse").sideNav();
+      })
+    </script>
+    <script>
+      $(document).ready(function () {
       $(".active").parent().parent().siblings()[0].click() })
     </script>
   </body>

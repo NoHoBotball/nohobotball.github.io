@@ -12,12 +12,12 @@
   <body>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/mix.js"></script>
     <header>
       <nav>
         <div class="nav-wrapper blue"><a class="brand-logo waves-effect" id="top" style="padding-left:16px;" href="index.html">NHHS Botball Team</a><a class="button-collapse" href="#" data-activates="mobile-demo"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
             <li class="waves-effect"><a href="index.html">Home</a></li>
-            <!-- <li class="waves-effect"><a href="team.html">Our Team</a></li>-->
             <li class="waves-effect"><a href="about.html">What We Do</a></li>
             <li class="waves-effect"><a href="achievements.html">Achievements</a></li>
             <li class="waves-effect"><a href="join.html">Join Our Team</a></li>
@@ -26,8 +26,7 @@
           </ul>
           <ul class="side-nav" id="mobile-demo">
             <li class="blue"><a class="waves-effect white-text" href=""><i class="material-icons left center-vert">menu</i>NHHS Botball Team</a></li>
-            <li><a class="waves-effect" href="index.html"><i class="material-icons left center-vert">home</i>Home</a></li>
-            <!-- <li><a class="waves-effect" href="team.html"><i class="material-icons left center-vert">group</i>Our Team</a></li>-->
+            <li class="lighten-3 blue"><a class="waves-effect" href="index.html"><i class="material-icons left center-vert">home</i>Home</a></li>
             <li><a class="waves-effect" href="about.html"><i class="material-icons left center-vert">help</i>What We Do</a></li>
             <li><a class="waves-effect" href="achievements.html"><i class="material-icons left center-vert">star</i>Achievements</a></li>
             <li><a class="waves-effect" href="join.html"><i class="material-icons left center-vert">person_add</i>Join Our Team</a></li>
@@ -38,40 +37,24 @@
       </nav>
     </header>
     <main class="container">
-      <h1 class="blue-text header">We Need Your Help</h1>
+      <h1 class="header blue-text">We Need Your Help</h1>
       <h4 class="header">To be able to compete in the Botball Competition</h4>
       <h5 class="header">
         The registration fee for the Los Angeles competition is $2200. Costs increase if we qualify for further rounds of
         the competition.
       </h5>
-      <!-- Modal Trigger-->
-      <!--
-      div class="row" id="school-out">
-      <div class="col s12">
-      <div class="card-panel deep-orange">
-      <h4 class="white-text">School Resumes January 11</h4>
-      <p class="white-text cardtext">Donations will be received and processed when we return.</p>
-      </div>
-      </div>
-      </div
-      -->
       <div class="video-container">
         <iframe width="853" height="480" src="http://www.youtube.com/embed/r_EpzX9w-Tg?rel=0" frameborder="0" allowfullscreen=""></iframe>
       </div>
       <div class="row" id="watch-vid">
         <div class="col s12">
-          <div class="card-panel blue darken-1">
+          <div class="card-panel darken-1 blue">
             <h4 class="white-text">Donate Now!</h4>
-            <p class="white-text cardtext">Information on how you can make your tax-deductable donation today!</p><a class="blue darken-4 waves-effect btn btn-large modal-trigger" href="#donate-now" style="width:100%;">Donate Now!</a>
+            <p class="white-text cardtext">Information on how you can make your tax-deductable donation today!</p><a class="darken-4 waves-effect btn btn-large modal-trigger blue" href="#donate-now" style="width:100%;">Donate Now!</a>
           </div>
         </div>
       </div>
-      <div class="row">
-        <!--
-        a class="col s12 blue waves-effect waves-light btn btn-large modal-trigger" href="#promo-video" style="padding-bottom:10px">Watch Our Promo Video</a>
-        <p>&nbsp;</p
-        -->
-      </div>
+      <div class="row"></div>
       <div class="modal" id="new-supportus-page">
         <div class="modal-content">
           <h4 class="header">Visit our new Support Us page!</h4>
@@ -110,7 +93,7 @@
       </h5>
       <div class="row">
         <div class="col s12 m6">
-          <div class="card-panel hoverable blue darken-3">
+          <div class="card-panel hoverable darken-3 blue">
             <h4 class="white-text">You Get</h4><span class="white-text">
               <h6 class="cardtext">Your company's logo on our team t-shirts (if we raise over $200 total), our website, and even our robot. The logo on our website will link to your website and has a customizable line of text underneath.</h6></span>
           </div>
@@ -125,19 +108,19 @@
       <h2 class="header">If You Donate</h2>
       <div class="row">
         <div class="col s12 m6">
-          <div class="card-panel hoverable blue lighten-3" style="height:175px;">
+          <div class="card-panel hoverable lighten-3 blue" style="height:175px;">
             <h4 class="white-text">$12 - Virtual Hug</h4><span class="white-text">
               <h6 class="cardtext">The title explains it all. You get our happiness, along with a personalized thank you message, your name on our T-Shirt (minimum $200 Raised) and a virtual hug!</h6></span>
           </div>
         </div>
         <div class="col s12 m6">
-          <div class="card-panel hoverable blue lighten-2" style="height:175px;">
+          <div class="card-panel hoverable lighten-2 blue" style="height:175px;">
             <h4 class="white-text">$36 - Team T-Shirt</h4><span class="white-text">
               <h6 class="cardtext">You get a personalized thank you message and your very own team T-shirt featuring your name! (Shipping provided for continental US only)</h6></span>
           </div>
         </div>
         <div class="col s12 m6">
-          <div class="card-panel hoverable blue lighten-1" style="height:200px;">
+          <div class="card-panel hoverable lighten-1 blue" style="height:200px;">
             <h4 class="white-text">$110 - 5% of the Total Cost</h4><span class="white-text">
               <h6 class="cardtext">You cover 5% of the registration costs for the Los Angeles Regional Botball Competion. You get a logo icon on our t-shirts, a logo icon on our website, a team t-shirt, and access to competition photos.</h6></span>
           </div>
@@ -149,19 +132,19 @@
           </div>
         </div>
         <div class="col s12 m6">
-          <div class="card-panel hoverable blue darken-1" style="height:200px;">
+          <div class="card-panel hoverable darken-1 blue" style="height:200px;">
             <h4 class="white-text">$550 - Logo on Robot!</h4><span class="white-text">
               <h6 class="cardtext">You cover 25% of the registration fee for the Los Angeles Regional Botball Competition. You can have a full logo printed on our t-shirts, a full logo on our website, a team t-shirt, access to competition photos, and an easily visible logo on one of our robots in the competition!.</h6></span>
           </div>
         </div>
         <div class="col s12 m6">
-          <div class="card-panel hoverable blue darken-2" style="height:200px;">
+          <div class="card-panel hoverable darken-2 blue" style="height:200px;">
             <h4 class="white-text">$1100 - Gold Sponsor</h4><span class="white-text">
               <h6 class="cardtext">You cover 50% of the registration fee for the Los Angeles Regional Botball Competition. You can have a large logo printed on our t-shirts, a large logo on our website in the gold sponsor category, a team t-shirt, access to competition photos, and an easily visible logo on all of our competing robots!</h6></span>
           </div>
         </div>
         <div class="col s12">
-          <div class="card-panel hoverable blue darken-4">
+          <div class="card-panel hoverable darken-4 blue">
             <h4 class="white-text">Top Donor</h4><span class="white-text">
               <h6 class="cardtext">The top donor will receive all of the aforementioned rewards - your logo on our website, t-shirts, and robots, a team t-shirt, and access to competition photos - but your company will be featured as our premiere sponsor and will be listed at the top of our list of sponsors everywhere logos are displayed. Your logo will also be larger than any other as a way for us to show our gratitude for your donation.</h6></span>
           </div>
@@ -222,9 +205,12 @@
       </div>
     </footer>
     <script>
-      //$('#promo-video').openModal();
+      $(document).ready(function () {
+        $(".button-collapse").sideNav();
+      })
+    </script>
+    <script>
       $( document ).ready(function(){
-      $(".button-collapse").sideNav();
       $('.modal-trigger').leanModal();
       $("#new-supportus-page").openModal();
       })

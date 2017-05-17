@@ -12,12 +12,12 @@
   <body>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/mix.js"></script>
     <header>
-      <nav id="nav">
+      <nav>
         <div class="nav-wrapper blue"><a class="brand-logo waves-effect" id="top" style="padding-left:16px;" href="index.html">NHHS Botball Team</a><a class="button-collapse" href="#" data-activates="mobile-demo"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
             <li class="waves-effect"><a href="index.html">Home</a></li>
-            <!-- <li class="waves-effect"><a href="team.html">Our Team</a></li>-->
             <li class="waves-effect"><a href="about.html">What We Do</a></li>
             <li class="waves-effect"><a href="achievements.html">Achievements</a></li>
             <li class="waves-effect"><a href="join.html">Join Our Team</a></li>
@@ -26,12 +26,11 @@
           </ul>
           <ul class="side-nav" id="mobile-demo">
             <li class="blue"><a class="waves-effect white-text" href=""><i class="material-icons left center-vert">menu</i>NHHS Botball Team</a></li>
-            <li><a class="waves-effect" href="index.html"><i class="material-icons left center-vert">home</i>Home</a></li>
-            <!-- <li><a class="waves-effect" href="team.html"><i class="material-icons left center-vert">group</i>Our Team</a></li>-->
+            <li class="lighten-3 blue"><a class="waves-effect" href="index.html"><i class="material-icons left center-vert">home</i>Home</a></li>
             <li><a class="waves-effect" href="about.html"><i class="material-icons left center-vert">help</i>What We Do</a></li>
             <li><a class="waves-effect" href="achievements.html"><i class="material-icons left center-vert">star</i>Achievements</a></li>
             <li><a class="waves-effect" href="join.html"><i class="material-icons left center-vert">person_add</i>Join Our Team</a></li>
-            <li class="blue lighten-3"><a class="waves-effect" href="supportus.html"><i class="material-icons left center-vert">tag_faces</i>Support Us</a></li>
+            <li><a class="waves-effect" href="supportus.html"><i class="material-icons left center-vert">tag_faces</i>Support Us</a></li>
             <li><a class="waves-effect" href="contact.html"><i class="material-icons left center-vert">mail</i>Contact</a></li>
           </ul>
         </div>
@@ -52,7 +51,7 @@
         <div class="modal-footer"><a class="modal-action modal-close waves-effect btn-flat blue-text" href="contact.html">Contact Us</a></div>
       </div>
       <div class="section scrollspy row" id="title">
-        <h1 class="blue-text header">We Need <span style="font-weight: 500;">Your</span> Support</h1>
+        <h1 class="header blue-text">We Need<span style="font-weight: 500;">Your</span> Support</h1>
         <h4 class="header">To be able to compete in the Botball Competition</h4>
         <h5 class="header">There are many ways that you can help our team. Here are a few suggestions.</h5>
         <div class="col s12 m6 l3">
@@ -72,7 +71,7 @@
           </div>
         </div>
         <div class="col s12 m6 l3">
-          <div class="card blue lighten-2 hoverable">
+          <div class="card lighten-2 hoverable blue">
             <div class="card-content white-text" style="height: 175px;"><i class="material-icons" style="font-size:20px ;">business</i><span class="card-title"> Sponsorships</span>
               <p class="cardtext">If your business would be willing to support our team with a sponsorship, please let us know!</p>
             </div>
@@ -126,7 +125,7 @@
             </div>
           </div>
           <div class="section scrollspy col s12" id="sponsorships">
-            <h1 class="blue-text text-lighten-2" id="sponsorships"><i class="material-icons" style="font-size: 50px;">business</i> Sponsorships</h1>
+            <h1 class="text-lighten-2 blue-text" id="sponsorships"><i class="material-icons" style="font-size: 50px;">business</i> Sponsorships</h1>
             <div class="row">
               <div class="col s12 m10 offset-m1">
                 <h3 class="header">Why Should You Sponsor Us?</h3>
@@ -136,7 +135,7 @@
                 </h5>
                 <div class="row">
                   <div class="col s12 l6">
-                    <div class="card-panel hoverable blue darken-3" style="height: 200px;">
+                    <div class="card-panel hoverable darken-3 blue" style="height: 200px;">
                       <h4 class="white-text">You Get</h4><span class="white-text">
                         <h6 class="cardtext">Your company's logo on our team t-shirts, our website, and even our robot. The logo on our website will link to your website and has a customizable line of text underneath.</h6></span>
                     </div>
@@ -216,8 +215,12 @@
       </div>
     </footer>
     <script>
+      $(document).ready(function () {
+        $(".button-collapse").sideNav();
+      })
+    </script>
+    <script>
       $( document ).ready(function(){
-      $(".button-collapse").sideNav();
       $('.scrollspy').scrollSpy({scrollOffset: 0});
       $('#nav').scroll(function() {
       $('#toc').animate({top:$(this).scrollTop()},100,"linear");

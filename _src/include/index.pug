@@ -1,258 +1,182 @@
-doctype html
-html
-  head
-    link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
-    link(type='text/css', rel='stylesheet', href='css/base.css')
-    link(type='text/css', rel='stylesheet', href='css/materialize.min.css', media='screen,projection')
-    link(rel='icon', href='imgs/logos/botguy.png')
-    title NHHS Botball Team
-    meta(name='theme-color', content='#f44336')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-  body
-    script(type='text/javascript', src='https://code.jquery.com/jquery-2.1.1.min.js')
-    script(type='text/javascript', src='js/materialize.min.js')
-    script(type='text/javascript', src='js/mix.js')
-    header
-      nav
-        .nav-wrapper.red
-          a#top.brand-logo.waves-effect(style='padding-left:16px', href='index.html') NHHS Botball Team
-          a.button-collapse(href='#', data-activates='mobile-demo')
-            i.material-icons menu
-          ul.right.hide-on-med-and-down
-            li.waves-effect.active
-              a(href='index.html') Home
-            // <li class="waves-effect"><a href="team.html">Our Team</a></li>
-            li.waves-effect
-              a(href='about.html') What We Do
-            li.waves-effect
-              a(href='achievements.html') Achievements
-            li.waves-effect
-              a(href='join.html') Join Our Team
-            li.waves-effect
-              a(href='supportus.html') Support Us
-            li.waves-effect
-              a(href='contact.html') Contact
-          ul#mobile-demo.side-nav
-            li.red
-              a.waves-effect.white-text(href='')
-                i.material-icons.left.center-vert menu
-                | NHHS Botball Team
-            li.red.lighten-3
-              a.waves-effect(href='index.html')
-                i.material-icons.left.center-vert home
-                | Home
-            // <li><a class="waves-effect" href="team.html"><i class="material-icons left center-vert">group</i>Our Team</a></li>
-            li
-              a.waves-effect(href='about.html')
-                i.material-icons.left.center-vert help
-                | What We Do
-            li
-              a.waves-effect(href='achievements.html')
-                i.material-icons.left.center-vert star
-                | Achievements
-            li
-              a.waves-effect(href='join.html')
-                i.material-icons.left.center-vert person_add
-                | Join Our Team
-            li
-              a.waves-effect(href='supportus.html')
-                i.material-icons.left.center-vert tag_faces
-                | Support Us
-            li
-              a.waves-effect(href='contact.html')
-                i.material-icons.left.center-vert mail
-                | Contact
-    main.container
-      h1.red-text.header Welcome
-      h2.header To the North Hollywood High School Botball Team
-      #watch-vid.row
-        .col.s12
-          .card-panel.deep-orange
-            h4.white-text
-              | Watch Our Promo Video!
-              a#close-vid.waves-effect.btn-flat.right.white-text(style='font-size:50%') close
-            a.deep-orange.darken-4.waves-effect.btn.btn-large.modal-trigger(href='#promo-video', style='width:100%') Watch Now!
-      .slider(style='height: 100%;')
-        ul.slides
-          li
-            img(src='imgs/homepage/2017competition_2.jpg')
-            .caption.left-align(style='background-color:rgba(0,0,0,0.5); width: 20%; position: absolute; top: 20%; left: 2%')
-              h5 Our Team
-              h6.light.white-text At the 2017 Competition
-          li
-            img(src='imgs/homepage/2017competition.png')
-            .caption.center-align(style='background-color:rgba(0,0,0,0.5); width: 40%; position: absolute; top: 65%; left: 50%')
-              h5 Our Robots
-              h6.light.white-text After winning the double elimination round in 2017
-          li
-            img(src='imgs/awards/trophies-2017.jpg')
-            .caption.right-align(style='background-color:rgba(0,0,0,0.5); width: 25%; position: absolute; top: 15%; left: 70%')
-              h5 2nd Place Overall 
-              h6.light.white-text At the 2017 Competition 
-          li
-            img(src='imgs/homepage/2015competition.jpg')
-            .caption.left-align(style='background-color:rgba(0,0,0,0.5); width: 20%; position: absolute; top: 70%; left: 10%')
-              h5 Our Robot
-              h6.light.white-text In the 2015 Competition
-          li
-            img(src='imgs/homepage/2014greaterla.jpg')
-            .caption.right-align(style='position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5)')
-              h5 3rd Place
-              h6.light.white-text Greater Los Angeles 2014
-          li
-            img(src='imgs/homepage/2016competition.png')
-            .caption.center-align(style='position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5)')
-              h5 Our Team
-              h6.light.white-text After the 2016 Competition
-          li
-            img(src='imgs/homepage/2014school.png')
-            .caption.left-align(style='position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5)')
-              h5 Our Team
-              h6.light.white-text From the 2014-2015 School Year
-          li
-            img(src='imgs/homepage/2016competition_2.png')
-            .caption.right-align(style='position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5)')
-              h5 The Game Board
-              h6.light.white-text At the 2016 Competition
-          li
-            img(src='imgs/homepage/2016competition_3.png')
-            .caption.center-align(style='position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5)')
-              h5 Our Robots
-              h6.light.white-text In the 2016 Competition
-          li
-            img(src='imgs/homepage/2015school.jpg')
-            .caption.left-align(style='position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5)')
-              h5 Our Team
-              h6.light.white-text From the 2015-2016 School Year
-          li
-            img(src='imgs/homepage/2016competition_4.jpg')
-            .caption.right-align(style='position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5)')
-              h5 Strategizing
-              h6.light.white-text For the 2016 Competition
-          li
-            img(src='imgs/homepage/gameboard.jpg')
-            .caption.center-align(style='position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5)')
-              h5 Building
-              h6.light.white-text Our 2016 Practice Game Board
-          li
-            img(src='imgs/homepage/2016robots.jpg')
-            .caption.left-align(style='position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5)')
-              h5 Early Testing
-              h6.light.white-text Of Robots from 2016
-          li
-            img(src='imgs/homepage/2016robots_2.jpg')
-            .caption.right-align(style='position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5)')
-              h5 Programming
-              h6.light.white-text Robots for the 2016 Competition
-          li
-            img(src='imgs/homepage/teamwork.jpg')
-            .caption.center-align(style='position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5)')
-              h5 Teamwork
-              h6.light.white-text Is Key to Generate Success
-      .row
-        h3.col.s12.center A Big Thank You To Our Sponsors
-        .col.m4.s6.center.promo.hoverable
-          a.black-text(href='http://www.solidworks.com/')
-            img.sponsor-pic(alt='SolidWorks', src='imgs/logos/solidworks.png', width='', height='96px')
-            .sponsor
-              p.sponsor-caption(style='font-weight:400')
-                strong(style='font-weight:500') Solid
-                | Works
-        .col.m4.s6.center.promo.hoverable
-          a.black-text(href='supportus.html')
-            i.large.material-icons.red-text.sponsor-pic help
-            .sponsor
-              h6.sponsor-caption.header Your Logo Here
-              h6.sponsortext.header Your Custom Text Line Here
-        .col.m4.s6.center.promo.hoverable
-          a.black-text(href='supportus.html')
-            i.large.material-icons.red-text.sponsor-pic help
-            .sponsor
-              h6.sponsor-caption.header Your Logo Here
-              h6.sponsortext.header Your Custom Text Line Here
-        .col.m4.s6.center.promo.hoverable
-          a.black-text(href='supportus.html')
-            i.large.material-icons.red-text.sponsor-pic help
-            .sponsor
-              h6.sponsor-caption.header Your Logo Here
-              h6.sponsortext.header Your Custom Text Line Here
-        .col.m4.s6.center.promo.hoverable
-          a.black-text(href='supportus.html')
-            i.large.material-icons.red-text.sponsor-pic help
-            .sponsor
-              h6.sponsor-caption.header Your Logo Here
-              h6.sponsortext.header Your Custom Text Line Here
-        .col.m4.s6.center.promo.hoverable
-          a.black-text(href='supportus.html')
-            i.large.material-icons.red-text.sponsor-pic help
-            .sponsor
-              h6.sponsor-caption.header Your Logo Here
-              h6.sponsortext.header Your Custom Text Line Here
-      #promo-video.modal(style='max-height:90%;height:90%;top:5%;bottom:5%;width:80%')
-        .modal-content(style='width:100%;height:85%')
-          h4
-            | Watch Our Promo Video!
-            a.modal-action.modal-close.waves-effect.waves-red.btn-flat.right(style='font-size:50%') close
-          iframe(width='100%', height='100%', src='https://www.youtube.com/embed/r_EpzX9w-Tg', frameborder='0')
-          p(style='margin-bottom:0; padding-bottom:0;')
-            | You can toggle captions by clicking the CC button in the video settings. Click outside this window to close.
-    footer.page-footer.blue-grey
-      .container
-        .row
-          .col.l6.s12
-            h5.white-text NHHS Botball Team
-            p.grey-text.text-lighten-4
-              | We are a completely student-run robotics team which builds and programs robots for the KIPR Botball competition.
-          .col.l4.offset-l2.s12
-            h5.white-text Links
-            ul
-              li
-                a.grey-text.text-lighten-3.waves-effect.waves-light(href='about.html') About
-              li
-                a.grey-text.text-lighten-3.waves-effect.waves-light(href='supportus.html') Support Us
-              li
-                a.grey-text.text-lighten-3.waves-effect.waves-light(href='http://materializecss.com/') Materialize CSS
-      .footer-copyright(style='background-color:')
-        .container
-          | © 2017 North Hollywood High School Botball Team
-          a.grey-text.text-lighten-4.right.waves-effect.waves-light(href='#top') Back to Top
-    script.
-      $(document).ready(function () {
-      $(".button-collapse").sideNav();
-      $('.slider').slider({ full_width: true, interval: 5000, height: 800 });
-      $("#close-vid").click(function () {
-      $("#watch-vid").remove();
-      mixpanel.track("Video Close home");
-      setCookie("showVideo", "false", 30);
-      Materialize.toast('If you change your mind', 5000);
-      setTimeout(function () {
-      Materialize.toast('You can still watch it on our What We Do page!', 5000);
-      }, 2000);
-      });
-      $('.modal-trigger').leanModal();
-      });
-      $('.modal-trigger').leanModal();
-      checkVideoCookie();
-      function setCookie(cname, cvalue, exdays) {
-      var d = new Date();
-      d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-      var expires = "expires=" + d.toUTCString();
-      document.cookie = cname + "=" + cvalue + "; " + expires;
-      }
-      function getCookie(cname) {
-      var name = cname + "=";
-      var ca = document.cookie.split(';');
-      for (var i = 0; i < ca.length; i++) {
-      var c = ca[i];
-      while (c.charAt(0) == ' ') c = c.substring(1);
-      if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
-      }
-      return "";
-      }
-      function checkVideoCookie() {
-      var user = getCookie("showVideo");
-      if (user == "false") {
-      $("#watch-vid").remove();
-      mixpanel.track("Home page revisit");
-      }
-      }
+extends ../exclude/base
+
+block vars
+  - var selected = "index"
+  - var color = "deep-orange"
+  - var themeColor = "#ff5722"
+
+block content
+  h1.red-text.header Welcome
+  h2.header To the North Hollywood High School Botball Team
+  #watch-vid.row
+    .col.s12
+      .card-panel(class=color)
+        h4.white-text
+          | Watch Our Promo Video!
+          a#close-vid.waves-effect.btn-flat.right.white-text(style='font-size:50%') close
+        a.darken-4.waves-effect.btn.btn-large.modal-trigger(href='#promo-video', style='width:100%', class=color) Watch Now!
+  .slider(style='height: 100%;')
+    ul.slides
+      li
+        img(src='imgs/homepage/2017competition_2.jpg')
+        .caption.left-align(style='background-color:rgba(0,0,0,0.5); width: 20%; position: absolute; top: 20%; left: 2%')
+          h5 Our Team
+          h6.light.white-text At the 2017 Competition
+      li
+        img(src='imgs/homepage/2017competition.png')
+        .caption.center-align(style='background-color:rgba(0,0,0,0.5); width: 40%; position: absolute; top: 65%; left: 50%')
+          h5 Our Robots
+          h6.light.white-text After winning the double elimination round in 2017
+      li
+        img(src='imgs/awards/trophies-2017.jpg')
+        .caption.right-align(style='background-color:rgba(0,0,0,0.5); width: 25%; position: absolute; top: 15%; left: 70%')
+          h5 2nd Place Overall 
+          h6.light.white-text At the 2017 Competition 
+      li
+        img(src='imgs/homepage/2015competition.jpg')
+        .caption.left-align(style='background-color:rgba(0,0,0,0.5); width: 20%; position: absolute; top: 70%; left: 10%')
+          h5 Our Robot
+          h6.light.white-text In the 2015 Competition
+      li
+        img(src='imgs/homepage/2014greaterla.jpg')
+        .caption.right-align(style='position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5)')
+          h5 3rd Place
+          h6.light.white-text Greater Los Angeles 2014
+      li
+        img(src='imgs/homepage/2016competition.png')
+        .caption.center-align(style='position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5)')
+          h5 Our Team
+          h6.light.white-text After the 2016 Competition
+      li
+        img(src='imgs/homepage/2014school.png')
+        .caption.left-align(style='position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5)')
+          h5 Our Team
+          h6.light.white-text From the 2014-2015 School Year
+      li
+        img(src='imgs/homepage/2016competition_2.png')
+        .caption.right-align(style='position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5)')
+          h5 The Game Board
+          h6.light.white-text At the 2016 Competition
+      li
+        img(src='imgs/homepage/2016competition_3.png')
+        .caption.center-align(style='position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5)')
+          h5 Our Robots
+          h6.light.white-text In the 2016 Competition
+      li
+        img(src='imgs/homepage/2015school.jpg')
+        .caption.left-align(style='position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5)')
+          h5 Our Team
+          h6.light.white-text From the 2015-2016 School Year
+      li
+        img(src='imgs/homepage/2016competition_4.jpg')
+        .caption.right-align(style='position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5)')
+          h5 Strategizing
+          h6.light.white-text For the 2016 Competition
+      li
+        img(src='imgs/homepage/gameboard.jpg')
+        .caption.center-align(style='position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5)')
+          h5 Building
+          h6.light.white-text Our 2016 Practice Game Board
+      li
+        img(src='imgs/homepage/2016robots.jpg')
+        .caption.left-align(style='position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5)')
+          h5 Early Testing
+          h6.light.white-text Of Robots from 2016
+      li
+        img(src='imgs/homepage/2016robots_2.jpg')
+        .caption.right-align(style='position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5)')
+          h5 Programming
+          h6.light.white-text Robots for the 2016 Competition
+      li
+        img(src='imgs/homepage/teamwork.jpg')
+        .caption.center-align(style='position:absolute; top: 60%; left: 65%; width: 20%; background-color: rgba(0,0,0,0.5)')
+          h5 Teamwork
+          h6.light.white-text Is Key to Generate Success
+  .row
+    h3.col.s12.center A Big Thank You To Our Sponsors
+    .col.m4.s6.center.promo.hoverable
+      a.black-text(href='http://www.solidworks.com/')
+        img.sponsor-pic(alt='SolidWorks', src='imgs/logos/solidworks.png', width='', height='96px')
+        .sponsor
+          p.sponsor-caption(style='font-weight:400')
+            strong(style='font-weight:500') Solid
+            | Works
+    .col.m4.s6.center.promo.hoverable
+      a.black-text(href='supportus.html')
+        i.large.material-icons.red-text.sponsor-pic help
+        .sponsor
+          h6.sponsor-caption.header Your Logo Here
+          h6.sponsortext.header Your Custom Text Line Here
+    .col.m4.s6.center.promo.hoverable
+      a.black-text(href='supportus.html')
+        i.large.material-icons.red-text.sponsor-pic help
+        .sponsor
+          h6.sponsor-caption.header Your Logo Here
+          h6.sponsortext.header Your Custom Text Line Here
+    .col.m4.s6.center.promo.hoverable
+      a.black-text(href='supportus.html')
+        i.large.material-icons.red-text.sponsor-pic help
+        .sponsor
+          h6.sponsor-caption.header Your Logo Here
+          h6.sponsortext.header Your Custom Text Line Here
+    .col.m4.s6.center.promo.hoverable
+      a.black-text(href='supportus.html')
+        i.large.material-icons.red-text.sponsor-pic help
+        .sponsor
+          h6.sponsor-caption.header Your Logo Here
+          h6.sponsortext.header Your Custom Text Line Here
+    .col.m4.s6.center.promo.hoverable
+      a.black-text(href='supportus.html')
+        i.large.material-icons.red-text.sponsor-pic help
+        .sponsor
+          h6.sponsor-caption.header Your Logo Here
+          h6.sponsortext.header Your Custom Text Line Here
+  #promo-video.modal(style='max-height:90%;height:90%;top:5%;bottom:5%;width:80%')
+    .modal-content(style='width:100%;height:85%')
+      h4
+        | Watch Our Promo Video!
+        a.modal-action.modal-close.waves-effect.waves-red.btn-flat.right(style='font-size:50%') close
+      iframe(width='100%', height='100%', src='https://www.youtube.com/embed/r_EpzX9w-Tg', frameborder='0')
+      p(style='margin-bottom:0; padding-bottom:0;')
+        | You can toggle captions by clicking the CC button in the video settings. Click outside this window to close.
+
+block scripts
+  script.
+    $(document).ready(function () {
+        $('.slider').slider({ full_width: true, interval: 5000, height: 800 });
+        $("#close-vid").click(function () {
+            $("#watch-vid").remove();
+            mixpanel.track("Video Close home");
+            setCookie("showVideo", "false", 30);
+            Materialize.toast('If you change your mind', 5000);
+            setTimeout(function () {
+                Materialize.toast('You can still watch it on our What We Do page!', 5000);
+            }, 2000);
+        });
+        $('.modal-trigger').leanModal();
+    });
+    $('.modal-trigger').leanModal();
+    checkVideoCookie();
+    function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        var expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + "; " + expires;
+    }
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1);
+            if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+        }
+        return "";
+    }
+    function checkVideoCookie() {
+        var user = getCookie("showVideo");
+        if (user == "false") {
+            $("#watch-vid").remove();
+            mixpanel.track("Home page revisit");
+        }
+    }

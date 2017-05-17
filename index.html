@@ -6,7 +6,7 @@
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection">
     <link rel="icon" href="imgs/logos/botguy.png">
     <title>NHHS Botball Team</title>
-    <meta name="theme-color" content="#f44336">
+    <meta name="theme-color" content="#ff5722">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
@@ -15,10 +15,9 @@
     <script type="text/javascript" src="js/mix.js"></script>
     <header>
       <nav>
-        <div class="nav-wrapper red"><a class="brand-logo waves-effect" id="top" style="padding-left:16px;" href="index.html">NHHS Botball Team</a><a class="button-collapse" href="#" data-activates="mobile-demo"><i class="material-icons">menu</i></a>
+        <div class="nav-wrapper deep-orange"><a class="brand-logo waves-effect" id="top" style="padding-left:16px;" href="index.html">NHHS Botball Team</a><a class="button-collapse" href="#" data-activates="mobile-demo"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
             <li class="waves-effect active"><a href="index.html">Home</a></li>
-            <!-- <li class="waves-effect"><a href="team.html">Our Team</a></li>-->
             <li class="waves-effect"><a href="about.html">What We Do</a></li>
             <li class="waves-effect"><a href="achievements.html">Achievements</a></li>
             <li class="waves-effect"><a href="join.html">Join Our Team</a></li>
@@ -26,9 +25,8 @@
             <li class="waves-effect"><a href="contact.html">Contact</a></li>
           </ul>
           <ul class="side-nav" id="mobile-demo">
-            <li class="red"><a class="waves-effect white-text" href=""><i class="material-icons left center-vert">menu</i>NHHS Botball Team</a></li>
-            <li class="red lighten-3"><a class="waves-effect" href="index.html"><i class="material-icons left center-vert">home</i>Home</a></li>
-            <!-- <li><a class="waves-effect" href="team.html"><i class="material-icons left center-vert">group</i>Our Team</a></li>-->
+            <li class="deep-orange"><a class="waves-effect white-text" href=""><i class="material-icons left center-vert">menu</i>NHHS Botball Team</a></li>
+            <li class="lighten-3 deep-orange"><a class="waves-effect" href="index.html"><i class="material-icons left center-vert">home</i>Home</a></li>
             <li><a class="waves-effect" href="about.html"><i class="material-icons left center-vert">help</i>What We Do</a></li>
             <li><a class="waves-effect" href="achievements.html"><i class="material-icons left center-vert">star</i>Achievements</a></li>
             <li><a class="waves-effect" href="join.html"><i class="material-icons left center-vert">person_add</i>Join Our Team</a></li>
@@ -44,7 +42,7 @@
       <div class="row" id="watch-vid">
         <div class="col s12">
           <div class="card-panel deep-orange">
-            <h4 class="white-text">Watch Our Promo Video!<a class="waves-effect btn-flat right white-text" id="close-vid" style="font-size:50%;">close</a></h4><a class="deep-orange darken-4 waves-effect btn btn-large modal-trigger" href="#promo-video" style="width:100%;">Watch Now!</a>
+            <h4 class="white-text">Watch Our Promo Video!<a class="waves-effect btn-flat right white-text" id="close-vid" style="font-size:50%;">close</a></h4><a class="darken-4 waves-effect btn btn-large modal-trigger deep-orange" href="#promo-video" style="width:100%;">Watch Now!</a>
           </div>
         </div>
       </div>
@@ -205,43 +203,47 @@
     </footer>
     <script>
       $(document).ready(function () {
-      $(".button-collapse").sideNav();
-      $('.slider').slider({ full_width: true, interval: 5000, height: 800 });
-      $("#close-vid").click(function () {
-      $("#watch-vid").remove();
-      mixpanel.track("Video Close home");
-      setCookie("showVideo", "false", 30);
-      Materialize.toast('If you change your mind', 5000);
-      setTimeout(function () {
-      Materialize.toast('You can still watch it on our What We Do page!', 5000);
-      }, 2000);
-      });
-      $('.modal-trigger').leanModal();
+        $(".button-collapse").sideNav();
+      })
+    </script>
+    <script>
+      $(document).ready(function () {
+          $('.slider').slider({ full_width: true, interval: 5000, height: 800 });
+          $("#close-vid").click(function () {
+              $("#watch-vid").remove();
+              mixpanel.track("Video Close home");
+              setCookie("showVideo", "false", 30);
+              Materialize.toast('If you change your mind', 5000);
+              setTimeout(function () {
+                  Materialize.toast('You can still watch it on our What We Do page!', 5000);
+              }, 2000);
+          });
+          $('.modal-trigger').leanModal();
       });
       $('.modal-trigger').leanModal();
       checkVideoCookie();
       function setCookie(cname, cvalue, exdays) {
-      var d = new Date();
-      d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-      var expires = "expires=" + d.toUTCString();
-      document.cookie = cname + "=" + cvalue + "; " + expires;
+          var d = new Date();
+          d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+          var expires = "expires=" + d.toUTCString();
+          document.cookie = cname + "=" + cvalue + "; " + expires;
       }
       function getCookie(cname) {
-      var name = cname + "=";
-      var ca = document.cookie.split(';');
-      for (var i = 0; i < ca.length; i++) {
-      var c = ca[i];
-      while (c.charAt(0) == ' ') c = c.substring(1);
-      if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
-      }
-      return "";
+          var name = cname + "=";
+          var ca = document.cookie.split(';');
+          for (var i = 0; i < ca.length; i++) {
+              var c = ca[i];
+              while (c.charAt(0) == ' ') c = c.substring(1);
+              if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+          }
+          return "";
       }
       function checkVideoCookie() {
-      var user = getCookie("showVideo");
-      if (user == "false") {
-      $("#watch-vid").remove();
-      mixpanel.track("Home page revisit");
-      }
+          var user = getCookie("showVideo");
+          if (user == "false") {
+              $("#watch-vid").remove();
+              mixpanel.track("Home page revisit");
+          }
       }
     </script>
   </body>

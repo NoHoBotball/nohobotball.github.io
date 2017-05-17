@@ -1,208 +1,133 @@
-doctype html
-html
-  head
-    link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
-    link(type='text/css', rel='stylesheet', href='css/base.css')
-    link(type='text/css', rel='stylesheet', href='css/materialize.min.css', media='screen,projection')
-    link(rel='icon', href='imgs/logos/botguy.png')
-    title NHHS Botball Team
-    meta(name='theme-color', content='#4CAF50')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-  body
-    script(type='text/javascript', src='https://code.jquery.com/jquery-2.1.1.min.js')
-    script(type='text/javascript', src='js/materialize.min.js')
-    header
-      nav
-        .nav-wrapper.green
-          a#top.brand-logo.waves-effect(style='padding-left:16px', href='index.html') NHHS Botball Team
-          a.button-collapse(href='#', data-activates='mobile-demo')
-            i.material-icons menu
-          ul.right.hide-on-med-and-down
-            li.waves-effect
-              a(href='index.html') Home
-            // <li class="waves-effect"><a href="team.html">Our Team</a></li>
-            li.waves-effect
-              a(href='about.html') What We Do
-            li.waves-effect
-              a(href='achievements.html') Achievements
-            li.waves-effect.active
-              a(href='join.html') Join Our Team
-            li.waves-effect
-              a(href='supportus.html') Support Us
-            li.waves-effect
-              a(href='contact.html') Contact
-          ul#mobile-demo.side-nav
-            li.green
-              a.waves-effect.white-text(href='')
-                i.material-icons.left.center-vert menu
-                | NHHS Botball Team
-            li
-              a.waves-effect(href='index.html')
-                i.material-icons.left.center-vert home
-                | Home
-            // <li><a class="waves-effect" href="team.html"><i class="material-icons left center-vert">group</i>Our Team</a></li>
-            li
-              a.waves-effect(href='about.html')
-                i.material-icons.left.center-vert help
-                | What We Do
-            li
-              a.waves-effect(href='achievements.html')
-                i.material-icons.left.center-vert star
-                | Achievements
-            li.green.lighten-3
-              a.waves-effect(href='join.html')
-                i.material-icons.left.center-vert person_add
-                | Join Our Team
-            li
-              a.waves-effect(href='supportus.html')
-                i.material-icons.left.center-vert tag_faces
-                | Support Us
-            li
-              a.waves-effect(href='contact.html')
-                i.material-icons.left.center-vert mail
-                | Contact
-    main.container
-      h1.green-text.header Want to Join Our Team?
-      h4.header
-        | We are always looking for new members interested in programming and/or engineering. No prior knowledge required.
-      h2.header Questions? We've got answers!
-      ul.collapsible.popout(data-collapsible='accordion')
-        li
-          .collapsible-header
-            i.material-icons build
-            | Do I need to know how to build robots or program to join?
-          .collapsible-body
-            p
-              | No! Anybody that is interested in programming, engineering, or both can join our team. Team members will teach you how to build and program the robots.
-        li
-          .collapsible-header
-            i.material-icons event
-            | How often do you meet?
-          .collapsible-body
-            p
-              | For most of the year, we meet once a week on Fridays from 3:15 PM to 6:00 PM. Occasionally we may meet during lunch if we need to get something done. As we approach the competition in May, we will meet multiple days per week.
-        li
-          .collapsible-header
-            i.material-icons not_interested
-            | Are there any restrictions on new members?
-          .collapsible-body
-            p
-              | No! A new member can help build and program robots and has access to the same resources as a fourth year member.
-        li
-          .collapsible-header
-            i.material-icons event_busy
-            | Do I need to come to every meeting?
-          .collapsible-body
-            p
-              | As much as we would like you to attend every meeting, we understand that sometimes that is not possible. We ask that you try to attend as many meetings as possible, ideally at least half of them.
-        li
-          .collapsible-header
-            i.material-icons code
-            | What programming languages do you use?
-          .collapsible-body
-            p
-              | Programs for the competition are generally written in C with some libraries and other programs written in C++. We understand that these are not the simplest languages to learn or use and we would be happy to teach you.
-        li
-          .collapsible-header
-            i.material-icons layers
-            | What are your robots made of?
-          .collapsible-body
-            p
-              | Our robots are made of lego bricks, metal pieces, and other parts which are all provided by Botball. The finished robots are smaller than 12"x12"x12".
-        li
-          .collapsible-header
-            i.material-icons all_inclusive
-            | Do I need to participate in both building and programming?
-          .collapsible-body
-            p
-              | We try to encourage everybody to learn how to build robots and write at least simple programs, however we will not force you to do either. We understand that programming can be difficult and is not for everyone. Similarly, some people enjoy programming, but not building.
-        li
-          .collapsible-header
-            i.material-icons assessment
-            | Are there try-outs?
-          .collapsible-body
-            p
-              | No! Anybody who wants to join the team is welcome to join, we won't restrict anyone from joining because they are not "good enough".
-        li
-          .collapsible-header
-            i.material-icons info
-            | Where can I find out more about Botball?
-          .collapsible-body
-            p
-              | You can learn more about the Botball program on 
-              a(href='about.html') our What We Do page
-              |  and on 
-              a(href='http://botball.org') the official Botball website
-              | .
-      h5.header
-        | Your question not here? Email us at 
-        a(href='mailto:questions@nohobotball.org') questions@nohobotball.org
-      h2.header Contact Info and Interests
-      h4.header Please fill out this form if you want to join our team
-      iframe(src='https://docs.google.com/forms/d/1kE8CqJpSmchdXCrXxgK1NLIJ6omPRW345kCkH77O7S4/viewform?embedded=true', width='100%', height='2500', frameborder='0', marginheight='0', marginwidth='0') Loading...
-      .row
-        h3.col.s12.center Our Sponsors
-        .col.m4.s6.center.promo.hoverable
-          a.black-text(href='http://www.solidworks.com/')
-            img.sponsor-pic(alt='SolidWorks', src='imgs/logos/solidworks.png', width='', height='96px')
-            .sponsor
-              p.sponsor-caption(style='font-weight:400')
-                strong(style='font-weight:500') Solid
-                | Works
-        .col.m4.s6.center.promo.hoverable
-          a.black-text(href='supportus.html')
-            i.large.material-icons.teal-text.sponsor-pic help
-            .sponsor
-              h6.sponsor-caption.header Your Logo Here
-              h6.sponsortext.header Your Custom Text Line Here
-        .col.m4.s6.center.promo.hoverable
-          a.black-text(href='supportus.html')
-            i.large.material-icons.teal-text.sponsor-pic help
-            .sponsor
-              h6.sponsor-caption.header Your Logo Here
-              h6.sponsortext.header Your Custom Text Line Here
-        .col.m4.s6.center.promo.hoverable
-          a.black-text(href='supportus.html')
-            i.large.material-icons.teal-text.sponsor-pic help
-            .sponsor
-              h6.sponsor-caption.header Your Logo Here
-              h6.sponsortext.header Your Custom Text Line Here
-        .col.m4.s6.center.promo.hoverable
-          a.black-text(href='supportus.html')
-            i.large.material-icons.teal-text.sponsor-pic help
-            .sponsor
-              h6.sponsor-caption.header Your Logo Here
-              h6.sponsortext.header Your Custom Text Line Here
-        .col.m4.s6.center.promo.hoverable
-          a.black-text(href='supportus.html')
-            i.large.material-icons.teal-text.sponsor-pic help
-            .sponsor
-              h6.sponsor-caption.header Your Logo Here
-              h6.sponsortext.header Your Custom Text Line Here
-    footer.page-footer.blue-grey
-      .container
-        .row
-          .col.l6.s12
-            h5.white-text NHHS Botball Team
-            p.grey-text.text-lighten-4
-              | We are a completely student-run robotics team which builds and programs robots for the KIPR Botball competition.
-          .col.l4.offset-l2.s12
-            h5.white-text Links
-            ul
-              li
-                a.grey-text.text-lighten-3.waves-effect.waves-light(href='about.html') About
-              li
-                a.grey-text.text-lighten-3.waves-effect.waves-light(href='supportus.html') Support Us
-              li
-                a.grey-text.text-lighten-3.waves-effect.waves-light(href='http://materializecss.com/') Materialize CSS
-      .footer-copyright(style='background-color:')
-        .container
-          | © 2017 North Hollywood High School Botball Team
-          a.grey-text.text-lighten-4.right.waves-effect.waves-light(href='#top') Back to Top
-    script.
-      $( document ).ready(function(){
-      $(".button-collapse").sideNav();
-      })
-      $('.collapsible').collapsible({
-      accordion: true
-      });
+extends ../exclude/base
+
+block vars
+  - var selected = "join"
+  - var color = "green"
+  - var themeColor = "#4CAF50"
+
+block content
+  h1.header(class=color + '-text') Want to Join Our Team?
+  h4.header
+    | We are always looking for new members interested in programming and/or engineering. No prior knowledge required.
+  h2.header Questions? We've got answers!
+  ul.collapsible.popout(data-collapsible='accordion')
+    li
+      .collapsible-header
+        i.material-icons build
+        | Do I need to know how to build robots or program to join?
+      .collapsible-body
+        p
+          | No! Anybody that is interested in programming, engineering, or both can join our team. Team members will teach you how to build and program the robots.
+    li
+      .collapsible-header
+        i.material-icons event
+        | How often do you meet?
+      .collapsible-body
+        p
+          | For most of the year, we meet once a week on Fridays from 3:15 PM to 6:00 PM. Occasionally we may meet during lunch if we need to get something done. As we approach the competition in May, we will meet multiple days per week.
+    li
+      .collapsible-header
+        i.material-icons not_interested
+        | Are there any restrictions on new members?
+      .collapsible-body
+        p
+          | No! A new member can help build and program robots and has access to the same resources as a fourth year member.
+    li
+      .collapsible-header
+        i.material-icons event_busy
+        | Do I need to come to every meeting?
+      .collapsible-body
+        p
+          | As much as we would like you to attend every meeting, we understand that sometimes that is not possible. We ask that you try to attend as many meetings as possible, ideally at least half of them.
+    li
+      .collapsible-header
+        i.material-icons code
+        | What programming languages do you use?
+      .collapsible-body
+        p
+          | Programs for the competition are generally written in C with some libraries and other programs written in C++. We understand that these are not the simplest languages to learn or use and we would be happy to teach you.
+    li
+      .collapsible-header
+        i.material-icons layers
+        | What are your robots made of?
+      .collapsible-body
+        p
+          | Our robots are made of lego bricks, metal pieces, and other parts which are all provided by Botball. The finished robots are smaller than 12"x12"x12".
+    li
+      .collapsible-header
+        i.material-icons all_inclusive
+        | Do I need to participate in both building and programming?
+      .collapsible-body
+        p
+          | We try to encourage everybody to learn how to build robots and write at least simple programs, however we will not force you to do either. We understand that programming can be difficult and is not for everyone. Similarly, some people enjoy programming, but not building.
+    li
+      .collapsible-header
+        i.material-icons assessment
+        | Are there try-outs?
+      .collapsible-body
+        p
+          | No! Anybody who wants to join the team is welcome to join, we won't restrict anyone from joining because they are not "good enough".
+    li
+      .collapsible-header
+        i.material-icons info
+        | Where can I find out more about Botball?
+      .collapsible-body
+        p
+          | You can learn more about the Botball program on 
+          a(href='about.html') our What We Do page
+          |  and on 
+          a(href='http://botball.org') the official Botball website
+          | .
+  h5.header
+    | Your question not here? Email us at 
+    a(href='mailto:questions@nohobotball.org') questions@nohobotball.org
+  h2.header Contact Info and Interests
+  h4.header Please fill out this form if you want to join our team
+  iframe(src='https://docs.google.com/forms/d/1kE8CqJpSmchdXCrXxgK1NLIJ6omPRW345kCkH77O7S4/viewform?embedded=true', width='100%', height='2500', frameborder='0', marginheight='0', marginwidth='0') Loading...
+  .row
+    h3.col.s12.center Our Sponsors
+    .col.m4.s6.center.promo.hoverable
+      a.black-text(href='http://www.solidworks.com/')
+        img.sponsor-pic(alt='SolidWorks', src='imgs/logos/solidworks.png', width='', height='96px')
+        .sponsor
+          p.sponsor-caption(style='font-weight:400')
+            strong(style='font-weight:500') Solid
+            | Works
+    .col.m4.s6.center.promo.hoverable
+      a.black-text(href='supportus.html')
+        i.large.material-icons.teal-text.sponsor-pic help
+        .sponsor
+          h6.sponsor-caption.header Your Logo Here
+          h6.sponsortext.header Your Custom Text Line Here
+    .col.m4.s6.center.promo.hoverable
+      a.black-text(href='supportus.html')
+        i.large.material-icons.teal-text.sponsor-pic help
+        .sponsor
+          h6.sponsor-caption.header Your Logo Here
+          h6.sponsortext.header Your Custom Text Line Here
+    .col.m4.s6.center.promo.hoverable
+      a.black-text(href='supportus.html')
+        i.large.material-icons.teal-text.sponsor-pic help
+        .sponsor
+          h6.sponsor-caption.header Your Logo Here
+          h6.sponsortext.header Your Custom Text Line Here
+    .col.m4.s6.center.promo.hoverable
+      a.black-text(href='supportus.html')
+        i.large.material-icons.teal-text.sponsor-pic help
+        .sponsor
+          h6.sponsor-caption.header Your Logo Here
+          h6.sponsortext.header Your Custom Text Line Here
+    .col.m4.s6.center.promo.hoverable
+      a.black-text(href='supportus.html')
+        i.large.material-icons.teal-text.sponsor-pic help
+        .sponsor
+          h6.sponsor-caption.header Your Logo Here
+          h6.sponsortext.header Your Custom Text Line Here
+
+block scripts
+  script.
+    $( document ).ready(function(){
+    $('.collapsible').collapsible({
+    accordion: true
+    });
+    })
