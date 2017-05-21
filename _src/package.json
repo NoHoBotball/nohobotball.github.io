@@ -4,13 +4,15 @@
   "description": "",
   "main": "",
   "scripts": {
-    "clean": "rm -f ../*.html",
+    "clean": "find .. -name *.html -delete",
     "build": "npm run clean && ./node_modules/.bin/pug include --out .. -P",
-    "build-min": "npm run clean && ./node_modules/.bin/pug include --out .."
+    "build-min": "npm run clean && ./node_modules/.bin/pug include --out ..",
+    "local": " ./node_modules/http-server/bin/http-server .."
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "http-server": "^0.10.0",
     "pug": "^2.0.0-alpha6",
     "pug-cli": "^1.0.0-alpha6"
   }
