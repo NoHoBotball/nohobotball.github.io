@@ -177,9 +177,8 @@ html
             a#top.brand-logo.waves-effect(href='/docs/index.html') Botball Documentation
         .nav-wrapper
           .col.s12
-            a.breadcrumb(href='#!') First
-            a.breadcrumb(href='#!') Second
-            a.breadcrumb(href='#!') Third
+            each element in path
+                a.breadcrumb(href='#!')= element
     main.row
       .container.col.s12
         block content

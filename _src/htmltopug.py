@@ -14,10 +14,10 @@ args = parser.parse_args()
 replace_dict = {
     " ": "THISWASASPACEBUTISNTANYMORE",
     "\t": "THISWASATABBUTISNTANYMORE",
-    "\n": "THISWASANEWLINEBUTISNTANYMORE",
+    # "\n": "THISWASANEWLINEBUTISNTANYMORE",
 }
 
-pre_replace = "preReplacement"
+pre_replace = "prereplacement"
 
 if args.after:
     val = sys.stdin.read().replace(pre_replace, "pre")
@@ -31,6 +31,8 @@ else:
     for tag in soup.find_all("font"):
         tag.unwrap()
     for tag in soup.find_all("code"):
+        if tag.parent and tag.parent.name == pre_replace:
+                tag["class"] = (tag.get("class", "") + " language-clike").lstrip()
         val = tag.text
         for key, value in replace_dict.items():
             val = val.replace(key, value)
