@@ -1,28 +1,30 @@
-
+<!DOCTYPE html>
 <html>
   <head>
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    <link href="/css/base.css" rel="stylesheet" type="text/css"/>
-    <link href="/css/materialize.min.css" media="screen,projection" rel="stylesheet" type="text/css"/>
-    <link href="/css/docs.css" rel="stylesheet" type="text/css"/>
-    <link href="../imgs/logos/botguy.png" rel="icon"/>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/css/base.css">
+    <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection">
+    <link type="text/css" rel="stylesheet" href="/css/docs.css">
+    <link type="text/css" rel="stylesheet" href="/css/prism.css">
+    <link rel="icon" href="../imgs/logos/botguy.png">
     <title>Botball Documentation - Tutorial</title>
-    <meta content="#00796b" name="theme-color"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta name="theme-color" content="#00796b">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
-    <script src="/js/materialize.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/js/materialize.min.js"></script>
+    <script type="text/javascript" src="/js/prism.js"></script>
     <script>
       $(document).ready(function () {
       $('.button-collapse').sideNav({
       draggable: true
       });
-      $(".active").parent().parent().siblings()[0].click() })
+      $('.active').parent().parent().siblings()[0].click() })
     </script>
     <header>
       <ul class="side-nav fixed" id="slide-out">
-        <li class="red lighten-1" style="height: 130px;">
+        <li class="lighten-1 red" style="height: 130px;">
           <div class="userView">
             <h5 class="white-text"><a class="white-text" href="/docs/index.html">Index</a></h5>
           </div>
@@ -54,8 +56,8 @@
             </li>
           </ul>
         </li>
-        <li><a href="/docs/tutorial.html">Style</a></li>
-        <li><a href="/docs/tutorial.html">Debugging</a></li>
+        <li><a href="/docs/style.html">Style</a></li>
+        <li><a href="/docs/debugging.html">Debugging</a></li>
         <li class="no-padding">
           <ul class="collapsible collapsible-accordion">
             <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Printing</a>
@@ -82,7 +84,7 @@
             </li>
           </ul>
         </li>
-        <li class="active"><a href="/docs/lib/math.html">Math Library</a></li>
+        <li><a href="/docs/lib/math.html">Math Library</a></li>
         <li class="no-padding">
           <ul class="collapsible collapsible-accordion">
             <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>KIPR Wallaby/Link</a>
@@ -133,18 +135,18 @@
         </li>
         <li><a href="/docs/full.html">Full Documentation</a></li>
       </ul>
-      <nav class="nav-extended red lighten-2">
+      <nav class="nav-extended lighten-2 red">
         <div class="nav-wrapper">
-          <div class="col s12"><a class="button-collapse" data-activates="slide-out" href="#" style="font-size: 50px;"><i class="material-icons">menu</i></a><a class="brand-logo waves-effect" id="top" href="/docs/index.html">Botball Documentation</a></div>
+          <div class="col s12"><a class="button-collapse" href="#" data-activates="slide-out" style="font-size: 50px;"><i class="material-icons">menu</i></a><a class="brand-logo waves-effect" id="top" href="/docs/index.html">Botball Documentation</a></div>
         </div>
         <div class="nav-wrapper">
-          <div class="col s12"><a class="breadcrumb" href="#!">Math Library</a></div>
+          <div class="col s12"><a class="breadcrumb" href="#!">Lib</a><a class="breadcrumb" href="#!">Math</a>
+          </div>
         </div>
       </nav>
     </header>
     <main class="row">
       <div class="container col s12">
-        <!-- END HEADER-->
         <!-- Math_Functions--><a name="C_Math_Library"></a>
         <h2>The C Library Math Functions</h2>
         <p>The standard C library has a large number of precompiled math functions. <code>#include &lt;math.h&gt;</code>
@@ -164,7 +166,7 @@
                 <dl>
                   <dd>Format: <code>double  <code>acos</code>
                       (
-                                                          double x);</code><br/>
+                                                          double x);</code><br>
                      Returns the angle between 0 and π whose cosine is x,
                      where -1 ≤ x ≤ 1. result is in radians.
                   </dd>
@@ -177,7 +179,7 @@
                 <dl>
                   <dd>Format: <code>double  <code>asin</code>
                       (
-                                                          double x);</code><br/>
+                                                          double x);</code><br>
                      Returns the angle between -π/2 and π/2 whose sine
                      is x, where -1 ≤ x ≤ 1. result is in radians.
                   </dd>
@@ -190,7 +192,7 @@
                 <dl>
                   <dd>Format: <code>double  <code>atan</code>
                       (
-                                                          double x);</code><br/>
+                                                          double x);</code><br>
                      Returns the angle between -π/2 and π/2 whose tangent
                      is x. result is in radians.
                   </dd>
@@ -203,7 +205,7 @@
                 <dl>
                   <dd>Format: <code>double  <code>cos</code>
                       (
-                                                          double angle);</code><br/>
+                                                          double angle);</code><br>
                      Returns cosine of angle. Angle is specified in radians;
                      result is between -1 and 1.
                   </dd>
@@ -214,7 +216,7 @@
               <td><a name="exp"></a></td>
               <td><code>exp</code> [Category: Math]
                 <dl>
-                  <dd>Format: <code>double exp(double x);</code><br/> Returns e<sup>x</sup>
+                  <dd>Format: <code>double exp(double x);</code><br> Returns e<sup>x</sup>
                      (e is the Euler constant, the base for the natural logarithm of
                      a number).
                   </dd>
@@ -225,7 +227,7 @@
               <td><a name="exp10"></a></td>
               <td><code>exp10</code> [Category: Math]
                 <dl>
-                  <dd>Format: <code>double exp10(double x);</code><br/> Returns 10<sup>x</sup>.</dd>
+                  <dd>Format: <code>double exp10(double x);</code><br> Returns 10<sup>x</sup>.</dd>
                 </dl>
               </td>
             </tr>
@@ -233,7 +235,7 @@
               <td><a name="log"></a></td>
               <td><code>log</code> [Category: Math]
                 <dl>
-                  <dd>Format: <code>double log(double x);</code><br/> Returns log<sub>e</sub>(x), the natural logarithm of x.</dd>
+                  <dd>Format: <code>double log(double x);</code><br> Returns log<sub>e</sub>(x), the natural logarithm of x.</dd>
                 </dl>
               </td>
             </tr>
@@ -241,7 +243,7 @@
               <td><a name="log10"></a></td>
               <td><code>log10</code> [Category: Math]
                 <dl>
-                  <dd>Format: <code>double log10(double x);</code><br/> Returns log<sub>10</sub>(x), the base 10 logarithm of x.</dd>
+                  <dd>Format: <code>double log10(double x);</code><br> Returns log<sub>10</sub>(x), the base 10 logarithm of x.</dd>
                 </dl>
               </td>
             </tr>
@@ -249,7 +251,7 @@
               <td><a name="pow"></a></td>
               <td><code>pow</code> [Category: Math]
                 <dl>
-                  <dd>Format: <code>double pow(double x, double y);</code><br/> Returns x<sup>y</sup>.</dd>
+                  <dd>Format: <code>double pow(double x, double y);</code><br> Returns x<sup>y</sup>.</dd>
                 </dl>
               </td>
             </tr>
@@ -257,7 +259,7 @@
               <td><a name="rand"></a></td>
               <td><code>rand</code>[Category: Math]
                 <dl>
-                  <dd>Format: <code>int rand();</code><br/>
+                  <dd>Format: <code>int rand();</code><br>
                      Returns a (pseudo)
                      random integer between 0 and a very large integer established on system installation,
                      drawn from the (pseudo) random number stream initiated at start of program execution
@@ -272,7 +274,7 @@
               <td><a name="sin"></a></td>
               <td><code>sin</code> [Category: Math]
                 <dl>
-                  <dd>Format: <code>double sin(double angle);</code><br/> Returns the sine of angle. angle is specified in radians; result is between -1 and 1.</dd>
+                  <dd>Format: <code>double sin(double angle);</code><br> Returns the sine of angle. angle is specified in radians; result is between -1 and 1.</dd>
                 </dl>
               </td>
             </tr>
@@ -280,7 +282,7 @@
               <td><a name="sqrt"></a></td>
               <td><code>sqrt </code> [Category: Math]
                 <dl>
-                  <dd>Format: <code>double sqrt(double x);</code><br/> Returns √<span style="border-top: 1px solid #000000; font-size: 15px;">x</span>
+                  <dd>Format: <code>double sqrt(double x);</code><br> Returns √<span style="border-top: 1px solid #000000; font-size: 15px;">x</span>
                     ,
                      the square root of x.
                   </dd>
@@ -290,7 +292,7 @@
             <td><a name="srand"></a></td>
             <td><code>srand</code> [Category: Math]
               <dl>
-                <dd>Format: <code>void srand(int num);</code><br/>
+                <dd>Format: <code>void srand(int num);</code><br>
                    Re-seeds (pseudo) random number generation (the initial seed at start of program execution
                    is <code>srand(1)</code>
                   ). Unless it is desirable that a random number stream be reused,
@@ -307,7 +309,7 @@
               <td><a name="tan"></a></td>
               <td><code>tan</code> [Category: Math]
                 <dl>
-                  <dd>Format: <code>double tan(double angle);</code><br/>
+                  <dd>Format: <code>double tan(double angle);</code><br>
                      Returns the tangent of angle. angle is specified in radians; result is between
                      -∞ and +∞.
                   </dd>

@@ -1,241 +1,72 @@
-html
-  head
-    link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
-    link(href='/css/base.css', rel='stylesheet', type='text/css')
-    link(href='/css/materialize.min.css', media='screen,projection', rel='stylesheet', type='text/css')
-    link(href='/css/docs.css', rel='stylesheet', type='text/css')
-    link(href='../imgs/logos/botguy.png', rel='icon')
-    title Botball Documentation - Tutorial
-    meta(content='#00796b', name='theme-color')
-    meta(content='width=device-width, initial-scale=1.0', name='viewport')
-  body
-    script(src='https://code.jquery.com/jquery-2.1.1.min.js', type='text/javascript')
-    script(src='/js/materialize.min.js', type='text/javascript')
-    script.
-      $(document).ready(function () {
-      $('.button-collapse').sideNav({
-      draggable: true
-      });
-      $(".active").parent().parent().siblings()[0].click() })
-    header
-      ul#slide-out.side-nav.fixed
-        li.red.lighten-1(style='height: 130px')
-          .userView
-            h5.white-text
-              a.white-text(href='/docs/index.html') Index
-        li
-          a(href='/docs/tutorial.html') Tutorial
-        li.no-padding
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Data Objects
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/data-objects/index.html') Introduction
-                  li
-                    a(href='/docs/data-objects/variables.html') Variables
-                  li
-                    a(href='/docs/data-objects/constants.html') Constants
-                  li
-                    a(href='/docs/data-objects/data-types.html') Data Types
-                  li
-                    a(href='/docs/data-objects/arrays.html') Arrays
-                  li
-                    a(href='/docs/data-objects/structures.html') Structures
-                  li
-                    a(href='/docs/data-objects/initialization-examples.html') Initialization Examples
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Statements and Expressions
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/statements-and-expressions/index.html') Introduction
-                  li
-                    a(href='/docs/statements-and-expressions/operators.html') Operators
-                  li
-                    a(href='/docs/statements-and-expressions/control-flow.html') Control Flow
-        li
-          a(href='/docs/tutorial.html') Style
-        li
-          a(href='/docs/tutorial.html') Debugging
-        li.no-padding
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Printing
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/printing/index.html') Introduction
-                  li
-                    a(href='/docs/printing/examples.html') Examples
-                  li
-                    a(href='/docs/printing/printf-codes.html') printf Codes
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Preprocessor
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/preprocessor/index.html') Introduction
-                  li
-                    a(href='/docs/preprocessor/directives.html') Directives
-                  li
-                    a(href='/docs/preprocessor/include.html') Include
-                  li.active
-                    a(href='/docs/preprocessor/macros.html') Macros
-                  li
-                    a(href='/docs/preprocessor/conditional-compilation.html') Conditional Compilation
-        li
-          a(href='/docs/lib/math.html') Math Library
-        li.no-padding
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | KIPR Wallaby/Link
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/lib/kipr/common-functions.html') Common Functions
-                  li
-                    a(href='/docs/lib/kipr/functions.html') Functions List
-                  li
-                    a(href='/docs/lib/kipr/camera.html') Camera Functions
-                  li
-                    a(href='/docs/lib/kipr/graphics.html') Graphics Functions
-                  li
-                    a(href='/docs/lib/kipr/depth.html') Depth Sensor Functions
-                  li
-                    a(href='/docs/lib/kipr/usb.html') File I/O Functions
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | iRobot Create
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/lib/kipr/create/index.html') Introduction
-                  li
-                    a(href='/docs/lib/kipr/create/serial.html') Serial Functions
-                  li
-                    a(href='/docs/lib/kipr/create/configuration.html') Configuration Functions
-                  li
-                    a(href='/docs/lib/kipr/create/movement.html') Movement Functions
-                  li
-                    a(href='/docs/lib/kipr/create/sensors.html') Sensor Functions
-                  li
-                    a(href='/docs/lib/kipr/create/battery.html') Battery Functions
-                  li
-                    a(href='/docs/lib/kipr/create/built-ins.html') Built-In Functions
-                  li
-                    a(href='/docs/lib/kipr/create/music-leds.html') LED and Music Functions
-        li
-          a(href='/docs/lib/kipr/botball.html') Botball Functions
-        li
-          a(href='/docs/lib/kipr/threads.html') Threads
-        li.no-padding
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Motors and Sensors
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/lib/kipr/info/digital-analog-sensors.html') Analog and Digital Sensors
-                  li
-                    a(href='/docs/lib/kipr/info/usb-sensors.html') USB Sensors
-                  li
-                    a(href='/docs/lib/kipr/info/motors-servos.html') Motors and Servos
-                  li
-                    a(href='/docs/lib/kipr/info/simulator.html') Simulator
-        li
-          a(href='/docs/full.html') Full Documentation
-      nav.nav-extended.red.lighten-2
-        .nav-wrapper
-          .col.s12
-            a.button-collapse(data-activates='slide-out', href='#', style='font-size: 50px')
-              i.material-icons menu
-            a#top.brand-logo.waves-effect(href='/docs/index.html') Botball Documentation
-        .nav-wrapper
-          .col.s12
-            a.breadcrumb(href='/docs/preprocessor/index.html') Preprocessor
-            a.breadcrumb(href='#!') Macros
-    main.row
-      .container.col.s12
-        // END HEADER
-        // Preprocessor_Macros
-        a(name='Preprocessor_Macros')
-        h3 Preprocessor Macros
-        p
-          | The
-          | #define preprocessor directive specifies a macro definition. The macro definition is limited to one
-          | line of code (of indefinite length). Once defined the macro will be expanded wherever it occurs in subsequent
-          | program code.
-        p
-          | Macros are often used to provide replacement text, where the macro provides a more meaningful name; e.g.,
-        .Indent
-          code
-            | #define RIGHT_MOTOR 0 // equate RIGHT_MOTOR with 0
-            br
-            | #define POWER  90 // equate POWER with 90
-        p If the motor command
-        .Indent
-          code motor(RIGHT_MOTOR, POWER);
-        p
-          | is used in subsequent code, the preprocessor will expand the 
-          code RIGHT_MOTOR
-          |  and 
-          code POWER
-          |  macros, replace them with 0 and 90, respectively, so the code as prepared for compilation
-          |  becomes
-        .Indent
-          code motor(0, 90);
-        p
-          | Global variables could also be used to provide meaningful names for quantities, but preprocessor macros produce
-          | slightly more efficient code. The primary advantage in either case is that if testing shows that the motor
-          | port or power needs to be changed, it only needs to be changed at one place in the program.
-        p
-          | The definition of a preprocessor macro can also specify one or more arguments to be used in expanding the macro.
-          | For example,
-        .Indent
-          code
-            | #define GO_RIGHT(power) motor(RIGHT_MOTOR,power)
-        p
-          | defines a macro 
-          code GO_RIGHT
-          |  that takes an argument ( 
-          code power
-          | ) and uses the macro 
-          code RIGHT_MOTOR
-          |  in its definition.
-        p
-          | If 
-          code GO_RIGHT(85)
-          |  appears in program code, it will expand to 
-          code motor(RIGHT_MOTOR(85)
-          |  which
-          |  will then expand to 
-          code motor(0,85)
-          |  as the code prepared for compilation.
-        p
-          | Superficially, the use of a macro that doesn't have arguments looks like a global variable reference. Likewise,
-          | the use of a macro with arguments looks like a call to a function. However, macro expansion is simply one-time
-          | text replacement which occurs during preprocessing Compilation resolves global references as memory locations
-          | subject to dynamic change during program execution. When called, a function evaluates and interprets its
-          | arguments dynamically.
-        p
-          | Appropriate use of macros can make it easier to follow the C program logic and can be used to facilitate program
-          | testing and modification.
-        // START FOOTER
+extends ../../../exclude/docbase
+
+block vars
+  - var selected = 'macros'
+  - var path = ["Preprocessor", "Macros"]
+
+block content
+  // Preprocessor_Macros
+  a(name='Preprocessor_Macros')
+  h3 Preprocessor Macros
+  p
+    | The
+    | #define preprocessor directive specifies a macro definition. The macro definition is limited to one
+    | line of code (of indefinite length). Once defined the macro will be expanded wherever it occurs in subsequent
+    | program code.
+  p
+    | Macros are often used to provide replacement text, where the macro provides a more meaningful name; e.g.,
+  .Indent
+    code
+      | #define RIGHT_MOTOR 0 // equate RIGHT_MOTOR with 0
+      br
+      | #define POWER  90 // equate POWER with 90
+  p If the motor command
+  .Indent
+    code motor(RIGHT_MOTOR, POWER);
+  p
+    | is used in subsequent code, the preprocessor will expand the 
+    code RIGHT_MOTOR
+    |  and 
+    code POWER
+    |  macros, replace them with 0 and 90, respectively, so the code as prepared for compilation
+    |  becomes
+  .Indent
+    code motor(0, 90);
+  p
+    | Global variables could also be used to provide meaningful names for quantities, but preprocessor macros produce
+    | slightly more efficient code. The primary advantage in either case is that if testing shows that the motor
+    | port or power needs to be changed, it only needs to be changed at one place in the program.
+  p
+    | The definition of a preprocessor macro can also specify one or more arguments to be used in expanding the macro.
+    | For example,
+  .Indent
+    code
+      | #define GO_RIGHT(power) motor(RIGHT_MOTOR,power)
+  p
+    | defines a macro 
+    code GO_RIGHT
+    |  that takes an argument ( 
+    code power
+    | ) and uses the macro 
+    code RIGHT_MOTOR
+    |  in its definition.
+  p
+    | If 
+    code GO_RIGHT(85)
+    |  appears in program code, it will expand to 
+    code motor(RIGHT_MOTOR(85)
+    |  which
+    |  will then expand to 
+    code motor(0,85)
+    |  as the code prepared for compilation.
+  p
+    | Superficially, the use of a macro that doesn't have arguments looks like a global variable reference. Likewise,
+    | the use of a macro with arguments looks like a call to a function. However, macro expansion is simply one-time
+    | text replacement which occurs during preprocessing Compilation resolves global references as memory locations
+    | subject to dynamic change during program execution. When called, a function evaluates and interprets its
+    | arguments dynamically.
+  p
+    | Appropriate use of macros can make it easier to follow the C program logic and can be used to facilitate program
+    | testing and modification.
+  // START FOOTER
 

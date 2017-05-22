@@ -1,28 +1,30 @@
-
+<!DOCTYPE html>
 <html>
   <head>
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    <link href="/css/base.css" rel="stylesheet" type="text/css"/>
-    <link href="/css/materialize.min.css" media="screen,projection" rel="stylesheet" type="text/css"/>
-    <link href="/css/docs.css" rel="stylesheet" type="text/css"/>
-    <link href="../imgs/logos/botguy.png" rel="icon"/>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/css/base.css">
+    <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection">
+    <link type="text/css" rel="stylesheet" href="/css/docs.css">
+    <link type="text/css" rel="stylesheet" href="/css/prism.css">
+    <link rel="icon" href="../imgs/logos/botguy.png">
     <title>Botball Documentation - Tutorial</title>
-    <meta content="#00796b" name="theme-color"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta name="theme-color" content="#00796b">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
-    <script src="/js/materialize.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/js/materialize.min.js"></script>
+    <script type="text/javascript" src="/js/prism.js"></script>
     <script>
       $(document).ready(function () {
       $('.button-collapse').sideNav({
       draggable: true
       });
-      $(".active").parent().parent().siblings()[0].click() })
+      $('.active').parent().parent().siblings()[0].click() })
     </script>
     <header>
       <ul class="side-nav fixed" id="slide-out">
-        <li class="red lighten-1" style="height: 130px;">
+        <li class="lighten-1 red" style="height: 130px;">
           <div class="userView">
             <h5 class="white-text"><a class="white-text" href="/docs/index.html">Index</a></h5>
           </div>
@@ -54,15 +56,15 @@
             </li>
           </ul>
         </li>
-        <li><a href="/docs/tutorial.html">Style</a></li>
-        <li><a href="/docs/tutorial.html">Debugging</a></li>
+        <li><a href="/docs/style.html">Style</a></li>
+        <li><a href="/docs/debugging.html">Debugging</a></li>
         <li class="no-padding">
           <ul class="collapsible collapsible-accordion">
             <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Printing</a>
               <div class="collapsible-body" style="display: block;">
                 <ul>
                   <li><a href="/docs/printing/index.html">Introduction</a></li>
-                  <li class="active"><a href="/docs/printing/examples.html">Examples</a></li>
+                  <li><a href="/docs/printing/examples.html">Examples</a></li>
                   <li><a href="/docs/printing/printf-codes.html">printf Codes</a></li>
                 </ul>
               </div>
@@ -133,18 +135,18 @@
         </li>
         <li><a href="/docs/full.html">Full Documentation</a></li>
       </ul>
-      <nav class="nav-extended red lighten-2">
+      <nav class="nav-extended lighten-2 red">
         <div class="nav-wrapper">
-          <div class="col s12"><a class="button-collapse" data-activates="slide-out" href="#" style="font-size: 50px;"><i class="material-icons">menu</i></a><a class="brand-logo waves-effect" id="top" href="/docs/index.html">Botball Documentation</a></div>
+          <div class="col s12"><a class="button-collapse" href="#" data-activates="slide-out" style="font-size: 50px;"><i class="material-icons">menu</i></a><a class="brand-logo waves-effect" id="top" href="/docs/index.html">Botball Documentation</a></div>
         </div>
         <div class="nav-wrapper">
-          <div class="col s12"><a class="breadcrumb" href="/docs/printing/index.html">Printing</a><a class="breadcrumb" href="#!">Examples</a></div>
+          <div class="col s12"><a class="breadcrumb" href="#!">Printing</a><a class="breadcrumb" href="#!">Examples</a>
+          </div>
         </div>
       </nav>
     </header>
     <main class="row">
       <div class="container col s12">
-        <!-- END HEADER-->
         <!-- Printing_Examples--><a name="Printing_Examples"></a>
         <h3>Printing Examples</h3>
         <!-- Printing_a_message-->
@@ -245,7 +247,7 @@
             The % code "%c" is used to format character data. The % code "%s" is used for character strings,
             since they are frequently needed for print display.
           </p>
-          <div class="Indent"><code>char header[] = &quot;Data: &quot;, cs=&apos;a&apos;;<br/>int x=28;<br/>printf(&quot;%s%c = %d\n&quot;, header, cs, x);</code></div>
+          <div class="Indent"><code>char header[] = &quot;Data: &quot;, cs=&apos;a&apos;;<br>int x=28;<br>printf(&quot;%s%c = %d\n&quot;, header, cs, x);</code></div>
           <p>displays the text string</p>
           <div class="Indent"><code>Data: a = 28</code></div>
           <p>
@@ -269,7 +271,7 @@
             starting at column 5 on the 3rd row of the display. Note that the first row/first column of the display
             has column index 0 and row index 0.
           </p>
-          <div class="Indent"><code>int i = 2;<br/>char nm[] = &quot;KIPR store&quot;;<br/>display_printf(4,2,&quot;%d. %s   &quot;,i,nm);</code></div>
+          <div class="Indent"><code>int i = 2;<br>char nm[] = &quot;KIPR store&quot;;<br>display_printf(4,2,&quot;%d. %s   &quot;,i,nm);</code></div>
           <p>The column range for <code>display_printf</code>
              is 0 - 41. The row range for the 3 button (A,B,C)
              case is 0 - 9 and for the 6 button (X,Y,Z,A,B,C) case is 0 - 7.
@@ -284,7 +286,7 @@
             enough spaces to what is printed to clear artifacts from the previous print; e.g., if one of
             the following was used,
           </p>
-          <div class="Indent"><code>display_printf(4,2,&quot;%d. %s&quot;,i,nm); // NO<br/>display_printf(4,2,&quot;%d. %s   &quot;,i,nm); // YES</code></div>
+          <div class="Indent"><code>display_printf(4,2,&quot;%d. %s&quot;,i,nm); // NO<br>display_printf(4,2,&quot;%d. %s   &quot;,i,nm); // YES</code></div>
           <p>then if we had already printed "2. KIPR store" and changed <code>nm</code>
              to "Staffing" then
              the first of these would print

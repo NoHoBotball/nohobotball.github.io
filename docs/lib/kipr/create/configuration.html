@@ -1,28 +1,30 @@
-
+<!DOCTYPE html>
 <html>
   <head>
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    <link href="/css/base.css" rel="stylesheet" type="text/css"/>
-    <link href="/css/materialize.min.css" media="screen,projection" rel="stylesheet" type="text/css"/>
-    <link href="/css/docs.css" rel="stylesheet" type="text/css"/>
-    <link href="../imgs/logos/botguy.png" rel="icon"/>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/css/base.css">
+    <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection">
+    <link type="text/css" rel="stylesheet" href="/css/docs.css">
+    <link type="text/css" rel="stylesheet" href="/css/prism.css">
+    <link rel="icon" href="../imgs/logos/botguy.png">
     <title>Botball Documentation - Tutorial</title>
-    <meta content="#00796b" name="theme-color"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta name="theme-color" content="#00796b">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
-    <script src="/js/materialize.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/js/materialize.min.js"></script>
+    <script type="text/javascript" src="/js/prism.js"></script>
     <script>
       $(document).ready(function () {
       $('.button-collapse').sideNav({
       draggable: true
       });
-      $(".active").parent().parent().siblings()[0].click() })
+      $('.active').parent().parent().siblings()[0].click() })
     </script>
     <header>
       <ul class="side-nav fixed" id="slide-out">
-        <li class="red lighten-1" style="height: 130px;">
+        <li class="lighten-1 red" style="height: 130px;">
           <div class="userView">
             <h5 class="white-text"><a class="white-text" href="/docs/index.html">Index</a></h5>
           </div>
@@ -54,8 +56,8 @@
             </li>
           </ul>
         </li>
-        <li><a href="/docs/tutorial.html">Style</a></li>
-        <li><a href="/docs/tutorial.html">Debugging</a></li>
+        <li><a href="/docs/style.html">Style</a></li>
+        <li><a href="/docs/debugging.html">Debugging</a></li>
         <li class="no-padding">
           <ul class="collapsible collapsible-accordion">
             <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Printing</a>
@@ -104,7 +106,7 @@
                 <ul>
                   <li><a href="/docs/lib/kipr/create/index.html">Introduction</a></li>
                   <li><a href="/docs/lib/kipr/create/serial.html">Serial Functions</a></li>
-                  <li class="active"><a href="/docs/lib/kipr/create/configuration.html">Configuration Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/configuration.html">Configuration Functions</a></li>
                   <li><a href="/docs/lib/kipr/create/movement.html">Movement Functions</a></li>
                   <li><a href="/docs/lib/kipr/create/sensors.html">Sensor Functions</a></li>
                   <li><a href="/docs/lib/kipr/create/battery.html">Battery Functions</a></li>
@@ -133,18 +135,18 @@
         </li>
         <li><a href="/docs/full.html">Full Documentation</a></li>
       </ul>
-      <nav class="nav-extended red lighten-2">
+      <nav class="nav-extended lighten-2 red">
         <div class="nav-wrapper">
-          <div class="col s12"><a class="button-collapse" data-activates="slide-out" href="#" style="font-size: 50px;"><i class="material-icons">menu</i></a><a class="brand-logo waves-effect" id="top" href="/docs/index.html">Botball Documentation</a></div>
+          <div class="col s12"><a class="button-collapse" href="#" data-activates="slide-out" style="font-size: 50px;"><i class="material-icons">menu</i></a><a class="brand-logo waves-effect" id="top" href="/docs/index.html">Botball Documentation</a></div>
         </div>
         <div class="nav-wrapper">
-          <div class="col s12"><a class="breadcrumb" href="/docs/lib/kipr/create/index.html">iRobot Create</a><a class="breadcrumb" href="#!">Configuration Functions</a></div>
+          <div class="col s12"><a class="breadcrumb" href="#!">Lib</a><a class="breadcrumb" href="#!">Kipr</a><a class="breadcrumb" href="#!">Create</a><a class="breadcrumb" href="#!">Configuration</a>
+          </div>
         </div>
       </nav>
     </header>
     <main class="row">
       <div class="container col s12">
-        <!-- END HEADER-->
         <!-- Create Configuration--><a name="Create_configuration"></a>
         <h4>Create Configuration Functions</h4>
         <table>
@@ -153,7 +155,7 @@
               <td><a name="create_full"></a></td>
               <td><code>create_full </code> [Category: Create Configuration Function]
                 <dl>
-                  <dd>Format: <code>void  create_full();</code><br/>
+                  <dd>Format: <code>void  create_full();</code><br>
                      Create will
                      move however you tell it (even if that is a bad thing). In particular, the Create will
                      not stop and disconnect if a wheel drop or cliff sensor goes high.
@@ -165,7 +167,7 @@
               <td><a name="create_passive"></a></td>
               <td><code>create_passive </code> [Category: Create Configuration Function]
                 <dl>
-                  <dd>Format: <code>void  create_passive();</code><br/>
+                  <dd>Format: <code>void  create_passive();</code><br>
                      Puts
                      Create into passive mode (motor commands won't work).
                   </dd>
@@ -176,7 +178,7 @@
               <td><a name="create_safe"></a></td>
               <td><code>create_safe </code> [Category: Create Configuration Function]
                 <dl>
-                  <dd>Format: <code>void create_safe();</code><br/>
+                  <dd>Format: <code>void create_safe();</code><br>
                      Create will
                      execute all commands, but will disconnect and stop if a wheel drop or cliff sensor goes
                      high.
@@ -188,7 +190,7 @@
               <td><a name="create_start"></a></td>
               <td><code>create_start </code> [Category: Create Configuration Function]
                 <dl>
-                  <dd>Format: <code>void  create_start();</code><br/>
+                  <dd>Format: <code>void  create_start();</code><br>
                      Puts Create
                      back into active mode (all commands will work). Active mode is the default mode at power
                      on.
@@ -201,7 +203,7 @@
               <td><code>get_create_mode </code> [Category: Create Configuration Function]
                 <dl>
                   <dd>
-                    <dd>Format: <code>int get_create_mode();</code><br/>
+                    <dd>Format: <code>int get_create_mode();</code><br>
                        Returns
                        the Create's current operating mode (0=off, 1=passive, 2=safe, 3=full). In passive
                        mode, motor commands don't work. All commands work in safe or full mode. In safe

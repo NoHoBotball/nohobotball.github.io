@@ -1,28 +1,30 @@
-
+<!DOCTYPE html>
 <html>
   <head>
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    <link href="/css/base.css" rel="stylesheet" type="text/css"/>
-    <link href="/css/materialize.min.css" media="screen,projection" rel="stylesheet" type="text/css"/>
-    <link href="/css/docs.css" rel="stylesheet" type="text/css"/>
-    <link href="../imgs/logos/botguy.png" rel="icon"/>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/css/base.css">
+    <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection">
+    <link type="text/css" rel="stylesheet" href="/css/docs.css">
+    <link type="text/css" rel="stylesheet" href="/css/prism.css">
+    <link rel="icon" href="../imgs/logos/botguy.png">
     <title>Botball Documentation - Tutorial</title>
-    <meta content="#00796b" name="theme-color"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta name="theme-color" content="#00796b">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
-    <script src="/js/materialize.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/js/materialize.min.js"></script>
+    <script type="text/javascript" src="/js/prism.js"></script>
     <script>
       $(document).ready(function () {
       $('.button-collapse').sideNav({
       draggable: true
       });
-      $(".active").parent().parent().siblings()[0].click() })
+      $('.active').parent().parent().siblings()[0].click() })
     </script>
     <header>
       <ul class="side-nav fixed" id="slide-out">
-        <li class="red lighten-1" style="height: 130px;">
+        <li class="lighten-1 red" style="height: 130px;">
           <div class="userView">
             <h5 class="white-text"><a class="white-text" href="/docs/index.html">Index</a></h5>
           </div>
@@ -54,8 +56,8 @@
             </li>
           </ul>
         </li>
-        <li><a href="/docs/tutorial.html">Style</a></li>
-        <li><a href="/docs/tutorial.html">Debugging</a></li>
+        <li><a href="/docs/style.html">Style</a></li>
+        <li><a href="/docs/debugging.html">Debugging</a></li>
         <li class="no-padding">
           <ul class="collapsible collapsible-accordion">
             <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Printing</a>
@@ -103,7 +105,7 @@
               <div class="collapsible-body" style="display: block;">
                 <ul>
                   <li><a href="/docs/lib/kipr/create/index.html">Introduction</a></li>
-                  <li class="active"><a href="/docs/lib/kipr/create/serial.html">Serial Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/serial.html">Serial Functions</a></li>
                   <li><a href="/docs/lib/kipr/create/configuration.html">Configuration Functions</a></li>
                   <li><a href="/docs/lib/kipr/create/movement.html">Movement Functions</a></li>
                   <li><a href="/docs/lib/kipr/create/sensors.html">Sensor Functions</a></li>
@@ -133,18 +135,18 @@
         </li>
         <li><a href="/docs/full.html">Full Documentation</a></li>
       </ul>
-      <nav class="nav-extended red lighten-2">
+      <nav class="nav-extended lighten-2 red">
         <div class="nav-wrapper">
-          <div class="col s12"><a class="button-collapse" data-activates="slide-out" href="#" style="font-size: 50px;"><i class="material-icons">menu</i></a><a class="brand-logo waves-effect" id="top" href="/docs/index.html">Botball Documentation</a></div>
+          <div class="col s12"><a class="button-collapse" href="#" data-activates="slide-out" style="font-size: 50px;"><i class="material-icons">menu</i></a><a class="brand-logo waves-effect" id="top" href="/docs/index.html">Botball Documentation</a></div>
         </div>
         <div class="nav-wrapper">
-          <div class="col s12"><a class="breadcrumb" href="/docs/lib/kipr/create/index.html">iRobot Create</a><a class="breadcrumb" href="#!">Serial Functions</a></div>
+          <div class="col s12"><a class="breadcrumb" href="#!">Lib</a><a class="breadcrumb" href="#!">Kipr</a><a class="breadcrumb" href="#!">Create</a><a class="breadcrumb" href="#!">Serial</a>
+          </div>
         </div>
       </nav>
     </header>
     <main class="row">
       <div class="container col s12">
-        <!-- END HEADER-->
         <!-- Create Serial Interface--><a name="Create_serial_interface"></a>
         <h4>Create Serial Interface Functions</h4>
         <table>
@@ -153,14 +155,14 @@
               <td><a name="create_clear_serial_buffer"></a></td>
               <td><code>create_clear_serial_buffer </code> [Category: Create Serial Interface Function]
                 <dl>
-                  <dd>Format: <code>void create_clear_serial_buffer();</code><br/> Clears the internal serial interface buffer of any unaccessed send/receive data.</dd>
+                  <dd>Format: <code>void create_clear_serial_buffer();</code><br> Clears the internal serial interface buffer of any unaccessed send/receive data.</dd>
                 </dl>
               </td>
             </tr>
             <td><a name="create_connect"></a></td>
             <td><code>create_connect() </code> [Category: Create Serial Interface Function]
               <dl>
-                <dd>Format: <code>int create_connect;</code><br/>
+                <dd>Format: <code>int create_connect;</code><br>
                    Establishes a
                    USB serial connection between the KIPR Robot Controller and a Create module. This statement
                    is normally paired with an <code>msleep</code>
@@ -178,7 +180,7 @@
               <td><a name="create_disconnect"></a></td>
               <td><code>create_disconnect </code> [Category: Create Serial Interface Function]
                 <dl>
-                  <dd>Format: <code>void  create_disconnect();</code><br/>
+                  <dd>Format: <code>void  create_disconnect();</code><br>
                      Restores
                      the Create to power on configuration (which will also shut off any running motors).
                   </dd>
@@ -189,7 +191,7 @@
               <td><a name="create_read_block"></a></td>
               <td><code>create_read_block </code> [Category: Create Serial Interface Function]
                 <dl>
-                  <dd>Format: <code>int create_read_block(char *data, int count);</code><br/>
+                  <dd>Format: <code>int create_read_block(char *data, int count);</code><br>
                      Uses the serial interface to have the Create send the number of bytes specified into
                      the character string pointed to by <code>data</code>
                     . 1 is returned on read success,
@@ -202,7 +204,7 @@
               <td><a name="create_write_byte"></a></td>
               <td><code>create_write_byte </code> [Category: Create Serial Interface Function]
                 <dl>
-                  <dd>Format: <code>void create_write_byte(char byte);</code><br/>
+                  <dd>Format: <code>void create_write_byte(char byte);</code><br>
                      Uses the serial interface to have the KIPR Robot Controller send the specified byte to
                      the iRobot Create. The purpose of this function is for writing functions for supplying
                      a series of byte commands to the Create to have it perform some action, or to load a

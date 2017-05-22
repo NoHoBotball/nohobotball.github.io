@@ -1,406 +1,237 @@
-html
-  head
-    link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
-    link(href='/css/base.css', rel='stylesheet', type='text/css')
-    link(href='/css/materialize.min.css', media='screen,projection', rel='stylesheet', type='text/css')
-    link(href='/css/docs.css', rel='stylesheet', type='text/css')
-    link(href='../imgs/logos/botguy.png', rel='icon')
-    title Botball Documentation - Tutorial
-    meta(content='#00796b', name='theme-color')
-    meta(content='width=device-width, initial-scale=1.0', name='viewport')
-  body
-    script(src='https://code.jquery.com/jquery-2.1.1.min.js', type='text/javascript')
-    script(src='/js/materialize.min.js', type='text/javascript')
-    script.
-      $(document).ready(function () {
-      $('.button-collapse').sideNav({
-      draggable: true
-      });
-      $(".active").parent().parent().siblings()[0].click() })
-    header
-      ul#slide-out.side-nav.fixed
-        li.red.lighten-1(style='height: 130px')
-          .userView
-            h5.white-text
-              a.white-text(href='/docs/index.html') Index
-        li
-          a(href='/docs/tutorial.html') Tutorial
-        li.no-padding
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Data Objects
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/data-objects/index.html') Introduction
-                  li
-                    a(href='/docs/data-objects/variables.html') Variables
-                  li
-                    a(href='/docs/data-objects/constants.html') Constants
-                  li
-                    a(href='/docs/data-objects/data-types.html') Data Types
-                  li
-                    a(href='/docs/data-objects/arrays.html') Arrays
-                  li
-                    a(href='/docs/data-objects/structures.html') Structures
-                  li
-                    a(href='/docs/data-objects/initialization-examples.html') Initialization Examples
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Statements and Expressions
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/statements-and-expressions/index.html') Introduction
-                  li
-                    a(href='/docs/statements-and-expressions/operators.html') Operators
-                  li
-                    a(href='/docs/statements-and-expressions/control-flow.html') Control Flow
-        li
-          a(href='/docs/tutorial.html') Style
-        li
-          a(href='/docs/tutorial.html') Debugging
-        li.no-padding
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Printing
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/printing/index.html') Introduction
-                  li.active
-                    a(href='/docs/printing/examples.html') Examples
-                  li
-                    a(href='/docs/printing/printf-codes.html') printf Codes
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Preprocessor
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/preprocessor/index.html') Introduction
-                  li
-                    a(href='/docs/preprocessor/directives.html') Directives
-                  li
-                    a(href='/docs/preprocessor/include.html') Include
-                  li
-                    a(href='/docs/preprocessor/macros.html') Macros
-                  li
-                    a(href='/docs/preprocessor/conditional-compilation.html') Conditional Compilation
-        li
-          a(href='/docs/lib/math.html') Math Library
-        li.no-padding
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | KIPR Wallaby/Link
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/lib/kipr/common-functions.html') Common Functions
-                  li
-                    a(href='/docs/lib/kipr/functions.html') Functions List
-                  li
-                    a(href='/docs/lib/kipr/camera.html') Camera Functions
-                  li
-                    a(href='/docs/lib/kipr/graphics.html') Graphics Functions
-                  li
-                    a(href='/docs/lib/kipr/depth.html') Depth Sensor Functions
-                  li
-                    a(href='/docs/lib/kipr/usb.html') File I/O Functions
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | iRobot Create
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/lib/kipr/create/index.html') Introduction
-                  li
-                    a(href='/docs/lib/kipr/create/serial.html') Serial Functions
-                  li
-                    a(href='/docs/lib/kipr/create/configuration.html') Configuration Functions
-                  li
-                    a(href='/docs/lib/kipr/create/movement.html') Movement Functions
-                  li
-                    a(href='/docs/lib/kipr/create/sensors.html') Sensor Functions
-                  li
-                    a(href='/docs/lib/kipr/create/battery.html') Battery Functions
-                  li
-                    a(href='/docs/lib/kipr/create/built-ins.html') Built-In Functions
-                  li
-                    a(href='/docs/lib/kipr/create/music-leds.html') LED and Music Functions
-        li
-          a(href='/docs/lib/kipr/botball.html') Botball Functions
-        li
-          a(href='/docs/lib/kipr/threads.html') Threads
-        li.no-padding
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Motors and Sensors
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/lib/kipr/info/digital-analog-sensors.html') Analog and Digital Sensors
-                  li
-                    a(href='/docs/lib/kipr/info/usb-sensors.html') USB Sensors
-                  li
-                    a(href='/docs/lib/kipr/info/motors-servos.html') Motors and Servos
-                  li
-                    a(href='/docs/lib/kipr/info/simulator.html') Simulator
-        li
-          a(href='/docs/full.html') Full Documentation
-      nav.nav-extended.red.lighten-2
-        .nav-wrapper
-          .col.s12
-            a.button-collapse(data-activates='slide-out', href='#', style='font-size: 50px')
-              i.material-icons menu
-            a#top.brand-logo.waves-effect(href='/docs/index.html') Botball Documentation
-        .nav-wrapper
-          .col.s12
-            a.breadcrumb(href='/docs/printing/index.html') Printing
-            a.breadcrumb(href='#!') Examples
-    main.row
-      .container.col.s12
-        // END HEADER
-        // Printing_Examples
-        a(name='Printing_Examples')
-        h3 Printing Examples
-        // Printing_a_message
-        .indent
-          a(name='Printing_a_message')
-          h4 Example 1: Printing a message
-          p
-            | A 
-            code printf
-            |  statement employing no % codes simply prints out the 
-            code &lt;
-            i format-string
-            code &gt;
-            |  as a message; for example,
-          .Indent
-            code printf("Hello, world!\n");
-          p
-            | The character 
-            code \n
-            |  at the end of the string signifies an advance to the next (or new) line for
-            |  any further printing by the program. When the bottom of the display is reached, the display is scrolled
-            |  (up) for each line subsequently printed.
-            // Printing_a_number
-            a(name='Printing_a_number')
-          h4 Example 2: Printing an integer
-          p
-            | In most environments, integers in C are stored in memory as 32-bit 2's complement integers. The % code
-            | used to format the corresponding argument as a ± decimal integer is "%d" (or %i"). For the
-            | following example, the value of the variable 
-            code x
-            |  is displayed as a decimal integer, with
-            |  a leading minus sign if the integer is negative:
-          .Indent
-            code
-              | printf(&quot;Value is %d\n&quot;, x);
-          p
-            | The code "%d" specifies that the first argument after the initial character string in the argument list
-            | for 
-            code printf
-            |  (the variable 
-            code x
-            | ) is to be formatted as a ± decimal integer
-            |  and inserted in place of "%d" in the printed output. The length of the formatted output will vary
-            |  depending on the number.
-          // Printing_a_number_in_hexadecimal
-          a(name='Printing_a_number_in_hexadecimal')
-          h4 Example 3: Other integer print formats
-          p
-            | As already seen, the "%d" code is used to format an argument in ± decimal integer form. The "%x"
-            | and "%X" codes are used to format an argument in (32 bit) 2's complement form using hexadecimal (hex)
-            | digits 0 ..9,A,B,C,D,E,F (each of which represents 4 bits in binary, 0000, 0001, 0010, ..., 1111).
-            | Negative 2's complement numbers have a leading 1, so negative 32-bit integers written in hex require
-            | 8 hex digits beginning with one of the hex digits 8-F; e.g., -28 when formatted using "%X" is FFFFFFE4.
-            | For positive numbers, the space required will vary unless a % code modifier for length is employed;
-            | e.g., using the % code "%8X" for the integer 28 will yield " 
-            code
-            | 1C" (8 spaces are consumed).
-          p
-            | It needs to be emphasized that a length modifier represents the minimum amount of space that will be
-            | used when the formatted result is inserted in the print line. If there isn't enough space, 
-            code printf
-            |  will use more.
-          p
-            | If the code "%08X" is used instead of "%8X", leading 0's will replace any leading spaces (so using %08X"
-            | for the integer 28 will yield "0000001C" as the formatted result). This applies to "%d" as well;
-            | e.g., formatting the numbers -28 and 28 using "%04d" yields as formatted results "-028" and "0028",
-            | respectively. A length specifier is employed when numbers are being printed to line up uniformly
-            | in columns. If you always want the sign of the number printed, not just when it is negative, the
-            | code "%+d" forces the sign to be printed as 
-            code +
-            |  or 
-            code -
-            | .
-          p
-            | For example, the 
-            code printf
-            |  statement
-          .Indent
-            code
-              | printf(&quot;Values are %d, %X, %04x\n&quot;, -28, -28, 28);
-          p displays the text string
-          .Indent
-            code
-              | Values are -28, FFFFFFE4, 001c
-          p
-            | The third % code in this 
-            code printf
-            |  ("%04x") has a length specifier (plus a leading 0's
-            |  specifier) and lower case is used for the hex digits. If the value to be formatted requires more
-            |  space, 
-            code printf
-            |  will override the length specifier. It is up to the programmer when
-            |  using a length specifier to anticipate number size and make the length specifier sufficiently
-            |  large.
-          p
-            | Examples 2 and 3 are representative of output formats for integers using 
-            code printf
-            | . There
-            |  are additional integer output formats (including ones for representing integers using octal digits
-            |  and for unsigned integers) described in most C references.
-          // Printing_a_floating_point_number
-          a(name='Printing_a_floating_point_number')
-          h4 Example 4: Printing a floating point number
-          p
-            | The % code used to format the corresponding argument as a floating point number is "%f". In formatting
-            | for floating point, 
-            code printf
-            |  rounds the fractional part of the number up according
-            |  to the number of decimal places used (its precision). The default precision is 6 decimal places.
-            |  A precision specifier is used to limit this. For example, "%.2f" limits the precision to 2 decimal
-            |  places. For example,
-          .Indent
-            code
-              | printf(&quot;Values are %f, %.2f\n&quot;, 1.266, -1.266);
-          p displays the text string
-          .Indent
-            code
-              | Values are 1.266000, -1.27
-          p
-            | The code "%f" specifies that the first argument after the initial character string in the argument
-            | list for 
-            code printf
-            |  (1.266) is to be formatted as a floating point number rounded to
-            |  6 decimal places and inserted in place of "%f" in the printed output (since 6 decimal places
-            |  is sufficient, no rounding occurs). In contrast, the code "%.2f" for the second argument rounds
-            |  its number (-1.266) to 2 decimal places to yield -1.27.
-          p
-            | There are additional floating point % codes described in C references that are used for formatting
-            | very large (or very small) floating point numbers in scientific (exponential) notation ( 
-            code ±&lt;
-            i mantissa
-            code &gt;
-            |  E ± 
-            code &lt;
-            i exponent
-            code &gt;
-            | ).
-          // Printing_character_strings
-          a(name='Printing_character_strings')
-          h4 Example 5: Printing character strings
-          p
-            | The % code "%c" is used to format character data. The % code "%s" is used for character strings,
-            | since they are frequently needed for print display.
-          .Indent
-            code
-              | char header[] = &quot;Data: &quot;, cs=&apos;a&apos;;
-              br
-              | int x=28;
-              br
-              | printf(&quot;%s%c = %d\n&quot;, header, cs, x);
-          p displays the text string
-          .Indent
-            code
-              | Data: a = 28
-          p
-            | where for the printed output "%s" is replaced by the character string at the memory location corresponding
-            | to 
-            code header
-            | , "%c" is replaced by the character given by 
-            code cs
-            | , and "%d"
-            |  is replaced by the ± decimal representation of the data given by 
-            code x
-            | .
-          // Printing_using_display_printf
-          a(name='Printing_using_display_printf')
-          h4 Example 6: Printing using display_printf
-          p
-            | The function 
-            code
-              code display_printf
-            |  is only valide for the KIPR Robot Controller
-            |  and the Simulator. It is like the standard 
-            code
-              code printf
-            |  function except its first two arguments specify the column and row (zero indexed) on the display where printing starts. The
-            |  remaining arguments are the same as for 
-            code printf
-            | . The
-            |  following example prints
-          .Indent
-            code 2. KIPR store
-          p
-            | starting at column 5 on the 3rd row of the display. Note that the first row/first column of the display
-            | has column index 0 and row index 0.
-          .Indent
-            code
-              | int i = 2;
-              br
-              | char nm[] = &quot;KIPR store&quot;;
-              br
-              | display_printf(4,2,&quot;%d. %s   &quot;,i,nm);
-          p
-            | The column range for 
-            code display_printf
-            |  is 0 - 41. The row range for the 3 button (A,B,C)
-            |  case is 0 - 9 and for the 6 button (X,Y,Z,A,B,C) case is 0 - 7.
-          p
-            code display_printf
-            |  does not wrap, truncating strings that go beyond the end of a row on
-            |  the display.
-          p
-            | The special character ' 
-            code \n
-            | ' should be avoided when using 
-            code display_printf
-            |  since it will have unpredictable effects on what is displayed.
-          p
-            | When repeatedly printing variable data to the same place on the display, care must be taken to add
-            | enough spaces to what is printed to clear artifacts from the previous print; e.g., if one of
-            | the following was used,
-          .Indent
-            code
-              | display_printf(4,2,&quot;%d. %s&quot;,i,nm); // NO
-              br
-              | display_printf(4,2,&quot;%d. %s   &quot;,i,nm); // YES
-          p
-            | then if we had already printed "2. KIPR store" and changed 
-            code nm
-            |  to "Staffing" then
-            |  the first of these would print
-          .Indent
-            code 2. Staffingre
-          p
-            | whereas the second would add enough spaces on the end to clear the artifacts, printing
-          .Indent
-            code 2. Staffing
-        // START FOOTER
+extends ../../../exclude/docbase
+
+block vars
+  - var selected = 'examples'
+  - var path = ["Printing", "Examples"]
+
+block content
+  // Printing_Examples
+  a(name='Printing_Examples')
+  h3 Printing Examples
+  // Printing_a_message
+  .indent
+    a(name='Printing_a_message')
+    h4 Example 1: Printing a message
+    p
+      | A 
+      code printf
+      |  statement employing no % codes simply prints out the 
+      code &lt;
+      i format-string
+      code &gt;
+      |  as a message; for example,
+    .Indent
+      code printf("Hello, world!\n");
+    p
+      | The character 
+      code \n
+      |  at the end of the string signifies an advance to the next (or new) line for
+      |  any further printing by the program. When the bottom of the display is reached, the display is scrolled
+      |  (up) for each line subsequently printed.
+      // Printing_a_number
+      a(name='Printing_a_number')
+    h4 Example 2: Printing an integer
+    p
+      | In most environments, integers in C are stored in memory as 32-bit 2's complement integers. The % code
+      | used to format the corresponding argument as a ± decimal integer is "%d" (or %i"). For the
+      | following example, the value of the variable 
+      code x
+      |  is displayed as a decimal integer, with
+      |  a leading minus sign if the integer is negative:
+    .Indent
+      code
+        | printf(&quot;Value is %d\n&quot;, x);
+    p
+      | The code "%d" specifies that the first argument after the initial character string in the argument list
+      | for 
+      code printf
+      |  (the variable 
+      code x
+      | ) is to be formatted as a ± decimal integer
+      |  and inserted in place of "%d" in the printed output. The length of the formatted output will vary
+      |  depending on the number.
+    // Printing_a_number_in_hexadecimal
+    a(name='Printing_a_number_in_hexadecimal')
+    h4 Example 3: Other integer print formats
+    p
+      | As already seen, the "%d" code is used to format an argument in ± decimal integer form. The "%x"
+      | and "%X" codes are used to format an argument in (32 bit) 2's complement form using hexadecimal (hex)
+      | digits 0 ..9,A,B,C,D,E,F (each of which represents 4 bits in binary, 0000, 0001, 0010, ..., 1111).
+      | Negative 2's complement numbers have a leading 1, so negative 32-bit integers written in hex require
+      | 8 hex digits beginning with one of the hex digits 8-F; e.g., -28 when formatted using "%X" is FFFFFFE4.
+      | For positive numbers, the space required will vary unless a % code modifier for length is employed;
+      | e.g., using the % code "%8X" for the integer 28 will yield " 
+      code
+      | 1C" (8 spaces are consumed).
+    p
+      | It needs to be emphasized that a length modifier represents the minimum amount of space that will be
+      | used when the formatted result is inserted in the print line. If there isn't enough space, 
+      code printf
+      |  will use more.
+    p
+      | If the code "%08X" is used instead of "%8X", leading 0's will replace any leading spaces (so using %08X"
+      | for the integer 28 will yield "0000001C" as the formatted result). This applies to "%d" as well;
+      | e.g., formatting the numbers -28 and 28 using "%04d" yields as formatted results "-028" and "0028",
+      | respectively. A length specifier is employed when numbers are being printed to line up uniformly
+      | in columns. If you always want the sign of the number printed, not just when it is negative, the
+      | code "%+d" forces the sign to be printed as 
+      code +
+      |  or 
+      code -
+      | .
+    p
+      | For example, the 
+      code printf
+      |  statement
+    .Indent
+      code
+        | printf(&quot;Values are %d, %X, %04x\n&quot;, -28, -28, 28);
+    p displays the text string
+    .Indent
+      code
+        | Values are -28, FFFFFFE4, 001c
+    p
+      | The third % code in this 
+      code printf
+      |  ("%04x") has a length specifier (plus a leading 0's
+      |  specifier) and lower case is used for the hex digits. If the value to be formatted requires more
+      |  space, 
+      code printf
+      |  will override the length specifier. It is up to the programmer when
+      |  using a length specifier to anticipate number size and make the length specifier sufficiently
+      |  large.
+    p
+      | Examples 2 and 3 are representative of output formats for integers using 
+      code printf
+      | . There
+      |  are additional integer output formats (including ones for representing integers using octal digits
+      |  and for unsigned integers) described in most C references.
+    // Printing_a_floating_point_number
+    a(name='Printing_a_floating_point_number')
+    h4 Example 4: Printing a floating point number
+    p
+      | The % code used to format the corresponding argument as a floating point number is "%f". In formatting
+      | for floating point, 
+      code printf
+      |  rounds the fractional part of the number up according
+      |  to the number of decimal places used (its precision). The default precision is 6 decimal places.
+      |  A precision specifier is used to limit this. For example, "%.2f" limits the precision to 2 decimal
+      |  places. For example,
+    .Indent
+      code
+        | printf(&quot;Values are %f, %.2f\n&quot;, 1.266, -1.266);
+    p displays the text string
+    .Indent
+      code
+        | Values are 1.266000, -1.27
+    p
+      | The code "%f" specifies that the first argument after the initial character string in the argument
+      | list for 
+      code printf
+      |  (1.266) is to be formatted as a floating point number rounded to
+      |  6 decimal places and inserted in place of "%f" in the printed output (since 6 decimal places
+      |  is sufficient, no rounding occurs). In contrast, the code "%.2f" for the second argument rounds
+      |  its number (-1.266) to 2 decimal places to yield -1.27.
+    p
+      | There are additional floating point % codes described in C references that are used for formatting
+      | very large (or very small) floating point numbers in scientific (exponential) notation ( 
+      code ±&lt;
+      i mantissa
+      code &gt;
+      |  E ± 
+      code &lt;
+      i exponent
+      code &gt;
+      | ).
+    // Printing_character_strings
+    a(name='Printing_character_strings')
+    h4 Example 5: Printing character strings
+    p
+      | The % code "%c" is used to format character data. The % code "%s" is used for character strings,
+      | since they are frequently needed for print display.
+    .Indent
+      code
+        | char header[] = &quot;Data: &quot;, cs=&apos;a&apos;;
+        br
+        | int x=28;
+        br
+        | printf(&quot;%s%c = %d\n&quot;, header, cs, x);
+    p displays the text string
+    .Indent
+      code
+        | Data: a = 28
+    p
+      | where for the printed output "%s" is replaced by the character string at the memory location corresponding
+      | to 
+      code header
+      | , "%c" is replaced by the character given by 
+      code cs
+      | , and "%d"
+      |  is replaced by the ± decimal representation of the data given by 
+      code x
+      | .
+    // Printing_using_display_printf
+    a(name='Printing_using_display_printf')
+    h4 Example 6: Printing using display_printf
+    p
+      | The function 
+      code
+        code display_printf
+      |  is only valide for the KIPR Robot Controller
+      |  and the Simulator. It is like the standard 
+      code
+        code printf
+      |  function except its first two arguments specify the column and row (zero indexed) on the display where printing starts. The
+      |  remaining arguments are the same as for 
+      code printf
+      | . The
+      |  following example prints
+    .Indent
+      code 2. KIPR store
+    p
+      | starting at column 5 on the 3rd row of the display. Note that the first row/first column of the display
+      | has column index 0 and row index 0.
+    .Indent
+      code
+        | int i = 2;
+        br
+        | char nm[] = &quot;KIPR store&quot;;
+        br
+        | display_printf(4,2,&quot;%d. %s   &quot;,i,nm);
+    p
+      | The column range for 
+      code display_printf
+      |  is 0 - 41. The row range for the 3 button (A,B,C)
+      |  case is 0 - 9 and for the 6 button (X,Y,Z,A,B,C) case is 0 - 7.
+    p
+      code display_printf
+      |  does not wrap, truncating strings that go beyond the end of a row on
+      |  the display.
+    p
+      | The special character ' 
+      code \n
+      | ' should be avoided when using 
+      code display_printf
+      |  since it will have unpredictable effects on what is displayed.
+    p
+      | When repeatedly printing variable data to the same place on the display, care must be taken to add
+      | enough spaces to what is printed to clear artifacts from the previous print; e.g., if one of
+      | the following was used,
+    .Indent
+      code
+        | display_printf(4,2,&quot;%d. %s&quot;,i,nm); // NO
+        br
+        | display_printf(4,2,&quot;%d. %s   &quot;,i,nm); // YES
+    p
+      | then if we had already printed "2. KIPR store" and changed 
+      code nm
+      |  to "Staffing" then
+      |  the first of these would print
+    .Indent
+      code 2. Staffingre
+    p
+      | whereas the second would add enough spaces on the end to clear the artifacts, printing
+    .Indent
+      code 2. Staffing
+  // START FOOTER
 

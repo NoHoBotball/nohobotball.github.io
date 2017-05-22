@@ -1,28 +1,30 @@
-
+<!DOCTYPE html>
 <html>
   <head>
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    <link href="/css/base.css" rel="stylesheet" type="text/css"/>
-    <link href="/css/materialize.min.css" media="screen,projection" rel="stylesheet" type="text/css"/>
-    <link href="/css/docs.css" rel="stylesheet" type="text/css"/>
-    <link href="../imgs/logos/botguy.png" rel="icon"/>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/css/base.css">
+    <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection">
+    <link type="text/css" rel="stylesheet" href="/css/docs.css">
+    <link type="text/css" rel="stylesheet" href="/css/prism.css">
+    <link rel="icon" href="../imgs/logos/botguy.png">
     <title>Botball Documentation - Tutorial</title>
-    <meta content="#00796b" name="theme-color"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta name="theme-color" content="#00796b">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
-    <script src="/js/materialize.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/js/materialize.min.js"></script>
+    <script type="text/javascript" src="/js/prism.js"></script>
     <script>
       $(document).ready(function () {
       $('.button-collapse').sideNav({
       draggable: true
       });
-      $(".active").parent().parent().siblings()[0].click() })
+      $('.active').parent().parent().siblings()[0].click() })
     </script>
     <header>
       <ul class="side-nav fixed" id="slide-out">
-        <li class="red lighten-1" style="height: 130px;">
+        <li class="lighten-1 red" style="height: 130px;">
           <div class="userView">
             <h5 class="white-text"><a class="white-text" href="/docs/index.html">Index</a></h5>
           </div>
@@ -54,8 +56,8 @@
             </li>
           </ul>
         </li>
-        <li><a href="/docs/tutorial.html">Style</a></li>
-        <li><a href="/docs/tutorial.html">Debugging</a></li>
+        <li><a href="/docs/style.html">Style</a></li>
+        <li><a href="/docs/debugging.html">Debugging</a></li>
         <li class="no-padding">
           <ul class="collapsible collapsible-accordion">
             <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Printing</a>
@@ -92,7 +94,7 @@
                   <li><a href="/docs/lib/kipr/functions.html">Functions List</a></li>
                   <li><a href="/docs/lib/kipr/camera.html">Camera Functions</a></li>
                   <li><a href="/docs/lib/kipr/graphics.html">Graphics Functions</a></li>
-                  <li class="active"><a href="/docs/lib/kipr/depth.html">Depth Sensor Functions</a></li>
+                  <li><a href="/docs/lib/kipr/depth.html">Depth Sensor Functions</a></li>
                   <li><a href="/docs/lib/kipr/usb.html">File I/O Functions</a></li>
                 </ul>
               </div>
@@ -133,18 +135,18 @@
         </li>
         <li><a href="/docs/full.html">Full Documentation</a></li>
       </ul>
-      <nav class="nav-extended red lighten-2">
+      <nav class="nav-extended lighten-2 red">
         <div class="nav-wrapper">
-          <div class="col s12"><a class="button-collapse" data-activates="slide-out" href="#" style="font-size: 50px;"><i class="material-icons">menu</i></a><a class="brand-logo waves-effect" id="top" href="/docs/index.html">Botball Documentation</a></div>
+          <div class="col s12"><a class="button-collapse" href="#" data-activates="slide-out" style="font-size: 50px;"><i class="material-icons">menu</i></a><a class="brand-logo waves-effect" id="top" href="/docs/index.html">Botball Documentation</a></div>
         </div>
         <div class="nav-wrapper">
-          <div class="col s12"><a class="breadcrumb" href="#!">KIPR Wallaby/Link</a><a class="breadcrumb" href="#!">Depth Sensor Functions</a></div>
+          <div class="col s12"><a class="breadcrumb" href="#!">Lib</a><a class="breadcrumb" href="#!">Kipr</a><a class="breadcrumb" href="#!">Depth</a>
+          </div>
         </div>
       </nav>
     </header>
     <main class="row">
       <div class="container col s12">
-        <!-- END HEADER-->
         <!-- Xtion API--><a name="DepthSensor"></a>
         <h3>KIPR Robot Controller Depth Functions</h3>
         <table class="centerTable">
@@ -152,7 +154,7 @@
             <tr>
               <td>The KIPR Robot Controller has functions supporting the use of an ASUS Xtion as a USB depth sensor.</td>
               <td width="50%">
-                <!-- &lt;img class="right" src="images/XtionDepth.gif" width="50%"&gt;&lt;/img&gt;--><br/>
+                <!-- &lt;img class="right" src="images/XtionDepth.gif" width="50%"&gt;&lt;/img&gt;--><br>
               </td>
             </tr>
           </tbody>
@@ -174,14 +176,14 @@
               </td>
             </tr>
           </tbody>
-        </table><br/>
+        </table><br>
         <table>
           <tbody>
             <tr>
               <td><a name="depth_open"></a></td>
               <td><code>depth_open </code> [Category: Depth]
                 <dl>
-                  <dd>Format: <code>int depth_open();</code><br/>
+                  <dd>Format: <code>int depth_open();</code><br>
                      Turns on the
                      depth sensor. Returns 1 on success, 0 on failure. See also <code>depth_close</code>.
                   </dd>
@@ -192,7 +194,7 @@
               <td><a name="depth_close"></a></td>
               <td><code>depth_close </code> [Category: Depth]
                 <dl>
-                  <dd>Format: <code>void depth_close();</code><br/>
+                  <dd>Format: <code>void depth_close();</code><br>
                      Clean up
                      the depth instance and power down the sensor. See also <code>depth_open</code>.
                   </dd>
@@ -203,7 +205,7 @@
               <td><a name="depth_update"></a></td>
               <td><code>depth_update </code> [Category: Depth]
                 <dl>
-                  <dd>Format: <code>int depth_update();</code><br/>
+                  <dd>Format: <code>int depth_update();</code><br>
                      Generates
                      a new image from the depth sensor for use by the depth functions. Returns 1 on success,
                      0 on failure.
@@ -215,7 +217,7 @@
               <td><a name="depth_scanline_update"></a></td>
               <td><code>depth_scanline_update </code> [Category: Depth]
                 <dl>
-                  <dd>Format: <code>int depth_scanline_update(int row);</code><br/>
+                  <dd>Format: <code>int depth_scanline_update(int row);</code><br>
                      Replaces the current scanline information with the scanline information for the specified
                      row of the image. Returns 1 on success, 0 on failure.
                     <tr></tr>
@@ -223,7 +225,7 @@
                       <td><a name="get_depth_value"></a></td>
                       <td><code>get_depth_value </code> [Category: Depth]
                         <dl>
-                          <dd>Format: <code>int get_depth_value(int row, int col);</code><br/>
+                          <dd>Format: <code>int get_depth_value(int row, int col);</code><br>
                              Returns the value of the depth coordinate z in mm for row and column
                              positions of the image. See also <code>get_depth_world_point</code>.
                           </dd>
@@ -234,11 +236,11 @@
                       <td><a name="get_depth_world_point"></a></td>
                       <td><code>get_depth_world_point </code> [Category: Depth]
                         <dl>
-                          <dd>Format: <code>point3 get_depth_world_point(int row, int col);</code><br/> Returns an object of type <code>point3</code>
+                          <dd>Format: <code>point3 get_depth_world_point(int row, int col);</code><br> Returns an object of type <code>point3</code>
                              giving the (x,y,z)
                              coordinates for the object at position (row,col) in the current image.
-                             For <br/>
-                            <div class="Indent"><code> point3 p3;<br/>
+                             For <br>
+                            <div class="Indent"><code> point3 p3;<br>
                                                p3 = get_depth_world_point(4,7);
                                           </code></div> the (x,y,z) coordinates for row 4, column 7 in the image are given by <code>p3.x</code>, <code>p3.y</code>, <code>p3.z</code>. The value returned by <code>get_depth_value</code> is the same as <code>p3.z</code>.
                           </dd>
@@ -249,7 +251,7 @@
                       <td><a name="get_depth_world_point_x"></a></td>
                       <td><code>get_depth_world_point_x </code> [Category: Depth]
                         <dl>
-                          <dd>Format: <code>int get_depth_world_point_x(int row, int col);</code><br/>
+                          <dd>Format: <code>int get_depth_world_point_x(int row, int col);</code><br>
                              Returns the x coordinate for the object at position (row,col) in
                              the current image. See also <code>get_depth_world_point</code>.
                           </dd>
@@ -260,7 +262,7 @@
                       <td><a name="get_depth_world_point_y"></a></td>
                       <td><code>get_depth_world_point_y </code> [Category: Depth]
                         <dl>
-                          <dd>Format: <code>int get_depth_world_point_y(int row, int col);</code><br/>
+                          <dd>Format: <code>int get_depth_world_point_y(int row, int col);</code><br>
                              Returns the y coordinate for the object at position (row,col) in
                              the current image. See also <code>get_depth_world_point</code>.
                           </dd>
@@ -271,7 +273,7 @@
                       <td><a name="get_depth_world_point_z"></a></td>
                       <td><code>get_depth_world_point_z </code> [Category: Depth]
                         <dl>
-                          <dd>Format: <code>int get_depth_world__zpoint(int row, int col);</code><br/>
+                          <dd>Format: <code>int get_depth_world__zpoint(int row, int col);</code><br>
                              Returns the z coordinate for the object at position (row,col) in
                              the current image. The return value is the same as the value returned
                              by <code>get_depth_value</code>. See also <code>get_depth_world_point</code>.
@@ -282,7 +284,7 @@
                     <td><a name="get_depth_scanline_object_count"></a></td>
                     <td><code>get_depth_scanline_object_count </code> [Category: Depth]
                       <dl>
-                        <dd>Format: <code>int get_depth_scanline_object_count();</code><br/>
+                        <dd>Format: <code>int get_depth_scanline_object_count();</code><br>
                            Returns the number of objects detected on the scanline, where an object
                            is detected by not having a depth break in scanning across it. This means
                            that if the scanline crosses a cavity, it will report two objects. Objects
@@ -299,7 +301,7 @@
               <td><a name="get_depth_scanline_object_nearest_x"></a></td>
               <td><code>get_depth_scanline_object_nearest_x </code> [Category: Depth]
                 <dl>
-                  <dd>Format: <code>int get_depth_object_nearest_x(int obj);</code><br/>
+                  <dd>Format: <code>int get_depth_object_nearest_x(int obj);</code><br>
                      For the specified object returns the coordinate value for the farthest
                      pixel detected.
                   </dd>
@@ -310,7 +312,7 @@
               <td><a name="get_depth_scanline_object_nearest_y"></a></td>
               <td><code>get_depth_scanline_object_nearest_y </code> [Category: Depth]
                 <dl>
-                  <dd>Format: <code>int get_depth_object_nearest_y(int obj);</code><br/>
+                  <dd>Format: <code>int get_depth_object_nearest_y(int obj);</code><br>
                      For the specified object returns the coordinate value for the farthest
                      pixel detected.
                   </dd>
@@ -321,7 +323,7 @@
               <td><a name="get_depth_scanline_object_nearest_z"></a></td>
               <td><code>get_depth_scanline_object_nearest_z </code> [Category: Depth]
                 <dl>
-                  <dd>Format: <code>int get_depth_object_nearest_z(int obj);</code><br/>
+                  <dd>Format: <code>int get_depth_object_nearest_z(int obj);</code><br>
                      For the specified object returns the coordinate value for the nearest
                      pixel detected.
                   </dd>
@@ -332,7 +334,7 @@
               <td><a name="get_depth_scanline_object_center_x"></a></td>
               <td><code>get_depth_scanline_object_center_x </code> [Category: Depth]
                 <dl>
-                  <dd>Format: <code>int get_depth_object_center_x(int obj);</code><br/>
+                  <dd>Format: <code>int get_depth_object_center_x(int obj);</code><br>
                      For the specified object returns the coordinate value for the farthest
                      pixel detected.
                   </dd>
@@ -343,7 +345,7 @@
               <td><a name="get_depth_scanline_object_center_y"></a></td>
               <td><code>get_depth_scanline_object_center_y </code> [Category: Depth]
                 <dl>
-                  <dd>Format: <code>int get_depth_object_center_y(int obj);</code><br/>
+                  <dd>Format: <code>int get_depth_object_center_y(int obj);</code><br>
                      For the specified object returns the coordinate value for the farthest
                      pixel detected.
                   </dd>
@@ -354,7 +356,7 @@
               <td><a name="get_depth_scanline_object_center_z"></a></td>
               <td><code>get_depth_scanline_object_center_z </code> [Category: Depth]
                 <dl>
-                  <dd>Format: <code>int get_depth_object_center_z(int obj);</code><br/>
+                  <dd>Format: <code>int get_depth_object_center_z(int obj);</code><br>
                      For the specified object returns the coordinate value for the center
                      pixel.
                   </dd>
@@ -365,7 +367,7 @@
               <td><a name="get_depth_scanline_object_farthest_x"></a></td>
               <td><code>get_depth_scanline_object_farthest_x </code> [Category: Depth]
                 <dl>
-                  <dd>Format: <code>int get_depth_object_farthest_x(int obj);</code><br/>
+                  <dd>Format: <code>int get_depth_object_farthest_x(int obj);</code><br>
                      For the specified object returns the coordinate value for the farthest
                      pixel detected.
                   </dd>
@@ -376,7 +378,7 @@
               <td><a name="get_depth_scanline_object_farthest_y"></a></td>
               <td><code>get_depth_scanline_object_farthest_y </code> [Category: Depth]
                 <dl>
-                  <dd>Format: <code>int get_depth_object_farthest_y(int obj);</code><br/>
+                  <dd>Format: <code>int get_depth_object_farthest_y(int obj);</code><br>
                      For the specified object returns the coordinate value for the farthest
                      pixel detected.
                   </dd>
@@ -387,7 +389,7 @@
               <td><a name="get_depth_scanline_object_farthest_z"></a></td>
               <td><code>get_depth_scanline_object_farthest_z </code> [Category: Depth]
                 <dl>
-                  <dd>Format: <code>int get_depth_object_farthest_z(int obj);</code><br/>
+                  <dd>Format: <code>int get_depth_object_farthest_z(int obj);</code><br>
                      For the specified object returns the coordinate value for the farthest
                      pixel detected.
                   </dd>
@@ -398,7 +400,7 @@
               <td><a name="get_depth_scanline_object_size"></a></td>
               <td><code>get_depth_scanline_object_size </code> [Category: Depth]
                 <dl>
-                  <dd>Format: <code>int get_depth_object_size(int obj);</code><br/>
+                  <dd>Format: <code>int get_depth_object_size(int obj);</code><br>
                      For the specified object returns the distance on the scanline between
                      the leftmost and rightmost pixel detected.
                   </dd>
@@ -409,7 +411,7 @@
               <td><a name="get_depth_scanline_object_angle"></a></td>
               <td><code>get_depth_scanline_object_angle </code> [Category: Depth]
                 <dl>
-                  <dd>Format: <code>int get_depth_object_angle(int obj);</code><br/>
+                  <dd>Format: <code>int get_depth_object_angle(int obj);</code><br>
                      For the specified object returns the angular measure (in degrees) from
                      the leftmost pixel on the scanline to the right most. Positive is counterclockwise.
                   </dd>

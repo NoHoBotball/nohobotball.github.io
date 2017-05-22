@@ -1,28 +1,30 @@
-
+<!DOCTYPE html>
 <html>
   <head>
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    <link href="/css/base.css" rel="stylesheet" type="text/css"/>
-    <link href="/css/materialize.min.css" media="screen,projection" rel="stylesheet" type="text/css"/>
-    <link href="/css/docs.css" rel="stylesheet" type="text/css"/>
-    <link href="../imgs/logos/botguy.png" rel="icon"/>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/css/base.css">
+    <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection">
+    <link type="text/css" rel="stylesheet" href="/css/docs.css">
+    <link type="text/css" rel="stylesheet" href="/css/prism.css">
+    <link rel="icon" href="../imgs/logos/botguy.png">
     <title>Botball Documentation - Tutorial</title>
-    <meta content="#00796b" name="theme-color"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta name="theme-color" content="#00796b">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
-    <script src="/js/materialize.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/js/materialize.min.js"></script>
+    <script type="text/javascript" src="/js/prism.js"></script>
     <script>
       $(document).ready(function () {
       $('.button-collapse').sideNav({
       draggable: true
       });
-      $(".active").parent().parent().siblings()[0].click() })
+      $('.active').parent().parent().siblings()[0].click() })
     </script>
     <header>
       <ul class="side-nav fixed" id="slide-out">
-        <li class="red lighten-1" style="height: 130px;">
+        <li class="lighten-1 red" style="height: 130px;">
           <div class="userView">
             <h5 class="white-text"><a class="white-text" href="/docs/index.html">Index</a></h5>
           </div>
@@ -54,8 +56,8 @@
             </li>
           </ul>
         </li>
-        <li><a href="/docs/tutorial.html">Style</a></li>
-        <li><a href="/docs/tutorial.html">Debugging</a></li>
+        <li><a href="/docs/style.html">Style</a></li>
+        <li><a href="/docs/debugging.html">Debugging</a></li>
         <li class="no-padding">
           <ul class="collapsible collapsible-accordion">
             <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Printing</a>
@@ -91,7 +93,7 @@
                   <li><a href="/docs/lib/kipr/common-functions.html">Common Functions</a></li>
                   <li><a href="/docs/lib/kipr/functions.html">Functions List</a></li>
                   <li><a href="/docs/lib/kipr/camera.html">Camera Functions</a></li>
-                  <li class="active"><a href="/docs/lib/kipr/graphics.html">Graphics Functions</a></li>
+                  <li><a href="/docs/lib/kipr/graphics.html">Graphics Functions</a></li>
                   <li><a href="/docs/lib/kipr/depth.html">Depth Sensor Functions</a></li>
                   <li><a href="/docs/lib/kipr/usb.html">File I/O Functions</a></li>
                 </ul>
@@ -133,18 +135,18 @@
         </li>
         <li><a href="/docs/full.html">Full Documentation</a></li>
       </ul>
-      <nav class="nav-extended red lighten-2">
+      <nav class="nav-extended lighten-2 red">
         <div class="nav-wrapper">
-          <div class="col s12"><a class="button-collapse" data-activates="slide-out" href="#" style="font-size: 50px;"><i class="material-icons">menu</i></a><a class="brand-logo waves-effect" id="top" href="/docs/index.html">Botball Documentation</a></div>
+          <div class="col s12"><a class="button-collapse" href="#" data-activates="slide-out" style="font-size: 50px;"><i class="material-icons">menu</i></a><a class="brand-logo waves-effect" id="top" href="/docs/index.html">Botball Documentation</a></div>
         </div>
         <div class="nav-wrapper">
-          <div class="col s12"><a class="breadcrumb" href="#!">KIPR Wallaby/Link</a><a class="breadcrumb" href="#!">Graphics Functions</a></div>
+          <div class="col s12"><a class="breadcrumb" href="#!">Lib</a><a class="breadcrumb" href="#!">Kipr</a><a class="breadcrumb" href="#!">Graphics</a>
+          </div>
         </div>
       </nav>
     </header>
     <main class="row">
       <div class="container col s12">
-        <!-- END HEADER-->
         <!-- Graphics API--><a name="Graphics"></a>
         <h3>KIPR Robot Controller Graphics Functions</h3>
         <p>
@@ -167,7 +169,7 @@
                 <dl>
                   <dd>Format: <code>int graphics_open(int </code>
                     width,
-                     int height);<br/>
+                     int height);<br>
                      Opens and centers a graphics window on the display of the specified
                      width and height. The maximum width for the KIPR Robot Controller display is 320, and
                      the maximum height is 240. See also <code>graphics_close</code>.
@@ -179,7 +181,7 @@
               <td><a name="graphics_close"></a></td>
               <td><code>graphics_close </code> [Category: Graphics]
                 <dl>
-                  <dd>Format: <code>void graphics_close();</code><br/>
+                  <dd>Format: <code>void graphics_close();</code><br>
                      Closes
                      the graphics window on the display, restoring access to any virtual buttons underneath
                      it. See also <code>graphics_open</code>.
@@ -191,7 +193,7 @@
               <td><a name="graphics_update"></a></td>
               <td><code>graphics_update </code> [Category: Graphics]
                 <dl>
-                  <dd>Format: <code>void graphics_update();</code><br/>
+                  <dd>Format: <code>void graphics_update();</code><br>
                      Repaints
                      the pixels in the graphics window to show any changes that have been made.
                   </dd>
@@ -202,7 +204,7 @@
               <td><a name="graphics_clear"></a></td>
               <td><code>graphics_clear </code> [Category: Graphics]
                 <dl>
-                  <dd>Format: <code>void graphics_clear();</code><br/>
+                  <dd>Format: <code>void graphics_clear();</code><br>
                      Erases
                      the graphics window (not shown until <code>graphics_update</code>).
                   </dd>
@@ -213,7 +215,7 @@
               <td><a name="graphics_fill"></a></td>
               <td><code>graphics_fill </code> [Category: Graphics]
                 <dl>
-                  <dd>Format: <code>void graphics_fill(int r, int g, int b);</code><br/> Colors the pixels in the window using the <code>r</code>, <code>g</code>, <code>b</code> color encoding.</dd>
+                  <dd>Format: <code>void graphics_fill(int r, int g, int b);</code><br> Colors the pixels in the window using the <code>r</code>, <code>g</code>, <code>b</code> color encoding.</dd>
                 </dl>
               </td>
             </tr>
@@ -221,7 +223,7 @@
               <td><a name="graphics_pixel"></a></td>
               <td><code>graphics_pixel </code> [Category: Graphics]
                 <dl>
-                  <dd>Format: <code>void graphics_pixel(int x, int y, int r, int g, int b);</code><br/> Colors the specified pixel in the window using the <code>r</code>, <code>g</code>, <code>b</code> color encoding, where columns <code>x</code> and rows <code>y</code>
+                  <dd>Format: <code>void graphics_pixel(int x, int y, int r, int g, int b);</code><br> Colors the specified pixel in the window using the <code>r</code>, <code>g</code>, <code>b</code> color encoding, where columns <code>x</code> and rows <code>y</code>
                      are indexed starting
                      from the upper left corner of the graphics window.
                   </dd>
@@ -232,7 +234,7 @@
               <td><a name="graphics_line"></a></td>
               <td><code>graphics_line </code> [Category: Graphics]
                 <dl>
-                  <dd>Format: <code>void graphics_line(int x1, int y1, int x2, int y2, int r, int g, int b);</code><br/> Draws a line in the window from the specified ( <code>x1</code>, <code>y1</code>
+                  <dd>Format: <code>void graphics_line(int x1, int y1, int x2, int y2, int r, int g, int b);</code><br> Draws a line in the window from the specified ( <code>x1</code>, <code>y1</code>
                     ) pixel
                      to the ( <code>x2</code>, <code>y2</code>) pixel using the <code>r</code>, <code>g</code>, <code>b</code>
                      color encoding (where columns x and rows y are indexed starting from the upper left corner
@@ -245,7 +247,7 @@
               <td><a name="graphics_circle"></a></td>
               <td><code>graphics_circle </code> [Category: Graphics]
                 <dl>
-                  <dd>Format: <code>void graphics_circle(int cx, int cy, int radius, int r, int g, int b);</code><br/> Draws a circle in the window of the specified radius centered at ( <code>cx</code>, <code>cy</code>
+                  <dd>Format: <code>void graphics_circle(int cx, int cy, int radius, int r, int g, int b);</code><br> Draws a circle in the window of the specified radius centered at ( <code>cx</code>, <code>cy</code>
                     )
                      using the <code>r</code>, <code>g</code>, <code>b</code>
                      color encoding (where columns
@@ -258,7 +260,7 @@
               <td><a name="graphics_circle_fill"></a></td>
               <td><code>graphics_circle_fill </code> [Category: Graphics]
                 <dl>
-                  <dd>Format: <code>void graphics_circle_fill(int cx, int cy, int radius, int r, int g, int b);</code><br/> Draws a circle in the window of the specified radius centered at ( <code>cx</code>, <code>cy</code>
+                  <dd>Format: <code>void graphics_circle_fill(int cx, int cy, int radius, int r, int g, int b);</code><br> Draws a circle in the window of the specified radius centered at ( <code>cx</code>, <code>cy</code>
                     )
                      and fills it using the <code>r</code>, <code>g</code>, <code>b</code>
                      color encoding (where
@@ -272,7 +274,7 @@
               <td><a name="graphics_rectangle"></a></td>
               <td><code>graphics_rectangle </code> [Category: Graphics]
                 <dl>
-                  <dd>Format: <code>void graphics_rectangle(int x1, int y1, int x2, int y2, int r, int g, int b);</code><br/> Draws a rectangle in the window with upper left corner ( <code>x1</code>, <code>y1</code>
+                  <dd>Format: <code>void graphics_rectangle(int x1, int y1, int x2, int y2, int r, int g, int b);</code><br> Draws a rectangle in the window with upper left corner ( <code>x1</code>, <code>y1</code>
                     )
                      and lower right corner ( <code>x2</code>, <code>y2</code>) using the <code>r</code>, <code>g</code>, <code>b</code>
                      color encoding (where columns x and rows y are indexed starting from the upper left corner
@@ -285,7 +287,7 @@
               <td><a name="graphics_rectangle_fill"></a></td>
               <td><code>graphics_rectangle_fill </code> [Category: Graphics]
                 <dl>
-                  <dd>Format: <code>void graphics_rectangle_fill(int x1, int y1, int x2, int y2, int r, int g, int b);</code><br/> Draws a rectangle in the window with upper left corner ( <code>x1</code>, <code>y1</code>
+                  <dd>Format: <code>void graphics_rectangle_fill(int x1, int y1, int x2, int y2, int r, int g, int b);</code><br> Draws a rectangle in the window with upper left corner ( <code>x1</code>, <code>y1</code>
                     )
                      and lower right corner ( <code>x2</code>, <code>y2</code>) and fills it using the <code>r</code>, <code>g</code>, <code>b</code>
                      color encoding (where columns x and rows y are indexed starting from the upper left corner
@@ -298,7 +300,7 @@
               <td><a name="graphics_triangle"></a></td>
               <td><code>graphics_triangle </code> [Category: Graphics]
                 <dl>
-                  <dd>Format: <code>void graphics_triangle(int x1, int y1, int x2, int y2, int x3, int y3, int r, int g, int b);</code><br/> Draws a triangle in the window with corners ( <code>x1</code>, <code>y1</code>), ( <code>x2</code>, <code>y2</code>), ( <code>x3</code>, <code>y3</code>) using the <code>r</code>, <code>g</code>, <code>b</code>
+                  <dd>Format: <code>void graphics_triangle(int x1, int y1, int x2, int y2, int x3, int y3, int r, int g, int b);</code><br> Draws a triangle in the window with corners ( <code>x1</code>, <code>y1</code>), ( <code>x2</code>, <code>y2</code>), ( <code>x3</code>, <code>y3</code>) using the <code>r</code>, <code>g</code>, <code>b</code>
                      color encoding (where columns x and rows
                      y are indexed starting from the upper left corner of the graphics window).
                   </dd>
@@ -309,7 +311,7 @@
               <td><a name="graphics_triangle_fill"></a></td>
               <td><code>graphics_triangle_fill </code> [Category: Graphics]
                 <dl>
-                  <dd>Format: <code>void graphics_triangle_fill(int x1, int y1, int x2, int y2, int x3, int y3, int r, int g, int b);</code><br/> Draws a triangle in the window with corners ( <code>x1</code>, <code>y1</code>), ( <code>x2</code>, <code>y2</code>), ( <code>x3</code>, <code>y3</code>
+                  <dd>Format: <code>void graphics_triangle_fill(int x1, int y1, int x2, int y2, int x3, int y3, int r, int g, int b);</code><br> Draws a triangle in the window with corners ( <code>x1</code>, <code>y1</code>), ( <code>x2</code>, <code>y2</code>), ( <code>x3</code>, <code>y3</code>
                     ) and fills it using
                      the <code>r</code>, <code>g</code>, <code>b</code>
                      color encoding (where columns x and
@@ -322,9 +324,9 @@
               <td><a name="get_mouse_position"></a></td>
               <td><code>get_mouse_position </code> [Category: Graphics]
                 <dl>
-                  <dd>Format: <code>void get_mouse_position(int *x, int *y);</code><br/>
+                  <dd>Format: <code>void get_mouse_position(int *x, int *y);</code><br>
                      Assigns the column,row position of the cursor in the window to the two specified address
-                     parameters. Note that the typical call for this function will look like<br/>
+                     parameters. Note that the typical call for this function will look like<br>
                     <div class="Indent"><code>get_mouse_position(&col, &row);</code></div>
                   </dd>
                 </dl>
@@ -334,7 +336,7 @@
               <td><a name="get_mouse_left_button"></a></td>
               <td><code>get_mouse_left_button </code> [Category: Graphics]
                 <dl>
-                  <dd>Format: <code>int get_mouse_left_button();</code><br/>
+                  <dd>Format: <code>int get_mouse_left_button();</code><br>
                      Returns 1 if the left mouse button is clicked or if the KIPR Robot Controller display
                      is tapped. The two additional functions <code>get_mouse_middle_button</code> and <code>get_mouse_right_button</code>
                      are also available but have no meaning on the KIPR Robot Controller (unless a mouse is
