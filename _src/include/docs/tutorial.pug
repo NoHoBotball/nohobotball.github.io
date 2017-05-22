@@ -34,7 +34,7 @@ html
               a.collapsible-header
                 i.material-icons
                   | arrow_drop_down
-                |         Data Objects
+                |  Data Objects
               .collapsible-body(style='display: block')
                 ul
                   li
@@ -62,7 +62,7 @@ html
               a.collapsible-header
                 i.material-icons
                   | arrow_drop_down
-                |         Statements and Expressions
+                |  Statements and Expressions
               .collapsible-body(style='display: block')
                 ul
                   li
@@ -86,7 +86,7 @@ html
               a.collapsible-header
                 i.material-icons
                   | arrow_drop_down
-                |         Printing
+                |  Printing
               .collapsible-body(style='display: block')
                 ul
                   li
@@ -103,7 +103,7 @@ html
               a.collapsible-header
                 i.material-icons
                   | arrow_drop_down
-                |         Preprocessor
+                |  Preprocessor
               .collapsible-body(style='display: block')
                 ul
                   li
@@ -130,7 +130,7 @@ html
               a.collapsible-header
                 i.material-icons
                   | arrow_drop_down
-                |         KIPR Wallaby/Link
+                |  KIPR Wallaby/Link
               .collapsible-body(style='display: block')
                 ul
                   li
@@ -156,7 +156,7 @@ html
               a.collapsible-header
                 i.material-icons
                   | arrow_drop_down
-                |         iRobot Create
+                |  iRobot Create
               .collapsible-body(style='display: block')
                 ul
                   li
@@ -195,7 +195,7 @@ html
               a.collapsible-header
                 i.material-icons
                   | arrow_drop_down
-                |         Motors and Sensors
+                |  Motors and Sensors
               .collapsible-body(style='display: block')
                 ul
                   li
@@ -234,32 +234,32 @@ html
           | A Quick C Tutorial
         p
           | A C program consists of one or more function definitions along with user specified data structures, and typically
-          | utilizes pre-compiled code from function libraries. To be a C program, one of the functions must be named
+          | utilizes pre-compiled code from function libraries. To be a C program, one of the functions must be named 
           code
             | main
-          |      .
+          |  .
         p
-          | The following is a simple C program which has a single defined function named
+          | The following is a simple C program which has a single defined function named 
           code
             | main
-          |      and which utilizes
-          |                 the library function
+          |  and which utilizes
+          |  the library function 
           code
             | printf
-          |      . A C function returns a value whose type needs to be specified.
-          |                 As a C function
+          |  . A C function returns a value whose type needs to be specified.
+          |  As a C function 
           code
             | main
-          |      is defined by first declaring its return data type followed by its name (
+          |  is defined by first declaring its return data type followed by its name ( 
           code
             | main
-          |      )
-          |                 and argument list in parentheses (empty in this case), after which the program code for the function is given
-          |                 in curly braces (
+          |  )
+          |  and argument list in parentheses (empty in this case), after which the program code for the function is given
+          |  in curly braces ( 
           code
             | {}
-          |      ). Comments are normally included to document the function's purpose and
-          |                 expected behavior, and are ignored in the compilation process.
+          |  ). Comments are normally included to document the function's purpose and
+          |  expected behavior, and are ignored in the compilation process.
         a(name='SimpleProgram')
         // div class="card-panel hoverable tomorrow lighten-2"
         pre
@@ -272,30 +272,30 @@ html
             | }
         // /div
         p
-          | Text between
+          | Text between 
           code
             | /*
-          |      and
+          |  and 
           code
             | */
-          |      forms what is termed a bracketed comment, which can extend over
-          |                 multiple lines. Text that starts with
+          |  forms what is termed a bracketed comment, which can extend over
+          |  multiple lines. Text that starts with 
           code
             | //
-          |      forms a single line comment which continues only to
-          |                 the end of the line. Commenting program code is a good habit to form, especially considering it has no impact
-          |                 on program performance.
+          |  forms a single line comment which continues only to
+          |  the end of the line. Commenting program code is a good habit to form, especially considering it has no impact
+          |  on program performance.
         p
-          | All C functions must have a return data type. While
+          | All C functions must have a return data type. While 
           code
             | main
-          |      does not return a value to another function,
-          |                 it is expected to return an integer to the operating system (not relevant to this discussion), and so has
-          |                 return type
-          |      int
-          |      . In C, a function does not have to return a value, which is specified by return type
-          |      void
-          |      .
+          |  does not return a value to another function,
+          |  it is expected to return an integer to the operating system (not relevant to this discussion), and so has
+          |  return type
+          |  int
+          |  . In C, a function does not have to return a value, which is specified by return type
+          |  void
+          |  .
         p
           | Another common numeric data type is
           | double
@@ -303,96 +303,96 @@ html
           | There are additional basic (or
           i
             | ordinal
-          |      ) data types, and user defined data types derived from basic
-          |                 data types may also be employed.
+          |  ) data types, and user defined data types derived from basic
+          |  data types may also be employed.
         p
           | The Botball, graphics, opencv, stdio, stdlib, math, strings and time libraries are all included in the header
           | in the template. The system takes care of the needed
           | #include
           | .
         p
-          | The function's name immediately follows the function's return type specification (in this case,
+          | The function's name immediately follows the function's return type specification (in this case, 
           code
             | main
-          |      ).
-          |                     Next, in parentheses, are any arguments (or inputs) to the function.
+          |  ).
+          |  Next, in parentheses, are any arguments (or inputs) to the function. 
           code
             | main
-          |      has none, signified
-          |                     by an empty set of parentheses.
+          |  has none, signified
+          |  by an empty set of parentheses.
         p
-          | The open curly-brace (
+          | The open curly-brace ( 
           code
             | {
-          |      ) that follows the argument list signifies the start of the actual function
-          |                     code. Curly-braces are used to structure a program as blocks of code. For C, so-called "white space"
-          |                     consists of one or more of any combination of characters such as spaces, returns, new lines, and tabs,
-          |                     which is collapsed to a single generic white space character in compilation. For this reason, white space
-          |                     can be used for things like indentation that improve program readability. In particular, the KISS IDE
-          |                     editor automatically applies white space readability conventions to enhance files as they are edited.
+          |  ) that follows the argument list signifies the start of the actual function
+          |  code. Curly-braces are used to structure a program as blocks of code. For C, so-called "white space"
+          |  consists of one or more of any combination of characters such as spaces, returns, new lines, and tabs,
+          |  which is collapsed to a single generic white space character in compilation. For this reason, white space
+          |  can be used for things like indentation that improve program readability. In particular, the KISS IDE
+          |  editor automatically applies white space readability conventions to enhance files as they are edited.
         p
           | The body of the function consists of a block consisting of a series of C statements. A C statement specifies
-          | a data structure or some specific action to be taken and is terminated with a semicolon (
+          | a data structure or some specific action to be taken and is terminated with a semicolon ( 
           code
             | ;
-          |      ).
-          |                     The simple example program has a single statement,
+          |  ).
+          |  The simple example program has a single statement,
         .Indent
           code
             | printf(&quot;Hello, world!\n&quot;);
         p
-          | The action this statement specifies is calling the C library
+          | The action this statement specifies is calling the C library 
           code
             | printf
-          |      function to format and print
-          |                     the message
+          |  function to format and print
+          |  the message 
           code
             | Hello, world!
-          |      to the project target. The
-          |      '\n'
-          |      directs
+          |  to the project target. The
+          |  '\n'
+          |  directs 
           code
             | printf
-          |      to "start a new line" (in effect ending the current line and
-          |                     positioning for subsequent printing to start on the next line). When printing reaches the bottom of the
-          |                     KIPR Controller display, any additional lines printed cause the display to scroll up. Since calling the
+          |  to "start a new line" (in effect ending the current line and
+          |  positioning for subsequent printing to start on the next line). When printing reaches the bottom of the
+          |  KIPR Controller display, any additional lines printed cause the display to scroll up. Since calling the 
           code
             | printf
-          |      function is a C statement, it has to be ended with a semicolon (
+          |  function is a C statement, it has to be ended with a semicolon ( 
           code
             | ;
-          |      ).
-          |                     A common error made by beginning C programmers is omitting the semicolon that is required to end each
-          |                     statement.
+          |  ).
+          |  A common error made by beginning C programmers is omitting the semicolon that is required to end each
+          |  statement.
         p
-          | The closing curly-brace (
+          | The closing curly-brace ( 
           code
             | }
-          |      ) for the
+          |  ) for the 
           code
             | main
-          |      function's block structure concludes its
-          |                     definition.
+          |  function's block structure concludes its
+          |  definition.
         p
-          | If the compiler issues a warning that
+          | If the compiler issues a warning that 
           code
             | printf
-          |      is being used with an implicit declaration, then
-          |                     prefacing the program code with the preprocessor directive
+          |  is being used with an implicit declaration, then
+          |  prefacing the program code with the preprocessor directive
         .Indent
-          | #include <stdio.h>
+          | #include &lt;stdio.h&gt;
         p
           | will ensure that the C preprocessor includes the declaration in preparing the code for compilation.
         p
-          | As a second example exhibiting features of C, the following program code defines a function named
+          | As a second example exhibiting features of C, the following program code defines a function named 
           code
             | square
-          |      which returns the mathematical square of an integer. In this case the function does not represent
-          |                         a complete C program, since a function named
+          |  which returns the mathematical square of an integer. In this case the function does not represent
+          |  a complete C program, since a function named 
           code
             | main
-          |      for using it has not been defined
-          |                         yet.
+          |  for using it has not been defined
+          |  yet.
         pre
           code.language-clike
             | int square(int n)
@@ -404,20 +404,20 @@ html
           | int
           | , which means that it will return an integer value.
         p
-          | The function name (
+          | The function name ( 
           code
             | square
-          |      ) is followed by its argument list in parentheses, where arguments
-          |                         are separated by commas if there are more than one (there is only one in this case). The argument
-          |                         for
+          |  ) is followed by its argument list in parentheses, where arguments
+          |  are separated by commas if there are more than one (there is only one in this case). The argument
+          |  for 
           code
             | square
-          |      is specified to be an integer and is named
+          |  is specified to be an integer and is named 
           code
             | n
-          |      . The data type for
-          |                         each argument is declared in the same manner as declaring the return data type of the function or
-          |                         the data type for a variable.
+          |  . The data type for
+          |  each argument is declared in the same manner as declaring the return data type of the function or
+          |  the data type for a variable.
         p
           | When a function declaration specifies arguments, the variable names representing the arguments are local
           | to the function, or stated another way, they are valid only within the "scope" of the function (they
@@ -425,36 +425,36 @@ html
           | the scope of a function will not cause a semantic conflict should their names duplicate those local
           | to some other function.
         p
-          | The "scope" for the function
+          | The "scope" for the function 
           code
             | square
-          |      is what takes place within the block structure
-          |                         defining its actions (i.e., the contents within the curly braces surrounding its program statements).
-          |                         In this case, the function's actions consist of a single statement; namely, the
-          |      return
-          |      statement. The action of the
-          |      return
-          |      statement is to exit the function, assigning the function's return value to be what
-          |                         is specified by the
+          |  is what takes place within the block structure
+          |  defining its actions (i.e., the contents within the curly braces surrounding its program statements).
+          |  In this case, the function's actions consist of a single statement; namely, the
+          |  return
+          |  statement. The action of the
+          |  return
+          |  statement is to exit the function, assigning the function's return value to be what
+          |  is specified by the 
           code
             | return
-          |      statement, in this case the result of the computation
+          |  statement, in this case the result of the computation 
           code
             | n * n
-          |      .
+          |  .
         p
           | Except where grouped by parentheses, expressions are evaluated according to a set of precedence rules
           | associated with the various operators used within the expression. In this case, only the multiplication
-          | operator
+          | operator 
           code
             | *
-          |      is employed, so operator precedence is not an issue.
+          |  is employed, so operator precedence is not an issue.
         p
           | For a third example, the following program code defines a function which performs a function call to
-          | the
+          | the 
           code
             | square
-          |      program.
+          |  program.
         pre
           code.language-clike
             | #include &lt;math.h&gt;
@@ -467,81 +467,81 @@ html
         br
         p
           | The argument list for this function has two arguments, each with integer data type. Additionally, its
-          | block structure includes a statement specifying a "working variable"
+          | block structure includes a statement specifying a "working variable" 
           code
             | h
-          |      . The data type
-          |                         for
+          |  . The data type
+          |  for 
           code
             | h
-          |      is given as floating point, since the C library function
+          |  is given as floating point, since the C library function 
           code
             | sqrt
-          |      returns
-          |                         a floating point argument. If its data type was specified to be integer, the fractional part of any
-          |                         floating point number assigned to it would be lost. In general, as is the case for
+          |  returns
+          |  a floating point argument. If its data type was specified to be integer, the fractional part of any
+          |  floating point number assigned to it would be lost. In general, as is the case for 
           code
             | h
-          |      ,
-          |                         any local variables used within a program block (indicated by a set of curly braces) are specified
-          |                         at the beginning of the block.
+          |  ,
+          |  any local variables used within a program block (indicated by a set of curly braces) are specified
+          |  at the beginning of the block.
         p
-          | The value assigned to
+          | The value assigned to 
           code
             | h
-          |      is the value returned by calling the
+          |  is the value returned by calling the 
           code
             | sqrt
-          |      function
-          |                         from the C math library and which calculates the mathematical square root of its argument.
+          |  function
+          |  from the C math library and which calculates the mathematical square root of its argument. 
           code
             | sqrt
-          |      is a built-in C function that takes a floating point number as its argument. For any KISS IDE target,
-          |      #include <math.h>
-          |      is needed when using functions from the math library.
+          |  is a built-in C function that takes a floating point number as its argument. For any KISS IDE target,
+          |  #include &lt;math.h&gt;
+          |  is needed when using functions from the math library.
         p
-          | The
+          | The 
           code
             | hypotenuse
-          |      function uses the
+          |  function uses the 
           code
             | square
-          |      function defined earlier. The
+          |  function defined earlier. The 
           code
             | sqrt
-          |      function is specified to have a floating point argument. So what happens if
+          |  function is specified to have a floating point argument. So what happens if 
           code
             | sqrt
-          |      is
-          |                         called with an integer argument instead of floating point? Answer: C will automatically coerce the
-          |                         integer to a floating point value (which uses a format involving both an exponent and a mantissa).
-          |                         If C's automatic coercion does the "wrong" thing, it can be bypassed by specifying how the value
-          |                         is to be coerced, which is accomplished by preceding it with the data type in parentheses into which
-          |                         it is to be converted; e.g.,
+          |  is
+          |  called with an integer argument instead of floating point? Answer: C will automatically coerce the
+          |  integer to a floating point value (which uses a format involving both an exponent and a mantissa).
+          |  If C's automatic coercion does the "wrong" thing, it can be bypassed by specifying how the value
+          |  is to be coerced, which is accomplished by preceding it with the data type in parentheses into which
+          |  it is to be converted; e.g., 
           code
             | (double)(square(a) + square(b))
-          |      .
+          |  .
         p
-          | The
+          | The 
           code
             | hypotenuse
-          |      function concludes by returning the value of
+          |  function concludes by returning the value of 
           code
             | h
-          |      .
+          |  .
         p
-          | The functions
+          | The functions 
           code
             | square
-          |      and
+          |  and 
           code
             | hypotenuse
-          |      still do not constitute a program since
-          |                         a
+          |  still do not constitute a program since
+          |  a 
           code
             | main
-          |      function that uses them still needs to be defined. A complete program using these
-          |                         two functions follows:
+          |  function that uses them still needs to be defined. A complete program using these
+          |  two functions follows:
         a(name='HypotenuseSquare')
         pre
           code.language-clike
@@ -565,40 +565,40 @@ html
             |     return(h);
             | }
         p
-          | Program behavior is described by
+          | Program behavior is described by 
           code
             | main
-          |      , which calls the C library function
+          |  , which calls the C library function 
           code
             | printf
-          |      ,
-          |                         which in turn calls the function
+          |  ,
+          |  which in turn calls the function 
           code
             | hypotenuse
-          |      to obtain the parameter value, and
+          |  to obtain the parameter value, and 
           code
             | hypotenuse
-          |      in turn calls the function
+          |  in turn calls the function 
           code
             | square
-          |      in order to do its calculation. These calls result
-          |                         in the calculation and printing of the length (truncated to integer) of the hypotenuse of a right
-          |                         triangle by supplying the lengths of its two sides to the
+          |  in order to do its calculation. These calls result
+          |  in the calculation and printing of the length (truncated to integer) of the hypotenuse of a right
+          |  triangle by supplying the lengths of its two sides to the 
           code
             | hypotenuse
-          |      function. Note
-          |                         that the floating point value supplied to
+          |  function. Note
+          |  that the floating point value supplied to 
           code
             | printf
-          |      from
+          |  from 
           code
             | hypotenuse
-          |      is coerced
-          |                         to integer data type, since otherwise
+          |  is coerced
+          |  to integer data type, since otherwise 
           code
             | printf
-          |      will print its floating point format as
-          |                         if it were an integer, a semantic error.
+          |  will print its floating point format as
+          |  if it were an integer, a semantic error.
         p
           | The two C statements
         .Indent
@@ -606,20 +606,20 @@ html
             | int square(int n); 
             | double hypotenuse(int a, int b);
         p
-          | provide C "prototype" specifications for the
+          | provide C "prototype" specifications for the 
           code
             | square
-          |      and
+          |  and 
           code
             | hypotenuse
-          |      functions
-          |                         used in the program. Similar prototypes need to be supplied for the standard C library's
+          |  functions
+          |  used in the program. Similar prototypes need to be supplied for the standard C library's 
           code
             | printf
-          |      function and the C math library's
+          |  function and the C math library's 
           code
             | sqrt
-          |      function. The preprocessor statements
+          |  function. The preprocessor statements
         .Indent
           code
             | #include &lt;stdio.h&gt;
@@ -627,38 +627,38 @@ html
         p
           | have the C preprocessor provide the needed prototypes (if not needed for a given KISS IDE target, the
           | preprocessor will skip these statements; i.e., it is usually a good habit to put them in anyway).
-          | Examples of other commonly used system header files are
+          | Examples of other commonly used system header files are 
           code
             | &lt;string.h&gt;
-          |      ,
+          |  , 
           code
             | &lt;stdlib.h&gt;
-          |      ,
+          |  , 
           code
             | &lt;stdarg.h&gt;
-          |      , and
+          |  , and 
           code
             | &lt;time.h&gt;
-          |      .
+          |  .
         p
           | The declaration of a function's prototype or it's actual definition needs to precede the function's first
           | use in program code so that the compiler will be able to correctly translate the statement which
-          | calls the function. For this example, since the definitions of the
+          | calls the function. For this example, since the definitions of the 
           code
             | square
-          |      and
+          |  and 
           code
             | hypotenuse
-          |      functions follow the definition of the
+          |  functions follow the definition of the 
           code
             | main
-          |      function, their prototype declarations need to be included before the definition
-          |                         of
+          |  function, their prototype declarations need to be included before the definition
+          |  of 
           code
             | main
-          |      . Absent a declaration for a function, the compiler will issue an implicit declaration
-          |                         warning for where it first encounters the function, the results from which may be a subsequent compilation
-          |                         error or incorrect results when the program is executed.
+          |  . Absent a declaration for a function, the compiler will issue an implicit declaration
+          |  warning for where it first encounters the function, the results from which may be a subsequent compilation
+          |  error or incorrect results when the program is executed.
         p
           | This concludes the brief C tutorial.
         // START FOOTER

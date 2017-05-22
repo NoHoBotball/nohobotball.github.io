@@ -5,7 +5,7 @@ Run the clipboard on html2jade.org
 xclip -sel clip -o | htmltopug.py -r
 """
 from bs4 import BeautifulSoup
-import sys, argparse
+import re, sys, argparse, cgi
 
 parser = argparse.ArgumentParser(description="Prepares HTML files for conversion to pug, because all existing converters are bad")
 parser.add_argument("-r", "--after", action="store_true", required=False)
@@ -17,12 +17,13 @@ replace_dict = {
     # "\n": "THISWASANEWLINEBUTISNTANYMORE",
 }
 
-pre_replace = "prereplacement"
+pre_replace = "faketag"
 
 if args.after:
     val = sys.stdin.read().replace(pre_replace, "pre")
     for key, value in replace_dict.items():
         val = val.replace(value, key)
+    val = val.replace(r"<", "&lt;").replace(r">", "&gt;")
     print(val)
 else:
     soup = BeautifulSoup(sys.stdin.read().replace("\r", ""), "lxml")
@@ -37,4 +38,7 @@ else:
         for key, value in replace_dict.items():
             val = val.replace(key, value)
         tag.string = val
-    print(soup.prettify())
+    val = soup.prettify()
+    val = re.sub(r" +", " ", val)
+    val = re.sub(r"([^\s])(?=(\n\s*)?<code)", r"\1 ", val)
+    print(val)
