@@ -1,0 +1,273 @@
+html
+  head
+    link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    link(href='/css/base.css', rel='stylesheet', type='text/css')
+    link(href='/css/materialize.min.css', media='screen,projection', rel='stylesheet', type='text/css')
+    link(href='/css/docs.css', rel='stylesheet', type='text/css')
+    link(href='../imgs/logos/botguy.png', rel='icon')
+    title Botball Documentation - Tutorial
+    meta(content='#00796b', name='theme-color')
+    meta(content='width=device-width, initial-scale=1.0', name='viewport')
+  body
+    script(src='https://code.jquery.com/jquery-2.1.1.min.js', type='text/javascript')
+    script(src='/js/materialize.min.js', type='text/javascript')
+    script.
+      $(document).ready(function () {
+      $('.button-collapse').sideNav({
+      draggable: true
+      });
+      $(".active").parent().parent().siblings()[0].click() })
+    header
+      ul#slide-out.side-nav.fixed
+        li.red.lighten-1(style='height: 130px')
+          .userView
+            h5.white-text
+              a.white-text(href='/docs/index.html') Index
+        li
+          a(href='/docs/tutorial.html') Tutorial
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Data Objects
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/data-objects/index.html') Introduction
+                  li
+                    a(href='/docs/data-objects/variables.html') Variables
+                  li
+                    a(href='/docs/data-objects/constants.html') Constants
+                  li
+                    a(href='/docs/data-objects/data-types.html') Data Types
+                  li
+                    a(href='/docs/data-objects/arrays.html') Arrays
+                  li
+                    a(href='/docs/data-objects/structures.html') Structures
+                  li
+                    a(href='/docs/data-objects/initialization-examples.html') Initialization Examples
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Statements and Expressions
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/statements-and-expressions/index.html') Introduction
+                  li
+                    a(href='/docs/statements-and-expressions/operators.html') Operators
+                  li
+                    a(href='/docs/statements-and-expressions/control-flow.html') Control Flow
+        li
+          a(href='/docs/tutorial.html') Style
+        li
+          a(href='/docs/tutorial.html') Debugging
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Printing
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/printing/index.html') Introduction
+                  li
+                    a(href='/docs/printing/examples.html') Examples
+                  li
+                    a(href='/docs/printing/printf-codes.html') printf Codes
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Preprocessor
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/preprocessor/index.html') Introduction
+                  li
+                    a(href='/docs/preprocessor/directives.html') Directives
+                  li
+                    a(href='/docs/preprocessor/include.html') Include
+                  li
+                    a(href='/docs/preprocessor/macros.html') Macros
+                  li.active
+                    a(href='/docs/preprocessor/conditional-compilation.html') Conditional Compilation
+        li
+          a(href='/docs/lib/math.html') Math Library
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | KIPR Wallaby/Link
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/lib/kipr/common-functions.html') Common Functions
+                  li
+                    a(href='/docs/lib/kipr/functions.html') Functions List
+                  li
+                    a(href='/docs/lib/kipr/camera.html') Camera Functions
+                  li
+                    a(href='/docs/lib/kipr/graphics.html') Graphics Functions
+                  li
+                    a(href='/docs/lib/kipr/depth.html') Depth Sensor Functions
+                  li
+                    a(href='/docs/lib/kipr/usb.html') File I/O Functions
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | iRobot Create
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/lib/kipr/create/index.html') Introduction
+                  li
+                    a(href='/docs/lib/kipr/create/serial.html') Serial Functions
+                  li
+                    a(href='/docs/lib/kipr/create/configuration.html') Configuration Functions
+                  li
+                    a(href='/docs/lib/kipr/create/movement.html') Movement Functions
+                  li
+                    a(href='/docs/lib/kipr/create/sensors.html') Sensor Functions
+                  li
+                    a(href='/docs/lib/kipr/create/battery.html') Battery Functions
+                  li
+                    a(href='/docs/lib/kipr/create/built-ins.html') Built-In Functions
+                  li
+                    a(href='/docs/lib/kipr/create/music-leds.html') LED and Music Functions
+        li
+          a(href='/docs/lib/kipr/botball.html') Botball Functions
+        li
+          a(href='/docs/lib/kipr/threads.html') Threads
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Motors and Sensors
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/lib/kipr/info/digital-analog-sensors.html') Analog and Digital Sensors
+                  li
+                    a(href='/docs/lib/kipr/info/usb-sensors.html') USB Sensors
+                  li
+                    a(href='/docs/lib/kipr/info/motors-servos.html') Motors and Servos
+                  li
+                    a(href='/docs/lib/kipr/info/simulator.html') Simulator
+        li
+          a(href='/docs/full.html') Full Documentation
+      nav.nav-extended.red.lighten-2
+        .nav-wrapper
+          .col.s12
+            a.button-collapse(data-activates='slide-out', href='#', style='font-size: 50px')
+              i.material-icons menu
+            a#top.brand-logo.waves-effect(href='/docs/index.html') Botball Documentation
+        .nav-wrapper
+          .col.s12
+            a.breadcrumb(href='/docs/preprocessor/index.html') Preprocessor
+            a.breadcrumb(href='#!') Conditional Compilation
+    main.row
+      .container.col.s12
+        // END HEADER
+        // Conditional_compilation
+        a(name='Conditional_compilation')
+        h3 Conditional Compilation
+        p
+          | The C preprocessor can be used to select code to be compiled based on logical conditions in preparing a program
+          | for compilation. This is called 
+          i conditional compilation
+          | . Conditional compilation is used to select
+          |  the code that is to be incorporated into a program based on a condition test. For example, unless a macro
+          |  named 
+          code DEBUG
+          |  has been defined (usually empty; i.e., 
+          code #define DEBUG
+          | ),
+          |  the precompiler can omit code whose only purpose is for debugging. In particular,
+        .Indent
+          code
+            | #ifdef DEBUG
+            br
+            |   printf(&quot;Going Left\n&quot;);
+            br
+            |   beep();
+            br
+            | #endif
+        p
+          | generates the debugging 
+          code printf
+          |  and 
+          code beep
+          |  only if 
+          code DEBUG
+          |  has been defined,
+          |  in which case the message "Going Left" will be printed and KIPR LINK will beep when program execution
+          |  reaches this part of its code. If 
+          code DEBUG
+          |  is not defined, the preprocessor will leave the
+          |  code out and the debugging alert will not occur as the program executes.
+        p
+          | Macros can also be conditionally defined; for example, the somewhat more sophisticated debugging macro
+          | definition
+        .Indent
+          code
+            | #ifdef DEBUG // if DEBUG is defined, SHOW(printf(&quot;%d&quot;,i) generates DEBUG code 
+            br
+            |   #define SHOW(x) printf(&quot;DEBUG: &quot;); x // if case: SHOW macro is defined to generate code 
+            br
+            | #else  // if DEBUG is not defined, SHOW(printf(&quot;%d&quot;,i) generates nothing 
+            br
+            |   #define SHOW(x) // else case: SHOW macro is defined to generate nothing 
+            br
+            | #endif
+        p
+          | defines a 
+          code SHOW
+          |  macro in one of two ways, either to produce debugging 
+          code printf
+          |  statements from its argument, or to produce nothing, regardless of argument.
+        p
+          | If 
+          code DEBUG
+          |  has been defined, then a 
+          code printf
+          |  debugging statement used as the argument
+          |  for 
+          code SHOW
+          |  will be incorporated into the program code. Debugging is activated by adding
+          |  the
+          |  #define DEBUG directive to the program, and deactivated by commenting it out. In particular,
+          |  when 
+          code DEBUG
+          |  has been defined the code
+        .Indent
+          code SHOW(printf("%d\n",i);)
+        p
+          | inserted at an appropriate point in the program will be expanded by the preprocessor to produce the code
+        .Indent
+          code
+            | printf(&quot;DEBUG: &quot;); printf(&quot;i=%d\n&quot;,i);)
+        p
+          | Absent a definition for 
+          code DEBUG
+          |  the macro 
+          code SHOW
+          |  will expand to produce no code
+          |  at all.
+        p
+          | If the value of 
+          code i
+          |  is 8 and 
+          code DEBUG
+          |  has been defined, the expansion of 
+          code SHOW
+          |  illustrated above will generate code which outputs the debugging display " 
+          code DEBUG: i=8
+          | ".
+        // START FOOTER
+

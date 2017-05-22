@@ -1,0 +1,362 @@
+html
+  head
+    link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    link(href='/css/base.css', rel='stylesheet', type='text/css')
+    link(href='/css/materialize.min.css', media='screen,projection', rel='stylesheet', type='text/css')
+    link(href='/css/docs.css', rel='stylesheet', type='text/css')
+    link(href='../imgs/logos/botguy.png', rel='icon')
+    title Botball Documentation - Tutorial
+    meta(content='#00796b', name='theme-color')
+    meta(content='width=device-width, initial-scale=1.0', name='viewport')
+  body
+    script(src='https://code.jquery.com/jquery-2.1.1.min.js', type='text/javascript')
+    script(src='/js/materialize.min.js', type='text/javascript')
+    script.
+      $(document).ready(function () {
+      $('.button-collapse').sideNav({
+      draggable: true
+      });
+      $(".active").parent().parent().siblings()[0].click() })
+    header
+      ul#slide-out.side-nav.fixed
+        li.red.lighten-1(style='height: 130px')
+          .userView
+            h5.white-text
+              a.white-text(href='/docs/index.html') Index
+        li
+          a(href='/docs/tutorial.html') Tutorial
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Data Objects
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/data-objects/index.html') Introduction
+                  li
+                    a(href='/docs/data-objects/variables.html') Variables
+                  li
+                    a(href='/docs/data-objects/constants.html') Constants
+                  li
+                    a(href='/docs/data-objects/data-types.html') Data Types
+                  li
+                    a(href='/docs/data-objects/arrays.html') Arrays
+                  li
+                    a(href='/docs/data-objects/structures.html') Structures
+                  li
+                    a(href='/docs/data-objects/initialization-examples.html') Initialization Examples
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Statements and Expressions
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/statements-and-expressions/index.html') Introduction
+                  li
+                    a(href='/docs/statements-and-expressions/operators.html') Operators
+                  li
+                    a(href='/docs/statements-and-expressions/control-flow.html') Control Flow
+        li
+          a(href='/docs/tutorial.html') Style
+        li
+          a(href='/docs/tutorial.html') Debugging
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Printing
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/printing/index.html') Introduction
+                  li
+                    a(href='/docs/printing/examples.html') Examples
+                  li
+                    a(href='/docs/printing/printf-codes.html') printf Codes
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Preprocessor
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/preprocessor/index.html') Introduction
+                  li
+                    a(href='/docs/preprocessor/directives.html') Directives
+                  li
+                    a(href='/docs/preprocessor/include.html') Include
+                  li
+                    a(href='/docs/preprocessor/macros.html') Macros
+                  li
+                    a(href='/docs/preprocessor/conditional-compilation.html') Conditional Compilation
+        li
+          a(href='/docs/lib/math.html') Math Library
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | KIPR Wallaby/Link
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/lib/kipr/common-functions.html') Common Functions
+                  li
+                    a(href='/docs/lib/kipr/functions.html') Functions List
+                  li
+                    a(href='/docs/lib/kipr/camera.html') Camera Functions
+                  li
+                    a(href='/docs/lib/kipr/graphics.html') Graphics Functions
+                  li
+                    a(href='/docs/lib/kipr/depth.html') Depth Sensor Functions
+                  li
+                    a(href='/docs/lib/kipr/usb.html') File I/O Functions
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | iRobot Create
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/lib/kipr/create/index.html') Introduction
+                  li
+                    a(href='/docs/lib/kipr/create/serial.html') Serial Functions
+                  li
+                    a(href='/docs/lib/kipr/create/configuration.html') Configuration Functions
+                  li
+                    a(href='/docs/lib/kipr/create/movement.html') Movement Functions
+                  li
+                    a(href='/docs/lib/kipr/create/sensors.html') Sensor Functions
+                  li
+                    a(href='/docs/lib/kipr/create/battery.html') Battery Functions
+                  li
+                    a(href='/docs/lib/kipr/create/built-ins.html') Built-In Functions
+                  li.active
+                    a(href='/docs/lib/kipr/create/music-leds.html') LED and Music Functions
+        li
+          a(href='/docs/lib/kipr/botball.html') Botball Functions
+        li
+          a(href='/docs/lib/kipr/threads.html') Threads
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Motors and Sensors
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/lib/kipr/info/digital-analog-sensors.html') Analog and Digital Sensors
+                  li
+                    a(href='/docs/lib/kipr/info/usb-sensors.html') USB Sensors
+                  li
+                    a(href='/docs/lib/kipr/info/motors-servos.html') Motors and Servos
+                  li
+                    a(href='/docs/lib/kipr/info/simulator.html') Simulator
+        li
+          a(href='/docs/full.html') Full Documentation
+      nav.nav-extended.red.lighten-2
+        .nav-wrapper
+          .col.s12
+            a.button-collapse(data-activates='slide-out', href='#', style='font-size: 50px')
+              i.material-icons menu
+            a#top.brand-logo.waves-effect(href='/docs/index.html') Botball Documentation
+        .nav-wrapper
+          .col.s12
+            a.breadcrumb(href='/docs/lib/kipr/create/index.html') iRobot Create
+            a.breadcrumb(href='#!') LED and Music Functions
+    main.row
+      .container.col.s12
+        // END HEADER
+        // Create music functions
+        a(name='Music_LED_functions')
+        h4 Create LED and Music Functions
+        table
+          tbody
+            tr
+              td
+                a(name='create_advance_led')
+              td
+                code create_advance_led 
+                |  [Category: Create Music/LED Function]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | void create_advance_led(int on);
+                    br
+                    |  The value 1 causes the Advance LED light ( 
+                    code &gt;&gt;
+                    | |) to turn on, 0 to turn it
+                    |  off.
+            tr
+              td
+                a(name='create_play_led')
+              td
+                code create_play_led 
+                |  [Category: Create Music/LED Function]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | void create_play_led(int on);
+                    br
+                    |  The value 1 causes the Play LED (&gt;) to turn on, 0 to turn it off.
+            tr
+              td
+                a(name='create_play_song')
+              td
+                code create_play_song 
+                |  [Category: Create Music/LED Function]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | void create_play_song(int num);
+                    br
+                    |  Plays the specified song that has been loaded onto the Create.
+            tr
+              td
+                a(name='create_power_led')
+              td
+                code create_power_led 
+                |  [Category: Create Music/LED Function]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | void create_power_led(int color, int brightness);
+                    br
+                    |  The value 0 causes the I/O power LED to turn red, 255 to turn green. Brightness ranges
+                    |  from 0 to 255 with 0 representing off.
+            tr
+              td
+                a(name='get_create_song_number')
+              td
+                code get_create_song_number
+                |  [Category: Create Music/LED Function]
+                dl
+                  dd
+                    dd
+                      | Format: 
+                      code int get_create_song_number();
+                      br
+                      |  Returns the number of the song currently selected (0 to 15).
+            tr
+              td
+                a(name='get_create_song_playing')
+              td
+                code get_create_song_playing
+                |  [Category: Create Music/LED Function]
+                dl
+                  dd
+                    dd
+                      | Format: 
+                      code int get_create_song_playing();
+                      br
+                      |  Returns 1 if a song is playing, 0 otherwise.
+            tr
+              td
+                a(name='create_load_song')
+              td
+                code create_load_song 
+                |  [Category: Create Music/LED Function]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | void create_load_song(int num);
+                    br
+                    |  Loads a song from an internal 16 by 33 working array of integers to the Create, where
+                    |  the first column for each song is the number of notes (max is 16). The remaining columns
+                    |  alternate between pitch and duration. See (
+                    a(href='http://www.irobot.com/filelibrary/pdfs/hrd/create/Create%20Open%20Interface_v2.pdf') Create Open Interface Manual
+                    |  for details.
+        .Indent
+          h4 Example program for using the KIPR Robot Controller to control a Create module
+          a(name='MoveCreate')
+          pre
+            code.language-clike
+              | /* This is a program to make the iRobot Create drive in a circle with a radius of 0.25 meters at a speed of 200 mm/sec for 10 seconds, displaying the distance traveled around the circle and the angle that the turn covered */
+              | int main()
+              | {
+              |     printf(&quot;connecting to Create\n&quot;);
+              |     create_connect();
+              |     set_create_distance(0); // reset the cumulative distance traveled
+              |     set_create_total_angle(0); // reset the cumulative angle turned through
+              |     create_drive(200, 250); // start move in an arc
+              |     msleep(10000); // sleep for 10 seconds and stop
+              |     create_stop();
+              |     printf(&quot;\nResults:\n&quot;);
+              |     printf(&quot;  distance = %d mm\n&quot;, get_create_distance(0.1));
+              |     printf(&quot;  angle = %d degrees\n&quot;, get_create_total_angle(0.1));
+              |     printf(&quot;\ndisconnecting from Create\n&quot;);
+              |     create_disconnect();
+              | }
+        .Indent
+          a(name='Create_script_example')
+          h4 Example Create script definition using the KIPR Robot Controller
+          p
+            | The iRobot Create has several built in scripts, mostly to serve the needs of its cousin, the iRobot Roomba.
+            | The Open Interface provides byte code commands for running these. It also has a byte code command for
+            | loading a user defined script onto the iRobot Create along with a byte code command to start it running.
+            | The user defined script remains available until the iRobot Create is power cycled.
+          p
+            | Unlike high level languages, scripts for the iRobot Create have no provision for flow of control commands
+            | such as if and while, but can use commands to wait for an elapsed time, or for a specified distance or
+            | angle to be reached, or for an event such as a bump (wait commands are not available except within scripts).
+          p Memory for storing a user defined script is limited to 100 bytes.
+          p
+            | In this example, a function is used to download a sequence of byte commands to the iRobot Create to load
+            | a script. The example script is designed to cause the Create to move 1/2 meter at 500 mm/sec (uninterruptible).
+            | The script definition follows the first two bytes sent to the Create (byte command 152, and a byte whose
+            | numeric value gives the number of bytes that follow). Note that the number of bytes for the script is
+            | just the count of the 
+            code create_write_byte
+            |  function calls used after the first two. See the
+            a(href='http://www.irobot.com/filelibrary/pdfs/hrd/create/Create%20Open%20Interface_v2.pdf') Create Open Interface manual
+            |  for information on the byte commands.
+          a(name='CreateScriptExample')
+          pre
+            code.language-clike
+              | #define RUN_SCRIPT create_write_byte(153) // macro to run the currently loaded script
+              | void make_drive_script(int dist, int speed) {
+              |    create_write_byte(152);        // specifies start of script definition
+              |    create_write_byte(13);         // specifies number of bytes to follow,(defining the script)
+              |    create_write_byte(137);        // drive command (speed and turn radius in next 4 bytes)
+              |    create_write_byte(speed &gt;&gt; 8); // send speed high byte (bits 8-15 shifted to 0-7)
+              |    create_write_byte(speed);      // send speed low byte
+              |    create_write_byte(128);        // send hex 80
+              |    create_write_byte(0);          // send hex 00 (special case: turn radius hex 8000 or 7FFF is straight)
+              |    create_write_byte(156);        // wait for distance done (in mm)
+              |    create_write_byte(dist &gt;&gt; 8);  // send dist high byte
+              |    create_write_byte(dist);       // send dist low byte
+              |    create_write_byte(137);        // stop move by changing speed and radius to 0
+              |    create_write_byte(0);          // send high byte (0 speed)
+              |    create_write_byte(0);          // send low byte (0 speed)
+              |    create_write_byte(0);          // null turn radius
+              |    create_write_byte(0);          // null turn radius
+              |    // end of script (13 bytes)
+              | }
+              | int main()
+              | {
+              |    // program to load and test the above script
+              |    create_connect();
+              |    set_create_distance(0);
+              |    set_create_total_angle(0);
+              |    make_drive_script(500, 500); // script to move 0.5m at 500 mm/sec
+              |    msleep(500); // give serial connection some time
+              |    RUN_SCRIPT;
+              |    msleep(2000); // allow time for the script to finish (+ some extra)
+              |    printf(&quot;  distance traveled = %d mm\n&quot;, get_create_distance());
+              |    printf(&quot;  angle turned = %d degrees\n&quot;, get_create_total_angle());
+              |    create_disconnect();
+              | }
+        // START FOOTER
+

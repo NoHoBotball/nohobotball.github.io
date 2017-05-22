@@ -1,0 +1,573 @@
+html
+  head
+    link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    link(href='/css/base.css', rel='stylesheet', type='text/css')
+    link(href='/css/materialize.min.css', media='screen,projection', rel='stylesheet', type='text/css')
+    link(href='/css/docs.css', rel='stylesheet', type='text/css')
+    link(href='../imgs/logos/botguy.png', rel='icon')
+    title Botball Documentation - Tutorial
+    meta(content='#00796b', name='theme-color')
+    meta(content='width=device-width, initial-scale=1.0', name='viewport')
+  body
+    script(src='https://code.jquery.com/jquery-2.1.1.min.js', type='text/javascript')
+    script(src='/js/materialize.min.js', type='text/javascript')
+    script.
+      $(document).ready(function () {
+      $('.button-collapse').sideNav({
+      draggable: true
+      });
+      $(".active").parent().parent().siblings()[0].click() })
+    header
+      ul#slide-out.side-nav.fixed
+        li.red.lighten-1(style='height: 130px')
+          .userView
+            h5.white-text
+              a.white-text(href='/docs/index.html') Index
+        li
+          a(href='/docs/tutorial.html') Tutorial
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Data Objects
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/data-objects/index.html') Introduction
+                  li
+                    a(href='/docs/data-objects/variables.html') Variables
+                  li
+                    a(href='/docs/data-objects/constants.html') Constants
+                  li
+                    a(href='/docs/data-objects/data-types.html') Data Types
+                  li
+                    a(href='/docs/data-objects/arrays.html') Arrays
+                  li
+                    a(href='/docs/data-objects/structures.html') Structures
+                  li
+                    a(href='/docs/data-objects/initialization-examples.html') Initialization Examples
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Statements and Expressions
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/statements-and-expressions/index.html') Introduction
+                  li
+                    a(href='/docs/statements-and-expressions/operators.html') Operators
+                  li
+                    a(href='/docs/statements-and-expressions/control-flow.html') Control Flow
+        li
+          a(href='/docs/tutorial.html') Style
+        li
+          a(href='/docs/tutorial.html') Debugging
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Printing
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/printing/index.html') Introduction
+                  li
+                    a(href='/docs/printing/examples.html') Examples
+                  li
+                    a(href='/docs/printing/printf-codes.html') printf Codes
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Preprocessor
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/preprocessor/index.html') Introduction
+                  li
+                    a(href='/docs/preprocessor/directives.html') Directives
+                  li
+                    a(href='/docs/preprocessor/include.html') Include
+                  li
+                    a(href='/docs/preprocessor/macros.html') Macros
+                  li
+                    a(href='/docs/preprocessor/conditional-compilation.html') Conditional Compilation
+        li
+          a(href='/docs/lib/math.html') Math Library
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | KIPR Wallaby/Link
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/lib/kipr/common-functions.html') Common Functions
+                  li
+                    a(href='/docs/lib/kipr/functions.html') Functions List
+                  li
+                    a(href='/docs/lib/kipr/camera.html') Camera Functions
+                  li
+                    a(href='/docs/lib/kipr/graphics.html') Graphics Functions
+                  li.active
+                    a(href='/docs/lib/kipr/depth.html') Depth Sensor Functions
+                  li
+                    a(href='/docs/lib/kipr/usb.html') File I/O Functions
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | iRobot Create
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/lib/kipr/create/index.html') Introduction
+                  li
+                    a(href='/docs/lib/kipr/create/serial.html') Serial Functions
+                  li
+                    a(href='/docs/lib/kipr/create/configuration.html') Configuration Functions
+                  li
+                    a(href='/docs/lib/kipr/create/movement.html') Movement Functions
+                  li
+                    a(href='/docs/lib/kipr/create/sensors.html') Sensor Functions
+                  li
+                    a(href='/docs/lib/kipr/create/battery.html') Battery Functions
+                  li
+                    a(href='/docs/lib/kipr/create/built-ins.html') Built-In Functions
+                  li
+                    a(href='/docs/lib/kipr/create/music-leds.html') LED and Music Functions
+        li
+          a(href='/docs/lib/kipr/botball.html') Botball Functions
+        li
+          a(href='/docs/lib/kipr/threads.html') Threads
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Motors and Sensors
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/lib/kipr/info/digital-analog-sensors.html') Analog and Digital Sensors
+                  li
+                    a(href='/docs/lib/kipr/info/usb-sensors.html') USB Sensors
+                  li
+                    a(href='/docs/lib/kipr/info/motors-servos.html') Motors and Servos
+                  li
+                    a(href='/docs/lib/kipr/info/simulator.html') Simulator
+        li
+          a(href='/docs/full.html') Full Documentation
+      nav.nav-extended.red.lighten-2
+        .nav-wrapper
+          .col.s12
+            a.button-collapse(data-activates='slide-out', href='#', style='font-size: 50px')
+              i.material-icons menu
+            a#top.brand-logo.waves-effect(href='/docs/index.html') Botball Documentation
+        .nav-wrapper
+          .col.s12
+            a.breadcrumb(href='#!') KIPR Wallaby/Link
+            a.breadcrumb(href='#!') Depth Sensor Functions
+    main.row
+      .container.col.s12
+        // END HEADER
+        // Xtion API
+        a(name='DepthSensor')
+        h3 KIPR Robot Controller Depth Functions
+        table.centerTable
+          tbody
+            tr
+              td
+                | The KIPR Robot Controller has functions supporting the use of an ASUS Xtion as a USB depth sensor.
+              td(width='50%')
+                // &lt;img class="right" src="images/XtionDepth.gif" width="50%"&gt;&lt;/img&gt;
+                br
+        p
+          | The USB depth sensor provides the KIPR Robot Controller with a 240×320 row,column (2-dimensional) image
+          | of the space in front of it (rows measured down from the upper left corner of the image and columns to the
+          | right). The depth functions provide information about the three dimensional space in front of the Xtion,
+          | where the space is organized in (x,y,z) coordinates with the x-axis directed right, the y-axis is directed
+          | up, and the z-axis directed straight out from the Xtion. Coordinate (0,0,0) is the center of the Xtion face.
+          | Coordinate values are given in millimeters (mm). The depth sensor's effective range is from about 1/2 meter
+          | to 5 meters.
+        table.centerTable
+          tbody
+            tr
+              td
+                // &lt;img class="center" src="images/XtionDepthView.jpg" width="80%"&gt;&lt;/img&gt;
+        br
+        table
+          tbody
+            tr
+              td
+                a(name='depth_open')
+              td
+                code depth_open 
+                |  [Category: Depth]
+                dl
+                  dd
+                    | Format: 
+                    code int depth_open();
+                    br
+                    |  Turns on the
+                    |  depth sensor. Returns 1 on success, 0 on failure. See also 
+                    code depth_close
+                    | .
+            tr
+              td
+                a(name='depth_close')
+              td
+                code depth_close 
+                |  [Category: Depth]
+                dl
+                  dd
+                    | Format: 
+                    code void depth_close();
+                    br
+                    |  Clean up
+                    |  the depth instance and power down the sensor. See also 
+                    code depth_open
+                    | .
+            tr
+              td
+                a(name='depth_update')
+              td
+                code depth_update 
+                |  [Category: Depth]
+                dl
+                  dd
+                    | Format: 
+                    code int depth_update();
+                    br
+                    |  Generates
+                    |  a new image from the depth sensor for use by the depth functions. Returns 1 on success,
+                    |  0 on failure.
+            tr
+              td
+                a(name='depth_scanline_update')
+              td
+                code depth_scanline_update 
+                |  [Category: Depth]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | int depth_scanline_update(int row);
+                    br
+                    |  Replaces the current scanline information with the scanline information for the specified
+                    |  row of the image. Returns 1 on success, 0 on failure.
+                    tr
+                    tr
+                      td
+                        a(name='get_depth_value')
+                      td
+                        code get_depth_value 
+                        |  [Category: Depth]
+                        dl
+                          dd
+                            | Format: 
+                            code
+                              | int get_depth_value(int row, int col);
+                            br
+                            |  Returns the value of the depth coordinate z in mm for row and column
+                            |  positions of the image. See also 
+                            code get_depth_world_point
+                            | .
+                    tr
+                      td
+                        a(name='get_depth_world_point')
+                      td
+                        code get_depth_world_point 
+                        |  [Category: Depth]
+                        dl
+                          dd
+                            | Format: 
+                            code
+                              | point3 get_depth_world_point(int row, int col);
+                            br
+                            |  Returns an object of type 
+                            code point3
+                            |  giving the (x,y,z)
+                            |  coordinates for the object at position (row,col) in the current image.
+                            |  For 
+                            br
+                            .Indent
+                              code
+                                |  point3 p3;
+                                br
+                                |                p3 = get_depth_world_point(4,7);
+                                |           
+                            |  the (x,y,z) coordinates for row 4, column 7 in the image are given by 
+                            code p3.x
+                            | , 
+                            code p3.y
+                            | , 
+                            code p3.z
+                            | . The value returned by 
+                            code get_depth_value
+                            |  is the same as 
+                            code p3.z
+                            | .
+                    tr
+                      td
+                        a(name='get_depth_world_point_x')
+                      td
+                        code get_depth_world_point_x 
+                        |  [Category: Depth]
+                        dl
+                          dd
+                            | Format: 
+                            code
+                              | int get_depth_world_point_x(int row, int col);
+                            br
+                            |  Returns the x coordinate for the object at position (row,col) in
+                            |  the current image. See also 
+                            code get_depth_world_point
+                            | .
+                    tr
+                      td
+                        a(name='get_depth_world_point_y')
+                      td
+                        code get_depth_world_point_y 
+                        |  [Category: Depth]
+                        dl
+                          dd
+                            | Format: 
+                            code
+                              | int get_depth_world_point_y(int row, int col);
+                            br
+                            |  Returns the y coordinate for the object at position (row,col) in
+                            |  the current image. See also 
+                            code get_depth_world_point
+                            | .
+                    tr
+                      td
+                        a(name='get_depth_world_point_z')
+                      td
+                        code get_depth_world_point_z 
+                        |  [Category: Depth]
+                        dl
+                          dd
+                            | Format: 
+                            code
+                              | int get_depth_world__zpoint(int row, int col);
+                            br
+                            |  Returns the z coordinate for the object at position (row,col) in
+                            |  the current image. The return value is the same as the value returned
+                            |  by 
+                            code get_depth_value
+                            | . See also 
+                            code get_depth_world_point
+                            | .
+                    td
+                      a(name='get_depth_scanline_object_count')
+                    td
+                      code get_depth_scanline_object_count 
+                      |  [Category: Depth]
+                      dl
+                        dd
+                          | Format: 
+                          code int get_depth_scanline_object_count();
+                          br
+                          |  Returns the number of objects detected on the scanline, where an object
+                          |  is detected by not having a depth break in scanning across it. This means
+                          |  that if the scanline crosses a cavity, it will report two objects. Objects
+                          |  are numbered starting from 0, ordered from nearest to farthest. By default,
+                          |  the closest pixel for each object is used to determine how near it is.
+            tr
+              td
+                a(name='get_depth_scanline_object_nearest_x')
+              td
+                code get_depth_scanline_object_nearest_x 
+                |  [Category: Depth]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | int get_depth_object_nearest_x(int obj);
+                    br
+                    |  For the specified object returns the coordinate value for the farthest
+                    |  pixel detected.
+            tr
+              td
+                a(name='get_depth_scanline_object_nearest_y')
+              td
+                code get_depth_scanline_object_nearest_y 
+                |  [Category: Depth]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | int get_depth_object_nearest_y(int obj);
+                    br
+                    |  For the specified object returns the coordinate value for the farthest
+                    |  pixel detected.
+            tr
+              td
+                a(name='get_depth_scanline_object_nearest_z')
+              td
+                code get_depth_scanline_object_nearest_z 
+                |  [Category: Depth]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | int get_depth_object_nearest_z(int obj);
+                    br
+                    |  For the specified object returns the coordinate value for the nearest
+                    |  pixel detected.
+            tr
+              td
+                a(name='get_depth_scanline_object_center_x')
+              td
+                code get_depth_scanline_object_center_x 
+                |  [Category: Depth]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | int get_depth_object_center_x(int obj);
+                    br
+                    |  For the specified object returns the coordinate value for the farthest
+                    |  pixel detected.
+            tr
+              td
+                a(name='get_depth_scanline_object_center_y')
+              td
+                code get_depth_scanline_object_center_y 
+                |  [Category: Depth]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | int get_depth_object_center_y(int obj);
+                    br
+                    |  For the specified object returns the coordinate value for the farthest
+                    |  pixel detected.
+            tr
+              td
+                a(name='get_depth_scanline_object_center_z')
+              td
+                code get_depth_scanline_object_center_z 
+                |  [Category: Depth]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | int get_depth_object_center_z(int obj);
+                    br
+                    |  For the specified object returns the coordinate value for the center
+                    |  pixel.
+            tr
+              td
+                a(name='get_depth_scanline_object_farthest_x')
+              td
+                code get_depth_scanline_object_farthest_x 
+                |  [Category: Depth]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | int get_depth_object_farthest_x(int obj);
+                    br
+                    |  For the specified object returns the coordinate value for the farthest
+                    |  pixel detected.
+            tr
+              td
+                a(name='get_depth_scanline_object_farthest_y')
+              td
+                code get_depth_scanline_object_farthest_y 
+                |  [Category: Depth]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | int get_depth_object_farthest_y(int obj);
+                    br
+                    |  For the specified object returns the coordinate value for the farthest
+                    |  pixel detected.
+            tr
+              td
+                a(name='get_depth_scanline_object_farthest_z')
+              td
+                code get_depth_scanline_object_farthest_z 
+                |  [Category: Depth]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | int get_depth_object_farthest_z(int obj);
+                    br
+                    |  For the specified object returns the coordinate value for the farthest
+                    |  pixel detected.
+            tr
+              td
+                a(name='get_depth_scanline_object_size')
+              td
+                code get_depth_scanline_object_size 
+                |  [Category: Depth]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | int get_depth_object_size(int obj);
+                    br
+                    |  For the specified object returns the distance on the scanline between
+                    |  the leftmost and rightmost pixel detected.
+            tr
+              td
+                a(name='get_depth_scanline_object_angle')
+              td
+                code get_depth_scanline_object_angle 
+                |  [Category: Depth]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | int get_depth_object_angle(int obj);
+                    br
+                    |  For the specified object returns the angular measure (in degrees) from
+                    |  the leftmost pixel on the scanline to the right most. Positive is counterclockwise.
+        .Indent
+          h4
+            | Example program for using a depth sensor and a graphical representation to find the distance to an object
+          a(name='PointDistance')
+          pre
+            code.language-clike
+              | int main()
+              | {
+              |    int r, g, b, row, col, val;
+              |    depth_open(); // initiate depth sensor
+              |    graphics_open(320,240); // open up graphics window (full screen on KIPR Robot Controller)
+              |    while(!get_mouse_left_button()) { // loop until mouse is clicked (screen is tapped)
+              |       depth_update(); // get a new depth image
+              |       for(row=0; row&lt;240; row++) { // loop through rows
+              |          for(col=0; col&lt;320; col++) { // loop through columns in current row
+              |             val = get_depth_value(row,col) ; // get distance for pixel in mm
+              |             if(val == 0)  // if too close or not a valid value, don&apos;t color
+              |                continue;
+              |             else if (val &gt; 1530) { // if more than 1.53m away color in gray scale
+              |                val = (5000-val)/20; // range is from 173 on down (towards darker)
+              |                graphics_pixel(col,row,val,val,val); // paint using r=g=b (gray scale)
+              |             }
+              |             else { // and otherwise ... 
+              |                val=val &gt; 510 ? val-510 : 0; // rerange the distance inward by 510mm
+              |                r=val &gt; 510 ? 0 : 255-val/2;  // increase red for closer
+              |                g=val &gt; 510 ? 255-(val-510)/2 : val/2; // greenish for mid values
+              |                b=val &gt; 510 ? val/2-255 : 0;  // increase blue for farther
+              |                graphics_pixel(col,row, r,g,b); // draw the pixel
+              |             }
+              |          }
+              |       }
+              |       graphics_update(); // paint the screen using the new pixel valuess
+              |    }
+              |    get_mouse_position(&amp;col,&amp;row); // where was screen tapped?
+              |    depth_close(); graphics_close();  //close sensor and graphics window
+              |     // Display the distance (z coordinate) to the pixels&apos;s point in space
+              |    printf(&quot;Distance to pixel %i,%i is %imm\n\n\n&quot;,col,row,get_depth_value(row,col));
+              | }
+        // START FOOTER
+

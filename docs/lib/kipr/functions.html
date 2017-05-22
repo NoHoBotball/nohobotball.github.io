@@ -1,0 +1,1271 @@
+
+<html>
+  <head>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link href="/css/base.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/materialize.min.css" media="screen,projection" rel="stylesheet" type="text/css"/>
+    <link href="/css/docs.css" rel="stylesheet" type="text/css"/>
+    <link href="../imgs/logos/botguy.png" rel="icon"/>
+    <title>Botball Documentation - Tutorial</title>
+    <meta content="#00796b" name="theme-color"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  </head>
+  <body>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="/js/materialize.min.js" type="text/javascript"></script>
+    <script>
+      $(document).ready(function () {
+      $('.button-collapse').sideNav({
+      draggable: true
+      });
+      $(".active").parent().parent().siblings()[0].click() })
+    </script>
+    <header>
+      <ul class="side-nav fixed" id="slide-out">
+        <li class="red lighten-1" style="height: 130px;">
+          <div class="userView">
+            <h5 class="white-text"><a class="white-text" href="/docs/index.html">Index</a></h5>
+          </div>
+        </li>
+        <li><a href="/docs/tutorial.html">Tutorial</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Data Objects</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/data-objects/index.html">Introduction</a></li>
+                  <li><a href="/docs/data-objects/variables.html">Variables</a></li>
+                  <li><a href="/docs/data-objects/constants.html">Constants</a></li>
+                  <li><a href="/docs/data-objects/data-types.html">Data Types</a></li>
+                  <li><a href="/docs/data-objects/arrays.html">Arrays</a></li>
+                  <li><a href="/docs/data-objects/structures.html">Structures</a></li>
+                  <li><a href="/docs/data-objects/initialization-examples.html">Initialization Examples</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Statements and Expressions</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/statements-and-expressions/index.html">Introduction</a></li>
+                  <li><a href="/docs/statements-and-expressions/operators.html">Operators</a></li>
+                  <li><a href="/docs/statements-and-expressions/control-flow.html">Control Flow</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/docs/tutorial.html">Style</a></li>
+        <li><a href="/docs/tutorial.html">Debugging</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Printing</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/printing/index.html">Introduction</a></li>
+                  <li><a href="/docs/printing/examples.html">Examples</a></li>
+                  <li><a href="/docs/printing/printf-codes.html">printf Codes</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Preprocessor</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/preprocessor/index.html">Introduction</a></li>
+                  <li><a href="/docs/preprocessor/directives.html">Directives</a></li>
+                  <li><a href="/docs/preprocessor/include.html">Include</a></li>
+                  <li><a href="/docs/preprocessor/macros.html">Macros</a></li>
+                  <li><a href="/docs/preprocessor/conditional-compilation.html">Conditional Compilation</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/docs/lib/math.html">Math Library</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>KIPR Wallaby/Link</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/lib/kipr/common-functions.html">Common Functions</a></li>
+                  <li class="active"><a href="/docs/lib/kipr/functions.html">Functions List</a></li>
+                  <li><a href="/docs/lib/kipr/camera.html">Camera Functions</a></li>
+                  <li><a href="/docs/lib/kipr/graphics.html">Graphics Functions</a></li>
+                  <li><a href="/docs/lib/kipr/depth.html">Depth Sensor Functions</a></li>
+                  <li><a href="/docs/lib/kipr/usb.html">File I/O Functions</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>iRobot Create</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/lib/kipr/create/index.html">Introduction</a></li>
+                  <li><a href="/docs/lib/kipr/create/serial.html">Serial Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/configuration.html">Configuration Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/movement.html">Movement Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/sensors.html">Sensor Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/battery.html">Battery Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/built-ins.html">Built-In Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/music-leds.html">LED and Music Functions</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/docs/lib/kipr/botball.html">Botball Functions</a></li>
+        <li><a href="/docs/lib/kipr/threads.html">Threads</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Motors and Sensors</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/lib/kipr/info/digital-analog-sensors.html">Analog and Digital Sensors</a></li>
+                  <li><a href="/docs/lib/kipr/info/usb-sensors.html">USB Sensors</a></li>
+                  <li><a href="/docs/lib/kipr/info/motors-servos.html">Motors and Servos</a></li>
+                  <li><a href="/docs/lib/kipr/info/simulator.html">Simulator</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/docs/full.html">Full Documentation</a></li>
+      </ul>
+      <nav class="nav-extended red lighten-2">
+        <div class="nav-wrapper">
+          <div class="col s12"><a class="button-collapse" data-activates="slide-out" href="#" style="font-size: 50px;"><i class="material-icons">menu</i></a><a class="brand-logo waves-effect" id="top" href="/docs/index.html">Botball Documentation</a></div>
+        </div>
+        <div class="nav-wrapper">
+          <div class="col s12"><a class="breadcrumb" href="#!">KIPR Wallaby/Link</a><a class="breadcrumb" href="#!">Functions List</a></div>
+        </div>
+      </nav>
+    </header>
+    <main class="row">
+      <div class="container col s12">
+        <!-- END HEADER-->
+        <!-- Functions--><a name="Functions"></a>
+        <h3>KIPR Robot Controller Library Functions</h3>
+        <p>
+          The following is a comprehensive list of the pre-compiled functions provided by the KIPR Robot Controller Library.
+          The library functions for using a USB camera, a graphics window, or a USB depth sensor, and those for controlling
+          a Create module, are presented separately.
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td><a name="a_button"></a></td>
+              <td><code>a_button</code> [Category: Sensors]
+                <dl>
+                  <dd>Format: <code>int a_button();</code><br/>
+                     Returns the state
+                     of the A button on the KIPR Robot Controller program console (1 if pressed, 0 otherwise).
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="a_button_clicked"></a></td>
+              <td><code>a_button_clicked</code> [Category: Sensors]
+                <dl>
+                  <dd>Format: <code>int a_button_clicked();</code><br/>
+                     Returns
+                     the state of the A button on the KIPR Robot Controller program console (1 of pressed,
+                     0 otherwise). Continued function execution is blocked while the button is pressed. The
+                     construction
+                    <dl>
+                      <dd><code>while (a_button()==0) {<br/>
+                          while (a_button()==1); ...}
+                                         //debounce A button</code></dd>
+                    </dl> is equivalent to
+                    <dl>
+                      <dd><code>while <code> (a_button_clicked()==0) {...}</code></code></dd>
+                    </dl>
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="accel_x"></a></td>
+              <td><code>accel_x</code> [Category: Sensors]
+                <dl>
+                  <dd>Format: <code>int accel_x();</code><br/>
+                     Returns the value
+                     of the accelerometer in its x direction relative to the horizontal plane of the KIPR
+                     Robot Controller (left - right).
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="accel_y"></a></td>
+              <td><code>accel_y</code> [Category: Sensors]
+                <dl>
+                  <dd>Format: <code>int accel_y();</code><br/>
+                     Returns the value
+                     of the accelerometer in its y direction relative to the horizontal plane of the KIPR
+                     Robot Controller (forward - back).
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="accel_z"></a></td>
+              <td><code>accel_z</code> [Category: Sensors]
+                <dl>
+                  <dd>Format: <code>int accel_z();</code><br/>
+                     Returns the value
+                     of the accelerometer for its vertical, or z direction, relative to the horizontal plane
+                     of the KIPR Robot Controller (up - down). When the KIPR Robot Controller is horizontal
+                     it is calibrated to have a value corresponding to the gravitational constant G (your
+                     acceleration towards the center of the Earth that keeps you from flying off of the planet).
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="alloff"></a></td>
+              <td><code>alloff</code> [Category: Motors]
+                <dl>
+                  <dd>Format: <code>voidalloff();</code><br/>
+                     Turns off all motor
+                     ports.
+                     ao is a short form for
+                     alloff.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="analog"></a></td>
+              <td><code>analog</code> [Category: Sensors]
+                <dl>
+                  <dd>Format: <code>int analog(int p);</code><br/> Returns the value of the sensor plugged into analog port <code>p</code>
+                     scaled as an
+                     integer between 0 and 1023. Analog ports on the KIPR Robot Controller are numbered 0
+                     through 7. Each analog port on the KIPR Robot Controller has a selectable pullup resistor,
+                     enabled by default since many analog sensors do not have this component built in, although
+                     some do (such as the "ET" range finder). For a sensor such as the ET sensor, the values
+                     returned by <code>analog</code>
+                     will be unsatisfactory unless the pullup resistor for
+                     its port is disabled by using <code> analog_et</code>.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="analog_et"></a></td>
+              <td><code>analog_et</code> [Category: Sensors]
+                <dl>
+                  <dd>Format: <code>int analog_et(int p);</code><br/> For an analog sensor plugged into analog port <code>p</code>
+                    , disables the port's pullup
+                     resistor and returns a value scaled to the range 0-1023 representing the analog voltage
+                     variation produced by the sensor. Analog ports are numbered 0-7. This is the function
+                     normally used with the "ET" distance sensor used for robotics, which has a pullup sensor
+                     already integrated into its circuitry.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="analog8"></a></td>
+              <td><code>analog8</code> [Category: Sensors]
+                <dl>
+                  <dd>Format: <code>int analo8(int p);</code><br/> 8-bit version of analog. Returns the value of the sensor plugged into analog port <code>p</code>
+                     scaled as an integer between 0 and 255. Analog ports on the KIPR Robot Controller are
+                     numbered 0 through 7.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="analog10"></a></td>
+              <td><code>analog10</code> [Category: Sensors]
+                <dl>
+                  <dd>Format: <code>int analog10(int p);</code><br/> Returns the value of the sensor plugged into analog port <code>p</code>
+                     scaled as an
+                     integer between 0 and 1023. Analog ports on the KIPR Robot Controller are numbered 0
+                     through 7. Each analog port on the KIPR Robot Controller has a selectable pullup resistor,
+                     enabled by default since many analog sensors do not have this component built in, although
+                     some do (such as the "ET" range finder). For a sensor such as the ET sensor, the values
+                     returned by <code>analog10</code>
+                     will be unsatisfactory unless the pullup resistor for
+                     its port is disabled. Same as <code>analog</code>
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="any_button"></a></td>
+              <td><code>any_button</code> [Category: Sensors]
+                <dl>
+                  <dd>Format: <code>intany_button()();</code><br/> Returns 1 if any button (A,B,C,X,Y,Z,Side) is pressed.</dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="ao"></a></td>
+              <td><code>ao</code> [Category: Motors]
+                <dl>
+                  <dd>Format: <code>void ao();</code><br/>
+                     Turns off all motor
+                     ports (same as <code>alloff</code>).
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="b_button"></a></td>
+              <td><code>b_button</code> [Category: Sensors]
+                <dl>
+                  <dd>Format: <code>int b_button();</code><br/>
+                     Returns the state of the B button on the KIPR Robot Controller program console (1 if
+                     pressed, 0 otherwise).
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="b_button_clicked"></a></td>
+              <td><code>b_button_clicked</code> [Category: Sensors]
+                <dl>
+                  <dd>Format: <code>int b_button_clicked();</code><br/>
+                     Returns
+                     the state of the B button on the KIPR Robot Controller program console (1 of pressed,
+                     0 otherwise). Continued function execution is blocked while the button is pressed. The
+                     construction
+                    <dl>
+                      <dd><code>while (b_button()==0) {<br/>
+                          while (b_button()==1); ...}
+                                           //debounce B button</code></dd>
+                    </dl> is equivalent to
+                    <dl>
+                      <dd><code>while <code> (b_button_clicked()==0) {...}</code></code></dd>
+                    </dl>
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="beep"></a></td>
+              <td><code>beep</code> [Category: Output]
+                <dl>
+                  <dd>Format: <code>void beep();</code><br/>
+                     Produces a tone
+                     from the KIPR Robot Controller loud speaker. Returns when the tone is finished.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="bk"></a></td>
+              <td><code>bk</code> [Category: Motors]
+                <dl>
+                  <dd>Format: <code>void bk(int m);</code><br/> Turns on the motor plugged into motor port <code>m</code>
+                     at full PWM power in the reverse
+                     direction (red light comes on for the KIPR Robot Controller motor port). Motor ports
+                     are numbered from 0 to 3.<br/> Example: <br/>
+                    <div class="Indent"><code>bk(3); // full power reverse for motor 3</code></div>
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="block_motor_done"></a></td>
+              <td><code>block_motor_done</code> [Category: Motors]
+                <dl>
+                  <dd>Format: <code>void block_motor_done(int m);</code><br/> If a motor positioning function is in progress for the motor plugged into motor port <code>m</code>
+                    , continued function execution is blocked until the motor has reached its
+                     goal position. Motor positioning functions are <code>move_to_position</code> (or <code>mtp</code>
+                    )
+                     and <code>move_relative_position</code> (or <code>mrp</code>).<br/> Example: <br/><code>
+                      <div class="Indent"><code>mtp(0,500,20000); // turn on motor 0 at 500 ticks/sec and stop when position 20000 is reached</code><br/>
+                        block_motor_done(1);
+                                                            // pause until mtp has reached its goal position of 20000 for motor 1
+                                                            
+                      </div>
+                              This function must be used with some care, since if something prevents the motor from reaching its goal position, the program
+                              will hang until halted by external means.</code>
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="bmd"></a></td>
+              <td><code>bmd</code> [Category: Motors]
+                <dl>
+                  <dd>Format: <code>void bmd(int m);</code><br/> This function is the same as <code>block_motor_done</code>, just under a (much) shorter name.</dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="c_button"></a></td>
+              <td><code>c_button</code> [Category: Sensors]
+                <dl>
+                  <dd>Format: <code>int c_button();</code><br/> Returns the state of the C button on the KIPR Robot Controller program console (1 if pressed, 0 otherwise).</dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="c_button_clicked"></a></td>
+              <td><code>c_button_clicked</code> [Category: Sensors]
+                <dl>
+                  <dd>Format: <code>int c_button_clicked();</code><br/>
+                     Returns the state of the C button on the KIPR Robot Controller program console (1 of pressed, 0 otherwise).
+                     Continued function execution is blocked while the button is pressed. The construction
+                    <dl>
+                      <dd><code>while (c_button()==0) {<br/>
+                          while (c_button()==1); ...}
+                                       //debounce C button</code></dd>
+                    </dl> is equivalent to
+                    <dl>
+                      <dd><code>while <code> (c_button_clicked()==0) {...}</code></code></dd>
+                    </dl>
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="clear_motor_position_counter"></a></td>
+              <td><code>clear_motor_position_counter</code> [Category: Motors]
+                <dl>
+                  <dd>Format: <code>void clear_motor_position_counter(int motor_nbr);</code><br/> Reset the position counter for the motor specified to 0.</dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="console_clear"></a></td>
+              <td><code>console_clear</code> [Category: Output]
+                <dl>
+                  <dd>Format: <code>void console_clear();</code><br/>
+                     Clear the KIPR Robot
+                     Controller program console print buffer. See also <code>display_clear</code>.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="digital"></a></td>
+              <td><code>digital</code> [Category: Sensors]
+                <dl>
+                  <dd>Format: <code>int digital(int p);</code><br/> Returns the value of the sensor in digital port <code>p</code>
+                    , as a true/false value (1 for true
+                     and 0 for false). Sensors are expected to be active low, meaning that they are valued at zero volts
+                     in the active, or true, state. Thus the library function returns the inverse of the actual reading
+                     from the digital hardware. If the reading is zero volts or logic zero, the <code>digital</code>
+                     function
+                     will return true. Digital ports on the KIPR Robot Controller are numbered 8 through 15.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="disable_servo"></a></td>
+              <td><code>disable_servo</code> [Category: Servos]
+                <dl>
+                  <dd>Format: <code>void disable_servo(int p);</code><br/>
+                     Disables the specified servo port. Servo ports are disabled by default, and if enabled, consume power
+                     whenever a motor is plugged into them. Servo ports on the KIPR Robot Controller are numbered 0 to
+                     3.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="disable_servos"></a></td>
+              <td><code>disable_servos</code> [Category: Servos]
+                <dl>
+                  <dd>Format: <code>void disable_servos();</code><br/>
+                     Disables all servo
+                     motor ports (powers down all servo motors). Servo ports are disabled by default, and if enabled,
+                     consume power whenever a motor is plugged into them.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="display_clear"></a></td>
+              <td><code>display_clear</code> [Category: Output]
+                <dl>
+                  <dd>Format: <code>void display_clear();</code><br/>
+                     Clear the KIPR Robot
+                     Controller program console screen for using <code>display_printf</code>. See also <code>console_clear</code>.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="display_printf"></a></td>
+              <td><code>display_printf</code> [Category: Output]
+                <dl>
+                  <dd>Format: <code>void display_printf(int col, int row, char s[], ... );</code><br/>
+                     The purpose of this function is to display formatted output at a specific (column, row) location
+                     on the KIPR Robot Controller program console screen using standard <code>printf</code>
+                     formatting. The column range for the display is 0 to 41. For the 3 button (A,B,C)
+                     console display, the row range is 0 to 9, and for the 6 button (X,Y,Z,A,B,C) console display, the
+                     row range is 0 to 7. Excess data printed to a row is truncated (i.e. text does not wrap). Printing
+                     " <code>\n</code>" using <code>display_printf</code> will cause undesired display results.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="enable_servo"></a></td>
+              <td><code>enable_servo</code> [Category: Servos]
+                <dl>
+                  <dd>Format: <code>void enable_servo(int p);</code><br/>
+                     Enables specified servo port. Servo ports are disabled by default, and if enabled, consume power
+                     whenever a motor is plugged into them. If a servo position for a port hasn't been set when it is
+                     enabled, the default position is 1023. Servo ports on the KIPR Robot Controller are numbered 0 to
+                     3.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="enable_servos"></a></td>
+              <td><code>enable_servos</code> [Category: Servos]
+                <dl>
+                  <dd>Format: <code>void enable_servos();</code><br/>
+                     Enables all servo motor
+                     ports. Servo ports are disabled by default, and if enabled, consume power whenever a motor is plugged
+                     into them.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="extra_buttons_show"></a></td>
+              <td><code>extra_buttons_show</code> [Category: Output]
+                <dl>
+                  <dd>Format: <code>void extra_buttons_show();</code><br/>
+                     Shows the X, Y,
+                     and Z buttons on the KIPR Robot Controller program console screen above the A, B, and C buttons.
+                     Note: this reduces the display area for <code>printf</code> and <code>display_printf</code>
+                    . See
+                     also <code>extra_buttons_hide, get_extra_buttons_visible</code>.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="extra_buttons_hide"></a></td>
+              <td><code>extra_buttons_hide</code> [Category: Output]
+                <dl>
+                  <dd>Format: <code>void extra_buttons_hide();</code><br/>
+                     Hides the X, Y, and Z buttons on the KIPR Robot Controller program console screen. Note: this is
+                     the default display configuration. See also <code>extra_buttons_show, get_extra_buttons_visible</code>.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="fd"></a></td>
+              <td><code>fd</code> [Category: Motors]
+                <dl>
+                  <dd>Format: <code>void fd(int m);</code><br/> Turns on the motor plugged into motor <code>m</code>
+                     at full PWM power in the forward direction (green
+                     light comes on for the KIPR Robot Controller motor port). Motors are numbered 0 to 3.<br/> Example:<br/>
+                    <div class="Indent"><code>fd(3); // full power forward for motor 3</code></div>
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="freeze"></a></td>
+              <td><code>freeze</code> [Category: Motors]
+                <dl>
+                  <dd>Format: <code>void freeze(int m);</code><br/>
+                     Freezes motor m (prevents continued motor rotation, in contrast to
+                     off, which allows the motor to "coast").
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <!--
+            &lt;tr&gt;
+            &lt;td&gt;&lt;a name="get_analog_pullup"&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt; &lt;code&gt;get_analog_pullup&lt;/code&gt; [Category: Sensors]
+            &lt;dl&gt;&lt;dd&gt;
+            Format: &lt;code&gt;&lt;font class="CVariable"&gt;int&lt;/font&gt; get_analog_pullup(&lt;font class="CVariable"&gt;int&lt;/font&gt; port);&lt;/code&gt;&lt;br&gt;
+            Returns 1 if the port's pullup resistor is enabled (the default), and 0 otherwise. See also &lt;code&gt;set_analog_pullup&lt;/code&gt;.&lt;/dd&gt;
+            &lt;/dl&gt;
+            &lt;/td&gt;
+            &lt;/tr&gt;
+            -->
+            <!--
+            &lt;tr&gt;
+            &lt;td&gt;&lt;a name="get_digital_pullup"&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt; &lt;code&gt;get_digital_pullup&lt;/code&gt; [Category: Sensors]
+            &lt;dl&gt;&lt;dd&gt;
+            Format: &lt;code&gt;&lt;font class="CVariable"&gt;int&lt;/font&gt; get_digital_pullup(&lt;font class="CVariable"&gt;int&lt;/font&gt; port);&lt;/code&gt;&lt;br&gt;
+            Returns 1 if the port's pullup resistor is enabled (the default), and 0 otherwise. See also &lt;code&gt;set_digital_pullup&lt;/code&gt;.&lt;/dd&gt;
+            &lt;/dl&gt;
+            &lt;/td&gt;
+            &lt;/tr&gt;
+            -->
+            <tr>
+              <td><a name="get_extra_buttons_visible"></a></td>
+              <td><code>get_extra_buttons_visible</code> [Category: Sensors]
+                <dl>
+                  <dd>Format: <code>int get_extra_buttons_visible();</code><br/>
+                     Returns
+                     1 if the X, Y, and Z buttons are visible, 0 if not. See also <code>extra_buttons_show, extra_buttons_hide</code>
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="get_motor_done"></a></td>
+              <td><code>get_motor_done</code> [Category: Motors]
+                <dl>
+                  <dd>Format: <code>int get_motor_done(int m);</code><br/>
+                     For a motor moving to a goal position set by a motor positioning command, returns 1 if the motor
+                     has reached the goal position and 0 otherwise. Motor positioning functions are <code>move_to_position</code> (or <code>mtp</code>) and <code>move_relative_position</code> (or <code>mrp</code>). See also <code>block_motor_done</code>.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="get_motor_position_counter"></a></td>
+              <td><code>get_motor_position_counter</code> [Category: Motors]
+                <dl>
+                  <dd>Format: <code>int get_motor_position_counter(int m);</code><br/> Returns the current motor position for motor <code>m</code>
+                     in "ticks" (a value which is continually
+                     being updated for each motor using PID motor control based on back EMF; a typical discrimination
+                     for a given motor is on the order of 1100 position "ticks" per rotation)
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="get_pid_gains"></a></td>
+              <td><code>get_pid_gains</code> [Category: Motors]
+                <dl>
+                  <dd>Format: <code>int get_pid_gains(int motor, int *p, int *i, int *d, int *pd, int *id, int *dd);</code><br/> This function is used to obtain the PID control values currently set for the KIPR Robot Controller motor ports. The <code>p</code>, <code>i</code> and <code>d</code> arguments are numerators, and the <code>pd</code>, <code>id</code> and <code>dd/</code>
+                     arguments are their respective denominators for coefficients
+                     used by the PID control algorithm. While all of the parameters are integers, the coefficients used
+                     within the PID control algorithm may be integers or floating point. PID stands for proportional,
+                     integral, derivative and uses BEMF (back electromotive force) feedback from a motor to determine
+                     how much PWM power to apply based on predictors governed by the PID coefficients. If a motor is jerky,
+                     the p and d terms should be reduced in size. If a motor lags far behind a specified velocity, they
+                     should be increased. The default values are set at firmware install as effective values for motors
+                     sold by KIPR. See also <code>set_pid_gains</code>
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="get_servo_enabled"></a></td>
+              <td><code>get_servo_enabled</code> [Category: Servos]
+                <dl>
+                  <dd>Format: <code>int get_servo_enabled(int srv);</code><br/>
+                     Returns 1 if the specified servo port is enabled and 0 otherwise. Servo ports on the KIPR Robot Controller
+                     are numbered 0 to 3.See also <code>enable_servo, disable_servo</code>.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="get_servo_position"></a></td>
+              <td><code>get_servo_position</code> [Category: Servos]
+                <dl>
+                  <dd>Format: <code>int get_servo_position(int srv);</code><br/> Returns the last position value set for the servo in port <code>srv</code>
+                    . The value will be in
+                     the range 0 to 2047. Servo ports on the KIPR Robot Controller are numbered 0 to 3. See also
+                     set_servo_position.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="mav"></a></td>
+              <td><code>mav</code> [Category: Motors]
+                <dl>
+                  <dd>Format: <code>void mav(int m, int vel);</code><br/> This function is the same as <code>move_at_velocity</code></dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="motor"></a></td>
+              <td><code>motor</code> [Category: Motors]
+                <dl>
+                  <dd>Format: <code>void motor(int m, int p);</code><br/> Turns on motor port <code>m</code> at <code>p</code>% of full PWM motor power. The range for <code>p</code>
+                     is -100 to 100, where a negative value runs the motor in its reverse direction. On the KIPR Robot
+                     Controller, a motor port supplying forward power lights green, and for reverse lights red, although
+                     actual motor direction depends on how it is plugged in.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="move_at_velocity"></a></td>
+              <td><code>move_at_velocity</code> [Category: Motors]
+                <dl>
+                  <dd>Format: <code>void move_at_velocity(int m, int vel);</code><br/> Turns on motor port <code>m</code>
+                    , varying applied PWM power using PID motor control to maintain
+                     motor velocity <code>vel</code>
+                     indefinitely. The velocity range is -1000 to 1000 ticks per second.
+                     On the KIPR Robot Controller, a motor port supplying forward power lights green, and for reverse
+                     lights red, although actual motor direction depends on how it is plugged in.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="move_relative_position"></a></td>
+              <td><code>move_relative_position</code> [Category: Motors]
+                <dl>
+                  <dd>Format: <code>void move_relative_position(int m, int absvel, int pos);</code><br/> Turns on motor port <code>m</code>
+                    , varying applied PWM power using PID motor control to maintain
+                     motor velocity <code>absvel</code>
+                     (±) until the motor has moved from its current position
+                     cp to the goal position cp <code> + pos</code>. The range for the <code>absvel</code>
+                     argument is
+                     0 to 1000 ticks per second. On the KIPR Robot Controller, a motor port supplying forward power lights
+                     green, and for reverse lights red, although actual motor direction depends on how it is plugged in.
+                  </dd>
+                  <dd>Example: <br/>
+                    <div class="Indent"><code>move_relative_position(1,275,-1100);</code></div>
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="move_to_position"></a></td>
+              <td><code>move_to_position</code> [Category: Motors]
+                <dl>
+                  <dd>Format: <code>void move_to_position(int m, int absvel, int pos);</code><br/> Turns on motor port <code>m</code>
+                    , varying applied PWM power using PID motor control to maintain
+                     motor velocity <code>absvel</code>
+                     (±) until the motor has moved from its current position
+                     to goal position <code>pos</code>. The range for the <code>absvel</code>
+                     argument is 0 to 1000 ticks per second. On the KIPR Robot Controller, a motor
+                     port supplying forward power lights green, and for reverse lights red, although actual motor direction
+                     depends on how it is plugged in. If the motor is already at the goal position <code>pos</code>, the motor doesn't move.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="mrp"></a></td>
+              <td><code>mrp</code> [Category: Motors]
+                <dl>
+                  <dd>Format: <code>void mrp(int m, int vel, int pos);</code><br/> This function is the same as <code>move_relative_position</code>.</dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="mtp"></a></td>
+              <td><code>mtp</code> [Category: Motors]
+                <dl>
+                  <dd>Format: <code>void mtp(int m, int vel, int pos);</code><br/> This function is the same as <code>move_to_position</code>.</dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="msleep"></a></td>
+              <td><code>msleep</code> [Category: Time]
+                <dl>
+                  <dd>Format: <code>void msleep(int msec);</code><br/> Suspends function execution for the amount of time specified in milliseconds.<br/> Example:<br/>
+                    <div class="Indent"><code>msleep(1500); //wait for 1.5 seconds</code></div>
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="off"></a></td>
+              <td><code>off</code> [Category: Motors]
+                <dl>
+                  <dd>Format: <code>void off(int m);</code><br/> Turns off motor port <code>m</code>.<br/> Example:<br/>
+                    <div class="Indent"><code>off(1);</code>// turn off motor 1</div>
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="power_level"></a></td>
+              <td><code>power_level</code> [Category: Sensor]
+                <dl>
+                  <dd>Format: <code>double power_level();</code><br/>
+                     Returns the current
+                     power level for the KIPR Robot Controller battery.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="run_for"></a></td>
+              <td><code>run_for</code> [Category: Threads]
+                <dl>
+                  <dd>Format: <code>void run_for(double sec, &lt;</code><i>function_name</i><code>&gt;);</code><br/>
+                     Runs the specified function and tracks its execution until either the function finishes or the specified
+                     number of seconds has elapsed. If the specified number of seconds has elapsed, <code>runfor</code> terminates execution for the function.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="seconds"></a></td>
+              <td><code>seconds</code> [Category: Time]
+                <dl>
+                  <dd>Format: <code>double seconds();</code><br/>
+                     Returns the number of seconds that have elapsed since system start up according to the system's internal
+                     clock. Resolution is 0.001 seconds (one millisecond).
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="set_a_button_text"></a></td>
+              <td><code>set_a_button_text</code> [Category: Sensors]
+                <dl>
+                  <dd>Format: <code>void set_a_button_text char txt[]);</code><br/>
+                     This function resets the text displayed on the A button to be the text string specified rather than
+                     the default string "A".
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <!--
+            &lt;tr&gt;
+            &lt;td&gt;&lt;a name="set_analog_pullup"&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt; &lt;code&gt;set_analog_pullup&lt;/code&gt; [Category: Sensors]
+            &lt;dl&gt;&lt;dd&gt;
+            Format: &lt;code&gt;&lt;font class="CVariable"&gt;void&lt;/font&gt; set_analog_pullup(&lt;font class="CVariable"&gt;int&lt;/font&gt; port, &lt;font class="CVariable"&gt;int&lt;/font&gt; pullupTF);&lt;/code&gt;&lt;br&gt;
+            By default, a pullup resistor is enabled for each analog port. This function disables (or re-enables) the pullup resistor for the selected analog port. If an analog sensor doesn't have an integrated pullup resistor (such as an IR light sensor), the pullup resistor for the sensor's analog port needs to be enabled. For an analog sensor that sets its own pullup value (the "ET" optical range finder is such a sensor), the pullup resistor for its analog port needs to be disabled. For example, &lt;/code&gt;&lt;br&gt;
+            &lt;div class="Indent"&gt; &lt;code&gt;set_analog_pullup(3,0); &lt;font class="Comment"&gt;/*disable the port 3 pullup resistor&lt;/code&gt;&lt;br&gt;
+            (port is now "floating" and the ET sensor will work correctly in it)*/&lt;/font&gt;&lt;/code&gt;&lt;br&gt;
+            &lt;code&gt;set_analog_pullup(3,1); &lt;font class="Comment"&gt; /*re-enable the port 3 pullup resistor &lt;/code&gt;&lt;br&gt;
+            (the ET sensor will no longer work correctly in it)*/&lt;/font&gt;&lt;/div&gt;&lt;/code&gt;
+            See also &lt;code&gt;get_analog_pullup&lt;/code&gt; and &lt;code&gt;analog_ET&lt;/code&gt;.&lt;/dd&gt;
+            &lt;/dl&gt;
+            &lt;/td&gt;
+            &lt;/tr&gt;
+            -->
+            <tr>
+              <td><a name="set_b_button_text"></a></td>
+              <td><code>set_b_button_text</code> [Category: Sensors]
+                <dl>
+                  <dd>Format: <code>void set_b_button_textchar txt[]);</code><br/>
+                     This function resets the text displayed on the B button to be the text string specified rather than
+                     the default string "B".
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="set_c_button_text"></a></td>
+              <td><code>set_c_button_text</code> [Category: Sensors]
+                <dl>
+                  <dd>Format: <code>void set_c_button_textchar txt[]);</code><br/>
+                     This function resets the text displayed on the C button to be the text string specified rather than
+                     the default string "C".
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="set_digital_output"></a></td>
+              <td><code>set_digital_output</code> [Category: Output]
+                <dl>
+                  <dd>Format: <code>void set_digital_output(int port, int inout);</code><br/>
+                     Digital ports on the KIPR Robot Controller can be configured for either input or output. By default
+                     digital ports are set for input. If the value of <code>inout</code>
+                     is 1, the port is configured
+                     for output, for example, the statement<br/>
+                    <div class="Indent"><code>set_digital_output(9,1);</code></div> when executed configures digital port 9 for output. The port number specified must be in the range from 8 to 15. See also <code>set_digital_value</code>. See below for an <a href="#digital_out_LED">example program</a>
+                     using
+                     digital output.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <!--
+            &lt;tr&gt;
+            &lt;td&gt;&lt;a name="set_digital_pullup"&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt; &lt;code&gt;set_digital_pullup&lt;/code&gt; [Category: Sensors]
+            &lt;dl&gt;&lt;dd&gt;
+            Format: &lt;code&gt;&lt;font class="CVariable"&gt;void&lt;/font&gt; &lt;font class="CFunction"&gt;set_digital_pullup&lt;/font&gt;(&lt;font class="CVariable"&gt;int&lt;/font&gt; port,&lt;font class="CVariable"&gt;int&lt;/font&gt; pullupTF);&lt;/code&gt;&lt;br&gt;
+            By default, a pullup resistor is enabled for each digital port. This function disables (or re-enables) the pullup resistor for the selected digital port. If a digital sensor doesn't have an integrated pullup resistor (which is the case for simple switches or an LED), the pullup resistor for the sensor's digital port needs to be enabled. For a digital sensor that sets its own pullup value (there are none used for Botball), the pullup resistor for its digital port needs to be disabled. See also &lt;code&gt;get_digital_pullup&lt;/code&gt;.&lt;/dd&gt;
+            &lt;/dl&gt;
+            &lt;/td&gt;
+            &lt;/tr&gt;
+            -->
+            <tr>
+              <td><a name="set_digital_value"></a></td>
+              <td><code>set_digital_value</code> [Category: Output]
+                <dl>
+                  <dd>Format: <code>void set_digital_value(int port, int value);</code><br/>
+                     Sets the (SEN) value for the specified port on the KIPR Robot Controller to either 0 (low) or 1 (high).
+                     For the sensor ports on the KIPR Robot Controller, the SEN rail is the inner rail having a single
+                     row of sockets. The specified port must be in the range 8 to 15. The library function <code>set_digital_ouput</code>
+                     is used to configure a digital port on the KIPR Robot Controller for output (or to re-configure it
+                     for input).<br/><br/>
+                    As an example, if the anode lead for an LED (the longer of its two leads) is plugged into
+                     the SEN socket for digital port 9 and its cathode lead into the GND rail (the outer rail for the
+                     PWR/GND rails), then if digital port 9 has been set for output<br/>
+                    <div class="Indent"><code>set_digital_value(9,1);</code></div> will turn on the LED when executed and <br/>
+                    <div class="Indent"><code>set_digital_value(9,0);</code></div> will turn it off. See below for an <a href="#digital_out_LED">example program</a> using digital output.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="set_pid_gains"></a></td>
+              <td><code>set_pid_gains</code> [Category: Motors]
+                <dl>
+                  <dd>Format: <code>int set_pid_gains(int motor, int p, int i, int d, int pd, int id, int dd);</code><br/>
+                     This function is used to change the PID control values currently set for the KIPR Robot Controller
+                     motor ports. The <code>p</code>, <code>i</code> and <code>d</code>
+                     arguments are numerators, and
+                     the <code>pd</code>, <code>id</code> and <code>dd</code>
+                     arguments are their respective denominators
+                     for coefficients used by the PID control algorithm. While all of the parameters are integers, the
+                     coefficients used within the PID control algorithm may be integers or floating point. PID stands
+                     for proportional, integral, derivative and uses BEMF (back electromotive force) feedback from a motor
+                     to determine how much PWM power to apply based on predictors governed by the PID coefficients. If
+                     a motor is jerky, the p and d terms should be reduced in size. If a motor lags far behind a specified
+                     velocity, they should be increased. The default values are set at firmware install as effective values
+                     for motors sold by KIPR. See also <code>get_pid_gains</code>
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="set_servo_position"></a></td>
+              <td><code>set_servo_position</code> [Category: Servos]
+                <dl>
+                  <dd>Format: <code>int set_servo_position(int srv, int pos);</code><br/> Sets the position value of the servo in port <code>srv</code>. The value of <code>pos</code>
+                     must
+                     be in the range 0 to 2047. The KIPR Robot Controller has 4 servo ports numbered 0 to 3. A servo motor
+                     consumes maximum power when trying to reach a position, so if the servo cannot reach the position
+                     specified, its power consumption will rapidly pull the KIPR Robot Controller battery down. Servo
+                     motors tend to reach their limit of travel around 200 short of either end of the 0 to 2047 range,
+                     so values close to the limit of travel should be avoided. Additionally, servo travel is not smooth,
+                     and positions tend to be about 5 units apart on the 0 to 2047 scale; i.e., position increments should
+                     be at least 5. see also <code>get_servo_position</code>.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="set_x_button_text"></a></td>
+              <td><code>set_x_button_text</code> [Category: Sensors]
+                <dl>
+                  <dd>Format: <code>void set_x_button_text(char txt[]);</code><br/>
+                     This function resets the text displayed on the X button to be the text string specified rather than
+                     the default string "X". See also <code>extra_buttons_show, extra_buttons_hide, get_extra_buttons_visible</code>.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="set_y_button_text"></a></td>
+              <td><code>set_y_button_text</code> [Category: Sensors]
+                <dl>
+                  <dd>Format: <code>void set_y_button_text(char txt[]);</code><br/>
+                     This function resets the text displayed on the Y button to be the text string specified rather than
+                     the default string "Y". See also <code>extra_buttons_show, extra_buttons_hide, get_extra_buttons_visible</code>.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="set_z_button_text"></a></td>
+              <td><code>set_z_button_text</code> [Category: Sensors]
+                <dl>
+                  <dd>Format: <code>void set_z_button_text(char txt[]);</code><br/>
+                     This function resets the text displayed on the Z button to be the text string specified rather than
+                     the default string "Z". See also <code>extra_buttons_show, extra_buttons_hide, get_extra_buttons_visible</code>.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <!--
+            the purpose of the following function is unclear since it neither runs a motor nor affects performance of motor functions
+            &lt;tr&gt;
+            &lt;td&gt;&lt;a name="setpwm"&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt; &lt;code&gt;setpwm&lt;/font&gt;&lt;/code&gt; [Category: Motors]
+            &lt;dl&gt;&lt;dd&gt;
+            &lt;font class="CVariable"&gt;int&lt;/font&gt; setpwm(&lt;font class="CVariable"&gt;int &lt;/font&gt;m, &lt;font class="CVariable"&gt;int&lt;/font&gt; dc);&lt;/code&gt;&lt;br&gt;
+            Runs motor m at duty cycle &lt;code&gt;dc&lt;/code&gt; (values are from -100 to 100)&lt;/dd&gt;
+            &lt;/dl&gt;
+            &lt;/td&gt;
+            &lt;/tr&gt;
+            -->
+            <tr>
+              <td><a name="side_button"></a></td>
+              <td><code>side_button (or black_button)</code>[Category: Sensors]
+                <dl>
+                  <dd>Format: <code>int side_button();</code><br/> Returns the state of the (physical) side button on the KIPR Robot Controller (1 if pressed, 0 otherwise).</dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="side_button_clicked"></a></td>
+              <td><code>side_button_clicked</code> [Category: Sensors]
+                <dl>
+                  <dd>Format: <code>int side_button_clicked();</code><br/>
+                     Returns the state of the (physical) side button on the KIPR Robot Controller (1 if pressed, 0 otherwise).
+                     Continued function execution is blocked while the button is pressed. The construction returns 1 for
+                     pressed, 0 for not pressed. The construction
+                    <dl>
+                      <dd><code>while (side_button()==0) {<br/>
+                          while (side_button()==1); ...}
+                                           //debounce A button</code></dd>
+                    </dl> is equivalent to
+                    <dl>
+                      <dd><code>while (a_button_clicked()==0) {...}</code></dd>
+                    </dl>
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="thread_create"></a></td>
+              <td><code>thread_create</code> [Category: Threads]
+                <dl>
+                  <dd>Format: <code>thread thread_create(&lt;</code><i>function name</i><code>&gt;);</code><br/> The <code>thread_create</code>
+                     function is used to create a thread for running a function in parallel
+                     to <code>main</code>
+                    , returning a thread ID value of type
+                     thread. The special data type
+                     thread is for the thread ID's created by the system to keep track of active threads. Note
+                     that the returned value must be assigned to a variable of type
+                     thread to remain available to the program. When a function is run in a thread (via <code>thread_start</code>
+                    ),the
+                     thread will remain active until the function finishes or the thread is destroyed (via <code>thread_destroy</code>
+                    ).
+                     If the thread hasn't been destroyed, it can be started again; otherwise, a new thread has to be created
+                     for the function to be run in a thread again. Since the system limits how many threads can be created,
+                     thread management is important; i.e., threads should be destroyed once they have finished (if threads
+                     seem to stop working it is usually because too many have been created). See the <a href="#Threads">section on threads</a> below for additional information and an example.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="thread_destroy"></a></td>
+              <td><code>thread_destroy</code> [Category: Threads]
+                <dl>
+                  <dd>Format: <code>void thread_destroy(thread tid);</code><br/> The <code>thread_destroy</code>
+                     function is used to destroy a thread created for running a function
+                     in parallel to main. The thread is destroyed by passing its thread ID to <code>thread_destroy</code>
+                    . If the function for the thread is running in the thread when the thread
+                     is destroyed, its execution is terminated. See the <a href="#Threads">section on threads</a>
+                     below
+                     for additional information and an example.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="thread_start"></a></td>
+              <td><code>thread_start</code> [Category: Threads]
+                <dl>
+                  <dd>Format: <code>void thread_start(thread tid);</code><br/> The <code>thread_start</code> function is used to activate the thread given by <code>tid</code>, running its associated function in the thread in parallel with <code>main</code> and any other active threads. The value of argument <code>tid</code>
+                     must have
+                     a thread ID value as returned by <code>thread_create</code>
+                    . Keep in mind that thread IDs generated
+                     by <code>thread_create</code>
+                     must be retained in variables of type
+                     thread to remain available for later use in a program. The thread is active until its function
+                     finishes or until it is terminated by <code>thread_destroy</code>
+                    . A global variable can be used
+                     as a flag for a function running in a thread to signal when it is done.
+                    <p>The following example shows the <code>main</code> process creating a thread for the function <code>check_sensor</code>
+                      , running the function in the thread, and then destroying the thread
+                       one second later (whether or not the thread is still active):
+                    </p><a name="BasicThread"></a>
+                    <pre><code class="language-clike">int main()
+{
+    thread tid;  // variable for holding a thread&apos;s ID
+    tid = thread_create(check_sensor);  // capture thread&apos;s ID in tid
+    thread_start(tid);  // run check_sensor in the thread
+    msleep(1000);  // let it keep running for a second
+    thread_destroy(tid);  // stop check_sensor if still running
+}<br/></code></pre><br/> See the <a href="#Threads">section on threads</a> below for a complete example using threads.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="thread_wait"></a></td>
+              <td><code>thread_wait</code> [Category: Threads]
+                <dl>
+                  <dd>Format: <code>void thread_wait(thread tid);</code><br/> If <code>thread_wait</code>
+                     is executed in a function, it will block continued execution of the function
+                     until the function running in the thread given by <code>tid</code>
+                     has finished (or until the thread
+                     given by <code>tid</code> is destroyed by some other process). If the thread given by <code>tid</code> is inactive, the function does nothing. <code>thread_wait</code>
+                     is used for synchronization of multiple threads (e.g., thread 1 doesn't
+                     continue until thread 2 is done). See the <a href="#Threads">section on threads</a>
+                     below for additional
+                     information and an example.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="x_button"></a></td>
+              <td><code>x_button </code>[Category: Sensors]
+                <dl>
+                  <dd>Format: <code>int x_button();</code><br/>
+                     Returns the state of the
+                     X button when it is visible on the KIPR Robot Controller program console (1 if pressed, 0 otherwise).
+                     This button is an extra button. Use <code>extra_buttons_show</code>
+                     to show the X, Y, and Z buttons.
+                     See also <code>extra_buttons_hide, get_extra_buttons_visible</code>.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="x_button_clicked"></a></td>
+              <td><code>x_button_clicked</code> [Category: Sensors]
+                <dl>
+                  <dd>Format: <code>int x_button_clicked();</code><br/>
+                     Returns the state
+                     of the X button when it is visible on the KIPR Robot Controller program console (1 if pressed, 0
+                     otherwise). Continued function execution is blocked while the button is pressed. The construction
+                    <dl>
+                      <dd><code>while (x_button()==0) {<br/>while(x_button()==1); ...}  //debounce X button</code></dd>
+                    </dl> is equivalent to
+                    <dl>
+                      <dd><code>while(x_button_clicked()==0) {...}</code><br/></dd>
+                    </dl> This button is an extra button. Use <code>extra_buttons_show</code>
+                     to show the X, Y, and Z buttons.
+                     See also <code>extra_buttons_hide, get_extra_buttons_visible</code>.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="y_button"></a></td>
+              <td><code>y_button </code>[Category: Sensors]
+                <dl>
+                  <dd>Format: <code>int y_button();</code><br/>
+                     Returns the state of the
+                     Y button when visible on the KIPR Robot Controller program console (1 if pressed, 0 otherwise). This
+                     button is an extra button. Use <code>extra_buttons_show</code>
+                     to show the X, Y, and Z buttons. See
+                     also <code>extra_buttons_hide, get_extra_buttons_visible</code>.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="y_button_clicked"></a></td>
+              <td><code>y_button_clicked</code> [Category: Sensors]
+                <dl>
+                  <dd>Format: <code>int y_button_clicked();</code><br/>
+                     Returns the state
+                     of the Y button when it is visible on the KIPR Robot Controller program console (1 if pressed, 0
+                     otherwise). Continued function execution is blocked while the button is pressed. The construction
+                    <dl>
+                      <dd><code>while (y_button()==0) {<br/>while(y_button()==1); ...}  //debounce Y button</code></dd>
+                    </dl> is equivalent to<br/>
+                    <dl>
+                      <dd><code>while(y_button_clicked()==0) {...}</code><br/></dd>
+                    </dl> This button is an extra button. Use <code>extra_buttons_show</code>
+                     to show the X, Y, and Z buttons.
+                     See also <code>extra_buttons_hide, get_extra_buttons_visible</code>.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="z_button"></a></td>
+              <td><code>z_button </code>[Category: Sensors]
+                <dl>
+                  <dd>Format: <code>int z_button();</code><br/>
+                     Returns the state of the
+                     Z button when visible on the KIPR Robot Controller program console (1 if pressed, 0 otherwise). This
+                     button is an extra button. Use <code>extra_buttons_show</code>
+                     to show the X, Y, and Z buttons. See
+                     also <code>extra_buttons_hide, get_extra_buttons_visible</code>.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="z_button_clicked"></a></td>
+              <td><code>z_button_clicked</code> [Category: Sensors]
+                <dl>
+                  <dd>Format: <code>int z_button_clicked();</code><br/>
+                     Returns the state
+                     of the Z button when it is visible on the KIPR Robot Controller program console (1 if pressed, 0
+                     otherwise). Continued function execution is blocked while the button is pressed. The construction
+                    <dl>
+                      <dd><code>while (z_button()==0) {<br/>while(z_button()==1); ...}  //debounce Z button</code></dd>
+                    </dl> is equivalent to<br/>
+                    <dl>
+                      <dd><code>while(z_button_clicked()==0) {...}</code><br/></dd>
+                    </dl> This button is an extra button. Use <code>extra_buttons_show</code>
+                     to show the X, Y, and Z buttons.
+                     See also <code>extra_buttons_hide, get_extra_buttons_visible</code>.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="Indent"><a name="digital_out_LED"></a>
+          <h4>Example program for lighting an LED plugged into a digital port</h4>
+          <p>
+            By default the digital ports for the KIPR Robot Controller are configured for input. The KIPR Robot Controller
+            Library function <code>set_digital_output</code> is used to configure digital port direction; for example,
+          </p>
+          <div class="Indent"><code>set_digital_output(9, 1);</code></div>
+          <p>configures port 9 for output and</p>
+          <div class="Indent"><code>set_digital_output(9, 0);</code></div>
+          <p>configures it for input.</p>
+          <p>For a digital port configured for output, the KIPR Robot Controller Library function <code>set_digital_value</code>
+             is used to set the port's output value to either 0 (low) or 1 (high); for
+             example,
+          </p>
+          <div class="Indent"><code>set_digital_value(9, 1);</code></div>
+          <p>sets the output value for port 9 high.</p>
+          <p>
+            If you have a typical 5mm LED on hand, you can use the following program to operate it. An LED will "turn on"
+            when voltage applied to its anode lead rises above a prescribed level (typically between 1.9 and 3.2V, depending
+            on color). If too much current is passed through the LED, it will burn out (the typical spec is 20-30mA).
+            For the KIPR Robot Controller, digital outputs on the SEN rail are sufficiently current limited to operate
+            an LED without burning it out.
+          </p>
+          <table width="80%">
+            <tbody>
+              <tr>
+                <td>
+                  The LED's anode is normally identified by having the longer of the two leads. Additionally, the flange
+                  at the base of the LED is normally flattened on the cathode side.
+                </td>
+                <td>
+                  <!-- &lt;img src="images/LEDform.gif" style="float:right;" width="80%"&gt;&lt;/img&gt;-->
+                </td>
+              </tr>
+            </tbody>
+          </table><br/><a name="BlinkLED"></a>
+          <pre><code class="language-clike">/*  This is a program to blink an LED plugged into digital port 9 */
+int main()
+{
+   printf(&quot;LED in port 9\n&quot;);
+   printf(&quot;Press side button to quit\n&quot;);
+   set_digital_output(9, 1); // set digital port direction to digital output
+   while (side_button() == 0) {
+      set_digital_value(9, 1); // set digital output to 1 (high)
+      msleep(500);
+      set_digital_value(9, 0); // set digital output to 0 (low)
+      msleep(500);
+   }
+   set_digital_output(9, 0); // set digital port direction back to digital input
+   printf(&quot;\ndone\n&quot;);
+}</code></pre>
+        </div>
+        <!-- START FOOTER-->
+      </div>
+    </main>
+  </body>
+</html>

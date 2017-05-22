@@ -1,0 +1,224 @@
+html
+  head
+    link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    link(href='/css/base.css', rel='stylesheet', type='text/css')
+    link(href='/css/materialize.min.css', media='screen,projection', rel='stylesheet', type='text/css')
+    link(href='/css/docs.css', rel='stylesheet', type='text/css')
+    link(href='../imgs/logos/botguy.png', rel='icon')
+    title Botball Documentation - Tutorial
+    meta(content='#00796b', name='theme-color')
+    meta(content='width=device-width, initial-scale=1.0', name='viewport')
+  body
+    script(src='https://code.jquery.com/jquery-2.1.1.min.js', type='text/javascript')
+    script(src='/js/materialize.min.js', type='text/javascript')
+    script.
+      $(document).ready(function () {
+      $('.button-collapse').sideNav({
+      draggable: true
+      });
+      $(".active").parent().parent().siblings()[0].click() })
+    header
+      ul#slide-out.side-nav.fixed
+        li.red.lighten-1(style='height: 130px')
+          .userView
+            h5.white-text
+              a.white-text(href='/docs/index.html') Index
+        li
+          a(href='/docs/tutorial.html') Tutorial
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Data Objects
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/data-objects/index.html') Introduction
+                  li
+                    a(href='/docs/data-objects/variables.html') Variables
+                  li
+                    a(href='/docs/data-objects/constants.html') Constants
+                  li
+                    a(href='/docs/data-objects/data-types.html') Data Types
+                  li
+                    a(href='/docs/data-objects/arrays.html') Arrays
+                  li
+                    a(href='/docs/data-objects/structures.html') Structures
+                  li
+                    a(href='/docs/data-objects/initialization-examples.html') Initialization Examples
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Statements and Expressions
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/statements-and-expressions/index.html') Introduction
+                  li
+                    a(href='/docs/statements-and-expressions/operators.html') Operators
+                  li
+                    a(href='/docs/statements-and-expressions/control-flow.html') Control Flow
+        li
+          a(href='/docs/tutorial.html') Style
+        li
+          a(href='/docs/tutorial.html') Debugging
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Printing
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/printing/index.html') Introduction
+                  li
+                    a(href='/docs/printing/examples.html') Examples
+                  li
+                    a(href='/docs/printing/printf-codes.html') printf Codes
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Preprocessor
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/preprocessor/index.html') Introduction
+                  li
+                    a(href='/docs/preprocessor/directives.html') Directives
+                  li
+                    a(href='/docs/preprocessor/include.html') Include
+                  li
+                    a(href='/docs/preprocessor/macros.html') Macros
+                  li
+                    a(href='/docs/preprocessor/conditional-compilation.html') Conditional Compilation
+        li
+          a(href='/docs/lib/math.html') Math Library
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | KIPR Wallaby/Link
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/lib/kipr/common-functions.html') Common Functions
+                  li
+                    a(href='/docs/lib/kipr/functions.html') Functions List
+                  li
+                    a(href='/docs/lib/kipr/camera.html') Camera Functions
+                  li
+                    a(href='/docs/lib/kipr/graphics.html') Graphics Functions
+                  li
+                    a(href='/docs/lib/kipr/depth.html') Depth Sensor Functions
+                  li
+                    a(href='/docs/lib/kipr/usb.html') File I/O Functions
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | iRobot Create
+              .collapsible-body(style='display: block')
+                ul
+                  li.active
+                    a(href='/docs/lib/kipr/create/index.html') Introduction
+                  li
+                    a(href='/docs/lib/kipr/create/serial.html') Serial Functions
+                  li
+                    a(href='/docs/lib/kipr/create/configuration.html') Configuration Functions
+                  li
+                    a(href='/docs/lib/kipr/create/movement.html') Movement Functions
+                  li
+                    a(href='/docs/lib/kipr/create/sensors.html') Sensor Functions
+                  li
+                    a(href='/docs/lib/kipr/create/battery.html') Battery Functions
+                  li
+                    a(href='/docs/lib/kipr/create/built-ins.html') Built-In Functions
+                  li
+                    a(href='/docs/lib/kipr/create/music-leds.html') LED and Music Functions
+        li
+          a(href='/docs/lib/kipr/botball.html') Botball Functions
+        li
+          a(href='/docs/lib/kipr/threads.html') Threads
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Motors and Sensors
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/lib/kipr/info/digital-analog-sensors.html') Analog and Digital Sensors
+                  li
+                    a(href='/docs/lib/kipr/info/usb-sensors.html') USB Sensors
+                  li
+                    a(href='/docs/lib/kipr/info/motors-servos.html') Motors and Servos
+                  li
+                    a(href='/docs/lib/kipr/info/simulator.html') Simulator
+        li
+          a(href='/docs/full.html') Full Documentation
+      nav.nav-extended.red.lighten-2
+        .nav-wrapper
+          .col.s12
+            a.button-collapse(data-activates='slide-out', href='#', style='font-size: 50px')
+              i.material-icons menu
+            a#top.brand-logo.waves-effect(href='/docs/index.html') Botball Documentation
+        .nav-wrapper
+          .col.s12
+            a.breadcrumb(href='/docs/lib/kipr/create/index.html') iRobot Create
+    main.row
+      .container.col.s12
+        // END HEADER
+        // Create Function Library
+        a(name='Create_functions')
+        h3 Create Function Library
+        p
+          | The functions in the KIPR Robot Controller Library for controlling an iRobot Create module provide an interface
+          | between a program on the KIPR Robot Controller and the Create Open Interface (
+          a(href='http://www.irobot.com/filelibrary/pdfs/hrd/create/Create%20Open%20Interface_v2.pdf')
+            | http://www.irobot.com/filelibrary/pdfs/hrd/create/Create%20Open%20Interface_v2.pdf
+          | ).
+          |  Each Create function in the KIPR Robot Controller Library is designed to send the Create a series of Open
+          |  Interface commands that cause the Create to perform some action. A script of Open Interface commands can
+          |  also be downloaded to the Create to be played later (see the library function 
+          code create_write_byte
+          | ).
+        p
+          | The KIPR Robot Controller communicates with the iRobot Create via a (TTL) serial connection. Functions included
+          | in the KIPR Robot Controller Library for the iRobot Create send serial byte code sequences to the Create
+          | over the serial connection, making it possible to operate the Create without having to reference the Open
+          | Interface guide. These sequences cover the large majority of actions users typically want to have performed
+          | by a Create module (e.g., drive forward at a given speed, determine how far the Create has traveled, etc).
+          | They also provide a means for the KIPR Robot Controller to directly control an iRobot Create.
+        p
+          | A Create script is a (limited) sequence of pre-defined iRobot Create byte code commands ordered to perform some
+          | set of actions independent of external control. In contrast to other commands, a command to start a script
+          | disables serial communications until the script has finished. See the 
+          a(href='#Create_script_example') example program
+          |  below for more information on user defined scripts.
+        p
+          | The KIPR Robot Controller Library functions for moving the iRobot Create are non-blocking, so when a movement
+          | command is sent to the iRobot Create, its trajectory will continue until a different Create movement function
+          | is executed on the KIPR Robot Controller. In contrast, once a script is started on the Create it will run
+          | to completion, during which time the connection to the KIPR Robot Controller is ignored. The iRobot Create
+          | may also be used to play MIDI music. Up to 16 songs may be downloaded to the iRobot Create from a song array
+          | on the KIPR Robot Controller. See the Create Open Interface manual for details on note and duration codes.
+        p
+          | The library functions for accessing Create sensor data return either the requested data or an error code. A return
+          | value greater than 100,000 is used to indicate an error occurred, where the error number is given by 100,000
+          | + 
+          code &lt;
+          i Create-Serial-Interface-Packet-Number
+          code &gt;
+          | . For example, a code of
+          |  100,007 indicates an error occurred when requesting bumper or wheel drop sensor status. Sensor packet numbers
+          |  range from 7 to 42 as described in the Create Open Interface manual.
+        p
+          | The Create Open Interface manual has details concerning the physical characteristics of the iRobot Create module
+          | and descriptions of how to use the various byte code commands.
+        // START FOOTER
+

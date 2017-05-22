@@ -1,0 +1,460 @@
+
+<html>
+  <head>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link href="/css/base.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/materialize.min.css" media="screen,projection" rel="stylesheet" type="text/css"/>
+    <link href="/css/docs.css" rel="stylesheet" type="text/css"/>
+    <link href="../imgs/logos/botguy.png" rel="icon"/>
+    <title>Botball Documentation - Tutorial</title>
+    <meta content="#00796b" name="theme-color"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  </head>
+  <body>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="/js/materialize.min.js" type="text/javascript"></script>
+    <script>
+      $(document).ready(function () {
+      $('.button-collapse').sideNav({
+      draggable: true
+      });
+      $(".active").parent().parent().siblings()[0].click() })
+    </script>
+    <header>
+      <ul class="side-nav fixed" id="slide-out">
+        <li class="red lighten-1" style="height: 130px;">
+          <div class="userView">
+            <h5 class="white-text"><a class="white-text" href="/docs/index.html">Index</a></h5>
+          </div>
+        </li>
+        <li><a href="/docs/tutorial.html">Tutorial</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Data Objects</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/data-objects/index.html">Introduction</a></li>
+                  <li><a href="/docs/data-objects/variables.html">Variables</a></li>
+                  <li><a href="/docs/data-objects/constants.html">Constants</a></li>
+                  <li><a href="/docs/data-objects/data-types.html">Data Types</a></li>
+                  <li><a href="/docs/data-objects/arrays.html">Arrays</a></li>
+                  <li><a href="/docs/data-objects/structures.html">Structures</a></li>
+                  <li><a href="/docs/data-objects/initialization-examples.html">Initialization Examples</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Statements and Expressions</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/statements-and-expressions/index.html">Introduction</a></li>
+                  <li><a href="/docs/statements-and-expressions/operators.html">Operators</a></li>
+                  <li><a href="/docs/statements-and-expressions/control-flow.html">Control Flow</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/docs/tutorial.html">Style</a></li>
+        <li><a href="/docs/tutorial.html">Debugging</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Printing</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/printing/index.html">Introduction</a></li>
+                  <li><a href="/docs/printing/examples.html">Examples</a></li>
+                  <li><a href="/docs/printing/printf-codes.html">printf Codes</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Preprocessor</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/preprocessor/index.html">Introduction</a></li>
+                  <li><a href="/docs/preprocessor/directives.html">Directives</a></li>
+                  <li><a href="/docs/preprocessor/include.html">Include</a></li>
+                  <li><a href="/docs/preprocessor/macros.html">Macros</a></li>
+                  <li><a href="/docs/preprocessor/conditional-compilation.html">Conditional Compilation</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/docs/lib/math.html">Math Library</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>KIPR Wallaby/Link</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/lib/kipr/common-functions.html">Common Functions</a></li>
+                  <li><a href="/docs/lib/kipr/functions.html">Functions List</a></li>
+                  <li><a href="/docs/lib/kipr/camera.html">Camera Functions</a></li>
+                  <li><a href="/docs/lib/kipr/graphics.html">Graphics Functions</a></li>
+                  <li class="active"><a href="/docs/lib/kipr/depth.html">Depth Sensor Functions</a></li>
+                  <li><a href="/docs/lib/kipr/usb.html">File I/O Functions</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>iRobot Create</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/lib/kipr/create/index.html">Introduction</a></li>
+                  <li><a href="/docs/lib/kipr/create/serial.html">Serial Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/configuration.html">Configuration Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/movement.html">Movement Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/sensors.html">Sensor Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/battery.html">Battery Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/built-ins.html">Built-In Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/music-leds.html">LED and Music Functions</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/docs/lib/kipr/botball.html">Botball Functions</a></li>
+        <li><a href="/docs/lib/kipr/threads.html">Threads</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Motors and Sensors</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/lib/kipr/info/digital-analog-sensors.html">Analog and Digital Sensors</a></li>
+                  <li><a href="/docs/lib/kipr/info/usb-sensors.html">USB Sensors</a></li>
+                  <li><a href="/docs/lib/kipr/info/motors-servos.html">Motors and Servos</a></li>
+                  <li><a href="/docs/lib/kipr/info/simulator.html">Simulator</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/docs/full.html">Full Documentation</a></li>
+      </ul>
+      <nav class="nav-extended red lighten-2">
+        <div class="nav-wrapper">
+          <div class="col s12"><a class="button-collapse" data-activates="slide-out" href="#" style="font-size: 50px;"><i class="material-icons">menu</i></a><a class="brand-logo waves-effect" id="top" href="/docs/index.html">Botball Documentation</a></div>
+        </div>
+        <div class="nav-wrapper">
+          <div class="col s12"><a class="breadcrumb" href="#!">KIPR Wallaby/Link</a><a class="breadcrumb" href="#!">Depth Sensor Functions</a></div>
+        </div>
+      </nav>
+    </header>
+    <main class="row">
+      <div class="container col s12">
+        <!-- END HEADER-->
+        <!-- Xtion API--><a name="DepthSensor"></a>
+        <h3>KIPR Robot Controller Depth Functions</h3>
+        <table class="centerTable">
+          <tbody>
+            <tr>
+              <td>The KIPR Robot Controller has functions supporting the use of an ASUS Xtion as a USB depth sensor.</td>
+              <td width="50%">
+                <!-- &lt;img class="right" src="images/XtionDepth.gif" width="50%"&gt;&lt;/img&gt;--><br/>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          The USB depth sensor provides the KIPR Robot Controller with a 240×320 row,column (2-dimensional) image
+          of the space in front of it (rows measured down from the upper left corner of the image and columns to the
+          right). The depth functions provide information about the three dimensional space in front of the Xtion,
+          where the space is organized in (x,y,z) coordinates with the x-axis directed right, the y-axis is directed
+          up, and the z-axis directed straight out from the Xtion. Coordinate (0,0,0) is the center of the Xtion face.
+          Coordinate values are given in millimeters (mm). The depth sensor's effective range is from about 1/2 meter
+          to 5 meters.
+        </p>
+        <table class="centerTable">
+          <tbody>
+            <tr>
+              <td>
+                <!-- &lt;img class="center" src="images/XtionDepthView.jpg" width="80%"&gt;&lt;/img&gt;-->
+              </td>
+            </tr>
+          </tbody>
+        </table><br/>
+        <table>
+          <tbody>
+            <tr>
+              <td><a name="depth_open"></a></td>
+              <td><code>depth_open </code> [Category: Depth]
+                <dl>
+                  <dd>Format: <code>int depth_open();</code><br/>
+                     Turns on the
+                     depth sensor. Returns 1 on success, 0 on failure. See also <code>depth_close</code>.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="depth_close"></a></td>
+              <td><code>depth_close </code> [Category: Depth]
+                <dl>
+                  <dd>Format: <code>void depth_close();</code><br/>
+                     Clean up
+                     the depth instance and power down the sensor. See also <code>depth_open</code>.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="depth_update"></a></td>
+              <td><code>depth_update </code> [Category: Depth]
+                <dl>
+                  <dd>Format: <code>int depth_update();</code><br/>
+                     Generates
+                     a new image from the depth sensor for use by the depth functions. Returns 1 on success,
+                     0 on failure.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="depth_scanline_update"></a></td>
+              <td><code>depth_scanline_update </code> [Category: Depth]
+                <dl>
+                  <dd>Format: <code>int depth_scanline_update(int row);</code><br/>
+                     Replaces the current scanline information with the scanline information for the specified
+                     row of the image. Returns 1 on success, 0 on failure.
+                    <tr></tr>
+                    <tr>
+                      <td><a name="get_depth_value"></a></td>
+                      <td><code>get_depth_value </code> [Category: Depth]
+                        <dl>
+                          <dd>Format: <code>int get_depth_value(int row, int col);</code><br/>
+                             Returns the value of the depth coordinate z in mm for row and column
+                             positions of the image. See also <code>get_depth_world_point</code>.
+                          </dd>
+                        </dl>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a name="get_depth_world_point"></a></td>
+                      <td><code>get_depth_world_point </code> [Category: Depth]
+                        <dl>
+                          <dd>Format: <code>point3 get_depth_world_point(int row, int col);</code><br/> Returns an object of type <code>point3</code>
+                             giving the (x,y,z)
+                             coordinates for the object at position (row,col) in the current image.
+                             For <br/>
+                            <div class="Indent"><code> point3 p3;<br/>
+                                               p3 = get_depth_world_point(4,7);
+                                          </code></div> the (x,y,z) coordinates for row 4, column 7 in the image are given by <code>p3.x</code>, <code>p3.y</code>, <code>p3.z</code>. The value returned by <code>get_depth_value</code> is the same as <code>p3.z</code>.
+                          </dd>
+                        </dl>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a name="get_depth_world_point_x"></a></td>
+                      <td><code>get_depth_world_point_x </code> [Category: Depth]
+                        <dl>
+                          <dd>Format: <code>int get_depth_world_point_x(int row, int col);</code><br/>
+                             Returns the x coordinate for the object at position (row,col) in
+                             the current image. See also <code>get_depth_world_point</code>.
+                          </dd>
+                        </dl>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a name="get_depth_world_point_y"></a></td>
+                      <td><code>get_depth_world_point_y </code> [Category: Depth]
+                        <dl>
+                          <dd>Format: <code>int get_depth_world_point_y(int row, int col);</code><br/>
+                             Returns the y coordinate for the object at position (row,col) in
+                             the current image. See also <code>get_depth_world_point</code>.
+                          </dd>
+                        </dl>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a name="get_depth_world_point_z"></a></td>
+                      <td><code>get_depth_world_point_z </code> [Category: Depth]
+                        <dl>
+                          <dd>Format: <code>int get_depth_world__zpoint(int row, int col);</code><br/>
+                             Returns the z coordinate for the object at position (row,col) in
+                             the current image. The return value is the same as the value returned
+                             by <code>get_depth_value</code>. See also <code>get_depth_world_point</code>.
+                          </dd>
+                        </dl>
+                      </td>
+                    </tr>
+                    <td><a name="get_depth_scanline_object_count"></a></td>
+                    <td><code>get_depth_scanline_object_count </code> [Category: Depth]
+                      <dl>
+                        <dd>Format: <code>int get_depth_scanline_object_count();</code><br/>
+                           Returns the number of objects detected on the scanline, where an object
+                           is detected by not having a depth break in scanning across it. This means
+                           that if the scanline crosses a cavity, it will report two objects. Objects
+                           are numbered starting from 0, ordered from nearest to farthest. By default,
+                           the closest pixel for each object is used to determine how near it is.
+                        </dd>
+                      </dl>
+                    </td>
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="get_depth_scanline_object_nearest_x"></a></td>
+              <td><code>get_depth_scanline_object_nearest_x </code> [Category: Depth]
+                <dl>
+                  <dd>Format: <code>int get_depth_object_nearest_x(int obj);</code><br/>
+                     For the specified object returns the coordinate value for the farthest
+                     pixel detected.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="get_depth_scanline_object_nearest_y"></a></td>
+              <td><code>get_depth_scanline_object_nearest_y </code> [Category: Depth]
+                <dl>
+                  <dd>Format: <code>int get_depth_object_nearest_y(int obj);</code><br/>
+                     For the specified object returns the coordinate value for the farthest
+                     pixel detected.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="get_depth_scanline_object_nearest_z"></a></td>
+              <td><code>get_depth_scanline_object_nearest_z </code> [Category: Depth]
+                <dl>
+                  <dd>Format: <code>int get_depth_object_nearest_z(int obj);</code><br/>
+                     For the specified object returns the coordinate value for the nearest
+                     pixel detected.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="get_depth_scanline_object_center_x"></a></td>
+              <td><code>get_depth_scanline_object_center_x </code> [Category: Depth]
+                <dl>
+                  <dd>Format: <code>int get_depth_object_center_x(int obj);</code><br/>
+                     For the specified object returns the coordinate value for the farthest
+                     pixel detected.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="get_depth_scanline_object_center_y"></a></td>
+              <td><code>get_depth_scanline_object_center_y </code> [Category: Depth]
+                <dl>
+                  <dd>Format: <code>int get_depth_object_center_y(int obj);</code><br/>
+                     For the specified object returns the coordinate value for the farthest
+                     pixel detected.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="get_depth_scanline_object_center_z"></a></td>
+              <td><code>get_depth_scanline_object_center_z </code> [Category: Depth]
+                <dl>
+                  <dd>Format: <code>int get_depth_object_center_z(int obj);</code><br/>
+                     For the specified object returns the coordinate value for the center
+                     pixel.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="get_depth_scanline_object_farthest_x"></a></td>
+              <td><code>get_depth_scanline_object_farthest_x </code> [Category: Depth]
+                <dl>
+                  <dd>Format: <code>int get_depth_object_farthest_x(int obj);</code><br/>
+                     For the specified object returns the coordinate value for the farthest
+                     pixel detected.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="get_depth_scanline_object_farthest_y"></a></td>
+              <td><code>get_depth_scanline_object_farthest_y </code> [Category: Depth]
+                <dl>
+                  <dd>Format: <code>int get_depth_object_farthest_y(int obj);</code><br/>
+                     For the specified object returns the coordinate value for the farthest
+                     pixel detected.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="get_depth_scanline_object_farthest_z"></a></td>
+              <td><code>get_depth_scanline_object_farthest_z </code> [Category: Depth]
+                <dl>
+                  <dd>Format: <code>int get_depth_object_farthest_z(int obj);</code><br/>
+                     For the specified object returns the coordinate value for the farthest
+                     pixel detected.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="get_depth_scanline_object_size"></a></td>
+              <td><code>get_depth_scanline_object_size </code> [Category: Depth]
+                <dl>
+                  <dd>Format: <code>int get_depth_object_size(int obj);</code><br/>
+                     For the specified object returns the distance on the scanline between
+                     the leftmost and rightmost pixel detected.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="get_depth_scanline_object_angle"></a></td>
+              <td><code>get_depth_scanline_object_angle </code> [Category: Depth]
+                <dl>
+                  <dd>Format: <code>int get_depth_object_angle(int obj);</code><br/>
+                     For the specified object returns the angular measure (in degrees) from
+                     the leftmost pixel on the scanline to the right most. Positive is counterclockwise.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="Indent">
+          <h4>Example program for using a depth sensor and a graphical representation to find the distance to an object</h4><a name="PointDistance"></a>
+          <pre><code class="language-clike">int main()
+{
+   int r, g, b, row, col, val;
+   depth_open(); // initiate depth sensor
+   graphics_open(320,240); // open up graphics window (full screen on KIPR Robot Controller)
+   while(!get_mouse_left_button()) { // loop until mouse is clicked (screen is tapped)
+      depth_update(); // get a new depth image
+      for(row=0; row&lt;240; row++) { // loop through rows
+         for(col=0; col&lt;320; col++) { // loop through columns in current row
+            val = get_depth_value(row,col) ; // get distance for pixel in mm
+            if(val == 0)  // if too close or not a valid value, don&apos;t color
+               continue;
+            else if (val &gt; 1530) { // if more than 1.53m away color in gray scale
+               val = (5000-val)/20; // range is from 173 on down (towards darker)
+               graphics_pixel(col,row,val,val,val); // paint using r=g=b (gray scale)
+            }
+            else { // and otherwise ... 
+               val=val &gt; 510 ? val-510 : 0; // rerange the distance inward by 510mm
+               r=val &gt; 510 ? 0 : 255-val/2;  // increase red for closer
+               g=val &gt; 510 ? 255-(val-510)/2 : val/2; // greenish for mid values
+               b=val &gt; 510 ? val/2-255 : 0;  // increase blue for farther
+               graphics_pixel(col,row, r,g,b); // draw the pixel
+            }
+         }
+      }
+      graphics_update(); // paint the screen using the new pixel valuess
+   }
+   get_mouse_position(&amp;col,&amp;row); // where was screen tapped?
+   depth_close(); graphics_close();  //close sensor and graphics window
+    // Display the distance (z coordinate) to the pixels&apos;s point in space
+   printf(&quot;Distance to pixel %i,%i is %imm\n\n\n&quot;,col,row,get_depth_value(row,col));
+}</code></pre>
+        </div>
+        <!-- START FOOTER-->
+      </div>
+    </main>
+  </body>
+</html>

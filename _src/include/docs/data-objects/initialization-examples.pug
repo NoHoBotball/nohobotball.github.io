@@ -1,0 +1,225 @@
+html
+  head
+    link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    link(href='/css/base.css', rel='stylesheet', type='text/css')
+    link(href='/css/materialize.min.css', media='screen,projection', rel='stylesheet', type='text/css')
+    link(href='/css/docs.css', rel='stylesheet', type='text/css')
+    link(href='../imgs/logos/botguy.png', rel='icon')
+    title Botball Documentation - Tutorial
+    meta(content='#00796b', name='theme-color')
+    meta(content='width=device-width, initial-scale=1.0', name='viewport')
+  body
+    script(src='https://code.jquery.com/jquery-2.1.1.min.js', type='text/javascript')
+    script(src='/js/materialize.min.js', type='text/javascript')
+    script.
+      $(document).ready(function () {
+      $('.button-collapse').sideNav({
+      draggable: true
+      });
+      $(".active").parent().parent().siblings()[0].click() })
+    header
+      ul#slide-out.side-nav.fixed
+        li.red.lighten-1(style='height: 130px')
+          .userView
+            h5.white-text
+              a.white-text(href='/docs/index.html') Index
+        li
+          a(href='/docs/tutorial.html') Tutorial
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Data Objects
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/data-objects/index.html') Introduction
+                  li
+                    a(href='/docs/data-objects/variables.html') Variables
+                  li
+                    a(href='/docs/data-objects/constants.html') Constants
+                  li
+                    a(href='/docs/data-objects/data-types.html') Data Types
+                  li
+                    a(href='/docs/data-objects/arrays.html') Arrays
+                  li
+                    a(href='/docs/data-objects/structures.html') Structures
+                  li.active
+                    a(href='/docs/data-objects/initialization-examples.html') Initialization Examples
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Statements and Expressions
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/statements-and-expressions/index.html') Introduction
+                  li
+                    a(href='/docs/statements-and-expressions/operators.html') Operators
+                  li
+                    a(href='/docs/statements-and-expressions/control-flow.html') Control Flow
+        li
+          a(href='/docs/tutorial.html') Style
+        li
+          a(href='/docs/tutorial.html') Debugging
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Printing
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/printing/index.html') Introduction
+                  li
+                    a(href='/docs/printing/examples.html') Examples
+                  li
+                    a(href='/docs/printing/printf-codes.html') printf Codes
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Preprocessor
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/preprocessor/index.html') Introduction
+                  li
+                    a(href='/docs/preprocessor/directives.html') Directives
+                  li
+                    a(href='/docs/preprocessor/include.html') Include
+                  li
+                    a(href='/docs/preprocessor/macros.html') Macros
+                  li
+                    a(href='/docs/preprocessor/conditional-compilation.html') Conditional Compilation
+        li
+          a(href='/docs/lib/math.html') Math Library
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | KIPR Wallaby/Link
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/lib/kipr/common-functions.html') Common Functions
+                  li
+                    a(href='/docs/lib/kipr/functions.html') Functions List
+                  li
+                    a(href='/docs/lib/kipr/camera.html') Camera Functions
+                  li
+                    a(href='/docs/lib/kipr/graphics.html') Graphics Functions
+                  li
+                    a(href='/docs/lib/kipr/depth.html') Depth Sensor Functions
+                  li
+                    a(href='/docs/lib/kipr/usb.html') File I/O Functions
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | iRobot Create
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/lib/kipr/create/index.html') Introduction
+                  li
+                    a(href='/docs/lib/kipr/create/serial.html') Serial Functions
+                  li
+                    a(href='/docs/lib/kipr/create/configuration.html') Configuration Functions
+                  li
+                    a(href='/docs/lib/kipr/create/movement.html') Movement Functions
+                  li
+                    a(href='/docs/lib/kipr/create/sensors.html') Sensor Functions
+                  li
+                    a(href='/docs/lib/kipr/create/battery.html') Battery Functions
+                  li
+                    a(href='/docs/lib/kipr/create/built-ins.html') Built-In Functions
+                  li
+                    a(href='/docs/lib/kipr/create/music-leds.html') LED and Music Functions
+        li
+          a(href='/docs/lib/kipr/botball.html') Botball Functions
+        li
+          a(href='/docs/lib/kipr/threads.html') Threads
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Motors and Sensors
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/lib/kipr/info/digital-analog-sensors.html') Analog and Digital Sensors
+                  li
+                    a(href='/docs/lib/kipr/info/usb-sensors.html') USB Sensors
+                  li
+                    a(href='/docs/lib/kipr/info/motors-servos.html') Motors and Servos
+                  li
+                    a(href='/docs/lib/kipr/info/simulator.html') Simulator
+        li
+          a(href='/docs/full.html') Full Documentation
+      nav.nav-extended.red.lighten-2
+        .nav-wrapper
+          .col.s12
+            a.button-collapse(data-activates='slide-out', href='#', style='font-size: 50px')
+              i.material-icons menu
+            a#top.brand-logo.waves-effect(href='/docs/index.html') Botball Documentation
+        .nav-wrapper
+          .col.s12
+            a.breadcrumb(href='/docs/data-objects/index.html') Data Objects
+            a.breadcrumb(href='#!') Initialization Examples
+    main.row
+      .container.col.s12
+        // END HEADER
+        // Complex_Initialization_examples
+        a(name='Complex_Initialization_examples')
+        h3 Initialization Examples
+        p
+          | Complex data structures formed as arrays or as structures may be initialized upon declaration with a sequence
+          | of constant values contained within curly braces and separated by commas.
+        p
+          | Character arrays may also be initialized as a string from a string of characters enclosed in (double) quote marks.
+        p
+          | In initialization of a one dimensional array, the length (inside the square brackets) can be left blank, in which
+          | case the allocated length is determined by what is assigned to the array. The declaration for a multi-dimensional
+          | array must specify the size of all dimensions after the first dimension. If a length is specified, and initialization
+          | data overflows that length, a warning is issued and the excess data is ignored. If the initialization data
+          | falls short of the specified size the rest will be indeterminate.
+        p The following example illustrates a variety of different initializations:
+        pre
+          code.language-clike
+            | /* declare global variables of various types */
+            | int i = 50; // single basic variable 
+            | int *ptr = NULL; // single basic pointer variable 
+            | int x=1, y, z=3; // multiple basic variables 
+            | double farr[3]= {1.2, 3.6, 7.4}; // one dimensional array 
+            | int iarr[5]= {1, 3, 7}; // one dimensional array, last 2 indeterminate 
+            | int jarr[]= {2, 4, 6, 8}; // one dimensional array, derived length 4 
+            | char carr[2][3]={{&apos;a&apos;, &apos;b&apos;, &apos;c&apos;}, {&apos;b&apos;, &apos;d&apos;, &apos;f&apos;}}; // two dimensional array 
+            | int xarr[2][5]={{1, 2, 3}, {2, 4, 6}}; // two dimensional array, last 3 rows indeterminate 
+            | int yarr[][2]={{1, 2}, {2, 4}, {3,6}}; // two dimensional array, derived size 3x2 
+            | char c[]=&quot;A B C&quot;; // string, array size 6=5+1 
+            | char sarr[5][10]={&quot;a b c&quot;,&quot;d&quot;,&quot;e f&quot;}; // array of strings, first 6 characters of row 1 initialized, first 2 of row 2, first 4 of row 3, last 2 rows indeterminate 
+            | struct employee {
+            |     char name[31];
+            |     double weight;
+            |     struct employee *nextrec;  // pointer (self-referential) to the struct for another employee 
+            | }
+            | struct employee a_node = {&quot;John Doe&quot;, 165.4, NULL}; // perhaps a linked list node 
+            | struct elist[2] =
+            |     {{&quot;JFK&quot;, 163.1, NULL }, {&quot;LBJ&quot;}}; // not everything has to be initialized 
+            | // example function which declares local variables of various types, initialized from global variables 
+            | int f_locals()
+            | {
+            |     int x = i; // local x, global i (value 50) 
+            |     int y = yarr[2][1]; // local y, global yarr (value 6) 
+            |     int *iptr=&amp;i; // local iptr, address of global i 
+            |     struct employee wx={&quot;Jane Doe&quot;, 115.2, &amp;a_node}; // local struct wx, pointed to global a_node 
+            |     char lc[]=sarr[2]; //  local string lc with initial value &quot;e f&quot; copied from length 4 string stored in sarr[2] 
+            |     . . .
+            | }
+        // START FOOTER
+

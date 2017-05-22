@@ -1,0 +1,217 @@
+
+<html>
+  <head>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link href="/css/base.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/materialize.min.css" media="screen,projection" rel="stylesheet" type="text/css"/>
+    <link href="/css/docs.css" rel="stylesheet" type="text/css"/>
+    <link href="../imgs/logos/botguy.png" rel="icon"/>
+    <title>Botball Documentation - Tutorial</title>
+    <meta content="#00796b" name="theme-color"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  </head>
+  <body>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="/js/materialize.min.js" type="text/javascript"></script>
+    <script>
+      $(document).ready(function () {
+      $('.button-collapse').sideNav({
+      draggable: true
+      });
+      $(".active").parent().parent().siblings()[0].click() })
+    </script>
+    <header>
+      <ul class="side-nav fixed" id="slide-out">
+        <li class="red lighten-1" style="height: 130px;">
+          <div class="userView">
+            <h5 class="white-text"><a class="white-text" href="/docs/index.html">Index</a></h5>
+          </div>
+        </li>
+        <li><a href="/docs/tutorial.html">Tutorial</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Data Objects</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/data-objects/index.html">Introduction</a></li>
+                  <li><a href="/docs/data-objects/variables.html">Variables</a></li>
+                  <li><a href="/docs/data-objects/constants.html">Constants</a></li>
+                  <li><a href="/docs/data-objects/data-types.html">Data Types</a></li>
+                  <li><a href="/docs/data-objects/arrays.html">Arrays</a></li>
+                  <li><a href="/docs/data-objects/structures.html">Structures</a></li>
+                  <li><a href="/docs/data-objects/initialization-examples.html">Initialization Examples</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Statements and Expressions</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/statements-and-expressions/index.html">Introduction</a></li>
+                  <li><a href="/docs/statements-and-expressions/operators.html">Operators</a></li>
+                  <li><a href="/docs/statements-and-expressions/control-flow.html">Control Flow</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/docs/tutorial.html">Style</a></li>
+        <li class="active"><a href="/docs/tutorial.html">Debugging</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Printing</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/printing/index.html">Introduction</a></li>
+                  <li><a href="/docs/printing/examples.html">Examples</a></li>
+                  <li><a href="/docs/printing/printf-codes.html">printf Codes</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Preprocessor</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/preprocessor/index.html">Introduction</a></li>
+                  <li><a href="/docs/preprocessor/directives.html">Directives</a></li>
+                  <li><a href="/docs/preprocessor/include.html">Include</a></li>
+                  <li><a href="/docs/preprocessor/macros.html">Macros</a></li>
+                  <li><a href="/docs/preprocessor/conditional-compilation.html">Conditional Compilation</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/docs/lib/math.html">Math Library</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>KIPR Wallaby/Link</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/lib/kipr/common-functions.html">Common Functions</a></li>
+                  <li><a href="/docs/lib/kipr/functions.html">Functions List</a></li>
+                  <li><a href="/docs/lib/kipr/camera.html">Camera Functions</a></li>
+                  <li><a href="/docs/lib/kipr/graphics.html">Graphics Functions</a></li>
+                  <li><a href="/docs/lib/kipr/depth.html">Depth Sensor Functions</a></li>
+                  <li><a href="/docs/lib/kipr/usb.html">File I/O Functions</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>iRobot Create</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/lib/kipr/create/index.html">Introduction</a></li>
+                  <li><a href="/docs/lib/kipr/create/serial.html">Serial Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/configuration.html">Configuration Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/movement.html">Movement Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/sensors.html">Sensor Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/battery.html">Battery Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/built-ins.html">Built-In Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/music-leds.html">LED and Music Functions</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/docs/lib/kipr/botball.html">Botball Functions</a></li>
+        <li><a href="/docs/lib/kipr/threads.html">Threads</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Motors and Sensors</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/lib/kipr/info/digital-analog-sensors.html">Analog and Digital Sensors</a></li>
+                  <li><a href="/docs/lib/kipr/info/usb-sensors.html">USB Sensors</a></li>
+                  <li><a href="/docs/lib/kipr/info/motors-servos.html">Motors and Servos</a></li>
+                  <li><a href="/docs/lib/kipr/info/simulator.html">Simulator</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/docs/full.html">Full Documentation</a></li>
+      </ul>
+      <nav class="nav-extended red lighten-2">
+        <div class="nav-wrapper">
+          <div class="col s12"><a class="button-collapse" data-activates="slide-out" href="#" style="font-size: 50px;"><i class="material-icons">menu</i></a><a class="brand-logo waves-effect" id="top" href="/docs/index.html">Botball Documentation</a></div>
+        </div>
+        <div class="nav-wrapper">
+          <div class="col s12"><a class="breadcrumb" href="#!">Debugging</a></div>
+        </div>
+      </nav>
+    </header>
+    <main class="row">
+      <div class="container col s12">
+        <!-- END HEADER-->
+        <!-- Program Debugging--><a name="Program_Debugging"></a>
+        <h2>Program Debugging</h2>
+        <p>Debugging is the process of correcting syntactic and semantic errors found in a program.</p><a name="Syntax_Errors"></a>
+        <h4>Syntax Errors</h4>
+        <p>
+          The C compiler cannot compile a program that has syntax errors such as a missing semi-colon or other program
+          construction error. Syntax errors are the ones most easily corrected since the compiler can identify both
+          where they occur and what the problem is. The KISS IDE lists any syntax errors found during program compilation
+          in an error panel below the program code. The interface provides the line number and position within the
+          line identifying the location of the error, with a description of the cause of the error. Since the mistake
+          causing the first error listed will typically cause additional syntax errors within the program, it is often
+          the case that correcting the syntax causing the first error will fix the rest.
+        </p><a name="Semantic_Errors"></a>
+        <h4>Semantic Errors</h4>
+        <p>
+          Just because a program compiles does not mean it will do what is intended, which is termed program semantics.
+          A semantic error manifests itself during program execution, either because the program crashes or it produces
+          erroneous results. Semantic errors are caused by errors in program logic or programmer oversights (such as
+          failure to initialize a variable). They can be difficult to track down because it usually is not clear where
+          in program execution the error occurred.
+        </p>
+        <p>
+          For a program which relies on data inputs, determining the presence of semantic errors requires testing the program
+          for a representative set of possible data inputs, including so-called<i>boundary conditions</i>
+          . For example, if a data input has a range from 0 to 1000, then 0 and 1000 are
+           the boundaries for the data, and one of these, 0, will cause the program to crash if used in the denominator
+           of a division operation. That means that once the part of the program where the error occurs has been located,
+           program logic has to be adjusted to check the data input to see if it is 0 before using it in the division.
+           For complex systems, program testing is an ongoing part of the software development cycle.
+        </p>
+        <p>
+          Semantic errors that are rare events are difficult to correct, since being able to repeat what causes the error
+          is key to being able to resolve it. Once a semantic error can be reliably repeated, various techniques are
+          employed to determine the cause and to locate where in the program it occurred. Only the basic techniques
+          will be covered here, but operating systems provide debugging tools designed to determine the cause of an
+          error and to facilitate locating where in the program code it occurred.
+        </p><a name="printf_debugging"></a>
+        <h4>Using printf and Commenting for Diagnostic Purposes</h4>
+        <p>
+          For the smaller C programs constructed for environments like the KIPR Robot Controller, most semantic errors
+          that occur can be corrected quickly using one or both of the following two approaches.
+        </p>
+        <ul>
+          <li>For a C program that runs, but produces erroneous output, it is often useful to insert <code>printf</code>
+             statements at various points in the program code to display the value of selected variables to see if
+             their intermediate values are as expected. For example, in an expression containing the sub-expression <code>(x * y-z)</code>, displaying the values of <code>x, y</code> and <code>z</code> might help discover the sub-expression should have been <code>(x * (y-z))</code>.
+          </li>
+          <li>
+            For a C program that crashes, "commenting out" sections of code can be used to locate the part of the program
+            triggering the crash. Commenting out is relatively straight forward process to implement, because inserting
+            // in front of a line of code turns it into a comment (so it will no longer be executed) and whole
+            blocks of code can be commented out by surrounding them using
+            /* */ comment bracketing.<br/><br/>
+             What is commented out has to be selected so that the program
+             will still compile. After commenting out sections of the program, if it still crashes when executed,
+             then what was commented out is probably not where the culprit is located. Including/excluding parts of
+             the code in this manner will usually identify where the problem is occurring so it can be diagnosed and
+             corrected. Sometimes the best tactic is to comment out a large enough section to eliminate the crash,
+             then reduce the scope of commenting out in small steps until the program crash recurs.
+          </li>
+        </ul>
+        <p>For larger programs, a system debugging tool may be called for. Unix systems include the debugging tool <code>sdb</code>
+          ,
+           which has its own command structure that has to be learned to be used effectively.
+        </p>
+        <!-- START FOOTER-->
+      </div>
+    </main>
+  </body>
+</html>

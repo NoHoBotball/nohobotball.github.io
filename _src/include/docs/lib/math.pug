@@ -1,0 +1,416 @@
+html
+  head
+    link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    link(href='/css/base.css', rel='stylesheet', type='text/css')
+    link(href='/css/materialize.min.css', media='screen,projection', rel='stylesheet', type='text/css')
+    link(href='/css/docs.css', rel='stylesheet', type='text/css')
+    link(href='../imgs/logos/botguy.png', rel='icon')
+    title Botball Documentation - Tutorial
+    meta(content='#00796b', name='theme-color')
+    meta(content='width=device-width, initial-scale=1.0', name='viewport')
+  body
+    script(src='https://code.jquery.com/jquery-2.1.1.min.js', type='text/javascript')
+    script(src='/js/materialize.min.js', type='text/javascript')
+    script.
+      $(document).ready(function () {
+      $('.button-collapse').sideNav({
+      draggable: true
+      });
+      $(".active").parent().parent().siblings()[0].click() })
+    header
+      ul#slide-out.side-nav.fixed
+        li.red.lighten-1(style='height: 130px')
+          .userView
+            h5.white-text
+              a.white-text(href='/docs/index.html') Index
+        li
+          a(href='/docs/tutorial.html') Tutorial
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Data Objects
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/data-objects/index.html') Introduction
+                  li
+                    a(href='/docs/data-objects/variables.html') Variables
+                  li
+                    a(href='/docs/data-objects/constants.html') Constants
+                  li
+                    a(href='/docs/data-objects/data-types.html') Data Types
+                  li
+                    a(href='/docs/data-objects/arrays.html') Arrays
+                  li
+                    a(href='/docs/data-objects/structures.html') Structures
+                  li
+                    a(href='/docs/data-objects/initialization-examples.html') Initialization Examples
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Statements and Expressions
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/statements-and-expressions/index.html') Introduction
+                  li
+                    a(href='/docs/statements-and-expressions/operators.html') Operators
+                  li
+                    a(href='/docs/statements-and-expressions/control-flow.html') Control Flow
+        li
+          a(href='/docs/tutorial.html') Style
+        li
+          a(href='/docs/tutorial.html') Debugging
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Printing
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/printing/index.html') Introduction
+                  li
+                    a(href='/docs/printing/examples.html') Examples
+                  li
+                    a(href='/docs/printing/printf-codes.html') printf Codes
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Preprocessor
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/preprocessor/index.html') Introduction
+                  li
+                    a(href='/docs/preprocessor/directives.html') Directives
+                  li
+                    a(href='/docs/preprocessor/include.html') Include
+                  li
+                    a(href='/docs/preprocessor/macros.html') Macros
+                  li
+                    a(href='/docs/preprocessor/conditional-compilation.html') Conditional Compilation
+        li.active
+          a(href='/docs/lib/math.html') Math Library
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | KIPR Wallaby/Link
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/lib/kipr/common-functions.html') Common Functions
+                  li
+                    a(href='/docs/lib/kipr/functions.html') Functions List
+                  li
+                    a(href='/docs/lib/kipr/camera.html') Camera Functions
+                  li
+                    a(href='/docs/lib/kipr/graphics.html') Graphics Functions
+                  li
+                    a(href='/docs/lib/kipr/depth.html') Depth Sensor Functions
+                  li
+                    a(href='/docs/lib/kipr/usb.html') File I/O Functions
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | iRobot Create
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/lib/kipr/create/index.html') Introduction
+                  li
+                    a(href='/docs/lib/kipr/create/serial.html') Serial Functions
+                  li
+                    a(href='/docs/lib/kipr/create/configuration.html') Configuration Functions
+                  li
+                    a(href='/docs/lib/kipr/create/movement.html') Movement Functions
+                  li
+                    a(href='/docs/lib/kipr/create/sensors.html') Sensor Functions
+                  li
+                    a(href='/docs/lib/kipr/create/battery.html') Battery Functions
+                  li
+                    a(href='/docs/lib/kipr/create/built-ins.html') Built-In Functions
+                  li
+                    a(href='/docs/lib/kipr/create/music-leds.html') LED and Music Functions
+        li
+          a(href='/docs/lib/kipr/botball.html') Botball Functions
+        li
+          a(href='/docs/lib/kipr/threads.html') Threads
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Motors and Sensors
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/lib/kipr/info/digital-analog-sensors.html') Analog and Digital Sensors
+                  li
+                    a(href='/docs/lib/kipr/info/usb-sensors.html') USB Sensors
+                  li
+                    a(href='/docs/lib/kipr/info/motors-servos.html') Motors and Servos
+                  li
+                    a(href='/docs/lib/kipr/info/simulator.html') Simulator
+        li
+          a(href='/docs/full.html') Full Documentation
+      nav.nav-extended.red.lighten-2
+        .nav-wrapper
+          .col.s12
+            a.button-collapse(data-activates='slide-out', href='#', style='font-size: 50px')
+              i.material-icons menu
+            a#top.brand-logo.waves-effect(href='/docs/index.html') Botball Documentation
+        .nav-wrapper
+          .col.s12
+            a.breadcrumb(href='#!') Math Library
+    main.row
+      .container.col.s12
+        // END HEADER
+        // Math_Functions
+        a(name='C_Math_Library')
+        h2 The C Library Math Functions
+        p
+          | The standard C library has a large number of precompiled math functions. 
+          code #include &lt;math.h&gt;
+          |  provides the function prototypes for the math functions that operate on floating point numbers, which is
+          |  most of them.
+          |  #include &lt;stdlib.h&gt;
+          |  provides the function prototypes for those which operate on integers. Arguments for trigonometric functions
+          |  use radian measure for angles rather than degrees (1 degree is 2π/360 radians). The following is a representative
+          |  list for the available math functions. For more information about what math functions are available, consult
+          |  a C reference.
+        table
+          tbody
+            tr
+              td
+                a(name='acos')
+              td
+                code acos
+                |  [Category: Math]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | double  
+                      code acos
+                      | (
+                      |                                     double x);
+                    br
+                    |  Returns the angle between 0 and π whose cosine is x,
+                    |  where -1 ≤ x ≤ 1. result is in radians.
+            tr
+              td
+                a(name='atan')
+              td
+                code asin
+                |  [Category: Math]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | double  
+                      code asin
+                      | (
+                      |                                     double x);
+                    br
+                    |  Returns the angle between -π/2 and π/2 whose sine
+                    |  is x, where -1 ≤ x ≤ 1. result is in radians.
+            tr
+              td
+                a(name='atan')
+              td
+                code atan
+                |  [Category: Math]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | double  
+                      code atan
+                      | (
+                      |                                     double x);
+                    br
+                    |  Returns the angle between -π/2 and π/2 whose tangent
+                    |  is x. result is in radians.
+            tr
+              td
+                a(name='cos')
+              td
+                code cos
+                |  [Category: Math]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | double  
+                      code cos
+                      | (
+                      |                                     double angle);
+                    br
+                    |  Returns cosine of angle. Angle is specified in radians;
+                    |  result is between -1 and 1.
+            tr
+              td
+                a(name='exp')
+              td
+                code exp
+                |  [Category: Math]
+                dl
+                  dd
+                    | Format: 
+                    code double exp(double x);
+                    br
+                    |  Returns e
+                    sup x
+                    |  (e is the Euler constant, the base for the natural logarithm of
+                    |  a number).
+            tr
+              td
+                a(name='exp10')
+              td
+                code exp10
+                |  [Category: Math]
+                dl
+                  dd
+                    | Format: 
+                    code double exp10(double x);
+                    br
+                    |  Returns 10
+                    sup x
+                    | .
+            tr
+              td
+                a(name='log')
+              td
+                code log
+                |  [Category: Math]
+                dl
+                  dd
+                    | Format: 
+                    code double log(double x);
+                    br
+                    |  Returns log
+                    sub e
+                    | (x), the natural logarithm of x.
+            tr
+              td
+                a(name='log10')
+              td
+                code log10
+                |  [Category: Math]
+                dl
+                  dd
+                    | Format: 
+                    code double log10(double x);
+                    br
+                    |  Returns log
+                    sub 10
+                    | (x), the base 10 logarithm of x.
+            tr
+              td
+                a(name='pow')
+              td
+                code pow
+                |  [Category: Math]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | double pow(double x, double y);
+                    br
+                    |  Returns x
+                    sup y
+                    | .
+            tr
+              td
+                a(name='rand')
+              td
+                code rand
+                | [Category: Math]
+                dl
+                  dd
+                    | Format: 
+                    code int rand();
+                    br
+                    |  Returns a (pseudo)
+                    |  random integer between 0 and a very large integer established on system installation,
+                    |  drawn from the (pseudo) random number stream initiated at start of program execution
+                    |  according to a "seed" value. 
+                    code rand()%m 
+                    |  restricts the range from 0 to m-1. 
+                    code srand
+                    |  is used
+                    |  to re-seed random number generation to vary the random number stream used.
+            tr
+              td
+                a(name='sin')
+              td
+                code sin
+                |  [Category: Math]
+                dl
+                  dd
+                    | Format: 
+                    code double sin(double angle);
+                    br
+                    |  Returns the sine of angle. angle is specified in radians; result is between -1 and 1.
+            tr
+              td
+                a(name='sqrt')
+              td
+                code sqrt 
+                |  [Category: Math]
+                dl
+                  dd
+                    | Format: 
+                    code double sqrt(double x);
+                    br
+                    |  Returns √
+                    span(style='border-top: 1px solid #000000; font-size: 15px;') x
+                    | ,
+                    |  the square root of x.
+            td
+              a(name='srand')
+            td
+              code srand
+              |  [Category: Math]
+              dl
+                dd
+                  | Format: 
+                  code void srand(int num);
+                  br
+                  |  Re-seeds (pseudo) random number generation (the initial seed at start of program execution
+                  |  is 
+                  code srand(1)
+                  | ). Unless it is desirable that a random number stream be reused,
+                  |  the seed value used should be unpredictable from one run to the next. The usual way to accomplish
+                  |  this is to draw a value from the system clock to use as seed; e.g., 
+                  code
+                    | int seednum = time(NULL);
+                  | .
+                  |  (the time function is declared in system include file 
+                  code &lt;time.h&gt;
+                  |  and if
+                  |  used with a NULL operand returns elapsed time in (whole) seconds since system start).
+            tr
+              td
+                a(name='tan')
+              td
+                code tan
+                |  [Category: Math]
+                dl
+                  dd
+                    | Format: 
+                    code double tan(double angle);
+                    br
+                    |  Returns the tangent of angle. angle is specified in radians; result is between
+                    |  -∞ and +∞.
+            tr
+        // START FOOTER
+

@@ -1,0 +1,352 @@
+
+<html>
+  <head>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link href="/css/base.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/materialize.min.css" media="screen,projection" rel="stylesheet" type="text/css"/>
+    <link href="/css/docs.css" rel="stylesheet" type="text/css"/>
+    <link href="../imgs/logos/botguy.png" rel="icon"/>
+    <title>Botball Documentation - Tutorial</title>
+    <meta content="#00796b" name="theme-color"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  </head>
+  <body>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="/js/materialize.min.js" type="text/javascript"></script>
+    <script>
+      $(document).ready(function () {
+      $('.button-collapse').sideNav({
+      draggable: true
+      });
+      $(".active").parent().parent().siblings()[0].click() })
+    </script>
+    <header>
+      <ul class="side-nav fixed" id="slide-out">
+        <li class="red lighten-1" style="height: 130px;">
+          <div class="userView">
+            <h5 class="white-text"><a class="white-text" href="/docs/index.html">Index</a></h5>
+          </div>
+        </li>
+        <li><a href="/docs/tutorial.html">Tutorial</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Data Objects</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/data-objects/index.html">Introduction</a></li>
+                  <li><a href="/docs/data-objects/variables.html">Variables</a></li>
+                  <li><a href="/docs/data-objects/constants.html">Constants</a></li>
+                  <li><a href="/docs/data-objects/data-types.html">Data Types</a></li>
+                  <li><a href="/docs/data-objects/arrays.html">Arrays</a></li>
+                  <li><a href="/docs/data-objects/structures.html">Structures</a></li>
+                  <li><a href="/docs/data-objects/initialization-examples.html">Initialization Examples</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Statements and Expressions</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/statements-and-expressions/index.html">Introduction</a></li>
+                  <li><a href="/docs/statements-and-expressions/operators.html">Operators</a></li>
+                  <li><a href="/docs/statements-and-expressions/control-flow.html">Control Flow</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/docs/tutorial.html">Style</a></li>
+        <li><a href="/docs/tutorial.html">Debugging</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Printing</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/printing/index.html">Introduction</a></li>
+                  <li><a href="/docs/printing/examples.html">Examples</a></li>
+                  <li><a href="/docs/printing/printf-codes.html">printf Codes</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Preprocessor</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/preprocessor/index.html">Introduction</a></li>
+                  <li><a href="/docs/preprocessor/directives.html">Directives</a></li>
+                  <li><a href="/docs/preprocessor/include.html">Include</a></li>
+                  <li><a href="/docs/preprocessor/macros.html">Macros</a></li>
+                  <li><a href="/docs/preprocessor/conditional-compilation.html">Conditional Compilation</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/docs/lib/math.html">Math Library</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>KIPR Wallaby/Link</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/lib/kipr/common-functions.html">Common Functions</a></li>
+                  <li><a href="/docs/lib/kipr/functions.html">Functions List</a></li>
+                  <li><a href="/docs/lib/kipr/camera.html">Camera Functions</a></li>
+                  <li class="active"><a href="/docs/lib/kipr/graphics.html">Graphics Functions</a></li>
+                  <li><a href="/docs/lib/kipr/depth.html">Depth Sensor Functions</a></li>
+                  <li><a href="/docs/lib/kipr/usb.html">File I/O Functions</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>iRobot Create</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/lib/kipr/create/index.html">Introduction</a></li>
+                  <li><a href="/docs/lib/kipr/create/serial.html">Serial Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/configuration.html">Configuration Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/movement.html">Movement Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/sensors.html">Sensor Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/battery.html">Battery Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/built-ins.html">Built-In Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/music-leds.html">LED and Music Functions</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/docs/lib/kipr/botball.html">Botball Functions</a></li>
+        <li><a href="/docs/lib/kipr/threads.html">Threads</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Motors and Sensors</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/lib/kipr/info/digital-analog-sensors.html">Analog and Digital Sensors</a></li>
+                  <li><a href="/docs/lib/kipr/info/usb-sensors.html">USB Sensors</a></li>
+                  <li><a href="/docs/lib/kipr/info/motors-servos.html">Motors and Servos</a></li>
+                  <li><a href="/docs/lib/kipr/info/simulator.html">Simulator</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/docs/full.html">Full Documentation</a></li>
+      </ul>
+      <nav class="nav-extended red lighten-2">
+        <div class="nav-wrapper">
+          <div class="col s12"><a class="button-collapse" data-activates="slide-out" href="#" style="font-size: 50px;"><i class="material-icons">menu</i></a><a class="brand-logo waves-effect" id="top" href="/docs/index.html">Botball Documentation</a></div>
+        </div>
+        <div class="nav-wrapper">
+          <div class="col s12"><a class="breadcrumb" href="#!">KIPR Wallaby/Link</a><a class="breadcrumb" href="#!">Graphics Functions</a></div>
+        </div>
+      </nav>
+    </header>
+    <main class="row">
+      <div class="container col s12">
+        <!-- END HEADER-->
+        <!-- Graphics API--><a name="Graphics"></a>
+        <h3>KIPR Robot Controller Graphics Functions</h3>
+        <p>
+          The KIPR Robot Controller (and Simulator) support basic graphical draw operations, which allow a user to create
+          their own user interface if they wish. Functions are provided to draw and color pixels, lines, circles, triangles,
+          and rectangles (non-rotated). The screen and two dimensional objects can also be filled with a single color.
+          Both mouse clicks and cursor location can be detected (on the KIPR Robot Controller, a screen tap corresponds
+          to a left mouse click).
+        </p>
+        <p>
+          Note that any virtual features of the KIPR Robot Controller user interface (such as the A,B,C buttons) will be
+          unavailable if obscured by the graphics window (it is advisable to use the side button when doing graphical
+          applications for this reason).
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td><a name="graphics_open"></a></td>
+              <td><code>graphics_open </code> [Category: Graphics]
+                <dl>
+                  <dd>Format: <code>int graphics_open(int </code>
+                    width,
+                     int height);<br/>
+                     Opens and centers a graphics window on the display of the specified
+                     width and height. The maximum width for the KIPR Robot Controller display is 320, and
+                     the maximum height is 240. See also <code>graphics_close</code>.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="graphics_close"></a></td>
+              <td><code>graphics_close </code> [Category: Graphics]
+                <dl>
+                  <dd>Format: <code>void graphics_close();</code><br/>
+                     Closes
+                     the graphics window on the display, restoring access to any virtual buttons underneath
+                     it. See also <code>graphics_open</code>.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="graphics_update"></a></td>
+              <td><code>graphics_update </code> [Category: Graphics]
+                <dl>
+                  <dd>Format: <code>void graphics_update();</code><br/>
+                     Repaints
+                     the pixels in the graphics window to show any changes that have been made.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="graphics_clear"></a></td>
+              <td><code>graphics_clear </code> [Category: Graphics]
+                <dl>
+                  <dd>Format: <code>void graphics_clear();</code><br/>
+                     Erases
+                     the graphics window (not shown until <code>graphics_update</code>).
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="graphics_fill"></a></td>
+              <td><code>graphics_fill </code> [Category: Graphics]
+                <dl>
+                  <dd>Format: <code>void graphics_fill(int r, int g, int b);</code><br/> Colors the pixels in the window using the <code>r</code>, <code>g</code>, <code>b</code> color encoding.</dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="graphics_pixel"></a></td>
+              <td><code>graphics_pixel </code> [Category: Graphics]
+                <dl>
+                  <dd>Format: <code>void graphics_pixel(int x, int y, int r, int g, int b);</code><br/> Colors the specified pixel in the window using the <code>r</code>, <code>g</code>, <code>b</code> color encoding, where columns <code>x</code> and rows <code>y</code>
+                     are indexed starting
+                     from the upper left corner of the graphics window.
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="graphics_line"></a></td>
+              <td><code>graphics_line </code> [Category: Graphics]
+                <dl>
+                  <dd>Format: <code>void graphics_line(int x1, int y1, int x2, int y2, int r, int g, int b);</code><br/> Draws a line in the window from the specified ( <code>x1</code>, <code>y1</code>
+                    ) pixel
+                     to the ( <code>x2</code>, <code>y2</code>) pixel using the <code>r</code>, <code>g</code>, <code>b</code>
+                     color encoding (where columns x and rows y are indexed starting from the upper left corner
+                     of the graphics window).
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="graphics_circle"></a></td>
+              <td><code>graphics_circle </code> [Category: Graphics]
+                <dl>
+                  <dd>Format: <code>void graphics_circle(int cx, int cy, int radius, int r, int g, int b);</code><br/> Draws a circle in the window of the specified radius centered at ( <code>cx</code>, <code>cy</code>
+                    )
+                     using the <code>r</code>, <code>g</code>, <code>b</code>
+                     color encoding (where columns
+                     x and rows y are indexed starting from the upper left corner of the graphics window).
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="graphics_circle_fill"></a></td>
+              <td><code>graphics_circle_fill </code> [Category: Graphics]
+                <dl>
+                  <dd>Format: <code>void graphics_circle_fill(int cx, int cy, int radius, int r, int g, int b);</code><br/> Draws a circle in the window of the specified radius centered at ( <code>cx</code>, <code>cy</code>
+                    )
+                     and fills it using the <code>r</code>, <code>g</code>, <code>b</code>
+                     color encoding (where
+                     columns x and rows y are indexed starting from the upper left corner of the graphics
+                     window).
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="graphics_rectangle"></a></td>
+              <td><code>graphics_rectangle </code> [Category: Graphics]
+                <dl>
+                  <dd>Format: <code>void graphics_rectangle(int x1, int y1, int x2, int y2, int r, int g, int b);</code><br/> Draws a rectangle in the window with upper left corner ( <code>x1</code>, <code>y1</code>
+                    )
+                     and lower right corner ( <code>x2</code>, <code>y2</code>) using the <code>r</code>, <code>g</code>, <code>b</code>
+                     color encoding (where columns x and rows y are indexed starting from the upper left corner
+                     of the graphics window).
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="graphics_rectangle_fill"></a></td>
+              <td><code>graphics_rectangle_fill </code> [Category: Graphics]
+                <dl>
+                  <dd>Format: <code>void graphics_rectangle_fill(int x1, int y1, int x2, int y2, int r, int g, int b);</code><br/> Draws a rectangle in the window with upper left corner ( <code>x1</code>, <code>y1</code>
+                    )
+                     and lower right corner ( <code>x2</code>, <code>y2</code>) and fills it using the <code>r</code>, <code>g</code>, <code>b</code>
+                     color encoding (where columns x and rows y are indexed starting from the upper left corner
+                     of the graphics window).
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="graphics_triangle"></a></td>
+              <td><code>graphics_triangle </code> [Category: Graphics]
+                <dl>
+                  <dd>Format: <code>void graphics_triangle(int x1, int y1, int x2, int y2, int x3, int y3, int r, int g, int b);</code><br/> Draws a triangle in the window with corners ( <code>x1</code>, <code>y1</code>), ( <code>x2</code>, <code>y2</code>), ( <code>x3</code>, <code>y3</code>) using the <code>r</code>, <code>g</code>, <code>b</code>
+                     color encoding (where columns x and rows
+                     y are indexed starting from the upper left corner of the graphics window).
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="graphics_triangle_fill"></a></td>
+              <td><code>graphics_triangle_fill </code> [Category: Graphics]
+                <dl>
+                  <dd>Format: <code>void graphics_triangle_fill(int x1, int y1, int x2, int y2, int x3, int y3, int r, int g, int b);</code><br/> Draws a triangle in the window with corners ( <code>x1</code>, <code>y1</code>), ( <code>x2</code>, <code>y2</code>), ( <code>x3</code>, <code>y3</code>
+                    ) and fills it using
+                     the <code>r</code>, <code>g</code>, <code>b</code>
+                     color encoding (where columns x and
+                     rows y are indexed starting from the upper left corner of the graphics window).
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="get_mouse_position"></a></td>
+              <td><code>get_mouse_position </code> [Category: Graphics]
+                <dl>
+                  <dd>Format: <code>void get_mouse_position(int *x, int *y);</code><br/>
+                     Assigns the column,row position of the cursor in the window to the two specified address
+                     parameters. Note that the typical call for this function will look like<br/>
+                    <div class="Indent"><code>get_mouse_position(&col, &row);</code></div>
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td><a name="get_mouse_left_button"></a></td>
+              <td><code>get_mouse_left_button </code> [Category: Graphics]
+                <dl>
+                  <dd>Format: <code>int get_mouse_left_button();</code><br/>
+                     Returns 1 if the left mouse button is clicked or if the KIPR Robot Controller display
+                     is tapped. The two additional functions <code>get_mouse_middle_button</code> and <code>get_mouse_right_button</code>
+                     are also available but have no meaning on the KIPR Robot Controller (unless a mouse is
+                     attached)
+                  </dd>
+                </dl>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- START FOOTER-->
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,240 @@
+
+<html>
+  <head>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link href="/css/base.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/materialize.min.css" media="screen,projection" rel="stylesheet" type="text/css"/>
+    <link href="/css/docs.css" rel="stylesheet" type="text/css"/>
+    <link href="../imgs/logos/botguy.png" rel="icon"/>
+    <title>Botball Documentation - Tutorial</title>
+    <meta content="#00796b" name="theme-color"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  </head>
+  <body>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="/js/materialize.min.js" type="text/javascript"></script>
+    <script>
+      $(document).ready(function () {
+      $('.button-collapse').sideNav({
+      draggable: true
+      });
+      $(".active").parent().parent().siblings()[0].click() })
+    </script>
+    <header>
+      <ul class="side-nav fixed" id="slide-out">
+        <li class="red lighten-1" style="height: 130px;">
+          <div class="userView">
+            <h5 class="white-text"><a class="white-text" href="/docs/index.html">Index</a></h5>
+          </div>
+        </li>
+        <li><a href="/docs/tutorial.html">Tutorial</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Data Objects</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/data-objects/index.html">Introduction</a></li>
+                  <li><a href="/docs/data-objects/variables.html">Variables</a></li>
+                  <li><a href="/docs/data-objects/constants.html">Constants</a></li>
+                  <li><a href="/docs/data-objects/data-types.html">Data Types</a></li>
+                  <li><a href="/docs/data-objects/arrays.html">Arrays</a></li>
+                  <li><a href="/docs/data-objects/structures.html">Structures</a></li>
+                  <li><a href="/docs/data-objects/initialization-examples.html">Initialization Examples</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Statements and Expressions</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/statements-and-expressions/index.html">Introduction</a></li>
+                  <li><a href="/docs/statements-and-expressions/operators.html">Operators</a></li>
+                  <li><a href="/docs/statements-and-expressions/control-flow.html">Control Flow</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/docs/tutorial.html">Style</a></li>
+        <li><a href="/docs/tutorial.html">Debugging</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Printing</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/printing/index.html">Introduction</a></li>
+                  <li><a href="/docs/printing/examples.html">Examples</a></li>
+                  <li><a href="/docs/printing/printf-codes.html">printf Codes</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Preprocessor</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/preprocessor/index.html">Introduction</a></li>
+                  <li class="active"><a href="/docs/preprocessor/directives.html">Directives</a></li>
+                  <li><a href="/docs/preprocessor/include.html">Include</a></li>
+                  <li><a href="/docs/preprocessor/macros.html">Macros</a></li>
+                  <li><a href="/docs/preprocessor/conditional-compilation.html">Conditional Compilation</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/docs/lib/math.html">Math Library</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>KIPR Wallaby/Link</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/lib/kipr/common-functions.html">Common Functions</a></li>
+                  <li><a href="/docs/lib/kipr/functions.html">Functions List</a></li>
+                  <li><a href="/docs/lib/kipr/camera.html">Camera Functions</a></li>
+                  <li><a href="/docs/lib/kipr/graphics.html">Graphics Functions</a></li>
+                  <li><a href="/docs/lib/kipr/depth.html">Depth Sensor Functions</a></li>
+                  <li><a href="/docs/lib/kipr/usb.html">File I/O Functions</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>iRobot Create</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/lib/kipr/create/index.html">Introduction</a></li>
+                  <li><a href="/docs/lib/kipr/create/serial.html">Serial Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/configuration.html">Configuration Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/movement.html">Movement Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/sensors.html">Sensor Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/battery.html">Battery Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/built-ins.html">Built-In Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/music-leds.html">LED and Music Functions</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/docs/lib/kipr/botball.html">Botball Functions</a></li>
+        <li><a href="/docs/lib/kipr/threads.html">Threads</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Motors and Sensors</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/lib/kipr/info/digital-analog-sensors.html">Analog and Digital Sensors</a></li>
+                  <li><a href="/docs/lib/kipr/info/usb-sensors.html">USB Sensors</a></li>
+                  <li><a href="/docs/lib/kipr/info/motors-servos.html">Motors and Servos</a></li>
+                  <li><a href="/docs/lib/kipr/info/simulator.html">Simulator</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/docs/full.html">Full Documentation</a></li>
+      </ul>
+      <nav class="nav-extended red lighten-2">
+        <div class="nav-wrapper">
+          <div class="col s12"><a class="button-collapse" data-activates="slide-out" href="#" style="font-size: 50px;"><i class="material-icons">menu</i></a><a class="brand-logo waves-effect" id="top" href="/docs/index.html">Botball Documentation</a></div>
+        </div>
+        <div class="nav-wrapper">
+          <div class="col s12"><a class="breadcrumb" href="/docs/preprocessor/index.html">Preprocessor</a><a class="breadcrumb" href="#!">Directives</a></div>
+        </div>
+      </nav>
+    </header>
+    <main class="row">
+      <div class="container col s12">
+        <!-- END HEADER-->
+        <!-- Preprocessor_Directives--><a name="Preprocessor_Directives"></a>
+        <h3>Preprocessor Directives</h3>
+        <p>
+          Preprocessor directives are identified by the "#" symbol, which must be the first entry on a line for the directive
+          to be recognized by the C preprocessor.
+        </p>
+        <p>
+          The two primary preprocessor directive are
+          #include for inserting files into the program code and
+          #define for defining macros that are expanded wherever their names appear in program code.
+        </p>
+        <p>
+          For a macro call to be recognized by the preprocessor, it's definition has to occur at some point earlier in
+          the program. Macro definitions begin with the macro directive
+          #define and are usually grouped together at the beginning of the file in which they appear. The preprocessor
+          will flag a macro definition as being a duplicate if its name is reused for another
+          #define in the same file. If more than one file is employed for a program, a preprocessor directive
+          applies only within the file where it is defined.
+        </p>
+        <p>
+          Since the programmer may or may not know what
+          #define commands appear in a
+          #include file, commands are provided to check to see if a macro has already been defined (
+          #ifdef <code> .. </code>
+          #endif and
+           #ifndef <code> .. </code>#endif). For example,
+        </p>
+        <div class="Indent"><code>#ifndef PI<br/>  #define PI 3.1416159<br/>#endif</code></div>
+        <p>
+          When the preprocessor encounters a valid macro name in the program code, the macro is called and its name "expanded"
+          to be replaced by whatever text the macro generates; e.g., when the macro name PI is encountered by the preprocessor
+          it replaces it with the text 3.1416159 (for the C compiler to subsequently interpret as a floating point
+          constant).
+        </p>
+        <p>
+          The directive
+          #undef removes a macro name from the list of defined macros (and otherwise does nothing). It is sometimes
+          employed defensively to guard against the possibility of
+          #include inserting a macro name that conflicts with the name of a function the programmer has defined.
+          The convention employed to minimize the likelihood of this occurrence is to use upper case letters for the
+          names of macros and for nothing else.
+        </p>
+        <p>
+          The sequential bypass strategy employed by the C preprocessor precludes iterative loop directives, but a limited
+          if-else selection is provided. The directive for this purpose,
+          #if, employs a condition test with computation limited to integer constants, character constants,
+          comparisons, arithmetic and logic operators, and macros names (which are expanded before the condition test
+          is calculated). The section of code selected by a
+          #if directive consists of the lines of code that follow it, continuing until one of the directives
+          #else,
+          #endif, or
+          #elif is encountered. The section of code selected by a
+          #if directive is processed if the preprocessor calculates the value of the condition test to be non-zero;
+          otherwise, the preprocessor omits the section from the code sent to the compiler. The term used to describe
+          this procedure is <i>conditional compilation</i>
+           since the condition test determines whether or not a section
+           of code is sent on to the compiler; for example,
+        </p>
+        <div class="Indent"><code>#define CFLAG 1<br/>#if CFLAG==1<br/>  display_printf(1,3,&quot;On target  &quot;);<br/>#else<br/>  printf(&quot;On target\n&quot;);<br/>#endif</code></div>
+        <p>selects which form of <code>printf</code>
+           to use according to how CFLAG is #defined. CFLAG serves as a "configuration
+           variable" to be set according to the ennvironment where the program will be run.
+        </p>
+        <p>
+          #elif has the same interpretation as "else if" and requires a condition test. The section of code
+          selected by
+          #elif is terminated by any one of
+          #else,
+          #endif, or
+          #elif also.
+        </p>
+        <p>
+          #else has the same interpretation as "else", with its section of code terminated only by
+          #endif.
+        </p>
+        <p>
+          The sections of code selected by the two directives
+          #ifdef and
+          #ifndef discussed earlier can be terminated by
+          #else or
+          #elif as well as
+          #endif.
+        </p>
+        <p>
+          Preprocessor macros can be used to associate a name with a constant that appears in multiple places in code (e.g.,
+          PI or LMOTOR), to simplify a C function call, or to provide a debugging capability that can be turned on
+          or off by use of conditional compilation, among many other possibilities.
+        </p>
+        <!-- START FOOTER-->
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,279 @@
+html
+  head
+    link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    link(href='/css/base.css', rel='stylesheet', type='text/css')
+    link(href='/css/materialize.min.css', media='screen,projection', rel='stylesheet', type='text/css')
+    link(href='/css/docs.css', rel='stylesheet', type='text/css')
+    link(href='../imgs/logos/botguy.png', rel='icon')
+    title Botball Documentation - Tutorial
+    meta(content='#00796b', name='theme-color')
+    meta(content='width=device-width, initial-scale=1.0', name='viewport')
+  body
+    script(src='https://code.jquery.com/jquery-2.1.1.min.js', type='text/javascript')
+    script(src='/js/materialize.min.js', type='text/javascript')
+    script.
+      $(document).ready(function () {
+      $('.button-collapse').sideNav({
+      draggable: true
+      });
+      $(".active").parent().parent().siblings()[0].click() })
+    header
+      ul#slide-out.side-nav.fixed
+        li.red.lighten-1(style='height: 130px')
+          .userView
+            h5.white-text
+              a.white-text(href='/docs/index.html') Index
+        li
+          a(href='/docs/tutorial.html') Tutorial
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Data Objects
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/data-objects/index.html') Introduction
+                  li
+                    a(href='/docs/data-objects/variables.html') Variables
+                  li
+                    a(href='/docs/data-objects/constants.html') Constants
+                  li
+                    a(href='/docs/data-objects/data-types.html') Data Types
+                  li
+                    a(href='/docs/data-objects/arrays.html') Arrays
+                  li
+                    a(href='/docs/data-objects/structures.html') Structures
+                  li
+                    a(href='/docs/data-objects/initialization-examples.html') Initialization Examples
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Statements and Expressions
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/statements-and-expressions/index.html') Introduction
+                  li
+                    a(href='/docs/statements-and-expressions/operators.html') Operators
+                  li
+                    a(href='/docs/statements-and-expressions/control-flow.html') Control Flow
+        li
+          a(href='/docs/tutorial.html') Style
+        li
+          a(href='/docs/tutorial.html') Debugging
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Printing
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/printing/index.html') Introduction
+                  li
+                    a(href='/docs/printing/examples.html') Examples
+                  li
+                    a(href='/docs/printing/printf-codes.html') printf Codes
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Preprocessor
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/preprocessor/index.html') Introduction
+                  li.active
+                    a(href='/docs/preprocessor/directives.html') Directives
+                  li
+                    a(href='/docs/preprocessor/include.html') Include
+                  li
+                    a(href='/docs/preprocessor/macros.html') Macros
+                  li
+                    a(href='/docs/preprocessor/conditional-compilation.html') Conditional Compilation
+        li
+          a(href='/docs/lib/math.html') Math Library
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | KIPR Wallaby/Link
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/lib/kipr/common-functions.html') Common Functions
+                  li
+                    a(href='/docs/lib/kipr/functions.html') Functions List
+                  li
+                    a(href='/docs/lib/kipr/camera.html') Camera Functions
+                  li
+                    a(href='/docs/lib/kipr/graphics.html') Graphics Functions
+                  li
+                    a(href='/docs/lib/kipr/depth.html') Depth Sensor Functions
+                  li
+                    a(href='/docs/lib/kipr/usb.html') File I/O Functions
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | iRobot Create
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/lib/kipr/create/index.html') Introduction
+                  li
+                    a(href='/docs/lib/kipr/create/serial.html') Serial Functions
+                  li
+                    a(href='/docs/lib/kipr/create/configuration.html') Configuration Functions
+                  li
+                    a(href='/docs/lib/kipr/create/movement.html') Movement Functions
+                  li
+                    a(href='/docs/lib/kipr/create/sensors.html') Sensor Functions
+                  li
+                    a(href='/docs/lib/kipr/create/battery.html') Battery Functions
+                  li
+                    a(href='/docs/lib/kipr/create/built-ins.html') Built-In Functions
+                  li
+                    a(href='/docs/lib/kipr/create/music-leds.html') LED and Music Functions
+        li
+          a(href='/docs/lib/kipr/botball.html') Botball Functions
+        li
+          a(href='/docs/lib/kipr/threads.html') Threads
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Motors and Sensors
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/lib/kipr/info/digital-analog-sensors.html') Analog and Digital Sensors
+                  li
+                    a(href='/docs/lib/kipr/info/usb-sensors.html') USB Sensors
+                  li
+                    a(href='/docs/lib/kipr/info/motors-servos.html') Motors and Servos
+                  li
+                    a(href='/docs/lib/kipr/info/simulator.html') Simulator
+        li
+          a(href='/docs/full.html') Full Documentation
+      nav.nav-extended.red.lighten-2
+        .nav-wrapper
+          .col.s12
+            a.button-collapse(data-activates='slide-out', href='#', style='font-size: 50px')
+              i.material-icons menu
+            a#top.brand-logo.waves-effect(href='/docs/index.html') Botball Documentation
+        .nav-wrapper
+          .col.s12
+            a.breadcrumb(href='/docs/preprocessor/index.html') Preprocessor
+            a.breadcrumb(href='#!') Directives
+    main.row
+      .container.col.s12
+        // END HEADER
+        // Preprocessor_Directives
+        a(name='Preprocessor_Directives')
+        h3 Preprocessor Directives
+        p
+          | Preprocessor directives are identified by the "#" symbol, which must be the first entry on a line for the directive
+          | to be recognized by the C preprocessor.
+        p
+          | The two primary preprocessor directive are
+          | #include for inserting files into the program code and
+          | #define for defining macros that are expanded wherever their names appear in program code.
+        p
+          | For a macro call to be recognized by the preprocessor, it's definition has to occur at some point earlier in
+          | the program. Macro definitions begin with the macro directive
+          | #define and are usually grouped together at the beginning of the file in which they appear. The preprocessor
+          | will flag a macro definition as being a duplicate if its name is reused for another
+          | #define in the same file. If more than one file is employed for a program, a preprocessor directive
+          | applies only within the file where it is defined.
+        p
+          | Since the programmer may or may not know what
+          | #define commands appear in a
+          | #include file, commands are provided to check to see if a macro has already been defined (
+          | #ifdef 
+          code  .. 
+          | #endif and
+          |  #ifndef 
+          code  .. 
+          | #endif). For example,
+        .Indent
+          code
+            | #ifndef PI
+            br
+            |   #define PI 3.1416159
+            br
+            | #endif
+        p
+          | When the preprocessor encounters a valid macro name in the program code, the macro is called and its name "expanded"
+          | to be replaced by whatever text the macro generates; e.g., when the macro name PI is encountered by the preprocessor
+          | it replaces it with the text 3.1416159 (for the C compiler to subsequently interpret as a floating point
+          | constant).
+        p
+          | The directive
+          | #undef removes a macro name from the list of defined macros (and otherwise does nothing). It is sometimes
+          | employed defensively to guard against the possibility of
+          | #include inserting a macro name that conflicts with the name of a function the programmer has defined.
+          | The convention employed to minimize the likelihood of this occurrence is to use upper case letters for the
+          | names of macros and for nothing else.
+        p
+          | The sequential bypass strategy employed by the C preprocessor precludes iterative loop directives, but a limited
+          | if-else selection is provided. The directive for this purpose,
+          | #if, employs a condition test with computation limited to integer constants, character constants,
+          | comparisons, arithmetic and logic operators, and macros names (which are expanded before the condition test
+          | is calculated). The section of code selected by a
+          | #if directive consists of the lines of code that follow it, continuing until one of the directives
+          | #else,
+          | #endif, or
+          | #elif is encountered. The section of code selected by a
+          | #if directive is processed if the preprocessor calculates the value of the condition test to be non-zero;
+          | otherwise, the preprocessor omits the section from the code sent to the compiler. The term used to describe
+          | this procedure is 
+          i conditional compilation
+          |  since the condition test determines whether or not a section
+          |  of code is sent on to the compiler; for example,
+        .Indent
+          code
+            | #define CFLAG 1
+            br
+            | #if CFLAG==1
+            br
+            |   display_printf(1,3,&quot;On target  &quot;);
+            br
+            | #else
+            br
+            |   printf(&quot;On target\n&quot;);
+            br
+            | #endif
+        p
+          | selects which form of 
+          code printf
+          |  to use according to how CFLAG is #defined. CFLAG serves as a "configuration
+          |  variable" to be set according to the ennvironment where the program will be run.
+        p
+          | #elif has the same interpretation as "else if" and requires a condition test. The section of code
+          | selected by
+          | #elif is terminated by any one of
+          | #else,
+          | #endif, or
+          | #elif also.
+        p
+          | #else has the same interpretation as "else", with its section of code terminated only by
+          | #endif.
+        p
+          | The sections of code selected by the two directives
+          | #ifdef and
+          | #ifndef discussed earlier can be terminated by
+          | #else or
+          | #elif as well as
+          | #endif.
+        p
+          | Preprocessor macros can be used to associate a name with a constant that appears in multiple places in code (e.g.,
+          | PI or LMOTOR), to simplify a C function call, or to provide a debugging capability that can be turned on
+          | or off by use of conditional compilation, among many other possibilities.
+        // START FOOTER
+

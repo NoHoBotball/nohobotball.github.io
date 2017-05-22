@@ -1,0 +1,253 @@
+html
+  head
+    link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    link(href='/css/base.css', rel='stylesheet', type='text/css')
+    link(href='/css/materialize.min.css', media='screen,projection', rel='stylesheet', type='text/css')
+    link(href='/css/docs.css', rel='stylesheet', type='text/css')
+    link(href='../imgs/logos/botguy.png', rel='icon')
+    title Botball Documentation - Tutorial
+    meta(content='#00796b', name='theme-color')
+    meta(content='width=device-width, initial-scale=1.0', name='viewport')
+  body
+    script(src='https://code.jquery.com/jquery-2.1.1.min.js', type='text/javascript')
+    script(src='/js/materialize.min.js', type='text/javascript')
+    script.
+      $(document).ready(function () {
+      $('.button-collapse').sideNav({
+      draggable: true
+      });
+      $(".active").parent().parent().siblings()[0].click() })
+    header
+      ul#slide-out.side-nav.fixed
+        li.red.lighten-1(style='height: 130px')
+          .userView
+            h5.white-text
+              a.white-text(href='/docs/index.html') Index
+        li
+          a(href='/docs/tutorial.html') Tutorial
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Data Objects
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/data-objects/index.html') Introduction
+                  li
+                    a(href='/docs/data-objects/variables.html') Variables
+                  li
+                    a(href='/docs/data-objects/constants.html') Constants
+                  li
+                    a(href='/docs/data-objects/data-types.html') Data Types
+                  li
+                    a(href='/docs/data-objects/arrays.html') Arrays
+                  li
+                    a(href='/docs/data-objects/structures.html') Structures
+                  li
+                    a(href='/docs/data-objects/initialization-examples.html') Initialization Examples
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Statements and Expressions
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/statements-and-expressions/index.html') Introduction
+                  li
+                    a(href='/docs/statements-and-expressions/operators.html') Operators
+                  li
+                    a(href='/docs/statements-and-expressions/control-flow.html') Control Flow
+        li
+          a(href='/docs/tutorial.html') Style
+        li.active
+          a(href='/docs/tutorial.html') Debugging
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Printing
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/printing/index.html') Introduction
+                  li
+                    a(href='/docs/printing/examples.html') Examples
+                  li
+                    a(href='/docs/printing/printf-codes.html') printf Codes
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Preprocessor
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/preprocessor/index.html') Introduction
+                  li
+                    a(href='/docs/preprocessor/directives.html') Directives
+                  li
+                    a(href='/docs/preprocessor/include.html') Include
+                  li
+                    a(href='/docs/preprocessor/macros.html') Macros
+                  li
+                    a(href='/docs/preprocessor/conditional-compilation.html') Conditional Compilation
+        li
+          a(href='/docs/lib/math.html') Math Library
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | KIPR Wallaby/Link
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/lib/kipr/common-functions.html') Common Functions
+                  li
+                    a(href='/docs/lib/kipr/functions.html') Functions List
+                  li
+                    a(href='/docs/lib/kipr/camera.html') Camera Functions
+                  li
+                    a(href='/docs/lib/kipr/graphics.html') Graphics Functions
+                  li
+                    a(href='/docs/lib/kipr/depth.html') Depth Sensor Functions
+                  li
+                    a(href='/docs/lib/kipr/usb.html') File I/O Functions
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | iRobot Create
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/lib/kipr/create/index.html') Introduction
+                  li
+                    a(href='/docs/lib/kipr/create/serial.html') Serial Functions
+                  li
+                    a(href='/docs/lib/kipr/create/configuration.html') Configuration Functions
+                  li
+                    a(href='/docs/lib/kipr/create/movement.html') Movement Functions
+                  li
+                    a(href='/docs/lib/kipr/create/sensors.html') Sensor Functions
+                  li
+                    a(href='/docs/lib/kipr/create/battery.html') Battery Functions
+                  li
+                    a(href='/docs/lib/kipr/create/built-ins.html') Built-In Functions
+                  li
+                    a(href='/docs/lib/kipr/create/music-leds.html') LED and Music Functions
+        li
+          a(href='/docs/lib/kipr/botball.html') Botball Functions
+        li
+          a(href='/docs/lib/kipr/threads.html') Threads
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Motors and Sensors
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/lib/kipr/info/digital-analog-sensors.html') Analog and Digital Sensors
+                  li
+                    a(href='/docs/lib/kipr/info/usb-sensors.html') USB Sensors
+                  li
+                    a(href='/docs/lib/kipr/info/motors-servos.html') Motors and Servos
+                  li
+                    a(href='/docs/lib/kipr/info/simulator.html') Simulator
+        li
+          a(href='/docs/full.html') Full Documentation
+      nav.nav-extended.red.lighten-2
+        .nav-wrapper
+          .col.s12
+            a.button-collapse(data-activates='slide-out', href='#', style='font-size: 50px')
+              i.material-icons menu
+            a#top.brand-logo.waves-effect(href='/docs/index.html') Botball Documentation
+        .nav-wrapper
+          .col.s12
+            a.breadcrumb(href='#!') Debugging
+    main.row
+      .container.col.s12
+        // END HEADER
+        // Program Debugging
+        a(name='Program_Debugging')
+        h2 Program Debugging
+        p
+          | Debugging is the process of correcting syntactic and semantic errors found in a program.
+        a(name='Syntax_Errors')
+        h4 Syntax Errors
+        p
+          | The C compiler cannot compile a program that has syntax errors such as a missing semi-colon or other program
+          | construction error. Syntax errors are the ones most easily corrected since the compiler can identify both
+          | where they occur and what the problem is. The KISS IDE lists any syntax errors found during program compilation
+          | in an error panel below the program code. The interface provides the line number and position within the
+          | line identifying the location of the error, with a description of the cause of the error. Since the mistake
+          | causing the first error listed will typically cause additional syntax errors within the program, it is often
+          | the case that correcting the syntax causing the first error will fix the rest.
+        a(name='Semantic_Errors')
+        h4 Semantic Errors
+        p
+          | Just because a program compiles does not mean it will do what is intended, which is termed program semantics.
+          | A semantic error manifests itself during program execution, either because the program crashes or it produces
+          | erroneous results. Semantic errors are caused by errors in program logic or programmer oversights (such as
+          | failure to initialize a variable). They can be difficult to track down because it usually is not clear where
+          | in program execution the error occurred.
+        p
+          | For a program which relies on data inputs, determining the presence of semantic errors requires testing the program
+          | for a representative set of possible data inputs, including so-called
+          i boundary conditions
+          | . For example, if a data input has a range from 0 to 1000, then 0 and 1000 are
+          |  the boundaries for the data, and one of these, 0, will cause the program to crash if used in the denominator
+          |  of a division operation. That means that once the part of the program where the error occurs has been located,
+          |  program logic has to be adjusted to check the data input to see if it is 0 before using it in the division.
+          |  For complex systems, program testing is an ongoing part of the software development cycle.
+        p
+          | Semantic errors that are rare events are difficult to correct, since being able to repeat what causes the error
+          | is key to being able to resolve it. Once a semantic error can be reliably repeated, various techniques are
+          | employed to determine the cause and to locate where in the program it occurred. Only the basic techniques
+          | will be covered here, but operating systems provide debugging tools designed to determine the cause of an
+          | error and to facilitate locating where in the program code it occurred.
+        a(name='printf_debugging')
+        h4 Using printf and Commenting for Diagnostic Purposes
+        p
+          | For the smaller C programs constructed for environments like the KIPR Robot Controller, most semantic errors
+          | that occur can be corrected quickly using one or both of the following two approaches.
+        ul
+          li
+            | For a C program that runs, but produces erroneous output, it is often useful to insert 
+            code printf
+            |  statements at various points in the program code to display the value of selected variables to see if
+            |  their intermediate values are as expected. For example, in an expression containing the sub-expression 
+            code (x * y-z)
+            | , displaying the values of 
+            code x, y
+            |  and 
+            code z
+            |  might help discover the sub-expression should have been 
+            code (x * (y-z))
+            | .
+          li
+            | For a C program that crashes, "commenting out" sections of code can be used to locate the part of the program
+            | triggering the crash. Commenting out is relatively straight forward process to implement, because inserting
+            | // in front of a line of code turns it into a comment (so it will no longer be executed) and whole
+            | blocks of code can be commented out by surrounding them using
+            | /* */ comment bracketing.
+            br
+            br
+            |  What is commented out has to be selected so that the program
+            |  will still compile. After commenting out sections of the program, if it still crashes when executed,
+            |  then what was commented out is probably not where the culprit is located. Including/excluding parts of
+            |  the code in this manner will usually identify where the problem is occurring so it can be diagnosed and
+            |  corrected. Sometimes the best tactic is to comment out a large enough section to eliminate the crash,
+            |  then reduce the scope of commenting out in small steps until the program crash recurs.
+        p
+          | For larger programs, a system debugging tool may be called for. Unix systems include the debugging tool 
+          code sdb
+          | ,
+          |  which has its own command structure that has to be learned to be used effectively.
+        // START FOOTER
+

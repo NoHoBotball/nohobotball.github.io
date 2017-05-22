@@ -1,0 +1,690 @@
+html
+  head
+    link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    link(href='/css/base.css', rel='stylesheet', type='text/css')
+    link(href='/css/materialize.min.css', media='screen,projection', rel='stylesheet', type='text/css')
+    link(href='/css/docs.css', rel='stylesheet', type='text/css')
+    link(href='../imgs/logos/botguy.png', rel='icon')
+    title Botball Documentation - Tutorial
+    meta(content='#00796b', name='theme-color')
+    meta(content='width=device-width, initial-scale=1.0', name='viewport')
+  body
+    script(src='https://code.jquery.com/jquery-2.1.1.min.js', type='text/javascript')
+    script(src='/js/materialize.min.js', type='text/javascript')
+    script.
+      $(document).ready(function () {
+      $('.button-collapse').sideNav({
+      draggable: true
+      });
+      $(".active").parent().parent().siblings()[0].click() })
+    header
+      ul#slide-out.side-nav.fixed
+        li.red.lighten-1(style='height: 130px')
+          .userView
+            h5.white-text
+              a.white-text(href='/docs/index.html') Index
+        li
+          a(href='/docs/tutorial.html') Tutorial
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Data Objects
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/data-objects/index.html') Introduction
+                  li
+                    a(href='/docs/data-objects/variables.html') Variables
+                  li
+                    a(href='/docs/data-objects/constants.html') Constants
+                  li
+                    a(href='/docs/data-objects/data-types.html') Data Types
+                  li
+                    a(href='/docs/data-objects/arrays.html') Arrays
+                  li
+                    a(href='/docs/data-objects/structures.html') Structures
+                  li
+                    a(href='/docs/data-objects/initialization-examples.html') Initialization Examples
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Statements and Expressions
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/statements-and-expressions/index.html') Introduction
+                  li
+                    a(href='/docs/statements-and-expressions/operators.html') Operators
+                  li
+                    a(href='/docs/statements-and-expressions/control-flow.html') Control Flow
+        li
+          a(href='/docs/tutorial.html') Style
+        li
+          a(href='/docs/tutorial.html') Debugging
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Printing
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/printing/index.html') Introduction
+                  li
+                    a(href='/docs/printing/examples.html') Examples
+                  li
+                    a(href='/docs/printing/printf-codes.html') printf Codes
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Preprocessor
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/preprocessor/index.html') Introduction
+                  li
+                    a(href='/docs/preprocessor/directives.html') Directives
+                  li
+                    a(href='/docs/preprocessor/include.html') Include
+                  li
+                    a(href='/docs/preprocessor/macros.html') Macros
+                  li
+                    a(href='/docs/preprocessor/conditional-compilation.html') Conditional Compilation
+        li
+          a(href='/docs/lib/math.html') Math Library
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | KIPR Wallaby/Link
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/lib/kipr/common-functions.html') Common Functions
+                  li
+                    a(href='/docs/lib/kipr/functions.html') Functions List
+                  li.active
+                    a(href='/docs/lib/kipr/camera.html') Camera Functions
+                  li
+                    a(href='/docs/lib/kipr/graphics.html') Graphics Functions
+                  li
+                    a(href='/docs/lib/kipr/depth.html') Depth Sensor Functions
+                  li
+                    a(href='/docs/lib/kipr/usb.html') File I/O Functions
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | iRobot Create
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/lib/kipr/create/index.html') Introduction
+                  li
+                    a(href='/docs/lib/kipr/create/serial.html') Serial Functions
+                  li
+                    a(href='/docs/lib/kipr/create/configuration.html') Configuration Functions
+                  li
+                    a(href='/docs/lib/kipr/create/movement.html') Movement Functions
+                  li
+                    a(href='/docs/lib/kipr/create/sensors.html') Sensor Functions
+                  li
+                    a(href='/docs/lib/kipr/create/battery.html') Battery Functions
+                  li
+                    a(href='/docs/lib/kipr/create/built-ins.html') Built-In Functions
+                  li
+                    a(href='/docs/lib/kipr/create/music-leds.html') LED and Music Functions
+        li
+          a(href='/docs/lib/kipr/botball.html') Botball Functions
+        li
+          a(href='/docs/lib/kipr/threads.html') Threads
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Motors and Sensors
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/lib/kipr/info/digital-analog-sensors.html') Analog and Digital Sensors
+                  li
+                    a(href='/docs/lib/kipr/info/usb-sensors.html') USB Sensors
+                  li
+                    a(href='/docs/lib/kipr/info/motors-servos.html') Motors and Servos
+                  li
+                    a(href='/docs/lib/kipr/info/simulator.html') Simulator
+        li
+          a(href='/docs/full.html') Full Documentation
+      nav.nav-extended.red.lighten-2
+        .nav-wrapper
+          .col.s12
+            a.button-collapse(data-activates='slide-out', href='#', style='font-size: 50px')
+              i.material-icons menu
+            a#top.brand-logo.waves-effect(href='/docs/index.html') Botball Documentation
+        .nav-wrapper
+          .col.s12
+            a.breadcrumb(href='#!') KIPR Wallaby/Link
+            a.breadcrumb(href='#!') Camera Functions
+    main.row
+      .container.col.s12
+        // END HEADER
+        // Vision API
+        a(name='vision')
+        h3 KIPR Robot Controller Vision Library Functions
+        p
+          | The KIPR Robot Controller Vision System incorporates color vision tracking and QR code identification. A USB
+          | web camera is used to provide images to the KIPR Robot Controller at a rate dependent on lighting conditions
+          | but exceeding 6 frames per second. Using the KIPR Robot Controller interface, an arbitrary number of camera
+          | configurations containing channels for color vision tracking and/or QR code identification can be defined.
+        p
+          | For color vision tracking, images are processed by the KIPR Robot Controller to identify "blobs" matching the
+          | color specification for each color channel in a camera configuration. A blob is a set of contiguous pixels
+          | in the image matching the color specification for the channel.
+        p
+          | For each color channel in a selected configuration, the values to be used to identify which pixels in an image
+          | match the desired color for the channel are interactively selected from a color spectrum chart to provide
+          | a color specification for the channel. Live feed from the camera simplifies the process of determining how
+          | much of the spectrum is needed to produce blobs matching the color (e.g., a particular part of the spectrum
+          | might include all pixels that are "reddish" in color for a channel to be used for identifying red objects).
+          | The spectrum values for the channel are retained with the configuration until the configuration is deleted.
+          | See the KIPR Robot Controller Manual available from KIPR for information on setting up camera configurations
+          | on a KIPR Robot Controller controller.
+        p
+          | There are three camera image resolutions supported on the KIPR Robot Controller, 160×120 ( 
+          code LOW-RES
+          | ), 320×240 ( 
+          code MED-RES
+          | ), and 640×480 ( 
+          code HIGH-RES
+          | ). 
+          code LOW-RES
+          |  is sufficient for most purposes and requires
+          |  far less processing overhead. For 
+          code LOW-RES
+          |  the upper left corner for the image has coordinates
+          |  (0,0) and the lower right has coordinates (159,119). The camera image displayed on the KIPR Robot Controller
+          |  is slightly smaller than the actual image size.
+        p
+          // &lt;img class="center" src="images/Vision_Coordinates.gif" width="20%"&gt;&lt;/img&gt;
+        p
+          | KIPR Robot Controller Vision Library functions are used to select a configuration and obtain information
+          | about the color blobs being identified by its channels, such as bounding box coordinates and pixel
+          | density.
+        p
+          | In addition to channels for color tracking, a configuration can have channels for identifying QR (Quick
+          | Response) codes. A QR code is essentially a 2-dimensional bar code for compactly representing text
+          | data. KIPR Robot Controller Vision Library functions are provided for decoding any QR code in the
+          | image. See the QR code vision functions 
+          code get_object_data, get_object_data_length
+          |  below.
+        table
+          tbody
+            tr
+              td
+                a(name='camera_close')
+              td
+                code camera_close 
+                |  [Category: Vision]
+                dl
+                  dd
+                    | Format: 
+                    code void camera_close();
+                    br
+                    |  Cleanup the current camera instance. See also 
+                    code
+                      | camera_open, camera_open_at_res, camera_open_device
+                    | .
+            tr
+              td
+                a(name='camera_load_config')
+              td
+                code camera_load_config 
+                |  [Category: Vision]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | int camera_load_config(char name[]);
+                    br
+                    |  Loads a config file on the KIPR Robot Controller other than the default config
+                    |  file. You 
+                    b must
+                    |  append 
+                    code .config
+                    |  to the name for this function
+                    |  to locate it. Returns 1 on success, 0 on failure. See also 
+                    code
+                      | camera_open, camera_open_at_res, camera_open_device
+                    | .
+            tr
+              td
+                a(name='camera_open')
+              td
+                code camera_open 
+                |  [Category: Vision]
+                dl
+                  dd
+                    | Format: 
+                    code int camera_open();
+                    br
+                    |  Opens
+                    |  the KIPR Robot Controller's default channel configuration. The default configuration
+                    |  is selected from among the channel configurations defined on the KIPR Robot Controller
+                    |  using its 
+                    i settings..channels
+                    |  menu. A resolution of 
+                    code LOW_RES
+                    |  is used. Returns 1 on success, 0 on failure. See also 
+                    code
+                      | camera_open_at_res, camera_open_device, camera_close
+                    | .
+            tr
+              td
+                a(name='camera_open_at_res')
+              td
+                code camera_open_at_res 
+                |  [Category: Vision]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | int camera_open_at_res(int res_numb);
+                    br
+                    |  Opens the KIPR Robot Controller's default channel configuration. The default
+                    |  configuration is selected from among the channel configurations defined on the
+                    |  KIPR Robot Controller using its 
+                    i settings..channels
+                    |  menu. A resolution
+                    |  of one of 
+                    code LOW_RES
+                    | , 
+                    code MED_RES
+                    | , 
+                    code HIGH_RES
+                    |  needs
+                    |  to be specified. Returns 1 on success, 0 on failure. See also 
+                    code
+                      | camera_open, camera_open_device, camera_close
+                    | .
+            tr
+              td
+                a(name='camera_open_device')
+              td
+                code camera_open_device 
+                |  [Category: Vision]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | int camera_open_device(int number, int res_numb);
+                    br
+                    |  If more than 1 camera is plugged in, 0 is the first camera, 1 is the second camera,
+                    |  etc. Only 1 camera at a time can be used, and the default configuration is selected.
+                    |  A resolution of one of 
+                    code LOW_RES
+                    | , 
+                    code MED_RES
+                    | , 
+                    code HIGH_RES
+                    |  needs to be specified. Returns 1 on success, 0 on failure.
+                    |  See also 
+                    code
+                      | camera_open, camera_open_at_res, camera_close
+                    | .
+            tr
+              td
+                a(name='camera_update')
+              td
+                code camera_update 
+                |  [Category: Vision]
+                dl
+                  dd
+                    | Format: 
+                    code int camera_update();
+                    br
+                    |  Retrieves the current image from the camera for processing. Returns 1 on success,
+                    |  0 on failure.
+            tr
+              td
+                a(name='get_channel_count')
+              td
+                code get_channel_count 
+                |  [Category: Vision]
+                dl
+                  dd
+                    | Format: 
+                    code int get_channel_count();
+                    br
+                    |  Returns the number of channels in the current configuration. See also 
+                    code get_object_count
+                    | .
+            tr
+              td
+                a(name='get_camera_frame')
+              td
+                code get_camera_frame 
+                |  [Category: Vision]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | const unsigned char* get_camera_frame();
+                    br
+                    |  Returns a pointer to the camera frame. The pointer is valid until 
+                    code camera_update()
+                    |  is called again. Frame data is in BGR 888 pixel format, 3 bytes per pixel. It
+                    |  is stored as a 1-dimensional character array where each byte is the 8-bit (unsigned)
+                    |  integer value for each BGR color (blue-green-red). For the camera default resolution 
+                    code LOW_RES
+                    |  (160×120), the camera frame has length 3×160×120
+                    |  = 57,600 and has to be processed byte by byte. The following code illustrates
+                    |  processing the camera frame using the graphics function 
+                    code graphics_pixel
+                    |  to transfer it to a graphics window for display (see the 
+                    a(href='#Graphics') Graphics Library
+                    | ):
+                    dl
+                      dd
+                        code
+                          | int r,c,i;
+                          br
+                          | const unsigned char *img;
+                          br
+                          |             camera_update();
+                          br
+                          |             img=get_camera_frame();
+                          br
+                          | for(r=0;r&lt;120;r++) {
+                          br
+                          | for(c=0;c&lt;160;c++) {
+                          br
+                          |                 i=3*(160*r + c); // index of pixel to paint into row r, column c
+                          br
+                          |                 graphics_pixel(c,r,img[i+2],img[i+1],img[i]); // RGB order by reversing GBR
+                          br
+                          |             }
+                          br
+                          |             }
+                          br
+                          |             graphics_update();
+                          b
+            tr
+              td
+                a(name='get_object_area')
+              td
+                code get_object_area 
+                |  [Category: Vision]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | int get_object_area(int channel, int);
+                    br
+                    |  Returns the object's bounding box area. -1 is returned if the channel or object
+                    |  doesn't exist.
+            tr
+              td
+                a(name='get_object_bbox')
+              td
+                code get_object_bbox 
+                |  [Category: Vision]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | rectangle get_object_bbox(int channel, int object);
+                    br
+                    |  Returns the bounding box of the given object on the given channel as a rectangle
+                    |  data type. For example,
+                    br
+                    dl
+                      dd
+                        code
+                          | rectangle mybox;
+                          br
+                          |           mybox = get_object_bbox(0,2);
+                          br
+                          |           printf(&quot;x coord %d  y coord %d\n&quot;, mybox.x, mybox.y);
+                    |  displays the x and y coordinates of bounding box 2 for channel 0.
+            tr
+              td
+                a(name='get_object_center')
+              td
+                code get_object_center 
+                |  [Category: Vision]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | point2 get_object_center(int channel, int object);
+                    br
+                    |  Returns The (x, y) center of the given object on the given channel as a point2
+                    |  data type. For example,
+                    dl
+                      dd
+                        code
+                          | point2 mcenter;
+                          br
+                          |           mcenter = get_object_center(0,2);
+                          br
+                          |           printf(&quot;x center coord %d  y center coord %d\n&quot;, mcenter.x, mcenter.y);
+                        br
+                    |  displays the x and y coordinates of center point of box 2 for channel 0.
+            tr
+              td
+                a(name='get_object_centroid')
+              td
+                code get_object_centroid 
+                |  [Category: Vision]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | int get_object_centroid(int channel, int object);
+                    br
+                    |  Returns The (x, y) coordinates of the 
+                    b centroid
+                    |  of the given object on
+                    |  the given color channel as a point2 data type (the centroid is the center of
+                    |  mass for the pixels of the specified color). For example,
+                    br
+                    dl
+                      dd
+                        | point2 
+                        code
+                          | mcenter;
+                          br
+                          |           mcentroid = get_object_centroid(0,2);
+                          br
+                          |           printf(&quot;x centroid coord %d  y centroid coord %d\n&quot;, mcentroid.x, mcentroid.y);
+                    |  displays the x and y coordinates of centroid of box 2 for color channel 0. The centroid is NOT the same as the center. It
+                    |  is the center of mass for a blob; e.g., for a color arrow pointing right, there
+                    |  are more pixels to right of center, so the centroid is to the right of center.
+            tr
+              td
+                a(name='get_code_num')
+              td
+                code get_code_num 
+                |  [Category: Vision]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | int get_code_num(int channel, int object);
+                    br
+                    |  Returns the QR data associated with an object for a QR channel as an integer.
+                    |  If the given channel or object doesn't exist, -1 is returned. See also 
+                    code get_object_data
+                    | .
+            tr
+              td
+                a(name='get_object_confidence')
+              td
+                code get_object_confidence 
+                |  [Category: Vision]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | double get_object_confidence(int channel, int object);
+                    br
+                    |  Returns the confidence, between 0.0 and 1.0, that the density of color pixels
+                    |  for the object on the given channel is significant. If the channel or object
+                    |  doesn't exist, 0.0 is returned.
+            tr
+              td
+                a(name='get_object_count')
+              td
+                code get_object_count 
+                |  [Category: Vision]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | int get_object_count(int channel);
+                    br
+                    |  Returns the number of objects being "seen" for the specified channel. Objects
+                    |  are sorted by bounding box area, largest first. Returns -1 if channel doesn't
+                    |  exist. See also 
+                    code get_channel_count
+                    | .
+            tr
+              td
+                a(name='get_object_data')
+              td
+                code get_object_data 
+                |  [Category: Vision]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | char *get_object_data(int channel, int object);
+                    br
+                    |  Returns the sequence of character data associated with a given object on a QR
+                    |  channel. If there is no data, 0 is returned. The data is not guaranteed to be
+                    |  null terminated, but can be accessed using array notation; for example,
+                    br
+                    dl
+                      dd
+                        code get_object_data(0,0)[0], get_object_data(0,0)[1]
+                        | , etc.
+                    code camera_update
+                    |  will invalidate the pointer returned by 
+                    code get_object_data
+                    | .
+                    |  See also 
+                    code get_object_data_length
+                    | .
+            tr
+              td
+                a(name='get_object_data_length')
+              td
+                code get_object_data_length 
+                |  [Category: Vision]
+                dl
+                  dd
+                    | Format: 
+                    code
+                      | int get_object_data_length(int channel, int object);
+                    br
+                    |  Returns the number of characters associated with the QR code on a QR channel.
+                    |  If there is no data, 0 is returned. If the channel or object is invalid, 0 is
+                    |  returned. See also 
+                    code get_object_data
+                    | .
+        .Indent
+          h4 Example program for using a camera to track an object
+          p
+            | Camera functions will not provide meaningful data until the camera has been activated using 
+            code camera_open
+            |  or 
+            code camera_open_at_res
+            | . For most purposes, the 
+            code LOW_RES
+            |  setting used
+            |  by 
+            code camera_open
+            |  is sufficient and it serves to reduce frame processing overhead.
+            |  Once the camera has been activated, the camera function 
+            code camera_update
+            |  is used to
+            |  obtain the current frame in the camera's field of view. Note that 
+            code camera_update
+            |  is called every time through a camera processing loop to provide a current camera frame for processing.
+          a(name='PointServo')
+          pre
+            code.language-clike
+              | /* This program points a servo (that is plugged into port 0 and centered on the camera&apos;s field of vision) towards an object that fits into the color model defined for channel 0 */ 
+              | int main()
+              | {
+              |    int offset, x, y;
+              |    enable_servo(0);      // enable servo
+              |    camera_open();        // activate camera
+              |    camera_update();      // get most recent camera image and process it
+              |    while (side_button() == 0) {
+              |       x = get_object_center(0,0).x;  // get image center x data
+              |       y = get_object_center(0,0).y;  //    and y data
+              |       if (get_object_count(0) &gt; 0) { // there is a blob
+              |          display_printf(0,1,&quot;Center of largest blob: (%d,%d)   &quot;,x,y);
+              |          offset=5*(x-80); // amount to deviate servo from center
+              |          set_servo_position(0,1024+offset);
+              |       }
+              |       else {
+              |          display_printf(0,1,&quot;No object in sight                &quot;);
+              |       ]
+              |       msleep(200);       // don&apos;t rush print statement update
+              |       camera_update();   // get new image data before repeating
+              |    }
+              |    disable_servos();
+              |    camera_close();
+              |    printf(&quot;All done\n&quot;);
+              | }
+        .Indent
+          h4
+            | Example program to translate a QR code while showing the camera image in a graphics window
+          p
+            | This program displays the camera image in a 160×120 graphics window centered on the 320×240
+            | KIPR Robot Controller display, decoding any QR code found and displaying the result in the space
+            | above the graphics window.
+          a(name='TranslateQR')
+          pre
+            code.language-clike
+              | // Assume channel 1 is configured for identifying QR codes
+              | // If a QR code is found, it is translated
+              | int main()
+              | {
+              |     int r, c, ix, i, lngth;
+              |     const unsigned char *img; // variable to hold camera image
+              |     camera_open(); graphics_open(160,120); // activate camera and open a graphics window
+              |     camera_update(); // get most recent camera image and process it
+              |     while(side_button()==0) {
+              |         img=get_camera_frame(); // get a camera frame and display it in graphics window
+              |         for(r=0; r&lt;120; r++) {
+              |              for(c=0; c&lt;160; c++) {
+              |                  ix=3*(160*r + c); // index of pixel to paint into row r, column c
+              |                  graphics_pixel(c,r,img[ix+2],img[ix+1],img[ix]); // RGB order by reversing GBR
+              |              }
+              |         }
+              |         graphics_update(); // show the frame
+              |         if (get_object_count(1) &gt; 0) { // there is a QR code in view
+              |             display_printf(0,0,&quot;QR code:                              &quot;);
+              |             lngth = get_object_data_length(1,0); // decode and display above graphics window
+              |             for(i=0; i &lt; lngth; i++) { // print QR code letter by letter until end of data
+              |                 display_printf(9+i,0,&quot;%c&quot;, get_object_data(1,0)[i]);
+              |             }
+              |         }
+              |         else {
+              |             display_printf(0,0,&quot;No QR code detected                   &quot;);
+              |         }
+              |         camera_update(); // get new image data before repeating 
+              |     }
+              |     camera_close(); graphics_close(); // clean up
+              | }
+        // START FOOTER
+

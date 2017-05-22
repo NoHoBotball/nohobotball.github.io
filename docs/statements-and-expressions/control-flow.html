@@ -1,0 +1,541 @@
+
+<html>
+  <head>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link href="/css/base.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/materialize.min.css" media="screen,projection" rel="stylesheet" type="text/css"/>
+    <link href="/css/docs.css" rel="stylesheet" type="text/css"/>
+    <link href="../imgs/logos/botguy.png" rel="icon"/>
+    <title>Botball Documentation - Tutorial</title>
+    <meta content="#00796b" name="theme-color"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  </head>
+  <body>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="/js/materialize.min.js" type="text/javascript"></script>
+    <script>
+      $(document).ready(function () {
+      $('.button-collapse').sideNav({
+      draggable: true
+      });
+      $(".active").parent().parent().siblings()[0].click() })
+    </script>
+    <header>
+      <ul class="side-nav fixed" id="slide-out">
+        <li class="red lighten-1" style="height: 130px;">
+          <div class="userView">
+            <h5 class="white-text"><a class="white-text" href="/docs/index.html">Index</a></h5>
+          </div>
+        </li>
+        <li><a href="/docs/tutorial.html">Tutorial</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Data Objects</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/data-objects/index.html">Introduction</a></li>
+                  <li><a href="/docs/data-objects/variables.html">Variables</a></li>
+                  <li><a href="/docs/data-objects/constants.html">Constants</a></li>
+                  <li><a href="/docs/data-objects/data-types.html">Data Types</a></li>
+                  <li><a href="/docs/data-objects/arrays.html">Arrays</a></li>
+                  <li><a href="/docs/data-objects/structures.html">Structures</a></li>
+                  <li><a href="/docs/data-objects/initialization-examples.html">Initialization Examples</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Statements and Expressions</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/statements-and-expressions/index.html">Introduction</a></li>
+                  <li><a href="/docs/statements-and-expressions/operators.html">Operators</a></li>
+                  <li class="active"><a href="/docs/statements-and-expressions/control-flow.html">Control Flow</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/docs/tutorial.html">Style</a></li>
+        <li><a href="/docs/tutorial.html">Debugging</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Printing</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/printing/index.html">Introduction</a></li>
+                  <li><a href="/docs/printing/examples.html">Examples</a></li>
+                  <li><a href="/docs/printing/printf-codes.html">printf Codes</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Preprocessor</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/preprocessor/index.html">Introduction</a></li>
+                  <li><a href="/docs/preprocessor/directives.html">Directives</a></li>
+                  <li><a href="/docs/preprocessor/include.html">Include</a></li>
+                  <li><a href="/docs/preprocessor/macros.html">Macros</a></li>
+                  <li><a href="/docs/preprocessor/conditional-compilation.html">Conditional Compilation</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/docs/lib/math.html">Math Library</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>KIPR Wallaby/Link</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/lib/kipr/common-functions.html">Common Functions</a></li>
+                  <li><a href="/docs/lib/kipr/functions.html">Functions List</a></li>
+                  <li><a href="/docs/lib/kipr/camera.html">Camera Functions</a></li>
+                  <li><a href="/docs/lib/kipr/graphics.html">Graphics Functions</a></li>
+                  <li><a href="/docs/lib/kipr/depth.html">Depth Sensor Functions</a></li>
+                  <li><a href="/docs/lib/kipr/usb.html">File I/O Functions</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>iRobot Create</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/lib/kipr/create/index.html">Introduction</a></li>
+                  <li><a href="/docs/lib/kipr/create/serial.html">Serial Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/configuration.html">Configuration Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/movement.html">Movement Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/sensors.html">Sensor Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/battery.html">Battery Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/built-ins.html">Built-In Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/music-leds.html">LED and Music Functions</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/docs/lib/kipr/botball.html">Botball Functions</a></li>
+        <li><a href="/docs/lib/kipr/threads.html">Threads</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Motors and Sensors</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/lib/kipr/info/digital-analog-sensors.html">Analog and Digital Sensors</a></li>
+                  <li><a href="/docs/lib/kipr/info/usb-sensors.html">USB Sensors</a></li>
+                  <li><a href="/docs/lib/kipr/info/motors-servos.html">Motors and Servos</a></li>
+                  <li><a href="/docs/lib/kipr/info/simulator.html">Simulator</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/docs/full.html">Full Documentation</a></li>
+      </ul>
+      <nav class="nav-extended red lighten-2">
+        <div class="nav-wrapper">
+          <div class="col s12"><a class="button-collapse" data-activates="slide-out" href="#" style="font-size: 50px;"><i class="material-icons">menu</i></a><a class="brand-logo waves-effect" id="top" href="/docs/index.html">Botball Documentation</a></div>
+        </div>
+        <div class="nav-wrapper">
+          <div class="col s12"><a class="breadcrumb" href="/docs/statements-and-expressions/index.html">Statements and Expressions</a><a class="breadcrumb" href="#!">Control Flow</a></div>
+        </div>
+      </nav>
+    </header>
+    <main class="row">
+      <div class="container col s12">
+        <!-- END HEADER-->
+        <!-- Control_Flow--><a name="Control_Flow"></a>
+        <h3>Control Flow</h3>
+        <p>
+          The order in which a computer executes machine-level operations stored in memory is normally sequential, with
+          the exception of those operations which redirect the flow of executrion to continue elsewhere in computer
+          memory. This capability is reflected in C programs by control flow statements which serve to redirect the
+          sequential step by step flow the program would follow otherwise. There are two classes of control flow commands,<i>selection</i> and <i>iteration</i>
+          . Selection commands use a condition test to determine what statement
+           or block of statements to execute next ( <code>if-else</code>
+          ,
+           switch, and the ternary operator <code>?:</code>
+          ). Iteration commands use a condition test to determine
+           how many times to repeat the execution of a statement or block of statements (
+           while,
+           for, <code>do-while</code>
+          ). C also
+           provides means for exiting a control flow program structure independent of the condition test (
+           break) and to skip the rest of a block, continuing to the next iteration (
+           continue).
+        </p>
+        <div class="Indent">
+          <!-- Statements_and_Blocks--><a name="Statements_and_Blocks"></a>
+          <h4>Statements and Blocks</h4>
+          <p>
+            Each C statement is terminated by a semicolon. A program block is a sequence of statements grouped together
+            inside curly braces. Variables may be defined inside a block and are local to the block (their scope
+            does not extend outside of the block). The object for a control flow statement may be a single statement
+            or a block of statements, except for <code>?:</code>
+            , which as an operator applies to expressions rather
+             than statements.
+          </p>
+          <!-- If-Else--><a name="If-Else"></a>
+          <h4>If-Else</h4>
+          <p>
+            The
+            if statement is a selection statement for making yes/no and either/or decisions, For an either/or
+            decision, the
+            if statement is paired with an
+            else statement (which can only be used in a pairing with
+            if).
+          </p>
+          <p>
+            The syntax for
+            if is
+          </p>
+          <pre><code class="language-clike">if (&lt;<i>expression</i>&gt;)
+    &lt;<i>statement or block</i>&gt;</code></pre>
+          <p>
+            When paired with
+            else the syntax is
+          </p>
+          <pre><code class="language-clike">if (&lt;<i>expression</i>&gt;)
+    &lt;<i>statement or block</i>&gt;
+else
+    &lt;<i>statement or block</i>&gt;</code></pre>
+          <p>When the <code>&lt;</code><i>expression</i><code>&gt;</code>
+             evaluates as TRUE (i.e., is not
+             equal to zero), then the <code>&lt;</code><i>statement or block</i><code>&gt;</code>
+             that follows
+             if is executed.
+          </p>
+          <p>When the <code>&lt;</code><i>expression</i><code>&gt;</code>
+             evaluates as FALSE (i.e., is equal to
+             0), then the <code>&lt;</code><i>statement or block</i><code>&gt;</code>
+             that follows
+             if is not executed and if there is an
+             else paired with
+             if, then the <code>&lt;</code><i>statement or block</i><code>&gt;</code>
+            ; that follows
+             else is executed.
+          </p>
+          <p>
+            In effect, these constructions use syntax that corresponds to how similar logic is expressed in English,
+            such as
+          </p>
+          <ul>
+            <li>"If the fever is over 100F then schedule a doctor's appointment" (yes/no or do/don't do)</li>
+            <li>"If the manuscript is acceptable then pay for it, otherwise return it to the author" (either/or)</li>
+          </ul><a name="TernaryOperator"></a>
+          <h4>Ternary Operator <code>?:</code></h4>
+          <p>The ternary operator <code>?:</code>
+             provides a compact means for expressing if-else logic where
+             assignment statements are employed as the if-else actions. For example, the following <code>if-else</code>
+             construction
+             assigns the larger of variables <code>x</code> and <code>y</code> to variable <code>z</code>:
+          </p>
+          <pre><code class="language-clike">if (x &gt; y)
+    z = x;
+else
+    z = y;</code></pre>
+          <p>This same construction can be implemented by using the ternary operator <code>?:</code></p>
+          <p></p>
+          <div class="Indent"><code>z = (x &gt; y) ? x : y;</code></div>
+          <p>The ternary expression is formed from a condition test ( <code>x &lt; y</code>
+            ) followed by a
+             question mark ( <code>?</code>), then the expression ( <code>x</code>) to assign to <code>z</code> if the condition evaluates as TRUE, separated by a colon ( <code>:</code>
+            ) and then the expression
+             ( <code>y</code>) to assign to <code>z</code>
+             if the condition evaluates as FALSE. Strictly
+             speaking, given the low precedence level of the operator, the parentheses around the condition
+             could be omitted, but are advisable to facilitate identifying the operator's three operands.
+          </p>
+          <p>
+            ANSI C requires that only the expression whose value is to be assigned to z be evaluated, just
+            as in the <code>if-else</code> equivalent. The ternary operator is frequently used for obtaining absolute value; e.g.,
+          </p>
+          <p></p>
+          <div class="Indent"><code>absx = (x &lt; 0) ? -x : x;</code></div>
+          <!-- While--><a name="While"></a>
+          <h4>While</h4>
+          <p>
+            The
+            while statement in C is the iteration statement most commonly used for managing program
+            loops. A <i>loop</i>
+             is a sequence of program logic that is repeated multiple times (0 or
+             more); for example,, a loop might be used to print out the elapsed time second by second
+             while waiting for a button to be pressed.
+          </p>
+          <p>
+            The syntax for a
+            while statement loop is
+          </p>
+          <pre><code class="language-clike">while (&lt;<i>expression</i>&gt;)
+    &lt;<i>statement or block</i>&gt;</code></pre>
+          <p>When the <code>&lt;</code><i>expression</i><code>&gt;</code>
+             evaluates as TRUE (i.e., is not
+             equal to zero), then the <code>&lt;</code><i>statement or block</i><code>&gt;</code>
+             that
+             follows
+             while is executed, after which the process repeats, starting with evaluation of the <code>&lt;</code><i>expression</i><code>&gt;</code> again.
+          </p>
+          <p>When the <code>&lt;</code><i>expression</i><code>&gt;</code>
+             evaluates as FALSE (i.e., is equal
+             to 0), then the <code>&lt;</code><i>statement or block</i><code>&gt;</code>
+             that follows
+             while is not executed and the program moves on to the statement following the <code>&lt;</code><i>statement or block</i><code>&gt;</code>
+             for the
+             while.
+          </p>
+          <p>Note that the loop continues until something happens that causes the <code>&lt;</code><i>expression</i><code>&gt;</code>
+             to evaluate as FALSE (e.g., a button is pressed or a counting variable has exceeded its limit).
+             It is up to the programmer to ensure that within the body of the loop (or otherwise) the
+             condition will eventually be FALSE (otherwise the loop will continue until the program is
+             halted by external intervention).
+          </p>
+          <p>A loop that doesn't terminate is termed an <i>infinite loop</i>
+            . An infinite loop is one that
+             will continue its iteration until the program is halted. An <i>indefinite loop</i>
+             is one
+             whose iteration will continue until some external action occurs (such as a button press).
+             It is easy to create an infinite loop using
+             while. For example,
+          </p>
+          <div class="Indent"><code>while(1);</code></div>
+          <p>forms an infinite loop because the <code>&lt;</code><i>expression</i><code>&gt;</code>
+             for
+             the
+             while is 1 which is always TRUE, and the <code>&lt;</code><i>statement or block</i><code>&gt;</code> is empty ( <code>;</code>
+            ), providing no means other than a forced program halt to end
+             the ongoing loop iteration (which is repeatedly doing nothing).
+          </p>
+          <p>
+            A common error to avoid when programming a
+            while statement loop is exemplified by the following:
+          </p>
+          <pre><code class="language-clike">while (i &lt; 10); // misplaced semi-colon
+    x[i++] = i;</code></pre>
+          <p>
+            In this case, the misplaced semi-colon for the
+            while has made its <code>&lt;</code><i>statement or block</i><code>&gt;</code> component empty. Assuming <code>i</code>
+             is less than 10 when the loop starts, this
+             semantic error makes the loop infinite and the program will "hang" at this point,
+             requiring a forced halt to end it. For ideas on how to locate this kind of semantic
+             error for a program, see the section below on <a href="KIPRWallabyManualBody.htm#Program_Debugging" target="ManualFrame">program debugging</a>.
+          </p>
+          <!-- Break--><a name="Break"></a>
+          <h4>Break</h4>
+          <p>
+            The
+            break statement in C provides a means for a program to break out of executing
+            statements within a loop structure or a multi-way selection to proceed with execution
+            of the program statements that come next. A condition test for
+            break is sometimes used within what would otherwise be an infinite loop to
+            break out of it. The
+            break statement applies to
+            while,
+            for, <code>do-while</code>
+            ,
+             and
+             switch.
+          </p>
+          <p>For example,</p>
+          <pre>int i; // counter will need some initial value
+while (i &lt; 100) { // has the counter reached its limit?
+printf("cnt = %d\n", i++); // show the counter and increment it
+if (side_button() != 0) break; // exit if the side_button is pressed
+msleep(1000); // pause for one second
+}</pre>
+          <p>
+            uses a
+            break to exit the
+            while loop.
+          </p>
+          <!-- Continue--><a name="Continue"></a>
+          <h4>Continue</h4>
+          <p>
+            The
+            continue statement in C provides a means for a program in a
+            while,
+            for, or <code>do-while</code>
+             loop to skip the balance of the current iteration, continuing to the next iteration
+             if the loop condition test doesn't end the loop.
+          </p>
+          <p>For example,</p>
+          <pre>int i; // counter will need some initial value
+while (i &lt; 100) { // has the counter reached its limit?
+if (i &lt;= 0) { // don't start cnt until i reaches 1
+i+=1;
+continue;
+}
+printf("cnt = %d\n", i++); // show the counter and increment it
+if (side_button() != 0) break; // exit if the side_button is pressed
+msleep(1000); // pause for one second
+}</pre>
+          <!-- Return--><a name="Return"></a>
+          <h4>Return</h4>
+          <p></p>
+          <p>
+            The
+            return statement in C both ends a function and provides a means for the
+            function to return a value to the calling function. A function also ends once
+            its terminating brace is reached or if a
+            return statement having no return value is executed. The calling function
+            can ignore a returned value in any case.
+          </p>
+          <!-- For--><a name="For"></a>
+          <h4>For</h4>
+          <p>
+            The
+            for statement in C is normally used for managing loops that employ an
+            iteration counter. A
+            while statement loop could also be used for this purpose, but in many
+            cases the program logic is clearer if a
+            for statement is employed to control the loop.
+          </p>
+          <p>
+            The syntax for a
+            for statement loop is
+          </p>
+          <pre><code class="language-clike">for (&lt;<i>expr-1</i>&gt;;&lt;<i>expr-2</i>&gt;;&lt;
+              <fi>expr-3&gt;)
+    &lt;<i>statement or block</i>&gt;
+              </fi></code></pre>
+          <p>
+            The behavior of the
+            for statement loop is equivalent to that of the following
+            while statement loop:
+          </p>
+          <pre><code class="language-clike">&lt;<i>expr-1</i>&gt;; // initialize the counter (prime the pump)
+while (&lt;<i>expr-2</i>&gt;) { // has the counter reached its limit? (have we pumped enough in?)
+    &lt;<i>statement or block</i>&gt;
+    &lt;<i>expr-3</i>&gt;; // increment the counter (pump some more in)
+}</code></pre>
+          <p>
+            For example, the following code counts assigns values from 0 to 99 to an integer
+            array
+          </p>
+          <pre><code class="language-clike">int i, arr[100];
+for (i = 0; i &lt; 100; i++)
+    arr[i] = i;</code></pre>
+          <!-- Switch--><a name="Switch"></a>
+          <h4>Switch-Case</h4>
+          <p>
+            The
+            switch selection statement for C is used to select one of a series
+            of
+            case targets. The
+            case targets for a
+            switch statement are grouped together inside curly braces as a program
+            block. Each
+            case target is followed by a series of C statements which represent
+            that case. The
+            switch selection in effect skips past cases until it reaches the one
+            selected, and program execution continues from there. If a
+            break statement is in the statements following a
+            case target, then the program exits the
+            switch statement's block at that point, in effect skipping any remaining
+            cases.
+          </p>
+          <p>
+            if else selection is used to select one of two cases.
+            switch selection is used to select 0 or more cases.
+          </p>
+          <p>
+            The syntax for a
+            switch statement is as follows:
+          </p>
+          <pre><code class="language-clike">switch (&lt;<i>expression</i>&gt;) { // switch to the case target whose &lt;<i>constant</i>&gt; matches the value of the &lt;<i>expression</i>&gt; 
+case &lt;<i>constant</i>&gt;:
+    &lt;<i>0 or more C statements</i>&gt;
+    break; // optional - otherwise, program execution continues with the next case 
+&lt;<i>additional case targets</i>&gt;
+default: // optional target used when selection didn&apos;t match any case target 
+    &lt;<i>0 or more C statements</i>&gt;
+    break; // optional - otherwise, program execution continues with the next case 
+}</code></pre>
+          <p>
+            The first
+            case target whose <code>&lt;</code><i>constant</i><code>&gt;</code>
+             matches the value of the
+             expression for the
+             switch statement is the one selected. Program execution continues
+             from the selected
+             case target until either a
+             break statement is encountered, or the end of the
+             switch program block is reached. If there is no
+             case match, then the
+             default target is selected. Absent a
+             default target and a
+             case match, the
+             switch program block is skipped. Putting in a
+             default case with a
+             break statement is considered to be good form, and recognizes
+             the likelihood of more cases being added under program maintenance.
+          </p>
+          <p>
+            Normally, each
+            case is ended with a
+            break statement since the primary purpose of the
+            switch statement is to make the choice of one of several possible
+            cases to execute; for example,
+          </p>
+          <pre><code class="language-clike">char answer[81];
+switch(answer[0])
+{
+    case &apos;y&apos;:
+        printf(&quot;answer was yes\n&quot;);
+        break;
+    case &apos;n&apos;:
+        printf(&quot;answer was no\n&quot;);
+        break;
+    default:
+        printf(&quot;answer was not understood\n&quot;);
+}</code></pre>
+          <p>If user input "yes sir" is captured in the character string <code>answer</code>
+            ,
+             then the text "answer was yes" will be printed to the screen. If if was
+             "no sir", then the "answer was no" would have been printed, and if it
+             was "No sir", the text "answer was not understood" would have been printed
+             (since C is case sensitive, 'n' ≠ 'N').
+            <!-- Do-While--><a name="Do-While"></a>
+          </p>
+          <h4>Do-While</h4>
+          <p>
+            The
+            do-while statement in C is less commonly used for controlling
+            loop iteration than the
+            while and
+            for statements.
+          </p>
+          <p>
+            The syntax of a
+            do-
+            while statement is as follows:
+          </p>
+          <pre><code class="language-clike">do
+    &lt;<i>statement or block</i>&gt;
+while (&lt;<i>expression</i>&gt;);</code></pre>
+          <p>
+            In contrast to the
+            while and
+            for statements, the body of the loop for a
+            do-while statement will be executed at least once since the <code>&lt;</code><i>expression</i><code>&gt;</code>
+             controlling loop
+             iteration is evaluated at the end of the loop rather than at its
+             beginning. Sometimes program logic for a loop is best expressed by
+             having the condition test occur at the bottom of the loop. For example,
+          </p>
+          <pre><code class="language-clike">do
+    printf(&quot;.&quot;);
+while (seconds() &lt; 5);</code></pre>
+          <p>
+            The logic insures that "." will be printed at least once (so something
+            will always be printed), in contrast to
+          </p>
+          <pre><code class="language-clike">while (seconds() &lt; 5)
+    printf(&quot;.&quot;);</code></pre>
+          <p>for which nothing will be printed if the value returned by the function <code>seconds</code> already exceeds 5.</p>
+        </div>
+        <!-- START FOOTER-->
+      </div>
+    </main>
+  </body>
+</html>

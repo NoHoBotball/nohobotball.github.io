@@ -1,0 +1,530 @@
+
+<html>
+  <head>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link href="/css/base.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/materialize.min.css" media="screen,projection" rel="stylesheet" type="text/css"/>
+    <link href="/css/docs.css" rel="stylesheet" type="text/css"/>
+    <link href="../imgs/logos/botguy.png" rel="icon"/>
+    <title>Botball Documentation - Tutorial</title>
+    <meta content="#00796b" name="theme-color"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  </head>
+  <body>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="/js/materialize.min.js" type="text/javascript"></script>
+    <script>
+      $(document).ready(function () {
+      $('.button-collapse').sideNav({
+      draggable: true
+      });
+      $(".active").parent().parent().siblings()[0].click() })
+    </script>
+    <header>
+      <ul class="side-nav fixed" id="slide-out">
+        <li class="red lighten-1" style="height: 130px;">
+          <div class="userView">
+            <h5 class="white-text"><a class="white-text" href="/docs/index.html">Index</a></h5>
+          </div>
+        </li>
+        <li><a href="/docs/tutorial.html">Tutorial</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Data Objects</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/data-objects/index.html">Introduction</a></li>
+                  <li><a href="/docs/data-objects/variables.html">Variables</a></li>
+                  <li><a href="/docs/data-objects/constants.html">Constants</a></li>
+                  <li><a href="/docs/data-objects/data-types.html">Data Types</a></li>
+                  <li><a href="/docs/data-objects/arrays.html">Arrays</a></li>
+                  <li><a href="/docs/data-objects/structures.html">Structures</a></li>
+                  <li><a href="/docs/data-objects/initialization-examples.html">Initialization Examples</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Statements and Expressions</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/statements-and-expressions/index.html">Introduction</a></li>
+                  <li><a href="/docs/statements-and-expressions/operators.html">Operators</a></li>
+                  <li><a href="/docs/statements-and-expressions/control-flow.html">Control Flow</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/docs/tutorial.html">Style</a></li>
+        <li><a href="/docs/tutorial.html">Debugging</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Printing</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/printing/index.html">Introduction</a></li>
+                  <li><a href="/docs/printing/examples.html">Examples</a></li>
+                  <li><a href="/docs/printing/printf-codes.html">printf Codes</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Preprocessor</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/preprocessor/index.html">Introduction</a></li>
+                  <li><a href="/docs/preprocessor/directives.html">Directives</a></li>
+                  <li><a href="/docs/preprocessor/include.html">Include</a></li>
+                  <li><a href="/docs/preprocessor/macros.html">Macros</a></li>
+                  <li><a href="/docs/preprocessor/conditional-compilation.html">Conditional Compilation</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/docs/lib/math.html">Math Library</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>KIPR Wallaby/Link</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/lib/kipr/common-functions.html">Common Functions</a></li>
+                  <li><a href="/docs/lib/kipr/functions.html">Functions List</a></li>
+                  <li><a href="/docs/lib/kipr/camera.html">Camera Functions</a></li>
+                  <li><a href="/docs/lib/kipr/graphics.html">Graphics Functions</a></li>
+                  <li><a href="/docs/lib/kipr/depth.html">Depth Sensor Functions</a></li>
+                  <li><a href="/docs/lib/kipr/usb.html">File I/O Functions</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>iRobot Create</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/lib/kipr/create/index.html">Introduction</a></li>
+                  <li><a href="/docs/lib/kipr/create/serial.html">Serial Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/configuration.html">Configuration Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/movement.html">Movement Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/sensors.html">Sensor Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/battery.html">Battery Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/built-ins.html">Built-In Functions</a></li>
+                  <li><a href="/docs/lib/kipr/create/music-leds.html">LED and Music Functions</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/docs/lib/kipr/botball.html">Botball Functions</a></li>
+        <li><a href="/docs/lib/kipr/threads.html">Threads</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Motors and Sensors</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/lib/kipr/info/digital-analog-sensors.html">Analog and Digital Sensors</a></li>
+                  <li><a href="/docs/lib/kipr/info/usb-sensors.html">USB Sensors</a></li>
+                  <li><a href="/docs/lib/kipr/info/motors-servos.html">Motors and Servos</a></li>
+                  <li><a href="/docs/lib/kipr/info/simulator.html">Simulator</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/docs/full.html">Full Documentation</a></li>
+      </ul>
+      <nav class="nav-extended red lighten-2">
+        <div class="nav-wrapper">
+          <div class="col s12"><a class="button-collapse" data-activates="slide-out" href="#" style="font-size: 50px;"><i class="material-icons">menu</i></a><a class="brand-logo waves-effect" id="top" href="/docs/index.html">Botball Documentation</a></div>
+        </div>
+        <div class="nav-wrapper">
+          <div class="col s12"><a class="breadcrumb" href="#!">Index</a></div>
+        </div>
+      </nav>
+    </header>
+    <main class="row">
+      <div class="container col s12">
+        <!-- END HEADER-->
+        <!-- Functions Categorized--><a name="FunctionsCategorized"></a>
+        <h3>Categorized Function List (cross-linked)</h3> Each function listed is provided with a cross link to its library description.
+        <div class="indent"><a name="CategoryBotball"></a>
+          <h4>Botball</h4><code>
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <ul>
+                      <li>void run_for(double delay, &lt;<em>function_name</em>&gt;);  [<a href="#run_for">§</a>]</li>
+                      <li>void shut_down_in(double delay);  [<a href="#Botball">§</a>]</li>	  &lt;li&gt;&lt;font class="CVariable"&gt;int&lt;/font&gt; target_cha_in_chb(&lt;font class="CVariable"&gt;int&lt;/font&gt; cha, &lt;font class="CVariable"&gt;int&lt;/font&gt; chb, &lt;font class="CVariable"&gt;int&lt;/font&gt; *x, &lt;font class="CVariable"&gt;int&lt;/font&gt; *y)&lt;/li&gt;
+                      <li>void wait_for_light(int light_port_);  [<a href="#Botball">§</a>]</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table></code><a name="CategoryCreate"></a>
+          <h4>Create</h4>
+          <table>
+            <tbody>
+              <tr>
+                <td alignment="top">
+                  <ul><b>Serial Interface</b><code>
+                      <li>void create_clear_serial_buffer(); [<a href="#create_clear_serial_buffer">§</a>]</li>
+                      <li>int create_connect(); [<a href="#create_connect">§</a>]</li>
+                      <li>void  create_disconnect(); [<a href="#create_disconnect">§</a>]</li>
+                      <li>
+                        int create_read_block(
+                                                                          char *data,
+                                                                          int count); [<a href="#create_read_block">§</a>]
+                      </li>
+                      <li>
+                        void create_write_byte(
+                                                                          char byte); [<a href="#create_write_byte">§</a>]
+                      </li>
+                      <li>void  create_full(); [<a href="#create_full">§</a>]</li>
+                      <li>void  create_start(); [<a href="#create_start">§</a>]</li>
+                      <li>void  create_passive(); [<a href="#create_passive">§</a>]</li>
+                      <li>void create_safe(); [<a href="#create_safe">§</a>]</li>
+                      <li>int get_create_mode(); [<a href="#get_create_mode">§</a>]</li></code><b>Movement</b><code>
+                      <li>
+                        void create_drive(
+                                                                          int speed,
+                                                                          int radius); [<a href="#create_drive">§</a>]
+                      </li>
+                      <li>
+                        void create_drive_direct(
+                                                                          int r_speed,
+                                                                          int l_speed); [<a href="#create_drive_direct">§</a>]
+                      </li>
+                      <li>
+                        void create_drive_straight(
+                                                                          int speed); [<a href="#create_drive_straight">§</a>]
+                      </li>
+                      <li>
+                        void create_spin_CCW(
+                                                                          int speed); [<a href="#create_spin_CCW">§</a>]
+                      </li>
+                      <li>
+                        void create_spin_CW(
+                                                                          int speed); [<a href="#create_spin_CW">§</a>]
+                      </li>
+                      <li>void create_stop(); [<a href="#create_stop">§</a>]</li>
+                      <li>int get_create_distance(); [<a href="#get_create_distance">§</a>]</li>
+                      <li>int get_create_normalized_angle(); [<a href="#get_create_normalized_angle">§</a>]</li>
+                      <li>int get_create_overcurrents(); [<a href="#get_create_overcurrents">§</a>]</li>
+                      <li>int get_create_requested_left_velocity(); [<a href="#get_create_requested_left_velocity">§</a>]</li>
+                      <li>int get_create_requested_radius(); [<a href="#get_create_requested_radius">§</a>]</li>
+                      <li>int get_create_requested_right_velocity(); [<a href="#get_create_requested_right_velocity">§</a>]</li>
+                      <li>int get_create_requested_velocity(); [<a href="#get_create_requested_velocity">§</a>]</li>
+                      <li>int get_create_total_angle(); [<a href="#get_create_total_angle">§</a>]</li>
+                      <li>
+                        void set_create_distance(
+                                                                          int dist); [<a href="#set_create_distance">§</a>]
+                      </li>
+                      <li>
+                        void set_create_normalized_angle(
+                                                                          int angle); [<a href="#set_create_normalized_angle">§</a>]
+                      </li>
+                      <li>
+                        void set_create_total_angle(
+                                                                          int angle); [<a href="#set_create_total_angle">§</a>]
+                      </li></code><b>Battery</b><code>
+                      <li>int get_create_battery_capacity(); [<a href="#get_create_battery_capacity">§</a>]</li>
+                      <li>int get_create_battery_charge(); [<a href="#get_create_battery_charge">§</a>]</li>
+                      <li>int get_create_charging_state(); [<a href="#get_create_charging_state">§</a>]</li>
+                      <li>int get_create_battery_current(); [<a href="#get_create_battery_current">§</a>]</li>
+                      <li>int get_create_battery_temp(); [<a href="#get_create_battery_temp">§</a>]</li>
+                      <li>int get_create_battery_voltage(); [<a href="#get_create_battery_voltage">§</a>]</li></code></ul>
+                </td>
+                <td>
+                  <ul><code></code><b>Sensors</b><code>
+                      <li>int get_create_advance_button(); [<a href="#get_create_advance_button">§</a>]</li>
+                      <li>int get_create_bay_DI(); [<a href="#get_create_bay_DI">§</a>]</li>
+                      <li>int get_create_bay_AI(); [<a href="#get_create_bay_AI">§</a>]</li>
+                      <li>int get_create_cwdrop(); [<a href="#get_create_cwdrop">§</a>]</li>
+                      <li>int get_create_infrared(); [<a href="#get_create_infrared">§</a>]</li>
+                      <li>int get_create_lbump(); [<a href="#get_create_lbump">§</a>]</li>
+                      <li>int get_create_lcliff(); [<a href="#get_create_lcliff">§</a>]</li>
+                      <li>int get_create_lcliff_amt(); [<a href="#get_create_lcliff_amt">§</a>]</li>
+                      <li>int get_create_lfcliff(); [<a href="#get_create_lfcliff">§</a>]</li>
+                      <li>int get_create_lfcliff_amt(); [<a href="#get_create_lfcliff_amt">§</a>]</li>
+                      <li>int get_create_lwdrop(); [<a href="#get_create_lwdrop">§</a>]</li>
+                      <li>int get_create_number_of_stream_packets(); [<a href="#get_create_number_of_stream_packets">§</a>]</li>
+                      <li>int get_create_play_button(); [<a href="#get_create_play_button">§</a>]</li>
+                      <li>int get_create_rbump(); [<a href="#get_create_rbump">§</a>]</li>
+                      <li>int get_create_rcliff(); [<a href="#get_create_rcliff">§</a>]</li>
+                      <li>int get_create_rcliff_amt(); [<a href="#get_create_rcliff_amt">§</a>]</li>
+                      <li>int get_create_rfcliff(); [<a href="#get_create_rfcliff">§</a>]</li>
+                      <li>int get_create_rfcliff_amt(); [<a href="#get_create_rfcliff_amt">§</a>]</li>
+                      <li>int get_create_rlwdrop(); [<a href="#get_create_rlwdrop">§</a>]</li>
+                      <li>int get_create_vwall(); [<a href="#get_create_vwall">§</a>]</li>
+                      <li>int get_create_wall(); [<a href="#get_create_wall">§</a>]</li>
+                      <li>int get_create_wall_amt(); [<a href="#get_create_wall_amt">§</a>]</li></code><b>Built in Scripts</b><code>
+                      <li>void  create_spot(); [<a href="#create_spot">§</a>]</li>
+                      <li>void  create_cover(); [<a href="#create_cover">§</a>]</li>
+                      <li>
+                        void  create_demo(
+                                                                          int  d); [<a href="#create_demo">§</a>]
+                      </li>
+                      <li>void create_cover_dock(); [<a href="#create_cover_dock">§</a>]</li></code><b>LEDs and Music</b><code>
+                      <li>
+                        void create_advance_led(
+                                                                          int on); [<a href="#create_advance_led">§</a>]
+                      </li>
+                      <li>int get_create_song_number(); [<a href="#get_create_song_number">§</a>]</li>
+                      <li>int get_create_song_playing(); [<a href="#get_create_song_playing">§</a>]</li>
+                      <li>
+                        void create_load_song(
+                                                                          int num); [<a href="#create_load_song">§</a>]
+                      </li>
+                      <li>
+                        void create_play_led(
+                                                                          int on); [<a href="#create_play_led">§</a>]
+                      </li>
+                      <li>
+                        void create_play_song(
+                                                                          int num); [<a href="#create_play_song">§</a>]
+                      </li>
+                      <li>
+                        void create_power_led(
+                                                                          int color, int brightness); [<a href="#create_power_led">§</a>]
+                      </li></code></ul>
+                </td>
+              </tr>
+            </tbody>
+          </table><a name="CategoryGraphics"></a>
+          <h4>Graphics</h4>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <ul><code>
+                      <li>int graphics_open(int width, int height);  [<a href="#graphics_open">§</a>]</li>
+                      <li>void graphics_close();  [<a href="#graphics_close">§</a>]</li>
+                      <li>void graphics_update();  [<a href="#graphics_update">§</a>]</li>
+                      <li>void graphics_clear();  [<a href="#graphics_clear">§</a>]</li>
+                      <li>void graphics_fill(int r, int g, int b);  [<a href="#graphics_fill">§</a>]</li>
+                      <li>void graphics_pixel(int x, int y, int r, int g, int b);  [<a href="graphics_pixel">§</a>]</li>
+                      <li>void graphics_line(int x1, int y1, int x2, int y2, int r, int g, int b);  [<a href="#graphics_line">§</a>]</li>
+                      <li>void graphics_circle(int cx, int cy, int radius, int r, int g, int b);  [<a href="#graphics_circle">§</a>]</li>
+                      <li>void graphics_circle_fill(int cx, int cy, int radius, int r, int g, int b);  [<a href="#graphics_circle_fill">§</a>]</li>
+                      <li>void graphics_rectangle(int x1, int y1, int x2, int y2, int r, int g, int b);  [<a href="#graphics_rectangle">§</a>]</li>
+                      <li>void graphics_rectangle_fill(int x1, int y1, int x2, int y2, int r, int g, int b);  [<a href="#graphics_rectangle_fill">§</a>]</li>
+                      <li>void graphics_triangle(int x1, int y1, int x2, int y2, int x3, int y3, int r, int g, int b);  [<a href="graphics_triangle">§</a>]</li>
+                      <li>void graphics_triangle_fill(int x1, int y1, int x2, int y2, int x3, int y3, int r, int g, int b);  [<a href="graphics_triangle_fill">§</a>]</li>
+                      <li>int get_mouse_position(int *x, int *y);  [<a href="#get_mouse_position">§</a>]</li>
+                      <li>int get_mouse_left_button();  [<a href="#get_mouse_left_button">§</a>]</li></code></ul>
+                </td>
+              </tr>
+            </tbody>
+          </table><a name="CategoryMath"></a>
+          <h4>Math</h4>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <ul><code>
+                      <li>double atan(double angle);  [<a href="#atan">§</a>]</li>
+                      <li>double cos(double angle);  [<a href="#cos">§</a>]</li>
+                      <li>double exp(double num);  [<a href="#exp">§</a>]</li>
+                      <li>double exp10(double num);  [<a href="#exp10">§</a>]</li>
+                      <li>double log(double num);  [<a href="#log">§</a>]</li>
+                      <li>int log10(double num);  [<a href="#log10">§</a>]</li>
+                      <li>double pow(double x, double y);  [<a href="#pow">§</a>]</li>
+                      <li>int rand(int m);  [<a href="#rand">§</a>]</li>
+                      <li>double sin(double angle);  [<a href="#sin">§</a>]</li>
+                      <li>double sqrt(double num);  [<a href="#sqrt">§</a>]</li>
+                      <li>void srand(int s);  [<a href="#srand">§</a>]</li>
+                      <li>double tan(double angle);  [<a href="#tan">§</a>]</li></code></ul>
+                </td>
+              </tr>
+            </tbody>
+          </table><a name="CategoryMotors"></a>
+          <h4>Motors</h4>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <ul><code>
+                      <li>void alloff();  [<a href="#alloff">§</a>]</li>
+                      <li>void ao();  [<a href="#ao">§</a>]</li>
+                      <li>void bk(int m);  [<a href="#bk">§</a>]</li>
+                      <li>void block_motor_done(int m);  [<a href="#block_motor_done">§</a>]</li>
+                      <li>void bmd(int m);  [<a href="#bmd">§</a>]</li>
+                      <li>int get_motor_done(int m);  [<a href="#get_motor_done">§</a>]</li>
+                      <li>void clear_motor_position_counter(int motor_nbr);  [<a href="#clear_motor_position_counter">§</a>]</li>
+                      <li>void fd(int m);  [<a href="#fd">§</a>]</li>
+                      <li>void freeze(int m);  [<a href="#freeze">§</a>]</li>
+                      <li>int get_motor_done(int m);  [<a href="#get_motor_done">§</a>]</li>
+                      <li>int get_motor_position_counter(int m);  [<a href="#get_motor_position_counter">§</a>]</li>
+                      <li>int get_pid_gains(int motor, int p, int i, int d, int pd, int id, int dd);  [<a href="#get_pid_gains">§</a>]</li>
+                      <li>void mav(int m, int vel);  [<a href="#mav">§</a>]</li>
+                      <li>void motor(int m, int p);  [<a href="#motor">§</a>]</li>
+                      <li>void move_at_velocity(int m, int vel);  [<a href="#move_at_velocity">§</a>]</li>
+                      <li>void move_relative_position(int m, int speed, int pos);  [<a href="#move_relative_position">§</a>]</li>
+                      <li>void move_to_position(int m, int speed, int pos);  [<a href="#move_to_position">§</a>]</li>
+                      <li>void mrp(int m, int vel, int pos);  [<a href="#mrp">§</a>]</li>
+                      <li>void mtp(int m, int vel, int pos);  [<a href="#mtp">§</a>]</li>
+                      <li>void off(int m);  [<a href="#off">§</a>]</li>
+                      <li>int set_pid_gains(int motor, int p, int i, int d, int pd, int id, int dd);  [<a href="#set_pid_gains">§</a>]</li>
+                      <li>int setpwm(int m, int dutycycle);  [<a href="#setpwm">§</a>]</li></code></ul>
+                </td>
+              </tr>
+            </tbody>
+          </table><a name="CategoryOutput"></a>
+          <h4>Output</h4>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <ul><code>
+                      <li>void beep();  [<a href="#beep">§</a>]</li>
+                      <li>void console_clear();  [<a href="#console_clear">§</a>]</li>
+                      <li>void display_clear();  [<a href="#display_clear">§</a>]</li>
+                      <li>void display_printf(int col, int row, char s[], . . .);  [<a href="#display_printf">§</a>]</li>
+                      <li>void extra_buttons_show();  [<a href="#extra_buttons_show">§</a>]</li>
+                      <li>void extra_buttons_hide();  [<a href="#extra_buttons_hide">§</a>]</li>
+                      <li>void set_a_button_text(char txt[]);  [<a href="#set_a_button_text">§</a>]</li>
+                      <li>void set_b_button_text(char txt[]);  [<a href="#set_b_button_text">§</a>]</li>
+                      <li>void set_c_button_text(char txt[]);  [<a href="#set_c_button_text">§</a>]</li>
+                      <li>void set_digital_output(int port, int inout);  [<a href="#set_digital_output">§</a>]</li>
+                      <li>void set_digital_value(int port, int value);  [<a href="#set_digital_value">§</a>]</li>
+                      <li>void set_x_button_text(char txt[]);  [<a href="#set_x_button_text">§</a>]</li>
+                      <li>void set_y_button_text(char txt[]);  [<a href="#set_y_button_text">§</a>]</li>
+                      <li>void set_z_button_text(char txt[]);  [<a href="#set_z_button_text">§</a>]</li></code></ul>
+                </td>
+              </tr>
+            </tbody>
+          </table><a name="CategoryThreads"></a>
+          <h4>Threads</h4>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <ul><code>
+                      <li>thread thread_create(&lt;<em>function_name</em>&gt;);  [<a href="#thread_create">§</a>]</li>
+                      <li>void thread_destroy(&lt;<em>thread id</em>&gt;&gt;);  [<a href="#thread_destroy">§</a>]</li>
+                      <li>void thread_start(&lt;<em>thread id</em>&gt;);  [<a href="#thread_start">§</a>]</li>
+                      <li>void thread_wait(&lt;<em>thread id</em>&gt;);  [<a href="#thread_wait">§</a>]</li>
+                      <li>void run_for(double sec, void &lt;<em>function_name</em>&gt;);  [<a href="#run_for">§</a>]</li></code></ul>
+                </td>
+              </tr>
+            </tbody>
+          </table><a name="CategorySensors"></a>
+          <h4>Sensors</h4>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <ul><code>
+                      <li>int a_button();  [<a href="#a_button">§</a>]</li>
+                      <li>int a_button_clicked();  [<a href="#a_button_clicked">§</a>]</li>
+                      <li>int accel_x();  [<a href="#accel_x">§</a>]</li>
+                      <li>int accel_y();  [<a href="#accel_y">§</a>]</li>
+                      <li>int accel_z();  [<a href="#accel_z">§</a>]</li>
+                      <li>int analog(int p);  [<a href="#analog">§</a>]</li>
+                      <li>int analog_et(int p);  [<a href="#analog_et">§</a>]</li>
+                      <li>int analog8(int p);  [<a href="#analog8">§</a>]</li>
+                      <li>int analog10(int p);  [<a href="#analog10">§</a>]</li>
+                      <li>int any_button();  [<a href="#any_button">§</a>]</li>
+                      <li>int b_button();  [<a href="#b_button">§</a>]</li>
+                      <li>int b_button_clicked();  [<a href="#b_button_clicked">§</a>]</li>
+                      <li>int c_button();  [<a href="#c_button">§</a>]</li>
+                      <li>int c_button_clicked();  [<a href="#c_button_clicked">§</a>]</li>
+                      <li>int digital(int p);  [<a href="#digital">§</a>]</li>
+                      <li>int get_analog_pullup(int port);  [<a href="#get_analog_pullup">§</a>]</li>
+                      <li>int get_digital_pullup(int port);  [<a href="#get_digital_pullup">§</a>]</li>
+                      <li>double power_level();  [<a href="#power_level">§</a>]</li>
+                      <li>int get_extra_buttons_visible();  [<a href="#get_extra_buttons_visible">§</a>]</li>
+                      <li>void set_analog_pullup(int port, int pullupTF);  [<a href="#set_analog_pullup">§</a>]</li>
+                      <li>void set_digital_pullup(int port, int pullupTF);  [<a href="#set_digital_pullup">§</a>]</li>
+                      <li>int side_button();  [<a href="#side_button">§</a>]</li>
+                      <li>int side_button_clicked();  [<a href="#side_button_clicked">§</a>]</li>
+                      <li>int x_button();  [<a href="#x_button">§</a>]</li>
+                      <li>int x_button_clicked();  [<a href="#x_button_clicked">§</a>]</li>
+                      <li>int y_button();  [<a href="#y_button">§</a>]</li>
+                      <li>int y_button_clicked();  [<a href="#y_button_clicked">§</a>]</li>
+                      <li>int z_button();  [<a href="#z_button">§</a>]</li>
+                      <li>int z_button_clicked();  [<a href="#z_button_clicked">§</a>]</li></code></ul>
+                </td>
+              </tr>
+            </tbody>
+          </table><a name="CategoryServos"></a>
+          <h4>Servos</h4>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <ul><code>
+                      <li>void disable_servo(int p);  [<a href="#disable_servo">§</a>]</li>
+                      <li>void disable_servos();  [<a href="#disable_servos">§</a>]</li>
+                      <li>void enable_servo(int p);  [<a href="#enable_servo">§</a>]</li>
+                      <li>void enable_servos();  [<a href="#enable_servos">§</a>]</li>
+                      <li>int get_servo_enabled(int srv);  [<a href="#get_servo_enabled">§</a>]</li>
+                      <li>int get_servo_position(int srv);  [<a href="#get_servo_position">§</a>]</li>
+                      <li>int set_servo_position(int srv, int pos);  [<a href="#set_servo_position">§</a>]</li></code></ul>
+                </td>
+              </tr>
+            </tbody>
+          </table><a name="CategoryTime"></a>
+          <h4>Time</h4>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <ul><code>
+                      <li>void msleep(int msec);  [<a href="#msleep">§</a>]</li>
+                      <li>double seconds();  [<a href="#seconds">§</a>]</li></code></ul>
+                </td>
+              </tr>
+            </tbody>
+          </table><a name="CategoryVision"></a>
+          <h4>Vision</h4>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <ul><code>
+                      <li>void camera_close();  [<a href="#camera_close">§</a>]</li>
+                      <li>int camera_load_config(char name[]);   [<a href="#camera_load_config">§</a>]</li>
+                      <li>int camera_open();  [<a href="#camera_open">§</a>]</li>
+                      <li>int camera_open_at_res(int res_numb);  [<a href="#camera_open_at_res">§</a>]</li>
+                      <li>int camera_open_device(int number, int res_numb);  [<a href="#camera_open_device">§</a>]</li>
+                      <li>int camera_update();  [<a href="#camera_update">§</a>]</li>
+                      <li>int get_channel_count();  [<a href="#get_channel_count">§</a>]</li>
+                      <li>int get_object_area(int channel, int object);  [<a href="#get_object_area">§</a>]</li>
+                      <li>rectangle get_object_bbox(int channel, int object);  [<a href="#get_object_bbox">§</a>]</li>
+                      <li>point2 get_object_center(int channel, int object);  [<a href="#get_object_center">§</a>]</li>
+                      <li>point2 get_object_centroid(int channel, int object);  [<a href="#get_object_centroid">§</a>]</li>
+                      <li>int get_code_num(int channel, int object);  [<a href="#get_code_num">§</a>]</li>
+                      <li>double get_object_confidence(int channel, int object);  [<a href="#get_object_confidence">§</a>]</li>
+                      <li>int get_object_count(int channel);  [<a href="#get_object_count">§</a>]</li>
+                      <li>char *get_object_data(int channel, int object);  [<a href="#get_object_data">§</a>]</li>
+                      <li>int get_object_data_length(int channel, int object);  [<a href="#get_object_data_length">§</a>]</li></code></ul>
+                </td>
+              </tr>
+            </tbody>
+          </table><a name="CategoryDepth"></a>
+          <h4>Depth</h4>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <ul><code>
+                      <li>void depth_close();  [<a href="#depth_close">§</a>]</li>
+                      <li>int depth_open();  [<a href="#depth_open">§</a>]</li>
+                      <li>int depth_update();  [<a href="#depth_update">§</a>]</li>
+                      <li>int get_depth_value(int row, int col);  [<a href="#get_depth_value">§</a>]</li>
+                      <li>point3 get_depth_world_point(int row, int col);  [<a href="#get_depth_world_point">§</a>]</li>
+                      <li>int get_depth_world_point_x(int row, int col);  [<a href="#get_depth_world_point_x">§</a>]</li>
+                      <li>int get_depth_world_point_y(int row, int col);  [<a href="#get_depth_world_point_y">§</a>]</li>
+                      <li>int get_depth_world_point_z(int row, int col);  [<a href="#get_depth_world_point_z">§</a>]</li></code></ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- START FOOTER-->
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

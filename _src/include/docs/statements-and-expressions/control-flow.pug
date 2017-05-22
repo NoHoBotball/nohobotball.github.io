@@ -1,0 +1,730 @@
+html
+  head
+    link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    link(href='/css/base.css', rel='stylesheet', type='text/css')
+    link(href='/css/materialize.min.css', media='screen,projection', rel='stylesheet', type='text/css')
+    link(href='/css/docs.css', rel='stylesheet', type='text/css')
+    link(href='../imgs/logos/botguy.png', rel='icon')
+    title Botball Documentation - Tutorial
+    meta(content='#00796b', name='theme-color')
+    meta(content='width=device-width, initial-scale=1.0', name='viewport')
+  body
+    script(src='https://code.jquery.com/jquery-2.1.1.min.js', type='text/javascript')
+    script(src='/js/materialize.min.js', type='text/javascript')
+    script.
+      $(document).ready(function () {
+      $('.button-collapse').sideNav({
+      draggable: true
+      });
+      $(".active").parent().parent().siblings()[0].click() })
+    header
+      ul#slide-out.side-nav.fixed
+        li.red.lighten-1(style='height: 130px')
+          .userView
+            h5.white-text
+              a.white-text(href='/docs/index.html') Index
+        li
+          a(href='/docs/tutorial.html') Tutorial
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Data Objects
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/data-objects/index.html') Introduction
+                  li
+                    a(href='/docs/data-objects/variables.html') Variables
+                  li
+                    a(href='/docs/data-objects/constants.html') Constants
+                  li
+                    a(href='/docs/data-objects/data-types.html') Data Types
+                  li
+                    a(href='/docs/data-objects/arrays.html') Arrays
+                  li
+                    a(href='/docs/data-objects/structures.html') Structures
+                  li
+                    a(href='/docs/data-objects/initialization-examples.html') Initialization Examples
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Statements and Expressions
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/statements-and-expressions/index.html') Introduction
+                  li
+                    a(href='/docs/statements-and-expressions/operators.html') Operators
+                  li.active
+                    a(href='/docs/statements-and-expressions/control-flow.html') Control Flow
+        li
+          a(href='/docs/tutorial.html') Style
+        li
+          a(href='/docs/tutorial.html') Debugging
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Printing
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/printing/index.html') Introduction
+                  li
+                    a(href='/docs/printing/examples.html') Examples
+                  li
+                    a(href='/docs/printing/printf-codes.html') printf Codes
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Preprocessor
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/preprocessor/index.html') Introduction
+                  li
+                    a(href='/docs/preprocessor/directives.html') Directives
+                  li
+                    a(href='/docs/preprocessor/include.html') Include
+                  li
+                    a(href='/docs/preprocessor/macros.html') Macros
+                  li
+                    a(href='/docs/preprocessor/conditional-compilation.html') Conditional Compilation
+        li
+          a(href='/docs/lib/math.html') Math Library
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | KIPR Wallaby/Link
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/lib/kipr/common-functions.html') Common Functions
+                  li
+                    a(href='/docs/lib/kipr/functions.html') Functions List
+                  li
+                    a(href='/docs/lib/kipr/camera.html') Camera Functions
+                  li
+                    a(href='/docs/lib/kipr/graphics.html') Graphics Functions
+                  li
+                    a(href='/docs/lib/kipr/depth.html') Depth Sensor Functions
+                  li
+                    a(href='/docs/lib/kipr/usb.html') File I/O Functions
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | iRobot Create
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/lib/kipr/create/index.html') Introduction
+                  li
+                    a(href='/docs/lib/kipr/create/serial.html') Serial Functions
+                  li
+                    a(href='/docs/lib/kipr/create/configuration.html') Configuration Functions
+                  li
+                    a(href='/docs/lib/kipr/create/movement.html') Movement Functions
+                  li
+                    a(href='/docs/lib/kipr/create/sensors.html') Sensor Functions
+                  li
+                    a(href='/docs/lib/kipr/create/battery.html') Battery Functions
+                  li
+                    a(href='/docs/lib/kipr/create/built-ins.html') Built-In Functions
+                  li
+                    a(href='/docs/lib/kipr/create/music-leds.html') LED and Music Functions
+        li
+          a(href='/docs/lib/kipr/botball.html') Botball Functions
+        li
+          a(href='/docs/lib/kipr/threads.html') Threads
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Motors and Sensors
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/lib/kipr/info/digital-analog-sensors.html') Analog and Digital Sensors
+                  li
+                    a(href='/docs/lib/kipr/info/usb-sensors.html') USB Sensors
+                  li
+                    a(href='/docs/lib/kipr/info/motors-servos.html') Motors and Servos
+                  li
+                    a(href='/docs/lib/kipr/info/simulator.html') Simulator
+        li
+          a(href='/docs/full.html') Full Documentation
+      nav.nav-extended.red.lighten-2
+        .nav-wrapper
+          .col.s12
+            a.button-collapse(data-activates='slide-out', href='#', style='font-size: 50px')
+              i.material-icons menu
+            a#top.brand-logo.waves-effect(href='/docs/index.html') Botball Documentation
+        .nav-wrapper
+          .col.s12
+            a.breadcrumb(href='/docs/statements-and-expressions/index.html') Statements and Expressions
+            a.breadcrumb(href='#!') Control Flow
+    main.row
+      .container.col.s12
+        // END HEADER
+        // Control_Flow
+        a(name='Control_Flow')
+        h3 Control Flow
+        p
+          | The order in which a computer executes machine-level operations stored in memory is normally sequential, with
+          | the exception of those operations which redirect the flow of executrion to continue elsewhere in computer
+          | memory. This capability is reflected in C programs by control flow statements which serve to redirect the
+          | sequential step by step flow the program would follow otherwise. There are two classes of control flow commands,
+          i selection
+          |  and 
+          i iteration
+          | . Selection commands use a condition test to determine what statement
+          |  or block of statements to execute next ( 
+          code if-else
+          | ,
+          |  switch, and the ternary operator 
+          code ?:
+          | ). Iteration commands use a condition test to determine
+          |  how many times to repeat the execution of a statement or block of statements (
+          |  while,
+          |  for, 
+          code do-while
+          | ). C also
+          |  provides means for exiting a control flow program structure independent of the condition test (
+          |  break) and to skip the rest of a block, continuing to the next iteration (
+          |  continue).
+        .Indent
+          // Statements_and_Blocks
+          a(name='Statements_and_Blocks')
+          h4 Statements and Blocks
+          p
+            | Each C statement is terminated by a semicolon. A program block is a sequence of statements grouped together
+            | inside curly braces. Variables may be defined inside a block and are local to the block (their scope
+            | does not extend outside of the block). The object for a control flow statement may be a single statement
+            | or a block of statements, except for 
+            code ?:
+            | , which as an operator applies to expressions rather
+            |  than statements.
+          // If-Else
+          a(name='If-Else')
+          h4 If-Else
+          p
+            | The
+            | if statement is a selection statement for making yes/no and either/or decisions, For an either/or
+            | decision, the
+            | if statement is paired with an
+            | else statement (which can only be used in a pairing with
+            | if).
+          p
+            | The syntax for
+            | if is
+          pre
+            code.language-clike
+              | if (&lt;
+              i expression
+              | &gt;)
+              |     &lt;
+              i statement or block
+              | &gt;
+          p
+            | When paired with
+            | else the syntax is
+          pre
+            code.language-clike
+              | if (&lt;
+              i expression
+              | &gt;)
+              |     &lt;
+              i statement or block
+              | &gt;
+              | else
+              |     &lt;
+              i statement or block
+              | &gt;
+          p
+            | When the 
+            code &lt;
+            i expression
+            code &gt;
+            |  evaluates as TRUE (i.e., is not
+            |  equal to zero), then the 
+            code &lt;
+            i statement or block
+            code &gt;
+            |  that follows
+            |  if is executed.
+          p
+            | When the 
+            code &lt;
+            i expression
+            code &gt;
+            |  evaluates as FALSE (i.e., is equal to
+            |  0), then the 
+            code &lt;
+            i statement or block
+            code &gt;
+            |  that follows
+            |  if is not executed and if there is an
+            |  else paired with
+            |  if, then the 
+            code &lt;
+            i statement or block
+            code &gt;
+            | ; that follows
+            |  else is executed.
+          p
+            | In effect, these constructions use syntax that corresponds to how similar logic is expressed in English,
+            | such as
+          ul
+            li
+              | "If the fever is over 100F then schedule a doctor's appointment" (yes/no or do/don't do)
+            li
+              | "If the manuscript is acceptable then pay for it, otherwise return it to the author" (either/or)
+          a(name='TernaryOperator')
+          h4
+            | Ternary Operator 
+            code ?:
+          p
+            | The ternary operator 
+            code ?:
+            |  provides a compact means for expressing if-else logic where
+            |  assignment statements are employed as the if-else actions. For example, the following 
+            code if-else
+            |  construction
+            |  assigns the larger of variables 
+            code x
+            |  and 
+            code y
+            |  to variable 
+            code z
+            | :
+          pre
+            code.language-clike
+              | if (x &gt; y)
+              |     z = x;
+              | else
+              |     z = y;
+          p
+            | This same construction can be implemented by using the ternary operator 
+            code ?:
+          p
+          .Indent
+            code
+              | z = (x &gt; y) ? x : y;
+          p
+            | The ternary expression is formed from a condition test ( 
+            code x &lt; y
+            | ) followed by a
+            |  question mark ( 
+            code ?
+            | ), then the expression ( 
+            code x
+            | ) to assign to 
+            code z
+            |  if the condition evaluates as TRUE, separated by a colon ( 
+            code :
+            | ) and then the expression
+            |  ( 
+            code y
+            | ) to assign to 
+            code z
+            |  if the condition evaluates as FALSE. Strictly
+            |  speaking, given the low precedence level of the operator, the parentheses around the condition
+            |  could be omitted, but are advisable to facilitate identifying the operator's three operands.
+          p
+            | ANSI C requires that only the expression whose value is to be assigned to z be evaluated, just
+            | as in the 
+            code if-else
+            |  equivalent. The ternary operator is frequently used for obtaining absolute value; e.g.,
+          p
+          .Indent
+            code
+              | absx = (x &lt; 0) ? -x : x;
+          // While
+          a(name='While')
+          h4 While
+          p
+            | The
+            | while statement in C is the iteration statement most commonly used for managing program
+            | loops. A 
+            i loop
+            |  is a sequence of program logic that is repeated multiple times (0 or
+            |  more); for example,, a loop might be used to print out the elapsed time second by second
+            |  while waiting for a button to be pressed.
+          p
+            | The syntax for a
+            | while statement loop is
+          pre
+            code.language-clike
+              | while (&lt;
+              i expression
+              | &gt;)
+              |     &lt;
+              i statement or block
+              | &gt;
+          p
+            | When the 
+            code &lt;
+            i expression
+            code &gt;
+            |  evaluates as TRUE (i.e., is not
+            |  equal to zero), then the 
+            code &lt;
+            i statement or block
+            code &gt;
+            |  that
+            |  follows
+            |  while is executed, after which the process repeats, starting with evaluation of the 
+            code &lt;
+            i expression
+            code &gt;
+            |  again.
+          p
+            | When the 
+            code &lt;
+            i expression
+            code &gt;
+            |  evaluates as FALSE (i.e., is equal
+            |  to 0), then the 
+            code &lt;
+            i statement or block
+            code &gt;
+            |  that follows
+            |  while is not executed and the program moves on to the statement following the 
+            code &lt;
+            i statement or block
+            code &gt;
+            |  for the
+            |  while.
+          p
+            | Note that the loop continues until something happens that causes the 
+            code &lt;
+            i expression
+            code &gt;
+            |  to evaluate as FALSE (e.g., a button is pressed or a counting variable has exceeded its limit).
+            |  It is up to the programmer to ensure that within the body of the loop (or otherwise) the
+            |  condition will eventually be FALSE (otherwise the loop will continue until the program is
+            |  halted by external intervention).
+          p
+            | A loop that doesn't terminate is termed an 
+            i infinite loop
+            | . An infinite loop is one that
+            |  will continue its iteration until the program is halted. An 
+            i indefinite loop
+            |  is one
+            |  whose iteration will continue until some external action occurs (such as a button press).
+            |  It is easy to create an infinite loop using
+            |  while. For example,
+          .Indent
+            code while(1);
+          p
+            | forms an infinite loop because the 
+            code &lt;
+            i expression
+            code &gt;
+            |  for
+            |  the
+            |  while is 1 which is always TRUE, and the 
+            code &lt;
+            i statement or block
+            code &gt;
+            |  is empty ( 
+            code ;
+            | ), providing no means other than a forced program halt to end
+            |  the ongoing loop iteration (which is repeatedly doing nothing).
+          p
+            | A common error to avoid when programming a
+            | while statement loop is exemplified by the following:
+          pre
+            code.language-clike
+              | while (i &lt; 10); // misplaced semi-colon
+              |     x[i++] = i;
+          p
+            | In this case, the misplaced semi-colon for the
+            | while has made its 
+            code &lt;
+            i statement or block
+            code &gt;
+            |  component empty. Assuming 
+            code i
+            |  is less than 10 when the loop starts, this
+            |  semantic error makes the loop infinite and the program will "hang" at this point,
+            |  requiring a forced halt to end it. For ideas on how to locate this kind of semantic
+            |  error for a program, see the section below on 
+            a(href='KIPRWallabyManualBody.htm#Program_Debugging', target='ManualFrame') program debugging
+            | .
+          // Break
+          a(name='Break')
+          h4 Break
+          p
+            | The
+            | break statement in C provides a means for a program to break out of executing
+            | statements within a loop structure or a multi-way selection to proceed with execution
+            | of the program statements that come next. A condition test for
+            | break is sometimes used within what would otherwise be an infinite loop to
+            | break out of it. The
+            | break statement applies to
+            | while,
+            | for, 
+            code do-while
+            | ,
+            |  and
+            |  switch.
+          p For example,
+          pre
+            | int i; // counter will need some initial value
+            | while (i &lt; 100) { // has the counter reached its limit?
+            | printf("cnt = %d\n", i++); // show the counter and increment it
+            | if (side_button() != 0) break; // exit if the side_button is pressed
+            | msleep(1000); // pause for one second
+            | }
+          p
+            | uses a
+            | break to exit the
+            | while loop.
+          // Continue
+          a(name='Continue')
+          h4 Continue
+          p
+            | The
+            | continue statement in C provides a means for a program in a
+            | while,
+            | for, or 
+            code do-while
+            |  loop to skip the balance of the current iteration, continuing to the next iteration
+            |  if the loop condition test doesn't end the loop.
+          p For example,
+          pre
+            | int i; // counter will need some initial value
+            | while (i &lt; 100) { // has the counter reached its limit?
+            | if (i &lt;= 0) { // don't start cnt until i reaches 1
+            | i+=1;
+            | continue;
+            | }
+            | printf("cnt = %d\n", i++); // show the counter and increment it
+            | if (side_button() != 0) break; // exit if the side_button is pressed
+            | msleep(1000); // pause for one second
+            | }
+          // Return
+          a(name='Return')
+          h4 Return
+          p
+          p
+            | The
+            | return statement in C both ends a function and provides a means for the
+            | function to return a value to the calling function. A function also ends once
+            | its terminating brace is reached or if a
+            | return statement having no return value is executed. The calling function
+            | can ignore a returned value in any case.
+          // For
+          a(name='For')
+          h4 For
+          p
+            | The
+            | for statement in C is normally used for managing loops that employ an
+            | iteration counter. A
+            | while statement loop could also be used for this purpose, but in many
+            | cases the program logic is clearer if a
+            | for statement is employed to control the loop.
+          p
+            | The syntax for a
+            | for statement loop is
+          pre
+            code.language-clike
+              | for (&lt;
+              i expr-1
+              | &gt;;&lt;
+              i expr-2
+              | &gt;;&lt;
+              fi
+                | expr-3&gt;)
+                |     &lt;
+                i statement or block
+                | &gt;
+          p
+            | The behavior of the
+            | for statement loop is equivalent to that of the following
+            | while statement loop:
+          pre
+            code.language-clike
+              | &lt;
+              i expr-1
+              | &gt;; // initialize the counter (prime the pump)
+              | while (&lt;
+              i expr-2
+              | &gt;) { // has the counter reached its limit? (have we pumped enough in?)
+              |     &lt;
+              i statement or block
+              | &gt;
+              |     &lt;
+              i expr-3
+              | &gt;; // increment the counter (pump some more in)
+              | }
+          p
+            | For example, the following code counts assigns values from 0 to 99 to an integer
+            | array
+          pre
+            code.language-clike
+              | int i, arr[100];
+              | for (i = 0; i &lt; 100; i++)
+              |     arr[i] = i;
+          // Switch
+          a(name='Switch')
+          h4 Switch-Case
+          p
+            | The
+            | switch selection statement for C is used to select one of a series
+            | of
+            | case targets. The
+            | case targets for a
+            | switch statement are grouped together inside curly braces as a program
+            | block. Each
+            | case target is followed by a series of C statements which represent
+            | that case. The
+            | switch selection in effect skips past cases until it reaches the one
+            | selected, and program execution continues from there. If a
+            | break statement is in the statements following a
+            | case target, then the program exits the
+            | switch statement's block at that point, in effect skipping any remaining
+            | cases.
+          p
+            | if else selection is used to select one of two cases.
+            | switch selection is used to select 0 or more cases.
+          p
+            | The syntax for a
+            | switch statement is as follows:
+          pre
+            code.language-clike
+              | switch (&lt;
+              i expression
+              | &gt;) { // switch to the case target whose &lt;
+              i constant
+              | &gt; matches the value of the &lt;
+              i expression
+              | &gt; 
+              | case &lt;
+              i constant
+              | &gt;:
+              |     &lt;
+              i
+                | 0 or more C statements
+              | &gt;
+              |     break; // optional - otherwise, program execution continues with the next case 
+              | &lt;
+              i additional case targets
+              | &gt;
+              | default: // optional target used when selection didn&apos;t match any case target 
+              |     &lt;
+              i
+                | 0 or more C statements
+              | &gt;
+              |     break; // optional - otherwise, program execution continues with the next case 
+              | }
+          p
+            | The first
+            | case target whose 
+            code &lt;
+            i constant
+            code &gt;
+            |  matches the value of the
+            |  expression for the
+            |  switch statement is the one selected. Program execution continues
+            |  from the selected
+            |  case target until either a
+            |  break statement is encountered, or the end of the
+            |  switch program block is reached. If there is no
+            |  case match, then the
+            |  default target is selected. Absent a
+            |  default target and a
+            |  case match, the
+            |  switch program block is skipped. Putting in a
+            |  default case with a
+            |  break statement is considered to be good form, and recognizes
+            |  the likelihood of more cases being added under program maintenance.
+          p
+            | Normally, each
+            | case is ended with a
+            | break statement since the primary purpose of the
+            | switch statement is to make the choice of one of several possible
+            | cases to execute; for example,
+          pre
+            code.language-clike
+              | char answer[81];
+              | switch(answer[0])
+              | {
+              |     case &apos;y&apos;:
+              |         printf(&quot;answer was yes\n&quot;);
+              |         break;
+              |     case &apos;n&apos;:
+              |         printf(&quot;answer was no\n&quot;);
+              |         break;
+              |     default:
+              |         printf(&quot;answer was not understood\n&quot;);
+              | }
+          p
+            | If user input "yes sir" is captured in the character string 
+            code answer
+            | ,
+            |  then the text "answer was yes" will be printed to the screen. If if was
+            |  "no sir", then the "answer was no" would have been printed, and if it
+            |  was "No sir", the text "answer was not understood" would have been printed
+            |  (since C is case sensitive, 'n' ≠ 'N').
+            // Do-While
+            a(name='Do-While')
+          h4 Do-While
+          p
+            | The
+            | do-while statement in C is less commonly used for controlling
+            | loop iteration than the
+            | while and
+            | for statements.
+          p
+            | The syntax of a
+            | do-
+            | while statement is as follows:
+          pre
+            code.language-clike
+              | do
+              |     &lt;
+              i statement or block
+              | &gt;
+              | while (&lt;
+              i expression
+              | &gt;);
+          p
+            | In contrast to the
+            | while and
+            | for statements, the body of the loop for a
+            | do-while statement will be executed at least once since the 
+            code &lt;
+            i expression
+            code &gt;
+            |  controlling loop
+            |  iteration is evaluated at the end of the loop rather than at its
+            |  beginning. Sometimes program logic for a loop is best expressed by
+            |  having the condition test occur at the bottom of the loop. For example,
+          pre
+            code.language-clike
+              | do
+              |     printf(&quot;.&quot;);
+              | while (seconds() &lt; 5);
+          p
+            | The logic insures that "." will be printed at least once (so something
+            | will always be printed), in contrast to
+          pre
+            code.language-clike
+              | while (seconds() &lt; 5)
+              |     printf(&quot;.&quot;);
+          p
+            | for which nothing will be printed if the value returned by the function 
+            code seconds
+            |  already exceeds 5.
+        // START FOOTER
+

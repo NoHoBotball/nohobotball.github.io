@@ -1,0 +1,619 @@
+html
+  head
+    link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    link(href='/css/base.css', rel='stylesheet', type='text/css')
+    link(href='/css/materialize.min.css', media='screen,projection', rel='stylesheet', type='text/css')
+    link(href='/css/docs.css', rel='stylesheet', type='text/css')
+    link(href='../imgs/logos/botguy.png', rel='icon')
+    title Botball Documentation - Tutorial
+    meta(content='#00796b', name='theme-color')
+    meta(content='width=device-width, initial-scale=1.0', name='viewport')
+  body
+    script(src='https://code.jquery.com/jquery-2.1.1.min.js', type='text/javascript')
+    script(src='/js/materialize.min.js', type='text/javascript')
+    script.
+      $(document).ready(function () {
+      $('.button-collapse').sideNav({
+      draggable: true
+      });
+      $(".active").parent().parent().siblings()[0].click() })
+    header
+      ul#slide-out.side-nav.fixed
+        li.red.lighten-1(style='height: 130px')
+          .userView
+            h5.white-text
+              a.white-text(href='/docs/index.html') Index
+        li
+          a(href='/docs/tutorial.html') Tutorial
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Data Objects
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/data-objects/index.html') Introduction
+                  li
+                    a(href='/docs/data-objects/variables.html') Variables
+                  li
+                    a(href='/docs/data-objects/constants.html') Constants
+                  li
+                    a(href='/docs/data-objects/data-types.html') Data Types
+                  li
+                    a(href='/docs/data-objects/arrays.html') Arrays
+                  li
+                    a(href='/docs/data-objects/structures.html') Structures
+                  li
+                    a(href='/docs/data-objects/initialization-examples.html') Initialization Examples
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Statements and Expressions
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/statements-and-expressions/index.html') Introduction
+                  li.active
+                    a(href='/docs/statements-and-expressions/operators.html') Operators
+                  li
+                    a(href='/docs/statements-and-expressions/control-flow.html') Control Flow
+        li
+          a(href='/docs/tutorial.html') Style
+        li
+          a(href='/docs/tutorial.html') Debugging
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Printing
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/printing/index.html') Introduction
+                  li
+                    a(href='/docs/printing/examples.html') Examples
+                  li
+                    a(href='/docs/printing/printf-codes.html') printf Codes
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Preprocessor
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/preprocessor/index.html') Introduction
+                  li
+                    a(href='/docs/preprocessor/directives.html') Directives
+                  li
+                    a(href='/docs/preprocessor/include.html') Include
+                  li
+                    a(href='/docs/preprocessor/macros.html') Macros
+                  li
+                    a(href='/docs/preprocessor/conditional-compilation.html') Conditional Compilation
+        li
+          a(href='/docs/lib/math.html') Math Library
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | KIPR Wallaby/Link
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/lib/kipr/common-functions.html') Common Functions
+                  li
+                    a(href='/docs/lib/kipr/functions.html') Functions List
+                  li
+                    a(href='/docs/lib/kipr/camera.html') Camera Functions
+                  li
+                    a(href='/docs/lib/kipr/graphics.html') Graphics Functions
+                  li
+                    a(href='/docs/lib/kipr/depth.html') Depth Sensor Functions
+                  li
+                    a(href='/docs/lib/kipr/usb.html') File I/O Functions
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | iRobot Create
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/lib/kipr/create/index.html') Introduction
+                  li
+                    a(href='/docs/lib/kipr/create/serial.html') Serial Functions
+                  li
+                    a(href='/docs/lib/kipr/create/configuration.html') Configuration Functions
+                  li
+                    a(href='/docs/lib/kipr/create/movement.html') Movement Functions
+                  li
+                    a(href='/docs/lib/kipr/create/sensors.html') Sensor Functions
+                  li
+                    a(href='/docs/lib/kipr/create/battery.html') Battery Functions
+                  li
+                    a(href='/docs/lib/kipr/create/built-ins.html') Built-In Functions
+                  li
+                    a(href='/docs/lib/kipr/create/music-leds.html') LED and Music Functions
+        li
+          a(href='/docs/lib/kipr/botball.html') Botball Functions
+        li
+          a(href='/docs/lib/kipr/threads.html') Threads
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header
+                i.material-icons arrow_drop_down
+                | Motors and Sensors
+              .collapsible-body(style='display: block')
+                ul
+                  li
+                    a(href='/docs/lib/kipr/info/digital-analog-sensors.html') Analog and Digital Sensors
+                  li
+                    a(href='/docs/lib/kipr/info/usb-sensors.html') USB Sensors
+                  li
+                    a(href='/docs/lib/kipr/info/motors-servos.html') Motors and Servos
+                  li
+                    a(href='/docs/lib/kipr/info/simulator.html') Simulator
+        li
+          a(href='/docs/full.html') Full Documentation
+      nav.nav-extended.red.lighten-2
+        .nav-wrapper
+          .col.s12
+            a.button-collapse(data-activates='slide-out', href='#', style='font-size: 50px')
+              i.material-icons menu
+            a#top.brand-logo.waves-effect(href='/docs/index.html') Botball Documentation
+        .nav-wrapper
+          .col.s12
+            a.breadcrumb(href='/docs/statements-and-expressions/index.html') Statements and Expressions
+            a.breadcrumb(href='#!') Operators
+    main.row
+      .container.col.s12
+        // END HEADER
+        // Operators
+        a(name='Operators')
+        h3 Operators
+        p
+          | Each of the data types has a set of operators for operations that may be performed on expressions for that data
+          | type (e.g., 
+          code x + y
+          |  is an expression).
+        // Integer_Operations
+        a(name='Integer_Operations')
+        .indent
+          h4 Integer Operators
+          p The following operators are provided for integer data:
+          ul
+            li
+              h5 Binary
+              ul
+                li
+                  b Arithmetic
+                  | : addition 
+                  code +
+                  | , subtraction 
+                  code -
+                  | , multiplication 
+                  code *
+                  | , division 
+                  code /
+                  | .
+                li
+                  b Relational (comparison)
+                  | : greater-than 
+                  code &gt;
+                  | , less-than 
+                  code &lt;
+                  | , equality 
+                  code ==
+                  | , greater-than-equal 
+                  code &gt;=
+                  | , less-than-equal 
+                  code &lt;=
+                  | , modulus 
+                  code %
+                  | .
+                li
+                  b Logical (Boolean)
+                  | : logical-OR 
+                  code ||
+                  | , logical-AND 
+                  code &&
+                  | , logical-NOT 
+                  code !
+                  | .
+                li
+                  b Bitwise
+                  | : bitwise-AND 
+                  code &
+                  | , bitwise-OR 
+                  code |
+                  | , bitwise-exclusive-OR 
+                  code ^
+                  | , bitwise-NOT (one's complement) 
+                  code ~
+                  | , left shift 
+                  code &lt;&lt;
+                  | , right shift 
+                  code &gt;&gt;
+                  | .
+            li
+              h5 Unary
+              ul
+                li
+                  | integer promotion 
+                  code +
+                  | , additive inverse 
+                  code -
+                  | , increment (prefix or postfix) 
+                  code ++
+                  | , decrement (prefix or postfix) 
+                  code --
+          |  In C, an integer used in a Boolean expression represents FALSE if it is 0 and TRUE if it is non-zero. In determining the
+          |  result of the logical operation 
+          code x && y
+          | , if x is FALSE, the value returned by
+          |  the operation is FALSE without checking y since logically this is enough to determine the result has to be
+          |  FALSE. Similarly, for 
+          code x || y
+          | , if x is TRUE, the value returned by the operation is TRUE without
+          |  checking y since logically that is sufficient for determining the result is TRUE. In all other cases,
+          |  the value for both operands is checked. This can be useful if x is being used as a TRUE/FALSE flag where
+          |  y may initially be invalid when x is FALSE.
+          p
+            | Integer promotion is the action of "promoting" an arithmetic operand to a 32 bit integer, similar to type
+            | casting or coercion. Unlike its counterpart, unary 
+            code -
+            | , it is seldom used.
+          // Floating_Point_Numbers
+          a(name='Floating_Point_Numbers')
+          h4 Floating Point Operators
+          p The following subset of integer operators are provided for floating point data:
+          ul
+            li
+              b Arithmetic
+              | : addition 
+              code +
+              | , subtraction 
+              code -
+              | , multiplication 
+              code *
+              | , division 
+              code /
+              | .
+            li
+              b Relational (comparison)
+              | : greater-than 
+              code &gt;
+              | , less-than 
+              code &lt;
+              | , equality 
+              code ==
+              | , greater-than-equal 
+              code &gt;=
+              | , less-than-equal 
+              code &lt;=
+              | .
+          p
+            | For the KIPR Robot Controller, floating point operations are implemented in software, which means they are significantly
+            | more resource intensive than integer operations. For this reason, floating point values should not be
+            | substituted for integers in iterative processes (such as a loop counter).
+          p
+            | There is a large selection of math functions in the C library for performing calculations that are inherently
+            | floating point. For example,
+          pre
+            code.language-clike
+              | double a,x,y;
+              | x = sqrt(2); // x is assigned the square of 2
+              | x = log(5);  // x is assigned the base e logarithm of 5
+              | x = log2(8); // x is assigned the base 2 logarithm of 5
+              | x = exp(3);  // x is assigned e cubed
+              | x = exp2(3); // x is assigned 2 cubed
+              | y = pow(x,0.333333); // y is assigned the (approximate) cube root of x
+              | x = sin(3);  // x is assigned the sine of 3 (radians)
+              | a = asin(0.123); // a is assigned the primary angle (in radians) having sine 0.123
+          p
+            | There are many more functions in each of these categories, plus functions for other kinds of manipulation of floating point
+            | data. The section below for 
+            a(href='KIPRWallabyManualBody.htm#Functions', target='ManualFrame') KIPR Robot Controller Library Functions
+            |  includes many of these under the "Math" category designation.
+          // Characters
+          a(name='Characters')
+          h4 Characters
+          p
+            | For C, a character is an 8-bit unsigned integer whose value is one of the 256 ASCII character codes (ASCII
+            | is the acronym for 
+            i American Standard Code for Information Interchange
+            | ). Integer operations can
+            |  be performed on character data since if a character variable is used in an integer operation, it is automatically
+            |  coerced from an 8-bit unsigned integer into a (positive) 32-bit integer for the computation. ASCII encodes
+            |  0 ... 9 in order, then later A ... Z in order, and then later a ... z in order, to enable easy alphabetizing
+            |  using integer comparison. Adding 32 to an upper case character will convert it to lower case.
+          p
+            | When a value is stored into a character variable, it is coerced into an 8-bit character (by truncating the
+            | upper bits). Since character data occurs in 8-bit bytes, character string data is stored in consecutive
+            | byte locations in memory; i.e., treating memory as character data provides a means to address and step
+            | through memory one byte at a time.
+          // Compound Assignment Operators
+          a(name='Compound_Assignment_Operators')
+          h4 Compound Assignment Operators
+          p
+            | The basic assignment operator is 
+            code =
+            | . The following statement adds 2 to the value of a.
+          .Indent
+            code
+              | a = a + 2;
+          p
+            | The compound assignment operator 
+            code +=
+            |  does exactly the same thing; i.e.,
+          .Indent
+            code a += 2;
+          p All of the following binary operators can be used in a compound assignment:
+          .Indent
+            code
+              | +, -, *, /, %, &lt;&lt;, &gt;&gt;, &amp;, ^, |
+          // Increment_and_Decrement_Operators
+          a(name='Increment_and_Decrement_Operators')
+          h4 Unary Increment and Decrement
+          p
+            | The increment operator 
+            code ++
+            |  increments its operand by 1. When used prefix ( 
+            code ++x
+            | ) it
+            |  has a different semantic interpretation then when used postfix ( 
+            code x++
+            | ). The simple cases
+          pre
+            code.language-clike
+              | x++;
+              | ++x;
+              | x = x + 1;
+              | x+=1;
+          p are all equivalent.
+          |  When used in a more complex expression, the value of 
+          code ++x
+          |  and 
+          code x
+          |  change
+          i before
+          |  the result is used in the expression. For 
+          code x++
+          | , the value of 
+          code x++
+          |  and 
+          code x
+          |  change 
+          i after
+          |  the result is used in the expression. For example, for the following
+          |  constructions using 
+          code ++x
+          |  and 
+          code x++
+          p
+          pre
+            code.language-clike
+              | x = 3; printf(&quot;%d  %d\n&quot;, x, ++x);
+              | x = 3; printf(&quot;%d  %d\n&quot;, ++x, x);
+              | x = 3; printf(&quot;%d  %d\n&quot;, x, x++);
+              | x = 3; printf(&quot;%d  %d\n&quot;, x++, x);
+              | x = 3; printf(&quot;%d  %d\n&quot;, x, x+1);
+          p
+            | the displayed text will be
+          .Indent
+            code
+              |  4  4
+              br
+              |  4  4
+              br
+              |  4  3
+              br
+              |  3  3
+              br
+              |  3  4
+          p
+            | Confusing? To understand this you also have to know the arguments of
+            printf
+              | are evaluated from right to left in setting values passed. Here's a (long-winded) explanation
+              | for how the outcome above is produced by each program line:
+              dl
+                dt
+                  | Line 1: The 
+                  code ++x
+                  |  argument is cleared before values are passed to 
+                  code printf
+                  |  and by incrementing beforehand both argument values are set to 4.
+                dt
+                  | Line 2: Just as for Line 1, the 
+                  code ++x
+                  |  argument is cleared before values
+                  |  are passed to 
+                  code printf
+                  | .
+                  dt
+                    | Line 3: The 
+                    code x++
+                    |  argument is rightmost and gets the current value
+                    |  3 of 
+                    code x
+                    |  because the increment occurs afterwards. The new value of 
+                    code x
+                    |  (4) then becomes the value used for the 
+                    code x
+                    |  argument.
+                  dt
+                    | Line 4: The 
+                    code x
+                    |  argument is rightmost and has value 3. The 
+                    code x++
+                    |  argument sets the value 3 before it increments. The value of x subsequent
+                    |  to the 
+                    code printf
+                    |  is 4.
+                  dt
+                    | Line 5: This is the most intuitive case, because it doesn't use 
+                    code ++
+                    | ,
+                    |  but notice it also doesn't increment x.
+              |  The difficulty for explaining what appears at first glance to be straight forward code illustrates why the use of these operators
+              |  in normally limited to the simpler cases.
+          p
+            | The interpretation for a combination such as 
+            code x+++y
+            |  is dependent on the compiler
+            |  being used so such variations are avoided, although not prohibited. [
+            i
+              | So which is it? 
+              code (x++)+y
+              |  or 
+              code x+(++y)
+              | ? The answer could be neither!
+            | ]
+          p
+            | The decrement operator 
+            code --
+            |  decrements its operation by 1. Its semantics mirror those
+            |  of 
+            code ++
+            | .
+          // Data_Access_Operators
+          a(name='Data_Access_Operators')
+          h4 Data Access Operators
+          |  Data access operators are ones used to manipulate components of arrays and data structures, or to directly manipulate data
+          |  via memory addresses.
+          ul
+            li
+              | The unary reference operator ( 
+              code &
+              | ) returns the memory address pointing to a variable,
+              |  array component, structure component, or function regardless of its data type.
+            li
+              | The unary dereferencing (or indirection) operator ( 
+              code *
+              | ) applied to a pointer accesses
+              |  the referenced address as an object for the data type of the pointer, either for assigning
+              |  a value to it, or for utilizing its value.
+            li
+              | The array subscript ( 
+              code
+                code [ ]
+              | ) brackets operator accesses the component
+              |  of the array given by the index enclosed within the brackets.
+            li
+              | The structure component ( 
+              code .
+              | ) dot operator accesses, by name, the specified component.
+            li
+              | The structure dereference ( 
+              code
+                code -&gt;
+              | ) arrow operator applied to a pointer
+              |  to the structure accesses the referenced component (by name) of a structure (for structure 
+              code ds
+              |  with component named component 
+              code i
+              | , 
+              code ds.i
+              |  and 
+              code
+                | (&amp;ds) 
+                code -&gt;i
+              |  are equivalent.
+          // Precedence_and_Order_of_Evaluation
+          a(name='Precedence_and_Order_of_Evaluation')
+          h4 Precedence and Order of Evaluation
+          p
+            | As per Kernighan and Ritchie's book, the following table summarizes the rules for precedence and
+            | associativity for the C operators. Operators listed earlier in the table have higher precedence;
+            | operators on the same line of the table have equal precedence and when used without parentheses
+            | are cleared left to right.
+          .Indent
+            table.bordered
+              thead
+                tr
+                  td(align='center')
+                    b Operator
+                  td
+                    b Associativity
+              tbody
+                tr
+                  td
+                    code
+                      |  () [] -&gt; .
+                  td(align='center') left to right
+                tr
+                  td
+                    code
+                      |  ! ~ ++ -- - * &amp; (&lt;
+                    i data-type
+                    code
+                      | &gt;)  sizeof 
+                  td(align='center')
+                    | right to left
+                tr
+                  td
+                    code * / %
+                  td(align='center') left to right
+                tr
+                  td
+                    code  + -
+                  td(align='center') left to right
+                tr
+                  td
+                    code  &lt;&lt; &gt;&gt;
+                  td(align='center') left to right
+                tr
+                  td
+                    code
+                      |  &lt; &lt;= &gt; &gt;=
+                  td(align='center') left to right
+                tr
+                  td
+                    code  == !=
+                  td(align='center') left to right
+                tr
+                  td
+                    code  &
+                  td(align='center') left to right
+                tr
+                  td
+                    code  ^
+                  td(align='center') left to right
+                tr
+                  td
+                    code  |
+                  td(align='center') left to right
+                tr
+                  td
+                    code  &&
+                  td(align='center') left to right
+                tr
+                  td
+                    code  ||
+                  td(align='center') left to right
+                tr
+                  td
+                    code  ?:
+                  td(align='center') right to left
+                tr
+                  td
+                    code
+                      |  = += -= *= /= %= &amp;= ^= |= &lt;&lt;= &gt;&gt;= 
+                  td(align='center') right to left
+                tr
+                  td
+                    code  ,
+                  td(align='center') left to right
+            |  Unary 
+            code +, -, 
+            | and 
+            code *
+            |  have higher precedence than their binary forms.
+        // START FOOTER
+
