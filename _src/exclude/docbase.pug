@@ -1,8 +1,43 @@
 block vars
   - var selected = 'none'
-  - var path = ['None']
 
 - var color = 'red'
+- var pathDict = {
+  'tutorial': [
+    'index',
+    'debugging',
+    'style'
+  ],
+  'create': [
+    'battery',
+    'built-ins',
+    'configuration',
+    'index',
+    'movement',
+    'music-leds',
+    'sensors',
+    'serial'
+  ],
+  'data-objects': [
+    'arrays',
+    'constants',
+    'data-types',
+    'index',
+    'initialization-examples',
+    'pointers',
+    'structures',
+    'variables'
+  ],
+  'general': [
+    'botball',
+    'math',
+    'threads'
+  ]
+}
+
+- var titleParse = function(val) {
+  return val;
+}
 
 doctype html
 html
@@ -32,143 +67,19 @@ html
           .userView
             h5.white-text
               a.white-text(href='/docs/index.html') Index
-        li(class=(selected == 'tutorial' ? 'active' : ''))
-          a(href='/docs/tutorial.html') Tutorial
         li.no-padding
           ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Data Objects
-              .collapsible-body(style='display: block')
-                ul
-                  li(class=(selected == 'data-objects/index' ? 'active' : ''))
-                    a(href='/docs/data-objects/index.html') Introduction
-                  li(class=(selected == 'data-objects/variables' ? 'active' : ''))
-                    a(href='/docs/data-objects/variables.html') Variables
-                  li(class=(selected == 'data-objects/constants' ? 'active' : ''))
-                    a(href='/docs/data-objects/constants.html') Constants
-                  li(class=(selected == 'data-objects/data-types' ? 'active' : ''))
-                    a(href='/docs/data-objects/data-types.html') Data Types
-                  li(class=(selected == 'data-objects/arrays' ? 'active' : ''))
-                    a(href='/docs/data-objects/arrays.html') Arrays
-                  li(class=(selected == 'data-objects/structures' ? 'active' : ''))
-                    a(href='/docs/data-objects/structures.html') Structures
-                  li(class=(selected == 'data-objects/initialization-examples' ? 'active' : ''))
-                    a(href='/docs/data-objects/initialization-examples.html') Initialization Examples
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Statements and Expressions
-              .collapsible-body(style='display: block')
-                ul
-                  li(class=(selected == 'statements-and-expressions/index' ? 'active' : ''))
-                    a(href='/docs/statements-and-expressions/index.html') Introduction
-                  li(class=(selected == 'statements-and-expressions/operators' ? 'active' : ''))
-                    a(href='/docs/statements-and-expressions/operators.html') Operators
-                  li(class=(selected == 'statements-and-expressions/control-flow' ? 'active' : ''))
-                    a(href='/docs/statements-and-expressions/control-flow.html') Control Flow
-        li(class=(selected == 'style' ? 'active' : ''))
-          a(href='/docs/style.html') Style
-        li(class=(selected == 'debugging' ? 'active' : ''))
-          a(href='/docs/debugging.html') Debugging
-        li.no-padding
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Printing
-              .collapsible-body(style='display: block')
-                ul
-                  li(class=(selected == 'printing/index' ? 'active' : ''))
-                    a(href='/docs/printing/index.html') Introduction
-                  li(class=(selected == 'printing/examples' ? 'active' : ''))
-                    a(href='/docs/printing/examples.html') Examples
-                  li(class=(selected == 'printing/printf-codes' ? 'active' : ''))
-                    a(href='/docs/printing/printf-codes.html') printf Codes
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Preprocessor
-              .collapsible-body(style='display: block')
-                ul
-                  li(class=(selected == 'preprocessor/index' ? 'active' : ''))
-                    a(href='/docs/preprocessor/index.html') Introduction
-                  li(class=(selected == 'preprocessor/directives' ? 'active' : ''))
-                    a(href='/docs/preprocessor/directives.html') Directives
-                  li(class=(selected == 'preprocessor/include' ? 'active' : ''))
-                    a(href='/docs/preprocessor/include.html') Include
-                  li(class=(selected == 'preprocessor/macros' ? 'active' : ''))
-                    a(href='/docs/preprocessor/macros.html') Macros
-                  li(class=(selected == 'preprocessor/conditional-compilation' ? 'active' : ''))
-                    a(href='/docs/preprocessor/conditional-compilation.html') Conditional Compilation
-        li(class=(selected == 'lib/math' ? 'active' : ''))
-          a(href='/docs/lib/math.html') Math Library
-        li.no-padding
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | KIPR Wallaby/Link
-              .collapsible-body(style='display: block')
-                ul
-                  li(class=(selected == 'lib/kipr/common-functions' ? 'active' : ''))
-                    a(href='/docs/lib/kipr/common-functions.html') Common Functions
-                  li(class=(selected == 'lib/kipr/functions' ? 'active' : ''))
-                    a(href='/docs/lib/kipr/functions.html') Functions List
-                  li(class=(selected == 'lib/kipr/camera' ? 'active' : ''))
-                    a(href='/docs/lib/kipr/camera.html') Camera Functions
-                  li(class=(selected == 'lib/kipr/graphics' ? 'active' : ''))
-                    a(href='/docs/lib/kipr/graphics.html') Graphics Functions
-                  li(class=(selected == 'lib/kipr/depth' ? 'active' : ''))
-                    a(href='/docs/lib/kipr/depth.html') Depth Sensor Functions
-                  li(class=(selected == 'lib/kipr/usb' ? 'active' : ''))
-                    a(href='/docs/lib/kipr/usb.html') File I/O Functions
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | iRobot Create
-              .collapsible-body(style='display: block')
-                ul
-                  li(class=(selected == 'lib/kipr/create/index' ? 'active' : ''))
-                    a(href='/docs/lib/kipr/create/index.html') Introduction
-                  li(class=(selected == 'lib/kipr/create/serial' ? 'active' : ''))
-                    a(href='/docs/lib/kipr/create/serial.html') Serial Functions
-                  li(class=(selected == 'lib/kipr/create/configuration' ? 'active' : ''))
-                    a(href='/docs/lib/kipr/create/configuration.html') Configuration Functions
-                  li(class=(selected == 'lib/kipr/create/movement' ? 'active' : ''))
-                    a(href='/docs/lib/kipr/create/movement.html') Movement Functions
-                  li(class=(selected == 'lib/kipr/create/sensors' ? 'active' : ''))
-                    a(href='/docs/lib/kipr/create/sensors.html') Sensor Functions
-                  li(class=(selected == 'lib/kipr/create/battery' ? 'active' : ''))
-                    a(href='/docs/lib/kipr/create/battery.html') Battery Functions
-                  li(class=(selected == 'lib/kipr/create/built-ins' ? 'active' : ''))
-                    a(href='/docs/lib/kipr/create/built-ins.html') Built-In Functions
-                  li(class=(selected == 'lib/kipr/create/music-leds' ? 'active' : ''))
-                    a(href='/docs/lib/kipr/create/music-leds.html') LED and Music Functions
-        li(class=(selected == 'lib/kipr/botball' ? 'active' : ''))
-          a(href='/docs/lib/kipr/botball.html') Botball Functions
-        li(class=(selected == 'lib/kipr/threads' ? 'active' : ''))
-          a(href='/docs/lib/kipr/threads.html') Threads
-        li.no-padding
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Motors and Sensors
-              .collapsible-body(style='display: block')
-                ul
-                  li(class=(selected == 'lib/kipr/info/digital-analog-sensors' ? 'active' : ''))
-                    a(href='/docs/lib/kipr/info/digital-analog-sensors.html') Analog and Digital Sensors
-                  li(class=(selected == 'lib/kipr/info/usb-sensors' ? 'active' : ''))
-                    a(href='/docs/lib/kipr/info/usb-sensors.html') USB Sensors
-                  li(class=(selected == 'lib/kipr/info/motors-servos' ? 'active' : ''))
-                    a(href='/docs/lib/kipr/info/motors-servos.html') Motors and Servos
-                  li(class=(selected == 'lib/kipr/info/simulator' ? 'active' : ''))
-                    a(href='/docs/lib/kipr/info/simulator.html') Simulator
-        li(class=(selected == 'full' ? 'active' : ''))
+            each topval in pathDict
+              li
+                a.collapsible-header
+                  i.material-icons arrow_drop_down
+                  | #{titleParse(topval)}
+                .collapsible-body(style='display: block')
+                  ul
+                    each subval in pathDict[topval]
+                    li(class=(selected == (topval + '/' + subval) ? 'active' : ''))
+                      a(href=('/docs/' + topval + '/' + subval + '.html'))= titleParse(subval)
+      li(class=(selected == 'full' ? 'active' : ''))
           a(href='/docs/full.html') Full Documentation
       nav.nav-extended.lighten-2(class=color)
         .nav-wrapper
