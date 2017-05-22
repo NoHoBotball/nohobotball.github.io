@@ -1,12 +1,12 @@
 extends ../exclude/base
 
 block vars
-  - var selected = "about"
-  - var color = "indigo"
-  - var themeColor = "#303F9F"
+  - var selected = 'about'
+  - var color = 'indigo'
+  - var themeColor = '#303F9F'
 
 block content
-  h1.header(class=color + '-text') What We Do
+  h1.header(class=colorText) What We Do
   h4.header
     | We are a completely student-run robotics club which builds and programs robots for the KIPR Botball competition.
   .row
@@ -95,4 +95,4 @@ block content
 block scripts
   script.
     $( document ).ready(function(){
-    $(".active").parent().parent().siblings()[0].click() })
+    $('.active').parent().parent().siblings()[0].click() })

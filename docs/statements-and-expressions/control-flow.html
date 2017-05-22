@@ -223,8 +223,8 @@ else
             such as
           </p>
           <ul>
-            <li>"If the fever is over 100F then schedule a doctor's appointment" (yes/no or do/don't do)</li>
-            <li>"If the manuscript is acceptable then pay for it, otherwise return it to the author" (either/or)</li>
+            <li>'If the fever is over 100F then schedule a doctor's appointment' (yes/no or do/don't do)</li>
+            <li>'If the manuscript is acceptable then pay for it, otherwise return it to the author' (either/or)</li>
           </ul><a name="TernaryOperator"></a>
           <h4>Ternary Operator <code>?:</code></h4>
           <p>The ternary operator <code>?:</code>
@@ -318,7 +318,7 @@ else
             In this case, the misplaced semi-colon for the
             while has made its <code>&lt;</code><i>statement or block</i><code>&gt;</code> component empty. Assuming <code>i</code>
              is less than 10 when the loop starts, this
-             semantic error makes the loop infinite and the program will "hang" at this point,
+             semantic error makes the loop infinite and the program will 'hang' at this point,
              requiring a forced halt to end it. For ideas on how to locate this kind of semantic
              error for a program, see the section below on <a href="KIPRWallabyManualBody.htm#Program_Debugging" target="ManualFrame">program debugging</a>.
           </p>
@@ -341,7 +341,7 @@ else
           <p>For example,</p>
           <pre>int i; // counter will need some initial value
 while (i &lt; 100) { // has the counter reached its limit?
-printf("cnt = %d\n", i++); // show the counter and increment it
+printf('cnt = %d\n', i++); // show the counter and increment it
 if (side_button() != 0) break; // exit if the side_button is pressed
 msleep(1000); // pause for one second
 }</pre>
@@ -367,7 +367,7 @@ if (i &lt;= 0) { // don't start cnt until i reaches 1
 i+=1;
 continue;
 }
-printf("cnt = %d\n", i++); // show the counter and increment it
+printf('cnt = %d\n', i++); // show the counter and increment it
 if (side_button() != 0) break; // exit if the side_button is pressed
 msleep(1000); // pause for one second
 }</pre>
@@ -491,11 +491,11 @@ switch(answer[0])
     default:
         printf(&quot;answer was not understood\n&quot;);
 }</code></pre>
-          <p>If user input "yes sir" is captured in the character string <code>answer</code>
+          <p>If user input 'yes sir' is captured in the character string <code>answer</code>
             ,
-             then the text "answer was yes" will be printed to the screen. If if was
-             "no sir", then the "answer was no" would have been printed, and if it
-             was "No sir", the text "answer was not understood" would have been printed
+             then the text 'answer was yes' will be printed to the screen. If if was
+             'no sir', then the 'answer was no' would have been printed, and if it
+             was 'No sir', the text 'answer was not understood' would have been printed
              (since C is case sensitive, 'n' ≠ 'N').
             <!-- Do-While--><a name="Do-While"></a>
           </p>
@@ -529,7 +529,7 @@ while (&lt;<i>expression</i>&gt;);</code></pre>
     printf(&quot;.&quot;);
 while (seconds() &lt; 5);</code></pre>
           <p>
-            The logic insures that "." will be printed at least once (so something
+            The logic insures that '.' will be printed at least once (so something
             will always be printed), in contrast to
           </p>
           <pre><code class="language-clike">while (seconds() &lt; 5)

@@ -2,7 +2,7 @@ extends ../../../exclude/docbase
 
 block vars
   - var selected = 'preprocessor/conditional-compilation'
-  - var path = ["Preprocessor", "Conditional Compilation"]
+  - var path = ['Preprocessor', 'Conditional Compilation']
 
 block content
   // Conditional_compilation
@@ -37,7 +37,7 @@ block content
     |  only if 
     code DEBUG
     |  has been defined,
-    |  in which case the message "Going Left" will be printed and KIPR LINK will beep when program execution
+    |  in which case the message 'Going Left' will be printed and KIPR LINK will beep when program execution
     |  reaches this part of its code. If 
     code DEBUG
     |  is not defined, the preprocessor will leave the
@@ -77,7 +77,7 @@ block content
     code DEBUG
     |  has been defined the code
   .Indent
-    code SHOW(printf("%d\n",i);)
+    code SHOW(printf('%d\n',i);)
   p
     | inserted at an appropriate point in the program will be expanded by the preprocessor to produce the code
   .Indent
@@ -97,8 +97,8 @@ block content
     code DEBUG
     |  has been defined, the expansion of 
     code SHOW
-    |  illustrated above will generate code which outputs the debugging display " 
+    |  illustrated above will generate code which outputs the debugging display ' 
     code DEBUG: i=8
-    | ".
+    | '.
   // START FOOTER
 

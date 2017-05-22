@@ -2,7 +2,7 @@ extends ../../../exclude/docbase
 
 block vars
   - var selected = 'data-objects/constants'
-  - var path = ["Data Objects", "Constants"]
+  - var path = ['Data Objects', 'Constants']
 
 block content
   // Constants
@@ -19,12 +19,12 @@ block content
       | , 2
       sup 31
       | -1]. Integer constants can also be defined using hexadecimal (base
-      |  16) integer format (marked by the prefix " 
+      |  16) integer format (marked by the prefix ' 
       code 0x
-      | "), or octal (base 8) integer format (marked
-      |  by the prefix " 
+      | '), or octal (base 8) integer format (marked
+      |  by the prefix ' 
       code 0
-      | "), although both are awkward for representing negative numbers. For 32-bit
+      | '), although both are awkward for representing negative numbers. For 32-bit
       |  two's complement integers, the following are true:
     .indent
       | 4053
@@ -49,14 +49,14 @@ block content
       code
         | -1 == 0xffffffff == 037777777777
     p
-      | which also illustrates each of the three formats. Appending a "u" or "U" to the constant changes its
+      | which also illustrates each of the three formats. Appending a 'u' or 'U' to the constant changes its
       | value to the range [0, 2
       sup 32
       | -1] rather than [-2
       sup 31
       | , 2
       sup 31
-      | -1]. An "unsigned"
+      | -1]. An 'unsigned'
       |  specification is sometimes needed when data is to be copied to a variable of a different type; in
       |  particular, 8-bit bytes are treated as unsigned integers.
     p
@@ -68,7 +68,7 @@ block content
       | The number of bits used for representing integers is system dependent, but is typically 32 bits for
       | type
       | int. The data type
-      | long int normally specifies a 64-bit integer, and is designated by appending "L" or "l"
+      | long int normally specifies a 64-bit integer, and is designated by appending 'L' or 'l'
       | to the integer's representation. For most programming needs, integer type (
       | int) constants are sufficient.
     // Floating_Point_Constants
@@ -123,18 +123,18 @@ block content
       | A character constant is given by enclosing the character in single quote marks; e.g.,
       | 'K'. Characters are internally encoded in 8-bit bytes using ASCII representation (e.g.,
       | the internal ASCII representation of
-      | 'K' is the (8-bit) hex pair "4B").
+      | 'K' is the (8-bit) hex pair '4B').
     p
       | A character string constant is a sequence of characters enclosed in quotation marks, e.g.,
-      | "This is a character string.". C processes a character string as (1-dimensional) array
+      | 'This is a character string.'. C processes a character string as (1-dimensional) array
       | delimited by the (unprintable) character constant
       | '\0', which marks the end of the string within the array.
     p
       | The character constant
       | 'K' cannot be used interchangeably with the string constant
-      | "K" since
+      | 'K' since
       | 'K' is an 8-bit integer and
-      | "K" is a 16-bit string whose first 8-bits are the 8-bits for
+      | 'K' is a 16-bit string whose first 8-bits are the 8-bits for
       | 'K' and the second 8-bits are the 8-bits for
       | '\0'.
     // NULL

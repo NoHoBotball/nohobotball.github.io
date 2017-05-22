@@ -164,7 +164,7 @@
           ). Comments are normally included to document the function's purpose and
            expected behavior, and are ignored in the compilation process.
         </p><a name="SimpleProgram"></a>
-        <!-- div class="card-panel hoverable tomorrow lighten-2"-->
+        <!-- div class='card-panel hoverable tomorrow lighten-2'-->
         <pre><code class="language-clike">/* C Programmer&apos;s Manual 
    Simple example */
 int main()
@@ -206,7 +206,7 @@ int main()
         </p>
         <p>The open curly-brace ( <code>{</code>
           ) that follows the argument list signifies the start of the actual function
-           code. Curly-braces are used to structure a program as blocks of code. For C, so-called "white space"
+           code. Curly-braces are used to structure a program as blocks of code. For C, so-called 'white space'
            consists of one or more of any combination of characters such as spaces, returns, new lines, and tabs,
            which is collapsed to a single generic white space character in compilation. For this reason, white space
            can be used for things like indentation that improve program readability. In particular, the KISS IDE
@@ -218,13 +218,13 @@ int main()
           ).
            The simple example program has a single statement,
         </p>
-        <div class="Indent"><code>printf("Hello, world!\n");</code></div>
+        <div class="Indent"><code>printf('Hello, world!\n');</code></div>
         <p>The action this statement specifies is calling the C library <code>printf</code>
            function to format and print
            the message <code>Hello, world!</code>
            to the project target. The
            '\n' directs <code>printf</code>
-           to "start a new line" (in effect ending the current line and
+           to 'start a new line' (in effect ending the current line and
            positioning for subsequent printing to start on the next line). When printing reaches the bottom of the
            KIPR Controller display, any additional lines printed cause the display to scroll up. Since calling the <code>printf</code> function is a C statement, it has to be ended with a semicolon ( <code>;</code>
           ).
@@ -265,12 +265,12 @@ int main()
         </p>
         <p>
           When a function declaration specifies arguments, the variable names representing the arguments are local
-          to the function, or stated another way, they are valid only within the "scope" of the function (they
+          to the function, or stated another way, they are valid only within the 'scope' of the function (they
           only have meaning within the function's block of code). For this reason, variable names used within
           the scope of a function will not cause a semantic conflict should their names duplicate those local
           to some other function.
         </p>
-        <p>The "scope" for the function <code>square</code>
+        <p>The 'scope' for the function <code>square</code>
            is what takes place within the block structure
            defining its actions (i.e., the contents within the curly braces surrounding its program statements).
            In this case, the function's actions consist of a single statement; namely, the
@@ -296,7 +296,7 @@ double hypotenuse(int a, int b)
 }</code></pre><br>
         <p>
           The argument list for this function has two arguments, each with integer data type. Additionally, its
-          block structure includes a statement specifying a "working variable" <code>h</code>
+          block structure includes a statement specifying a 'working variable' <code>h</code>
           . The data type
            for <code>h</code> is given as floating point, since the C library function <code>sqrt</code>
            returns
@@ -316,7 +316,7 @@ double hypotenuse(int a, int b)
            is
            called with an integer argument instead of floating point? Answer: C will automatically coerce the
            integer to a floating point value (which uses a format involving both an exponent and a mantissa).
-           If C's automatic coercion does the "wrong" thing, it can be bypassed by specifying how the value
+           If C's automatic coercion does the 'wrong' thing, it can be bypassed by specifying how the value
            is to be coerced, which is accomplished by preceding it with the data type in parentheses into which
            it is to be converted; e.g., <code>(double)(square(a) + square(b))</code>.
         </p>
@@ -361,7 +361,7 @@ double hypotenuse(int a, int b)
         </p>
         <p>The two C statements</p>
         <div class="Indent"><code>int square(int n); <br>double hypotenuse(int a, int b);</code></div>
-        <p>provide C "prototype" specifications for the <code>square</code> and <code>hypotenuse</code>
+        <p>provide C 'prototype' specifications for the <code>square</code> and <code>hypotenuse</code>
            functions
            used in the program. Similar prototypes need to be supplied for the standard C library's <code>printf</code> function and the C math library's <code>sqrt</code> function. The preprocessor statements
         </p>

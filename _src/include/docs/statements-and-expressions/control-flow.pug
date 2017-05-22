@@ -2,7 +2,7 @@ extends ../../../exclude/docbase
 
 block vars
   - var selected = 'statements-and-expressions/control-flow'
-  - var path = ["Statements and Expressions", "Control Flow"]
+  - var path = ['Statements and Expressions', 'Control Flow']
 
 block content
   // Control_Flow
@@ -115,9 +115,9 @@ block content
       | such as
     ul
       li
-        | "If the fever is over 100F then schedule a doctor's appointment" (yes/no or do/don't do)
+        | 'If the fever is over 100F then schedule a doctor's appointment' (yes/no or do/don't do)
       li
-        | "If the manuscript is acceptable then pay for it, otherwise return it to the author" (either/or)
+        | 'If the manuscript is acceptable then pay for it, otherwise return it to the author' (either/or)
     a(name='TernaryOperator')
     h4
       | Ternary Operator 
@@ -286,7 +286,7 @@ block content
       |  component empty. Assuming 
       code i
       |  is less than 10 when the loop starts, this
-      |  semantic error makes the loop infinite and the program will "hang" at this point,
+      |  semantic error makes the loop infinite and the program will 'hang' at this point,
       |  requiring a forced halt to end it. For ideas on how to locate this kind of semantic
       |  error for a program, see the section below on 
       a(href='KIPRWallabyManualBody.htm#Program_Debugging', target='ManualFrame') program debugging
@@ -312,7 +312,7 @@ block content
     pre
       | int i; // counter will need some initial value
       | while (i &lt; 100) { // has the counter reached its limit?
-      | printf("cnt = %d\n", i++); // show the counter and increment it
+      | printf('cnt = %d\n', i++); // show the counter and increment it
       | if (side_button() != 0) break; // exit if the side_button is pressed
       | msleep(1000); // pause for one second
       | }
@@ -339,7 +339,7 @@ block content
       | i+=1;
       | continue;
       | }
-      | printf("cnt = %d\n", i++); // show the counter and increment it
+      | printf('cnt = %d\n', i++); // show the counter and increment it
       | if (side_button() != 0) break; // exit if the side_button is pressed
       | msleep(1000); // pause for one second
       | }
@@ -500,12 +500,12 @@ block content
         |         printf(&quot;answer was not understood\n&quot;);
         | }
     p
-      | If user input "yes sir" is captured in the character string 
+      | If user input 'yes sir' is captured in the character string 
       code answer
       | ,
-      |  then the text "answer was yes" will be printed to the screen. If if was
-      |  "no sir", then the "answer was no" would have been printed, and if it
-      |  was "No sir", the text "answer was not understood" would have been printed
+      |  then the text 'answer was yes' will be printed to the screen. If if was
+      |  'no sir', then the 'answer was no' would have been printed, and if it
+      |  was 'No sir', the text 'answer was not understood' would have been printed
       |  (since C is case sensitive, 'n' ≠ 'N').
       // Do-While
       a(name='Do-While')
@@ -547,7 +547,7 @@ block content
         |     printf(&quot;.&quot;);
         | while (seconds() &lt; 5);
     p
-      | The logic insures that "." will be printed at least once (so something
+      | The logic insures that '.' will be printed at least once (so something
       | will always be printed), in contrast to
     pre
       code.language-clike

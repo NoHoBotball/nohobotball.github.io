@@ -2,7 +2,7 @@ extends ../../../../exclude/docbase
 
 block vars
   - var selected = 'lib/kipr/botball'
-  - var path = ["Lib", "Kipr", "Botball"]
+  - var path = ['Lib', 'Kipr', 'Botball']
 
 block content
   // Botball
@@ -49,8 +49,8 @@ block content
     |  difference between the two values has to be large enough for the sensor to determine if the light is
     |  off or on. If the sensor is suitably shielded and is positioned so that a successful calibration is achieved, 
     code wait_for_light
-    |  calls for "hands off" and blocks further execution until the light is turned
-    |  on. When "light on" is detected by the sensor, the program resumes and runs the robot according to program
+    |  calls for 'hands off' and blocks further execution until the light is turned
+    |  on. When 'light on' is detected by the sensor, the program resumes and runs the robot according to program
     |  design. If problems occur in the calibration process, the user is notifited and the process repeats after
     |  a brief pause.
   |  The first statement in a Botball programm following 
@@ -90,11 +90,11 @@ block content
     |  are stopped within the game's time limit.
   //
     &lt;p&gt; The function &lt;/p&gt;
-    &lt;div class="Indent"&gt; &lt;code&gt;target_cha_in_chb(&lt;&lt;/code&gt;cha &lt;code&gt;&gt;, &lt;&lt;/code&gt;chb &lt;code&gt;&gt;, &lt;*&lt;/code&gt;x &lt;code&gt;&gt;, &lt;*&lt;/code&gt;y &lt;code&gt;&gt;);&lt;/code&gt;&lt;/div&gt;
+    &lt;div class='Indent'&gt; &lt;code&gt;target_cha_in_chb(&lt;&lt;/code&gt;cha &lt;code&gt;&gt;, &lt;&lt;/code&gt;chb &lt;code&gt;&gt;, &lt;*&lt;/code&gt;x &lt;code&gt;&gt;, &lt;*&lt;/code&gt;y &lt;code&gt;&gt;);&lt;/code&gt;&lt;/div&gt;
     &lt;p&gt;uses the vision system to look for a color target where the color described in the color channel a is completely
     surrounded by the color described by the color channel b. The addresses of to two integer variables, x & y, are also passed. If a suitable target is found in the current frame (this function does NOT perform a track_update() call) then the function returns 1 and the contents of the two variables x and y are changed to match the image pixel location of the centroid of the color blob associated with the inside of the target. If no target with the right colors is in view, then 0 is returned and x and y are not modified. If more than one target is in view, the one with the larger inner blob (as seen by the camera) is the one whose coordinates are returned. An example of use, where the inner color is on channel 3 and the outer on 2, might be:&lt;/p&gt;
-    &lt;div class="Indent"&gt; &lt;code&gt;&lt;font class="CVariable"&gt;int&lt;/font&gt; x, y;&lt;br&gt;
-    &lt;font class="CVariable"&gt;if&lt;/font&gt; (target_cha_in_chb(3,2,&x,&y)==1) printf(&lt;font class="Quote"&gt;"Target found at (%d,%d)\n"&lt;/font&gt;, x, y);&lt;/code&gt;&lt;/div&gt;
+    &lt;div class='Indent'&gt; &lt;code&gt;&lt;font class='CVariable'&gt;int&lt;/font&gt; x, y;&lt;br&gt;
+    &lt;font class='CVariable'&gt;if&lt;/font&gt; (target_cha_in_chb(3,2,&x,&y)==1) printf(&lt;font class='Quote'&gt;'Target found at (%d,%d)\n'&lt;/font&gt;, x, y);&lt;/code&gt;&lt;/div&gt;
   p The library functions for Botball are:
   table(style='background-color: #f0f0f0;')
     tr
@@ -125,7 +125,7 @@ block content
               | stop command to the Create when the specified amount of time has elapsed.
           //
             no longer in code library
-            &lt;code&gt;&lt;a name="target_cha_in_chbx"&gt;&lt;/a&gt;target_cha_in_chb(&lt;cha&lt;/code&gt;&gt;, &lt;chb &lt;code&gt;&gt;, &lt;*&lt;/code&gt;x &lt;code&gt;&gt;, lt;*&lt;/code&gt;y &lt;code&gt;&gt;);&lt;/code&gt;
+            &lt;code&gt;&lt;a name='target_cha_in_chbx'&gt;&lt;/a&gt;target_cha_in_chb(&lt;cha&lt;/code&gt;&gt;, &lt;chb &lt;code&gt;&gt;, &lt;*&lt;/code&gt;x &lt;code&gt;&gt;, lt;*&lt;/code&gt;y &lt;code&gt;&gt;);&lt;/code&gt;
             &lt;dl&gt;&lt;dd&gt;Looks for a target consisting of a color blob on a color background, where the channel number for the inner color is &lt;code&gt;cha&lt;/code&gt; and for the surrounding surrounding background is &lt;code&gt;chb&lt;/code&gt;. If the target is found then the function returns 1, otherwise 0. If a target is found then the contents of the variables pointed to by x and y are changed to the center coordinate of the inner blob.
             &lt;/dd&gt;&lt;/dl&gt;
           code
@@ -138,8 +138,8 @@ block content
               | Steps the user through a calibration procedure to establish on/off light levels for a sensor
               | plugged in the specified port. If calibration does not provide enough discrimination
               | between light off and light on, the program cycles for another try. If there is enough
-              | discrimination, after "light off", the program blocks continued execution of the function
-              | until "light on", at which point execution resumes. 
+              | discrimination, after 'light off', the program blocks continued execution of the function
+              | until 'light on', at which point execution resumes. 
               code wait_for_light
               |  is normally
               |  placed at the beginning of a program designed to operate a robot, so that after calibration,

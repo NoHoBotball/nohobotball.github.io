@@ -161,7 +161,7 @@
         <div class="Indent"><code>#ifdef DEBUG<br>  printf(&quot;Going Left\n&quot;);<br>  beep();<br>#endif</code></div>
         <p>generates the debugging <code>printf</code> and <code>beep</code> only if <code>DEBUG</code>
            has been defined,
-           in which case the message "Going Left" will be printed and KIPR LINK will beep when program execution
+           in which case the message 'Going Left' will be printed and KIPR LINK will beep when program execution
            reaches this part of its code. If <code>DEBUG</code>
            is not defined, the preprocessor will leave the
            code out and the debugging alert will not occur as the program executes.
@@ -180,14 +180,14 @@
            #define DEBUG directive to the program, and deactivated by commenting it out. In particular,
            when <code>DEBUG</code> has been defined the code
         </p>
-        <div class="Indent"><code>SHOW(printf("%d\n",i);)</code></div>
+        <div class="Indent"><code>SHOW(printf('%d\n',i);)</code></div>
         <p>inserted at an appropriate point in the program will be expanded by the preprocessor to produce the code</p>
         <div class="Indent"><code>printf(&quot;DEBUG: &quot;); printf(&quot;i=%d\n&quot;,i);)</code></div>
         <p>Absent a definition for <code>DEBUG</code> the macro <code>SHOW</code>
            will expand to produce no code
            at all.
         </p>
-        <p>If the value of <code>i</code> is 8 and <code>DEBUG</code> has been defined, the expansion of <code>SHOW</code> illustrated above will generate code which outputs the debugging display " <code>DEBUG: i=8</code>".</p>
+        <p>If the value of <code>i</code> is 8 and <code>DEBUG</code> has been defined, the expansion of <code>SHOW</code> illustrated above will generate code which outputs the debugging display ' <code>DEBUG: i=8</code>'.</p>
         <!-- START FOOTER-->
       </div>
     </main>

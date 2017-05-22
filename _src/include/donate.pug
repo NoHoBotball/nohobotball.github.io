@@ -1,12 +1,12 @@
 extends ../exclude/base
 
 block vars
-  - var selected = "donate"
-  - var color = "blue"
-  - var themeColor = "#1976D2"
+  - var selected = 'donate'
+  - var color = 'blue'
+  - var themeColor = '#1976D2'
 
 block content
-  h1.header(class=color + '-text') We Need Your Help
+  h1.header(class=colorText) We Need Your Help
   h4.header To be able to compete in the Botball Competition
   h5.header
     | The registration fee for the Los Angeles competition is $2200. Costs increase if we qualify for further rounds of
@@ -26,7 +26,7 @@ block content
       p
         | Our new and improved support us page has much more information about what you can do to support us!
     .modal-footer
-      a.modal-action.modal-close.waves-effect.btn-flat(href='supportus.html', class=color + '-text') Go Now!
+      a.modal-action.modal-close.waves-effect.btn-flat(href='supportus.html', class=colorText) Go Now!
       a.modal-action.modal-close.waves-effect.btn-flat.waves-red Stay Here
   // Modal Structure
   #donate-now.modal.modal-fixed-footer
@@ -37,7 +37,7 @@ block content
         br
         | All donations are tax-deductable. Our nonprofit tax id number is 95-1916048. If you want to donate
         |                     with a check, you can find all contact information on the contact us page. All checks should be made
-        |                     payable to North Hollywood High School Student Body and the check should mention "Botball" in the memo
+        |                     payable to North Hollywood High School Student Body and the check should mention 'Botball' in the memo
         |                     section. That way you can make sure the money gets to us.
         br
         | Example:
@@ -158,5 +158,5 @@ block scripts
   script.
     $( document ).ready(function(){
     $('.modal-trigger').leanModal();
-    $("#new-supportus-page").openModal();
+    $('#new-supportus-page').openModal();
     })

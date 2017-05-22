@@ -2,7 +2,7 @@ extends ../../../exclude/docbase
 
 block vars
   - var selected = 'printing/examples'
-  - var path = ["Printing", "Examples"]
+  - var path = ['Printing', 'Examples']
 
 block content
   // Printing_Examples
@@ -21,7 +21,7 @@ block content
       code &gt;
       |  as a message; for example,
     .Indent
-      code printf("Hello, world!\n");
+      code printf('Hello, world!\n');
     p
       | The character 
       code \n
@@ -33,7 +33,7 @@ block content
     h4 Example 2: Printing an integer
     p
       | In most environments, integers in C are stored in memory as 32-bit 2's complement integers. The % code
-      | used to format the corresponding argument as a ± decimal integer is "%d" (or %i"). For the
+      | used to format the corresponding argument as a ± decimal integer is '%d' (or %i'). For the
       | following example, the value of the variable 
       code x
       |  is displayed as a decimal integer, with
@@ -42,39 +42,39 @@ block content
       code
         | printf(&quot;Value is %d\n&quot;, x);
     p
-      | The code "%d" specifies that the first argument after the initial character string in the argument list
+      | The code '%d' specifies that the first argument after the initial character string in the argument list
       | for 
       code printf
       |  (the variable 
       code x
       | ) is to be formatted as a ± decimal integer
-      |  and inserted in place of "%d" in the printed output. The length of the formatted output will vary
+      |  and inserted in place of '%d' in the printed output. The length of the formatted output will vary
       |  depending on the number.
     // Printing_a_number_in_hexadecimal
     a(name='Printing_a_number_in_hexadecimal')
     h4 Example 3: Other integer print formats
     p
-      | As already seen, the "%d" code is used to format an argument in ± decimal integer form. The "%x"
-      | and "%X" codes are used to format an argument in (32 bit) 2's complement form using hexadecimal (hex)
+      | As already seen, the '%d' code is used to format an argument in ± decimal integer form. The '%x'
+      | and '%X' codes are used to format an argument in (32 bit) 2's complement form using hexadecimal (hex)
       | digits 0 ..9,A,B,C,D,E,F (each of which represents 4 bits in binary, 0000, 0001, 0010, ..., 1111).
       | Negative 2's complement numbers have a leading 1, so negative 32-bit integers written in hex require
-      | 8 hex digits beginning with one of the hex digits 8-F; e.g., -28 when formatted using "%X" is FFFFFFE4.
+      | 8 hex digits beginning with one of the hex digits 8-F; e.g., -28 when formatted using '%X' is FFFFFFE4.
       | For positive numbers, the space required will vary unless a % code modifier for length is employed;
-      | e.g., using the % code "%8X" for the integer 28 will yield " 
+      | e.g., using the % code '%8X' for the integer 28 will yield ' 
       code
-      | 1C" (8 spaces are consumed).
+      | 1C' (8 spaces are consumed).
     p
       | It needs to be emphasized that a length modifier represents the minimum amount of space that will be
       | used when the formatted result is inserted in the print line. If there isn't enough space, 
       code printf
       |  will use more.
     p
-      | If the code "%08X" is used instead of "%8X", leading 0's will replace any leading spaces (so using %08X"
-      | for the integer 28 will yield "0000001C" as the formatted result). This applies to "%d" as well;
-      | e.g., formatting the numbers -28 and 28 using "%04d" yields as formatted results "-028" and "0028",
+      | If the code '%08X' is used instead of '%8X', leading 0's will replace any leading spaces (so using %08X'
+      | for the integer 28 will yield '0000001C' as the formatted result). This applies to '%d' as well;
+      | e.g., formatting the numbers -28 and 28 using '%04d' yields as formatted results '-028' and '0028',
       | respectively. A length specifier is employed when numbers are being printed to line up uniformly
       | in columns. If you always want the sign of the number printed, not just when it is negative, the
-      | code "%+d" forces the sign to be printed as 
+      | code '%+d' forces the sign to be printed as 
       code +
       |  or 
       code -
@@ -93,7 +93,7 @@ block content
     p
       | The third % code in this 
       code printf
-      |  ("%04x") has a length specifier (plus a leading 0's
+      |  ('%04x') has a length specifier (plus a leading 0's
       |  specifier) and lower case is used for the hex digits. If the value to be formatted requires more
       |  space, 
       code printf
@@ -110,12 +110,12 @@ block content
     a(name='Printing_a_floating_point_number')
     h4 Example 4: Printing a floating point number
     p
-      | The % code used to format the corresponding argument as a floating point number is "%f". In formatting
+      | The % code used to format the corresponding argument as a floating point number is '%f'. In formatting
       | for floating point, 
       code printf
       |  rounds the fractional part of the number up according
       |  to the number of decimal places used (its precision). The default precision is 6 decimal places.
-      |  A precision specifier is used to limit this. For example, "%.2f" limits the precision to 2 decimal
+      |  A precision specifier is used to limit this. For example, '%.2f' limits the precision to 2 decimal
       |  places. For example,
     .Indent
       code
@@ -125,12 +125,12 @@ block content
       code
         | Values are 1.266000, -1.27
     p
-      | The code "%f" specifies that the first argument after the initial character string in the argument
+      | The code '%f' specifies that the first argument after the initial character string in the argument
       | list for 
       code printf
       |  (1.266) is to be formatted as a floating point number rounded to
-      |  6 decimal places and inserted in place of "%f" in the printed output (since 6 decimal places
-      |  is sufficient, no rounding occurs). In contrast, the code "%.2f" for the second argument rounds
+      |  6 decimal places and inserted in place of '%f' in the printed output (since 6 decimal places
+      |  is sufficient, no rounding occurs). In contrast, the code '%.2f' for the second argument rounds
       |  its number (-1.266) to 2 decimal places to yield -1.27.
     p
       | There are additional floating point % codes described in C references that are used for formatting
@@ -147,7 +147,7 @@ block content
     a(name='Printing_character_strings')
     h4 Example 5: Printing character strings
     p
-      | The % code "%c" is used to format character data. The % code "%s" is used for character strings,
+      | The % code '%c' is used to format character data. The % code '%s' is used for character strings,
       | since they are frequently needed for print display.
     .Indent
       code
@@ -161,12 +161,12 @@ block content
       code
         | Data: a = 28
     p
-      | where for the printed output "%s" is replaced by the character string at the memory location corresponding
+      | where for the printed output '%s' is replaced by the character string at the memory location corresponding
       | to 
       code header
-      | , "%c" is replaced by the character given by 
+      | , '%c' is replaced by the character given by 
       code cs
-      | , and "%d"
+      | , and '%d'
       |  is replaced by the ± decimal representation of the data given by 
       code x
       | .
@@ -223,9 +223,9 @@ block content
         br
         | display_printf(4,2,&quot;%d. %s   &quot;,i,nm); // YES
     p
-      | then if we had already printed "2. KIPR store" and changed 
+      | then if we had already printed '2. KIPR store' and changed 
       code nm
-      |  to "Staffing" then
+      |  to 'Staffing' then
       |  the first of these would print
     .Indent
       code 2. Staffingre

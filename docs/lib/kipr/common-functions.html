@@ -165,7 +165,7 @@
                      formatting. The column range for the display is 0 to 41. For the 3 button (A,B,C) console
                      display, the row range is 0 to 9, and for the 6 button (X,Y,Z,A,B,C) console display,
                      the row range is 0 to 7. Excess data printed to a row is truncated (i.e. text does not
-                     wrap). Printing " <code>\n</code>" using <code>display_printf</code>
+                     wrap). Printing ' <code>\n</code>' using <code>display_printf</code>
                      will cause undesired
                      display results.
                   </dd>
@@ -183,7 +183,7 @@
                     For an analog sensor plugged into the port, returns a value scaled to the range 0-1023 representing
                     the analog voltage variation produced by the sensor. Analog ports are numbered 0-7. Light
                     sensors and range finders are examples of sensors used in analog ports. For some sensors,
-                    in particular, the "ET" distance sensor used for robotics, the port's pull up resistor
+                    in particular, the 'ET' distance sensor used for robotics, the port's pull up resistor
                     (enabled by default) has to be disabled for the analog values to be meaningful.
                   </dd>
                 </dl><code><a name="analog_etx"></a>analog_et(&lt;</code><i>port#</i><code>&gt;);</code>
@@ -192,7 +192,7 @@
                     For an analog sensor plugged into the port, disables the port's pullup resistor and returns
                     a value scaled to the range 0-1023 representing the analog voltage variation produced
                     by the sensor. Analog ports are numbered 0-7. This is the function normally used with
-                    the "ET" distance sensor used for robotics, which has a pullup sensor already integrated
+                    the 'ET' distance sensor used for robotics, which has a pullup sensor already integrated
                     into its circuitry.
                   </dd>
                 </dl><code><a name="msleepx"></a>msleep(&lt;</code><i>int_msecs</i><code>&gt;);</code>

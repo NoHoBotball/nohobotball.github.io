@@ -1,9 +1,9 @@
 extends ../exclude/base
 
 block vars
-  - var selected = "supportus"
-  - var color = "blue"
-  - var themeColor = "#1976D2"
+  - var selected = 'supportus'
+  - var color = 'blue'
+  - var themeColor = '#1976D2'
 
 block content
   #donate-with-check.modal
@@ -17,9 +17,9 @@ block content
         | If you choose option 2, click on the Contact Us button below to see the mailing address for the school that will get
         | the check to us.
     .modal-footer
-      a.modal-action.modal-close.waves-effect.btn-flat(href='contact.html', class=color + '-text') Contact Us
+      a.modal-action.modal-close.waves-effect.btn-flat(href='contact.html', class=colorText) Contact Us
   #title.section.scrollspy.row
-    h1.header(class=color + '-text')
+    h1.header(class=colorText)
       | We Need
       span(style='font-weight: 500') Your
       |  Support
@@ -98,7 +98,7 @@ block content
                 .card-action
                   a.white-text.waves-effect(href='contact.html') Contact Us
       #sponsorships.section.scrollspy.col.s12
-        h1#sponsorships.text-lighten-2(class=color + '-text')
+        h1#sponsorships.text-lighten-2(class=colorText)
           i.material-icons(style='font-size: 50px') business
           |  Sponsorships
         .row
@@ -133,7 +133,7 @@ block content
             p
               | All donations are tax-deductable. Our nonprofit tax id number is 95-1916048. If you want to donate with a check, you
               | can find all contact information on the contact us page. All checks should be made payable to North Hollywood High
-              | School Student Body and the check should mention "Botball" in the memo section. That way you can make sure the money
+              | School Student Body and the check should mention 'Botball' in the memo section. That way you can make sure the money
               | gets to us.
               br
               | Example:
@@ -171,39 +171,39 @@ block scripts
     $( document ).ready(function(){
     $('.scrollspy').scrollSpy({scrollOffset: 0});
     $('#nav').scroll(function() {
-    $('#toc').animate({top:$(this).scrollTop()},100,"linear");
+    $('#toc').animate({top:$(this).scrollTop()},100,'linear');
     })
     })
-    httpGetAsync("wishlist.json",callback);
+    httpGetAsync('wishlist.json',callback);
     function httpGetAsync(theUrl, callback) {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function () {
     if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
     callback(xmlHttp.responseText);
     }
-    xmlHttp.open("GET", theUrl, true); // true for asynchronous
+    xmlHttp.open('GET', theUrl, true); // true for asynchronous
     xmlHttp.send(null);
     }
     function callback(response) {
     var data = JSON.parse(response);
     data.forEach((item) => {
-    $("#wishlist").append(`<div class="col s12 m6 l4">
-    <div class="large card sticky-action hoverable">
-    <div class="card-image waves-effect waves-block waves-light">
-    <img class="activator" src="${item.image}" height="294" title=""
-    style="">
+    $('#wishlist').append(`<div class='col s12 m6 l4'>
+    <div class='large card sticky-action hoverable'>
+    <div class='card-image waves-effect waves-block waves-light'>
+    <img class='activator' src='${item.image}' height='294' title=''
+    style=''>
     </div>
-    <div class="card-content">
-    <span class="card-title activator grey-text text-darken-4">${item.name}<i class="material-icons waves-effect right">more_vert</i></span>
+    <div class='card-content'>
+    <span class='card-title activator grey-text text-darken-4'>${item.name}<i class='material-icons waves-effect right'>more_vert</i></span>
     </div>
-    <div class="card-reveal" style="display: none; transform: translateY(0px);">
-    <span class="card-title grey-text text-darken-4">${item.name}<i class="material-icons right">close</i></span>
+    <div class='card-reveal' style='display: none; transform: translateY(0px);'>
+    <span class='card-title grey-text text-darken-4'>${item.name}<i class='material-icons right'>close</i></span>
     <span><strong>$${item.price}</strong></span>
     <p>${item.description}</p>
     </div>
-    <div class="card-action">
-    <a href="${item.link}" class="waves-effect red-text text-lighten-2">Product Link</a>
-    <a class="activator waves-effect red-text text-lighten-2">More Info</a>
+    <div class='card-action'>
+    <a href='${item.link}' class='waves-effect red-text text-lighten-2'>Product Link</a>
+    <a class='activator waves-effect red-text text-lighten-2'>More Info</a>
     </div>
     </div>
     </div>`);

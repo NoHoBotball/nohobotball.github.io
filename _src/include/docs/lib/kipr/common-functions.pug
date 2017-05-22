@@ -2,7 +2,7 @@ extends ../../../../exclude/docbase
 
 block vars
   - var selected = 'lib/kipr/common-functions'
-  - var path = ["Lib", "Kipr", "Common Functions"]
+  - var path = ['Lib', 'Kipr', 'Common Functions']
 
 block content
   // Commonly_Used_Link_Library_Functions
@@ -34,9 +34,9 @@ block content
               |  formatting. The column range for the display is 0 to 41. For the 3 button (A,B,C) console
               |  display, the row range is 0 to 9, and for the 6 button (X,Y,Z,A,B,C) console display,
               |  the row range is 0 to 7. Excess data printed to a row is truncated (i.e. text does not
-              |  wrap). Printing " 
+              |  wrap). Printing ' 
               code \n
-              | " using 
+              | ' using 
               code display_printf
               |  will cause undesired
               |  display results.
@@ -61,7 +61,7 @@ block content
               | For an analog sensor plugged into the port, returns a value scaled to the range 0-1023 representing
               | the analog voltage variation produced by the sensor. Analog ports are numbered 0-7. Light
               | sensors and range finders are examples of sensors used in analog ports. For some sensors,
-              | in particular, the "ET" distance sensor used for robotics, the port's pull up resistor
+              | in particular, the 'ET' distance sensor used for robotics, the port's pull up resistor
               | (enabled by default) has to be disabled for the analog values to be meaningful.
           code
             a(name='analog_etx')
@@ -73,7 +73,7 @@ block content
               | For an analog sensor plugged into the port, disables the port's pullup resistor and returns
               | a value scaled to the range 0-1023 representing the analog voltage variation produced
               | by the sensor. Analog ports are numbered 0-7. This is the function normally used with
-              | the "ET" distance sensor used for robotics, which has a pullup sensor already integrated
+              | the 'ET' distance sensor used for robotics, which has a pullup sensor already integrated
               | into its circuitry.
           code
             a(name='msleepx')

@@ -2,14 +2,14 @@ extends ../../../../exclude/docbase
 
 block vars
   - var selected = 'lib/kipr/usb'
-  - var path = ["Lib", "Kipr", "USB"]
+  - var path = ['Lib', 'Kipr', 'USB']
 
 block content
   // The_Link_Library_File
   a(name='USB_stick')
   h2 File I/O for a USB Flash Drive Plugged into the KIPR Robot Controller
   p
-    | Before the Linux operating system can access a file system, it has to "mount" the file system. When a USB flash
+    | Before the Linux operating system can access a file system, it has to 'mount' the file system. When a USB flash
     | drive is plugged into the KIPR Robot Controller, it is automatically mounted. When the USB flash drive is
     | unplugged it is automatically unmounted. The C Library has a number of functions designed to access files
     | located in mounted file systems. The library functions 
@@ -22,7 +22,7 @@ block content
     |  processing commands, including ones for accessing files byte by byte. For a full description of the range
     |  of functions available consult a standard C reference book.
   p
-    | To access a file, in addition to the file name, the directory "path" leading to the file has to be known. For
+    | To access a file, in addition to the file name, the directory 'path' leading to the file has to be known. For
     | the KIPR Robot Controller, the directory path to a mounted Flash drive in a USB port is
   .Indent
     code /kovan/media/sda1/
@@ -32,7 +32,7 @@ block content
     | , which is defined in the system header file 
     code &lt;stdio.h&gt;
     | .
-    |  The pointer for a file is established when the file is "opened" for access. If the 
+    |  The pointer for a file is established when the file is 'opened' for access. If the 
     code fopen
     |  function
     |  returns a 

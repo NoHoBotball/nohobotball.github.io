@@ -248,7 +248,7 @@
                      integer between 0 and 1023. Analog ports on the KIPR Robot Controller are numbered 0
                      through 7. Each analog port on the KIPR Robot Controller has a selectable pullup resistor,
                      enabled by default since many analog sensors do not have this component built in, although
-                     some do (such as the "ET" range finder). For a sensor such as the ET sensor, the values
+                     some do (such as the 'ET' range finder). For a sensor such as the ET sensor, the values
                      returned by <code>analog</code>
                      will be unsatisfactory unless the pullup resistor for
                      its port is disabled by using <code> analog_et</code>.
@@ -264,7 +264,7 @@
                     , disables the port's pullup
                      resistor and returns a value scaled to the range 0-1023 representing the analog voltage
                      variation produced by the sensor. Analog ports are numbered 0-7. This is the function
-                     normally used with the "ET" distance sensor used for robotics, which has a pullup sensor
+                     normally used with the 'ET' distance sensor used for robotics, which has a pullup sensor
                      already integrated into its circuitry.
                   </dd>
                 </dl>
@@ -290,7 +290,7 @@
                      integer between 0 and 1023. Analog ports on the KIPR Robot Controller are numbered 0
                      through 7. Each analog port on the KIPR Robot Controller has a selectable pullup resistor,
                      enabled by default since many analog sensors do not have this component built in, although
-                     some do (such as the "ET" range finder). For a sensor such as the ET sensor, the values
+                     some do (such as the 'ET' range finder). For a sensor such as the ET sensor, the values
                      returned by <code>analog10</code>
                      will be unsatisfactory unless the pullup resistor for
                      its port is disabled. Same as <code>analog</code>
@@ -507,7 +507,7 @@
                      formatting. The column range for the display is 0 to 41. For the 3 button (A,B,C)
                      console display, the row range is 0 to 9, and for the 6 button (X,Y,Z,A,B,C) console display, the
                      row range is 0 to 7. Excess data printed to a row is truncated (i.e. text does not wrap). Printing
-                     " <code>\n</code>" using <code>display_printf</code> will cause undesired display results.
+                     ' <code>\n</code>' using <code>display_printf</code> will cause undesired display results.
                   </dd>
                 </dl>
               </td>
@@ -580,17 +580,17 @@
                 <dl>
                   <dd>Format: <code>void freeze(int m);</code><br>
                      Freezes motor m (prevents continued motor rotation, in contrast to
-                     off, which allows the motor to "coast").
+                     off, which allows the motor to 'coast').
                   </dd>
                 </dl>
               </td>
             </tr>
             <!--
             &lt;tr&gt;
-            &lt;td&gt;&lt;a name="get_analog_pullup"&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;a name='get_analog_pullup'&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td&gt; &lt;code&gt;get_analog_pullup&lt;/code&gt; [Category: Sensors]
             &lt;dl&gt;&lt;dd&gt;
-            Format: &lt;code&gt;&lt;font class="CVariable"&gt;int&lt;/font&gt; get_analog_pullup(&lt;font class="CVariable"&gt;int&lt;/font&gt; port);&lt;/code&gt;&lt;br&gt;
+            Format: &lt;code&gt;&lt;font class='CVariable'&gt;int&lt;/font&gt; get_analog_pullup(&lt;font class='CVariable'&gt;int&lt;/font&gt; port);&lt;/code&gt;&lt;br&gt;
             Returns 1 if the port's pullup resistor is enabled (the default), and 0 otherwise. See also &lt;code&gt;set_analog_pullup&lt;/code&gt;.&lt;/dd&gt;
             &lt;/dl&gt;
             &lt;/td&gt;
@@ -598,10 +598,10 @@
             -->
             <!--
             &lt;tr&gt;
-            &lt;td&gt;&lt;a name="get_digital_pullup"&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;a name='get_digital_pullup'&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td&gt; &lt;code&gt;get_digital_pullup&lt;/code&gt; [Category: Sensors]
             &lt;dl&gt;&lt;dd&gt;
-            Format: &lt;code&gt;&lt;font class="CVariable"&gt;int&lt;/font&gt; get_digital_pullup(&lt;font class="CVariable"&gt;int&lt;/font&gt; port);&lt;/code&gt;&lt;br&gt;
+            Format: &lt;code&gt;&lt;font class='CVariable'&gt;int&lt;/font&gt; get_digital_pullup(&lt;font class='CVariable'&gt;int&lt;/font&gt; port);&lt;/code&gt;&lt;br&gt;
             Returns 1 if the port's pullup resistor is enabled (the default), and 0 otherwise. See also &lt;code&gt;set_digital_pullup&lt;/code&gt;.&lt;/dd&gt;
             &lt;/dl&gt;
             &lt;/td&gt;
@@ -634,9 +634,9 @@
               <td><code>get_motor_position_counter</code> [Category: Motors]
                 <dl>
                   <dd>Format: <code>int get_motor_position_counter(int m);</code><br> Returns the current motor position for motor <code>m</code>
-                     in "ticks" (a value which is continually
+                     in 'ticks' (a value which is continually
                      being updated for each motor using PID motor control based on back EMF; a typical discrimination
-                     for a given motor is on the order of 1100 position "ticks" per rotation)
+                     for a given motor is on the order of 1100 position 'ticks' per rotation)
                   </dd>
                 </dl>
               </td>
@@ -825,21 +825,21 @@
                 <dl>
                   <dd>Format: <code>void set_a_button_text char txt[]);</code><br>
                      This function resets the text displayed on the A button to be the text string specified rather than
-                     the default string "A".
+                     the default string 'A'.
                   </dd>
                 </dl>
               </td>
             </tr>
             <!--
             &lt;tr&gt;
-            &lt;td&gt;&lt;a name="set_analog_pullup"&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;a name='set_analog_pullup'&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td&gt; &lt;code&gt;set_analog_pullup&lt;/code&gt; [Category: Sensors]
             &lt;dl&gt;&lt;dd&gt;
-            Format: &lt;code&gt;&lt;font class="CVariable"&gt;void&lt;/font&gt; set_analog_pullup(&lt;font class="CVariable"&gt;int&lt;/font&gt; port, &lt;font class="CVariable"&gt;int&lt;/font&gt; pullupTF);&lt;/code&gt;&lt;br&gt;
-            By default, a pullup resistor is enabled for each analog port. This function disables (or re-enables) the pullup resistor for the selected analog port. If an analog sensor doesn't have an integrated pullup resistor (such as an IR light sensor), the pullup resistor for the sensor's analog port needs to be enabled. For an analog sensor that sets its own pullup value (the "ET" optical range finder is such a sensor), the pullup resistor for its analog port needs to be disabled. For example, &lt;/code&gt;&lt;br&gt;
-            &lt;div class="Indent"&gt; &lt;code&gt;set_analog_pullup(3,0); &lt;font class="Comment"&gt;/*disable the port 3 pullup resistor&lt;/code&gt;&lt;br&gt;
-            (port is now "floating" and the ET sensor will work correctly in it)*/&lt;/font&gt;&lt;/code&gt;&lt;br&gt;
-            &lt;code&gt;set_analog_pullup(3,1); &lt;font class="Comment"&gt; /*re-enable the port 3 pullup resistor &lt;/code&gt;&lt;br&gt;
+            Format: &lt;code&gt;&lt;font class='CVariable'&gt;void&lt;/font&gt; set_analog_pullup(&lt;font class='CVariable'&gt;int&lt;/font&gt; port, &lt;font class='CVariable'&gt;int&lt;/font&gt; pullupTF);&lt;/code&gt;&lt;br&gt;
+            By default, a pullup resistor is enabled for each analog port. This function disables (or re-enables) the pullup resistor for the selected analog port. If an analog sensor doesn't have an integrated pullup resistor (such as an IR light sensor), the pullup resistor for the sensor's analog port needs to be enabled. For an analog sensor that sets its own pullup value (the 'ET' optical range finder is such a sensor), the pullup resistor for its analog port needs to be disabled. For example, &lt;/code&gt;&lt;br&gt;
+            &lt;div class='Indent'&gt; &lt;code&gt;set_analog_pullup(3,0); &lt;font class='Comment'&gt;/*disable the port 3 pullup resistor&lt;/code&gt;&lt;br&gt;
+            (port is now 'floating' and the ET sensor will work correctly in it)*/&lt;/font&gt;&lt;/code&gt;&lt;br&gt;
+            &lt;code&gt;set_analog_pullup(3,1); &lt;font class='Comment'&gt; /*re-enable the port 3 pullup resistor &lt;/code&gt;&lt;br&gt;
             (the ET sensor will no longer work correctly in it)*/&lt;/font&gt;&lt;/div&gt;&lt;/code&gt;
             See also &lt;code&gt;get_analog_pullup&lt;/code&gt; and &lt;code&gt;analog_ET&lt;/code&gt;.&lt;/dd&gt;
             &lt;/dl&gt;
@@ -852,7 +852,7 @@
                 <dl>
                   <dd>Format: <code>void set_b_button_textchar txt[]);</code><br>
                      This function resets the text displayed on the B button to be the text string specified rather than
-                     the default string "B".
+                     the default string 'B'.
                   </dd>
                 </dl>
               </td>
@@ -863,7 +863,7 @@
                 <dl>
                   <dd>Format: <code>void set_c_button_textchar txt[]);</code><br>
                      This function resets the text displayed on the C button to be the text string specified rather than
-                     the default string "C".
+                     the default string 'C'.
                   </dd>
                 </dl>
               </td>
@@ -886,10 +886,10 @@
             </tr>
             <!--
             &lt;tr&gt;
-            &lt;td&gt;&lt;a name="set_digital_pullup"&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;a name='set_digital_pullup'&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td&gt; &lt;code&gt;set_digital_pullup&lt;/code&gt; [Category: Sensors]
             &lt;dl&gt;&lt;dd&gt;
-            Format: &lt;code&gt;&lt;font class="CVariable"&gt;void&lt;/font&gt; &lt;font class="CFunction"&gt;set_digital_pullup&lt;/font&gt;(&lt;font class="CVariable"&gt;int&lt;/font&gt; port,&lt;font class="CVariable"&gt;int&lt;/font&gt; pullupTF);&lt;/code&gt;&lt;br&gt;
+            Format: &lt;code&gt;&lt;font class='CVariable'&gt;void&lt;/font&gt; &lt;font class='CFunction'&gt;set_digital_pullup&lt;/font&gt;(&lt;font class='CVariable'&gt;int&lt;/font&gt; port,&lt;font class='CVariable'&gt;int&lt;/font&gt; pullupTF);&lt;/code&gt;&lt;br&gt;
             By default, a pullup resistor is enabled for each digital port. This function disables (or re-enables) the pullup resistor for the selected digital port. If a digital sensor doesn't have an integrated pullup resistor (which is the case for simple switches or an LED), the pullup resistor for the sensor's digital port needs to be enabled. For a digital sensor that sets its own pullup value (there are none used for Botball), the pullup resistor for its digital port needs to be disabled. See also &lt;code&gt;get_digital_pullup&lt;/code&gt;.&lt;/dd&gt;
             &lt;/dl&gt;
             &lt;/td&gt;
@@ -958,7 +958,7 @@
                 <dl>
                   <dd>Format: <code>void set_x_button_text(char txt[]);</code><br>
                      This function resets the text displayed on the X button to be the text string specified rather than
-                     the default string "X". See also <code>extra_buttons_show, extra_buttons_hide, get_extra_buttons_visible</code>.
+                     the default string 'X'. See also <code>extra_buttons_show, extra_buttons_hide, get_extra_buttons_visible</code>.
                   </dd>
                 </dl>
               </td>
@@ -969,7 +969,7 @@
                 <dl>
                   <dd>Format: <code>void set_y_button_text(char txt[]);</code><br>
                      This function resets the text displayed on the Y button to be the text string specified rather than
-                     the default string "Y". See also <code>extra_buttons_show, extra_buttons_hide, get_extra_buttons_visible</code>.
+                     the default string 'Y'. See also <code>extra_buttons_show, extra_buttons_hide, get_extra_buttons_visible</code>.
                   </dd>
                 </dl>
               </td>
@@ -980,7 +980,7 @@
                 <dl>
                   <dd>Format: <code>void set_z_button_text(char txt[]);</code><br>
                      This function resets the text displayed on the Z button to be the text string specified rather than
-                     the default string "Z". See also <code>extra_buttons_show, extra_buttons_hide, get_extra_buttons_visible</code>.
+                     the default string 'Z'. See also <code>extra_buttons_show, extra_buttons_hide, get_extra_buttons_visible</code>.
                   </dd>
                 </dl>
               </td>
@@ -988,10 +988,10 @@
             <!--
             the purpose of the following function is unclear since it neither runs a motor nor affects performance of motor functions
             &lt;tr&gt;
-            &lt;td&gt;&lt;a name="setpwm"&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;a name='setpwm'&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td&gt; &lt;code&gt;setpwm&lt;/font&gt;&lt;/code&gt; [Category: Motors]
             &lt;dl&gt;&lt;dd&gt;
-            &lt;font class="CVariable"&gt;int&lt;/font&gt; setpwm(&lt;font class="CVariable"&gt;int &lt;/font&gt;m, &lt;font class="CVariable"&gt;int&lt;/font&gt; dc);&lt;/code&gt;&lt;br&gt;
+            &lt;font class='CVariable'&gt;int&lt;/font&gt; setpwm(&lt;font class='CVariable'&gt;int &lt;/font&gt;m, &lt;font class='CVariable'&gt;int&lt;/font&gt; dc);&lt;/code&gt;&lt;br&gt;
             Runs motor m at duty cycle &lt;code&gt;dc&lt;/code&gt; (values are from -100 to 100)&lt;/dd&gt;
             &lt;/dl&gt;
             &lt;/td&gt;
@@ -1231,7 +1231,7 @@
           <div class="Indent"><code>set_digital_value(9, 1);</code></div>
           <p>sets the output value for port 9 high.</p>
           <p>
-            If you have a typical 5mm LED on hand, you can use the following program to operate it. An LED will "turn on"
+            If you have a typical 5mm LED on hand, you can use the following program to operate it. An LED will 'turn on'
             when voltage applied to its anode lead rises above a prescribed level (typically between 1.9 and 3.2V, depending
             on color). If too much current is passed through the LED, it will burn out (the typical spec is 20-30mA).
             For the KIPR Robot Controller, digital outputs on the SEN rail are sufficiently current limited to operate
@@ -1245,7 +1245,7 @@
                   at the base of the LED is normally flattened on the cathode side.
                 </td>
                 <td>
-                  <!-- &lt;img src="/imgs/docs/LEDform.gif" style="float:right;" width="80%"&gt;&lt;/img&gt;-->
+                  <!-- &lt;img src='/imgs/docs/LEDform.gif' style='float:right;' width='80%'&gt;&lt;/img&gt;-->
                 </td>
               </tr>
             </tbody>

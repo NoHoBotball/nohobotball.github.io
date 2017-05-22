@@ -2,7 +2,7 @@ extends ../../../../../exclude/docbase
 
 block vars
   - var selected = 'lib/kipr/info/digital-analog-sensors'
-  - var path = ["Lib", "Kipr", "Info", "Digital and Analog Sensors"]
+  - var path = ['Lib', 'Kipr', 'Info', 'Digital and Analog Sensors']
 
 block content
   // KIPR Robot Controller Images
@@ -15,7 +15,7 @@ block content
     p
       | The image below is the front of the KIPR Robot Controller showing where the analog and digital sensor ports
       | are located.
-    // &lt;img class="center" src="/imgs/docs/Link_sensor_ports.gif" width="70%"&gt;&lt;/img&gt;
+    // &lt;img class='center' src='/imgs/docs/Link_sensor_ports.gif' width='70%'&gt;&lt;/img&gt;
     p.center
       br
       | Examples of digital and analog sensors used with the KIPR Robot Controller
@@ -41,7 +41,7 @@ block content
             a(href='#ET_sensor')
               img(border='0', src='/imgs/docs/ET.gif', width='60%')
               br
-              |  IR "E.T." Distance Sensor
+              |  IR 'E.T.' Distance Sensor
               br
             |  (floating analog)
         tr
@@ -58,7 +58,7 @@ block content
               br
               img(border='0', src='/imgs/docs/BreakBeam.gif')
               br
-              |  IR "Break Beam" Sensor
+              |  IR 'Break Beam' Sensor
               br
             |  (digital)
         tr
@@ -131,7 +131,7 @@ block content
         li Sensor has a reflectance range of about 3 inches
       // ET_sensor
       a(name='ET_sensor')
-      h4 Infrared "E.T." Distance Sensor (floating analog)
+      h4 Infrared 'E.T.' Distance Sensor (floating analog)
       img(border='0', src='/imgs/docs/ET.gif')
       br
       ul
@@ -175,7 +175,7 @@ block content
         li These make good bumpers and can be used for limit switches on an actuator
       // break_beam_sensor
       a(name='break_beam_sensor')
-      h4 Infrared "Break Beam" Sensor (digital)
+      h4 Infrared 'Break Beam' Sensor (digital)
       img(border='0', src='/imgs/docs/image010.gif')
       br
       ul
@@ -198,14 +198,14 @@ block content
           | the slot, alternately breaking the beam
       // sonar_sensor
       //
-        &lt;a name="sonar_sensor"&gt;&lt;/a&gt;
+        &lt;a name='sonar_sensor'&gt;&lt;/a&gt;
         &lt;h4&gt;Sonar (Ultrasonic Rangefinder)&lt;/h4&gt;
-        &lt;img border="0" height="180" width="90" src="/imgs/docs/sonar.jpg"&gt;
+        &lt;img border='0' height='180' width='90' src='/imgs/docs/sonar.jpg'&gt;
         &lt;br&gt;
         &lt;ul&gt;
-        &lt;li&gt;Timed analog sensor. Sends a "ping" of high-pitched sound and listens for an echo&lt;/li&gt;
+        &lt;li&gt;Timed analog sensor. Sends a 'ping' of high-pitched sound and listens for an echo&lt;/li&gt;
         &lt;li&gt;Connect to ports 0-7&lt;/li&gt;
-        &lt;li&gt;Access with function &lt;font class="CFunction"&gt;&lt;a href="#analog"&gt;analog&lt;/a&gt;&lt;/font&gt;(&lt;port#&gt;) &lt;/li&gt;
+        &lt;li&gt;Access with function &lt;font class='CFunction'&gt;&lt;a href='#analog'&gt;analog&lt;/a&gt;&lt;/font&gt;(&lt;port#&gt;) &lt;/li&gt;
         &lt;li&gt;Returned value is distance in inches to closest object in field of view&lt;/li&gt;
         &lt;li&gt;Range is approximately 10-250 inches&lt;/li&gt;
         &lt;li&gt;When first powered up, make sure there is nothing within 24

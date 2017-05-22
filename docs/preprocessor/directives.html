@@ -150,7 +150,7 @@
         <!-- Preprocessor_Directives--><a name="Preprocessor_Directives"></a>
         <h3>Preprocessor Directives</h3>
         <p>
-          Preprocessor directives are identified by the "#" symbol, which must be the first entry on a line for the directive
+          Preprocessor directives are identified by the '#' symbol, which must be the first entry on a line for the directive
           to be recognized by the C preprocessor.
         </p>
         <p>
@@ -176,7 +176,7 @@
         </p>
         <div class="Indent"><code>#ifndef PI<br>  #define PI 3.1416159<br>#endif</code></div>
         <p>
-          When the preprocessor encounters a valid macro name in the program code, the macro is called and its name "expanded"
+          When the preprocessor encounters a valid macro name in the program code, the macro is called and its name 'expanded'
           to be replaced by whatever text the macro generates; e.g., when the macro name PI is encountered by the preprocessor
           it replaces it with the text 3.1416159 (for the C compiler to subsequently interpret as a floating point
           constant).
@@ -207,11 +207,11 @@
         </p>
         <div class="Indent"><code>#define CFLAG 1<br>#if CFLAG==1<br>  display_printf(1,3,&quot;On target  &quot;);<br>#else<br>  printf(&quot;On target\n&quot;);<br>#endif</code></div>
         <p>selects which form of <code>printf</code>
-           to use according to how CFLAG is #defined. CFLAG serves as a "configuration
-           variable" to be set according to the ennvironment where the program will be run.
+           to use according to how CFLAG is #defined. CFLAG serves as a 'configuration
+           variable' to be set according to the ennvironment where the program will be run.
         </p>
         <p>
-          #elif has the same interpretation as "else if" and requires a condition test. The section of code
+          #elif has the same interpretation as 'else if' and requires a condition test. The section of code
           selected by
           #elif is terminated by any one of
           #else,
@@ -219,7 +219,7 @@
           #elif also.
         </p>
         <p>
-          #else has the same interpretation as "else", with its section of code terminated only by
+          #else has the same interpretation as 'else', with its section of code terminated only by
           #endif.
         </p>
         <p>

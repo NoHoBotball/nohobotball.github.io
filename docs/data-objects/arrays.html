@@ -189,10 +189,10 @@
             by character, but can also be initialized by using a string constant, for example:
           </p>
           <div class="Indent"><code>char ex_string[]= &quot;Hello there&quot;;</code></div>
-          <p>This initializes the character array <code>ex_string</code> with the ASCII values of the characters in " <code>Hello there</code>
-            " terminated by the (unprintable) ASCII character
-             '\0'. The length of the array is 12, which is the number of characters in " <code>Hello there</code>
-            "
+          <p>This initializes the character array <code>ex_string</code> with the ASCII values of the characters in ' <code>Hello there</code>
+            ' terminated by the (unprintable) ASCII character
+             '\0'. The length of the array is 12, which is the number of characters in ' <code>Hello there</code>
+            '
              plus 1 for the
              '\0' string termination character. If the array length had been declared, the initialization would
              leave the balance of the array indeterminate if more than 12 and truncated (including
@@ -202,14 +202,14 @@
              for example,
           </p>
           <div class="Indent"><code>char ans[10]=&quot;no&quot;;<br>int q=3;<br>     printf(&quot;The answer to %d is %s.\n&quot;,q,ans);</code></div>
-          <p>produces the (formatted) output " <code>The answer to 3 is no.</code>".</p>
+          <p>produces the (formatted) output ' <code>The answer to 3 is no.</code>'.</p>
           <p>The standard C library has string functions for assigning strings ( <code>strcpy</code>
             ), determining string
              length ( <code>strlen</code>), combining strings ( <code>strcat</code>
             ), and the like (look for string
              functions in your C reference). For example,
           </p>
-          <div class="Indent"><code>strcpy(s,"Example string");</code></div>
+          <div class="Indent"><code>strcpy(s,'Example string');</code></div>
           <p>is used to copy the character string in the second argument of <code>strcpy</code>
              to the character array
              in the first.

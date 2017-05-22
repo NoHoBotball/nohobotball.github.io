@@ -156,19 +156,19 @@
             int is normally stored in memory as a 32-bit 2's complement integer, which allows values in the
             range [-2<sup>31</sup>, 2<sup>31</sup>
             -1]. Integer constants can also be defined using hexadecimal (base
-             16) integer format (marked by the prefix " <code>0x</code>
-            "), or octal (base 8) integer format (marked
-             by the prefix " <code>0</code>
-            "), although both are awkward for representing negative numbers. For 32-bit
+             16) integer format (marked by the prefix ' <code>0x</code>
+            '), or octal (base 8) integer format (marked
+             by the prefix ' <code>0</code>
+            '), although both are awkward for representing negative numbers. For 32-bit
              two's complement integers, the following are true:
           </p>
           <div class="indent">4053<sub>10</sub> = FD5<sub>16</sub> = 7725<sub>8</sub><br> -1<sub>10</sub> = FFFFFFFF<sub>16</sub> = 37777777777<sub>8</sub>.</div>
           <p>In C notation, these comparisons become</p>
           <div class="indent"><code>4053 == 0xFD5 == 07725</code><br><code>-1 == 0xffffffff == 037777777777</code></div>
           <p>
-            which also illustrates each of the three formats. Appending a "u" or "U" to the constant changes its
+            which also illustrates each of the three formats. Appending a 'u' or 'U' to the constant changes its
             value to the range [0, 2<sup>32</sup>-1] rather than [-2<sup>31</sup>, 2<sup>31</sup>
-            -1]. An "unsigned"
+            -1]. An 'unsigned'
              specification is sometimes needed when data is to be copied to a variable of a different type; in
              particular, 8-bit bytes are treated as unsigned integers.
           </p>
@@ -182,7 +182,7 @@
             The number of bits used for representing integers is system dependent, but is typically 32 bits for
             type
             int. The data type
-            long int normally specifies a 64-bit integer, and is designated by appending "L" or "l"
+            long int normally specifies a 64-bit integer, and is designated by appending 'L' or 'l'
             to the integer's representation. For most programming needs, integer type (
             int) constants are sufficient.
           </p>
@@ -228,20 +228,20 @@
             A character constant is given by enclosing the character in single quote marks; e.g.,
             'K'. Characters are internally encoded in 8-bit bytes using ASCII representation (e.g.,
             the internal ASCII representation of
-            'K' is the (8-bit) hex pair "4B").
+            'K' is the (8-bit) hex pair '4B').
           </p>
           <p>
             A character string constant is a sequence of characters enclosed in quotation marks, e.g.,
-            "This is a character string.". C processes a character string as (1-dimensional) array
+            'This is a character string.'. C processes a character string as (1-dimensional) array
             delimited by the (unprintable) character constant
             '\0', which marks the end of the string within the array.
           </p>
           <p>
             The character constant
             'K' cannot be used interchangeably with the string constant
-            "K" since
+            'K' since
             'K' is an 8-bit integer and
-            "K" is a 16-bit string whose first 8-bits are the 8-bits for
+            'K' is a 16-bit string whose first 8-bits are the 8-bits for
             'K' and the second 8-bits are the 8-bits for
             '\0'.
           </p>

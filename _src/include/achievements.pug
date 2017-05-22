@@ -1,12 +1,12 @@
 extends ../exclude/base
 
 block vars
-  - var selected = "achievements"
-  - var color = "purple"
-  - var themeColor = "#00796b"
+  - var selected = 'achievements'
+  - var color = 'purple'
+  - var themeColor = '#00796b'
 
 block content
-  h1.header(class=color + '-text') Achievements
+  h1.header(class=colorText) Achievements
   .row
     .col.s12
       h2.header.center 2017 Greater Los Angeles Competition
@@ -71,4 +71,4 @@ block content
 block scripts
   script.
     $(document).ready(function () {
-    $(".active").parent().parent().siblings()[0].click() })
+    $('.active').parent().parent().siblings()[0].click() })

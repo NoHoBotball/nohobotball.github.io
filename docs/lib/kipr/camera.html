@@ -156,7 +156,7 @@
           configurations containing channels for color vision tracking and/or QR code identification can be defined.
         </p>
         <p>
-          For color vision tracking, images are processed by the KIPR Robot Controller to identify "blobs" matching the
+          For color vision tracking, images are processed by the KIPR Robot Controller to identify 'blobs' matching the
           color specification for each color channel in a camera configuration. A blob is a set of contiguous pixels
           in the image matching the color specification for the channel.
         </p>
@@ -165,7 +165,7 @@
           match the desired color for the channel are interactively selected from a color spectrum chart to provide
           a color specification for the channel. Live feed from the camera simplifies the process of determining how
           much of the spectrum is needed to produce blobs matching the color (e.g., a particular part of the spectrum
-          might include all pixels that are "reddish" in color for a channel to be used for identifying red objects).
+          might include all pixels that are 'reddish' in color for a channel to be used for identifying red objects).
           The spectrum values for the channel are retained with the configuration until the configuration is deleted.
           See the KIPR Robot Controller Manual available from KIPR for information on setting up camera configurations
           on a KIPR Robot Controller controller.
@@ -178,7 +178,7 @@
            is slightly smaller than the actual image size.
         </p>
         <p>
-          <!-- &lt;img class="center" src="/imgs/docs/Vision_Coordinates.gif" width="20%"&gt;&lt;/img&gt;-->
+          <!-- &lt;img class='center' src='/imgs/docs/Vision_Coordinates.gif' width='20%'&gt;&lt;/img&gt;-->
         </p>
         <p>
           KIPR Robot Controller Vision Library functions are used to select a configuration and obtain information
@@ -379,7 +379,7 @@
               <td><code>get_object_count </code> [Category: Vision]
                 <dl>
                   <dd>Format: <code>int get_object_count(int channel);</code><br>
-                     Returns the number of objects being "seen" for the specified channel. Objects
+                     Returns the number of objects being 'seen' for the specified channel. Objects
                      are sorted by bounding box area, largest first. Returns -1 if channel doesn't
                      exist. See also <code>get_channel_count</code>.
                   </dd>

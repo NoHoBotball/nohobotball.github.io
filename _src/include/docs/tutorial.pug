@@ -2,7 +2,7 @@ extends ../../exclude/docbase
 
 block vars
   - var selected = 'tutorial'
-  - var path = ["Tutorial"]
+  - var path = ['Tutorial']
 
 block content
   // A Quick C Tutorial
@@ -31,7 +31,7 @@ block content
     | ). Comments are normally included to document the function's purpose and
     |  expected behavior, and are ignored in the compilation process.
   a(name='SimpleProgram')
-  // div class="card-panel hoverable tomorrow lighten-2"
+  // div class='card-panel hoverable tomorrow lighten-2'
   pre
     code.language-clike
       | /* C Programmer&apos;s Manual 
@@ -83,7 +83,7 @@ block content
     | The open curly-brace ( 
     code {
     | ) that follows the argument list signifies the start of the actual function
-    |  code. Curly-braces are used to structure a program as blocks of code. For C, so-called "white space"
+    |  code. Curly-braces are used to structure a program as blocks of code. For C, so-called 'white space'
     |  consists of one or more of any combination of characters such as spaces, returns, new lines, and tabs,
     |  which is collapsed to a single generic white space character in compilation. For this reason, white space
     |  can be used for things like indentation that improve program readability. In particular, the KISS IDE
@@ -95,7 +95,7 @@ block content
     | ).
     |  The simple example program has a single statement,
   .Indent
-    code printf("Hello, world!\n");
+    code printf('Hello, world!\n');
   p
     | The action this statement specifies is calling the C library 
     code printf
@@ -105,7 +105,7 @@ block content
     |  to the project target. The
     |  '\n' directs 
     code printf
-    |  to "start a new line" (in effect ending the current line and
+    |  to 'start a new line' (in effect ending the current line and
     |  positioning for subsequent printing to start on the next line). When printing reaches the bottom of the
     |  KIPR Controller display, any additional lines printed cause the display to scroll up. Since calling the 
     code printf
@@ -161,12 +161,12 @@ block content
     |  the data type for a variable.
   p
     | When a function declaration specifies arguments, the variable names representing the arguments are local
-    | to the function, or stated another way, they are valid only within the "scope" of the function (they
+    | to the function, or stated another way, they are valid only within the 'scope' of the function (they
     | only have meaning within the function's block of code). For this reason, variable names used within
     | the scope of a function will not cause a semantic conflict should their names duplicate those local
     | to some other function.
   p
-    | The "scope" for the function 
+    | The 'scope' for the function 
     code square
     |  is what takes place within the block structure
     |  defining its actions (i.e., the contents within the curly braces surrounding its program statements).
@@ -201,7 +201,7 @@ block content
   br
   p
     | The argument list for this function has two arguments, each with integer data type. Additionally, its
-    | block structure includes a statement specifying a "working variable" 
+    | block structure includes a statement specifying a 'working variable' 
     code h
     | . The data type
     |  for 
@@ -237,7 +237,7 @@ block content
     |  is
     |  called with an integer argument instead of floating point? Answer: C will automatically coerce the
     |  integer to a floating point value (which uses a format involving both an exponent and a mantissa).
-    |  If C's automatic coercion does the "wrong" thing, it can be bypassed by specifying how the value
+    |  If C's automatic coercion does the 'wrong' thing, it can be bypassed by specifying how the value
     |  is to be coerced, which is accomplished by preceding it with the data type in parentheses into which
     |  it is to be converted; e.g., 
     code
@@ -314,7 +314,7 @@ block content
       br
       | double hypotenuse(int a, int b);
   p
-    | provide C "prototype" specifications for the 
+    | provide C 'prototype' specifications for the 
     code square
     |  and 
     code hypotenuse

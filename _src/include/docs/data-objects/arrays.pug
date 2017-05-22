@@ -2,7 +2,7 @@ extends ../../../exclude/docbase
 
 block vars
   - var selected = 'data-objects/arrays'
-  - var path = ["Data Objects", "Arrays"]
+  - var path = ['Data Objects', 'Arrays']
 
 block content
   // Arrays
@@ -69,12 +69,12 @@ block content
     p
       | This initializes the character array 
       code ex_string
-      |  with the ASCII values of the characters in " 
+      |  with the ASCII values of the characters in ' 
       code Hello there
-      | " terminated by the (unprintable) ASCII character
-      |  '\0'. The length of the array is 12, which is the number of characters in " 
+      | ' terminated by the (unprintable) ASCII character
+      |  '\0'. The length of the array is 12, which is the number of characters in ' 
       code Hello there
-      | "
+      | '
       |  plus 1 for the
       |  '\0' string termination character. If the array length had been declared, the initialization would
       |  leave the balance of the array indeterminate if more than 12 and truncated (including
@@ -91,10 +91,10 @@ block content
         br
         |      printf(&quot;The answer to %d is %s.\n&quot;,q,ans);
     p
-      | produces the (formatted) output " 
+      | produces the (formatted) output ' 
       code
         | The answer to 3 is no.
-      | ".
+      | '.
     p
       | The standard C library has string functions for assigning strings ( 
       code strcpy
@@ -106,7 +106,7 @@ block content
       | ), and the like (look for string
       |  functions in your C reference). For example,
     .Indent
-      code strcpy(s,"Example string");
+      code strcpy(s,'Example string');
     p
       | is used to copy the character string in the second argument of 
       code strcpy

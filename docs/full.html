@@ -189,7 +189,7 @@
           ). Comments are normally included to document the function's purpose and expected behavior,
            and are ignored in the compilation process.
         </p><a name="SimpleProgram"></a>
-        <!-- div class="card-panel hoverable tomorrow lighten-2"-->
+        <!-- div class='card-panel hoverable tomorrow lighten-2'-->
         <pre><code class="language-clike">/* C Programmer&apos;s Manual 
    Simple example */
 int main()
@@ -230,7 +230,7 @@ int main()
         </p>
         <p>The open curly-brace ( <code>{</code>
           ) that follows the argument list signifies the start of the actual function code.
-           Curly-braces are used to structure a program as blocks of code. For C, so-called "white space" consists of one
+           Curly-braces are used to structure a program as blocks of code. For C, so-called 'white space' consists of one
            or more of any combination of characters such as spaces, returns, new lines, and tabs, which is collapsed to a
            single generic white space character in compilation. For this reason, white space can be used for things like indentation
            that improve program readability. In particular, the KISS IDE editor automatically applies white space readability
@@ -242,13 +242,13 @@ int main()
           ). The simple example
            program has a single statement,
         </p>
-        <div class="Indent"><code>printf("Hello, world!\n");</code></div>
+        <div class="Indent"><code>printf('Hello, world!\n');</code></div>
         <p>The action this statement specifies is calling the C library <code>printf</code>
            function to format and print the
            message <code>Hello, world!</code>
            to the project target. The
            '\n' directs <code>printf</code>
-           to "start a new line" (in effect ending the current line and positioning
+           to 'start a new line' (in effect ending the current line and positioning
            for subsequent printing to start on the next line). When printing reaches the bottom of the KIPR Controller display,
            any additional lines printed cause the display to scroll up. Since calling the <code>printf</code>
            function is
@@ -285,11 +285,11 @@ int main()
         </p>
         <p>
           When a function declaration specifies arguments, the variable names representing the arguments are local to the
-          function, or stated another way, they are valid only within the "scope" of the function (they only have meaning
+          function, or stated another way, they are valid only within the 'scope' of the function (they only have meaning
           within the function's block of code). For this reason, variable names used within the scope of a function will
           not cause a semantic conflict should their names duplicate those local to some other function.
         </p>
-        <p>The "scope" for the function <code>square</code>
+        <p>The 'scope' for the function <code>square</code>
            is what takes place within the block structure defining
            its actions (i.e., the contents within the curly braces surrounding its program statements). In this case, the
            function's actions consist of a single statement; namely, the
@@ -311,7 +311,7 @@ double hypotenuse(int a, int b)
 }</code></pre><br>
         <p>
           The argument list for this function has two arguments, each with integer data type. Additionally, its block structure
-          includes a statement specifying a "working variable" <code>h</code>. The data type for <code>h</code>
+          includes a statement specifying a 'working variable' <code>h</code>. The data type for <code>h</code>
            is given
            as floating point, since the C library function <code>sqrt</code>
            returns a floating point argument. If its data
@@ -331,7 +331,7 @@ double hypotenuse(int a, int b)
            is called with
            an integer argument instead of floating point? Answer: C will automatically coerce the integer to a floating
            point value (which uses a format involving both an exponent and a mantissa). If C's automatic coercion does the
-           "wrong" thing, it can be bypassed by specifying how the value is to be coerced, which is accomplished by preceding
+           'wrong' thing, it can be bypassed by specifying how the value is to be coerced, which is accomplished by preceding
            it with the data type in parentheses into which it is to be converted; e.g., <code>(double)(square(a) + square(b))</code>.
         </p>
         <p>The <code>hypotenuse</code> function concludes by returning the value of <code>h</code>.</p>
@@ -366,7 +366,7 @@ double hypotenuse(int a, int b)
         </p>
         <p>The two C statements</p>
         <div class="Indent"><code>int square(int n); <br>double hypotenuse(int a, int b);</code></div>
-        <p>provide C "prototype" specifications for the <code>square</code> and <code>hypotenuse</code>
+        <p>provide C 'prototype' specifications for the <code>square</code> and <code>hypotenuse</code>
            functions used in
            the program. Similar prototypes need to be supplied for the standard C library's <code>printf</code>
            function
@@ -528,20 +528,20 @@ int function_example()
               int is normally stored in memory as a 32-bit 2's complement integer, which allows values
               in the range [-2<sup>31</sup>, 2<sup>31</sup>
               -1]. Integer constants can also be defined using hexadecimal
-               (base 16) integer format (marked by the prefix " <code>0x</code>
-              "), or octal (base 8) integer format
-               (marked by the prefix " <code>0</code>
-              "), although both are awkward for representing negative numbers.
+               (base 16) integer format (marked by the prefix ' <code>0x</code>
+              '), or octal (base 8) integer format
+               (marked by the prefix ' <code>0</code>
+              '), although both are awkward for representing negative numbers.
                For 32-bit two's complement integers, the following are true:
             </p>
             <div class="indent">4053<sub>10</sub> = FD5<sub>16</sub> = 7725<sub>8</sub><br> -1<sub>10</sub> = FFFFFFFF<sub>16</sub> = 37777777777<sub>8</sub>.</div>
             <p>In C notation, these comparisons become</p>
             <div class="indent"><code>4053 == 0xFD5 == 07725</code><br><code>-1 == 0xffffffff == 037777777777</code></div>
             <p>
-              which also illustrates each of the three formats. Appending a "u" or "U" to the constant changes
+              which also illustrates each of the three formats. Appending a 'u' or 'U' to the constant changes
               its value to the range [0, 2<sup>32</sup>-1] rather than [-2<sup>31</sup>, 2<sup>31</sup>
               -1].
-               An "unsigned" specification is sometimes needed when data is to be copied to a variable of a
+               An 'unsigned' specification is sometimes needed when data is to be copied to a variable of a
                different type; in particular, 8-bit bytes are treated as unsigned integers.
             </p>
             <p>
@@ -554,8 +554,8 @@ int function_example()
               The number of bits used for representing integers is system dependent, but is typically 32 bits
               for type
               int. The data type
-              long int normally specifies a 64-bit integer, and is designated by appending "L" or
-              "l" to the integer's representation. For most programming needs, integer type (
+              long int normally specifies a 64-bit integer, and is designated by appending 'L' or
+              'l' to the integer's representation. For most programming needs, integer type (
               int) constants are sufficient.
             </p>
             <!-- Floating_Point_Constants--><a name="Floating_Point_Constants"></a>
@@ -604,20 +604,20 @@ int function_example()
               A character constant is given by enclosing the character in single quote marks; e.g.,
               'K'. Characters are internally encoded in 8-bit bytes using ASCII representation (e.g.,
               the internal ASCII representation of
-              'K' is the (8-bit) hex pair "4B").
+              'K' is the (8-bit) hex pair '4B').
             </p>
             <p>
               A character string constant is a sequence of characters enclosed in quotation marks, e.g.,
-              "This is a character string.". C processes a character string as (1-dimensional) array
+              'This is a character string.'. C processes a character string as (1-dimensional) array
               delimited by the (unprintable) character constant
               '\0', which marks the end of the string within the array.
             </p>
             <p>
               The character constant
               'K' cannot be used interchangeably with the string constant
-              "K" since
+              'K' since
               'K' is an 8-bit integer and
-              "K" is a 16-bit string whose first 8-bits are the 8-bits for
+              'K' is a 16-bit string whose first 8-bits are the 8-bits for
               'K' and the second 8-bits are the 8-bits for
               '\0'.
             </p>
@@ -771,7 +771,7 @@ break;
           <p>
             A pointer data type can be defined for any allowed data type, included user-defined data types. When
             used as a unary operator (one argument), <code>*</code>
-             is the indirection (or "value at address")
+             is the indirection (or 'value at address')
              operator, and is used for defining and dereferencing pointer variables. For example,
           </p>
           <div class="Indent"><code>int *p;</code></div>
@@ -879,10 +879,10 @@ break;
             <div class="Indent"><code>char ex_string[]= &quot;Hello there&quot;;</code></div>
             <p>This initializes the character array <code>ex_string</code>
                with the ASCII values of the characters
-               in " <code>Hello there</code>
-              " terminated by the (unprintable) ASCII character
-               '\0'. The length of the array is 12, which is the number of characters in " <code>Hello there</code>
-              "
+               in ' <code>Hello there</code>
+              ' terminated by the (unprintable) ASCII character
+               '\0'. The length of the array is 12, which is the number of characters in ' <code>Hello there</code>
+              '
                plus 1 for the
                '\0' string termination character. If the array length had been declared, the initialization
                would leave the balance of the array indeterminate if more than 12 and truncated (including
@@ -892,14 +892,14 @@ break;
                formatted output; for example,
             </p>
             <div class="Indent"><code>char ans[10]=&quot;no&quot;;<br>int q=3;<br>     printf(&quot;The answer to %d is %s.\n&quot;,q,ans);</code></div>
-            <p>produces the (formatted) output " <code>The answer to 3 is no.</code>".</p>
+            <p>produces the (formatted) output ' <code>The answer to 3 is no.</code>'.</p>
             <p>The standard C library has string functions for assigning strings ( <code>strcpy</code>
               ), determining
                string length ( <code>strlen</code>), combining strings ( <code>strcat</code>
               ), and the like (look
                for string functions in your C reference). For example,
             </p>
-            <div class="Indent"><code>strcpy(s,"Example string");</code></div>
+            <div class="Indent"><code>strcpy(s,'Example string');</code></div>
             <p>is used to copy the character string in the second argument of <code>strcpy</code>
                to the character
                array in the first.
@@ -1056,7 +1056,7 @@ void show_ds(int x)
             Pointers to
             struct data types can also be used, just like pointers to any other type. When a pointer
             is for a
-            struct data type, an "arrow" ( <code>-&gt;</code>
+            struct data type, an 'arrow' ( <code>-&gt;</code>
             ) notation can be used to access elements
              of the structure addressed by the pointer; for example,
           </p>
@@ -1167,7 +1167,7 @@ int f_locals()
              the result is TRUE. In all other cases, the value for both operands is checked. This can
              be useful if x is being used as a TRUE/FALSE flag where y may initially be invalid when x is FALSE.
             <p>
-              Integer promotion is the action of "promoting" an arithmetic operand to a 32 bit integer, similar
+              Integer promotion is the action of 'promoting' an arithmetic operand to a 32 bit integer, similar
               to type casting or coercion. Unlike its counterpart, unary <code>-</code>, it is seldom used.
             </p>
             <!-- Floating_Point_Numbers--><a name="Floating_Point_Numbers"></a>
@@ -1199,7 +1199,7 @@ a = asin(0.123); // a is assigned the primary angle (in radians) having sine 0.1
               There are many more functions in each of these categories, plus functions for other kinds of manipulation of floating point
               data. The section below for <a href="KIPRWallabyManualBody.htm#Functions" target="ManualFrame">KIPR Robot Controller Library Functions</a>
                includes many of these under
-               the "Math" category designation.
+               the 'Math' category designation.
             </p>
             <!-- Characters--><a name="Characters"></a>
             <h4>Characters</h4>
@@ -1465,8 +1465,8 @@ else
               in English, such as
             </p>
             <ul>
-              <li>"If the fever is over 100F then schedule a doctor's appointment" (yes/no or do/don't do)</li>
-              <li>"If the manuscript is acceptable then pay for it, otherwise return it to the author" (either/or)</li>
+              <li>'If the fever is over 100F then schedule a doctor's appointment' (yes/no or do/don't do)</li>
+              <li>'If the manuscript is acceptable then pay for it, otherwise return it to the author' (either/or)</li>
             </ul><a name="TernaryOperator"></a>
             <h4>Ternary Operator <code>?:</code></h4>
             <p>The ternary operator <code>?:</code>
@@ -1559,7 +1559,7 @@ else
               In this case, the misplaced semi-colon for the
               while has made its <code>&lt;</code><i>statement or block</i><code>&gt;</code> component empty. Assuming <code>i</code>
                is less than 10 when the loop starts, this
-               semantic error makes the loop infinite and the program will "hang" at this point, requiring
+               semantic error makes the loop infinite and the program will 'hang' at this point, requiring
                a forced halt to end it. For ideas on how to locate this kind of semantic error for
                a program, see the section below on <a href="KIPRWallabyManualBody.htm#Program_Debugging" target="ManualFrame">program debugging</a>.
             </p>
@@ -1582,7 +1582,7 @@ else
             <p>For example,</p>
             <pre>int i; // counter will need some initial value
 while (i &lt; 100) { // has the counter reached its limit?
-printf("cnt = %d\n", i++); // show the counter and increment it
+printf('cnt = %d\n', i++); // show the counter and increment it
 if (side_button() != 0) break; // exit if the side_button is pressed
 msleep(1000); // pause for one second
 }</pre>
@@ -1608,7 +1608,7 @@ if (i &lt;= 0) { // don't start cnt until i reaches 1
 i+=1;
 continue;
 }
-printf("cnt = %d\n", i++); // show the counter and increment it
+printf('cnt = %d\n', i++); // show the counter and increment it
 if (side_button() != 0) break; // exit if the side_button is pressed
 msleep(1000); // pause for one second
 }</pre>
@@ -1732,11 +1732,11 @@ switch(answer[0])
     default:
         printf(&quot;answer was not understood\n&quot;);
 }</code></pre>
-            <p>If user input "yes sir" is captured in the character string <code>answer</code>
+            <p>If user input 'yes sir' is captured in the character string <code>answer</code>
               ,
-               then the text "answer was yes" will be printed to the screen. If if was "no sir",
-               then the "answer was no" would have been printed, and if it was "No sir", the
-               text "answer was not understood" would have been printed (since C is case sensitive,
+               then the text 'answer was yes' will be printed to the screen. If if was 'no sir',
+               then the 'answer was no' would have been printed, and if it was 'No sir', the
+               text 'answer was not understood' would have been printed (since C is case sensitive,
                'n' ≠ 'N').
               <!-- Do-While--><a name="Do-While"></a>
             </p>
@@ -1769,7 +1769,7 @@ while (&lt;<i>expression</i>&gt;);</code></pre>
     printf(&quot;.&quot;);
 while (seconds() &lt; 5);</code></pre>
             <p>
-              The logic insures that "." will be printed at least once (so something will always
+              The logic insures that '.' will be printed at least once (so something will always
               be printed), in contrast to
             </p>
             <pre><code class="language-clike">while (seconds() &lt; 5)
@@ -1795,7 +1795,7 @@ while (seconds() &lt; 5);</code></pre>
           <!-- White Space--><a name="White_Space"></a>
           <h4>White Space</h4>
           <p>
-            As noted earlier, the term "white space" references combinations of characters that when printed
+            As noted earlier, the term 'white space' references combinations of characters that when printed
             produce a blank area on the display. For C, white space is formed by using characters such as spaces,
             new lines, and tabs. The white space characters in C are
           </p>
@@ -1941,7 +1941,7 @@ int main()
                the sub-expression <code>(x * y-z)</code>, displaying the values of <code>x, y</code> and <code>z</code> might help discover the sub-expression should have been <code>(x * (y-z))</code>.
             </li>
             <li>
-              For a C program that crashes, "commenting out" sections of code can be used to locate the
+              For a C program that crashes, 'commenting out' sections of code can be used to locate the
               part of the program triggering the crash. Commenting out is relatively straight forward
               process to implement, because inserting
               // in front of a line of code turns it into a comment (so it will no longer be executed)
@@ -1979,7 +1979,7 @@ int main()
           <div class="Indent"><code>printf(&lt;</code><i>format-string</i><code>&gt, ... );</code></div>
           <p>The <code>&lt;</code><i>format-string</i><code>&gt;</code>
              is a character string which includes
-             0 or more "%" codes. For each % code, a corresponding argument is supplied to <code>printf</code> after the <code>&lt;</code><i>format-string</i><code>&gt;</code>
+             0 or more '%' codes. For each % code, a corresponding argument is supplied to <code>printf</code> after the <code>&lt;</code><i>format-string</i><code>&gt;</code>
              to provide the value to
              be formatted and inserted into the print output in place of its % code.
           </p>
@@ -2000,7 +2000,7 @@ int main()
           <div class="indent"><a name="Printing_a_message"></a>
             <h4>Example 1: Printing a message</h4>
             <p>A <code>printf</code> statement employing no % codes simply prints out the <code>&lt;</code><i>format-string</i><code>&gt;</code> as a message; for example,</p>
-            <div class="Indent"><code>printf("Hello, world!\n");</code></div>
+            <div class="Indent"><code>printf('Hello, world!\n');</code></div>
             <p>The character <code>\n</code>
                at the end of the string signifies an advance to the next
                (or new) line for any further printing by the program. When the bottom of the display
@@ -2011,28 +2011,28 @@ int main()
             <p>
               In most environments, integers in C are stored in memory as 32-bit 2's complement integers.
               The % code used to format the corresponding argument as a ± decimal integer
-              is "%d" (or %i"). For the following example, the value of the variable <code>x</code> is displayed as a decimal integer, with a leading minus sign if the integer is negative:
+              is '%d' (or %i'). For the following example, the value of the variable <code>x</code> is displayed as a decimal integer, with a leading minus sign if the integer is negative:
             </p>
             <div class="Indent"><code>printf(&quot;Value is %d\n&quot;, x);</code></div>
             <p>
-              The code "%d" specifies that the first argument after the initial character string
+              The code '%d' specifies that the first argument after the initial character string
               in the argument list for <code>printf</code> (the variable <code>x</code>
               ) is to
-               be formatted as a ± decimal integer and inserted in place of "%d" in the printed
+               be formatted as a ± decimal integer and inserted in place of '%d' in the printed
                output. The length of the formatted output will vary depending on the number.
             </p>
             <!-- Printing_a_number_in_hexadecimal--><a name="Printing_a_number_in_hexadecimal"></a>
             <h4>Example 3: Other integer print formats</h4>
             <p>
-              As already seen, the "%d" code is used to format an argument in ± decimal integer
-              form. The "%x" and "%X" codes are used to format an argument in (32 bit) 2's complement
+              As already seen, the '%d' code is used to format an argument in ± decimal integer
+              form. The '%x' and '%X' codes are used to format an argument in (32 bit) 2's complement
               form using hexadecimal (hex) digits 0 ..9,A,B,C,D,E,F (each of which represents 4
               bits in binary, 0000, 0001, 0010, ..., 1111). Negative 2's complement numbers have
               a leading 1, so negative 32-bit integers written in hex require 8 hex digits beginning
-              with one of the hex digits 8-F; e.g., -28 when formatted using "%X" is FFFFFFE4.
+              with one of the hex digits 8-F; e.g., -28 when formatted using '%X' is FFFFFFE4.
               For positive numbers, the space required will vary unless a % code modifier for length
-              is employed; e.g., using the % code "%8X" for the integer 28 will yield " <code></code>
-              1C"
+              is employed; e.g., using the % code '%8X' for the integer 28 will yield ' <code></code>
+              1C'
                (8 spaces are consumed).
             </p>
             <p>
@@ -2041,12 +2041,12 @@ int main()
               isn't enough space, <code>printf</code> will use more.
             </p>
             <p>
-              If the code "%08X" is used instead of "%8X", leading 0's will replace any leading spaces
-              (so using %08X" for the integer 28 will yield "0000001C" as the formatted result).
-              This applies to "%d" as well; e.g., formatting the numbers -28 and 28 using "%04d"
-              yields as formatted results "-028" and "0028", respectively. A length specifier is
+              If the code '%08X' is used instead of '%8X', leading 0's will replace any leading spaces
+              (so using %08X' for the integer 28 will yield '0000001C' as the formatted result).
+              This applies to '%d' as well; e.g., formatting the numbers -28 and 28 using '%04d'
+              yields as formatted results '-028' and '0028', respectively. A length specifier is
               employed when numbers are being printed to line up uniformly in columns. If you always
-              want the sign of the number printed, not just when it is negative, the code "%+d"
+              want the sign of the number printed, not just when it is negative, the code '%+d'
               forces the sign to be printed as <code>+</code> or <code>-</code>.
             </p>
             <p>For example, the <code>printf</code> statement</p>
@@ -2054,7 +2054,7 @@ int main()
             <p>displays the text string</p>
             <div class="Indent"><code>Values are -28, FFFFFFE4, 001c</code></div>
             <p>The third % code in this <code>printf</code>
-               ("%04x") has a length specifier (plus
+               ('%04x') has a length specifier (plus
                a leading 0's specifier) and lower case is used for the hex digits. If the value
                to be formatted requires more space, <code>printf</code>
                will override the length
@@ -2070,22 +2070,22 @@ int main()
             <h4>Example 4: Printing a floating point number</h4>
             <p>
               The % code used to format the corresponding argument as a floating point number is
-              "%f". In formatting for floating point, <code>printf</code>
+              '%f'. In formatting for floating point, <code>printf</code>
                rounds the fractional
                part of the number up according to the number of decimal places used (its precision).
                The default precision is 6 decimal places. A precision specifier is used to limit
-               this. For example, "%.2f" limits the precision to 2 decimal places. For example,
+               this. For example, '%.2f' limits the precision to 2 decimal places. For example,
             </p>
             <div class="Indent"><code>printf(&quot;Values are %f, %.2f\n&quot;, 1.266, -1.266);</code></div>
             <p>displays the text string</p>
             <div class="Indent"><code>Values are 1.266000, -1.27</code></div>
             <p>
-              The code "%f" specifies that the first argument after the initial character string
+              The code '%f' specifies that the first argument after the initial character string
               in the argument list for <code>printf</code>
                (1.266) is to be formatted as a floating
-               point number rounded to 6 decimal places and inserted in place of "%f" in the printed
+               point number rounded to 6 decimal places and inserted in place of '%f' in the printed
                output (since 6 decimal places is sufficient, no rounding occurs). In contrast,
-               the code "%.2f" for the second argument rounds its number (-1.266) to 2 decimal
+               the code '%.2f' for the second argument rounds its number (-1.266) to 2 decimal
                places to yield -1.27.
             </p>
             <p>
@@ -2096,18 +2096,18 @@ int main()
             <!-- Printing_character_strings--><a name="Printing_character_strings"></a>
             <h4>Example 5: Printing character strings</h4>
             <p>
-              The % code "%c" is used to format character data. The % code "%s" is used for character
+              The % code '%c' is used to format character data. The % code '%s' is used for character
               strings, since they are frequently needed for print display.
             </p>
             <div class="Indent"><code>char header[] = &quot;Data: &quot;, cs=&apos;a&apos;;<br>int x=28;<br>printf(&quot;%s%c = %d\n&quot;, header, cs, x);</code></div>
             <p>displays the text string</p>
             <div class="Indent"><code>Data: a = 28</code></div>
             <p>
-              where for the printed output "%s" is replaced by the character string at the memory
+              where for the printed output '%s' is replaced by the character string at the memory
               location corresponding to <code>header</code>
-              , "%c" is replaced by the character
+              , '%c' is replaced by the character
                given by <code>cs</code>
-              , and "%d" is replaced by the ± decimal representation
+              , and '%d' is replaced by the ± decimal representation
                of the data given by <code>x</code>.
             </p>
             <!-- Printing_using_display_printf--><a name="Printing_using_display_printf"></a>
@@ -2141,8 +2141,8 @@ int main()
               print; e.g., if one of the following was used,
             </p>
             <div class="Indent"><code>display_printf(4,2,&quot;%d. %s&quot;,i,nm); // NO<br>display_printf(4,2,&quot;%d. %s   &quot;,i,nm); // YES</code></div>
-            <p>then if we had already printed "2. KIPR store" and changed <code>nm</code>
-               to "Staffing"
+            <p>then if we had already printed '2. KIPR store' and changed <code>nm</code>
+               to 'Staffing'
                then the first of these would print
             </p>
             <div class="Indent"><code>2. Staffingre</code></div>
@@ -2210,7 +2210,7 @@ int main()
             <!-- Preprocessor_Directives--><a name="Preprocessor_Directives"></a>
             <h3>Preprocessor Directives</h3>
             <p>
-              Preprocessor directives are identified by the "#" symbol, which must be the first entry
+              Preprocessor directives are identified by the '#' symbol, which must be the first entry
               on a line for the directive to be recognized by the C preprocessor.
             </p>
             <p>
@@ -2240,7 +2240,7 @@ int main()
             <div class="Indent"><code>#ifndef PI<br>  #define PI 3.1416159<br>#endif</code></div>
             <p>
               When the preprocessor encounters a valid macro name in the program code, the macro is
-              called and its name "expanded" to be replaced by whatever text the macro generates;
+              called and its name 'expanded' to be replaced by whatever text the macro generates;
               e.g., when the macro name PI is encountered by the preprocessor it replaces it with
               the text 3.1416159 (for the C compiler to subsequently interpret as a floating point
               constant).
@@ -2274,11 +2274,11 @@ int main()
             <div class="Indent"><code>#define CFLAG 1<br>#if CFLAG==1<br>  display_printf(1,3,&quot;On target  &quot;);<br>#else<br>  printf(&quot;On target\n&quot;);<br>#endif</code></div>
             <p>selects which form of <code>printf</code>
                to use according to how CFLAG is #defined.
-               CFLAG serves as a "configuration variable" to be set according to the ennvironment
+               CFLAG serves as a 'configuration variable' to be set according to the ennvironment
                where the program will be run.
             </p>
             <p>
-              #elif has the same interpretation as "else if" and requires a condition test.
+              #elif has the same interpretation as 'else if' and requires a condition test.
               The section of code selected by
               #elif is terminated by any one of
               #else,
@@ -2286,7 +2286,7 @@ int main()
               #elif also.
             </p>
             <p>
-              #else has the same interpretation as "else", with its section of code terminated
+              #else has the same interpretation as 'else', with its section of code terminated
               only by
               #endif.
             </p>
@@ -2320,7 +2320,7 @@ int main()
             </p>
             <p>
               If the file name for a
-              #include directive is enclosed in "pointy brackets" ( <code>&lt; &gt;</code>
+              #include directive is enclosed in 'pointy brackets' ( <code>&lt; &gt;</code>
               )
                then the preprocessor searches for the file in the system's directory of header files.
             </p>
@@ -2415,7 +2415,7 @@ int main()
             </p>
             <div class="Indent"><code>#ifdef DEBUG<br>  printf(&quot;Going Left\n&quot;);<br>  beep();<br>#endif</code></div>
             <p>generates the debugging <code>printf</code> and <code>beep</code> only if <code>DEBUG</code>
-               has been defined, in which case the message "Going Left" will be printed and KIPR
+               has been defined, in which case the message 'Going Left' will be printed and KIPR
                LINK will beep when program execution reaches this part of its code. If <code>DEBUG</code>
                is not defined, the preprocessor will leave the code out and the debugging alert
                will not occur as the program executes.
@@ -2437,7 +2437,7 @@ int main()
                #define DEBUG directive to the program, and deactivated by commenting it
                out. In particular, when <code>DEBUG</code> has been defined the code
             </p>
-            <div class="Indent"><code>SHOW(printf("%d\n",i);)</code></div>
+            <div class="Indent"><code>SHOW(printf('%d\n',i);)</code></div>
             <p>
               inserted at an appropriate point in the program will be expanded by the preprocessor
               to produce the code
@@ -2451,7 +2451,7 @@ int main()
                has been defined, the
                expansion of <code>SHOW</code>
                illustrated above will generate code which outputs
-               the debugging display " <code>DEBUG: i=8</code>".
+               the debugging display ' <code>DEBUG: i=8</code>'.
             </p>
             <!-- Math_Functions--><a name="C_Math_Library"></a>
             <h2>The C Library Math Functions</h2>
@@ -2570,7 +2570,7 @@ int main()
                          Returns
                          a (pseudo) random integer between 0 and a very large integer established
                          on system installation, drawn from the (pseudo) random number stream
-                         initiated at start of program execution according to a "seed" value. <code>rand()%m </code> restricts the range from 0 to m-1. <code>srand</code>
+                         initiated at start of program execution according to a 'seed' value. <code>rand()%m </code> restricts the range from 0 to m-1. <code>srand</code>
                          is used to re-seed random number generation to vary the random number
                          stream used.
                       </dd>
@@ -2633,7 +2633,7 @@ int main()
             <!-- The_Link_Library_File--><a name="USB_stick"></a>
             <h2>File I/O for a USB Flash Drive Plugged into the KIPR Robot Controller</h2>
             <p>
-              Before the Linux operating system can access a file system, it has to "mount" the
+              Before the Linux operating system can access a file system, it has to 'mount' the
               file system. When a USB flash drive is plugged into the KIPR Robot Controller,
               it is automatically mounted. When the USB flash drive is unplugged it is automatically
               unmounted. The C Library has a number of functions designed to access files located
@@ -2645,7 +2645,7 @@ int main()
                range of functions available consult a standard C reference book.
             </p>
             <p>
-              To access a file, in addition to the file name, the directory "path" leading to the
+              To access a file, in addition to the file name, the directory 'path' leading to the
               file has to be known. For the KIPR Robot Controller, the directory path to a mounted
               Flash drive in a USB port is
             </p>
@@ -2654,7 +2654,7 @@ int main()
               , which is defined
                in the system header file <code>&lt;stdio.h&gt;</code>
               . The pointer for a file
-               is established when the file is "opened" for access. If the <code>fopen</code> function returns a <code>NULL</code>
+               is established when the file is 'opened' for access. If the <code>fopen</code> function returns a <code>NULL</code>
                pointer, it indicates that either the file doesn't exist for
                the specified file path, or its file system hasn't been mounted (e.g., the USB
                drive has not been plugged in). Both cases are illustrated in the following program
@@ -2737,8 +2737,8 @@ int main()
                          range for the display is 0 to 41. For the 3 button (A,B,C) console
                          display, the row range is 0 to 9, and for the 6 button (X,Y,Z,A,B,C)
                          console display, the row range is 0 to 7. Excess data printed to
-                         a row is truncated (i.e. text does not wrap). Printing " <code>\n</code>
-                        "
+                         a row is truncated (i.e. text does not wrap). Printing ' <code>\n</code>
+                        '
                          using <code>display_printf</code> will cause undesired display results.
                       </dd>
                     </dl><code><a name="digitalx"></a>digital(&lt;</code><i>port#</i><code>&gt;)</code>
@@ -2757,7 +2757,7 @@ int main()
                         to the range 0-1023 representing the analog voltage variation produced
                         by the sensor. Analog ports are numbered 0-7. Light sensors and range
                         finders are examples of sensors used in analog ports. For some sensors,
-                        in particular, the "ET" distance sensor used for robotics, the port's
+                        in particular, the 'ET' distance sensor used for robotics, the port's
                         pull up resistor (enabled by default) has to be disabled for the
                         analog values to be meaningful.
                       </dd>
@@ -2767,7 +2767,7 @@ int main()
                         For an analog sensor plugged into the port, disables the port's pullup
                         resistor and returns a value scaled to the range 0-1023 representing
                         the analog voltage variation produced by the sensor. Analog ports
-                        are numbered 0-7. This is the function normally used with the "ET"
+                        are numbered 0-7. This is the function normally used with the 'ET'
                         distance sensor used for robotics, which has a pullup sensor already
                         integrated into its circuitry.
                       </dd>
@@ -2932,7 +2932,7 @@ int main()
                          Robot Controller are numbered 0 through 7. Each analog port on the
                          KIPR Robot Controller has a selectable pullup resistor, enabled by
                          default since many analog sensors do not have this component built
-                         in, although some do (such as the "ET" range finder). For a sensor
+                         in, although some do (such as the 'ET' range finder). For a sensor
                          such as the ET sensor, the values returned by <code>analog</code>
                          will be unsatisfactory unless the pullup resistor for its port is
                          disabled by using <code> analog_et</code>.
@@ -2949,7 +2949,7 @@ int main()
                          the port's pullup resistor and returns a value scaled to the range
                          0-1023 representing the analog voltage variation produced by the
                          sensor. Analog ports are numbered 0-7. This is the function normally
-                         used with the "ET" distance sensor used for robotics, which has a
+                         used with the 'ET' distance sensor used for robotics, which has a
                          pullup sensor already integrated into its circuitry.
                       </dd>
                     </dl>
@@ -2978,7 +2978,7 @@ int main()
                          Robot Controller are numbered 0 through 7. Each analog port on the
                          KIPR Robot Controller has a selectable pullup resistor, enabled by
                          default since many analog sensors do not have this component built
-                         in, although some do (such as the "ET" range finder). For a sensor
+                         in, although some do (such as the 'ET' range finder). For a sensor
                          such as the ET sensor, the values returned by <code>analog10</code>
                          will be unsatisfactory unless the pullup resistor for its port is
                          disabled. Same as <code>analog</code>
@@ -3207,7 +3207,7 @@ int main()
                          formatting. The column range for the display is 0 to 41. For
                          the 3 button (A,B,C) console display, the row range is 0 to 9, and for the 6 button
                          (X,Y,Z,A,B,C) console display, the row range is 0 to 7. Excess data printed to
-                         a row is truncated (i.e. text does not wrap). Printing " <code>\n</code>" using <code>display_printf</code> will cause undesired display results.
+                         a row is truncated (i.e. text does not wrap). Printing ' <code>\n</code>' using <code>display_printf</code> will cause undesired display results.
                       </dd>
                     </dl>
                   </td>
@@ -3278,17 +3278,17 @@ int main()
                     <dl>
                       <dd>Format: <code>void freeze(int m);</code><br>
                          Freezes motor m (prevents continued motor rotation, in contrast to
-                         off, which allows the motor to "coast").
+                         off, which allows the motor to 'coast').
                       </dd>
                     </dl>
                   </td>
                 </tr>
                 <!--
                 &lt;tr&gt;
-                &lt;td&gt;&lt;a name="get_analog_pullup"&gt;&lt;/a&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;a name='get_analog_pullup'&gt;&lt;/a&gt;&lt;/td&gt;
                 &lt;td&gt; &lt;code&gt;get_analog_pullup&lt;/code&gt; [Category: Sensors]
                 &lt;dl&gt;&lt;dd&gt;
-                Format: &lt;code&gt;&lt;font class="CVariable"&gt;int&lt;/font&gt; get_analog_pullup(&lt;font class="CVariable"&gt;int&lt;/font&gt; port);&lt;/code&gt;&lt;br&gt;
+                Format: &lt;code&gt;&lt;font class='CVariable'&gt;int&lt;/font&gt; get_analog_pullup(&lt;font class='CVariable'&gt;int&lt;/font&gt; port);&lt;/code&gt;&lt;br&gt;
                 Returns 1 if the port's pullup resistor is enabled (the default), and 0 otherwise. See also &lt;code&gt;set_analog_pullup&lt;/code&gt;.&lt;/dd&gt;
                 &lt;/dl&gt;
                 &lt;/td&gt;
@@ -3296,10 +3296,10 @@ int main()
                 -->
                 <!--
                 &lt;tr&gt;
-                &lt;td&gt;&lt;a name="get_digital_pullup"&gt;&lt;/a&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;a name='get_digital_pullup'&gt;&lt;/a&gt;&lt;/td&gt;
                 &lt;td&gt; &lt;code&gt;get_digital_pullup&lt;/code&gt; [Category: Sensors]
                 &lt;dl&gt;&lt;dd&gt;
-                Format: &lt;code&gt;&lt;font class="CVariable"&gt;int&lt;/font&gt; get_digital_pullup(&lt;font class="CVariable"&gt;int&lt;/font&gt; port);&lt;/code&gt;&lt;br&gt;
+                Format: &lt;code&gt;&lt;font class='CVariable'&gt;int&lt;/font&gt; get_digital_pullup(&lt;font class='CVariable'&gt;int&lt;/font&gt; port);&lt;/code&gt;&lt;br&gt;
                 Returns 1 if the port's pullup resistor is enabled (the default), and 0 otherwise. See also &lt;code&gt;set_digital_pullup&lt;/code&gt;.&lt;/dd&gt;
                 &lt;/dl&gt;
                 &lt;/td&gt;
@@ -3330,10 +3330,10 @@ int main()
                   <td><code>get_motor_position_counter</code> [Category: Motors]
                     <dl>
                       <dd>Format: <code>int get_motor_position_counter(int m);</code><br> Returns the current motor position for motor <code>m</code>
-                         in "ticks" (a value
+                         in 'ticks' (a value
                          which is continually being updated for each motor using PID motor control based
                          on back EMF; a typical discrimination for a given motor is on the order of 1100
-                         position "ticks" per rotation)
+                         position 'ticks' per rotation)
                       </dd>
                     </dl>
                   </td>
@@ -3532,21 +3532,21 @@ int main()
                     <dl>
                       <dd>Format: <code>void set_a_button_text char txt[]);</code><br>
                          This function resets the text displayed on the A button to be the text string specified
-                         rather than the default string "A".
+                         rather than the default string 'A'.
                       </dd>
                     </dl>
                   </td>
                 </tr>
                 <!--
                 &lt;tr&gt;
-                &lt;td&gt;&lt;a name="set_analog_pullup"&gt;&lt;/a&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;a name='set_analog_pullup'&gt;&lt;/a&gt;&lt;/td&gt;
                 &lt;td&gt; &lt;code&gt;set_analog_pullup&lt;/code&gt; [Category: Sensors]
                 &lt;dl&gt;&lt;dd&gt;
-                Format: &lt;code&gt;&lt;font class="CVariable"&gt;void&lt;/font&gt; set_analog_pullup(&lt;font class="CVariable"&gt;int&lt;/font&gt; port, &lt;font class="CVariable"&gt;int&lt;/font&gt; pullupTF);&lt;/code&gt;&lt;br&gt;
-                By default, a pullup resistor is enabled for each analog port. This function disables (or re-enables) the pullup resistor for the selected analog port. If an analog sensor doesn't have an integrated pullup resistor (such as an IR light sensor), the pullup resistor for the sensor's analog port needs to be enabled. For an analog sensor that sets its own pullup value (the "ET" optical range finder is such a sensor), the pullup resistor for its analog port needs to be disabled. For example, &lt;/code&gt;&lt;br&gt;
-                &lt;div class="Indent"&gt; &lt;code&gt;set_analog_pullup(3,0); &lt;font class="Comment"&gt;/*disable the port 3 pullup resistor&lt;/code&gt;&lt;br&gt;
-                (port is now "floating" and the ET sensor will work correctly in it)*/&lt;/font&gt;&lt;/code&gt;&lt;br&gt;
-                &lt;code&gt;set_analog_pullup(3,1); &lt;font class="Comment"&gt; /*re-enable the port 3 pullup resistor &lt;/code&gt;&lt;br&gt;
+                Format: &lt;code&gt;&lt;font class='CVariable'&gt;void&lt;/font&gt; set_analog_pullup(&lt;font class='CVariable'&gt;int&lt;/font&gt; port, &lt;font class='CVariable'&gt;int&lt;/font&gt; pullupTF);&lt;/code&gt;&lt;br&gt;
+                By default, a pullup resistor is enabled for each analog port. This function disables (or re-enables) the pullup resistor for the selected analog port. If an analog sensor doesn't have an integrated pullup resistor (such as an IR light sensor), the pullup resistor for the sensor's analog port needs to be enabled. For an analog sensor that sets its own pullup value (the 'ET' optical range finder is such a sensor), the pullup resistor for its analog port needs to be disabled. For example, &lt;/code&gt;&lt;br&gt;
+                &lt;div class='Indent'&gt; &lt;code&gt;set_analog_pullup(3,0); &lt;font class='Comment'&gt;/*disable the port 3 pullup resistor&lt;/code&gt;&lt;br&gt;
+                (port is now 'floating' and the ET sensor will work correctly in it)*/&lt;/font&gt;&lt;/code&gt;&lt;br&gt;
+                &lt;code&gt;set_analog_pullup(3,1); &lt;font class='Comment'&gt; /*re-enable the port 3 pullup resistor &lt;/code&gt;&lt;br&gt;
                 (the ET sensor will no longer work correctly in it)*/&lt;/font&gt;&lt;/div&gt;&lt;/code&gt;
                 See also &lt;code&gt;get_analog_pullup&lt;/code&gt; and &lt;code&gt;analog_ET&lt;/code&gt;.&lt;/dd&gt;
                 &lt;/dl&gt;
@@ -3559,7 +3559,7 @@ int main()
                     <dl>
                       <dd>Format: <code>void set_b_button_textchar txt[]);</code><br>
                          This function resets the text displayed on the B button to be the text string specified
-                         rather than the default string "B".
+                         rather than the default string 'B'.
                       </dd>
                     </dl>
                   </td>
@@ -3570,7 +3570,7 @@ int main()
                     <dl>
                       <dd>Format: <code>void set_c_button_textchar txt[]);</code><br>
                          This function resets the text displayed on the C button to be the text string specified
-                         rather than the default string "C".
+                         rather than the default string 'C'.
                       </dd>
                     </dl>
                   </td>
@@ -3589,10 +3589,10 @@ int main()
                 </tr>
                 <!--
                 &lt;tr&gt;
-                &lt;td&gt;&lt;a name="set_digital_pullup"&gt;&lt;/a&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;a name='set_digital_pullup'&gt;&lt;/a&gt;&lt;/td&gt;
                 &lt;td&gt; &lt;code&gt;set_digital_pullup&lt;/code&gt; [Category: Sensors]
                 &lt;dl&gt;&lt;dd&gt;
-                Format: &lt;code&gt;&lt;font class="CVariable"&gt;void&lt;/font&gt; &lt;font class="CFunction"&gt;set_digital_pullup&lt;/font&gt;(&lt;font class="CVariable"&gt;int&lt;/font&gt; port,&lt;font class="CVariable"&gt;int&lt;/font&gt; pullupTF);&lt;/code&gt;&lt;br&gt;
+                Format: &lt;code&gt;&lt;font class='CVariable'&gt;void&lt;/font&gt; &lt;font class='CFunction'&gt;set_digital_pullup&lt;/font&gt;(&lt;font class='CVariable'&gt;int&lt;/font&gt; port,&lt;font class='CVariable'&gt;int&lt;/font&gt; pullupTF);&lt;/code&gt;&lt;br&gt;
                 By default, a pullup resistor is enabled for each digital port. This function disables (or re-enables) the pullup resistor for the selected digital port. If a digital sensor doesn't have an integrated pullup resistor (which is the case for simple switches or an LED), the pullup resistor for the sensor's digital port needs to be enabled. For a digital sensor that sets its own pullup value (there are none used for Botball), the pullup resistor for its digital port needs to be disabled. See also &lt;code&gt;get_digital_pullup&lt;/code&gt;.&lt;/dd&gt;
                 &lt;/dl&gt;
                 &lt;/td&gt;
@@ -3663,7 +3663,7 @@ int main()
                     <dl>
                       <dd>Format: <code>void set_x_button_text(char txt[]);</code><br>
                          This function resets the text displayed on the X button to be the text string specified
-                         rather than the default string "X". See also <code>extra_buttons_show, extra_buttons_hide, get_extra_buttons_visible</code>.
+                         rather than the default string 'X'. See also <code>extra_buttons_show, extra_buttons_hide, get_extra_buttons_visible</code>.
                       </dd>
                     </dl>
                   </td>
@@ -3674,7 +3674,7 @@ int main()
                     <dl>
                       <dd>Format: <code>void set_y_button_text(char txt[]);</code><br>
                          This function resets the text displayed on the Y button to be the text string specified
-                         rather than the default string "Y". See also <code>extra_buttons_show, extra_buttons_hide, get_extra_buttons_visible</code>.
+                         rather than the default string 'Y'. See also <code>extra_buttons_show, extra_buttons_hide, get_extra_buttons_visible</code>.
                       </dd>
                     </dl>
                   </td>
@@ -3685,7 +3685,7 @@ int main()
                     <dl>
                       <dd>Format: <code>void set_z_button_text(char txt[]);</code><br>
                          This function resets the text displayed on the Z button to be the text string specified
-                         rather than the default string "Z". See also <code>extra_buttons_show, extra_buttons_hide, get_extra_buttons_visible</code>.
+                         rather than the default string 'Z'. See also <code>extra_buttons_show, extra_buttons_hide, get_extra_buttons_visible</code>.
                       </dd>
                     </dl>
                   </td>
@@ -3693,10 +3693,10 @@ int main()
                 <!--
                 the purpose of the following function is unclear since it neither runs a motor nor affects performance of motor functions
                 &lt;tr&gt;
-                &lt;td&gt;&lt;a name="setpwm"&gt;&lt;/a&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;a name='setpwm'&gt;&lt;/a&gt;&lt;/td&gt;
                 &lt;td&gt; &lt;code&gt;setpwm&lt;/font&gt;&lt;/code&gt; [Category: Motors]
                 &lt;dl&gt;&lt;dd&gt;
-                &lt;font class="CVariable"&gt;int&lt;/font&gt; setpwm(&lt;font class="CVariable"&gt;int &lt;/font&gt;m, &lt;font class="CVariable"&gt;int&lt;/font&gt; dc);&lt;/code&gt;&lt;br&gt;
+                &lt;font class='CVariable'&gt;int&lt;/font&gt; setpwm(&lt;font class='CVariable'&gt;int &lt;/font&gt;m, &lt;font class='CVariable'&gt;int&lt;/font&gt; dc);&lt;/code&gt;&lt;br&gt;
                 Runs motor m at duty cycle &lt;code&gt;dc&lt;/code&gt; (values are from -100 to 100)&lt;/dd&gt;
                 &lt;/dl&gt;
                 &lt;/td&gt;
@@ -3944,7 +3944,7 @@ int main()
               <p>sets the output value for port 9 high.</p>
               <p>
                 If you have a typical 5mm LED on hand, you can use the following program to operate it.
-                An LED will "turn on" when voltage applied to its anode lead rises above a prescribed
+                An LED will 'turn on' when voltage applied to its anode lead rises above a prescribed
                 level (typically between 1.9 and 3.2V, depending on color). If too much current is
                 passed through the LED, it will burn out (the typical spec is 20-30mA). For the KIPR
                 Robot Controller, digital outputs on the SEN rail are sufficiently current limited
@@ -3958,7 +3958,7 @@ int main()
                       the flange at the base of the LED is normally flattened on the cathode side.
                     </td>
                     <td>
-                      <!-- &lt;img src="/imgs/docs/LEDform.gif" style="float:right;" width="80%"&gt;&lt;/img&gt;-->
+                      <!-- &lt;img src='/imgs/docs/LEDform.gif' style='float:right;' width='80%'&gt;&lt;/img&gt;-->
                     </td>
                   </tr>
                 </tbody>
@@ -3990,7 +3990,7 @@ int main()
             </p>
             <p>
               For color vision tracking, images are processed by the KIPR Robot Controller to identify
-              "blobs" matching the color specification for each color channel in a camera configuration.
+              'blobs' matching the color specification for each color channel in a camera configuration.
               A blob is a set of contiguous pixels in the image matching the color specification for
               the channel.
             </p>
@@ -4000,7 +4000,7 @@ int main()
               from a color spectrum chart to provide a color specification for the channel. Live feed
               from the camera simplifies the process of determining how much of the spectrum is needed
               to produce blobs matching the color (e.g., a particular part of the spectrum might include
-              all pixels that are "reddish" in color for a channel to be used for identifying red objects).
+              all pixels that are 'reddish' in color for a channel to be used for identifying red objects).
               The spectrum values for the channel are retained with the configuration until the configuration
               is deleted. See the KIPR Robot Controller Manual available from KIPR for information
               on setting up camera configurations on a KIPR Robot Controller controller.
@@ -4016,7 +4016,7 @@ int main()
                than the actual image size.
             </p>
             <p>
-              <!-- &lt;img class="center" src="/imgs/docs/Vision_Coordinates.gif" width="20%"&gt;&lt;/img&gt;-->
+              <!-- &lt;img class='center' src='/imgs/docs/Vision_Coordinates.gif' width='20%'&gt;&lt;/img&gt;-->
             </p>
             <p>
               KIPR Robot Controller Vision Library functions are used to select a configuration and
@@ -4223,7 +4223,7 @@ int main()
                   <td><code>get_object_count </code> [Category: Vision]
                     <dl>
                       <dd>Format: <code>int get_object_count(int channel);</code><br>
-                         Returns the number of objects being "seen" for the specified channel. Objects
+                         Returns the number of objects being 'seen' for the specified channel. Objects
                          are sorted by bounding box area, largest first. Returns -1 if channel doesn't
                          exist. See also <code>get_channel_count</code>.
                       </dd>
@@ -4564,7 +4564,7 @@ int main()
                     a USB depth sensor.
                   </td>
                   <td width="50%">
-                    <!-- &lt;img class="right" src="/imgs/docs/XtionDepth.gif" width="50%"&gt;&lt;/img&gt;--><br>
+                    <!-- &lt;img class='right' src='/imgs/docs/XtionDepth.gif' width='50%'&gt;&lt;/img&gt;--><br>
                   </td>
                 </tr>
               </tbody>
@@ -4583,7 +4583,7 @@ int main()
               <tbody>
                 <tr>
                   <td>
-                    <!-- &lt;img class="center" src="/imgs/docs/XtionDepthView.jpg" width="80%"&gt;&lt;/img&gt;-->
+                    <!-- &lt;img class='center' src='/imgs/docs/XtionDepthView.jpg' width='80%'&gt;&lt;/img&gt;-->
                   </td>
                 </tr>
               </tbody>
@@ -5256,7 +5256,7 @@ int main()
             </table>
             <!-- Create Sensor Functions--><a name="Create_sensors"></a>
             <h4>Create Sensor Functions</h4>
-            <!-- &lt;img class="center" src="/imgs/docs/CreateSensors.gif" width=50%&gt;&lt;/img&gt;--><br>
+            <!-- &lt;img class='center' src='/imgs/docs/CreateSensors.gif' width=50%&gt;&lt;/img&gt;--><br>
             <tr>
               <td><a name="get_create_advance_button"></a></td>
               <td><code>get_create_advance_button</code> [Category: Create Sensor Function]
@@ -5802,7 +5802,7 @@ int main()
                       <td>
                         <ul>
                           <li>void run_for(double delay, &lt;<em>function_name</em>&gt;);  [<a href="#run_for">§</a>]</li>
-                          <li>void shut_down_in(double delay);  [<a href="#Botball">§</a>]</li>	  &lt;li&gt;&lt;font class="CVariable"&gt;int&lt;/font&gt; target_cha_in_chb(&lt;font class="CVariable"&gt;int&lt;/font&gt; cha, &lt;font class="CVariable"&gt;int&lt;/font&gt; chb, &lt;font class="CVariable"&gt;int&lt;/font&gt; *x, &lt;font class="CVariable"&gt;int&lt;/font&gt; *y)&lt;/li&gt;
+                          <li>void shut_down_in(double delay);  [<a href="#Botball">§</a>]</li>	  &lt;li&gt;&lt;font class='CVariable'&gt;int&lt;/font&gt; target_cha_in_chb(&lt;font class='CVariable'&gt;int&lt;/font&gt; cha, &lt;font class='CVariable'&gt;int&lt;/font&gt; chb, &lt;font class='CVariable'&gt;int&lt;/font&gt; *x, &lt;font class='CVariable'&gt;int&lt;/font&gt; *y)&lt;/li&gt;
                           <li>void wait_for_light(int light_port_);  [<a href="#Botball">§</a>]</li>
                         </ul>
                       </td>
@@ -6202,8 +6202,8 @@ int main()
                if the light is off or on. If the sensor is suitably shielded and is positioned
                so that a successful calibration is achieved, <code>wait_for_light</code>
                calls
-               for "hands off" and blocks further execution until the light is turned on. When
-               "light on" is detected by the sensor, the program resumes and runs the robot according
+               for 'hands off' and blocks further execution until the light is turned on. When
+               'light on' is detected by the sensor, the program resumes and runs the robot according
                to program design. If problems occur in the calibration process, the user is notifited
                and the process repeats after a brief pause.
             </p> The first statement in a Botball programm following <code>wait_for_light</code>
@@ -6236,11 +6236,11 @@ int main()
             </p>
             <!--
             &lt;p&gt; The function &lt;/p&gt;
-            &lt;div class="Indent"&gt; &lt;code&gt;target_cha_in_chb(&lt;&lt;/code&gt;cha &lt;code&gt;&gt;, &lt;&lt;/code&gt;chb &lt;code&gt;&gt;, &lt;*&lt;/code&gt;x &lt;code&gt;&gt;, &lt;*&lt;/code&gt;y &lt;code&gt;&gt;);&lt;/code&gt;&lt;/div&gt;
+            &lt;div class='Indent'&gt; &lt;code&gt;target_cha_in_chb(&lt;&lt;/code&gt;cha &lt;code&gt;&gt;, &lt;&lt;/code&gt;chb &lt;code&gt;&gt;, &lt;*&lt;/code&gt;x &lt;code&gt;&gt;, &lt;*&lt;/code&gt;y &lt;code&gt;&gt;);&lt;/code&gt;&lt;/div&gt;
             &lt;p&gt;uses the vision system to look for a color target where the color described in the color channel a is completely
             surrounded by the color described by the color channel b. The addresses of to two integer variables, x & y, are also passed. If a suitable target is found in the current frame (this function does NOT perform a track_update() call) then the function returns 1 and the contents of the two variables x and y are changed to match the image pixel location of the centroid of the color blob associated with the inside of the target. If no target with the right colors is in view, then 0 is returned and x and y are not modified. If more than one target is in view, the one with the larger inner blob (as seen by the camera) is the one whose coordinates are returned. An example of use, where the inner color is on channel 3 and the outer on 2, might be:&lt;/p&gt;
-            &lt;div class="Indent"&gt; &lt;code&gt;&lt;font class="CVariable"&gt;int&lt;/font&gt; x, y;&lt;br&gt;
-            &lt;font class="CVariable"&gt;if&lt;/font&gt; (target_cha_in_chb(3,2,&x,&y)==1) printf(&lt;font class="Quote"&gt;"Target found at (%d,%d)\n"&lt;/font&gt;, x, y);&lt;/code&gt;&lt;/div&gt;
+            &lt;div class='Indent'&gt; &lt;code&gt;&lt;font class='CVariable'&gt;int&lt;/font&gt; x, y;&lt;br&gt;
+            &lt;font class='CVariable'&gt;if&lt;/font&gt; (target_cha_in_chb(3,2,&x,&y)==1) printf(&lt;font class='Quote'&gt;'Target found at (%d,%d)\n'&lt;/font&gt;, x, y);&lt;/code&gt;&lt;/div&gt;
             -->
             <p>The library functions for Botball are:</p>
             <table style="background-color: #f0f0f0;">
@@ -6265,7 +6265,7 @@ int main()
                     </dl>
                     <!--
                     no longer in code library
-                    &lt;code&gt;&lt;a name="target_cha_in_chbx"&gt;&lt;/a&gt;target_cha_in_chb(&lt;cha&lt;/code&gt;&gt;, &lt;chb &lt;code&gt;&gt;, &lt;*&lt;/code&gt;x &lt;code&gt;&gt;, lt;*&lt;/code&gt;y &lt;code&gt;&gt;);&lt;/code&gt;
+                    &lt;code&gt;&lt;a name='target_cha_in_chbx'&gt;&lt;/a&gt;target_cha_in_chb(&lt;cha&lt;/code&gt;&gt;, &lt;chb &lt;code&gt;&gt;, &lt;*&lt;/code&gt;x &lt;code&gt;&gt;, lt;*&lt;/code&gt;y &lt;code&gt;&gt;);&lt;/code&gt;
                     &lt;dl&gt;&lt;dd&gt;Looks for a target consisting of a color blob on a color background, where the channel number for the inner color is &lt;code&gt;cha&lt;/code&gt; and for the surrounding surrounding background is &lt;code&gt;chb&lt;/code&gt;. If the target is found then the function returns 1, otherwise 0. If a target is found then the contents of the variables pointed to by x and y are changed to the center coordinate of the inner blob.
                     &lt;/dd&gt;&lt;/dl&gt;
                     --><code><a name="wait_for_lightx"></a>wait_for_light(&lt;</code><i>port</i><code>&gt;);</code>
@@ -6274,9 +6274,9 @@ int main()
                         Steps the user through a calibration procedure to establish on/off light
                         levels for a sensor plugged in the specified port. If calibration does
                         not provide enough discrimination between light off and light on, the program
-                        cycles for another try. If there is enough discrimination, after "light
-                        off", the program blocks continued execution of the function until "light
-                        on", at which point execution resumes. <code>wait_for_light</code>
+                        cycles for another try. If there is enough discrimination, after 'light
+                        off', the program blocks continued execution of the function until 'light
+                        on', at which point execution resumes. <code>wait_for_light</code>
                          is normally
                          placed at the beginning of a program designed to operate a robot, so that
                          after calibration, when the light comes on the robot will start autonomously.
@@ -6309,7 +6309,7 @@ int main()
             <!-- Threads--><a name="Threads"></a>
             <h3>Threads</h3>
             <p>
-              The term thread is short for the phrase "thread of execution", and represents a sequence
+              The term thread is short for the phrase 'thread of execution', and represents a sequence
               of instructions to be managed by the system as it schedules processing time among
               running processes. On a single processor machine, like the KIPR Robot Controller,
               the instructions running in separate threads appear to be operating in parallel.
@@ -6412,18 +6412,18 @@ void chksens() {
                 The image below is the front of the KIPR Robot Controller showing where the analog
                 and digital sensor ports are located.
               </p>
-              <!-- &lt;img class="center" src="/imgs/docs/Link_sensor_ports.gif" width="70%"&gt;&lt;/img&gt;-->
+              <!-- &lt;img class='center' src='/imgs/docs/Link_sensor_ports.gif' width='70%'&gt;&lt;/img&gt;-->
               <p class="center"><br>Examples of digital and analog sensors used with the KIPR Robot Controller</p>
               <table class="centerTable" border="1" cellpadding="5" cellspacing="0">
                 <tbody>
                   <tr>
                     <td align="center" valign="center"><a href="#light_sensor"><br><img border="0" src="/imgs/docs/LightSensor.gif" width="60%"><br> IR light sensor<br></a> (analog)</td>
                     <td align="center" valign="center"><a href="#reflectance_sensors"><img border="0" src="/imgs/docs/Reflectance_sensors.gif" width="60%"><br> IR reflectance sensors<br></a> (analog)</td>
-                    <td align="center" valign="center"><a href="#ET_sensor"><img border="0" src="/imgs/docs/ET.gif" width="60%"><br> IR "E.T." Distance Sensor<br></a> (floating analog)</td>
+                    <td align="center" valign="center"><a href="#ET_sensor"><img border="0" src="/imgs/docs/ET.gif" width="60%"><br> IR 'E.T.' Distance Sensor<br></a> (floating analog)</td>
                   </tr>
                   <tr>
                     <td align="center" colspan="2" valign="center"><a href="#touch_sensors"><br><img border="0" src="/imgs/docs/TouchSensors.gif"><br> Touch Sensors<br></a> (digital)</td>
-                    <td align="center" valign="center"><a href="#break_beam_sensor"><br><img border="0" src="/imgs/docs/BreakBeam.gif"><br> IR "Break Beam" Sensor<br></a> (digital)</td>
+                    <td align="center" valign="center"><a href="#break_beam_sensor"><br><img border="0" src="/imgs/docs/BreakBeam.gif"><br> IR 'Break Beam' Sensor<br></a> (digital)</td>
                   </tr>
                   <tr>
                     <td align="center" valign="center"><a href="#analog_slider"><br><img border="0" src="/imgs/docs/AnalogSlider.gif"><br> Slider sensor<br></a> (analog)</td>
@@ -6467,7 +6467,7 @@ void chksens() {
                   <li>Sensor has a reflectance range of about 3 inches</li>
                 </ul>
                 <!-- ET_sensor--><a name="ET_sensor"></a>
-                <h4>Infrared "E.T." Distance Sensor (floating analog)</h4><img border="0" src="/imgs/docs/ET.gif"><br>
+                <h4>Infrared 'E.T.' Distance Sensor (floating analog)</h4><img border="0" src="/imgs/docs/ET.gif"><br>
                 <ul>
                   <li>
                     Floating analog sensor (pullup resistor for port must be disabled for readings to
@@ -6498,7 +6498,7 @@ void chksens() {
                   <li>These make good bumpers and can be used for limit switches on an actuator</li>
                 </ul>
                 <!-- break_beam_sensor--><a name="break_beam_sensor"></a>
-                <h4>Infrared "Break Beam" Sensor (digital)</h4><img border="0" src="/imgs/docs/image010.gif"><br>
+                <h4>Infrared 'Break Beam' Sensor (digital)</h4><img border="0" src="/imgs/docs/image010.gif"><br>
                 <ul>
                   <li>Digital sensor</li>
                   <li>Connect to ports 8-15</li>
@@ -6516,14 +6516,14 @@ void chksens() {
                 </ul>
                 <!-- sonar_sensor-->
                 <!--
-                &lt;a name="sonar_sensor"&gt;&lt;/a&gt;
+                &lt;a name='sonar_sensor'&gt;&lt;/a&gt;
                 &lt;h4&gt;Sonar (Ultrasonic Rangefinder)&lt;/h4&gt;
-                &lt;img border="0" height="180" width="90" src="/imgs/docs/sonar.jpg"&gt;
+                &lt;img border='0' height='180' width='90' src='/imgs/docs/sonar.jpg'&gt;
                 &lt;br&gt;
                 &lt;ul&gt;
-                &lt;li&gt;Timed analog sensor. Sends a "ping" of high-pitched sound and listens for an echo&lt;/li&gt;
+                &lt;li&gt;Timed analog sensor. Sends a 'ping' of high-pitched sound and listens for an echo&lt;/li&gt;
                 &lt;li&gt;Connect to ports 0-7&lt;/li&gt;
-                &lt;li&gt;Access with function &lt;font class="CFunction"&gt;&lt;a href="#analog"&gt;analog&lt;/a&gt;&lt;/font&gt;(&lt;port#&gt;) &lt;/li&gt;
+                &lt;li&gt;Access with function &lt;font class='CFunction'&gt;&lt;a href='#analog'&gt;analog&lt;/a&gt;&lt;/font&gt;(&lt;port#&gt;) &lt;/li&gt;
                 &lt;li&gt;Returned value is distance in inches to closest object in field of view&lt;/li&gt;
                 &lt;li&gt;Range is approximately 10-250 inches&lt;/li&gt;
                 &lt;li&gt;When first powered up, make sure there is nothing within 24
@@ -6549,7 +6549,7 @@ void chksens() {
               <!-- USB Sensors--><br><a name="USB_sensors"></a>
               <h3>USB Sensor Images</h3>
               <p>USB sensors plug into one of the two USB2 ports on the back of the KIPR Robot Controller</p>
-              <!-- &lt;img class="center" src="/imgs/docs/Link_back_view_txt.gif" width="80%"&gt;&lt;/img&gt;-->
+              <!-- &lt;img class='center' src='/imgs/docs/Link_back_view_txt.gif' width='80%'&gt;&lt;/img&gt;-->
               <p>Specialized function libraries are provided for </p>
               <ul>
                 <li>Vision (for use with a USB web camera)</li>
@@ -6559,11 +6559,11 @@ void chksens() {
                 <tbody>
                   <tr>
                     <td>
-                      <!-- &lt;img class="center" src="/imgs/docs/webcam.gif" width="50%"&gt;&lt;/img&gt;--><br>
+                      <!-- &lt;img class='center' src='/imgs/docs/webcam.gif' width='50%'&gt;&lt;/img&gt;--><br>
                       <p class="center">A web camera used with KIPR Robot Controller<br> (see the <a href="#CategoryVision">Vision Function List</a>)</p>
                     </td>
                     <td>
-                      <!-- &lt;img class="center" src="/imgs/docs/XtionDepth.gif" width="50%"&gt;&lt;/img&gt;--><br>
+                      <!-- &lt;img class='center' src='/imgs/docs/XtionDepth.gif' width='50%'&gt;&lt;/img&gt;--><br>
                       <p class="center">ASUS Xtion used with KIPR Robot Controller<br> (see the <a href="#CategoryVision">Depth Function List</a>)</p>
                     </td>
                   </tr>
@@ -6575,12 +6575,12 @@ void chksens() {
                 The image below is the front of the KIPR Robot Controller showing where the DC motor
                 ports are located.
               </p>
-              <!-- &lt;img class="center" src="/imgs/docs/Link_motor_ports.gif" width="80%"&gt;&lt;/img&gt;-->
+              <!-- &lt;img class='center' src='/imgs/docs/Link_motor_ports.gif' width='80%'&gt;&lt;/img&gt;-->
               <table class="centerTable">
                 <tbody>
                   <tr>
                     <td>
-                      <!-- &lt;img class="center" src="/imgs/docs/DC_motor.gif" width="30%"&gt;&lt;/img&gt;--><br>
+                      <!-- &lt;img class='center' src='/imgs/docs/DC_motor.gif' width='30%'&gt;&lt;/img&gt;--><br>
                       <p class="center">Example DC motor used with the KIPR Robot Controller<br>
                          (modified servo - potentiometer
                          removed and wiring with two prong plug installed).<br><br>
@@ -6597,7 +6597,7 @@ void chksens() {
                 The image below is the front of the KIPR Robot Controller showing where the servo ports
                 are located.
               </p>
-              <!-- &lt;img class="center" src="/imgs/docs/Link_servo_ports.gif" width="80%"&gt;&lt;/img&gt;-->
+              <!-- &lt;img class='center' src='/imgs/docs/Link_servo_ports.gif' width='80%'&gt;&lt;/img&gt;-->
               <p class="center"><br>Example servo motors used with the KIPR Robot Controller<br>
                  (hobbyist servo - used
                  as packaged by manufacturer)
@@ -6606,11 +6606,11 @@ void chksens() {
                 <tbody>
                   <tr>
                     <td>
-                      <!-- &lt;img class="center" src="/imgs/docs/ServoMotors.gif" width=75%&gt;&lt;/img&gt;-->
+                      <!-- &lt;img class='center' src='/imgs/docs/ServoMotors.gif' width=75%&gt;&lt;/img&gt;-->
                       <p class="center">Servo motors</p>
                     </td>
                     <td>
-                      <!-- &lt;img class="center" src="/imgs/docs/ServoMotorPlug.gif" width=50%&gt;&lt;/img&gt;-->
+                      <!-- &lt;img class='center' src='/imgs/docs/ServoMotorPlug.gif' width=50%&gt;&lt;/img&gt;-->
                       <p class="center">Servo motor plug</p>
                     </td>
                   </tr>
@@ -6653,8 +6653,8 @@ void chksens() {
             <h4>Running a Project</h4>
             <p>
               If a program's action does not involve the KIPR Robot Controller Library functions, its
-              target can be "My Computer". When KIPR Robot Controller Library functions are being
-              used, the target needs to be "My KIPR Robot Controller Simulator" or an attached KIPR
+              target can be 'My Computer'. When KIPR Robot Controller Library functions are being
+              used, the target needs to be 'My KIPR Robot Controller Simulator' or an attached KIPR
               Robot Controller. If no KIPR Robot Controller is attached, the simulator can be used
               to see what a program does.
             </p>
@@ -6677,7 +6677,7 @@ void chksens() {
             <table>
               <tr>
                 <td>
-                  <!-- &lt;img class="center" src="/imgs/docs/SimulatorRun.jpg" width=80%&gt;&lt;/img&gt;-->
+                  <!-- &lt;img class='center' src='/imgs/docs/SimulatorRun.jpg' width=80%&gt;&lt;/img&gt;-->
                   <p class="center">For executing a project already loaded in the Simulator</p>
                 </td>
               </tr>
@@ -6752,7 +6752,7 @@ void chksens() {
             <table>
               <tr>
                 <td>
-                  <!-- &lt;img class="center" src="/imgs/docs/SimulatorBoard.jpg" width=80%&gt;&lt;/img&gt;-->
+                  <!-- &lt;img class='center' src='/imgs/docs/SimulatorBoard.jpg' width=80%&gt;&lt;/img&gt;-->
                 </td>
               </tr>
             </table><br>

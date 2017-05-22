@@ -1,11 +1,11 @@
 extends ../exclude/base
 
 block vars
-  - var selected = "404"
-  - var color = "red"
-  - var themeColor = "#00796b"
+  - var selected = '404'
+  - var color = 'red'
+  - var themeColor = '#00796b'
 
 block content
-  h1.header(class=color + '-text') 404: Page not found :(
-  h3.header(class=color + '-text') Don't worry, here's a cat to cheer you up.
+  h1.header(class=colorText) 404: Page not found :(
+  h3.header(class=colorText) Don't worry, here's a cat to cheer you up.
   img(src='imgs/errorcat.jpg', style='width: 100%')
