@@ -14,7 +14,6 @@ args = parser.parse_args()
 replace_dict = {
     " ": "THISWASASPACEBUTISNTANYMORE",
     "\t": "THISWASATABBUTISNTANYMORE",
-    # "\n": "THISWASANEWLINEBUTISNTANYMORE",
 }
 
 pre_replace = "faketag"
@@ -33,12 +32,13 @@ else:
         tag.unwrap()
     for tag in soup.find_all("code"):
         if tag.parent and tag.parent.name == pre_replace:
-                tag["class"] = (tag.get("class", "") + " language-clike").lstrip()
-        val = tag.text
-        for key, value in replace_dict.items():
-            val = val.replace(key, value)
-        tag.string = val
-    val = soup.prettify()
+            tag["class"] = (tag.get("class", "") + " language-clike").lstrip()
+        for item in tag.find_all(text=True):
+            tval = str(item)
+            for key, value in replace_dict.items():
+                tval = tval.replace(key, value)
+            item.replace_with(tval)
+    val = str(soup) # .prettify() - Can't prettify because it puts text elements on different lines
     val = re.sub(r" +", " ", val)
     val = re.sub(r"([^\s])(?=(\n\s*)?<code)", r"\1 ", val)
     print(val)
