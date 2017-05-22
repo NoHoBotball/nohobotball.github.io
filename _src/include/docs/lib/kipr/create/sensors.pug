@@ -1,505 +1,336 @@
-html
-  head
-    link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
-    link(href='/css/base.css', rel='stylesheet', type='text/css')
-    link(href='/css/materialize.min.css', media='screen,projection', rel='stylesheet', type='text/css')
-    link(href='/css/docs.css', rel='stylesheet', type='text/css')
-    link(href='../imgs/logos/botguy.png', rel='icon')
-    title Botball Documentation - Tutorial
-    meta(content='#00796b', name='theme-color')
-    meta(content='width=device-width, initial-scale=1.0', name='viewport')
-  body
-    script(src='https://code.jquery.com/jquery-2.1.1.min.js', type='text/javascript')
-    script(src='/js/materialize.min.js', type='text/javascript')
-    script.
-      $(document).ready(function () {
-      $('.button-collapse').sideNav({
-      draggable: true
-      });
-      $(".active").parent().parent().siblings()[0].click() })
-    header
-      ul#slide-out.side-nav.fixed
-        li.red.lighten-1(style='height: 130px')
-          .userView
-            h5.white-text
-              a.white-text(href='/docs/index.html') Index
-        li
-          a(href='/docs/tutorial.html') Tutorial
-        li.no-padding
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Data Objects
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/data-objects/index.html') Introduction
-                  li
-                    a(href='/docs/data-objects/variables.html') Variables
-                  li
-                    a(href='/docs/data-objects/constants.html') Constants
-                  li
-                    a(href='/docs/data-objects/data-types.html') Data Types
-                  li
-                    a(href='/docs/data-objects/arrays.html') Arrays
-                  li
-                    a(href='/docs/data-objects/structures.html') Structures
-                  li
-                    a(href='/docs/data-objects/initialization-examples.html') Initialization Examples
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Statements and Expressions
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/statements-and-expressions/index.html') Introduction
-                  li
-                    a(href='/docs/statements-and-expressions/operators.html') Operators
-                  li
-                    a(href='/docs/statements-and-expressions/control-flow.html') Control Flow
-        li
-          a(href='/docs/tutorial.html') Style
-        li
-          a(href='/docs/tutorial.html') Debugging
-        li.no-padding
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Printing
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/printing/index.html') Introduction
-                  li
-                    a(href='/docs/printing/examples.html') Examples
-                  li
-                    a(href='/docs/printing/printf-codes.html') printf Codes
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Preprocessor
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/preprocessor/index.html') Introduction
-                  li
-                    a(href='/docs/preprocessor/directives.html') Directives
-                  li
-                    a(href='/docs/preprocessor/include.html') Include
-                  li
-                    a(href='/docs/preprocessor/macros.html') Macros
-                  li
-                    a(href='/docs/preprocessor/conditional-compilation.html') Conditional Compilation
-        li
-          a(href='/docs/lib/math.html') Math Library
-        li.no-padding
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | KIPR Wallaby/Link
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/lib/kipr/common-functions.html') Common Functions
-                  li
-                    a(href='/docs/lib/kipr/functions.html') Functions List
-                  li
-                    a(href='/docs/lib/kipr/camera.html') Camera Functions
-                  li
-                    a(href='/docs/lib/kipr/graphics.html') Graphics Functions
-                  li
-                    a(href='/docs/lib/kipr/depth.html') Depth Sensor Functions
-                  li
-                    a(href='/docs/lib/kipr/usb.html') File I/O Functions
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | iRobot Create
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/lib/kipr/create/index.html') Introduction
-                  li
-                    a(href='/docs/lib/kipr/create/serial.html') Serial Functions
-                  li
-                    a(href='/docs/lib/kipr/create/configuration.html') Configuration Functions
-                  li
-                    a(href='/docs/lib/kipr/create/movement.html') Movement Functions
-                  li.active
-                    a(href='/docs/lib/kipr/create/sensors.html') Sensor Functions
-                  li
-                    a(href='/docs/lib/kipr/create/battery.html') Battery Functions
-                  li
-                    a(href='/docs/lib/kipr/create/built-ins.html') Built-In Functions
-                  li
-                    a(href='/docs/lib/kipr/create/music-leds.html') LED and Music Functions
-        li
-          a(href='/docs/lib/kipr/botball.html') Botball Functions
-        li
-          a(href='/docs/lib/kipr/threads.html') Threads
-        li.no-padding
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Motors and Sensors
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/lib/kipr/info/digital-analog-sensors.html') Analog and Digital Sensors
-                  li
-                    a(href='/docs/lib/kipr/info/usb-sensors.html') USB Sensors
-                  li
-                    a(href='/docs/lib/kipr/info/motors-servos.html') Motors and Servos
-                  li
-                    a(href='/docs/lib/kipr/info/simulator.html') Simulator
-        li
-          a(href='/docs/full.html') Full Documentation
-      nav.nav-extended.red.lighten-2
-        .nav-wrapper
-          .col.s12
-            a.button-collapse(data-activates='slide-out', href='#', style='font-size: 50px')
-              i.material-icons menu
-            a#top.brand-logo.waves-effect(href='/docs/index.html') Botball Documentation
-        .nav-wrapper
-          .col.s12
-            a.breadcrumb(href='/docs/lib/kipr/create/index.html') iRobot Create
-            a.breadcrumb(href='#!') Sensor Functions
-    main.row
-      .container.col.s12
-        // END HEADER
-        // Create Sensor Functions
-        a(name='Create_sensors')
-        h4 Create Sensor Functions
-        // &lt;img class="center" src="images/CreateSensors.gif" width=50%&gt;&lt;/img&gt;
-        br
-        tr
-          td
-            a(name='get_create_advance_button')
-          td
-            code get_create_advance_button
-            |  [Category: Create Sensor Function]
-            dl
-              dd
-                dd
-                  | Format: 
-                  code int get_create_advance_button();
-                  br
-                  |  Returns 1 if the advance (
-                  bold
-                    code &gt;&gt;
-                    | |
-                  | ) button is being pressed, 0 otherwise.
-        tr
-          td
-            a(name='get_create_bay_AI')
-          td
-            code get_create_bay_AI
-            |  [Category: Create Sensor Function]
-            dl
-              dd
-                dd
-                  | Format: 
-                  code int get_create_bay_AI();
-                  br
-                  |  Returns
-                  |  the 10 bit analog value on pin 4 of the connector in the Create cargo bay.
-        tr
-          td
-            a(name='get_create_bay_DI')
-          td
-            code get_create_bay_DI
-            |  [Category: Create Sensor Function]
-            dl
-              dd
-                dd
-                  | Format: 
-                  code int get_create_bay_DI();
-                  br
-                  |  Returns
-                  |  a byte for determining the current digital inputs (0 or 1) being applied to pins 16, 6, 18,
-                  |  5, and 17 of the connector in the Create cargo bay. The 128, 64, and 32 bits of the byte
-                  |  are not used. The 16 bit is for pin 15, 8 bit for pin 6, 4 bit for pin 18, 2 bit for pin
-                  |  5 and 1 bit for pin 17. Pin 15 is used to alter communications baud rate.
-        tr
-          td
-            a(name='get_create_cwdrop')
-          td
-            code get_create_cwdrop
-            |  [Category: Create Sensor Function]
-            dl
-              dd
-                dd
-                  | Format: 
-                  code int get_create_cwdrop();
-                  br
-                  |  Returns
-                  |  1 if the front caster wheel has dropped, 0 otherwise.
-        tr
-          td
-            a(name='get_create_infrared')
-          td
-            code get_create_infrared
-            |  [Category: Create Sensor Function]
-            dl
-              dd
-                dd
-                  | Format: 
-                  code int get_create_infrared();
-                  br
-                  |  Returns
-                  |  the byte detected from an iRobot remote control, Returns 255 if no byte has been detected.
-        tr
-          td
-            a(name='get_create_lbump')
-          td
-            code get_create_lbump
-            |  [Category: Create Sensor Function]
-            dl
-              dd
-                dd
-                  | Format: 
-                  code int get_create_lbump();
-                  br
-                  |  Returns 1
-                  |  if the left bumper is pressed, 0 otherwise.
-        tr
-          td
-            a(name='get_create_lcliff')
-          td
-            code get_create_lcliff
-            |  [Category: Create Sensor Function]
-            dl
-              dd
-                dd
-                  | Format: 
-                  code int get_create_lcliff();
-                  br
-                  |  Returns
-                  |  1 if the left cliff sensor is over a surface that doesn't reflect IR (e.g., black) or over
-                  |  a cliff, 0 otherwise.
-        tr
-          td
-            a(name='get_create_lcliff_amt')
-          td
-            code get_create_lcliff_amt
-            |  [Category: Create Sensor Function]
-            dl
-              dd
-                dd
-                  | Format: 
-                  code int get_create_lcliff_amt();
-                  br
-                  |  Returns
-                  |  the left cliff sensor (analog) reading as a 12 bit value (0 to 4095).
-        tr
-          td
-            a(name='get_create_lfcliff')
-          td
-            code get_create_lfcliff
-            |  [Category: Create Sensor Function]
-            dl
-              dd
-                dd
-                  | Format: 
-                  code int get_create_lfcliff();
-                  br
-                  |  Returns
-                  |  1 if left front cliff sensor is over a surface that doesn't reflect IR (e.g., black) or over
-                  |  a cliff, 0 otherwise.
-        tr
-          td
-            a(name='get_create_lfcliff_amt')
-          td
-            code get_create_lfcliff_amt
-            |  [Category: Create Sensor Function]
-            dl
-              dd
-                dd
-                  | Format: 
-                  code int get_create_lfcliff_amt();
-                  br
-                  |  Returns
-                  |  the left front cliff sensor (analog) reading as a 12 bit value (0 to 4095).
-        tr
-          td
-            a(name='get_create_lwdrop')
-          td
-            code get_create_lwdrop
-            |  [Category: Create Sensor Function]
-            dl
-              dd
-                dd
-                  | Format: 
-                  code int get_create_lwdrop();
-                  br
-                  |  Returns
-                  |  1 if the left wheel has dropped, 0 otherwise. Materials supplied with the Create include
-                  |  two wheel clips that when installed will prevent the drive wheels from dropping.
-        tr
-          td
-            a(name='get_create_number_of_stream_packets')
-          td
-            code get_create_number_of_stream_packets
-            |  [Category: Create Sensor Function]
-            dl
-              dd
-                dd
-                  | Format: 
-                  code int get_create_number_of_stream_packets();
-                  br
-                  |  If data streaming is being used, returns the size of the stream.
-        tr
-          td
-            a(name='get_create_play_button')
-          td
-            code get_create_play_button
-            |  [Category: Create Sensor Function]
-            dl
-              dd
-                dd
-                  | Format: 
-                  code int get_create_play_button();
-                  br
-                  |  Returns
-                  |  1 if the play button ( 
-                  code
-                    bold &gt;
-                  | ) is being pressed, 0 otherwise.
-        tr
-          td
-            a(name='get_create_rbump')
-          td
-            code get_create_rbump
-            |  [Category: Create Sensor Function]
-            dl
-              dd
-                dd
-                  | Format: 
-                  code int get_create_rbump();
-                  br
-                  |  Returns 1
-                  |  if the right bumper is pressed, 0 otherwise.
-        tr
-          td
-            a(name='get_create_rcliff')
-          td
-            code get_create_rcliff
-            |  [Category: Create Sensor Function]
-            dl
-              dd
-                dd
-                  | Format: 
-                  code int get_create_rcliff();
-                  br
-                  |  Returns
-                  |  1 if right cliff sensor is over a surface that doesn't reflect IR (e.g., black) or over a
-                  |  cliff, 0 otherwise.
-        tr
-          td
-            a(name='get_create_rcliff_amt')
-          td
-            code get_create_rcliff_amt
-            |  [Category: Create Sensor Function]
-            dl
-              dd
-                dd
-                  | Format: 
-                  code int get_create_rcliff_amt();
-                  br
-                  |  Returns
-                  |  the right cliff sensor (analog) reading as a 12 bit value (0 to 4095).
-        tr
-          td
-            a(name='get_create_rfcliff')
-          td
-            code get_create_rfcliff
-            |  [Category: Create Sensor Function]
-            dl
-              dd
-                dd
-                  | Format: 
-                  code int get_create_rfcliff();
-                  br
-                  |  Returns
-                  |  1 if right front cliff sensor is over a surface that doesn't reflect IR (e.g., black) or
-                  |  over a cliff, 0 otherwise.
-        tr
-          td
-            a(name='get_create_rfcliff_amt')
-          td
-            code get_create_rfcliff_amt
-            |  [Category: Create Sensor Function]
-            dl
-              dd
-                dd
-                  | Format: 
-                  code int get_create_rfcliff_amt();
-                  br
-                  |  Returns
-                  |  the right front cliff sensor (analog) reading as a 12 bit value (0 to 4095).
-        tr
-          td
-            a(name='get_create_rwdrop')
-          td
-            code get_create_rwdrop
-            |  [Category: Create Sensor Function]
-            dl
-              dd
-                dd
-                  | Format: 
-                  code int get_create_rlwdrop();
-                  br
-                  |  Returns
-                  |  1 if right wheel has dropped, 0 otherwise.
-        tr
-          td
-            a(name='get_create_vwall')
-          td
-            code get_create_vwall
-            |  [Category: Create Sensor Function]
-            dl
-              dd
-                dd
-                  | Format: 
-                  code int get_create_vwall();
-                  br
-                  |  Returns 1
-                  |  if an iRobot virtual wall beacon is detected, 0 otherwise.
-        tr
-          td
-            a(name='get_create_wall')
-          td
-            code get_create_wall
-            |  [Category: Create Sensor Function]
-            dl
-              dd
-                dd
-                  | Format: 
-                  code int get_create_wall();
-                  br
-                  |  Returns 1
-                  |  if a wall is detected by the right facing wall sensor, 0 otherwise. There is no left facing
-                  |  wall sensor.
-        tr
-          td
-            a(name='get_create_wall_amt')
-          td
-            code get_create_wall_amt
-            |  [Category: Create Sensor Function]
-            dl
-              dd
-                dd
-                  | Format: 
-                  code int get_create_wall_amt();
-                  br
-                  |  Returns
-                  |  the current wall sensor (analog) reading as a 12 bit value (0 to 4095).
-        // START FOOTER
+extends ../../../../exclude/docbase
+
+block vars
+  - var selected = 'sensors'
+  - var path = ["Lib", "Kipr", "Create", "Sensors"]
+
+block content
+  // Create Sensor Functions
+  a(name='Create_sensors')
+  h4 Create Sensor Functions
+  // &lt;img class="center" src="images/CreateSensors.gif" width=50%&gt;&lt;/img&gt;
+  br
+  tr
+    td
+      a(name='get_create_advance_button')
+    td
+      code get_create_advance_button
+      |  [Category: Create Sensor Function]
+      dl
+        dd
+          dd
+            | Format: 
+            code int get_create_advance_button();
+            br
+            |  Returns 1 if the advance (
+            bold
+              code &gt;&gt;
+              | |
+            | ) button is being pressed, 0 otherwise.
+  tr
+    td
+      a(name='get_create_bay_AI')
+    td
+      code get_create_bay_AI
+      |  [Category: Create Sensor Function]
+      dl
+        dd
+          dd
+            | Format: 
+            code int get_create_bay_AI();
+            br
+            |  Returns
+            |  the 10 bit analog value on pin 4 of the connector in the Create cargo bay.
+  tr
+    td
+      a(name='get_create_bay_DI')
+    td
+      code get_create_bay_DI
+      |  [Category: Create Sensor Function]
+      dl
+        dd
+          dd
+            | Format: 
+            code int get_create_bay_DI();
+            br
+            |  Returns
+            |  a byte for determining the current digital inputs (0 or 1) being applied to pins 16, 6, 18,
+            |  5, and 17 of the connector in the Create cargo bay. The 128, 64, and 32 bits of the byte
+            |  are not used. The 16 bit is for pin 15, 8 bit for pin 6, 4 bit for pin 18, 2 bit for pin
+            |  5 and 1 bit for pin 17. Pin 15 is used to alter communications baud rate.
+  tr
+    td
+      a(name='get_create_cwdrop')
+    td
+      code get_create_cwdrop
+      |  [Category: Create Sensor Function]
+      dl
+        dd
+          dd
+            | Format: 
+            code int get_create_cwdrop();
+            br
+            |  Returns
+            |  1 if the front caster wheel has dropped, 0 otherwise.
+  tr
+    td
+      a(name='get_create_infrared')
+    td
+      code get_create_infrared
+      |  [Category: Create Sensor Function]
+      dl
+        dd
+          dd
+            | Format: 
+            code int get_create_infrared();
+            br
+            |  Returns
+            |  the byte detected from an iRobot remote control, Returns 255 if no byte has been detected.
+  tr
+    td
+      a(name='get_create_lbump')
+    td
+      code get_create_lbump
+      |  [Category: Create Sensor Function]
+      dl
+        dd
+          dd
+            | Format: 
+            code int get_create_lbump();
+            br
+            |  Returns 1
+            |  if the left bumper is pressed, 0 otherwise.
+  tr
+    td
+      a(name='get_create_lcliff')
+    td
+      code get_create_lcliff
+      |  [Category: Create Sensor Function]
+      dl
+        dd
+          dd
+            | Format: 
+            code int get_create_lcliff();
+            br
+            |  Returns
+            |  1 if the left cliff sensor is over a surface that doesn't reflect IR (e.g., black) or over
+            |  a cliff, 0 otherwise.
+  tr
+    td
+      a(name='get_create_lcliff_amt')
+    td
+      code get_create_lcliff_amt
+      |  [Category: Create Sensor Function]
+      dl
+        dd
+          dd
+            | Format: 
+            code int get_create_lcliff_amt();
+            br
+            |  Returns
+            |  the left cliff sensor (analog) reading as a 12 bit value (0 to 4095).
+  tr
+    td
+      a(name='get_create_lfcliff')
+    td
+      code get_create_lfcliff
+      |  [Category: Create Sensor Function]
+      dl
+        dd
+          dd
+            | Format: 
+            code int get_create_lfcliff();
+            br
+            |  Returns
+            |  1 if left front cliff sensor is over a surface that doesn't reflect IR (e.g., black) or over
+            |  a cliff, 0 otherwise.
+  tr
+    td
+      a(name='get_create_lfcliff_amt')
+    td
+      code get_create_lfcliff_amt
+      |  [Category: Create Sensor Function]
+      dl
+        dd
+          dd
+            | Format: 
+            code int get_create_lfcliff_amt();
+            br
+            |  Returns
+            |  the left front cliff sensor (analog) reading as a 12 bit value (0 to 4095).
+  tr
+    td
+      a(name='get_create_lwdrop')
+    td
+      code get_create_lwdrop
+      |  [Category: Create Sensor Function]
+      dl
+        dd
+          dd
+            | Format: 
+            code int get_create_lwdrop();
+            br
+            |  Returns
+            |  1 if the left wheel has dropped, 0 otherwise. Materials supplied with the Create include
+            |  two wheel clips that when installed will prevent the drive wheels from dropping.
+  tr
+    td
+      a(name='get_create_number_of_stream_packets')
+    td
+      code get_create_number_of_stream_packets
+      |  [Category: Create Sensor Function]
+      dl
+        dd
+          dd
+            | Format: 
+            code int get_create_number_of_stream_packets();
+            br
+            |  If data streaming is being used, returns the size of the stream.
+  tr
+    td
+      a(name='get_create_play_button')
+    td
+      code get_create_play_button
+      |  [Category: Create Sensor Function]
+      dl
+        dd
+          dd
+            | Format: 
+            code int get_create_play_button();
+            br
+            |  Returns
+            |  1 if the play button ( 
+            code
+              bold &gt;
+            | ) is being pressed, 0 otherwise.
+  tr
+    td
+      a(name='get_create_rbump')
+    td
+      code get_create_rbump
+      |  [Category: Create Sensor Function]
+      dl
+        dd
+          dd
+            | Format: 
+            code int get_create_rbump();
+            br
+            |  Returns 1
+            |  if the right bumper is pressed, 0 otherwise.
+  tr
+    td
+      a(name='get_create_rcliff')
+    td
+      code get_create_rcliff
+      |  [Category: Create Sensor Function]
+      dl
+        dd
+          dd
+            | Format: 
+            code int get_create_rcliff();
+            br
+            |  Returns
+            |  1 if right cliff sensor is over a surface that doesn't reflect IR (e.g., black) or over a
+            |  cliff, 0 otherwise.
+  tr
+    td
+      a(name='get_create_rcliff_amt')
+    td
+      code get_create_rcliff_amt
+      |  [Category: Create Sensor Function]
+      dl
+        dd
+          dd
+            | Format: 
+            code int get_create_rcliff_amt();
+            br
+            |  Returns
+            |  the right cliff sensor (analog) reading as a 12 bit value (0 to 4095).
+  tr
+    td
+      a(name='get_create_rfcliff')
+    td
+      code get_create_rfcliff
+      |  [Category: Create Sensor Function]
+      dl
+        dd
+          dd
+            | Format: 
+            code int get_create_rfcliff();
+            br
+            |  Returns
+            |  1 if right front cliff sensor is over a surface that doesn't reflect IR (e.g., black) or
+            |  over a cliff, 0 otherwise.
+  tr
+    td
+      a(name='get_create_rfcliff_amt')
+    td
+      code get_create_rfcliff_amt
+      |  [Category: Create Sensor Function]
+      dl
+        dd
+          dd
+            | Format: 
+            code int get_create_rfcliff_amt();
+            br
+            |  Returns
+            |  the right front cliff sensor (analog) reading as a 12 bit value (0 to 4095).
+  tr
+    td
+      a(name='get_create_rwdrop')
+    td
+      code get_create_rwdrop
+      |  [Category: Create Sensor Function]
+      dl
+        dd
+          dd
+            | Format: 
+            code int get_create_rlwdrop();
+            br
+            |  Returns
+            |  1 if right wheel has dropped, 0 otherwise.
+  tr
+    td
+      a(name='get_create_vwall')
+    td
+      code get_create_vwall
+      |  [Category: Create Sensor Function]
+      dl
+        dd
+          dd
+            | Format: 
+            code int get_create_vwall();
+            br
+            |  Returns 1
+            |  if an iRobot virtual wall beacon is detected, 0 otherwise.
+  tr
+    td
+      a(name='get_create_wall')
+    td
+      code get_create_wall
+      |  [Category: Create Sensor Function]
+      dl
+        dd
+          dd
+            | Format: 
+            code int get_create_wall();
+            br
+            |  Returns 1
+            |  if a wall is detected by the right facing wall sensor, 0 otherwise. There is no left facing
+            |  wall sensor.
+  tr
+    td
+      a(name='get_create_wall_amt')
+    td
+      code get_create_wall_amt
+      |  [Category: Create Sensor Function]
+      dl
+        dd
+          dd
+            | Format: 
+            code int get_create_wall_amt();
+            br
+            |  Returns
+            |  the current wall sensor (analog) reading as a 12 bit value (0 to 4095).
+  // START FOOTER
 

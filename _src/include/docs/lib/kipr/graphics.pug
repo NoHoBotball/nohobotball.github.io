@@ -1,536 +1,367 @@
-html
-  head
-    link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
-    link(href='/css/base.css', rel='stylesheet', type='text/css')
-    link(href='/css/materialize.min.css', media='screen,projection', rel='stylesheet', type='text/css')
-    link(href='/css/docs.css', rel='stylesheet', type='text/css')
-    link(href='../imgs/logos/botguy.png', rel='icon')
-    title Botball Documentation - Tutorial
-    meta(content='#00796b', name='theme-color')
-    meta(content='width=device-width, initial-scale=1.0', name='viewport')
-  body
-    script(src='https://code.jquery.com/jquery-2.1.1.min.js', type='text/javascript')
-    script(src='/js/materialize.min.js', type='text/javascript')
-    script.
-      $(document).ready(function () {
-      $('.button-collapse').sideNav({
-      draggable: true
-      });
-      $(".active").parent().parent().siblings()[0].click() })
-    header
-      ul#slide-out.side-nav.fixed
-        li.red.lighten-1(style='height: 130px')
-          .userView
-            h5.white-text
-              a.white-text(href='/docs/index.html') Index
-        li
-          a(href='/docs/tutorial.html') Tutorial
-        li.no-padding
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Data Objects
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/data-objects/index.html') Introduction
-                  li
-                    a(href='/docs/data-objects/variables.html') Variables
-                  li
-                    a(href='/docs/data-objects/constants.html') Constants
-                  li
-                    a(href='/docs/data-objects/data-types.html') Data Types
-                  li
-                    a(href='/docs/data-objects/arrays.html') Arrays
-                  li
-                    a(href='/docs/data-objects/structures.html') Structures
-                  li
-                    a(href='/docs/data-objects/initialization-examples.html') Initialization Examples
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Statements and Expressions
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/statements-and-expressions/index.html') Introduction
-                  li
-                    a(href='/docs/statements-and-expressions/operators.html') Operators
-                  li
-                    a(href='/docs/statements-and-expressions/control-flow.html') Control Flow
-        li
-          a(href='/docs/tutorial.html') Style
-        li
-          a(href='/docs/tutorial.html') Debugging
-        li.no-padding
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Printing
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/printing/index.html') Introduction
-                  li
-                    a(href='/docs/printing/examples.html') Examples
-                  li
-                    a(href='/docs/printing/printf-codes.html') printf Codes
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Preprocessor
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/preprocessor/index.html') Introduction
-                  li
-                    a(href='/docs/preprocessor/directives.html') Directives
-                  li
-                    a(href='/docs/preprocessor/include.html') Include
-                  li
-                    a(href='/docs/preprocessor/macros.html') Macros
-                  li
-                    a(href='/docs/preprocessor/conditional-compilation.html') Conditional Compilation
-        li
-          a(href='/docs/lib/math.html') Math Library
-        li.no-padding
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | KIPR Wallaby/Link
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/lib/kipr/common-functions.html') Common Functions
-                  li
-                    a(href='/docs/lib/kipr/functions.html') Functions List
-                  li
-                    a(href='/docs/lib/kipr/camera.html') Camera Functions
-                  li.active
-                    a(href='/docs/lib/kipr/graphics.html') Graphics Functions
-                  li
-                    a(href='/docs/lib/kipr/depth.html') Depth Sensor Functions
-                  li
-                    a(href='/docs/lib/kipr/usb.html') File I/O Functions
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | iRobot Create
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/lib/kipr/create/index.html') Introduction
-                  li
-                    a(href='/docs/lib/kipr/create/serial.html') Serial Functions
-                  li
-                    a(href='/docs/lib/kipr/create/configuration.html') Configuration Functions
-                  li
-                    a(href='/docs/lib/kipr/create/movement.html') Movement Functions
-                  li
-                    a(href='/docs/lib/kipr/create/sensors.html') Sensor Functions
-                  li
-                    a(href='/docs/lib/kipr/create/battery.html') Battery Functions
-                  li
-                    a(href='/docs/lib/kipr/create/built-ins.html') Built-In Functions
-                  li
-                    a(href='/docs/lib/kipr/create/music-leds.html') LED and Music Functions
-        li
-          a(href='/docs/lib/kipr/botball.html') Botball Functions
-        li
-          a(href='/docs/lib/kipr/threads.html') Threads
-        li.no-padding
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Motors and Sensors
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/lib/kipr/info/digital-analog-sensors.html') Analog and Digital Sensors
-                  li
-                    a(href='/docs/lib/kipr/info/usb-sensors.html') USB Sensors
-                  li
-                    a(href='/docs/lib/kipr/info/motors-servos.html') Motors and Servos
-                  li
-                    a(href='/docs/lib/kipr/info/simulator.html') Simulator
-        li
-          a(href='/docs/full.html') Full Documentation
-      nav.nav-extended.red.lighten-2
-        .nav-wrapper
-          .col.s12
-            a.button-collapse(data-activates='slide-out', href='#', style='font-size: 50px')
-              i.material-icons menu
-            a#top.brand-logo.waves-effect(href='/docs/index.html') Botball Documentation
-        .nav-wrapper
-          .col.s12
-            a.breadcrumb(href='#!') KIPR Wallaby/Link
-            a.breadcrumb(href='#!') Graphics Functions
-    main.row
-      .container.col.s12
-        // END HEADER
-        // Graphics API
-        a(name='Graphics')
-        h3 KIPR Robot Controller Graphics Functions
-        p
-          | The KIPR Robot Controller (and Simulator) support basic graphical draw operations, which allow a user to create
-          | their own user interface if they wish. Functions are provided to draw and color pixels, lines, circles, triangles,
-          | and rectangles (non-rotated). The screen and two dimensional objects can also be filled with a single color.
-          | Both mouse clicks and cursor location can be detected (on the KIPR Robot Controller, a screen tap corresponds
-          | to a left mouse click).
-        p
-          | Note that any virtual features of the KIPR Robot Controller user interface (such as the A,B,C buttons) will be
-          | unavailable if obscured by the graphics window (it is advisable to use the side button when doing graphical
-          | applications for this reason).
-        table
-          tbody
-            tr
-              td
-                a(name='graphics_open')
-              td
-                code graphics_open 
-                |  [Category: Graphics]
-                dl
-                  dd
-                    | Format: 
-                    code int graphics_open(int 
-                    | width,
-                    |  int height);
-                    br
-                    |  Opens and centers a graphics window on the display of the specified
-                    |  width and height. The maximum width for the KIPR Robot Controller display is 320, and
-                    |  the maximum height is 240. See also 
-                    code graphics_close
-                    | .
-            tr
-              td
-                a(name='graphics_close')
-              td
-                code graphics_close 
-                |  [Category: Graphics]
-                dl
-                  dd
-                    | Format: 
-                    code void graphics_close();
-                    br
-                    |  Closes
-                    |  the graphics window on the display, restoring access to any virtual buttons underneath
-                    |  it. See also 
-                    code graphics_open
-                    | .
-            tr
-              td
-                a(name='graphics_update')
-              td
-                code graphics_update 
-                |  [Category: Graphics]
-                dl
-                  dd
-                    | Format: 
-                    code void graphics_update();
-                    br
-                    |  Repaints
-                    |  the pixels in the graphics window to show any changes that have been made.
-            tr
-              td
-                a(name='graphics_clear')
-              td
-                code graphics_clear 
-                |  [Category: Graphics]
-                dl
-                  dd
-                    | Format: 
-                    code void graphics_clear();
-                    br
-                    |  Erases
-                    |  the graphics window (not shown until 
-                    code graphics_update
-                    | ).
-            tr
-              td
-                a(name='graphics_fill')
-              td
-                code graphics_fill 
-                |  [Category: Graphics]
-                dl
-                  dd
-                    | Format: 
-                    code
-                      | void graphics_fill(int r, int g, int b);
-                    br
-                    |  Colors the pixels in the window using the 
-                    code r
-                    | , 
-                    code g
-                    | , 
-                    code b
-                    |  color encoding.
-            tr
-              td
-                a(name='graphics_pixel')
-              td
-                code graphics_pixel 
-                |  [Category: Graphics]
-                dl
-                  dd
-                    | Format: 
-                    code
-                      | void graphics_pixel(int x, int y, int r, int g, int b);
-                    br
-                    |  Colors the specified pixel in the window using the 
-                    code r
-                    | , 
-                    code g
-                    | , 
-                    code b
-                    |  color encoding, where columns 
-                    code x
-                    |  and rows 
-                    code y
-                    |  are indexed starting
-                    |  from the upper left corner of the graphics window.
-            tr
-              td
-                a(name='graphics_line')
-              td
-                code graphics_line 
-                |  [Category: Graphics]
-                dl
-                  dd
-                    | Format: 
-                    code
-                      | void graphics_line(int x1, int y1, int x2, int y2, int r, int g, int b);
-                    br
-                    |  Draws a line in the window from the specified ( 
-                    code x1
-                    | , 
-                    code y1
-                    | ) pixel
-                    |  to the ( 
-                    code x2
-                    | , 
-                    code y2
-                    | ) pixel using the 
-                    code r
-                    | , 
-                    code g
-                    | , 
-                    code b
-                    |  color encoding (where columns x and rows y are indexed starting from the upper left corner
-                    |  of the graphics window).
-            tr
-              td
-                a(name='graphics_circle')
-              td
-                code graphics_circle 
-                |  [Category: Graphics]
-                dl
-                  dd
-                    | Format: 
-                    code
-                      | void graphics_circle(int cx, int cy, int radius, int r, int g, int b);
-                    br
-                    |  Draws a circle in the window of the specified radius centered at ( 
-                    code cx
-                    | , 
-                    code cy
-                    | )
-                    |  using the 
-                    code r
-                    | , 
-                    code g
-                    | , 
-                    code b
-                    |  color encoding (where columns
-                    |  x and rows y are indexed starting from the upper left corner of the graphics window).
-            tr
-              td
-                a(name='graphics_circle_fill')
-              td
-                code graphics_circle_fill 
-                |  [Category: Graphics]
-                dl
-                  dd
-                    | Format: 
-                    code
-                      | void graphics_circle_fill(int cx, int cy, int radius, int r, int g, int b);
-                    br
-                    |  Draws a circle in the window of the specified radius centered at ( 
-                    code cx
-                    | , 
-                    code cy
-                    | )
-                    |  and fills it using the 
-                    code r
-                    | , 
-                    code g
-                    | , 
-                    code b
-                    |  color encoding (where
-                    |  columns x and rows y are indexed starting from the upper left corner of the graphics
-                    |  window).
-            tr
-              td
-                a(name='graphics_rectangle')
-              td
-                code graphics_rectangle 
-                |  [Category: Graphics]
-                dl
-                  dd
-                    | Format: 
-                    code
-                      | void graphics_rectangle(int x1, int y1, int x2, int y2, int r, int g, int b);
-                    br
-                    |  Draws a rectangle in the window with upper left corner ( 
-                    code x1
-                    | , 
-                    code y1
-                    | )
-                    |  and lower right corner ( 
-                    code x2
-                    | , 
-                    code y2
-                    | ) using the 
-                    code r
-                    | , 
-                    code g
-                    | , 
-                    code b
-                    |  color encoding (where columns x and rows y are indexed starting from the upper left corner
-                    |  of the graphics window).
-            tr
-              td
-                a(name='graphics_rectangle_fill')
-              td
-                code graphics_rectangle_fill 
-                |  [Category: Graphics]
-                dl
-                  dd
-                    | Format: 
-                    code
-                      | void graphics_rectangle_fill(int x1, int y1, int x2, int y2, int r, int g, int b);
-                    br
-                    |  Draws a rectangle in the window with upper left corner ( 
-                    code x1
-                    | , 
-                    code y1
-                    | )
-                    |  and lower right corner ( 
-                    code x2
-                    | , 
-                    code y2
-                    | ) and fills it using the 
-                    code r
-                    | , 
-                    code g
-                    | , 
-                    code b
-                    |  color encoding (where columns x and rows y are indexed starting from the upper left corner
-                    |  of the graphics window).
-            tr
-              td
-                a(name='graphics_triangle')
-              td
-                code graphics_triangle 
-                |  [Category: Graphics]
-                dl
-                  dd
-                    | Format: 
-                    code
-                      | void graphics_triangle(int x1, int y1, int x2, int y2, int x3, int y3, int r, int g, int b);
-                    br
-                    |  Draws a triangle in the window with corners ( 
-                    code x1
-                    | , 
-                    code y1
-                    | ), ( 
-                    code x2
-                    | , 
-                    code y2
-                    | ), ( 
-                    code x3
-                    | , 
-                    code y3
-                    | ) using the 
-                    code r
-                    | , 
-                    code g
-                    | , 
-                    code b
-                    |  color encoding (where columns x and rows
-                    |  y are indexed starting from the upper left corner of the graphics window).
-            tr
-              td
-                a(name='graphics_triangle_fill')
-              td
-                code graphics_triangle_fill 
-                |  [Category: Graphics]
-                dl
-                  dd
-                    | Format: 
-                    code
-                      | void graphics_triangle_fill(int x1, int y1, int x2, int y2, int x3, int y3, int r, int g, int b);
-                    br
-                    |  Draws a triangle in the window with corners ( 
-                    code x1
-                    | , 
-                    code y1
-                    | ), ( 
-                    code x2
-                    | , 
-                    code y2
-                    | ), ( 
-                    code x3
-                    | , 
-                    code y3
-                    | ) and fills it using
-                    |  the 
-                    code r
-                    | , 
-                    code g
-                    | , 
-                    code b
-                    |  color encoding (where columns x and
-                    |  rows y are indexed starting from the upper left corner of the graphics window).
-            tr
-              td
-                a(name='get_mouse_position')
-              td
-                code get_mouse_position 
-                |  [Category: Graphics]
-                dl
-                  dd
-                    | Format: 
-                    code
-                      | void get_mouse_position(int *x, int *y);
-                    br
-                    |  Assigns the column,row position of the cursor in the window to the two specified address
-                    |  parameters. Note that the typical call for this function will look like
-                    br
-                    .Indent
-                      code get_mouse_position(&col, &row);
-            tr
-              td
-                a(name='get_mouse_left_button')
-              td
-                code get_mouse_left_button 
-                |  [Category: Graphics]
-                dl
-                  dd
-                    | Format: 
-                    code int get_mouse_left_button();
-                    br
-                    |  Returns 1 if the left mouse button is clicked or if the KIPR Robot Controller display
-                    |  is tapped. The two additional functions 
-                    code get_mouse_middle_button
-                    |  and 
-                    code get_mouse_right_button
-                    |  are also available but have no meaning on the KIPR Robot Controller (unless a mouse is
-                    |  attached)
-        // START FOOTER
+extends ../../../../exclude/docbase
+
+block vars
+  - var selected = 'graphics'
+  - var path = ["Lib", "Kipr", "Graphics"]
+
+block content
+  // Graphics API
+  a(name='Graphics')
+  h3 KIPR Robot Controller Graphics Functions
+  p
+    | The KIPR Robot Controller (and Simulator) support basic graphical draw operations, which allow a user to create
+    | their own user interface if they wish. Functions are provided to draw and color pixels, lines, circles, triangles,
+    | and rectangles (non-rotated). The screen and two dimensional objects can also be filled with a single color.
+    | Both mouse clicks and cursor location can be detected (on the KIPR Robot Controller, a screen tap corresponds
+    | to a left mouse click).
+  p
+    | Note that any virtual features of the KIPR Robot Controller user interface (such as the A,B,C buttons) will be
+    | unavailable if obscured by the graphics window (it is advisable to use the side button when doing graphical
+    | applications for this reason).
+  table
+    tbody
+      tr
+        td
+          a(name='graphics_open')
+        td
+          code graphics_open 
+          |  [Category: Graphics]
+          dl
+            dd
+              | Format: 
+              code int graphics_open(int 
+              | width,
+              |  int height);
+              br
+              |  Opens and centers a graphics window on the display of the specified
+              |  width and height. The maximum width for the KIPR Robot Controller display is 320, and
+              |  the maximum height is 240. See also 
+              code graphics_close
+              | .
+      tr
+        td
+          a(name='graphics_close')
+        td
+          code graphics_close 
+          |  [Category: Graphics]
+          dl
+            dd
+              | Format: 
+              code void graphics_close();
+              br
+              |  Closes
+              |  the graphics window on the display, restoring access to any virtual buttons underneath
+              |  it. See also 
+              code graphics_open
+              | .
+      tr
+        td
+          a(name='graphics_update')
+        td
+          code graphics_update 
+          |  [Category: Graphics]
+          dl
+            dd
+              | Format: 
+              code void graphics_update();
+              br
+              |  Repaints
+              |  the pixels in the graphics window to show any changes that have been made.
+      tr
+        td
+          a(name='graphics_clear')
+        td
+          code graphics_clear 
+          |  [Category: Graphics]
+          dl
+            dd
+              | Format: 
+              code void graphics_clear();
+              br
+              |  Erases
+              |  the graphics window (not shown until 
+              code graphics_update
+              | ).
+      tr
+        td
+          a(name='graphics_fill')
+        td
+          code graphics_fill 
+          |  [Category: Graphics]
+          dl
+            dd
+              | Format: 
+              code
+                | void graphics_fill(int r, int g, int b);
+              br
+              |  Colors the pixels in the window using the 
+              code r
+              | , 
+              code g
+              | , 
+              code b
+              |  color encoding.
+      tr
+        td
+          a(name='graphics_pixel')
+        td
+          code graphics_pixel 
+          |  [Category: Graphics]
+          dl
+            dd
+              | Format: 
+              code
+                | void graphics_pixel(int x, int y, int r, int g, int b);
+              br
+              |  Colors the specified pixel in the window using the 
+              code r
+              | , 
+              code g
+              | , 
+              code b
+              |  color encoding, where columns 
+              code x
+              |  and rows 
+              code y
+              |  are indexed starting
+              |  from the upper left corner of the graphics window.
+      tr
+        td
+          a(name='graphics_line')
+        td
+          code graphics_line 
+          |  [Category: Graphics]
+          dl
+            dd
+              | Format: 
+              code
+                | void graphics_line(int x1, int y1, int x2, int y2, int r, int g, int b);
+              br
+              |  Draws a line in the window from the specified ( 
+              code x1
+              | , 
+              code y1
+              | ) pixel
+              |  to the ( 
+              code x2
+              | , 
+              code y2
+              | ) pixel using the 
+              code r
+              | , 
+              code g
+              | , 
+              code b
+              |  color encoding (where columns x and rows y are indexed starting from the upper left corner
+              |  of the graphics window).
+      tr
+        td
+          a(name='graphics_circle')
+        td
+          code graphics_circle 
+          |  [Category: Graphics]
+          dl
+            dd
+              | Format: 
+              code
+                | void graphics_circle(int cx, int cy, int radius, int r, int g, int b);
+              br
+              |  Draws a circle in the window of the specified radius centered at ( 
+              code cx
+              | , 
+              code cy
+              | )
+              |  using the 
+              code r
+              | , 
+              code g
+              | , 
+              code b
+              |  color encoding (where columns
+              |  x and rows y are indexed starting from the upper left corner of the graphics window).
+      tr
+        td
+          a(name='graphics_circle_fill')
+        td
+          code graphics_circle_fill 
+          |  [Category: Graphics]
+          dl
+            dd
+              | Format: 
+              code
+                | void graphics_circle_fill(int cx, int cy, int radius, int r, int g, int b);
+              br
+              |  Draws a circle in the window of the specified radius centered at ( 
+              code cx
+              | , 
+              code cy
+              | )
+              |  and fills it using the 
+              code r
+              | , 
+              code g
+              | , 
+              code b
+              |  color encoding (where
+              |  columns x and rows y are indexed starting from the upper left corner of the graphics
+              |  window).
+      tr
+        td
+          a(name='graphics_rectangle')
+        td
+          code graphics_rectangle 
+          |  [Category: Graphics]
+          dl
+            dd
+              | Format: 
+              code
+                | void graphics_rectangle(int x1, int y1, int x2, int y2, int r, int g, int b);
+              br
+              |  Draws a rectangle in the window with upper left corner ( 
+              code x1
+              | , 
+              code y1
+              | )
+              |  and lower right corner ( 
+              code x2
+              | , 
+              code y2
+              | ) using the 
+              code r
+              | , 
+              code g
+              | , 
+              code b
+              |  color encoding (where columns x and rows y are indexed starting from the upper left corner
+              |  of the graphics window).
+      tr
+        td
+          a(name='graphics_rectangle_fill')
+        td
+          code graphics_rectangle_fill 
+          |  [Category: Graphics]
+          dl
+            dd
+              | Format: 
+              code
+                | void graphics_rectangle_fill(int x1, int y1, int x2, int y2, int r, int g, int b);
+              br
+              |  Draws a rectangle in the window with upper left corner ( 
+              code x1
+              | , 
+              code y1
+              | )
+              |  and lower right corner ( 
+              code x2
+              | , 
+              code y2
+              | ) and fills it using the 
+              code r
+              | , 
+              code g
+              | , 
+              code b
+              |  color encoding (where columns x and rows y are indexed starting from the upper left corner
+              |  of the graphics window).
+      tr
+        td
+          a(name='graphics_triangle')
+        td
+          code graphics_triangle 
+          |  [Category: Graphics]
+          dl
+            dd
+              | Format: 
+              code
+                | void graphics_triangle(int x1, int y1, int x2, int y2, int x3, int y3, int r, int g, int b);
+              br
+              |  Draws a triangle in the window with corners ( 
+              code x1
+              | , 
+              code y1
+              | ), ( 
+              code x2
+              | , 
+              code y2
+              | ), ( 
+              code x3
+              | , 
+              code y3
+              | ) using the 
+              code r
+              | , 
+              code g
+              | , 
+              code b
+              |  color encoding (where columns x and rows
+              |  y are indexed starting from the upper left corner of the graphics window).
+      tr
+        td
+          a(name='graphics_triangle_fill')
+        td
+          code graphics_triangle_fill 
+          |  [Category: Graphics]
+          dl
+            dd
+              | Format: 
+              code
+                | void graphics_triangle_fill(int x1, int y1, int x2, int y2, int x3, int y3, int r, int g, int b);
+              br
+              |  Draws a triangle in the window with corners ( 
+              code x1
+              | , 
+              code y1
+              | ), ( 
+              code x2
+              | , 
+              code y2
+              | ), ( 
+              code x3
+              | , 
+              code y3
+              | ) and fills it using
+              |  the 
+              code r
+              | , 
+              code g
+              | , 
+              code b
+              |  color encoding (where columns x and
+              |  rows y are indexed starting from the upper left corner of the graphics window).
+      tr
+        td
+          a(name='get_mouse_position')
+        td
+          code get_mouse_position 
+          |  [Category: Graphics]
+          dl
+            dd
+              | Format: 
+              code
+                | void get_mouse_position(int *x, int *y);
+              br
+              |  Assigns the column,row position of the cursor in the window to the two specified address
+              |  parameters. Note that the typical call for this function will look like
+              br
+              .Indent
+                code get_mouse_position(&col, &row);
+      tr
+        td
+          a(name='get_mouse_left_button')
+        td
+          code get_mouse_left_button 
+          |  [Category: Graphics]
+          dl
+            dd
+              | Format: 
+              code int get_mouse_left_button();
+              br
+              |  Returns 1 if the left mouse button is clicked or if the KIPR Robot Controller display
+              |  is tapped. The two additional functions 
+              code get_mouse_middle_button
+              |  and 
+              code get_mouse_right_button
+              |  are also available but have no meaning on the KIPR Robot Controller (unless a mouse is
+              |  attached)
+  // START FOOTER
 

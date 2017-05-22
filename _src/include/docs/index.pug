@@ -1,1120 +1,952 @@
-html
-  head
-    link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
-    link(href='/css/base.css', rel='stylesheet', type='text/css')
-    link(href='/css/materialize.min.css', media='screen,projection', rel='stylesheet', type='text/css')
-    link(href='/css/docs.css', rel='stylesheet', type='text/css')
-    link(href='../imgs/logos/botguy.png', rel='icon')
-    title Botball Documentation - Tutorial
-    meta(content='#00796b', name='theme-color')
-    meta(content='width=device-width, initial-scale=1.0', name='viewport')
-  body
-    script(src='https://code.jquery.com/jquery-2.1.1.min.js', type='text/javascript')
-    script(src='/js/materialize.min.js', type='text/javascript')
-    script.
-      $(document).ready(function () {
-      $('.button-collapse').sideNav({
-      draggable: true
-      });
-      $(".active").parent().parent().siblings()[0].click() })
-    header
-      ul#slide-out.side-nav.fixed
-        li.red.lighten-1(style='height: 130px')
-          .userView
-            h5.white-text
-              a.white-text(href='/docs/index.html') Index
-        li
-          a(href='/docs/tutorial.html') Tutorial
-        li.no-padding
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Data Objects
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/data-objects/index.html') Introduction
-                  li
-                    a(href='/docs/data-objects/variables.html') Variables
-                  li
-                    a(href='/docs/data-objects/constants.html') Constants
-                  li
-                    a(href='/docs/data-objects/data-types.html') Data Types
-                  li
-                    a(href='/docs/data-objects/arrays.html') Arrays
-                  li
-                    a(href='/docs/data-objects/structures.html') Structures
-                  li
-                    a(href='/docs/data-objects/initialization-examples.html') Initialization Examples
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Statements and Expressions
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/statements-and-expressions/index.html') Introduction
-                  li
-                    a(href='/docs/statements-and-expressions/operators.html') Operators
-                  li
-                    a(href='/docs/statements-and-expressions/control-flow.html') Control Flow
-        li
-          a(href='/docs/tutorial.html') Style
-        li
-          a(href='/docs/tutorial.html') Debugging
-        li.no-padding
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Printing
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/printing/index.html') Introduction
-                  li
-                    a(href='/docs/printing/examples.html') Examples
-                  li
-                    a(href='/docs/printing/printf-codes.html') printf Codes
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Preprocessor
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/preprocessor/index.html') Introduction
-                  li
-                    a(href='/docs/preprocessor/directives.html') Directives
-                  li
-                    a(href='/docs/preprocessor/include.html') Include
-                  li
-                    a(href='/docs/preprocessor/macros.html') Macros
-                  li
-                    a(href='/docs/preprocessor/conditional-compilation.html') Conditional Compilation
-        li
-          a(href='/docs/lib/math.html') Math Library
-        li.no-padding
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | KIPR Wallaby/Link
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/lib/kipr/common-functions.html') Common Functions
-                  li
-                    a(href='/docs/lib/kipr/functions.html') Functions List
-                  li
-                    a(href='/docs/lib/kipr/camera.html') Camera Functions
-                  li
-                    a(href='/docs/lib/kipr/graphics.html') Graphics Functions
-                  li
-                    a(href='/docs/lib/kipr/depth.html') Depth Sensor Functions
-                  li
-                    a(href='/docs/lib/kipr/usb.html') File I/O Functions
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | iRobot Create
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/lib/kipr/create/index.html') Introduction
-                  li
-                    a(href='/docs/lib/kipr/create/serial.html') Serial Functions
-                  li
-                    a(href='/docs/lib/kipr/create/configuration.html') Configuration Functions
-                  li
-                    a(href='/docs/lib/kipr/create/movement.html') Movement Functions
-                  li
-                    a(href='/docs/lib/kipr/create/sensors.html') Sensor Functions
-                  li
-                    a(href='/docs/lib/kipr/create/battery.html') Battery Functions
-                  li
-                    a(href='/docs/lib/kipr/create/built-ins.html') Built-In Functions
-                  li
-                    a(href='/docs/lib/kipr/create/music-leds.html') LED and Music Functions
-        li
-          a(href='/docs/lib/kipr/botball.html') Botball Functions
-        li
-          a(href='/docs/lib/kipr/threads.html') Threads
-        li.no-padding
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Motors and Sensors
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/lib/kipr/info/digital-analog-sensors.html') Analog and Digital Sensors
-                  li
-                    a(href='/docs/lib/kipr/info/usb-sensors.html') USB Sensors
-                  li
-                    a(href='/docs/lib/kipr/info/motors-servos.html') Motors and Servos
-                  li
-                    a(href='/docs/lib/kipr/info/simulator.html') Simulator
-        li
-          a(href='/docs/full.html') Full Documentation
-      nav.nav-extended.red.lighten-2
-        .nav-wrapper
-          .col.s12
-            a.button-collapse(data-activates='slide-out', href='#', style='font-size: 50px')
-              i.material-icons menu
-            a#top.brand-logo.waves-effect(href='/docs/index.html') Botball Documentation
-        .nav-wrapper
-          .col.s12
-            a.breadcrumb(href='#!') Index
-    main.row
-      .container.col.s12
-        // END HEADER
-        // Functions Categorized
-        a(name='FunctionsCategorized')
-        h3 Categorized Function List (cross-linked)
-        |  Each function listed is provided with a cross link to its library description.
-        .indent
-          a(name='CategoryBotball')
-          h4 Botball
-          code
-            table
-              tbody
-                tr
-                  td
-                    ul
-                      li
-                        | void run_for(double delay, &lt;
-                        em function_name
-                        | &gt;);  [
-                        a(href='#run_for') §
-                        | ]
-                      li
-                        | void shut_down_in(double delay);  [
-                        a(href='#Botball') §
-                        | ]
-                      | 	  &lt;li&gt;&lt;font class="CVariable"&gt;int&lt;/font&gt; target_cha_in_chb(&lt;font class="CVariable"&gt;int&lt;/font&gt; cha, &lt;font class="CVariable"&gt;int&lt;/font&gt; chb, &lt;font class="CVariable"&gt;int&lt;/font&gt; *x, &lt;font class="CVariable"&gt;int&lt;/font&gt; *y)&lt;/li&gt;
-                      li
-                        | void wait_for_light(int light_port_);  [
-                        a(href='#Botball') §
-                        | ]
-          a(name='CategoryCreate')
-          h4 Create
-          table
-            tbody
-              tr
-                td(alignment='top')
-                  ul
-                    b Serial Interface
-                    code
-                      li
-                        | void create_clear_serial_buffer(); [
-                        a(href='#create_clear_serial_buffer') §
-                        | ]
-                      li
-                        | int create_connect(); [
-                        a(href='#create_connect') §
-                        | ]
-                      li
-                        | void  create_disconnect(); [
-                        a(href='#create_disconnect') §
-                        | ]
-                      li
-                        | int create_read_block(
-                        |                                                   char *data,
-                        |                                                   int count); [
-                        a(href='#create_read_block') §
-                        | ]
-                      li
-                        | void create_write_byte(
-                        |                                                   char byte); [
-                        a(href='#create_write_byte') §
-                        | ]
-                      li
-                        | void  create_full(); [
-                        a(href='#create_full') §
-                        | ]
-                      li
-                        | void  create_start(); [
-                        a(href='#create_start') §
-                        | ]
-                      li
-                        | void  create_passive(); [
-                        a(href='#create_passive') §
-                        | ]
-                      li
-                        | void create_safe(); [
-                        a(href='#create_safe') §
-                        | ]
-                      li
-                        | int get_create_mode(); [
-                        a(href='#get_create_mode') §
-                        | ]
-                    b Movement
-                    code
-                      li
-                        | void create_drive(
-                        |                                                   int speed,
-                        |                                                   int radius); [
-                        a(href='#create_drive') §
-                        | ]
-                      li
-                        | void create_drive_direct(
-                        |                                                   int r_speed,
-                        |                                                   int l_speed); [
-                        a(href='#create_drive_direct') §
-                        | ]
-                      li
-                        | void create_drive_straight(
-                        |                                                   int speed); [
-                        a(href='#create_drive_straight') §
-                        | ]
-                      li
-                        | void create_spin_CCW(
-                        |                                                   int speed); [
-                        a(href='#create_spin_CCW') §
-                        | ]
-                      li
-                        | void create_spin_CW(
-                        |                                                   int speed); [
-                        a(href='#create_spin_CW') §
-                        | ]
-                      li
-                        | void create_stop(); [
-                        a(href='#create_stop') §
-                        | ]
-                      li
-                        | int get_create_distance(); [
-                        a(href='#get_create_distance') §
-                        | ]
-                      li
-                        | int get_create_normalized_angle(); [
-                        a(href='#get_create_normalized_angle') §
-                        | ]
-                      li
-                        | int get_create_overcurrents(); [
-                        a(href='#get_create_overcurrents') §
-                        | ]
-                      li
-                        | int get_create_requested_left_velocity(); [
-                        a(href='#get_create_requested_left_velocity') §
-                        | ]
-                      li
-                        | int get_create_requested_radius(); [
-                        a(href='#get_create_requested_radius') §
-                        | ]
-                      li
-                        | int get_create_requested_right_velocity(); [
-                        a(href='#get_create_requested_right_velocity') §
-                        | ]
-                      li
-                        | int get_create_requested_velocity(); [
-                        a(href='#get_create_requested_velocity') §
-                        | ]
-                      li
-                        | int get_create_total_angle(); [
-                        a(href='#get_create_total_angle') §
-                        | ]
-                      li
-                        | void set_create_distance(
-                        |                                                   int dist); [
-                        a(href='#set_create_distance') §
-                        | ]
-                      li
-                        | void set_create_normalized_angle(
-                        |                                                   int angle); [
-                        a(href='#set_create_normalized_angle') §
-                        | ]
-                      li
-                        | void set_create_total_angle(
-                        |                                                   int angle); [
-                        a(href='#set_create_total_angle') §
-                        | ]
-                    b Battery
-                    code
-                      li
-                        | int get_create_battery_capacity(); [
-                        a(href='#get_create_battery_capacity') §
-                        | ]
-                      li
-                        | int get_create_battery_charge(); [
-                        a(href='#get_create_battery_charge') §
-                        | ]
-                      li
-                        | int get_create_charging_state(); [
-                        a(href='#get_create_charging_state') §
-                        | ]
-                      li
-                        | int get_create_battery_current(); [
-                        a(href='#get_create_battery_current') §
-                        | ]
-                      li
-                        | int get_create_battery_temp(); [
-                        a(href='#get_create_battery_temp') §
-                        | ]
-                      li
-                        | int get_create_battery_voltage(); [
-                        a(href='#get_create_battery_voltage') §
-                        | ]
-                td
-                  ul
-                    code
-                    b Sensors
-                    code
-                      li
-                        | int get_create_advance_button(); [
-                        a(href='#get_create_advance_button') §
-                        | ]
-                      li
-                        | int get_create_bay_DI(); [
-                        a(href='#get_create_bay_DI') §
-                        | ]
-                      li
-                        | int get_create_bay_AI(); [
-                        a(href='#get_create_bay_AI') §
-                        | ]
-                      li
-                        | int get_create_cwdrop(); [
-                        a(href='#get_create_cwdrop') §
-                        | ]
-                      li
-                        | int get_create_infrared(); [
-                        a(href='#get_create_infrared') §
-                        | ]
-                      li
-                        | int get_create_lbump(); [
-                        a(href='#get_create_lbump') §
-                        | ]
-                      li
-                        | int get_create_lcliff(); [
-                        a(href='#get_create_lcliff') §
-                        | ]
-                      li
-                        | int get_create_lcliff_amt(); [
-                        a(href='#get_create_lcliff_amt') §
-                        | ]
-                      li
-                        | int get_create_lfcliff(); [
-                        a(href='#get_create_lfcliff') §
-                        | ]
-                      li
-                        | int get_create_lfcliff_amt(); [
-                        a(href='#get_create_lfcliff_amt') §
-                        | ]
-                      li
-                        | int get_create_lwdrop(); [
-                        a(href='#get_create_lwdrop') §
-                        | ]
-                      li
-                        | int get_create_number_of_stream_packets(); [
-                        a(href='#get_create_number_of_stream_packets') §
-                        | ]
-                      li
-                        | int get_create_play_button(); [
-                        a(href='#get_create_play_button') §
-                        | ]
-                      li
-                        | int get_create_rbump(); [
-                        a(href='#get_create_rbump') §
-                        | ]
-                      li
-                        | int get_create_rcliff(); [
-                        a(href='#get_create_rcliff') §
-                        | ]
-                      li
-                        | int get_create_rcliff_amt(); [
-                        a(href='#get_create_rcliff_amt') §
-                        | ]
-                      li
-                        | int get_create_rfcliff(); [
-                        a(href='#get_create_rfcliff') §
-                        | ]
-                      li
-                        | int get_create_rfcliff_amt(); [
-                        a(href='#get_create_rfcliff_amt') §
-                        | ]
-                      li
-                        | int get_create_rlwdrop(); [
-                        a(href='#get_create_rlwdrop') §
-                        | ]
-                      li
-                        | int get_create_vwall(); [
-                        a(href='#get_create_vwall') §
-                        | ]
-                      li
-                        | int get_create_wall(); [
-                        a(href='#get_create_wall') §
-                        | ]
-                      li
-                        | int get_create_wall_amt(); [
-                        a(href='#get_create_wall_amt') §
-                        | ]
-                    b Built in Scripts
-                    code
-                      li
-                        | void  create_spot(); [
-                        a(href='#create_spot') §
-                        | ]
-                      li
-                        | void  create_cover(); [
-                        a(href='#create_cover') §
-                        | ]
-                      li
-                        | void  create_demo(
-                        |                                                   int  d); [
-                        a(href='#create_demo') §
-                        | ]
-                      li
-                        | void create_cover_dock(); [
-                        a(href='#create_cover_dock') §
-                        | ]
-                    b LEDs and Music
-                    code
-                      li
-                        | void create_advance_led(
-                        |                                                   int on); [
-                        a(href='#create_advance_led') §
-                        | ]
-                      li
-                        | int get_create_song_number(); [
-                        a(href='#get_create_song_number') §
-                        | ]
-                      li
-                        | int get_create_song_playing(); [
-                        a(href='#get_create_song_playing') §
-                        | ]
-                      li
-                        | void create_load_song(
-                        |                                                   int num); [
-                        a(href='#create_load_song') §
-                        | ]
-                      li
-                        | void create_play_led(
-                        |                                                   int on); [
-                        a(href='#create_play_led') §
-                        | ]
-                      li
-                        | void create_play_song(
-                        |                                                   int num); [
-                        a(href='#create_play_song') §
-                        | ]
-                      li
-                        | void create_power_led(
-                        |                                                   int color, int brightness); [
-                        a(href='#create_power_led') §
-                        | ]
-          a(name='CategoryGraphics')
-          h4 Graphics
-          table
-            tbody
-              tr
-                td
-                  ul
-                    code
-                      li
-                        | int graphics_open(int width, int height);  [
-                        a(href='#graphics_open') §
-                        | ]
-                      li
-                        | void graphics_close();  [
-                        a(href='#graphics_close') §
-                        | ]
-                      li
-                        | void graphics_update();  [
-                        a(href='#graphics_update') §
-                        | ]
-                      li
-                        | void graphics_clear();  [
-                        a(href='#graphics_clear') §
-                        | ]
-                      li
-                        | void graphics_fill(int r, int g, int b);  [
-                        a(href='#graphics_fill') §
-                        | ]
-                      li
-                        | void graphics_pixel(int x, int y, int r, int g, int b);  [
-                        a(href='graphics_pixel') §
-                        | ]
-                      li
-                        | void graphics_line(int x1, int y1, int x2, int y2, int r, int g, int b);  [
-                        a(href='#graphics_line') §
-                        | ]
-                      li
-                        | void graphics_circle(int cx, int cy, int radius, int r, int g, int b);  [
-                        a(href='#graphics_circle') §
-                        | ]
-                      li
-                        | void graphics_circle_fill(int cx, int cy, int radius, int r, int g, int b);  [
-                        a(href='#graphics_circle_fill') §
-                        | ]
-                      li
-                        | void graphics_rectangle(int x1, int y1, int x2, int y2, int r, int g, int b);  [
-                        a(href='#graphics_rectangle') §
-                        | ]
-                      li
-                        | void graphics_rectangle_fill(int x1, int y1, int x2, int y2, int r, int g, int b);  [
-                        a(href='#graphics_rectangle_fill') §
-                        | ]
-                      li
-                        | void graphics_triangle(int x1, int y1, int x2, int y2, int x3, int y3, int r, int g, int b);  [
-                        a(href='graphics_triangle') §
-                        | ]
-                      li
-                        | void graphics_triangle_fill(int x1, int y1, int x2, int y2, int x3, int y3, int r, int g, int b);  [
-                        a(href='graphics_triangle_fill') §
-                        | ]
-                      li
-                        | int get_mouse_position(int *x, int *y);  [
-                        a(href='#get_mouse_position') §
-                        | ]
-                      li
-                        | int get_mouse_left_button();  [
-                        a(href='#get_mouse_left_button') §
-                        | ]
-          a(name='CategoryMath')
-          h4 Math
-          table
-            tbody
-              tr
-                td
-                  ul
-                    code
-                      li
-                        | double atan(double angle);  [
-                        a(href='#atan') §
-                        | ]
-                      li
-                        | double cos(double angle);  [
-                        a(href='#cos') §
-                        | ]
-                      li
-                        | double exp(double num);  [
-                        a(href='#exp') §
-                        | ]
-                      li
-                        | double exp10(double num);  [
-                        a(href='#exp10') §
-                        | ]
-                      li
-                        | double log(double num);  [
-                        a(href='#log') §
-                        | ]
-                      li
-                        | int log10(double num);  [
-                        a(href='#log10') §
-                        | ]
-                      li
-                        | double pow(double x, double y);  [
-                        a(href='#pow') §
-                        | ]
-                      li
-                        | int rand(int m);  [
-                        a(href='#rand') §
-                        | ]
-                      li
-                        | double sin(double angle);  [
-                        a(href='#sin') §
-                        | ]
-                      li
-                        | double sqrt(double num);  [
-                        a(href='#sqrt') §
-                        | ]
-                      li
-                        | void srand(int s);  [
-                        a(href='#srand') §
-                        | ]
-                      li
-                        | double tan(double angle);  [
-                        a(href='#tan') §
-                        | ]
-          a(name='CategoryMotors')
-          h4 Motors
-          table
-            tbody
-              tr
-                td
-                  ul
-                    code
-                      li
-                        | void alloff();  [
-                        a(href='#alloff') §
-                        | ]
-                      li
-                        | void ao();  [
-                        a(href='#ao') §
-                        | ]
-                      li
-                        | void bk(int m);  [
-                        a(href='#bk') §
-                        | ]
-                      li
-                        | void block_motor_done(int m);  [
-                        a(href='#block_motor_done') §
-                        | ]
-                      li
-                        | void bmd(int m);  [
-                        a(href='#bmd') §
-                        | ]
-                      li
-                        | int get_motor_done(int m);  [
-                        a(href='#get_motor_done') §
-                        | ]
-                      li
-                        | void clear_motor_position_counter(int motor_nbr);  [
-                        a(href='#clear_motor_position_counter') §
-                        | ]
-                      li
-                        | void fd(int m);  [
-                        a(href='#fd') §
-                        | ]
-                      li
-                        | void freeze(int m);  [
-                        a(href='#freeze') §
-                        | ]
-                      li
-                        | int get_motor_done(int m);  [
-                        a(href='#get_motor_done') §
-                        | ]
-                      li
-                        | int get_motor_position_counter(int m);  [
-                        a(href='#get_motor_position_counter') §
-                        | ]
-                      li
-                        | int get_pid_gains(int motor, int p, int i, int d, int pd, int id, int dd);  [
-                        a(href='#get_pid_gains') §
-                        | ]
-                      li
-                        | void mav(int m, int vel);  [
-                        a(href='#mav') §
-                        | ]
-                      li
-                        | void motor(int m, int p);  [
-                        a(href='#motor') §
-                        | ]
-                      li
-                        | void move_at_velocity(int m, int vel);  [
-                        a(href='#move_at_velocity') §
-                        | ]
-                      li
-                        | void move_relative_position(int m, int speed, int pos);  [
-                        a(href='#move_relative_position') §
-                        | ]
-                      li
-                        | void move_to_position(int m, int speed, int pos);  [
-                        a(href='#move_to_position') §
-                        | ]
-                      li
-                        | void mrp(int m, int vel, int pos);  [
-                        a(href='#mrp') §
-                        | ]
-                      li
-                        | void mtp(int m, int vel, int pos);  [
-                        a(href='#mtp') §
-                        | ]
-                      li
-                        | void off(int m);  [
-                        a(href='#off') §
-                        | ]
-                      li
-                        | int set_pid_gains(int motor, int p, int i, int d, int pd, int id, int dd);  [
-                        a(href='#set_pid_gains') §
-                        | ]
-                      li
-                        | int setpwm(int m, int dutycycle);  [
-                        a(href='#setpwm') §
-                        | ]
-          a(name='CategoryOutput')
-          h4 Output
-          table
-            tbody
-              tr
-                td
-                  ul
-                    code
-                      li
-                        | void beep();  [
-                        a(href='#beep') §
-                        | ]
-                      li
-                        | void console_clear();  [
-                        a(href='#console_clear') §
-                        | ]
-                      li
-                        | void display_clear();  [
-                        a(href='#display_clear') §
-                        | ]
-                      li
-                        | void display_printf(int col, int row, char s[], . . .);  [
-                        a(href='#display_printf') §
-                        | ]
-                      li
-                        | void extra_buttons_show();  [
-                        a(href='#extra_buttons_show') §
-                        | ]
-                      li
-                        | void extra_buttons_hide();  [
-                        a(href='#extra_buttons_hide') §
-                        | ]
-                      li
-                        | void set_a_button_text(char txt[]);  [
-                        a(href='#set_a_button_text') §
-                        | ]
-                      li
-                        | void set_b_button_text(char txt[]);  [
-                        a(href='#set_b_button_text') §
-                        | ]
-                      li
-                        | void set_c_button_text(char txt[]);  [
-                        a(href='#set_c_button_text') §
-                        | ]
-                      li
-                        | void set_digital_output(int port, int inout);  [
-                        a(href='#set_digital_output') §
-                        | ]
-                      li
-                        | void set_digital_value(int port, int value);  [
-                        a(href='#set_digital_value') §
-                        | ]
-                      li
-                        | void set_x_button_text(char txt[]);  [
-                        a(href='#set_x_button_text') §
-                        | ]
-                      li
-                        | void set_y_button_text(char txt[]);  [
-                        a(href='#set_y_button_text') §
-                        | ]
-                      li
-                        | void set_z_button_text(char txt[]);  [
-                        a(href='#set_z_button_text') §
-                        | ]
-          a(name='CategoryThreads')
-          h4 Threads
-          table
-            tbody
-              tr
-                td
-                  ul
-                    code
-                      li
-                        | thread thread_create(&lt;
-                        em function_name
-                        | &gt;);  [
-                        a(href='#thread_create') §
-                        | ]
-                      li
-                        | void thread_destroy(&lt;
-                        em thread id
-                        | &gt;&gt;);  [
-                        a(href='#thread_destroy') §
-                        | ]
-                      li
-                        | void thread_start(&lt;
-                        em thread id
-                        | &gt;);  [
-                        a(href='#thread_start') §
-                        | ]
-                      li
-                        | void thread_wait(&lt;
-                        em thread id
-                        | &gt;);  [
-                        a(href='#thread_wait') §
-                        | ]
-                      li
-                        | void run_for(double sec, void &lt;
-                        em function_name
-                        | &gt;);  [
-                        a(href='#run_for') §
-                        | ]
-          a(name='CategorySensors')
-          h4 Sensors
-          table
-            tbody
-              tr
-                td
-                  ul
-                    code
-                      li
-                        | int a_button();  [
-                        a(href='#a_button') §
-                        | ]
-                      li
-                        | int a_button_clicked();  [
-                        a(href='#a_button_clicked') §
-                        | ]
-                      li
-                        | int accel_x();  [
-                        a(href='#accel_x') §
-                        | ]
-                      li
-                        | int accel_y();  [
-                        a(href='#accel_y') §
-                        | ]
-                      li
-                        | int accel_z();  [
-                        a(href='#accel_z') §
-                        | ]
-                      li
-                        | int analog(int p);  [
-                        a(href='#analog') §
-                        | ]
-                      li
-                        | int analog_et(int p);  [
-                        a(href='#analog_et') §
-                        | ]
-                      li
-                        | int analog8(int p);  [
-                        a(href='#analog8') §
-                        | ]
-                      li
-                        | int analog10(int p);  [
-                        a(href='#analog10') §
-                        | ]
-                      li
-                        | int any_button();  [
-                        a(href='#any_button') §
-                        | ]
-                      li
-                        | int b_button();  [
-                        a(href='#b_button') §
-                        | ]
-                      li
-                        | int b_button_clicked();  [
-                        a(href='#b_button_clicked') §
-                        | ]
-                      li
-                        | int c_button();  [
-                        a(href='#c_button') §
-                        | ]
-                      li
-                        | int c_button_clicked();  [
-                        a(href='#c_button_clicked') §
-                        | ]
-                      li
-                        | int digital(int p);  [
-                        a(href='#digital') §
-                        | ]
-                      li
-                        | int get_analog_pullup(int port);  [
-                        a(href='#get_analog_pullup') §
-                        | ]
-                      li
-                        | int get_digital_pullup(int port);  [
-                        a(href='#get_digital_pullup') §
-                        | ]
-                      li
-                        | double power_level();  [
-                        a(href='#power_level') §
-                        | ]
-                      li
-                        | int get_extra_buttons_visible();  [
-                        a(href='#get_extra_buttons_visible') §
-                        | ]
-                      li
-                        | void set_analog_pullup(int port, int pullupTF);  [
-                        a(href='#set_analog_pullup') §
-                        | ]
-                      li
-                        | void set_digital_pullup(int port, int pullupTF);  [
-                        a(href='#set_digital_pullup') §
-                        | ]
-                      li
-                        | int side_button();  [
-                        a(href='#side_button') §
-                        | ]
-                      li
-                        | int side_button_clicked();  [
-                        a(href='#side_button_clicked') §
-                        | ]
-                      li
-                        | int x_button();  [
-                        a(href='#x_button') §
-                        | ]
-                      li
-                        | int x_button_clicked();  [
-                        a(href='#x_button_clicked') §
-                        | ]
-                      li
-                        | int y_button();  [
-                        a(href='#y_button') §
-                        | ]
-                      li
-                        | int y_button_clicked();  [
-                        a(href='#y_button_clicked') §
-                        | ]
-                      li
-                        | int z_button();  [
-                        a(href='#z_button') §
-                        | ]
-                      li
-                        | int z_button_clicked();  [
-                        a(href='#z_button_clicked') §
-                        | ]
-          a(name='CategoryServos')
-          h4 Servos
-          table
-            tbody
-              tr
-                td
-                  ul
-                    code
-                      li
-                        | void disable_servo(int p);  [
-                        a(href='#disable_servo') §
-                        | ]
-                      li
-                        | void disable_servos();  [
-                        a(href='#disable_servos') §
-                        | ]
-                      li
-                        | void enable_servo(int p);  [
-                        a(href='#enable_servo') §
-                        | ]
-                      li
-                        | void enable_servos();  [
-                        a(href='#enable_servos') §
-                        | ]
-                      li
-                        | int get_servo_enabled(int srv);  [
-                        a(href='#get_servo_enabled') §
-                        | ]
-                      li
-                        | int get_servo_position(int srv);  [
-                        a(href='#get_servo_position') §
-                        | ]
-                      li
-                        | int set_servo_position(int srv, int pos);  [
-                        a(href='#set_servo_position') §
-                        | ]
-          a(name='CategoryTime')
-          h4 Time
-          table
-            tbody
-              tr
-                td
-                  ul
-                    code
-                      li
-                        | void msleep(int msec);  [
-                        a(href='#msleep') §
-                        | ]
-                      li
-                        | double seconds();  [
-                        a(href='#seconds') §
-                        | ]
-          a(name='CategoryVision')
-          h4 Vision
-          table
-            tbody
-              tr
-                td
-                  ul
-                    code
-                      li
-                        | void camera_close();  [
-                        a(href='#camera_close') §
-                        | ]
-                      li
-                        | int camera_load_config(char name[]);   [
-                        a(href='#camera_load_config') §
-                        | ]
-                      li
-                        | int camera_open();  [
-                        a(href='#camera_open') §
-                        | ]
-                      li
-                        | int camera_open_at_res(int res_numb);  [
-                        a(href='#camera_open_at_res') §
-                        | ]
-                      li
-                        | int camera_open_device(int number, int res_numb);  [
-                        a(href='#camera_open_device') §
-                        | ]
-                      li
-                        | int camera_update();  [
-                        a(href='#camera_update') §
-                        | ]
-                      li
-                        | int get_channel_count();  [
-                        a(href='#get_channel_count') §
-                        | ]
-                      li
-                        | int get_object_area(int channel, int object);  [
-                        a(href='#get_object_area') §
-                        | ]
-                      li
-                        | rectangle get_object_bbox(int channel, int object);  [
-                        a(href='#get_object_bbox') §
-                        | ]
-                      li
-                        | point2 get_object_center(int channel, int object);  [
-                        a(href='#get_object_center') §
-                        | ]
-                      li
-                        | point2 get_object_centroid(int channel, int object);  [
-                        a(href='#get_object_centroid') §
-                        | ]
-                      li
-                        | int get_code_num(int channel, int object);  [
-                        a(href='#get_code_num') §
-                        | ]
-                      li
-                        | double get_object_confidence(int channel, int object);  [
-                        a(href='#get_object_confidence') §
-                        | ]
-                      li
-                        | int get_object_count(int channel);  [
-                        a(href='#get_object_count') §
-                        | ]
-                      li
-                        | char *get_object_data(int channel, int object);  [
-                        a(href='#get_object_data') §
-                        | ]
-                      li
-                        | int get_object_data_length(int channel, int object);  [
-                        a(href='#get_object_data_length') §
-                        | ]
-          a(name='CategoryDepth')
-          h4 Depth
-          table
-            tbody
-              tr
-                td
-                  ul
-                    code
-                      li
-                        | void depth_close();  [
-                        a(href='#depth_close') §
-                        | ]
-                      li
-                        | int depth_open();  [
-                        a(href='#depth_open') §
-                        | ]
-                      li
-                        | int depth_update();  [
-                        a(href='#depth_update') §
-                        | ]
-                      li
-                        | int get_depth_value(int row, int col);  [
-                        a(href='#get_depth_value') §
-                        | ]
-                      li
-                        | point3 get_depth_world_point(int row, int col);  [
-                        a(href='#get_depth_world_point') §
-                        | ]
-                      li
-                        | int get_depth_world_point_x(int row, int col);  [
-                        a(href='#get_depth_world_point_x') §
-                        | ]
-                      li
-                        | int get_depth_world_point_y(int row, int col);  [
-                        a(href='#get_depth_world_point_y') §
-                        | ]
-                      li
-                        | int get_depth_world_point_z(int row, int col);  [
-                        a(href='#get_depth_world_point_z') §
-                        | ]
-          // START FOOTER
+extends ../../exclude/docbase
+
+block vars
+  - var selected = 'index'
+  - var path = ["Index"]
+
+block content
+  // Functions Categorized
+  a(name='FunctionsCategorized')
+  h3 Categorized Function List (cross-linked)
+  |  Each function listed is provided with a cross link to its library description.
+  .indent
+    a(name='CategoryBotball')
+    h4 Botball
+    code
+      table
+        tbody
+          tr
+            td
+              ul
+                li
+                  | void run_for(double delay, &lt;
+                  em function_name
+                  | &gt;);  [
+                  a(href='#run_for') §
+                  | ]
+                li
+                  | void shut_down_in(double delay);  [
+                  a(href='#Botball') §
+                  | ]
+                | 	  &lt;li&gt;&lt;font class="CVariable"&gt;int&lt;/font&gt; target_cha_in_chb(&lt;font class="CVariable"&gt;int&lt;/font&gt; cha, &lt;font class="CVariable"&gt;int&lt;/font&gt; chb, &lt;font class="CVariable"&gt;int&lt;/font&gt; *x, &lt;font class="CVariable"&gt;int&lt;/font&gt; *y)&lt;/li&gt;
+                li
+                  | void wait_for_light(int light_port_);  [
+                  a(href='#Botball') §
+                  | ]
+    a(name='CategoryCreate')
+    h4 Create
+    table
+      tbody
+        tr
+          td(alignment='top')
+            ul
+              b Serial Interface
+              code
+                li
+                  | void create_clear_serial_buffer(); [
+                  a(href='#create_clear_serial_buffer') §
+                  | ]
+                li
+                  | int create_connect(); [
+                  a(href='#create_connect') §
+                  | ]
+                li
+                  | void  create_disconnect(); [
+                  a(href='#create_disconnect') §
+                  | ]
+                li
+                  | int create_read_block(
+                  |                                                   char *data,
+                  |                                                   int count); [
+                  a(href='#create_read_block') §
+                  | ]
+                li
+                  | void create_write_byte(
+                  |                                                   char byte); [
+                  a(href='#create_write_byte') §
+                  | ]
+                li
+                  | void  create_full(); [
+                  a(href='#create_full') §
+                  | ]
+                li
+                  | void  create_start(); [
+                  a(href='#create_start') §
+                  | ]
+                li
+                  | void  create_passive(); [
+                  a(href='#create_passive') §
+                  | ]
+                li
+                  | void create_safe(); [
+                  a(href='#create_safe') §
+                  | ]
+                li
+                  | int get_create_mode(); [
+                  a(href='#get_create_mode') §
+                  | ]
+              b Movement
+              code
+                li
+                  | void create_drive(
+                  |                                                   int speed,
+                  |                                                   int radius); [
+                  a(href='#create_drive') §
+                  | ]
+                li
+                  | void create_drive_direct(
+                  |                                                   int r_speed,
+                  |                                                   int l_speed); [
+                  a(href='#create_drive_direct') §
+                  | ]
+                li
+                  | void create_drive_straight(
+                  |                                                   int speed); [
+                  a(href='#create_drive_straight') §
+                  | ]
+                li
+                  | void create_spin_CCW(
+                  |                                                   int speed); [
+                  a(href='#create_spin_CCW') §
+                  | ]
+                li
+                  | void create_spin_CW(
+                  |                                                   int speed); [
+                  a(href='#create_spin_CW') §
+                  | ]
+                li
+                  | void create_stop(); [
+                  a(href='#create_stop') §
+                  | ]
+                li
+                  | int get_create_distance(); [
+                  a(href='#get_create_distance') §
+                  | ]
+                li
+                  | int get_create_normalized_angle(); [
+                  a(href='#get_create_normalized_angle') §
+                  | ]
+                li
+                  | int get_create_overcurrents(); [
+                  a(href='#get_create_overcurrents') §
+                  | ]
+                li
+                  | int get_create_requested_left_velocity(); [
+                  a(href='#get_create_requested_left_velocity') §
+                  | ]
+                li
+                  | int get_create_requested_radius(); [
+                  a(href='#get_create_requested_radius') §
+                  | ]
+                li
+                  | int get_create_requested_right_velocity(); [
+                  a(href='#get_create_requested_right_velocity') §
+                  | ]
+                li
+                  | int get_create_requested_velocity(); [
+                  a(href='#get_create_requested_velocity') §
+                  | ]
+                li
+                  | int get_create_total_angle(); [
+                  a(href='#get_create_total_angle') §
+                  | ]
+                li
+                  | void set_create_distance(
+                  |                                                   int dist); [
+                  a(href='#set_create_distance') §
+                  | ]
+                li
+                  | void set_create_normalized_angle(
+                  |                                                   int angle); [
+                  a(href='#set_create_normalized_angle') §
+                  | ]
+                li
+                  | void set_create_total_angle(
+                  |                                                   int angle); [
+                  a(href='#set_create_total_angle') §
+                  | ]
+              b Battery
+              code
+                li
+                  | int get_create_battery_capacity(); [
+                  a(href='#get_create_battery_capacity') §
+                  | ]
+                li
+                  | int get_create_battery_charge(); [
+                  a(href='#get_create_battery_charge') §
+                  | ]
+                li
+                  | int get_create_charging_state(); [
+                  a(href='#get_create_charging_state') §
+                  | ]
+                li
+                  | int get_create_battery_current(); [
+                  a(href='#get_create_battery_current') §
+                  | ]
+                li
+                  | int get_create_battery_temp(); [
+                  a(href='#get_create_battery_temp') §
+                  | ]
+                li
+                  | int get_create_battery_voltage(); [
+                  a(href='#get_create_battery_voltage') §
+                  | ]
+          td
+            ul
+              code
+              b Sensors
+              code
+                li
+                  | int get_create_advance_button(); [
+                  a(href='#get_create_advance_button') §
+                  | ]
+                li
+                  | int get_create_bay_DI(); [
+                  a(href='#get_create_bay_DI') §
+                  | ]
+                li
+                  | int get_create_bay_AI(); [
+                  a(href='#get_create_bay_AI') §
+                  | ]
+                li
+                  | int get_create_cwdrop(); [
+                  a(href='#get_create_cwdrop') §
+                  | ]
+                li
+                  | int get_create_infrared(); [
+                  a(href='#get_create_infrared') §
+                  | ]
+                li
+                  | int get_create_lbump(); [
+                  a(href='#get_create_lbump') §
+                  | ]
+                li
+                  | int get_create_lcliff(); [
+                  a(href='#get_create_lcliff') §
+                  | ]
+                li
+                  | int get_create_lcliff_amt(); [
+                  a(href='#get_create_lcliff_amt') §
+                  | ]
+                li
+                  | int get_create_lfcliff(); [
+                  a(href='#get_create_lfcliff') §
+                  | ]
+                li
+                  | int get_create_lfcliff_amt(); [
+                  a(href='#get_create_lfcliff_amt') §
+                  | ]
+                li
+                  | int get_create_lwdrop(); [
+                  a(href='#get_create_lwdrop') §
+                  | ]
+                li
+                  | int get_create_number_of_stream_packets(); [
+                  a(href='#get_create_number_of_stream_packets') §
+                  | ]
+                li
+                  | int get_create_play_button(); [
+                  a(href='#get_create_play_button') §
+                  | ]
+                li
+                  | int get_create_rbump(); [
+                  a(href='#get_create_rbump') §
+                  | ]
+                li
+                  | int get_create_rcliff(); [
+                  a(href='#get_create_rcliff') §
+                  | ]
+                li
+                  | int get_create_rcliff_amt(); [
+                  a(href='#get_create_rcliff_amt') §
+                  | ]
+                li
+                  | int get_create_rfcliff(); [
+                  a(href='#get_create_rfcliff') §
+                  | ]
+                li
+                  | int get_create_rfcliff_amt(); [
+                  a(href='#get_create_rfcliff_amt') §
+                  | ]
+                li
+                  | int get_create_rlwdrop(); [
+                  a(href='#get_create_rlwdrop') §
+                  | ]
+                li
+                  | int get_create_vwall(); [
+                  a(href='#get_create_vwall') §
+                  | ]
+                li
+                  | int get_create_wall(); [
+                  a(href='#get_create_wall') §
+                  | ]
+                li
+                  | int get_create_wall_amt(); [
+                  a(href='#get_create_wall_amt') §
+                  | ]
+              b Built in Scripts
+              code
+                li
+                  | void  create_spot(); [
+                  a(href='#create_spot') §
+                  | ]
+                li
+                  | void  create_cover(); [
+                  a(href='#create_cover') §
+                  | ]
+                li
+                  | void  create_demo(
+                  |                                                   int  d); [
+                  a(href='#create_demo') §
+                  | ]
+                li
+                  | void create_cover_dock(); [
+                  a(href='#create_cover_dock') §
+                  | ]
+              b LEDs and Music
+              code
+                li
+                  | void create_advance_led(
+                  |                                                   int on); [
+                  a(href='#create_advance_led') §
+                  | ]
+                li
+                  | int get_create_song_number(); [
+                  a(href='#get_create_song_number') §
+                  | ]
+                li
+                  | int get_create_song_playing(); [
+                  a(href='#get_create_song_playing') §
+                  | ]
+                li
+                  | void create_load_song(
+                  |                                                   int num); [
+                  a(href='#create_load_song') §
+                  | ]
+                li
+                  | void create_play_led(
+                  |                                                   int on); [
+                  a(href='#create_play_led') §
+                  | ]
+                li
+                  | void create_play_song(
+                  |                                                   int num); [
+                  a(href='#create_play_song') §
+                  | ]
+                li
+                  | void create_power_led(
+                  |                                                   int color, int brightness); [
+                  a(href='#create_power_led') §
+                  | ]
+    a(name='CategoryGraphics')
+    h4 Graphics
+    table
+      tbody
+        tr
+          td
+            ul
+              code
+                li
+                  | int graphics_open(int width, int height);  [
+                  a(href='#graphics_open') §
+                  | ]
+                li
+                  | void graphics_close();  [
+                  a(href='#graphics_close') §
+                  | ]
+                li
+                  | void graphics_update();  [
+                  a(href='#graphics_update') §
+                  | ]
+                li
+                  | void graphics_clear();  [
+                  a(href='#graphics_clear') §
+                  | ]
+                li
+                  | void graphics_fill(int r, int g, int b);  [
+                  a(href='#graphics_fill') §
+                  | ]
+                li
+                  | void graphics_pixel(int x, int y, int r, int g, int b);  [
+                  a(href='graphics_pixel') §
+                  | ]
+                li
+                  | void graphics_line(int x1, int y1, int x2, int y2, int r, int g, int b);  [
+                  a(href='#graphics_line') §
+                  | ]
+                li
+                  | void graphics_circle(int cx, int cy, int radius, int r, int g, int b);  [
+                  a(href='#graphics_circle') §
+                  | ]
+                li
+                  | void graphics_circle_fill(int cx, int cy, int radius, int r, int g, int b);  [
+                  a(href='#graphics_circle_fill') §
+                  | ]
+                li
+                  | void graphics_rectangle(int x1, int y1, int x2, int y2, int r, int g, int b);  [
+                  a(href='#graphics_rectangle') §
+                  | ]
+                li
+                  | void graphics_rectangle_fill(int x1, int y1, int x2, int y2, int r, int g, int b);  [
+                  a(href='#graphics_rectangle_fill') §
+                  | ]
+                li
+                  | void graphics_triangle(int x1, int y1, int x2, int y2, int x3, int y3, int r, int g, int b);  [
+                  a(href='graphics_triangle') §
+                  | ]
+                li
+                  | void graphics_triangle_fill(int x1, int y1, int x2, int y2, int x3, int y3, int r, int g, int b);  [
+                  a(href='graphics_triangle_fill') §
+                  | ]
+                li
+                  | int get_mouse_position(int *x, int *y);  [
+                  a(href='#get_mouse_position') §
+                  | ]
+                li
+                  | int get_mouse_left_button();  [
+                  a(href='#get_mouse_left_button') §
+                  | ]
+    a(name='CategoryMath')
+    h4 Math
+    table
+      tbody
+        tr
+          td
+            ul
+              code
+                li
+                  | double atan(double angle);  [
+                  a(href='#atan') §
+                  | ]
+                li
+                  | double cos(double angle);  [
+                  a(href='#cos') §
+                  | ]
+                li
+                  | double exp(double num);  [
+                  a(href='#exp') §
+                  | ]
+                li
+                  | double exp10(double num);  [
+                  a(href='#exp10') §
+                  | ]
+                li
+                  | double log(double num);  [
+                  a(href='#log') §
+                  | ]
+                li
+                  | int log10(double num);  [
+                  a(href='#log10') §
+                  | ]
+                li
+                  | double pow(double x, double y);  [
+                  a(href='#pow') §
+                  | ]
+                li
+                  | int rand(int m);  [
+                  a(href='#rand') §
+                  | ]
+                li
+                  | double sin(double angle);  [
+                  a(href='#sin') §
+                  | ]
+                li
+                  | double sqrt(double num);  [
+                  a(href='#sqrt') §
+                  | ]
+                li
+                  | void srand(int s);  [
+                  a(href='#srand') §
+                  | ]
+                li
+                  | double tan(double angle);  [
+                  a(href='#tan') §
+                  | ]
+    a(name='CategoryMotors')
+    h4 Motors
+    table
+      tbody
+        tr
+          td
+            ul
+              code
+                li
+                  | void alloff();  [
+                  a(href='#alloff') §
+                  | ]
+                li
+                  | void ao();  [
+                  a(href='#ao') §
+                  | ]
+                li
+                  | void bk(int m);  [
+                  a(href='#bk') §
+                  | ]
+                li
+                  | void block_motor_done(int m);  [
+                  a(href='#block_motor_done') §
+                  | ]
+                li
+                  | void bmd(int m);  [
+                  a(href='#bmd') §
+                  | ]
+                li
+                  | int get_motor_done(int m);  [
+                  a(href='#get_motor_done') §
+                  | ]
+                li
+                  | void clear_motor_position_counter(int motor_nbr);  [
+                  a(href='#clear_motor_position_counter') §
+                  | ]
+                li
+                  | void fd(int m);  [
+                  a(href='#fd') §
+                  | ]
+                li
+                  | void freeze(int m);  [
+                  a(href='#freeze') §
+                  | ]
+                li
+                  | int get_motor_done(int m);  [
+                  a(href='#get_motor_done') §
+                  | ]
+                li
+                  | int get_motor_position_counter(int m);  [
+                  a(href='#get_motor_position_counter') §
+                  | ]
+                li
+                  | int get_pid_gains(int motor, int p, int i, int d, int pd, int id, int dd);  [
+                  a(href='#get_pid_gains') §
+                  | ]
+                li
+                  | void mav(int m, int vel);  [
+                  a(href='#mav') §
+                  | ]
+                li
+                  | void motor(int m, int p);  [
+                  a(href='#motor') §
+                  | ]
+                li
+                  | void move_at_velocity(int m, int vel);  [
+                  a(href='#move_at_velocity') §
+                  | ]
+                li
+                  | void move_relative_position(int m, int speed, int pos);  [
+                  a(href='#move_relative_position') §
+                  | ]
+                li
+                  | void move_to_position(int m, int speed, int pos);  [
+                  a(href='#move_to_position') §
+                  | ]
+                li
+                  | void mrp(int m, int vel, int pos);  [
+                  a(href='#mrp') §
+                  | ]
+                li
+                  | void mtp(int m, int vel, int pos);  [
+                  a(href='#mtp') §
+                  | ]
+                li
+                  | void off(int m);  [
+                  a(href='#off') §
+                  | ]
+                li
+                  | int set_pid_gains(int motor, int p, int i, int d, int pd, int id, int dd);  [
+                  a(href='#set_pid_gains') §
+                  | ]
+                li
+                  | int setpwm(int m, int dutycycle);  [
+                  a(href='#setpwm') §
+                  | ]
+    a(name='CategoryOutput')
+    h4 Output
+    table
+      tbody
+        tr
+          td
+            ul
+              code
+                li
+                  | void beep();  [
+                  a(href='#beep') §
+                  | ]
+                li
+                  | void console_clear();  [
+                  a(href='#console_clear') §
+                  | ]
+                li
+                  | void display_clear();  [
+                  a(href='#display_clear') §
+                  | ]
+                li
+                  | void display_printf(int col, int row, char s[], . . .);  [
+                  a(href='#display_printf') §
+                  | ]
+                li
+                  | void extra_buttons_show();  [
+                  a(href='#extra_buttons_show') §
+                  | ]
+                li
+                  | void extra_buttons_hide();  [
+                  a(href='#extra_buttons_hide') §
+                  | ]
+                li
+                  | void set_a_button_text(char txt[]);  [
+                  a(href='#set_a_button_text') §
+                  | ]
+                li
+                  | void set_b_button_text(char txt[]);  [
+                  a(href='#set_b_button_text') §
+                  | ]
+                li
+                  | void set_c_button_text(char txt[]);  [
+                  a(href='#set_c_button_text') §
+                  | ]
+                li
+                  | void set_digital_output(int port, int inout);  [
+                  a(href='#set_digital_output') §
+                  | ]
+                li
+                  | void set_digital_value(int port, int value);  [
+                  a(href='#set_digital_value') §
+                  | ]
+                li
+                  | void set_x_button_text(char txt[]);  [
+                  a(href='#set_x_button_text') §
+                  | ]
+                li
+                  | void set_y_button_text(char txt[]);  [
+                  a(href='#set_y_button_text') §
+                  | ]
+                li
+                  | void set_z_button_text(char txt[]);  [
+                  a(href='#set_z_button_text') §
+                  | ]
+    a(name='CategoryThreads')
+    h4 Threads
+    table
+      tbody
+        tr
+          td
+            ul
+              code
+                li
+                  | thread thread_create(&lt;
+                  em function_name
+                  | &gt;);  [
+                  a(href='#thread_create') §
+                  | ]
+                li
+                  | void thread_destroy(&lt;
+                  em thread id
+                  | &gt;&gt;);  [
+                  a(href='#thread_destroy') §
+                  | ]
+                li
+                  | void thread_start(&lt;
+                  em thread id
+                  | &gt;);  [
+                  a(href='#thread_start') §
+                  | ]
+                li
+                  | void thread_wait(&lt;
+                  em thread id
+                  | &gt;);  [
+                  a(href='#thread_wait') §
+                  | ]
+                li
+                  | void run_for(double sec, void &lt;
+                  em function_name
+                  | &gt;);  [
+                  a(href='#run_for') §
+                  | ]
+    a(name='CategorySensors')
+    h4 Sensors
+    table
+      tbody
+        tr
+          td
+            ul
+              code
+                li
+                  | int a_button();  [
+                  a(href='#a_button') §
+                  | ]
+                li
+                  | int a_button_clicked();  [
+                  a(href='#a_button_clicked') §
+                  | ]
+                li
+                  | int accel_x();  [
+                  a(href='#accel_x') §
+                  | ]
+                li
+                  | int accel_y();  [
+                  a(href='#accel_y') §
+                  | ]
+                li
+                  | int accel_z();  [
+                  a(href='#accel_z') §
+                  | ]
+                li
+                  | int analog(int p);  [
+                  a(href='#analog') §
+                  | ]
+                li
+                  | int analog_et(int p);  [
+                  a(href='#analog_et') §
+                  | ]
+                li
+                  | int analog8(int p);  [
+                  a(href='#analog8') §
+                  | ]
+                li
+                  | int analog10(int p);  [
+                  a(href='#analog10') §
+                  | ]
+                li
+                  | int any_button();  [
+                  a(href='#any_button') §
+                  | ]
+                li
+                  | int b_button();  [
+                  a(href='#b_button') §
+                  | ]
+                li
+                  | int b_button_clicked();  [
+                  a(href='#b_button_clicked') §
+                  | ]
+                li
+                  | int c_button();  [
+                  a(href='#c_button') §
+                  | ]
+                li
+                  | int c_button_clicked();  [
+                  a(href='#c_button_clicked') §
+                  | ]
+                li
+                  | int digital(int p);  [
+                  a(href='#digital') §
+                  | ]
+                li
+                  | int get_analog_pullup(int port);  [
+                  a(href='#get_analog_pullup') §
+                  | ]
+                li
+                  | int get_digital_pullup(int port);  [
+                  a(href='#get_digital_pullup') §
+                  | ]
+                li
+                  | double power_level();  [
+                  a(href='#power_level') §
+                  | ]
+                li
+                  | int get_extra_buttons_visible();  [
+                  a(href='#get_extra_buttons_visible') §
+                  | ]
+                li
+                  | void set_analog_pullup(int port, int pullupTF);  [
+                  a(href='#set_analog_pullup') §
+                  | ]
+                li
+                  | void set_digital_pullup(int port, int pullupTF);  [
+                  a(href='#set_digital_pullup') §
+                  | ]
+                li
+                  | int side_button();  [
+                  a(href='#side_button') §
+                  | ]
+                li
+                  | int side_button_clicked();  [
+                  a(href='#side_button_clicked') §
+                  | ]
+                li
+                  | int x_button();  [
+                  a(href='#x_button') §
+                  | ]
+                li
+                  | int x_button_clicked();  [
+                  a(href='#x_button_clicked') §
+                  | ]
+                li
+                  | int y_button();  [
+                  a(href='#y_button') §
+                  | ]
+                li
+                  | int y_button_clicked();  [
+                  a(href='#y_button_clicked') §
+                  | ]
+                li
+                  | int z_button();  [
+                  a(href='#z_button') §
+                  | ]
+                li
+                  | int z_button_clicked();  [
+                  a(href='#z_button_clicked') §
+                  | ]
+    a(name='CategoryServos')
+    h4 Servos
+    table
+      tbody
+        tr
+          td
+            ul
+              code
+                li
+                  | void disable_servo(int p);  [
+                  a(href='#disable_servo') §
+                  | ]
+                li
+                  | void disable_servos();  [
+                  a(href='#disable_servos') §
+                  | ]
+                li
+                  | void enable_servo(int p);  [
+                  a(href='#enable_servo') §
+                  | ]
+                li
+                  | void enable_servos();  [
+                  a(href='#enable_servos') §
+                  | ]
+                li
+                  | int get_servo_enabled(int srv);  [
+                  a(href='#get_servo_enabled') §
+                  | ]
+                li
+                  | int get_servo_position(int srv);  [
+                  a(href='#get_servo_position') §
+                  | ]
+                li
+                  | int set_servo_position(int srv, int pos);  [
+                  a(href='#set_servo_position') §
+                  | ]
+    a(name='CategoryTime')
+    h4 Time
+    table
+      tbody
+        tr
+          td
+            ul
+              code
+                li
+                  | void msleep(int msec);  [
+                  a(href='#msleep') §
+                  | ]
+                li
+                  | double seconds();  [
+                  a(href='#seconds') §
+                  | ]
+    a(name='CategoryVision')
+    h4 Vision
+    table
+      tbody
+        tr
+          td
+            ul
+              code
+                li
+                  | void camera_close();  [
+                  a(href='#camera_close') §
+                  | ]
+                li
+                  | int camera_load_config(char name[]);   [
+                  a(href='#camera_load_config') §
+                  | ]
+                li
+                  | int camera_open();  [
+                  a(href='#camera_open') §
+                  | ]
+                li
+                  | int camera_open_at_res(int res_numb);  [
+                  a(href='#camera_open_at_res') §
+                  | ]
+                li
+                  | int camera_open_device(int number, int res_numb);  [
+                  a(href='#camera_open_device') §
+                  | ]
+                li
+                  | int camera_update();  [
+                  a(href='#camera_update') §
+                  | ]
+                li
+                  | int get_channel_count();  [
+                  a(href='#get_channel_count') §
+                  | ]
+                li
+                  | int get_object_area(int channel, int object);  [
+                  a(href='#get_object_area') §
+                  | ]
+                li
+                  | rectangle get_object_bbox(int channel, int object);  [
+                  a(href='#get_object_bbox') §
+                  | ]
+                li
+                  | point2 get_object_center(int channel, int object);  [
+                  a(href='#get_object_center') §
+                  | ]
+                li
+                  | point2 get_object_centroid(int channel, int object);  [
+                  a(href='#get_object_centroid') §
+                  | ]
+                li
+                  | int get_code_num(int channel, int object);  [
+                  a(href='#get_code_num') §
+                  | ]
+                li
+                  | double get_object_confidence(int channel, int object);  [
+                  a(href='#get_object_confidence') §
+                  | ]
+                li
+                  | int get_object_count(int channel);  [
+                  a(href='#get_object_count') §
+                  | ]
+                li
+                  | char *get_object_data(int channel, int object);  [
+                  a(href='#get_object_data') §
+                  | ]
+                li
+                  | int get_object_data_length(int channel, int object);  [
+                  a(href='#get_object_data_length') §
+                  | ]
+    a(name='CategoryDepth')
+    h4 Depth
+    table
+      tbody
+        tr
+          td
+            ul
+              code
+                li
+                  | void depth_close();  [
+                  a(href='#depth_close') §
+                  | ]
+                li
+                  | int depth_open();  [
+                  a(href='#depth_open') §
+                  | ]
+                li
+                  | int depth_update();  [
+                  a(href='#depth_update') §
+                  | ]
+                li
+                  | int get_depth_value(int row, int col);  [
+                  a(href='#get_depth_value') §
+                  | ]
+                li
+                  | point3 get_depth_world_point(int row, int col);  [
+                  a(href='#get_depth_world_point') §
+                  | ]
+                li
+                  | int get_depth_world_point_x(int row, int col);  [
+                  a(href='#get_depth_world_point_x') §
+                  | ]
+                li
+                  | int get_depth_world_point_y(int row, int col);  [
+                  a(href='#get_depth_world_point_y') §
+                  | ]
+                li
+                  | int get_depth_world_point_z(int row, int col);  [
+                  a(href='#get_depth_world_point_z') §
+                  | ]
+    // START FOOTER
 

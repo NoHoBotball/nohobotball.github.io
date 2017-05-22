@@ -1,291 +1,120 @@
-html
-  head
-    link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
-    link(href='/css/base.css', rel='stylesheet', type='text/css')
-    link(href='/css/materialize.min.css', media='screen,projection', rel='stylesheet', type='text/css')
-    link(href='/css/docs.css', rel='stylesheet', type='text/css')
-    link(href='../imgs/logos/botguy.png', rel='icon')
-    title Botball Documentation - Tutorial
-    meta(content='#00796b', name='theme-color')
-    meta(content='width=device-width, initial-scale=1.0', name='viewport')
-  body
-    script(src='https://code.jquery.com/jquery-2.1.1.min.js', type='text/javascript')
-    script(src='/js/materialize.min.js', type='text/javascript')
-    script.
-      $(document).ready(function () {
-      $('.button-collapse').sideNav({
-      draggable: true
-      });
-      $(".active").parent().parent().siblings()[0].click() })
-    header
-      ul#slide-out.side-nav.fixed
-        li.red.lighten-1(style='height: 130px')
-          .userView
-            h5.white-text
-              a.white-text(href='/docs/index.html') Index
-        li
-          a(href='/docs/tutorial.html') Tutorial
-        li.no-padding
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Data Objects
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/data-objects/index.html') Introduction
-                  li
-                    a(href='/docs/data-objects/variables.html') Variables
-                  li
-                    a(href='/docs/data-objects/constants.html') Constants
-                  li
-                    a(href='/docs/data-objects/data-types.html') Data Types
-                  li.active
-                    a(href='/docs/data-objects/pointers.html') Pointers
-                  li
-                    a(href='/docs/data-objects/arrays.html') Arrays
-                  li
-                    a(href='/docs/data-objects/structures.html') Structures
-                  li
-                    a(href='/docs/data-objects/initialization-examples.html') Initialization Examples
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Statements and Expressions
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/statements-and-expressions/index.html') Introduction
-                  li
-                    a(href='/docs/statements-and-expressions/operators.html') Operators
-                  li
-                    a(href='/docs/statements-and-expressions/control-flow.html') Control Flow
-        li
-          a(href='/docs/tutorial.html') Style
-        li
-          a(href='/docs/tutorial.html') Debugging
-        li.no-padding
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Printing
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/printing/index.html') Introduction
-                  li
-                    a(href='/docs/printing/examples.html') Examples
-                  li
-                    a(href='/docs/printing/printf-codes.html') printf Codes
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Preprocessor
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/preprocessor/index.html') Introduction
-                  li
-                    a(href='/docs/preprocessor/directives.html') Directives
-                  li
-                    a(href='/docs/preprocessor/include.html') Include
-                  li
-                    a(href='/docs/preprocessor/macros.html') Macros
-                  li
-                    a(href='/docs/preprocessor/conditional-compilation.html') Conditional Compilation
-        li
-          a(href='/docs/lib/math.html') Math Library
-        li.no-padding
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | KIPR Wallaby/Link
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/lib/kipr/common-functions.html') Common Functions
-                  li
-                    a(href='/docs/lib/kipr/functions.html') Functions List
-                  li
-                    a(href='/docs/lib/kipr/camera.html') Camera Functions
-                  li
-                    a(href='/docs/lib/kipr/graphics.html') Graphics Functions
-                  li
-                    a(href='/docs/lib/kipr/depth.html') Depth Sensor Functions
-                  li
-                    a(href='/docs/lib/kipr/usb.html') File I/O Functions
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | iRobot Create
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/lib/kipr/create/index.html') Introduction
-                  li
-                    a(href='/docs/lib/kipr/create/serial.html') Serial Functions
-                  li
-                    a(href='/docs/lib/kipr/create/configuration.html') Configuration Functions
-                  li
-                    a(href='/docs/lib/kipr/create/movement.html') Movement Functions
-                  li
-                    a(href='/docs/lib/kipr/create/sensors.html') Sensor Functions
-                  li
-                    a(href='/docs/lib/kipr/create/battery.html') Battery Functions
-                  li
-                    a(href='/docs/lib/kipr/create/built-ins.html') Built-In Functions
-                  li
-                    a(href='/docs/lib/kipr/create/music-leds.html') LED and Music Functions
-        li
-          a(href='/docs/lib/kipr/botball.html') Botball Functions
-        li
-          a(href='/docs/lib/kipr/threads.html') Threads
-        li.no-padding
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Motors and Sensors
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/lib/kipr/info/digital-analog-sensors.html') Analog and Digital Sensors
-                  li
-                    a(href='/docs/lib/kipr/info/usb-sensors.html') USB Sensors
-                  li
-                    a(href='/docs/lib/kipr/info/motors-servos.html') Motors and Servos
-                  li
-                    a(href='/docs/lib/kipr/info/simulator.html') Simulator
-        li
-          a(href='/docs/full.html') Full Documentation
-      nav.nav-extended.red.lighten-2
-        .nav-wrapper
-          .col.s12
-            a.button-collapse(data-activates='slide-out', href='#', style='font-size: 50px')
-              i.material-icons menu
-            a#top.brand-logo.waves-effect(href='/docs/index.html') Botball Documentation
-        .nav-wrapper
-          .col.s12
-            a.breadcrumb(href='/docs/data-objects/index.html') Data Objects
-            a.breadcrumb(href='#!') Pointers
-    main.row
-      .container.col.s12
-        // END HEADER
-        // Pointers
-        a(name='PointersM')
-        h3 Pointers
-        p
-          | A pointer is the (numeric) address of the location in memory where a data element is stored. Memory addresses
-          | begin at 0 and increase by 1 for each byte of memory. Limited arithmetic operations may be performed on pointers,
-          | but the value of the resulting pointer depends on the data type pointed to. For example, adding 1 to the
-          | pointer for a
-          | char data item increases the pointer value by 1 since that advances the pointer to the next character
-          | in memory. In contrast, adding 1 to an
-          | int pointer increases its value by 4 since that advances the pointer to the next integer in memory.
-          | Using a pointer to try to access memory not allocated to a program will probably cause a system error or
-          | crash, so it is important to insure that pointers used in a program address valid objects in memory.
-        p
-          | A pointer data type can be defined for any allowed data type, included user-defined data types. When used as
-          | a unary operator (one argument), 
-          code *
-          |  is the indirection (or "value at address") operator, and
-          |  is used for defining and dereferencing pointer variables. For example,
-        .Indent
-          code int *p;
-        p
-          | defines 
-          code p
-          |  to be a variable whose value is a pointer to a memory location holding an integer.
-        p
-          | When used as a unary operator, 
-          code &
-          |  is the memory address operator. The address of a variable named 
-          code x
-          |  is given by 
-          code &x
-          |  and so if 
-          code x
-          |  is an integer variable,
-        .Indent
-          code p=&x;
-        p
-          | assigns the memory address of variable 
-          code x
-          |  to the (integer) pointer variable 
-          code p
-          | .
-        p
-          | Retrieving the value pointed to is known as 
-          i dereferencing
-          |  the pointer and is given by 
-          code *p
-          |  for pointer variable 
-          code p
-          | . For the example above, both variable 
-          code x
-          |  and 
-          code *p
-          |  represent the same value in memory. 
-          code *(p+1)
-          |  retrieves the (integer) value of the next integer
-          |  in memory (which is 4 bytes further along than 
-          code x
-          | ). Furthermore, the contents of the address
-          |  can be changed by assigning a value to the dereferenced address; e.g.,
-        .Indent
-          code
-            | *(p+1) = *p + 1;
-        p
-          | It is often useful to deal with pointers to objects, but great care must be taken to insure that the pointers
-          | used at any point in your code really do point to valid objects in memory. It is easy to get confused by
-          | what a pointer is addressing when it is taken from a complex structure with pointers to pointers or something
-          | similar.
-        p
-          | Pointers are often used instead of global variables to provide a function with access to data external to the
-          | function. If a pointer is passed to a function as an argument, the function then has access to the memory
-          | location for the pointer, which could also represent a local variable external to the function. If the function
-          | uses the pointer to change the value in the memory location, it will also have changed the value of the external
-          | local variable.
-        p
-          | For C, the scope of function parameters is local to the function, with values assigned to them only when the
-          | function is called. Programming languages typically employ one or more evaluation strategies for function
-          | parameters. The ones usually cited are 
-          i call by value
-          | , 
-          i call by reference
-          | , and
-          i call by name
-          | .
-        ul
-          li
-            | For 
-            i call by value
-            | , the parameter is treated as a local variable initialized using the value supplied
-            |  for the parameter when the function is called. This is the approach used for C.
-          li
-            | For 
-            i call by reference
-            | , no local version of the parameter is created, which means it represents
-            |  storage for the calling agent, even if the supplied parameter is a constant (i.e., a poorly written
-            |  function could change the value of a constant passed to it by reference, which was a real problem
-            |  for the early programming language FORTRAN). Although C does not use
-            c
-              | call by reference in the strict sense, it accomplishes the same objective by use of pointer variables
-              | as parameters. When a pointer variable is used as a parameter for a function in C, by dereferencing
-              | the parameter (whose scope is local) the function can access and possibly modify the value of
-              | an external variable having the same address.
-          li
-            | For 
-            i call by name
-            |  the actual name supplied as the parameter is substituted throughout the function,
-            |  much as the C preprocessors does for
-            |  #define macros. 
-            i Call by name
-            |  is not supported by C in any meaningful sense.
-        // START FOOTER
+extends ../../../exclude/docbase
+
+block vars
+  - var selected = 'pointers'
+  - var path = ["Data Objects", "Pointers"]
+
+block content
+  // Pointers
+  a(name='PointersM')
+  h3 Pointers
+  p
+    | A pointer is the (numeric) address of the location in memory where a data element is stored. Memory addresses
+    | begin at 0 and increase by 1 for each byte of memory. Limited arithmetic operations may be performed on pointers,
+    | but the value of the resulting pointer depends on the data type pointed to. For example, adding 1 to the
+    | pointer for a
+    | char data item increases the pointer value by 1 since that advances the pointer to the next character
+    | in memory. In contrast, adding 1 to an
+    | int pointer increases its value by 4 since that advances the pointer to the next integer in memory.
+    | Using a pointer to try to access memory not allocated to a program will probably cause a system error or
+    | crash, so it is important to insure that pointers used in a program address valid objects in memory.
+  p
+    | A pointer data type can be defined for any allowed data type, included user-defined data types. When used as
+    | a unary operator (one argument), 
+    code *
+    |  is the indirection (or "value at address") operator, and
+    |  is used for defining and dereferencing pointer variables. For example,
+  .Indent
+    code int *p;
+  p
+    | defines 
+    code p
+    |  to be a variable whose value is a pointer to a memory location holding an integer.
+  p
+    | When used as a unary operator, 
+    code &
+    |  is the memory address operator. The address of a variable named 
+    code x
+    |  is given by 
+    code &x
+    |  and so if 
+    code x
+    |  is an integer variable,
+  .Indent
+    code p=&x;
+  p
+    | assigns the memory address of variable 
+    code x
+    |  to the (integer) pointer variable 
+    code p
+    | .
+  p
+    | Retrieving the value pointed to is known as 
+    i dereferencing
+    |  the pointer and is given by 
+    code *p
+    |  for pointer variable 
+    code p
+    | . For the example above, both variable 
+    code x
+    |  and 
+    code *p
+    |  represent the same value in memory. 
+    code *(p+1)
+    |  retrieves the (integer) value of the next integer
+    |  in memory (which is 4 bytes further along than 
+    code x
+    | ). Furthermore, the contents of the address
+    |  can be changed by assigning a value to the dereferenced address; e.g.,
+  .Indent
+    code
+      | *(p+1) = *p + 1;
+  p
+    | It is often useful to deal with pointers to objects, but great care must be taken to insure that the pointers
+    | used at any point in your code really do point to valid objects in memory. It is easy to get confused by
+    | what a pointer is addressing when it is taken from a complex structure with pointers to pointers or something
+    | similar.
+  p
+    | Pointers are often used instead of global variables to provide a function with access to data external to the
+    | function. If a pointer is passed to a function as an argument, the function then has access to the memory
+    | location for the pointer, which could also represent a local variable external to the function. If the function
+    | uses the pointer to change the value in the memory location, it will also have changed the value of the external
+    | local variable.
+  p
+    | For C, the scope of function parameters is local to the function, with values assigned to them only when the
+    | function is called. Programming languages typically employ one or more evaluation strategies for function
+    | parameters. The ones usually cited are 
+    i call by value
+    | , 
+    i call by reference
+    | , and
+    i call by name
+    | .
+  ul
+    li
+      | For 
+      i call by value
+      | , the parameter is treated as a local variable initialized using the value supplied
+      |  for the parameter when the function is called. This is the approach used for C.
+    li
+      | For 
+      i call by reference
+      | , no local version of the parameter is created, which means it represents
+      |  storage for the calling agent, even if the supplied parameter is a constant (i.e., a poorly written
+      |  function could change the value of a constant passed to it by reference, which was a real problem
+      |  for the early programming language FORTRAN). Although C does not use
+      c
+        | call by reference in the strict sense, it accomplishes the same objective by use of pointer variables
+        | as parameters. When a pointer variable is used as a parameter for a function in C, by dereferencing
+        | the parameter (whose scope is local) the function can access and possibly modify the value of
+        | an external variable having the same address.
+    li
+      | For 
+      i call by name
+      |  the actual name supplied as the parameter is substituted throughout the function,
+      |  much as the C preprocessors does for
+      |  #define macros. 
+      i Call by name
+      |  is not supported by C in any meaningful sense.
+  // START FOOTER
 

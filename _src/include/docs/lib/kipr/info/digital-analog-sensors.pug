@@ -1,415 +1,246 @@
-html
-  head
-    link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
-    link(href='/css/base.css', rel='stylesheet', type='text/css')
-    link(href='/css/materialize.min.css', media='screen,projection', rel='stylesheet', type='text/css')
-    link(href='/css/docs.css', rel='stylesheet', type='text/css')
-    link(href='../imgs/logos/botguy.png', rel='icon')
-    title Botball Documentation - Tutorial
-    meta(content='#00796b', name='theme-color')
-    meta(content='width=device-width, initial-scale=1.0', name='viewport')
-  body
-    script(src='https://code.jquery.com/jquery-2.1.1.min.js', type='text/javascript')
-    script(src='/js/materialize.min.js', type='text/javascript')
-    script.
-      $(document).ready(function () {
-      $('.button-collapse').sideNav({
-      draggable: true
-      });
-      $(".active").parent().parent().siblings()[0].click() })
-    header
-      ul#slide-out.side-nav.fixed
-        li.red.lighten-1(style='height: 130px')
-          .userView
-            h5.white-text
-              a.white-text(href='/docs/index.html') Index
+extends ../../../../../exclude/docbase
+
+block vars
+  - var selected = 'digital-analog-sensors'
+  - var path = ["Lib", "Kipr", "Info", "Digital and Analog Sensors"]
+
+block content
+  // KIPR Robot Controller Images
+  a(name='LinkImages')
+  h2 KIPR Robot Controller Images
+  .Indent
+    // digital and analog sensors
+    a(name='LinkSensors')
+    h3 Analog and Digital Sensor Images
+    p
+      | The image below is the front of the KIPR Robot Controller showing where the analog and digital sensor ports
+      | are located.
+    // &lt;img class="center" src="images/Link_sensor_ports.gif" width="70%"&gt;&lt;/img&gt;
+    p.center
+      br
+      | Examples of digital and analog sensors used with the KIPR Robot Controller
+    table.centerTable(border='1', cellpadding='5', cellspacing='0')
+      tbody
+        tr
+          td(align='center', valign='center')
+            a(href='#light_sensor')
+              br
+              img(border='0', src='images/LightSensor.gif', width='60%')
+              br
+              |  IR light sensor
+              br
+            |  (analog)
+          td(align='center', valign='center')
+            a(href='#reflectance_sensors')
+              img(border='0', src='images/Reflectance_sensors.gif', width='60%')
+              br
+              |  IR reflectance sensors
+              br
+            |  (analog)
+          td(align='center', valign='center')
+            a(href='#ET_sensor')
+              img(border='0', src='images/ET.gif', width='60%')
+              br
+              |  IR "E.T." Distance Sensor
+              br
+            |  (floating analog)
+        tr
+          td(align='center', colspan='2', valign='center')
+            a(href='#touch_sensors')
+              br
+              img(border='0', src='images/TouchSensors.gif')
+              br
+              |  Touch Sensors
+              br
+            |  (digital)
+          td(align='center', valign='center')
+            a(href='#break_beam_sensor')
+              br
+              img(border='0', src='images/BreakBeam.gif')
+              br
+              |  IR "Break Beam" Sensor
+              br
+            |  (digital)
+        tr
+          td(align='center', valign='center')
+            a(href='#analog_slider')
+              br
+              img(border='0', src='images/AnalogSlider.gif')
+              br
+              |  Slider sensor
+              br
+            |  (analog)
+          td(align='center', valign='center')
+            a(href='#analog_pot')
+              br
+              img(border='0', src='images/AnalogPot.gif')
+              br
+              |  Potentiometer (Pot) Sensor
+              br
+            |  (analog)
+          td(align='center', valign='center')
+            a(href='#sensors')
+              br
+              img(border='0', height='120', src='images/sonar.jpg', width='60')
+              br
+              |  Ultrasonic rangefinder (SONAR)
+    // light_sensor
+    .Indent
+      a(name='light_sensor')
+      h4 Infrared light sensor (analog)
+      img(border='0', src='images/LightSensor.gif', width='40%')
+      br
+      ul
+        li Analog sensor
+        li Connect to ports 0-7
         li
-          a(href='/docs/tutorial.html') Tutorial
-        li.no-padding
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Data Objects
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/data-objects/index.html') Introduction
-                  li
-                    a(href='/docs/data-objects/variables.html') Variables
-                  li
-                    a(href='/docs/data-objects/constants.html') Constants
-                  li
-                    a(href='/docs/data-objects/data-types.html') Data Types
-                  li
-                    a(href='/docs/data-objects/arrays.html') Arrays
-                  li
-                    a(href='/docs/data-objects/structures.html') Structures
-                  li
-                    a(href='/docs/data-objects/initialization-examples.html') Initialization Examples
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Statements and Expressions
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/statements-and-expressions/index.html') Introduction
-                  li
-                    a(href='/docs/statements-and-expressions/operators.html') Operators
-                  li
-                    a(href='/docs/statements-and-expressions/control-flow.html') Control Flow
+          | Access with function 
+          code
+            a(href='#analog') analog
+            | (&lt;
+          i port#
+          code &gt;) 
+        li Low values indicate lots of Infrared
+        li High values indicate low Infrared
         li
-          a(href='/docs/tutorial.html') Style
+          | Sensor is somewhat directional and can be made more so using an opaque tube or Lego to block out
+          | extraneous light. Sensor can be attenuated by placing paper in front.
+      // Reflectance Sensors
+      a(name='reflectance_sensors')
+      h4 Infrared large and small reflectance sensors (analog)
+      img(border='0', src='images/Reflectance_sensors.gif', width='30%')
+      br
+      ul
+        li Analog sensor
+        li Connect to ports 0-7
         li
-          a(href='/docs/tutorial.html') Debugging
-        li.no-padding
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Printing
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/printing/index.html') Introduction
-                  li
-                    a(href='/docs/printing/examples.html') Examples
-                  li
-                    a(href='/docs/printing/printf-codes.html') printf Codes
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Preprocessor
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/preprocessor/index.html') Introduction
-                  li
-                    a(href='/docs/preprocessor/directives.html') Directives
-                  li
-                    a(href='/docs/preprocessor/include.html') Include
-                  li
-                    a(href='/docs/preprocessor/macros.html') Macros
-                  li
-                    a(href='/docs/preprocessor/conditional-compilation.html') Conditional Compilation
+          | Access with function 
+          code
+            a(href='#analog') analog
+            | (&lt;
+          i port#
+          code &gt;);
         li
-          a(href='/docs/lib/math.html') Math Library
-        li.no-padding
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | KIPR Wallaby/Link
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/lib/kipr/common-functions.html') Common Functions
-                  li
-                    a(href='/docs/lib/kipr/functions.html') Functions List
-                  li
-                    a(href='/docs/lib/kipr/camera.html') Camera Functions
-                  li
-                    a(href='/docs/lib/kipr/graphics.html') Graphics Functions
-                  li
-                    a(href='/docs/lib/kipr/depth.html') Depth Sensor Functions
-                  li
-                    a(href='/docs/lib/kipr/usb.html') File I/O Functions
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | iRobot Create
-              .collapsible-body(style='display: block')
-                ul
-                  li
-                    a(href='/docs/lib/kipr/create/index.html') Introduction
-                  li
-                    a(href='/docs/lib/kipr/create/serial.html') Serial Functions
-                  li
-                    a(href='/docs/lib/kipr/create/configuration.html') Configuration Functions
-                  li
-                    a(href='/docs/lib/kipr/create/movement.html') Movement Functions
-                  li
-                    a(href='/docs/lib/kipr/create/sensors.html') Sensor Functions
-                  li
-                    a(href='/docs/lib/kipr/create/battery.html') Battery Functions
-                  li
-                    a(href='/docs/lib/kipr/create/built-ins.html') Built-In Functions
-                  li
-                    a(href='/docs/lib/kipr/create/music-leds.html') LED and Music Functions
+          | Values measure IR reflection from a surface, allowing a robot to detect surface features such as
+          | a black tape line
         li
-          a(href='/docs/lib/kipr/botball.html') Botball Functions
+          | Dark surfaces produce high readings (low IR reflectivity) and light surfaces produce low readings
+          | (high IR reflectivity)
         li
-          a(href='/docs/lib/kipr/threads.html') Threads
-        li.no-padding
-          ul.collapsible.collapsible-accordion
-            li
-              a.collapsible-header
-                i.material-icons arrow_drop_down
-                | Motors and Sensors
-              .collapsible-body(style='display: block')
-                ul
-                  li.active
-                    a(href='/docs/lib/kipr/info/digital-analog-sensors.html') Analog and Digital Sensors
-                  li
-                    a(href='/docs/lib/kipr/info/usb-sensors.html') USB Sensors
-                  li
-                    a(href='/docs/lib/kipr/info/motors-servos.html') Motors and Servos
-                  li
-                    a(href='/docs/lib/kipr/info/simulator.html') Simulator
+          | Proximity of sensor to surface affects the difference in readings, so can be used to detect drop-offs
+        li Sensor has a reflectance range of about 3 inches
+      // ET_sensor
+      a(name='ET_sensor')
+      h4 Infrared "E.T." Distance Sensor (floating analog)
+      img(border='0', src='images/ET.gif')
+      br
+      ul
         li
-          a(href='/docs/full.html') Full Documentation
-      nav.nav-extended.red.lighten-2
-        .nav-wrapper
-          .col.s12
-            a.button-collapse(data-activates='slide-out', href='#', style='font-size: 50px')
-              i.material-icons menu
-            a#top.brand-logo.waves-effect(href='/docs/index.html') Botball Documentation
-        .nav-wrapper
-          .col.s12
-            a.breadcrumb(href='#!') Motors and Sensors
-            a.breadcrumb(href='#!') Analog and Digital Sensors
-    main.row
-      .container.col.s12
-        // END HEADER
-        // KIPR Robot Controller Images
-        a(name='LinkImages')
-        h2 KIPR Robot Controller Images
-        .Indent
-          // digital and analog sensors
-          a(name='LinkSensors')
-          h3 Analog and Digital Sensor Images
-          p
-            | The image below is the front of the KIPR Robot Controller showing where the analog and digital sensor ports
-            | are located.
-          // &lt;img class="center" src="images/Link_sensor_ports.gif" width="70%"&gt;&lt;/img&gt;
-          p.center
-            br
-            | Examples of digital and analog sensors used with the KIPR Robot Controller
-          table.centerTable(border='1', cellpadding='5', cellspacing='0')
-            tbody
-              tr
-                td(align='center', valign='center')
-                  a(href='#light_sensor')
-                    br
-                    img(border='0', src='images/LightSensor.gif', width='60%')
-                    br
-                    |  IR light sensor
-                    br
-                  |  (analog)
-                td(align='center', valign='center')
-                  a(href='#reflectance_sensors')
-                    img(border='0', src='images/Reflectance_sensors.gif', width='60%')
-                    br
-                    |  IR reflectance sensors
-                    br
-                  |  (analog)
-                td(align='center', valign='center')
-                  a(href='#ET_sensor')
-                    img(border='0', src='images/ET.gif', width='60%')
-                    br
-                    |  IR "E.T." Distance Sensor
-                    br
-                  |  (floating analog)
-              tr
-                td(align='center', colspan='2', valign='center')
-                  a(href='#touch_sensors')
-                    br
-                    img(border='0', src='images/TouchSensors.gif')
-                    br
-                    |  Touch Sensors
-                    br
-                  |  (digital)
-                td(align='center', valign='center')
-                  a(href='#break_beam_sensor')
-                    br
-                    img(border='0', src='images/BreakBeam.gif')
-                    br
-                    |  IR "Break Beam" Sensor
-                    br
-                  |  (digital)
-              tr
-                td(align='center', valign='center')
-                  a(href='#analog_slider')
-                    br
-                    img(border='0', src='images/AnalogSlider.gif')
-                    br
-                    |  Slider sensor
-                    br
-                  |  (analog)
-                td(align='center', valign='center')
-                  a(href='#analog_pot')
-                    br
-                    img(border='0', src='images/AnalogPot.gif')
-                    br
-                    |  Potentiometer (Pot) Sensor
-                    br
-                  |  (analog)
-                td(align='center', valign='center')
-                  a(href='#sensors')
-                    br
-                    img(border='0', height='120', src='images/sonar.jpg', width='60')
-                    br
-                    |  Ultrasonic rangefinder (SONAR)
-          // light_sensor
-          .Indent
-            a(name='light_sensor')
-            h4 Infrared light sensor (analog)
-            img(border='0', src='images/LightSensor.gif', width='40%')
-            br
-            ul
-              li Analog sensor
-              li Connect to ports 0-7
-              li
-                | Access with function 
-                code
-                  a(href='#analog') analog
-                  | (&lt;
-                i port#
-                code &gt;) 
-              li Low values indicate lots of Infrared
-              li High values indicate low Infrared
-              li
-                | Sensor is somewhat directional and can be made more so using an opaque tube or Lego to block out
-                | extraneous light. Sensor can be attenuated by placing paper in front.
-            // Reflectance Sensors
-            a(name='reflectance_sensors')
-            h4 Infrared large and small reflectance sensors (analog)
-            img(border='0', src='images/Reflectance_sensors.gif', width='30%')
-            br
-            ul
-              li Analog sensor
-              li Connect to ports 0-7
-              li
-                | Access with function 
-                code
-                  a(href='#analog') analog
-                  | (&lt;
-                i port#
-                code &gt;);
-              li
-                | Values measure IR reflection from a surface, allowing a robot to detect surface features such as
-                | a black tape line
-              li
-                | Dark surfaces produce high readings (low IR reflectivity) and light surfaces produce low readings
-                | (high IR reflectivity)
-              li
-                | Proximity of sensor to surface affects the difference in readings, so can be used to detect drop-offs
-              li Sensor has a reflectance range of about 3 inches
-            // ET_sensor
-            a(name='ET_sensor')
-            h4 Infrared "E.T." Distance Sensor (floating analog)
-            img(border='0', src='images/ET.gif')
-            br
-            ul
-              li
-                | Floating analog sensor (pullup resistor for port must be disabled for readings to be meaningful)
-              li Connect to port 0-7
-              li
-                | Access with function 
-                code
-                  a(href='#analog') analog_et
-                  | (&lt;
-                i port#
-                code &gt;)
-                | ;
-              li Low values indicate large distance
-              li High values indicate distance approaching ~4 inches
-              li
-                | Range is 4-30 inches. Result is approximately 1/(d)^2. Objects closer than 4 inches will have the
-                | same readings as those far away.
-              li Sharp Electronics part number GP2D12
-              li
-                | Sensor shines a narrow infrared beam, and measures the angle of the beam return using a position-sensitive
-                | detector (PSD):
-            // touch_sensor
-            a(name='touch_sensors')
-            h4 Touch sensors (digital)
-            img(border='0', src='images/TouchSensors.gif')
-            br
-            ul
-              li Digital switch sensors
-              li Connect to ports 8-15
-              li
-                | Access with function 
-                code
-                  a(href='#digital') digital
-                  | (&lt;
-                i port#
-                code &gt;);
-              li 1 indicates switch is closed
-              li 0 indicates switch is open
-              li These make good bumpers and can be used for limit switches on an actuator
-            // break_beam_sensor
-            a(name='break_beam_sensor')
-            h4 Infrared "Break Beam" Sensor (digital)
-            img(border='0', src='images/image010.gif')
-            br
-            ul
-              li Digital sensor
-              li Connect to ports 8-15
-              li
-                | Access with function 
-                code
-                  a(href='#digital') digital
-                  | (&lt;
-                i port#
-                code &gt;)
-              li 1 indicates slot is empty
-              li 0 indicates slot is blocked
-              li
-                | Can be used for alignment; e.g., a winch with a pin which when blocking the slot indicates alignment
-                | is reached
-              li
-                | Can also be used for encoders, where the edge of a wheel with holes around its perimeter passes through
-                | the slot, alternately breaking the beam
-            // sonar_sensor
-            //
-              &lt;a name="sonar_sensor"&gt;&lt;/a&gt;
-              &lt;h4&gt;Sonar (Ultrasonic Rangefinder)&lt;/h4&gt;
-              &lt;img border="0" height="180" width="90" src="images/sonar.jpg"&gt;
-              &lt;br&gt;
-              &lt;ul&gt;
-              &lt;li&gt;Timed analog sensor. Sends a "ping" of high-pitched sound and listens for an echo&lt;/li&gt;
-              &lt;li&gt;Connect to ports 0-7&lt;/li&gt;
-              &lt;li&gt;Access with function &lt;font class="CFunction"&gt;&lt;a href="#analog"&gt;analog&lt;/a&gt;&lt;/font&gt;(&lt;port#&gt;) &lt;/li&gt;
-              &lt;li&gt;Returned value is distance in inches to closest object in field of view&lt;/li&gt;
-              &lt;li&gt;Range is approximately 10-250 inches&lt;/li&gt;
-              &lt;li&gt;When first powered up, make sure there is nothing within 24
-              inches (60cm) so sonar can self calibrate.
-              &lt;li&gt;The sonar field of view is an approximately 30 degree teardrop:&lt;/li&gt;
-              &lt;/ul&gt;
-            a(name='analog_slider')
-            h4 Analog slider
-            img(border='0', height='66', src='images/AnalogSlider.gif', width='200')
-            br
-            ul
-              li Analog sensor
-              li Connect to ports 0-7
-              li
-                | Access with function 
-                code
-                  a(href='#analog') analog
-                  | (&lt;
-                i port#
-                code &gt;);
-              li Values range from 0 to 2047
-            a(name='analog_pot')
-            h4 Analog pot (potentiometer)
-            img(border='0', height='128', src='images/AnalogPot.gif', width='100')
-            br
-            ul
-              li Analog sensor
-              li Connect to ports 0-7
-              li
-                | Access with function 
-                code
-                  a(href='#analog') analog
-                  | (&lt;
-                i port#
-                code &gt;);
-              li Values range from 0 to 2047
-          // START FOOTER
+          | Floating analog sensor (pullup resistor for port must be disabled for readings to be meaningful)
+        li Connect to port 0-7
+        li
+          | Access with function 
+          code
+            a(href='#analog') analog_et
+            | (&lt;
+          i port#
+          code &gt;)
+          | ;
+        li Low values indicate large distance
+        li High values indicate distance approaching ~4 inches
+        li
+          | Range is 4-30 inches. Result is approximately 1/(d)^2. Objects closer than 4 inches will have the
+          | same readings as those far away.
+        li Sharp Electronics part number GP2D12
+        li
+          | Sensor shines a narrow infrared beam, and measures the angle of the beam return using a position-sensitive
+          | detector (PSD):
+      // touch_sensor
+      a(name='touch_sensors')
+      h4 Touch sensors (digital)
+      img(border='0', src='images/TouchSensors.gif')
+      br
+      ul
+        li Digital switch sensors
+        li Connect to ports 8-15
+        li
+          | Access with function 
+          code
+            a(href='#digital') digital
+            | (&lt;
+          i port#
+          code &gt;);
+        li 1 indicates switch is closed
+        li 0 indicates switch is open
+        li These make good bumpers and can be used for limit switches on an actuator
+      // break_beam_sensor
+      a(name='break_beam_sensor')
+      h4 Infrared "Break Beam" Sensor (digital)
+      img(border='0', src='images/image010.gif')
+      br
+      ul
+        li Digital sensor
+        li Connect to ports 8-15
+        li
+          | Access with function 
+          code
+            a(href='#digital') digital
+            | (&lt;
+          i port#
+          code &gt;)
+        li 1 indicates slot is empty
+        li 0 indicates slot is blocked
+        li
+          | Can be used for alignment; e.g., a winch with a pin which when blocking the slot indicates alignment
+          | is reached
+        li
+          | Can also be used for encoders, where the edge of a wheel with holes around its perimeter passes through
+          | the slot, alternately breaking the beam
+      // sonar_sensor
+      //
+        &lt;a name="sonar_sensor"&gt;&lt;/a&gt;
+        &lt;h4&gt;Sonar (Ultrasonic Rangefinder)&lt;/h4&gt;
+        &lt;img border="0" height="180" width="90" src="images/sonar.jpg"&gt;
+        &lt;br&gt;
+        &lt;ul&gt;
+        &lt;li&gt;Timed analog sensor. Sends a "ping" of high-pitched sound and listens for an echo&lt;/li&gt;
+        &lt;li&gt;Connect to ports 0-7&lt;/li&gt;
+        &lt;li&gt;Access with function &lt;font class="CFunction"&gt;&lt;a href="#analog"&gt;analog&lt;/a&gt;&lt;/font&gt;(&lt;port#&gt;) &lt;/li&gt;
+        &lt;li&gt;Returned value is distance in inches to closest object in field of view&lt;/li&gt;
+        &lt;li&gt;Range is approximately 10-250 inches&lt;/li&gt;
+        &lt;li&gt;When first powered up, make sure there is nothing within 24
+        inches (60cm) so sonar can self calibrate.
+        &lt;li&gt;The sonar field of view is an approximately 30 degree teardrop:&lt;/li&gt;
+        &lt;/ul&gt;
+      a(name='analog_slider')
+      h4 Analog slider
+      img(border='0', height='66', src='images/AnalogSlider.gif', width='200')
+      br
+      ul
+        li Analog sensor
+        li Connect to ports 0-7
+        li
+          | Access with function 
+          code
+            a(href='#analog') analog
+            | (&lt;
+          i port#
+          code &gt;);
+        li Values range from 0 to 2047
+      a(name='analog_pot')
+      h4 Analog pot (potentiometer)
+      img(border='0', height='128', src='images/AnalogPot.gif', width='100')
+      br
+      ul
+        li Analog sensor
+        li Connect to ports 0-7
+        li
+          | Access with function 
+          code
+            a(href='#analog') analog
+            | (&lt;
+          i port#
+          code &gt;);
+        li Values range from 0 to 2047
+    // START FOOTER
 

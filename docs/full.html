@@ -1,28 +1,30 @@
-
+<!DOCTYPE html>
 <html>
   <head>
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    <link href="/css/base.css" rel="stylesheet" type="text/css"/>
-    <link href="/css/materialize.min.css" media="screen,projection" rel="stylesheet" type="text/css"/>
-    <link href="/css/docs.css" rel="stylesheet" type="text/css"/>
-    <link href="../imgs/logos/botguy.png" rel="icon"/>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/css/base.css">
+    <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection">
+    <link type="text/css" rel="stylesheet" href="/css/docs.css">
+    <link type="text/css" rel="stylesheet" href="/css/prism.css">
+    <link rel="icon" href="../imgs/logos/botguy.png">
     <title>Botball Documentation - Tutorial</title>
-    <meta content="#00796b" name="theme-color"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta name="theme-color" content="#00796b">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
-    <script src="/js/materialize.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/js/materialize.min.js"></script>
+    <script type="text/javascript" src="/js/prism.js"></script>
     <script>
       $(document).ready(function () {
       $('.button-collapse').sideNav({
       draggable: true
       });
-      $(".active").parent().parent().siblings()[0].click() })
+      $('.active').parent().parent().siblings()[0].click() })
     </script>
     <header>
       <ul class="side-nav fixed" id="slide-out">
-        <li class="red lighten-1" style="height: 130px;">
+        <li class="lighten-1 red" style="height: 130px;">
           <div class="userView">
             <h5 class="white-text"><a class="white-text" href="/docs/index.html">Index</a></h5>
           </div>
@@ -54,8 +56,8 @@
             </li>
           </ul>
         </li>
-        <li><a href="/docs/tutorial.html">Style</a></li>
-        <li><a href="/docs/tutorial.html">Debugging</a></li>
+        <li><a href="/docs/style.html">Style</a></li>
+        <li><a href="/docs/debugging.html">Debugging</a></li>
         <li class="no-padding">
           <ul class="collapsible collapsible-accordion">
             <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Printing</a>
@@ -133,18 +135,18 @@
         </li>
         <li class="active"><a href="/docs/full.html">Full Documentation</a></li>
       </ul>
-      <nav class="nav-extended red lighten-2">
+      <nav class="nav-extended lighten-2 red">
         <div class="nav-wrapper">
-          <div class="col s12"><a class="button-collapse" data-activates="slide-out" href="#" style="font-size: 50px;"><i class="material-icons">menu</i></a><a class="brand-logo waves-effect" id="top" href="/docs/index.html">Botball Documentation</a></div>
+          <div class="col s12"><a class="button-collapse" href="#" data-activates="slide-out" style="font-size: 50px;"><i class="material-icons">menu</i></a><a class="brand-logo waves-effect" id="top" href="/docs/index.html">Botball Documentation</a></div>
         </div>
         <div class="nav-wrapper">
-          <div class="col s12"><a class="breadcrumb" href="#!">Full Documentation</a></div>
+          <div class="col s12"><a class="breadcrumb" href="#!">Full</a>
+          </div>
         </div>
       </nav>
     </header>
     <main class="row">
       <div class="container col s12">
-        <!-- END HEADER-->
         <!-- Programming in C--><a name="CProgramming"></a>
         <h2>Programming in C</h2>
         <p>Following a Quick C Tutorial introduction, more detailed sections are provided which describe</p>
@@ -306,7 +308,7 @@ double hypotenuse(int a, int b)
     double h;
     h = sqrt(square(a) + square(b));
     return(h);
-}</code></pre><br/>
+}</code></pre><br>
         <p>
           The argument list for this function has two arguments, each with integer data type. Additionally, its block structure
           includes a statement specifying a "working variable" <code>h</code>. The data type for <code>h</code>
@@ -363,14 +365,14 @@ double hypotenuse(int a, int b)
            its floating point format as if it were an integer, a semantic error.
         </p>
         <p>The two C statements</p>
-        <div class="Indent"><code>int square(int n); <br/>double hypotenuse(int a, int b);</code></div>
+        <div class="Indent"><code>int square(int n); <br>double hypotenuse(int a, int b);</code></div>
         <p>provide C "prototype" specifications for the <code>square</code> and <code>hypotenuse</code>
            functions used in
            the program. Similar prototypes need to be supplied for the standard C library's <code>printf</code>
            function
            and the C math library's <code>sqrt</code> function. The preprocessor statements
         </p>
-        <div class="Indent"><code>#include &lt;stdio.h&gt;<br/>#include &lt;math.h&gt;</code></div>
+        <div class="Indent"><code>#include &lt;stdio.h&gt;<br>#include &lt;math.h&gt;</code></div>
         <p>
           have the C preprocessor provide the needed prototypes (if not needed for a given KISS IDE target, the preprocessor
           will skip these statements; i.e., it is usually a good habit to put them in anyway). Examples of other commonly
@@ -532,9 +534,9 @@ int function_example()
               "), although both are awkward for representing negative numbers.
                For 32-bit two's complement integers, the following are true:
             </p>
-            <div class="indent">4053<sub>10</sub> = FD5<sub>16</sub> = 7725<sub>8</sub><br/> -1<sub>10</sub> = FFFFFFFF<sub>16</sub> = 37777777777<sub>8</sub>.</div>
+            <div class="indent">4053<sub>10</sub> = FD5<sub>16</sub> = 7725<sub>8</sub><br> -1<sub>10</sub> = FFFFFFFF<sub>16</sub> = 37777777777<sub>8</sub>.</div>
             <p>In C notation, these comparisons become</p>
-            <div class="indent"><code>4053 == 0xFD5 == 07725</code><br/><code>-1 == 0xffffffff == 037777777777</code></div>
+            <div class="indent"><code>4053 == 0xFD5 == 07725</code><br><code>-1 == 0xffffffff == 037777777777</code></div>
             <p>
               which also illustrates each of the three formats. Appending a "u" or "U" to the constant changes
               its value to the range [0, 2<sup>32</sup>-1] rather than [-2<sup>31</sup>, 2<sup>31</sup>
@@ -889,7 +891,7 @@ break;
               , the format specifier %s marks where to insert the string in the
                formatted output; for example,
             </p>
-            <div class="Indent"><code>char ans[10]=&quot;no&quot;;<br/>int q=3;<br/>     printf(&quot;The answer to %d is %s.\n&quot;,q,ans);</code></div>
+            <div class="Indent"><code>char ans[10]=&quot;no&quot;;<br>int q=3;<br>     printf(&quot;The answer to %d is %s.\n&quot;,q,ans);</code></div>
             <p>produces the (formatted) output " <code>The answer to 3 is no.</code>".</p>
             <p>The standard C library has string functions for assigning strings ( <code>strcpy</code>
               ), determining
@@ -956,7 +958,7 @@ break;
     // or you could use printf(&quot;Value at index %d is %d\n&quot;, indx, *(p+indx));
 }</code></pre>
             <p>Either of the following two example calls to the function will work, whichever of the two versions is used:</p>
-            <div class="Indent"><code>    print_element(3, ex_array);<br/>
+            <div class="Indent"><code>    print_element(3, ex_array);<br>
                     print_element(4, &amp;ex_array[0]);
                  </code></div>
             <!-- Multi-dimensional_Arrays--><a name="Multi-dimensional_Arrays"></a>
@@ -981,7 +983,7 @@ break;
                has not
                been initialized. Conceptually the array is
             </p>
-            <div class="Indent"><code>0  1  ?<br/>           3  4  5</code></div>
+            <div class="Indent"><code>0  1  ?<br>           3  4  5</code></div>
           </div>
           <!-- Structures--><a name="Structures"></a>
           <h3>Structures</h3>
@@ -1250,7 +1252,7 @@ x = 3; printf(&quot;%d  %d\n&quot;, x, x++);
 x = 3; printf(&quot;%d  %d\n&quot;, x++, x);
 x = 3; printf(&quot;%d  %d\n&quot;, x, x+1);</code></pre>
             <p>the displayed text will be</p>
-            <div class="Indent"><code> 4  4<br/> 4  4<br/> 4  3<br/> 3  3<br/> 3  4</code></div>
+            <div class="Indent"><code> 4  4<br> 4  4<br> 4  3<br> 3  3<br> 3  4</code></div>
             <p>Confusing? To understand this you also have to know the arguments of
               <printf>
                 are evaluated from right to left in setting values passed. Here's a (long-winded) explanation
@@ -1831,7 +1833,7 @@ while (seconds() &lt; 5);</code></pre>
                   <td align="center">formfeed</td>
                 </tr>
               </tbody>
-            </table><br/>The print result may differ from one display device to another (for example, while <code>'\n'</code> has the same outcome for almost every device, <code>'\r'</code> may behave the same as <code>'\n'</code> for some devices but on others simply reposition printing at the start of the current line).
+            </table><br>The print result may differ from one display device to another (for example, while <code>'\n'</code> has the same outcome for almost every device, <code>'\r'</code> may behave the same as <code>'\n'</code> for some devices but on others simply reposition printing at the start of the current line).
           </div>
           <p>
             The C compiler either ignores white space that is not imbedded inside double quote marks, or collapses
@@ -1944,7 +1946,7 @@ int main()
               process to implement, because inserting
               // in front of a line of code turns it into a comment (so it will no longer be executed)
               and whole blocks of code can be commented out by surrounding them using
-              /* */ comment bracketing.<br/><br/>
+              /* */ comment bracketing.<br><br>
                What is commented out has to be selected so that
                the program will still compile. After commenting out sections of the program, if it still
                crashes when executed, then what was commented out is probably not where the culprit is
@@ -2097,7 +2099,7 @@ int main()
               The % code "%c" is used to format character data. The % code "%s" is used for character
               strings, since they are frequently needed for print display.
             </p>
-            <div class="Indent"><code>char header[] = &quot;Data: &quot;, cs=&apos;a&apos;;<br/>int x=28;<br/>printf(&quot;%s%c = %d\n&quot;, header, cs, x);</code></div>
+            <div class="Indent"><code>char header[] = &quot;Data: &quot;, cs=&apos;a&apos;;<br>int x=28;<br>printf(&quot;%s%c = %d\n&quot;, header, cs, x);</code></div>
             <p>displays the text string</p>
             <div class="Indent"><code>Data: a = 28</code></div>
             <p>
@@ -2123,7 +2125,7 @@ int main()
               starting at column 5 on the 3rd row of the display. Note that the first row/first
               column of the display has column index 0 and row index 0.
             </p>
-            <div class="Indent"><code>int i = 2;<br/>char nm[] = &quot;KIPR store&quot;;<br/>display_printf(4,2,&quot;%d. %s   &quot;,i,nm);</code></div>
+            <div class="Indent"><code>int i = 2;<br>char nm[] = &quot;KIPR store&quot;;<br>display_printf(4,2,&quot;%d. %s   &quot;,i,nm);</code></div>
             <p>The column range for <code>display_printf</code>
                is 0 - 41. The row range for the
                3 button (A,B,C) case is 0 - 9 and for the 6 button (X,Y,Z,A,B,C) case is 0 - 7.
@@ -2138,7 +2140,7 @@ int main()
               be taken to add enough spaces to what is printed to clear artifacts from the previous
               print; e.g., if one of the following was used,
             </p>
-            <div class="Indent"><code>display_printf(4,2,&quot;%d. %s&quot;,i,nm); // NO<br/>display_printf(4,2,&quot;%d. %s   &quot;,i,nm); // YES</code></div>
+            <div class="Indent"><code>display_printf(4,2,&quot;%d. %s&quot;,i,nm); // NO<br>display_printf(4,2,&quot;%d. %s   &quot;,i,nm); // YES</code></div>
             <p>then if we had already printed "2. KIPR store" and changed <code>nm</code>
                to "Staffing"
                then the first of these would print
@@ -2235,7 +2237,7 @@ int main()
               #endif and
                #ifndef <code> .. </code>#endif). For example,
             </p>
-            <div class="Indent"><code>#ifndef PI<br/>  #define PI 3.1416159<br/>#endif</code></div>
+            <div class="Indent"><code>#ifndef PI<br>  #define PI 3.1416159<br>#endif</code></div>
             <p>
               When the preprocessor encounters a valid macro name in the program code, the macro is
               called and its name "expanded" to be replaced by whatever text the macro generates;
@@ -2269,7 +2271,7 @@ int main()
                since the condition test determines whether or not a section of code is sent on to
                the compiler; for example,
             </p>
-            <div class="Indent"><code>#define CFLAG 1<br/>#if CFLAG==1<br/>  display_printf(1,3,&quot;On target  &quot;);<br/>#else<br/>  printf(&quot;On target\n&quot;);<br/>#endif</code></div>
+            <div class="Indent"><code>#define CFLAG 1<br>#if CFLAG==1<br>  display_printf(1,3,&quot;On target  &quot;);<br>#else<br>  printf(&quot;On target\n&quot;);<br>#endif</code></div>
             <p>selects which form of <code>printf</code>
                to use according to how CFLAG is #defined.
                CFLAG serves as a "configuration variable" to be set according to the ennvironment
@@ -2341,14 +2343,14 @@ int main()
               The following provides an example of each kind of
               #include directive:
             </p>
-            <div class="Indent"><code>#include &lt;stdio.h&gt; // insert function prototypes for system I/O functions <br/>#include &quot;mylib.c&quot; // insert my function library </code></div>
+            <div class="Indent"><code>#include &lt;stdio.h&gt; // insert function prototypes for system I/O functions <br>#include &quot;mylib.c&quot; // insert my function library </code></div>
             <p>
               A few of the more commonly used system header files providing definitions for pre-compiled
               functions in the standard C library follow:
             </p>
             <div class="Indent"><code>&lt;stdlib.h&gt;</code>
                [numeric conversion, memory allocation, functions such
-               as <code>rand</code>]<br/><code>&lt;stdio.h&gt;</code> [I/O functions such as <code>printf</code>]<br/><code>&lt;math.h&gt;</code> [math functions such as <code>sqrt</code>]<br/><code>&lt;string.h&gt;</code> [string functions such as <code>strcpy</code>]<br/><code>&lt;time.h&gt;</code> [date and time functions such as <code>time</code>]<br/><code>&lt;stdarg.h&gt;</code>
+               as <code>rand</code>]<br><code>&lt;stdio.h&gt;</code> [I/O functions such as <code>printf</code>]<br><code>&lt;math.h&gt;</code> [math functions such as <code>sqrt</code>]<br><code>&lt;string.h&gt;</code> [string functions such as <code>strcpy</code>]<br><code>&lt;time.h&gt;</code> [date and time functions such as <code>time</code>]<br><code>&lt;stdarg.h&gt;</code>
                [functions with varying number of arguments (i.e., ones
                using the <code>...</code> argument)]
             </div>
@@ -2364,7 +2366,7 @@ int main()
               Macros are often used to provide replacement text, where the macro provides a more meaningful
               name; e.g.,
             </p>
-            <div class="Indent"><code>#define RIGHT_MOTOR 0 // equate RIGHT_MOTOR with 0<br/>#define POWER  90 // equate POWER with 90</code></div>
+            <div class="Indent"><code>#define RIGHT_MOTOR 0 // equate RIGHT_MOTOR with 0<br>#define POWER  90 // equate POWER with 90</code></div>
             <p>If the motor command</p>
             <div class="Indent"><code>motor(RIGHT_MOTOR, POWER);</code></div>
             <p>is used in subsequent code, the preprocessor will expand the <code>RIGHT_MOTOR</code> and <code>POWER</code>
@@ -2411,7 +2413,7 @@ int main()
               ),
                the precompiler can omit code whose only purpose is for debugging. In particular,
             </p>
-            <div class="Indent"><code>#ifdef DEBUG<br/>  printf(&quot;Going Left\n&quot;);<br/>  beep();<br/>#endif</code></div>
+            <div class="Indent"><code>#ifdef DEBUG<br>  printf(&quot;Going Left\n&quot;);<br>  beep();<br>#endif</code></div>
             <p>generates the debugging <code>printf</code> and <code>beep</code> only if <code>DEBUG</code>
                has been defined, in which case the message "Going Left" will be printed and KIPR
                LINK will beep when program execution reaches this part of its code. If <code>DEBUG</code>
@@ -2422,7 +2424,7 @@ int main()
               Macros can also be conditionally defined; for example, the somewhat more sophisticated
               debugging macro definition
             </p>
-            <div class="Indent"><code>#ifdef DEBUG // if DEBUG is defined, SHOW(printf(&quot;%d&quot;,i) generates DEBUG code <br/>  #define SHOW(x) printf(&quot;DEBUG: &quot;); x // if case: SHOW macro is defined to generate code <br/>#else  // if DEBUG is not defined, SHOW(printf(&quot;%d&quot;,i) generates nothing <br/>  #define SHOW(x) // else case: SHOW macro is defined to generate nothing <br/>#endif</code></div>
+            <div class="Indent"><code>#ifdef DEBUG // if DEBUG is defined, SHOW(printf(&quot;%d&quot;,i) generates DEBUG code <br>  #define SHOW(x) printf(&quot;DEBUG: &quot;); x // if case: SHOW macro is defined to generate code <br>#else  // if DEBUG is not defined, SHOW(printf(&quot;%d&quot;,i) generates nothing <br>  #define SHOW(x) // else case: SHOW macro is defined to generate nothing <br>#endif</code></div>
             <p>defines a <code>SHOW</code> macro in one of two ways, either to produce debugging <code>printf</code>
                statements from its argument, or to produce nothing, regardless
                of argument.
@@ -2471,7 +2473,7 @@ int main()
                     <dl>
                       <dd>Format: <code>double  <code>acos</code>
                           (
-                                                                              double x);</code><br/>
+                                                                              double x);</code><br>
                          Returns the angle between 0 and π whose
                          cosine is x, where -1 ≤ x ≤ 1. result is in radians.
                       </dd>
@@ -2484,7 +2486,7 @@ int main()
                     <dl>
                       <dd>Format: <code>double  <code>asin</code>
                           (
-                                                                              double x);</code><br/>
+                                                                              double x);</code><br>
                          Returns the angle between -π/2 and π/2
                          whose sine is x, where -1 ≤ x ≤ 1. result is in radians.
                       </dd>
@@ -2497,7 +2499,7 @@ int main()
                     <dl>
                       <dd>Format: <code>double  <code>atan</code>
                           (
-                                                                              double x);</code><br/>
+                                                                              double x);</code><br>
                          Returns the angle between -π/2 and π/2
                          whose tangent is x. result is in radians.
                       </dd>
@@ -2510,7 +2512,7 @@ int main()
                     <dl>
                       <dd>Format: <code>double  <code>cos</code>
                           (
-                                                                              double angle);</code><br/>
+                                                                              double angle);</code><br>
                          Returns cosine of angle. Angle is specified
                          in radians; result is between -1 and 1.
                       </dd>
@@ -2521,7 +2523,7 @@ int main()
                   <td><a name="exp"></a></td>
                   <td><code>exp</code> [Category: Math]
                     <dl>
-                      <dd>Format: <code>double exp(double x);</code><br/> Returns e<sup>x</sup>
+                      <dd>Format: <code>double exp(double x);</code><br> Returns e<sup>x</sup>
                          (e is the Euler constant, the base for the natural
                          logarithm of a number).
                       </dd>
@@ -2532,7 +2534,7 @@ int main()
                   <td><a name="exp10"></a></td>
                   <td><code>exp10</code> [Category: Math]
                     <dl>
-                      <dd>Format: <code>double exp10(double x);</code><br/> Returns 10<sup>x</sup>.</dd>
+                      <dd>Format: <code>double exp10(double x);</code><br> Returns 10<sup>x</sup>.</dd>
                     </dl>
                   </td>
                 </tr>
@@ -2540,7 +2542,7 @@ int main()
                   <td><a name="log"></a></td>
                   <td><code>log</code> [Category: Math]
                     <dl>
-                      <dd>Format: <code>double log(double x);</code><br/> Returns log<sub>e</sub>(x), the natural logarithm of x.</dd>
+                      <dd>Format: <code>double log(double x);</code><br> Returns log<sub>e</sub>(x), the natural logarithm of x.</dd>
                     </dl>
                   </td>
                 </tr>
@@ -2548,7 +2550,7 @@ int main()
                   <td><a name="log10"></a></td>
                   <td><code>log10</code> [Category: Math]
                     <dl>
-                      <dd>Format: <code>double log10(double x);</code><br/> Returns log<sub>10</sub>(x), the base 10 logarithm of x.</dd>
+                      <dd>Format: <code>double log10(double x);</code><br> Returns log<sub>10</sub>(x), the base 10 logarithm of x.</dd>
                     </dl>
                   </td>
                 </tr>
@@ -2556,7 +2558,7 @@ int main()
                   <td><a name="pow"></a></td>
                   <td><code>pow</code> [Category: Math]
                     <dl>
-                      <dd>Format: <code>double pow(double x, double y);</code><br/> Returns x<sup>y</sup>.</dd>
+                      <dd>Format: <code>double pow(double x, double y);</code><br> Returns x<sup>y</sup>.</dd>
                     </dl>
                   </td>
                 </tr>
@@ -2564,7 +2566,7 @@ int main()
                   <td><a name="rand"></a></td>
                   <td><code>rand</code>[Category: Math]
                     <dl>
-                      <dd>Format: <code>int rand();</code><br/>
+                      <dd>Format: <code>int rand();</code><br>
                          Returns
                          a (pseudo) random integer between 0 and a very large integer established
                          on system installation, drawn from the (pseudo) random number stream
@@ -2579,7 +2581,7 @@ int main()
                   <td><a name="sin"></a></td>
                   <td><code>sin</code> [Category: Math]
                     <dl>
-                      <dd>Format: <code>double sin(double angle);</code><br/>
+                      <dd>Format: <code>double sin(double angle);</code><br>
                          Returns the sine of angle. angle is specified in radians; result is between
                          -1 and 1.
                       </dd>
@@ -2590,7 +2592,7 @@ int main()
                   <td><a name="sqrt"></a></td>
                   <td><code>sqrt </code> [Category: Math]
                     <dl>
-                      <dd>Format: <code>double sqrt(double x);</code><br/> Returns √<span style="border-top: 1px solid #000000; font-size: 15px;">x</span>
+                      <dd>Format: <code>double sqrt(double x);</code><br> Returns √<span style="border-top: 1px solid #000000; font-size: 15px;">x</span>
                         ,
                          the square root of x.
                       </dd>
@@ -2600,7 +2602,7 @@ int main()
                 <td><a name="srand"></a></td>
                 <td><code>srand</code> [Category: Math]
                   <dl>
-                    <dd>Format: <code>void srand(int num);</code><br/>
+                    <dd>Format: <code>void srand(int num);</code><br>
                        Re-seeds (pseudo) random number generation (the initial seed at start of
                        program execution is <code>srand(1)</code>
                       ). Unless it is desirable that
@@ -2618,7 +2620,7 @@ int main()
                   <td><a name="tan"></a></td>
                   <td><code>tan</code> [Category: Math]
                     <dl>
-                      <dd>Format: <code>double tan(double angle);</code><br/>
+                      <dd>Format: <code>double tan(double angle);</code><br>
                          Returns the tangent of angle. angle is specified in radians; result
                          is between -∞ and +∞.
                       </dd>
@@ -2724,7 +2726,7 @@ int main()
             </p>
             <table style="background-color: #f0f0f0;">
               <tr>
-                <td><br/>
+                <td><br>
                   <div class="Indent"><code><a name="display_printfx"></a>display_printf(&lt;</code><i>col</i><code>&gt;, &lt;</code><i>row</i><code>&gt;, &lt;</code><i>printf-arguments</i><code>&gt;);</code>
                     <dl>
                       <dd>
@@ -2845,7 +2847,7 @@ int main()
                   <td><a name="a_button"></a></td>
                   <td><code>a_button</code> [Category: Sensors]
                     <dl>
-                      <dd>Format: <code>int a_button();</code><br/>
+                      <dd>Format: <code>int a_button();</code><br>
                          Returns the state of the A button on the KIPR Robot Controller program
                          console (1 if pressed, 0 otherwise).
                       </dd>
@@ -2856,12 +2858,12 @@ int main()
                   <td><a name="a_button_clicked"></a></td>
                   <td><code>a_button_clicked</code> [Category: Sensors]
                     <dl>
-                      <dd>Format: <code>int a_button_clicked();</code><br/>
+                      <dd>Format: <code>int a_button_clicked();</code><br>
                          Returns the state of the A button on the KIPR Robot Controller program
                          console (1 of pressed, 0 otherwise). Continued function execution
                          is blocked while the button is pressed. The construction
                         <dl>
-                          <dd><code>while (a_button()==0) {<br/>
+                          <dd><code>while (a_button()==0) {<br>
                               while (a_button()==1); ...}
                                              //debounce A button</code></dd>
                         </dl> is equivalent to
@@ -2876,7 +2878,7 @@ int main()
                   <td><a name="accel_x"></a></td>
                   <td><code>accel_x</code> [Category: Sensors]
                     <dl>
-                      <dd>Format: <code>int accel_x();</code><br/>
+                      <dd>Format: <code>int accel_x();</code><br>
                          Returns the value of the accelerometer in its x direction relative
                          to the horizontal plane of the KIPR Robot Controller (left - right).
                       </dd>
@@ -2887,7 +2889,7 @@ int main()
                   <td><a name="accel_y"></a></td>
                   <td><code>accel_y</code> [Category: Sensors]
                     <dl>
-                      <dd>Format: <code>int accel_y();</code><br/>
+                      <dd>Format: <code>int accel_y();</code><br>
                          Returns the value of the accelerometer in its y direction relative
                          to the horizontal plane of the KIPR Robot Controller (forward - back).
                       </dd>
@@ -2898,7 +2900,7 @@ int main()
                   <td><a name="accel_z"></a></td>
                   <td><code>accel_z</code> [Category: Sensors]
                     <dl>
-                      <dd>Format: <code>int accel_z();</code><br/>
+                      <dd>Format: <code>int accel_z();</code><br>
                          Returns the value of the accelerometer for its vertical, or z direction,
                          relative to the horizontal plane of the KIPR Robot Controller (up
                          - down). When the KIPR Robot Controller is horizontal it is calibrated
@@ -2913,7 +2915,7 @@ int main()
                   <td><a name="alloff"></a></td>
                   <td><code>alloff</code> [Category: Motors]
                     <dl>
-                      <dd>Format: <code>voidalloff();</code><br/>
+                      <dd>Format: <code>voidalloff();</code><br>
                          Turns off all motor ports.
                          ao is a short form for
                          alloff.
@@ -2925,7 +2927,7 @@ int main()
                   <td><a name="analog"></a></td>
                   <td><code>analog</code> [Category: Sensors]
                     <dl>
-                      <dd>Format: <code>int analog(int p);</code><br/> Returns the value of the sensor plugged into analog port <code>p</code>
+                      <dd>Format: <code>int analog(int p);</code><br> Returns the value of the sensor plugged into analog port <code>p</code>
                          scaled as an integer between 0 and 1023. Analog ports on the KIPR
                          Robot Controller are numbered 0 through 7. Each analog port on the
                          KIPR Robot Controller has a selectable pullup resistor, enabled by
@@ -2942,7 +2944,7 @@ int main()
                   <td><a name="analog_et"></a></td>
                   <td><code>analog_et</code> [Category: Sensors]
                     <dl>
-                      <dd>Format: <code>int analog_et(int p);</code><br/> For an analog sensor plugged into analog port <code>p</code>
+                      <dd>Format: <code>int analog_et(int p);</code><br> For an analog sensor plugged into analog port <code>p</code>
                         , disables
                          the port's pullup resistor and returns a value scaled to the range
                          0-1023 representing the analog voltage variation produced by the
@@ -2957,7 +2959,7 @@ int main()
                   <td><a name="analog8"></a></td>
                   <td><code>analog8</code> [Category: Sensors]
                     <dl>
-                      <dd>Format: <code>int analo8(int p);</code><br/>
+                      <dd>Format: <code>int analo8(int p);</code><br>
                          8-bit version of analog. Returns the value of the sensor plugged
                          into analog port <code>p</code>
                          scaled as an integer between 0 and
@@ -2971,7 +2973,7 @@ int main()
                   <td><a name="analog10"></a></td>
                   <td><code>analog10</code> [Category: Sensors]
                     <dl>
-                      <dd>Format: <code>int analog10(int p);</code><br/> Returns the value of the sensor plugged into analog port <code>p</code>
+                      <dd>Format: <code>int analog10(int p);</code><br> Returns the value of the sensor plugged into analog port <code>p</code>
                          scaled as an integer between 0 and 1023. Analog ports on the KIPR
                          Robot Controller are numbered 0 through 7. Each analog port on the
                          KIPR Robot Controller has a selectable pullup resistor, enabled by
@@ -2988,7 +2990,7 @@ int main()
                   <td><a name="any_button"></a></td>
                   <td><code>any_button</code> [Category: Sensors]
                     <dl>
-                      <dd>Format: <code>intany_button()();</code><br/> Returns 1 if any button (A,B,C,X,Y,Z,Side) is pressed.</dd>
+                      <dd>Format: <code>intany_button()();</code><br> Returns 1 if any button (A,B,C,X,Y,Z,Side) is pressed.</dd>
                     </dl>
                   </td>
                 </tr>
@@ -2996,7 +2998,7 @@ int main()
                   <td><a name="ao"></a></td>
                   <td><code>ao</code> [Category: Motors]
                     <dl>
-                      <dd>Format: <code>void ao();</code><br/> Turns off all motor ports (same as <code>alloff</code>).</dd>
+                      <dd>Format: <code>void ao();</code><br> Turns off all motor ports (same as <code>alloff</code>).</dd>
                     </dl>
                   </td>
                 </tr>
@@ -3004,7 +3006,7 @@ int main()
                   <td><a name="b_button"></a></td>
                   <td><code>b_button</code> [Category: Sensors]
                     <dl>
-                      <dd>Format: <code>int b_button();</code><br/>
+                      <dd>Format: <code>int b_button();</code><br>
                          Returns the state of the B button on the KIPR Robot Controller program
                          console (1 if pressed, 0 otherwise).
                       </dd>
@@ -3015,12 +3017,12 @@ int main()
                   <td><a name="b_button_clicked"></a></td>
                   <td><code>b_button_clicked</code> [Category: Sensors]
                     <dl>
-                      <dd>Format: <code>int b_button_clicked();</code><br/>
+                      <dd>Format: <code>int b_button_clicked();</code><br>
                          Returns the state of the B button on the KIPR Robot Controller program
                          console (1 of pressed, 0 otherwise). Continued function execution
                          is blocked while the button is pressed. The construction
                         <dl>
-                          <dd><code>while (b_button()==0) {<br/>
+                          <dd><code>while (b_button()==0) {<br>
                               while (b_button()==1); ...}
                                                //debounce B button</code></dd>
                         </dl> is equivalent to
@@ -3035,7 +3037,7 @@ int main()
                   <td><a name="beep"></a></td>
                   <td><code>beep</code> [Category: Output]
                     <dl>
-                      <dd>Format: <code>void beep();</code><br/>
+                      <dd>Format: <code>void beep();</code><br>
                          Produces a tone from the KIPR Robot Controller loud speaker. Returns
                          when the tone is finished.
                       </dd>
@@ -3046,11 +3048,11 @@ int main()
                   <td><a name="bk"></a></td>
                   <td><code>bk</code> [Category: Motors]
                     <dl>
-                      <dd>Format: <code>void bk(int m);</code><br/> Turns on the motor plugged into motor port <code>m</code>
+                      <dd>Format: <code>void bk(int m);</code><br> Turns on the motor plugged into motor port <code>m</code>
                          at full
                          PWM power in the reverse direction (red light comes on for the KIPR
                          Robot Controller motor port). Motor ports are numbered from 0 to
-                         3.<br/> Example: <br/>
+                         3.<br> Example: <br>
                         <div class="Indent"><code>bk(3); // full power reverse for motor 3</code></div>
                       </dd>
                     </dl>
@@ -3060,15 +3062,15 @@ int main()
                   <td><a name="block_motor_done"></a></td>
                   <td><code>block_motor_done</code> [Category: Motors]
                     <dl>
-                      <dd>Format: <code>void block_motor_done(int m);</code><br/>
+                      <dd>Format: <code>void block_motor_done(int m);</code><br>
                          If a motor positioning function is in progress for the motor plugged
                          into motor port <code>m</code>
                         , continued function execution is blocked
                          until the motor has reached its goal position. Motor positioning
                          functions are <code>move_to_position</code> (or <code>mtp</code>
                         )
-                         and <code>move_relative_position</code> (or <code>mrp</code>).<br/> Example: <br/><code>
-                          <div class="Indent"><code>mtp(0,500,20000); // turn on motor 0 at 500 ticks/sec and stop when position 20000 is reached</code><br/>
+                         and <code>move_relative_position</code> (or <code>mrp</code>).<br> Example: <br><code>
+                          <div class="Indent"><code>mtp(0,500,20000); // turn on motor 0 at 500 ticks/sec and stop when position 20000 is reached</code><br>
                             block_motor_done(1);
                                                                                     // pause until mtp has reached its goal position of 20000 for motor
                                                                                       1
@@ -3084,7 +3086,7 @@ int main()
                   <td><a name="bmd"></a></td>
                   <td><code>bmd</code> [Category: Motors]
                     <dl>
-                      <dd>Format: <code>void bmd(int m);</code><br/> This function is the same as <code>block_motor_done</code>
+                      <dd>Format: <code>void bmd(int m);</code><br> This function is the same as <code>block_motor_done</code>
                         , just under a (much)
                          shorter name.
                       </dd>
@@ -3095,7 +3097,7 @@ int main()
                   <td><a name="c_button"></a></td>
                   <td><code>c_button</code> [Category: Sensors]
                     <dl>
-                      <dd>Format: <code>int c_button();</code><br/>
+                      <dd>Format: <code>int c_button();</code><br>
                          Returns the state of the C button on the KIPR Robot Controller program console
                          (1 if pressed, 0 otherwise).
                       </dd>
@@ -3106,12 +3108,12 @@ int main()
                   <td><a name="c_button_clicked"></a></td>
                   <td><code>c_button_clicked</code> [Category: Sensors]
                     <dl>
-                      <dd>Format: <code>int c_button_clicked();</code><br/>
+                      <dd>Format: <code>int c_button_clicked();</code><br>
                          Returns the state of the C button on the KIPR Robot Controller program console
                          (1 of pressed, 0 otherwise). Continued function execution is blocked while the
                          button is pressed. The construction
                         <dl>
-                          <dd><code>while (c_button()==0) {<br/>
+                          <dd><code>while (c_button()==0) {<br>
                               while (c_button()==1); ...}
                                            //debounce C button</code></dd>
                         </dl> is equivalent to
@@ -3126,7 +3128,7 @@ int main()
                   <td><a name="clear_motor_position_counter"></a></td>
                   <td><code>clear_motor_position_counter</code> [Category: Motors]
                     <dl>
-                      <dd>Format: <code>void clear_motor_position_counter(int motor_nbr);</code><br/> Reset the position counter for the motor specified to 0.</dd>
+                      <dd>Format: <code>void clear_motor_position_counter(int motor_nbr);</code><br> Reset the position counter for the motor specified to 0.</dd>
                     </dl>
                   </td>
                 </tr>
@@ -3134,7 +3136,7 @@ int main()
                   <td><a name="console_clear"></a></td>
                   <td><code>console_clear</code> [Category: Output]
                     <dl>
-                      <dd>Format: <code>void console_clear();</code><br/>
+                      <dd>Format: <code>void console_clear();</code><br>
                          Clear
                          the KIPR Robot Controller program console print buffer. See also <code>display_clear</code>.
                       </dd>
@@ -3145,7 +3147,7 @@ int main()
                   <td><a name="digital"></a></td>
                   <td><code>digital</code> [Category: Sensors]
                     <dl>
-                      <dd>Format: <code>int digital(int p);</code><br/> Returns the value of the sensor in digital port <code>p</code>
+                      <dd>Format: <code>int digital(int p);</code><br> Returns the value of the sensor in digital port <code>p</code>
                         , as a true/false
                          value (1 for true and 0 for false). Sensors are expected to be active low, meaning
                          that they are valued at zero volts in the active, or true, state. Thus the library
@@ -3162,7 +3164,7 @@ int main()
                   <td><a name="disable_servo"></a></td>
                   <td><code>disable_servo</code> [Category: Servos]
                     <dl>
-                      <dd>Format: <code>void disable_servo(int p);</code><br/>
+                      <dd>Format: <code>void disable_servo(int p);</code><br>
                          Disables the specified servo port. Servo ports are disabled by default, and if
                          enabled, consume power whenever a motor is plugged into them. Servo ports on the
                          KIPR Robot Controller are numbered 0 to 3.
@@ -3174,7 +3176,7 @@ int main()
                   <td><a name="disable_servos"></a></td>
                   <td><code>disable_servos</code> [Category: Servos]
                     <dl>
-                      <dd>Format: <code>void disable_servos();</code><br/>
+                      <dd>Format: <code>void disable_servos();</code><br>
                          Disables all servo motor ports (powers down all servo motors). Servo ports are
                          disabled by default, and if enabled, consume power whenever a motor is plugged
                          into them.
@@ -3186,7 +3188,7 @@ int main()
                   <td><a name="display_clear"></a></td>
                   <td><code>display_clear</code> [Category: Output]
                     <dl>
-                      <dd>Format: <code>void display_clear();</code><br/>
+                      <dd>Format: <code>void display_clear();</code><br>
                          Clear
                          the KIPR Robot Controller program console screen for using <code>display_printf</code>
                         .
@@ -3199,7 +3201,7 @@ int main()
                   <td><a name="display_printf"></a></td>
                   <td><code>display_printf</code> [Category: Output]
                     <dl>
-                      <dd>Format: <code>void display_printf(int col, int row, char s[], ... );</code><br/>
+                      <dd>Format: <code>void display_printf(int col, int row, char s[], ... );</code><br>
                          The purpose of this function is to display formatted output at a specific (column,
                          row) location on the KIPR Robot Controller program console screen using standard <code>printf</code>
                          formatting. The column range for the display is 0 to 41. For
@@ -3214,7 +3216,7 @@ int main()
                   <td><a name="enable_servo"></a></td>
                   <td><code>enable_servo</code> [Category: Servos]
                     <dl>
-                      <dd>Format: <code>void enable_servo(int p);</code><br/>
+                      <dd>Format: <code>void enable_servo(int p);</code><br>
                          Enables specified servo port. Servo ports are disabled by default, and if enabled,
                          consume power whenever a motor is plugged into them. If a servo position for a
                          port hasn't been set when it is enabled, the default position is 1023. Servo ports
@@ -3227,7 +3229,7 @@ int main()
                   <td><a name="enable_servos"></a></td>
                   <td><code>enable_servos</code> [Category: Servos]
                     <dl>
-                      <dd>Format: <code>void enable_servos();</code><br/>
+                      <dd>Format: <code>void enable_servos();</code><br>
                          Enables
                          all servo motor ports. Servo ports are disabled by default, and if enabled, consume
                          power whenever a motor is plugged into them.
@@ -3239,7 +3241,7 @@ int main()
                   <td><a name="extra_buttons_show"></a></td>
                   <td><code>extra_buttons_show</code> [Category: Output]
                     <dl>
-                      <dd>Format: <code>void extra_buttons_show();</code><br/>
+                      <dd>Format: <code>void extra_buttons_show();</code><br>
                          Shows the X, Y, and Z buttons on the KIPR Robot Controller program console screen
                          above the A, B, and C buttons. Note: this reduces the display area for <code>printf</code> and <code>display_printf</code>. See also <code>extra_buttons_hide, get_extra_buttons_visible</code>.
                       </dd>
@@ -3250,7 +3252,7 @@ int main()
                   <td><a name="extra_buttons_hide"></a></td>
                   <td><code>extra_buttons_hide</code> [Category: Output]
                     <dl>
-                      <dd>Format: <code>void extra_buttons_hide();</code><br/>
+                      <dd>Format: <code>void extra_buttons_hide();</code><br>
                          Hides the X, Y, and Z buttons on the KIPR Robot Controller program console screen.
                          Note: this is the default display configuration. See also <code>extra_buttons_show, get_extra_buttons_visible</code>.
                       </dd>
@@ -3261,10 +3263,10 @@ int main()
                   <td><a name="fd"></a></td>
                   <td><code>fd</code> [Category: Motors]
                     <dl>
-                      <dd>Format: <code>void fd(int m);</code><br/> Turns on the motor plugged into motor <code>m</code>
+                      <dd>Format: <code>void fd(int m);</code><br> Turns on the motor plugged into motor <code>m</code>
                          at full PWM power in the forward
                          direction (green light comes on for the KIPR Robot Controller motor port). Motors
-                         are numbered 0 to 3.<br/> Example:<br/>
+                         are numbered 0 to 3.<br> Example:<br>
                         <div class="Indent"><code>fd(3); // full power forward for motor 3</code></div>
                       </dd>
                     </dl>
@@ -3274,7 +3276,7 @@ int main()
                   <td><a name="freeze"></a></td>
                   <td><code>freeze</code> [Category: Motors]
                     <dl>
-                      <dd>Format: <code>void freeze(int m);</code><br/>
+                      <dd>Format: <code>void freeze(int m);</code><br>
                          Freezes motor m (prevents continued motor rotation, in contrast to
                          off, which allows the motor to "coast").
                       </dd>
@@ -3307,7 +3309,7 @@ int main()
                   <td><a name="get_extra_buttons_visible"></a></td>
                   <td><code>get_extra_buttons_visible</code> [Category: Sensors]
                     <dl>
-                      <dd>Format: <code>int get_extra_buttons_visible();</code><br/> Returns 1 if the X, Y, and Z buttons are visible, 0 if not. See also <code>extra_buttons_show, extra_buttons_hide</code></dd>
+                      <dd>Format: <code>int get_extra_buttons_visible();</code><br> Returns 1 if the X, Y, and Z buttons are visible, 0 if not. See also <code>extra_buttons_show, extra_buttons_hide</code></dd>
                     </dl>
                   </td>
                 </tr>
@@ -3315,7 +3317,7 @@ int main()
                   <td><a name="get_motor_done"></a></td>
                   <td><code>get_motor_done</code> [Category: Motors]
                     <dl>
-                      <dd>Format: <code>int get_motor_done(int m);</code><br/>
+                      <dd>Format: <code>int get_motor_done(int m);</code><br>
                          For a motor moving to a goal position set by a motor positioning command, returns
                          1 if the motor has reached the goal position and 0 otherwise. Motor positioning
                          functions are <code>move_to_position</code> (or <code>mtp</code>) and <code>move_relative_position</code> (or <code>mrp</code>). See also <code>block_motor_done</code>.
@@ -3327,7 +3329,7 @@ int main()
                   <td><a name="get_motor_position_counter"></a></td>
                   <td><code>get_motor_position_counter</code> [Category: Motors]
                     <dl>
-                      <dd>Format: <code>int get_motor_position_counter(int m);</code><br/> Returns the current motor position for motor <code>m</code>
+                      <dd>Format: <code>int get_motor_position_counter(int m);</code><br> Returns the current motor position for motor <code>m</code>
                          in "ticks" (a value
                          which is continually being updated for each motor using PID motor control based
                          on back EMF; a typical discrimination for a given motor is on the order of 1100
@@ -3340,7 +3342,7 @@ int main()
                   <td><a name="get_pid_gains"></a></td>
                   <td><code>get_pid_gains</code> [Category: Motors]
                     <dl>
-                      <dd>Format: <code>int get_pid_gains(int motor, int *p, int *i, int *d, int *pd, int *id, int *dd);</code><br/> This function is used to obtain the PID control values currently set for the KIPR Robot Controller motor ports. The <code>p</code>, <code>i</code> and <code>d</code> arguments are numerators, and the <code>pd</code>, <code>id</code> and <code>dd/</code>
+                      <dd>Format: <code>int get_pid_gains(int motor, int *p, int *i, int *d, int *pd, int *id, int *dd);</code><br> This function is used to obtain the PID control values currently set for the KIPR Robot Controller motor ports. The <code>p</code>, <code>i</code> and <code>d</code> arguments are numerators, and the <code>pd</code>, <code>id</code> and <code>dd/</code>
                          arguments are their respective denominators
                          for coefficients used by the PID control algorithm. While all of the parameters
                          are integers, the coefficients used within the PID control algorithm may be integers
@@ -3358,7 +3360,7 @@ int main()
                   <td><a name="get_servo_enabled"></a></td>
                   <td><code>get_servo_enabled</code> [Category: Servos]
                     <dl>
-                      <dd>Format: <code>int get_servo_enabled(int srv);</code><br/>
+                      <dd>Format: <code>int get_servo_enabled(int srv);</code><br>
                          Returns 1 if the specified servo port is enabled and 0 otherwise. Servo ports on
                          the KIPR Robot Controller are numbered 0 to 3.See also <code>enable_servo, disable_servo</code>.
                       </dd>
@@ -3369,7 +3371,7 @@ int main()
                   <td><a name="get_servo_position"></a></td>
                   <td><code>get_servo_position</code> [Category: Servos]
                     <dl>
-                      <dd>Format: <code>int get_servo_position(int srv);</code><br/> Returns the last position value set for the servo in port <code>srv</code>
+                      <dd>Format: <code>int get_servo_position(int srv);</code><br> Returns the last position value set for the servo in port <code>srv</code>
                         . The
                          value will be in the range 0 to 2047. Servo ports on the KIPR Robot Controller
                          are numbered 0 to 3. See also
@@ -3382,7 +3384,7 @@ int main()
                   <td><a name="mav"></a></td>
                   <td><code>mav</code> [Category: Motors]
                     <dl>
-                      <dd>Format: <code>void mav(int m, int vel);</code><br/> This function is the same as <code>move_at_velocity</code></dd>
+                      <dd>Format: <code>void mav(int m, int vel);</code><br> This function is the same as <code>move_at_velocity</code></dd>
                     </dl>
                   </td>
                 </tr>
@@ -3390,7 +3392,7 @@ int main()
                   <td><a name="motor"></a></td>
                   <td><code>motor</code> [Category: Motors]
                     <dl>
-                      <dd>Format: <code>void motor(int m, int p);</code><br/> Turns on motor port <code>m</code> at <code>p</code>
+                      <dd>Format: <code>void motor(int m, int p);</code><br> Turns on motor port <code>m</code> at <code>p</code>
                         % of full PWM motor power.
                          The range for <code>p</code>
                          is -100 to 100, where a negative value runs the motor
@@ -3405,7 +3407,7 @@ int main()
                   <td><a name="move_at_velocity"></a></td>
                   <td><code>move_at_velocity</code> [Category: Motors]
                     <dl>
-                      <dd>Format: <code>void move_at_velocity(int m, int vel);</code><br/> Turns on motor port <code>m</code>
+                      <dd>Format: <code>void move_at_velocity(int m, int vel);</code><br> Turns on motor port <code>m</code>
                         , varying applied PWM power using PID motor control
                          to maintain motor velocity <code>vel</code>
                          indefinitely. The velocity range is
@@ -3420,7 +3422,7 @@ int main()
                   <td><a name="move_relative_position"></a></td>
                   <td><code>move_relative_position</code> [Category: Motors]
                     <dl>
-                      <dd>Format: <code>void move_relative_position(int m, int absvel, int pos);</code><br/> Turns on motor port <code>m</code>
+                      <dd>Format: <code>void move_relative_position(int m, int absvel, int pos);</code><br> Turns on motor port <code>m</code>
                         , varying applied PWM power using PID motor control
                          to maintain motor velocity <code>absvel</code>
                          (±) until the motor has moved
@@ -3431,7 +3433,7 @@ int main()
                          Robot Controller, a motor port supplying forward power lights green, and for reverse
                          lights red, although actual motor direction depends on how it is plugged in.
                       </dd>
-                      <dd>Example: <br/>
+                      <dd>Example: <br>
                         <div class="Indent"><code>move_relative_position(1,275,-1100);</code></div>
                       </dd>
                     </dl>
@@ -3441,7 +3443,7 @@ int main()
                   <td><a name="move_to_position"></a></td>
                   <td><code>move_to_position</code> [Category: Motors]
                     <dl>
-                      <dd>Format: <code>void move_to_position(int m, int absvel, int pos);</code><br/> Turns on motor port <code>m</code>
+                      <dd>Format: <code>void move_to_position(int m, int absvel, int pos);</code><br> Turns on motor port <code>m</code>
                         , varying applied PWM power using PID motor control
                          to maintain motor velocity <code>absvel</code>
                          (±) until the motor has moved
@@ -3458,7 +3460,7 @@ int main()
                   <td><a name="mrp"></a></td>
                   <td><code>mrp</code> [Category: Motors]
                     <dl>
-                      <dd>Format: <code>void mrp(int m, int vel, int pos);</code><br/> This function is the same as <code>move_relative_position</code>.</dd>
+                      <dd>Format: <code>void mrp(int m, int vel, int pos);</code><br> This function is the same as <code>move_relative_position</code>.</dd>
                     </dl>
                   </td>
                 </tr>
@@ -3466,7 +3468,7 @@ int main()
                   <td><a name="mtp"></a></td>
                   <td><code>mtp</code> [Category: Motors]
                     <dl>
-                      <dd>Format: <code>void mtp(int m, int vel, int pos);</code><br/> This function is the same as <code>move_to_position</code>.</dd>
+                      <dd>Format: <code>void mtp(int m, int vel, int pos);</code><br> This function is the same as <code>move_to_position</code>.</dd>
                     </dl>
                   </td>
                 </tr>
@@ -3474,7 +3476,7 @@ int main()
                   <td><a name="msleep"></a></td>
                   <td><code>msleep</code> [Category: Time]
                     <dl>
-                      <dd>Format: <code>void msleep(int msec);</code><br/> Suspends function execution for the amount of time specified in milliseconds.<br/> Example:<br/>
+                      <dd>Format: <code>void msleep(int msec);</code><br> Suspends function execution for the amount of time specified in milliseconds.<br> Example:<br>
                         <div class="Indent"><code>msleep(1500); //wait for 1.5 seconds</code></div>
                       </dd>
                     </dl>
@@ -3484,7 +3486,7 @@ int main()
                   <td><a name="off"></a></td>
                   <td><code>off</code> [Category: Motors]
                     <dl>
-                      <dd>Format: <code>void off(int m);</code><br/> Turns off motor port <code>m</code>.<br/> Example:<br/>
+                      <dd>Format: <code>void off(int m);</code><br> Turns off motor port <code>m</code>.<br> Example:<br>
                         <div class="Indent"><code>off(1);</code>// turn off motor 1</div>
                       </dd>
                     </dl>
@@ -3494,7 +3496,7 @@ int main()
                   <td><a name="power_level"></a></td>
                   <td><code>power_level</code> [Category: Sensor]
                     <dl>
-                      <dd>Format: <code>double power_level();</code><br/>
+                      <dd>Format: <code>double power_level();</code><br>
                          Returns
                          the current power level for the KIPR Robot Controller battery.
                       </dd>
@@ -3505,7 +3507,7 @@ int main()
                   <td><a name="run_for"></a></td>
                   <td><code>run_for</code> [Category: Threads]
                     <dl>
-                      <dd>Format: <code>void run_for(double sec, &lt;</code><i>function_name</i><code>&gt;);</code><br/>
+                      <dd>Format: <code>void run_for(double sec, &lt;</code><i>function_name</i><code>&gt;);</code><br>
                          Runs the specified function and tracks its execution until either the function
                          finishes or the specified number of seconds has elapsed. If the specified number
                          of seconds has elapsed, <code>runfor</code> terminates execution for the function.
@@ -3517,7 +3519,7 @@ int main()
                   <td><a name="seconds"></a></td>
                   <td><code>seconds</code> [Category: Time]
                     <dl>
-                      <dd>Format: <code>double seconds();</code><br/>
+                      <dd>Format: <code>double seconds();</code><br>
                          Returns the number of seconds that have elapsed since system start up according
                          to the system's internal clock. Resolution is 0.001 seconds (one millisecond).
                       </dd>
@@ -3528,7 +3530,7 @@ int main()
                   <td><a name="set_a_button_text"></a></td>
                   <td><code>set_a_button_text</code> [Category: Sensors]
                     <dl>
-                      <dd>Format: <code>void set_a_button_text char txt[]);</code><br/>
+                      <dd>Format: <code>void set_a_button_text char txt[]);</code><br>
                          This function resets the text displayed on the A button to be the text string specified
                          rather than the default string "A".
                       </dd>
@@ -3555,7 +3557,7 @@ int main()
                   <td><a name="set_b_button_text"></a></td>
                   <td><code>set_b_button_text</code> [Category: Sensors]
                     <dl>
-                      <dd>Format: <code>void set_b_button_textchar txt[]);</code><br/>
+                      <dd>Format: <code>void set_b_button_textchar txt[]);</code><br>
                          This function resets the text displayed on the B button to be the text string specified
                          rather than the default string "B".
                       </dd>
@@ -3566,7 +3568,7 @@ int main()
                   <td><a name="set_c_button_text"></a></td>
                   <td><code>set_c_button_text</code> [Category: Sensors]
                     <dl>
-                      <dd>Format: <code>void set_c_button_textchar txt[]);</code><br/>
+                      <dd>Format: <code>void set_c_button_textchar txt[]);</code><br>
                          This function resets the text displayed on the C button to be the text string specified
                          rather than the default string "C".
                       </dd>
@@ -3577,9 +3579,9 @@ int main()
                   <td><a name="set_digital_output"></a></td>
                   <td><code>set_digital_output</code> [Category: Output]
                     <dl>
-                      <dd>Format: <code>void set_digital_output(int port, int inout);</code><br/>
+                      <dd>Format: <code>void set_digital_output(int port, int inout);</code><br>
                          Digital ports on the KIPR Robot Controller can be configured for either input or
-                         output. By default digital ports are set for input. If the value of <code>inout</code> is 1, the port is configured for output, for example, the statement<br/>
+                         output. By default digital ports are set for input. If the value of <code>inout</code> is 1, the port is configured for output, for example, the statement<br>
                         <div class="Indent"><code>set_digital_output(9,1);</code></div> when executed configures digital port 9 for output. The port number specified must be in the range from 8 to 15. See also <code>set_digital_value</code>. See below for an <a href="#digital_out_LED">example program</a> using digital output.
                       </dd>
                     </dl>
@@ -3600,19 +3602,19 @@ int main()
                   <td><a name="set_digital_value"></a></td>
                   <td><code>set_digital_value</code> [Category: Output]
                     <dl>
-                      <dd>Format: <code>void set_digital_value(int port, int value);</code><br/>
+                      <dd>Format: <code>void set_digital_value(int port, int value);</code><br>
                          Sets the (SEN) value for the specified port on the KIPR Robot Controller to either
                          0 (low) or 1 (high). For the sensor ports on the KIPR Robot Controller, the SEN
                          rail is the inner rail having a single row of sockets. The specified port must
                          be in the range 8 to 15. The library function <code>set_digital_ouput</code>
                          is
                          used to configure a digital port on the KIPR Robot Controller for output (or to
-                         re-configure it for input).<br/><br/>
+                         re-configure it for input).<br><br>
                         As an example, if the anode lead for an LED (the longer of its two leads)
                          is plugged into the SEN socket for digital port 9 and its cathode lead into the
                          GND rail (the outer rail for the PWR/GND rails), then if digital port 9 has been
-                         set for output<br/>
-                        <div class="Indent"><code>set_digital_value(9,1);</code></div> will turn on the LED when executed and <br/>
+                         set for output<br>
+                        <div class="Indent"><code>set_digital_value(9,1);</code></div> will turn on the LED when executed and <br>
                         <div class="Indent"><code>set_digital_value(9,0);</code></div> will turn it off. See below for an <a href="#digital_out_LED">example program</a> using digital output.
                       </dd>
                     </dl>
@@ -3622,7 +3624,7 @@ int main()
                   <td><a name="set_pid_gains"></a></td>
                   <td><code>set_pid_gains</code> [Category: Motors]
                     <dl>
-                      <dd>Format: <code>int set_pid_gains(int motor, int p, int i, int d, int pd, int id, int dd);</code><br/>
+                      <dd>Format: <code>int set_pid_gains(int motor, int p, int i, int d, int pd, int id, int dd);</code><br>
                          This function is used to change the PID control values currently set for the KIPR
                          Robot Controller motor ports. The <code>p</code>, <code>i</code> and <code>d</code> arguments are numerators, and the <code>pd</code>, <code>id</code> and <code>dd</code>
                          arguments are their respective denominators for coefficients used by the PID control
@@ -3642,7 +3644,7 @@ int main()
                   <td><a name="set_servo_position"></a></td>
                   <td><code>set_servo_position</code> [Category: Servos]
                     <dl>
-                      <dd>Format: <code>int set_servo_position(int srv, int pos);</code><br/> Sets the position value of the servo in port <code>srv</code>. The value of <code>pos</code>
+                      <dd>Format: <code>int set_servo_position(int srv, int pos);</code><br> Sets the position value of the servo in port <code>srv</code>. The value of <code>pos</code>
                          must be in the range 0 to 2047. The KIPR Robot Controller has 4 servo ports numbered
                          0 to 3. A servo motor consumes maximum power when trying to reach a position, so
                          if the servo cannot reach the position specified, its power consumption will rapidly
@@ -3659,7 +3661,7 @@ int main()
                   <td><a name="set_x_button_text"></a></td>
                   <td><code>set_x_button_text</code> [Category: Sensors]
                     <dl>
-                      <dd>Format: <code>void set_x_button_text(char txt[]);</code><br/>
+                      <dd>Format: <code>void set_x_button_text(char txt[]);</code><br>
                          This function resets the text displayed on the X button to be the text string specified
                          rather than the default string "X". See also <code>extra_buttons_show, extra_buttons_hide, get_extra_buttons_visible</code>.
                       </dd>
@@ -3670,7 +3672,7 @@ int main()
                   <td><a name="set_y_button_text"></a></td>
                   <td><code>set_y_button_text</code> [Category: Sensors]
                     <dl>
-                      <dd>Format: <code>void set_y_button_text(char txt[]);</code><br/>
+                      <dd>Format: <code>void set_y_button_text(char txt[]);</code><br>
                          This function resets the text displayed on the Y button to be the text string specified
                          rather than the default string "Y". See also <code>extra_buttons_show, extra_buttons_hide, get_extra_buttons_visible</code>.
                       </dd>
@@ -3681,7 +3683,7 @@ int main()
                   <td><a name="set_z_button_text"></a></td>
                   <td><code>set_z_button_text</code> [Category: Sensors]
                     <dl>
-                      <dd>Format: <code>void set_z_button_text(char txt[]);</code><br/>
+                      <dd>Format: <code>void set_z_button_text(char txt[]);</code><br>
                          This function resets the text displayed on the Z button to be the text string specified
                          rather than the default string "Z". See also <code>extra_buttons_show, extra_buttons_hide, get_extra_buttons_visible</code>.
                       </dd>
@@ -3706,7 +3708,7 @@ int main()
                     [Category:
                      Sensors]
                     <dl>
-                      <dd>Format: <code>int side_button();</code><br/>
+                      <dd>Format: <code>int side_button();</code><br>
                          Returns the state of the (physical) side button on the KIPR Robot Controller (1
                          if pressed, 0 otherwise).
                       </dd>
@@ -3717,12 +3719,12 @@ int main()
                   <td><a name="side_button_clicked"></a></td>
                   <td><code>side_button_clicked</code> [Category: Sensors]
                     <dl>
-                      <dd>Format: <code>int side_button_clicked();</code><br/>
+                      <dd>Format: <code>int side_button_clicked();</code><br>
                          Returns the state of the (physical) side button on the KIPR Robot Controller (1
                          if pressed, 0 otherwise). Continued function execution is blocked while the button
                          is pressed. The construction returns 1 for pressed, 0 for not pressed. The construction
                         <dl>
-                          <dd><code>while (side_button()==0) {<br/>
+                          <dd><code>while (side_button()==0) {<br>
                               while (side_button()==1); ...}
                                                //debounce A button</code></dd>
                         </dl> is equivalent to
@@ -3737,7 +3739,7 @@ int main()
                   <td><a name="thread_create"></a></td>
                   <td><code>thread_create</code> [Category: Threads]
                     <dl>
-                      <dd>Format: <code>thread thread_create(&lt;</code><i>function name</i><code>&gt;);</code><br/> The <code>thread_create</code>
+                      <dd>Format: <code>thread thread_create(&lt;</code><i>function name</i><code>&gt;);</code><br> The <code>thread_create</code>
                          function is used to create a thread for running
                          a function in parallel to <code>main</code>
                         , returning a thread ID value of type
@@ -3762,7 +3764,7 @@ int main()
                   <td><a name="thread_destroy"></a></td>
                   <td><code>thread_destroy</code> [Category: Threads]
                     <dl>
-                      <dd>Format: <code>void thread_destroy(thread tid);</code><br/> The <code>thread_destroy</code>
+                      <dd>Format: <code>void thread_destroy(thread tid);</code><br> The <code>thread_destroy</code>
                          function is used to destroy a thread created for
                          running a function in parallel to main. The thread is destroyed by passing its
                          thread ID to <code>thread_destroy</code>
@@ -3776,7 +3778,7 @@ int main()
                   <td><a name="thread_start"></a></td>
                   <td><code>thread_start</code> [Category: Threads]
                     <dl>
-                      <dd>Format: <code>void thread_start(thread tid);</code><br/> The <code>thread_start</code> function is used to activate the thread given by <code>tid</code>, running its associated function in the thread in parallel with <code>main</code> and any other active threads. The value of argument <code>tid</code> must have a thread ID value as returned by <code>thread_create</code>
+                      <dd>Format: <code>void thread_start(thread tid);</code><br> The <code>thread_start</code> function is used to activate the thread given by <code>tid</code>, running its associated function in the thread in parallel with <code>main</code> and any other active threads. The value of argument <code>tid</code> must have a thread ID value as returned by <code>thread_create</code>
                         . Keep in
                          mind that thread IDs generated by <code>thread_create</code>
                          must be retained in
@@ -3800,7 +3802,7 @@ int main()
     thread_start(tid);  // run check_sensor in the thread
     msleep(1000);  // let it keep running for a second
     thread_destroy(tid);  // stop check_sensor if still running
-}<br/></code></pre><br/> See the <a href="#Threads">section on threads</a>
+}<br></code></pre><br> See the <a href="#Threads">section on threads</a>
                          below for a complete example
                          using threads.
                       </dd>
@@ -3811,7 +3813,7 @@ int main()
                   <td><a name="thread_wait"></a></td>
                   <td><code>thread_wait</code> [Category: Threads]
                     <dl>
-                      <dd>Format: <code>void thread_wait(thread tid);</code><br/> If <code>thread_wait</code>
+                      <dd>Format: <code>void thread_wait(thread tid);</code><br> If <code>thread_wait</code>
                          is executed in a function, it will block continued
                          execution of the function until the function running in the thread given by <code>tid</code> has finished (or until the thread given by <code>tid</code>
                          is destroyed by some
@@ -3828,7 +3830,7 @@ int main()
                   <td><a name="x_button"></a></td>
                   <td><code>x_button </code>[Category: Sensors]
                     <dl>
-                      <dd>Format: <code>int x_button();</code><br/>
+                      <dd>Format: <code>int x_button();</code><br>
                          Returns
                          the state of the X button when it is visible on the KIPR Robot Controller program
                          console (1 if pressed, 0 otherwise). This button is an extra button. Use <code>extra_buttons_show</code> to show the X, Y, and Z buttons. See also <code>extra_buttons_hide, get_extra_buttons_visible</code>.
@@ -3840,15 +3842,15 @@ int main()
                   <td><a name="x_button_clicked"></a></td>
                   <td><code>x_button_clicked</code> [Category: Sensors]
                     <dl>
-                      <dd>Format: <code>int x_button_clicked();</code><br/>
+                      <dd>Format: <code>int x_button_clicked();</code><br>
                          Returns the state of the X button when it is visible on the KIPR Robot Controller
                          program console (1 if pressed, 0 otherwise). Continued function execution is blocked
                          while the button is pressed. The construction
                         <dl>
-                          <dd><code>while (x_button()==0) {<br/>while(x_button()==1); ...}  //debounce X button</code></dd>
+                          <dd><code>while (x_button()==0) {<br>while(x_button()==1); ...}  //debounce X button</code></dd>
                         </dl> is equivalent to
                         <dl>
-                          <dd><code>while(x_button_clicked()==0) {...}</code><br/></dd>
+                          <dd><code>while(x_button_clicked()==0) {...}</code><br></dd>
                         </dl> This button is an extra button. Use <code>extra_buttons_show</code>
                          to show the
                          X, Y, and Z buttons. See also <code>extra_buttons_hide, get_extra_buttons_visible</code>.
@@ -3860,7 +3862,7 @@ int main()
                   <td><a name="y_button"></a></td>
                   <td><code>y_button </code>[Category: Sensors]
                     <dl>
-                      <dd>Format: <code>int y_button();</code><br/>
+                      <dd>Format: <code>int y_button();</code><br>
                          Returns
                          the state of the Y button when visible on the KIPR Robot Controller program console
                          (1 if pressed, 0 otherwise). This button is an extra button. Use <code>extra_buttons_show</code> to show the X, Y, and Z buttons. See also <code>extra_buttons_hide, get_extra_buttons_visible</code>.
@@ -3872,15 +3874,15 @@ int main()
                   <td><a name="y_button_clicked"></a></td>
                   <td><code>y_button_clicked</code> [Category: Sensors]
                     <dl>
-                      <dd>Format: <code>int y_button_clicked();</code><br/>
+                      <dd>Format: <code>int y_button_clicked();</code><br>
                          Returns the state of the Y button when it is visible on the KIPR Robot Controller
                          program console (1 if pressed, 0 otherwise). Continued function execution is blocked
                          while the button is pressed. The construction
                         <dl>
-                          <dd><code>while (y_button()==0) {<br/>while(y_button()==1); ...}  //debounce Y button</code></dd>
-                        </dl> is equivalent to<br/>
+                          <dd><code>while (y_button()==0) {<br>while(y_button()==1); ...}  //debounce Y button</code></dd>
+                        </dl> is equivalent to<br>
                         <dl>
-                          <dd><code>while(y_button_clicked()==0) {...}</code><br/></dd>
+                          <dd><code>while(y_button_clicked()==0) {...}</code><br></dd>
                         </dl> This button is an extra button. Use <code>extra_buttons_show</code>
                          to show the
                          X, Y, and Z buttons. See also <code>extra_buttons_hide, get_extra_buttons_visible</code>.
@@ -3892,7 +3894,7 @@ int main()
                   <td><a name="z_button"></a></td>
                   <td><code>z_button </code>[Category: Sensors]
                     <dl>
-                      <dd>Format: <code>int z_button();</code><br/>
+                      <dd>Format: <code>int z_button();</code><br>
                          Returns
                          the state of the Z button when visible on the KIPR Robot Controller program console
                          (1 if pressed, 0 otherwise). This button is an extra button. Use <code>extra_buttons_show</code> to show the X, Y, and Z buttons. See also <code>extra_buttons_hide, get_extra_buttons_visible</code>.
@@ -3904,15 +3906,15 @@ int main()
                   <td><a name="z_button_clicked"></a></td>
                   <td><code>z_button_clicked</code> [Category: Sensors]
                     <dl>
-                      <dd>Format: <code>int z_button_clicked();</code><br/>
+                      <dd>Format: <code>int z_button_clicked();</code><br>
                          Returns the state of the Z button when it is visible on the KIPR Robot Controller
                          program console (1 if pressed, 0 otherwise). Continued function execution is blocked
                          while the button is pressed. The construction
                         <dl>
-                          <dd><code>while (z_button()==0) {<br/>while(z_button()==1); ...}  //debounce Z button</code></dd>
-                        </dl> is equivalent to<br/>
+                          <dd><code>while (z_button()==0) {<br>while(z_button()==1); ...}  //debounce Z button</code></dd>
+                        </dl> is equivalent to<br>
                         <dl>
-                          <dd><code>while(z_button_clicked()==0) {...}</code><br/></dd>
+                          <dd><code>while(z_button_clicked()==0) {...}</code><br></dd>
                         </dl> This button is an extra button. Use <code>extra_buttons_show</code>
                          to show the
                          X, Y, and Z buttons. See also <code>extra_buttons_hide, get_extra_buttons_visible</code>.
@@ -3960,7 +3962,7 @@ int main()
                     </td>
                   </tr>
                 </tbody>
-              </table><br/><a name="BlinkLED"></a>
+              </table><br><a name="BlinkLED"></a>
               <pre><code class="language-clike">/*  This is a program to blink an LED plugged into digital port 9 */
 int main()
 {
@@ -4033,7 +4035,7 @@ int main()
                   <td><a name="camera_close"></a></td>
                   <td><code>camera_close </code> [Category: Vision]
                     <dl>
-                      <dd>Format: <code>void camera_close();</code><br/> Cleanup the current camera instance. See also <code>camera_open, camera_open_at_res, camera_open_device</code>.</dd>
+                      <dd>Format: <code>void camera_close();</code><br> Cleanup the current camera instance. See also <code>camera_open, camera_open_at_res, camera_open_device</code>.</dd>
                     </dl>
                   </td>
                 </tr>
@@ -4041,7 +4043,7 @@ int main()
                   <td><a name="camera_load_config"></a></td>
                   <td><code>camera_load_config </code> [Category: Vision]
                     <dl>
-                      <dd>Format: <code>int camera_load_config(char name[]);</code><br/>
+                      <dd>Format: <code>int camera_load_config(char name[]);</code><br>
                          Loads a config file on the KIPR Robot Controller other than the default
                          config file. You <b>must</b> append <code>.config</code>
                          to the name for
@@ -4054,7 +4056,7 @@ int main()
                   <td><a name="camera_open"></a></td>
                   <td><code>camera_open </code> [Category: Vision]
                     <dl>
-                      <dd>Format: <code>int camera_open();</code><br/>
+                      <dd>Format: <code>int camera_open();</code><br>
                          Opens the KIPR Robot Controller's default channel configuration. The default
                          configuration is selected from among the channel configurations defined
                          on the KIPR Robot Controller using its <i>settings..channels</i>
@@ -4070,7 +4072,7 @@ int main()
                   <td><a name="camera_open_at_res"></a></td>
                   <td><code>camera_open_at_res </code> [Category: Vision]
                     <dl>
-                      <dd>Format: <code>int camera_open_at_res(int res_numb);</code><br/>
+                      <dd>Format: <code>int camera_open_at_res(int res_numb);</code><br>
                          Opens the KIPR Robot Controller's default channel configuration. The default
                          configuration is selected from among the channel configurations defined
                          on the KIPR Robot Controller using its <i>settings..channels</i>
@@ -4084,7 +4086,7 @@ int main()
                   <td><a name="camera_open_device"></a></td>
                   <td><code>camera_open_device </code> [Category: Vision]
                     <dl>
-                      <dd>Format: <code>int camera_open_device(int number, int res_numb);</code><br/>
+                      <dd>Format: <code>int camera_open_device(int number, int res_numb);</code><br>
                          If more than 1 camera is plugged in, 0 is the first camera, 1 is the second
                          camera, etc. Only 1 camera at a time can be used, and the default configuration
                          is selected. A resolution of one of <code>LOW_RES</code>, <code>MED_RES</code>, <code>HIGH_RES</code>
@@ -4098,7 +4100,7 @@ int main()
                   <td><a name="camera_update"></a></td>
                   <td><code>camera_update </code> [Category: Vision]
                     <dl>
-                      <dd>Format: <code>int camera_update();</code><br/>
+                      <dd>Format: <code>int camera_update();</code><br>
                          Retrieves the current image from the camera for processing. Returns 1 on
                          success, 0 on failure.
                       </dd>
@@ -4109,7 +4111,7 @@ int main()
                   <td><a name="get_channel_count"></a></td>
                   <td><code>get_channel_count </code> [Category: Vision]
                     <dl>
-                      <dd>Format: <code>int get_channel_count();</code><br/> Returns the number of channels in the current configuration. See also <code>get_object_count</code>.</dd>
+                      <dd>Format: <code>int get_channel_count();</code><br> Returns the number of channels in the current configuration. See also <code>get_object_count</code>.</dd>
                     </dl>
                   </td>
                 </tr>
@@ -4117,7 +4119,7 @@ int main()
                   <td><a name="get_camera_frame"></a></td>
                   <td><code>get_camera_frame </code> [Category: Vision]
                     <dl>
-                      <dd>Format: <code>const unsigned char* get_camera_frame();</code><br/> Returns a pointer to the camera frame. The pointer is valid until <code>camera_update()</code>
+                      <dd>Format: <code>const unsigned char* get_camera_frame();</code><br> Returns a pointer to the camera frame. The pointer is valid until <code>camera_update()</code>
                          is called again. Frame data is in BGR 888 pixel format, 3 bytes per pixel.
                          It is stored as a 1-dimensional character array where each byte is the
                          8-bit (unsigned) integer value for each BGR color (blue-green-red). For
@@ -4129,7 +4131,7 @@ int main()
                          to transfer it
                          to a graphics window for display (see the <a href="#Graphics">Graphics Library</a>):
                         <dl>
-                          <dd><code>int r,c,i;<br/>const unsigned char *img;<br/>            camera_update();<br/>            img=get_camera_frame();<br/>for(r=0;r&lt;120;r++) {<br/>for(c=0;c&lt;160;c++) {<br/>                i=3*(160*r + c); // index of pixel to paint into row r, column c<br/>                graphics_pixel(c,r,img[i+2],img[i+1],img[i]); // RGB order by reversing GBR<br/>            }<br/>            }<br/>            graphics_update();<b></b></code></dd>
+                          <dd><code>int r,c,i;<br>const unsigned char *img;<br>            camera_update();<br>            img=get_camera_frame();<br>for(r=0;r&lt;120;r++) {<br>for(c=0;c&lt;160;c++) {<br>                i=3*(160*r + c); // index of pixel to paint into row r, column c<br>                graphics_pixel(c,r,img[i+2],img[i+1],img[i]); // RGB order by reversing GBR<br>            }<br>            }<br>            graphics_update();<b></b></code></dd>
                         </dl>
                       </dd>
                     </dl>
@@ -4139,7 +4141,7 @@ int main()
                   <td><a name="get_object_area"></a></td>
                   <td><code>get_object_area </code> [Category: Vision]
                     <dl>
-                      <dd>Format: <code>int get_object_area(int channel, int);</code><br/>
+                      <dd>Format: <code>int get_object_area(int channel, int);</code><br>
                          Returns the object's bounding box area. -1 is returned if the channel or
                          object doesn't exist.
                       </dd>
@@ -4150,11 +4152,11 @@ int main()
                   <td><a name="get_object_bbox"></a></td>
                   <td><code>get_object_bbox </code> [Category: Vision]
                     <dl>
-                      <dd>Format: <code>rectangle get_object_bbox(int channel, int object);</code><br/>
+                      <dd>Format: <code>rectangle get_object_bbox(int channel, int object);</code><br>
                          Returns the bounding box of the given object on the given channel as a
-                         rectangle data type. For example,<br/>
+                         rectangle data type. For example,<br>
                         <dl>
-                          <dd><code>rectangle mybox;<br/>          mybox = get_object_bbox(0,2);<br/>          printf(&quot;x coord %d  y coord %d\n&quot;, mybox.x, mybox.y);</code></dd>
+                          <dd><code>rectangle mybox;<br>          mybox = get_object_bbox(0,2);<br>          printf(&quot;x coord %d  y coord %d\n&quot;, mybox.x, mybox.y);</code></dd>
                         </dl> displays the x and y coordinates of bounding box 2 for channel 0.
                       </dd>
                     </dl>
@@ -4164,11 +4166,11 @@ int main()
                   <td><a name="get_object_center"></a></td>
                   <td><code>get_object_center </code> [Category: Vision]
                     <dl>
-                      <dd>Format: <code>point2 get_object_center(int channel, int object);</code><br/>
+                      <dd>Format: <code>point2 get_object_center(int channel, int object);</code><br>
                          Returns The (x, y) center of the given object on the given channel as a
                          point2 data type. For example,
                         <dl>
-                          <dd><code>point2 mcenter;<br/>          mcenter = get_object_center(0,2);<br/>          printf(&quot;x center coord %d  y center coord %d\n&quot;, mcenter.x, mcenter.y);</code><br/></dd>
+                          <dd><code>point2 mcenter;<br>          mcenter = get_object_center(0,2);<br>          printf(&quot;x center coord %d  y center coord %d\n&quot;, mcenter.x, mcenter.y);</code><br></dd>
                         </dl> displays the x and y coordinates of center point of box 2 for channel 0.
                       </dd>
                     </dl>
@@ -4178,12 +4180,12 @@ int main()
                   <td><a name="get_object_centroid"></a></td>
                   <td><code>get_object_centroid </code> [Category: Vision]
                     <dl>
-                      <dd>Format: <code>int get_object_centroid(int channel, int object);</code><br/> Returns The (x, y) coordinates of the <b>centroid</b>
+                      <dd>Format: <code>int get_object_centroid(int channel, int object);</code><br> Returns The (x, y) coordinates of the <b>centroid</b>
                          of the given object
                          on the given color channel as a point2 data type (the centroid is the center
-                         of mass for the pixels of the specified color). For example,<br/>
+                         of mass for the pixels of the specified color). For example,<br>
                         <dl>
-                          <dd>point2 <code>mcenter;<br/>          mcentroid = get_object_centroid(0,2);<br/>          printf(&quot;x centroid coord %d  y centroid coord %d\n&quot;, mcentroid.x, mcentroid.y);</code></dd>
+                          <dd>point2 <code>mcenter;<br>          mcentroid = get_object_centroid(0,2);<br>          printf(&quot;x centroid coord %d  y centroid coord %d\n&quot;, mcentroid.x, mcentroid.y);</code></dd>
                         </dl>
                          displays the x and y coordinates of centroid of box 2 for color channel 0. The centroid is NOT the same as the center. It
                          is the center of mass for a blob; e.g., for a color arrow pointing right,
@@ -4197,7 +4199,7 @@ int main()
                   <td><a name="get_code_num"></a></td>
                   <td><code>get_code_num </code> [Category: Vision]
                     <dl>
-                      <dd>Format: <code>int get_code_num(int channel, int object);</code><br/>
+                      <dd>Format: <code>int get_code_num(int channel, int object);</code><br>
                          Returns the QR data associated with an object for a QR channel as an integer.
                          If the given channel or object doesn't exist, -1 is returned. See also <code>get_object_data</code>.
                       </dd>
@@ -4208,7 +4210,7 @@ int main()
                   <td><a name="get_object_confidence"></a></td>
                   <td><code>get_object_confidence </code> [Category: Vision]
                     <dl>
-                      <dd>Format: <code>double get_object_confidence(int channel, int object);</code><br/>
+                      <dd>Format: <code>double get_object_confidence(int channel, int object);</code><br>
                          Returns the confidence, between 0.0 and 1.0, that the density of color
                          pixels for the object on the given channel is significant. If the channel
                          or object doesn't exist, 0.0 is returned.
@@ -4220,7 +4222,7 @@ int main()
                   <td><a name="get_object_count"></a></td>
                   <td><code>get_object_count </code> [Category: Vision]
                     <dl>
-                      <dd>Format: <code>int get_object_count(int channel);</code><br/>
+                      <dd>Format: <code>int get_object_count(int channel);</code><br>
                          Returns the number of objects being "seen" for the specified channel. Objects
                          are sorted by bounding box area, largest first. Returns -1 if channel doesn't
                          exist. See also <code>get_channel_count</code>.
@@ -4232,10 +4234,10 @@ int main()
                   <td><a name="get_object_data"></a></td>
                   <td><code>get_object_data </code> [Category: Vision]
                     <dl>
-                      <dd>Format: <code>char *get_object_data(int channel, int object);</code><br/>
+                      <dd>Format: <code>char *get_object_data(int channel, int object);</code><br>
                          Returns the sequence of character data associated with a given object on
                          a QR channel. If there is no data, 0 is returned. The data is not guaranteed
-                         to be null terminated, but can be accessed using array notation; for example,<br/>
+                         to be null terminated, but can be accessed using array notation; for example,<br>
                         <dl>
                           <dd><code>get_object_data(0,0)[0], get_object_data(0,0)[1]</code>, etc.</dd>
                         </dl><code>camera_update</code> will invalidate the pointer returned by <code>get_object_data</code>
@@ -4249,7 +4251,7 @@ int main()
                   <td><a name="get_object_data_length"></a></td>
                   <td><code>get_object_data_length </code> [Category: Vision]
                     <dl>
-                      <dd>Format: <code>int get_object_data_length(int channel, int object);</code><br/>
+                      <dd>Format: <code>int get_object_data_length(int channel, int object);</code><br>
                          Returns the number of characters associated with the QR code on a QR channel.
                          If there is no data, 0 is returned. If the channel or object is invalid,
                          0 is returned. See also <code>get_object_data</code>.
@@ -4365,7 +4367,7 @@ int main()
                     <dl>
                       <dd>Format: <code>int graphics_open(int </code>
                         width,
-                         int height);<br/>
+                         int height);<br>
                          Opens and centers a graphics window on the display
                          of the specified width and height. The maximum width for the KIPR Robot
                          Controller display is 320, and the maximum height is 240. See also <code>graphics_close</code>.
@@ -4377,7 +4379,7 @@ int main()
                   <td><a name="graphics_close"></a></td>
                   <td><code>graphics_close </code> [Category: Graphics]
                     <dl>
-                      <dd>Format: <code>void graphics_close();</code><br/>
+                      <dd>Format: <code>void graphics_close();</code><br>
                          Closes the graphics window on the display, restoring access to any virtual
                          buttons underneath it. See also <code>graphics_open</code>.
                       </dd>
@@ -4388,7 +4390,7 @@ int main()
                   <td><a name="graphics_update"></a></td>
                   <td><code>graphics_update </code> [Category: Graphics]
                     <dl>
-                      <dd>Format: <code>void graphics_update();</code><br/>
+                      <dd>Format: <code>void graphics_update();</code><br>
                          Repaints the pixels in the graphics window to show any changes that have
                          been made.
                       </dd>
@@ -4399,7 +4401,7 @@ int main()
                   <td><a name="graphics_clear"></a></td>
                   <td><code>graphics_clear </code> [Category: Graphics]
                     <dl>
-                      <dd>Format: <code>void graphics_clear();</code><br/> Erases the graphics window (not shown until <code>graphics_update</code>).</dd>
+                      <dd>Format: <code>void graphics_clear();</code><br> Erases the graphics window (not shown until <code>graphics_update</code>).</dd>
                     </dl>
                   </td>
                 </tr>
@@ -4407,7 +4409,7 @@ int main()
                   <td><a name="graphics_fill"></a></td>
                   <td><code>graphics_fill </code> [Category: Graphics]
                     <dl>
-                      <dd>Format: <code>void graphics_fill(int r, int g, int b);</code><br/> Colors the pixels in the window using the <code>r</code>, <code>g</code>, <code>b</code> color encoding.</dd>
+                      <dd>Format: <code>void graphics_fill(int r, int g, int b);</code><br> Colors the pixels in the window using the <code>r</code>, <code>g</code>, <code>b</code> color encoding.</dd>
                     </dl>
                   </td>
                 </tr>
@@ -4415,7 +4417,7 @@ int main()
                   <td><a name="graphics_pixel"></a></td>
                   <td><code>graphics_pixel </code> [Category: Graphics]
                     <dl>
-                      <dd>Format: <code>void graphics_pixel(int x, int y, int r, int g, int b);</code><br/> Colors the specified pixel in the window using the <code>r</code>, <code>g</code>, <code>b</code> color encoding, where columns <code>x</code> and rows <code>y</code>
+                      <dd>Format: <code>void graphics_pixel(int x, int y, int r, int g, int b);</code><br> Colors the specified pixel in the window using the <code>r</code>, <code>g</code>, <code>b</code> color encoding, where columns <code>x</code> and rows <code>y</code>
                          are
                          indexed starting from the upper left corner of the graphics window.
                       </dd>
@@ -4426,7 +4428,7 @@ int main()
                   <td><a name="graphics_line"></a></td>
                   <td><code>graphics_line </code> [Category: Graphics]
                     <dl>
-                      <dd>Format: <code>void graphics_line(int x1, int y1, int x2, int y2, int r, int g, int b);</code><br/> Draws a line in the window from the specified ( <code>x1</code>, <code>y1</code>
+                      <dd>Format: <code>void graphics_line(int x1, int y1, int x2, int y2, int r, int g, int b);</code><br> Draws a line in the window from the specified ( <code>x1</code>, <code>y1</code>
                         )
                          pixel to the ( <code>x2</code>, <code>y2</code>) pixel using the <code>r</code>, <code>g</code>, <code>b</code>
                          color encoding (where columns x and rows y are indexed starting from the
@@ -4439,7 +4441,7 @@ int main()
                   <td><a name="graphics_circle"></a></td>
                   <td><code>graphics_circle </code> [Category: Graphics]
                     <dl>
-                      <dd>Format: <code>void graphics_circle(int cx, int cy, int radius, int r, int g, int b);</code><br/> Draws a circle in the window of the specified radius centered at ( <code>cx</code>, <code>cy</code>
+                      <dd>Format: <code>void graphics_circle(int cx, int cy, int radius, int r, int g, int b);</code><br> Draws a circle in the window of the specified radius centered at ( <code>cx</code>, <code>cy</code>
                         )
                          using the <code>r</code>, <code>g</code>, <code>b</code>
                          color encoding (where
@@ -4453,7 +4455,7 @@ int main()
                   <td><a name="graphics_circle_fill"></a></td>
                   <td><code>graphics_circle_fill </code> [Category: Graphics]
                     <dl>
-                      <dd>Format: <code>void graphics_circle_fill(int cx, int cy, int radius, int r, int g, int b);</code><br/> Draws a circle in the window of the specified radius centered at ( <code>cx</code>, <code>cy</code>
+                      <dd>Format: <code>void graphics_circle_fill(int cx, int cy, int radius, int r, int g, int b);</code><br> Draws a circle in the window of the specified radius centered at ( <code>cx</code>, <code>cy</code>
                         )
                          and fills it using the <code>r</code>, <code>g</code>, <code>b</code>
                          color
@@ -4467,7 +4469,7 @@ int main()
                   <td><a name="graphics_rectangle"></a></td>
                   <td><code>graphics_rectangle </code> [Category: Graphics]
                     <dl>
-                      <dd>Format: <code>void graphics_rectangle(int x1, int y1, int x2, int y2, int r, int g, int b);</code><br/> Draws a rectangle in the window with upper left corner ( <code>x1</code>, <code>y1</code>
+                      <dd>Format: <code>void graphics_rectangle(int x1, int y1, int x2, int y2, int r, int g, int b);</code><br> Draws a rectangle in the window with upper left corner ( <code>x1</code>, <code>y1</code>
                         )
                          and lower right corner ( <code>x2</code>, <code>y2</code>) using the <code>r</code>, <code>g</code>, <code>b</code>
                          color encoding (where columns x and rows y are indexed starting from the
@@ -4480,7 +4482,7 @@ int main()
                   <td><a name="graphics_rectangle_fill"></a></td>
                   <td><code>graphics_rectangle_fill </code> [Category: Graphics]
                     <dl>
-                      <dd>Format: <code>void graphics_rectangle_fill(int x1, int y1, int x2, int y2, int r, int g, int b);</code><br/> Draws a rectangle in the window with upper left corner ( <code>x1</code>, <code>y1</code>
+                      <dd>Format: <code>void graphics_rectangle_fill(int x1, int y1, int x2, int y2, int r, int g, int b);</code><br> Draws a rectangle in the window with upper left corner ( <code>x1</code>, <code>y1</code>
                         )
                          and lower right corner ( <code>x2</code>, <code>y2</code>
                         ) and fills it using
@@ -4496,7 +4498,7 @@ int main()
                   <td><a name="graphics_triangle"></a></td>
                   <td><code>graphics_triangle </code> [Category: Graphics]
                     <dl>
-                      <dd>Format: <code>void graphics_triangle(int x1, int y1, int x2, int y2, int x3, int y3, int r, int g, int b);</code><br/> Draws a triangle in the window with corners ( <code>x1</code>, <code>y1</code>
+                      <dd>Format: <code>void graphics_triangle(int x1, int y1, int x2, int y2, int x3, int y3, int r, int g, int b);</code><br> Draws a triangle in the window with corners ( <code>x1</code>, <code>y1</code>
                         ),
                          ( <code>x2</code>, <code>y2</code>), ( <code>x3</code>, <code>y3</code>
                         ) using
@@ -4512,7 +4514,7 @@ int main()
                   <td><a name="graphics_triangle_fill"></a></td>
                   <td><code>graphics_triangle_fill </code> [Category: Graphics]
                     <dl>
-                      <dd>Format: <code>void graphics_triangle_fill(int x1, int y1, int x2, int y2, int x3, int y3, int r, int g, int b);</code><br/> Draws a triangle in the window with corners ( <code>x1</code>, <code>y1</code>
+                      <dd>Format: <code>void graphics_triangle_fill(int x1, int y1, int x2, int y2, int x3, int y3, int r, int g, int b);</code><br> Draws a triangle in the window with corners ( <code>x1</code>, <code>y1</code>
                         ),
                          ( <code>x2</code>, <code>y2</code>), ( <code>x3</code>, <code>y3</code>
                         ) and
@@ -4528,10 +4530,10 @@ int main()
                   <td><a name="get_mouse_position"></a></td>
                   <td><code>get_mouse_position </code> [Category: Graphics]
                     <dl>
-                      <dd>Format: <code>void get_mouse_position(int *x, int *y);</code><br/>
+                      <dd>Format: <code>void get_mouse_position(int *x, int *y);</code><br>
                          Assigns the column,row position of the cursor in the window to the two
                          specified address parameters. Note that the typical call for this function
-                         will look like<br/>
+                         will look like<br>
                         <div class="Indent"><code>get_mouse_position(&col, &row);</code></div>
                       </dd>
                     </dl>
@@ -4541,7 +4543,7 @@ int main()
                   <td><a name="get_mouse_left_button"></a></td>
                   <td><code>get_mouse_left_button </code> [Category: Graphics]
                     <dl>
-                      <dd>Format: <code>int get_mouse_left_button();</code><br/>
+                      <dd>Format: <code>int get_mouse_left_button();</code><br>
                          Returns 1 if the left mouse button is clicked or if the KIPR Robot Controller
                          display is tapped. The two additional functions <code>get_mouse_middle_button</code> and <code>get_mouse_right_button</code>
                          are also available but have no
@@ -4562,7 +4564,7 @@ int main()
                     a USB depth sensor.
                   </td>
                   <td width="50%">
-                    <!-- &lt;img class="right" src="images/XtionDepth.gif" width="50%"&gt;&lt;/img&gt;--><br/>
+                    <!-- &lt;img class="right" src="images/XtionDepth.gif" width="50%"&gt;&lt;/img&gt;--><br>
                   </td>
                 </tr>
               </tbody>
@@ -4585,14 +4587,14 @@ int main()
                   </td>
                 </tr>
               </tbody>
-            </table><br/>
+            </table><br>
             <table>
               <tbody>
                 <tr>
                   <td><a name="depth_open"></a></td>
                   <td><code>depth_open </code> [Category: Depth]
                     <dl>
-                      <dd>Format: <code>int depth_open();</code><br/> Turns on the depth sensor. Returns 1 on success, 0 on failure. See also <code>depth_close</code>.</dd>
+                      <dd>Format: <code>int depth_open();</code><br> Turns on the depth sensor. Returns 1 on success, 0 on failure. See also <code>depth_close</code>.</dd>
                     </dl>
                   </td>
                 </tr>
@@ -4600,7 +4602,7 @@ int main()
                   <td><a name="depth_close"></a></td>
                   <td><code>depth_close </code> [Category: Depth]
                     <dl>
-                      <dd>Format: <code>void depth_close();</code><br/> Clean up the depth instance and power down the sensor. See also <code>depth_open</code>.</dd>
+                      <dd>Format: <code>void depth_close();</code><br> Clean up the depth instance and power down the sensor. See also <code>depth_open</code>.</dd>
                     </dl>
                   </td>
                 </tr>
@@ -4608,7 +4610,7 @@ int main()
                   <td><a name="depth_update"></a></td>
                   <td><code>depth_update </code> [Category: Depth]
                     <dl>
-                      <dd>Format: <code>int depth_update();</code><br/>
+                      <dd>Format: <code>int depth_update();</code><br>
                          Generates a new image from the depth sensor for use by the depth functions.
                          Returns 1 on success, 0 on failure.
                       </dd>
@@ -4619,7 +4621,7 @@ int main()
                   <td><a name="depth_scanline_update"></a></td>
                   <td><code>depth_scanline_update </code> [Category: Depth]
                     <dl>
-                      <dd>Format: <code>int depth_scanline_update(int row);</code><br/>
+                      <dd>Format: <code>int depth_scanline_update(int row);</code><br>
                          Replaces the current scanline information with the scanline information
                          for the specified row of the image. Returns 1 on success, 0 on failure.
                         <tr></tr>
@@ -4627,7 +4629,7 @@ int main()
                           <td><a name="get_depth_value"></a></td>
                           <td><code>get_depth_value </code> [Category: Depth]
                             <dl>
-                              <dd>Format: <code>int get_depth_value(int row, int col);</code><br/>
+                              <dd>Format: <code>int get_depth_value(int row, int col);</code><br>
                                  Returns the value of the depth coordinate z in mm for row and
                                  column positions of the image. See also <code>get_depth_world_point</code>.
                               </dd>
@@ -4638,11 +4640,11 @@ int main()
                           <td><a name="get_depth_world_point"></a></td>
                           <td><code>get_depth_world_point </code> [Category: Depth]
                             <dl>
-                              <dd>Format: <code>point3 get_depth_world_point(int row, int col);</code><br/> Returns an object of type <code>point3</code>
+                              <dd>Format: <code>point3 get_depth_world_point(int row, int col);</code><br> Returns an object of type <code>point3</code>
                                  giving the (x,y,z)
                                  coordinates for the object at position (row,col) in the current
-                                 image. For <br/>
-                                <div class="Indent"><code> point3 p3;<br/>
+                                 image. For <br>
+                                <div class="Indent"><code> point3 p3;<br>
                                                    p3 = get_depth_world_point(4,7);
                                               </code></div> the (x,y,z) coordinates for row 4, column 7 in the image are given by <code>p3.x</code>, <code>p3.y</code>, <code>p3.z</code>. The value returned by <code>get_depth_value</code> is the same as <code>p3.z</code>.
                               </dd>
@@ -4653,7 +4655,7 @@ int main()
                           <td><a name="get_depth_world_point_x"></a></td>
                           <td><code>get_depth_world_point_x </code> [Category: Depth]
                             <dl>
-                              <dd>Format: <code>int get_depth_world_point_x(int row, int col);</code><br/>
+                              <dd>Format: <code>int get_depth_world_point_x(int row, int col);</code><br>
                                  Returns the x coordinate for the object at position (row,col)
                                  in the current image. See also <code>get_depth_world_point</code>.
                               </dd>
@@ -4664,7 +4666,7 @@ int main()
                           <td><a name="get_depth_world_point_y"></a></td>
                           <td><code>get_depth_world_point_y </code> [Category: Depth]
                             <dl>
-                              <dd>Format: <code>int get_depth_world_point_y(int row, int col);</code><br/>
+                              <dd>Format: <code>int get_depth_world_point_y(int row, int col);</code><br>
                                  Returns the y coordinate for the object at position (row,col)
                                  in the current image. See also <code>get_depth_world_point</code>.
                               </dd>
@@ -4675,7 +4677,7 @@ int main()
                           <td><a name="get_depth_world_point_z"></a></td>
                           <td><code>get_depth_world_point_z </code> [Category: Depth]
                             <dl>
-                              <dd>Format: <code>int get_depth_world__zpoint(int row, int col);</code><br/>
+                              <dd>Format: <code>int get_depth_world__zpoint(int row, int col);</code><br>
                                  Returns the z coordinate for the object at position (row,col)
                                  in the current image. The return value is the same as the value
                                  returned by <code>get_depth_value</code>. See also <code>get_depth_world_point</code>.
@@ -4686,7 +4688,7 @@ int main()
                         <td><a name="get_depth_scanline_object_count"></a></td>
                         <td><code>get_depth_scanline_object_count </code> [Category: Depth]
                           <dl>
-                            <dd>Format: <code>int get_depth_scanline_object_count();</code><br/>
+                            <dd>Format: <code>int get_depth_scanline_object_count();</code><br>
                                Returns the number of objects detected on the scanline, where an
                                object is detected by not having a depth break in scanning across
                                it. This means that if the scanline crosses a cavity, it will report
@@ -4704,7 +4706,7 @@ int main()
                   <td><a name="get_depth_scanline_object_nearest_x"></a></td>
                   <td><code>get_depth_scanline_object_nearest_x </code> [Category: Depth]
                     <dl>
-                      <dd>Format: <code>int get_depth_object_nearest_x(int obj);</code><br/>
+                      <dd>Format: <code>int get_depth_object_nearest_x(int obj);</code><br>
                          For the specified object returns the coordinate value for the farthest
                          pixel detected.
                       </dd>
@@ -4715,7 +4717,7 @@ int main()
                   <td><a name="get_depth_scanline_object_nearest_y"></a></td>
                   <td><code>get_depth_scanline_object_nearest_y </code> [Category: Depth]
                     <dl>
-                      <dd>Format: <code>int get_depth_object_nearest_y(int obj);</code><br/>
+                      <dd>Format: <code>int get_depth_object_nearest_y(int obj);</code><br>
                          For the specified object returns the coordinate value for the farthest
                          pixel detected.
                       </dd>
@@ -4726,7 +4728,7 @@ int main()
                   <td><a name="get_depth_scanline_object_nearest_z"></a></td>
                   <td><code>get_depth_scanline_object_nearest_z </code> [Category: Depth]
                     <dl>
-                      <dd>Format: <code>int get_depth_object_nearest_z(int obj);</code><br/>
+                      <dd>Format: <code>int get_depth_object_nearest_z(int obj);</code><br>
                          For the specified object returns the coordinate value for the nearest
                          pixel detected.
                       </dd>
@@ -4737,7 +4739,7 @@ int main()
                   <td><a name="get_depth_scanline_object_center_x"></a></td>
                   <td><code>get_depth_scanline_object_center_x </code> [Category: Depth]
                     <dl>
-                      <dd>Format: <code>int get_depth_object_center_x(int obj);</code><br/>
+                      <dd>Format: <code>int get_depth_object_center_x(int obj);</code><br>
                          For the specified object returns the coordinate value for the farthest
                          pixel detected.
                       </dd>
@@ -4748,7 +4750,7 @@ int main()
                   <td><a name="get_depth_scanline_object_center_y"></a></td>
                   <td><code>get_depth_scanline_object_center_y </code> [Category: Depth]
                     <dl>
-                      <dd>Format: <code>int get_depth_object_center_y(int obj);</code><br/>
+                      <dd>Format: <code>int get_depth_object_center_y(int obj);</code><br>
                          For the specified object returns the coordinate value for the farthest
                          pixel detected.
                       </dd>
@@ -4759,7 +4761,7 @@ int main()
                   <td><a name="get_depth_scanline_object_center_z"></a></td>
                   <td><code>get_depth_scanline_object_center_z </code> [Category: Depth]
                     <dl>
-                      <dd>Format: <code>int get_depth_object_center_z(int obj);</code><br/>
+                      <dd>Format: <code>int get_depth_object_center_z(int obj);</code><br>
                          For the specified object returns the coordinate value for the center
                          pixel.
                       </dd>
@@ -4770,7 +4772,7 @@ int main()
                   <td><a name="get_depth_scanline_object_farthest_x"></a></td>
                   <td><code>get_depth_scanline_object_farthest_x </code> [Category: Depth]
                     <dl>
-                      <dd>Format: <code>int get_depth_object_farthest_x(int obj);</code><br/>
+                      <dd>Format: <code>int get_depth_object_farthest_x(int obj);</code><br>
                          For the specified object returns the coordinate value for the farthest
                          pixel detected.
                       </dd>
@@ -4781,7 +4783,7 @@ int main()
                   <td><a name="get_depth_scanline_object_farthest_y"></a></td>
                   <td><code>get_depth_scanline_object_farthest_y </code> [Category: Depth]
                     <dl>
-                      <dd>Format: <code>int get_depth_object_farthest_y(int obj);</code><br/>
+                      <dd>Format: <code>int get_depth_object_farthest_y(int obj);</code><br>
                          For the specified object returns the coordinate value for the farthest
                          pixel detected.
                       </dd>
@@ -4792,7 +4794,7 @@ int main()
                   <td><a name="get_depth_scanline_object_farthest_z"></a></td>
                   <td><code>get_depth_scanline_object_farthest_z </code> [Category: Depth]
                     <dl>
-                      <dd>Format: <code>int get_depth_object_farthest_z(int obj);</code><br/>
+                      <dd>Format: <code>int get_depth_object_farthest_z(int obj);</code><br>
                          For the specified object returns the coordinate value for the farthest
                          pixel detected.
                       </dd>
@@ -4803,7 +4805,7 @@ int main()
                   <td><a name="get_depth_scanline_object_size"></a></td>
                   <td><code>get_depth_scanline_object_size </code> [Category: Depth]
                     <dl>
-                      <dd>Format: <code>int get_depth_object_size(int obj);</code><br/>
+                      <dd>Format: <code>int get_depth_object_size(int obj);</code><br>
                          For the specified object returns the distance on the scanline between
                          the leftmost and rightmost pixel detected.
                       </dd>
@@ -4814,7 +4816,7 @@ int main()
                   <td><a name="get_depth_scanline_object_angle"></a></td>
                   <td><code>get_depth_scanline_object_angle </code> [Category: Depth]
                     <dl>
-                      <dd>Format: <code>int get_depth_object_angle(int obj);</code><br/>
+                      <dd>Format: <code>int get_depth_object_angle(int obj);</code><br>
                          For the specified object returns the angular measure (in degrees)
                          from the leftmost pixel on the scanline to the right most. Positive
                          is counterclockwise.
@@ -4922,7 +4924,7 @@ int main()
                   <td><a name="create_clear_serial_buffer"></a></td>
                   <td><code>create_clear_serial_buffer </code> [Category: Create Serial Interface Function]
                     <dl>
-                      <dd>Format: <code>void create_clear_serial_buffer();</code><br/>
+                      <dd>Format: <code>void create_clear_serial_buffer();</code><br>
                          Clears the internal serial interface buffer of any unaccessed send/receive
                          data.
                       </dd>
@@ -4932,7 +4934,7 @@ int main()
                 <td><a name="create_connect"></a></td>
                 <td><code>create_connect() </code> [Category: Create Serial Interface Function]
                   <dl>
-                    <dd>Format: <code>int create_connect;</code><br/>
+                    <dd>Format: <code>int create_connect;</code><br>
                        Establishes a USB serial connection between the KIPR Robot Controller and
                        a Create module. This statement is normally paired with an <code>msleep</code>
                        statement, since it takes more than one second for the communications link
@@ -4949,7 +4951,7 @@ int main()
                   <td><a name="create_disconnect"></a></td>
                   <td><code>create_disconnect </code> [Category: Create Serial Interface Function]
                     <dl>
-                      <dd>Format: <code>void  create_disconnect();</code><br/>
+                      <dd>Format: <code>void  create_disconnect();</code><br>
                          Restores the Create to power on configuration (which will also shut off
                          any running motors).
                       </dd>
@@ -4960,7 +4962,7 @@ int main()
                   <td><a name="create_read_block"></a></td>
                   <td><code>create_read_block </code> [Category: Create Serial Interface Function]
                     <dl>
-                      <dd>Format: <code>int create_read_block(char *data, int count);</code><br/>
+                      <dd>Format: <code>int create_read_block(char *data, int count);</code><br>
                          Uses the serial interface to have the Create send the number of bytes specified
                          into the character string pointed to by <code>data</code>
                         . 1 is returned
@@ -4973,7 +4975,7 @@ int main()
                   <td><a name="create_write_byte"></a></td>
                   <td><code>create_write_byte </code> [Category: Create Serial Interface Function]
                     <dl>
-                      <dd>Format: <code>void create_write_byte(char byte);</code><br/>
+                      <dd>Format: <code>void create_write_byte(char byte);</code><br>
                          Uses the serial interface to have the KIPR Robot Controller send the specified
                          byte to the iRobot Create. The purpose of this function is for writing
                          functions for supplying a series of byte commands to the Create to have
@@ -4992,7 +4994,7 @@ int main()
                   <td><a name="create_full"></a></td>
                   <td><code>create_full </code> [Category: Create Configuration Function]
                     <dl>
-                      <dd>Format: <code>void  create_full();</code><br/>
+                      <dd>Format: <code>void  create_full();</code><br>
                          Create will move however you tell it (even if that is a bad thing). In
                          particular, the Create will not stop and disconnect if a wheel drop or
                          cliff sensor goes high.
@@ -5004,7 +5006,7 @@ int main()
                   <td><a name="create_passive"></a></td>
                   <td><code>create_passive </code> [Category: Create Configuration Function]
                     <dl>
-                      <dd>Format: <code>void  create_passive();</code><br/> Puts Create into passive mode (motor commands won't work).</dd>
+                      <dd>Format: <code>void  create_passive();</code><br> Puts Create into passive mode (motor commands won't work).</dd>
                     </dl>
                   </td>
                 </tr>
@@ -5012,7 +5014,7 @@ int main()
                   <td><a name="create_safe"></a></td>
                   <td><code>create_safe </code> [Category: Create Configuration Function]
                     <dl>
-                      <dd>Format: <code>void create_safe();</code><br/>
+                      <dd>Format: <code>void create_safe();</code><br>
                          Create will execute all commands, but will disconnect and stop if a wheel
                          drop or cliff sensor goes high.
                       </dd>
@@ -5023,7 +5025,7 @@ int main()
                   <td><a name="create_start"></a></td>
                   <td><code>create_start </code> [Category: Create Configuration Function]
                     <dl>
-                      <dd>Format: <code>void  create_start();</code><br/>
+                      <dd>Format: <code>void  create_start();</code><br>
                          Puts Create back into active mode (all commands will work). Active mode
                          is the default mode at power on.
                       </dd>
@@ -5035,7 +5037,7 @@ int main()
                   <td><code>get_create_mode </code> [Category: Create Configuration Function]
                     <dl>
                       <dd>
-                        <dd>Format: <code>int get_create_mode();</code><br/>
+                        <dd>Format: <code>int get_create_mode();</code><br>
                            Returns the Create's current operating mode (0=off, 1=passive, 2=safe,
                            3=full). In passive mode, motor commands don't work. All commands work
                            in safe or full mode. In safe mode, the Create will stop all motors and
@@ -5057,7 +5059,7 @@ int main()
                   <td><a name="create_drive"></a></td>
                   <td><code>create_drive </code> [Category: Create Movement Function]
                     <dl>
-                      <dd>Format: <code>void create_drive(int speed, int radius);</code><br/>
+                      <dd>Format: <code>void create_drive(int speed, int radius);</code><br>
                          Moves the Create in an arc (see below for point turns and straight). Speed
                          range for all commands is -500 to 500mm/sec and radius is -2000 to 2000mm.
                       </dd>
@@ -5068,7 +5070,7 @@ int main()
                   <td><a name="create_drive_direct"></a></td>
                   <td><code>create_drive_direct </code> [Category: Create Movement Function]
                     <dl>
-                      <dd>Format: <code>void create_drive_direct(int r_speed, int l_speed);</code><br/>
+                      <dd>Format: <code>void create_drive_direct(int r_speed, int l_speed);</code><br>
                          Moves the Create by setting the speed for the left side and right side
                          separately, speed range -500 to 500mm/sec.
                       </dd>
@@ -5079,7 +5081,7 @@ int main()
                   <td><a name="create_drive_straight"></a></td>
                   <td><code>create_drive_straight </code> [Category: Create Movement Function]
                     <dl>
-                      <dd>Format: <code>void create_drive_straight(int speed);</code><br/> Moves the Create straight at speed in the range -500 to 500mm/sec.</dd>
+                      <dd>Format: <code>void create_drive_straight(int speed);</code><br> Moves the Create straight at speed in the range -500 to 500mm/sec.</dd>
                     </dl>
                   </td>
                 </tr>
@@ -5087,7 +5089,7 @@ int main()
                   <td><a name="create_spin_CCW"></a></td>
                   <td><code>create_spin_CCW </code> [Category: Create Movement Function]
                     <dl>
-                      <dd>Format: <code>void create_spin_CCW(int speed);</code><br/>
+                      <dd>Format: <code>void create_spin_CCW(int speed);</code><br>
                          Spins the Create Counter Clock Wise with edge speed of speed of -500 to
                          500mm/sec.
                       </dd>
@@ -5098,7 +5100,7 @@ int main()
                   <td><a name="create_spin_CW"></a></td>
                   <td><code>create_spin_CW </code> [Category: Create Movement Function]
                     <dl>
-                      <dd>Format: <code>void create_spin_CW(int speed);</code><br/> Spins the Create Clock Wise with edge speed of -500 to 500mm/sec.</dd>
+                      <dd>Format: <code>void create_spin_CW(int speed);</code><br> Spins the Create Clock Wise with edge speed of -500 to 500mm/sec.</dd>
                     </dl>
                   </td>
                 </tr>
@@ -5106,7 +5108,7 @@ int main()
                   <td><a name="create_stop"></a></td>
                   <td><code>create_stop </code> [Category: Create Movement Function]
                     <dl>
-                      <dd>Format: <code>void create_stop();</code><br/> Stops the Create drive wheels.</dd>
+                      <dd>Format: <code>void create_stop();</code><br> Stops the Create drive wheels.</dd>
                     </dl>
                   </td>
                 </tr>
@@ -5115,7 +5117,7 @@ int main()
                   <td><code>get_create_distance</code> [Category: Create Movement Function]
                     <dl>
                       <dd>
-                        <dd>Format: <code>int get_create_distance();</code><br/>
+                        <dd>Format: <code>int get_create_distance();</code><br>
                            Returns the accumulated distance the Create has traveled since it was
                            turned on or since the distance was reset. Moving backwards reduces this
                            value. The distance is in millimeters.
@@ -5129,7 +5131,7 @@ int main()
                   <td><code>get_create_normalized_angle</code> [Category: Create Movement Function]
                     <dl>
                       <dd>
-                        <dd>Format: <code>int get_create_normalized_angle();</code><br/>
+                        <dd>Format: <code>int get_create_normalized_angle();</code><br>
                            Returns the accumulated angle the Create has turned since it was turned
                            on or the distance was reset, normalized to the range 0 to 359 degrees.
                            Turning CCW increases this value and CW decreases the value.
@@ -5143,7 +5145,7 @@ int main()
                   <td><code>get_create_overcurrents</code> [Category: Create Movement Function]
                     <dl>
                       <dd>
-                        <dd>Format: <code>int get_create_overcurrents();</code><br/>
+                        <dd>Format: <code>int get_create_overcurrents();</code><br>
                            Returns the overcurrent status byte where the 16's bit indicates overcurrent
                            in the left wheel; 8's bit overcurrent in the right wheel, 4's bit is
                            LD2, 2's bit is LD0 and 1's bit is LD1 (LD is for the Create's 3 low
@@ -5159,7 +5161,7 @@ int main()
                   <td><code>get_create_requested_left_velocity</code> [Category: Create Movement Function]
                     <dl>
                       <dd>
-                        <dd>Format: <code>int get_create_requested_left_velocity();</code><br/>
+                        <dd>Format: <code>int get_create_requested_left_velocity();</code><br>
                            Returns the speed the Create is moving (-500 to 500mm/sec) the left wheel
                            according to the most recent movement command executed.
                         </dd>
@@ -5172,7 +5174,7 @@ int main()
                   <td><code>get_create_requested_radius</code> [Category: Create Movement Function]
                     <dl>
                       <dd>
-                        <dd>Format: <code>int get_create_requested_radius();</code><br/>
+                        <dd>Format: <code>int get_create_requested_radius();</code><br>
                            Returns the radius the Create is turning (-2000 to 2000mm) according
                            to the most recent movement command executed.
                         </dd>
@@ -5185,7 +5187,7 @@ int main()
                   <td><code>get_create_requested_right_velocity</code> [Category: Create Movement Function]
                     <dl>
                       <dd>
-                        <dd>Format: <code>int get_create_requested_right_velocity();</code><br/>
+                        <dd>Format: <code>int get_create_requested_right_velocity();</code><br>
                            Returns the speed the Create is moving (-500 to 500mm/sec) the right
                            wheel according to the most recent movement command executed.
                         </dd>
@@ -5198,7 +5200,7 @@ int main()
                   <td><code>get_create_requested_velocity</code> [Category: Create Movement Function]
                     <dl>
                       <dd>
-                        <dd>Format: <code>int get_create_requested_velocity();</code><br/>
+                        <dd>Format: <code>int get_create_requested_velocity();</code><br>
                            Returns the speed the Create is moving (-500 to 500mm/s) according to
                            the most recent movement command executed.
                         </dd>
@@ -5211,7 +5213,7 @@ int main()
                   <td><code>get_create_total_angle</code> [Category: Create Movement Function]
                     <dl>
                       <dd>
-                        <dd>Format: <code>int get_create_total_angle();</code><br/>
+                        <dd>Format: <code>int get_create_total_angle();</code><br>
                            Returns the accumulated angle the Create has turned through since it
                            was turned on or since the distance or angle was reset. Turning CCW increases
                            this value and CW decreases the value.
@@ -5225,7 +5227,7 @@ int main()
                   <td><code>set_create_distance</code> [Category: Create Movement Function]
                     <dl>
                       <dd>
-                        <dd>Format: <code>void set_create_distance(int dist);</code><br/> Resets the distance accumulation value for <code>get_create_distance</code> to the value specified.</dd>
+                        <dd>Format: <code>void set_create_distance(int dist);</code><br> Resets the distance accumulation value for <code>get_create_distance</code> to the value specified.</dd>
                       </dd>
                     </dl>
                   </td>
@@ -5235,7 +5237,7 @@ int main()
                   <td><code>set_create_normalized_angle</code> [Category: Create Movement Function]
                     <dl>
                       <dd>
-                        <dd>Format: <code>void set_create_normalized_angle(int angle);</code><br/> Resets the normalized angle accumulation value for <code>get_create_normalized_angle</code> to the value specified.</dd>
+                        <dd>Format: <code>void set_create_normalized_angle(int angle);</code><br> Resets the normalized angle accumulation value for <code>get_create_normalized_angle</code> to the value specified.</dd>
                       </dd>
                     </dl>
                   </td>
@@ -5245,7 +5247,7 @@ int main()
                   <td><code>set_create_total_angle</code> [Category: Create Movement Function]
                     <dl>
                       <dd>
-                        <dd>Format: <code>void set_create_total_angle(int angle);</code><br/> Resets the total angle accumulation value for <code>get_create_total_angle</code> to the value specified.</dd>
+                        <dd>Format: <code>void set_create_total_angle(int angle);</code><br> Resets the total angle accumulation value for <code>get_create_total_angle</code> to the value specified.</dd>
                       </dd>
                     </dl>
                   </td>
@@ -5254,13 +5256,13 @@ int main()
             </table>
             <!-- Create Sensor Functions--><a name="Create_sensors"></a>
             <h4>Create Sensor Functions</h4>
-            <!-- &lt;img class="center" src="images/CreateSensors.gif" width=50%&gt;&lt;/img&gt;--><br/>
+            <!-- &lt;img class="center" src="images/CreateSensors.gif" width=50%&gt;&lt;/img&gt;--><br>
             <tr>
               <td><a name="get_create_advance_button"></a></td>
               <td><code>get_create_advance_button</code> [Category: Create Sensor Function]
                 <dl>
                   <dd>
-                    <dd>Format: <code>int get_create_advance_button();</code><br/> Returns 1 if the advance (
+                    <dd>Format: <code>int get_create_advance_button();</code><br> Returns 1 if the advance (
                       <bold><code>&gt;&gt;</code>|</bold>) button is being pressed, 0 otherwise.
                     </dd>
                   </dd>
@@ -5272,7 +5274,7 @@ int main()
               <td><code>get_create_bay_AI</code> [Category: Create Sensor Function]
                 <dl>
                   <dd>
-                    <dd>Format: <code>int get_create_bay_AI();</code><br/>
+                    <dd>Format: <code>int get_create_bay_AI();</code><br>
                        Returns the 10 bit analog value on pin 4 of the connector in the Create cargo
                        bay.
                     </dd>
@@ -5285,7 +5287,7 @@ int main()
               <td><code>get_create_bay_DI</code> [Category: Create Sensor Function]
                 <dl>
                   <dd>
-                    <dd>Format: <code>int get_create_bay_DI();</code><br/>
+                    <dd>Format: <code>int get_create_bay_DI();</code><br>
                        Returns a byte for determining the current digital inputs (0 or 1) being
                        applied to pins 16, 6, 18, 5, and 17 of the connector in the Create cargo
                        bay. The 128, 64, and 32 bits of the byte are not used. The 16 bit is for
@@ -5301,7 +5303,7 @@ int main()
               <td><code>get_create_cwdrop</code> [Category: Create Sensor Function]
                 <dl>
                   <dd>
-                    <dd>Format: <code>int get_create_cwdrop();</code><br/> Returns 1 if the front caster wheel has dropped, 0 otherwise.</dd>
+                    <dd>Format: <code>int get_create_cwdrop();</code><br> Returns 1 if the front caster wheel has dropped, 0 otherwise.</dd>
                   </dd>
                 </dl>
               </td>
@@ -5311,7 +5313,7 @@ int main()
               <td><code>get_create_infrared</code> [Category: Create Sensor Function]
                 <dl>
                   <dd>
-                    <dd>Format: <code>int get_create_infrared();</code><br/>
+                    <dd>Format: <code>int get_create_infrared();</code><br>
                        Returns the byte detected from an iRobot remote control, Returns 255 if no
                        byte has been detected.
                     </dd>
@@ -5324,7 +5326,7 @@ int main()
               <td><code>get_create_lbump</code> [Category: Create Sensor Function]
                 <dl>
                   <dd>
-                    <dd>Format: <code>int get_create_lbump();</code><br/> Returns 1 if the left bumper is pressed, 0 otherwise.</dd>
+                    <dd>Format: <code>int get_create_lbump();</code><br> Returns 1 if the left bumper is pressed, 0 otherwise.</dd>
                   </dd>
                 </dl>
               </td>
@@ -5334,7 +5336,7 @@ int main()
               <td><code>get_create_lcliff</code> [Category: Create Sensor Function]
                 <dl>
                   <dd>
-                    <dd>Format: <code>int get_create_lcliff();</code><br/>
+                    <dd>Format: <code>int get_create_lcliff();</code><br>
                        Returns 1 if the left cliff sensor is over a surface that doesn't reflect
                        IR (e.g., black) or over a cliff, 0 otherwise.
                     </dd>
@@ -5347,7 +5349,7 @@ int main()
               <td><code>get_create_lcliff_amt</code> [Category: Create Sensor Function]
                 <dl>
                   <dd>
-                    <dd>Format: <code>int get_create_lcliff_amt();</code><br/> Returns the left cliff sensor (analog) reading as a 12 bit value (0 to 4095).</dd>
+                    <dd>Format: <code>int get_create_lcliff_amt();</code><br> Returns the left cliff sensor (analog) reading as a 12 bit value (0 to 4095).</dd>
                   </dd>
                 </dl>
               </td>
@@ -5357,7 +5359,7 @@ int main()
               <td><code>get_create_lfcliff</code> [Category: Create Sensor Function]
                 <dl>
                   <dd>
-                    <dd>Format: <code>int get_create_lfcliff();</code><br/>
+                    <dd>Format: <code>int get_create_lfcliff();</code><br>
                        Returns 1 if left front cliff sensor is over a surface that doesn't reflect
                        IR (e.g., black) or over a cliff, 0 otherwise.
                     </dd>
@@ -5370,7 +5372,7 @@ int main()
               <td><code>get_create_lfcliff_amt</code> [Category: Create Sensor Function]
                 <dl>
                   <dd>
-                    <dd>Format: <code>int get_create_lfcliff_amt();</code><br/>
+                    <dd>Format: <code>int get_create_lfcliff_amt();</code><br>
                        Returns the left front cliff sensor (analog) reading as a 12 bit value (0
                        to 4095).
                     </dd>
@@ -5383,7 +5385,7 @@ int main()
               <td><code>get_create_lwdrop</code> [Category: Create Sensor Function]
                 <dl>
                   <dd>
-                    <dd>Format: <code>int get_create_lwdrop();</code><br/>
+                    <dd>Format: <code>int get_create_lwdrop();</code><br>
                        Returns 1 if the left wheel has dropped, 0 otherwise. Materials supplied
                        with the Create include two wheel clips that when installed will prevent
                        the drive wheels from dropping.
@@ -5397,7 +5399,7 @@ int main()
               <td><code>get_create_number_of_stream_packets</code> [Category: Create Sensor Function]
                 <dl>
                   <dd>
-                    <dd>Format: <code>int get_create_number_of_stream_packets();</code><br/> If data streaming is being used, returns the size of the stream.</dd>
+                    <dd>Format: <code>int get_create_number_of_stream_packets();</code><br> If data streaming is being used, returns the size of the stream.</dd>
                   </dd>
                 </dl>
               </td>
@@ -5407,7 +5409,7 @@ int main()
               <td><code>get_create_play_button</code> [Category: Create Sensor Function]
                 <dl>
                   <dd>
-                    <dd>Format: <code>int get_create_play_button();</code><br/> Returns 1 if the play button ( <code>
+                    <dd>Format: <code>int get_create_play_button();</code><br> Returns 1 if the play button ( <code>
                         <bold>&gt;</bold></code>
                       ) is being pressed,
                        0 otherwise.
@@ -5421,7 +5423,7 @@ int main()
               <td><code>get_create_rbump</code> [Category: Create Sensor Function]
                 <dl>
                   <dd>
-                    <dd>Format: <code>int get_create_rbump();</code><br/> Returns 1 if the right bumper is pressed, 0 otherwise.</dd>
+                    <dd>Format: <code>int get_create_rbump();</code><br> Returns 1 if the right bumper is pressed, 0 otherwise.</dd>
                   </dd>
                 </dl>
               </td>
@@ -5431,7 +5433,7 @@ int main()
               <td><code>get_create_rcliff</code> [Category: Create Sensor Function]
                 <dl>
                   <dd>
-                    <dd>Format: <code>int get_create_rcliff();</code><br/>
+                    <dd>Format: <code>int get_create_rcliff();</code><br>
                        Returns 1 if right cliff sensor is over a surface that doesn't reflect IR
                        (e.g., black) or over a cliff, 0 otherwise.
                     </dd>
@@ -5444,7 +5446,7 @@ int main()
               <td><code>get_create_rcliff_amt</code> [Category: Create Sensor Function]
                 <dl>
                   <dd>
-                    <dd>Format: <code>int get_create_rcliff_amt();</code><br/> Returns the right cliff sensor (analog) reading as a 12 bit value (0 to 4095).</dd>
+                    <dd>Format: <code>int get_create_rcliff_amt();</code><br> Returns the right cliff sensor (analog) reading as a 12 bit value (0 to 4095).</dd>
                   </dd>
                 </dl>
               </td>
@@ -5454,7 +5456,7 @@ int main()
               <td><code>get_create_rfcliff</code> [Category: Create Sensor Function]
                 <dl>
                   <dd>
-                    <dd>Format: <code>int get_create_rfcliff();</code><br/>
+                    <dd>Format: <code>int get_create_rfcliff();</code><br>
                        Returns 1 if right front cliff sensor is over a surface that doesn't reflect
                        IR (e.g., black) or over a cliff, 0 otherwise.
                     </dd>
@@ -5467,7 +5469,7 @@ int main()
               <td><code>get_create_rfcliff_amt</code> [Category: Create Sensor Function]
                 <dl>
                   <dd>
-                    <dd>Format: <code>int get_create_rfcliff_amt();</code><br/>
+                    <dd>Format: <code>int get_create_rfcliff_amt();</code><br>
                        Returns the right front cliff sensor (analog) reading as a 12 bit value (0
                        to 4095).
                     </dd>
@@ -5480,7 +5482,7 @@ int main()
               <td><code>get_create_rwdrop</code> [Category: Create Sensor Function]
                 <dl>
                   <dd>
-                    <dd>Format: <code>int get_create_rlwdrop();</code><br/> Returns 1 if right wheel has dropped, 0 otherwise.</dd>
+                    <dd>Format: <code>int get_create_rlwdrop();</code><br> Returns 1 if right wheel has dropped, 0 otherwise.</dd>
                   </dd>
                 </dl>
               </td>
@@ -5490,7 +5492,7 @@ int main()
               <td><code>get_create_vwall</code> [Category: Create Sensor Function]
                 <dl>
                   <dd>
-                    <dd>Format: <code>int get_create_vwall();</code><br/> Returns 1 if an iRobot virtual wall beacon is detected, 0 otherwise.</dd>
+                    <dd>Format: <code>int get_create_vwall();</code><br> Returns 1 if an iRobot virtual wall beacon is detected, 0 otherwise.</dd>
                   </dd>
                 </dl>
               </td>
@@ -5500,7 +5502,7 @@ int main()
               <td><code>get_create_wall</code> [Category: Create Sensor Function]
                 <dl>
                   <dd>
-                    <dd>Format: <code>int get_create_wall();</code><br/>
+                    <dd>Format: <code>int get_create_wall();</code><br>
                        Returns 1 if a wall is detected by the right facing wall sensor, 0 otherwise.
                        There is no left facing wall sensor.
                     </dd>
@@ -5513,7 +5515,7 @@ int main()
               <td><code>get_create_wall_amt</code> [Category: Create Sensor Function]
                 <dl>
                   <dd>
-                    <dd>Format: <code>int get_create_wall_amt();</code><br/>
+                    <dd>Format: <code>int get_create_wall_amt();</code><br>
                        Returns the current wall sensor (analog) reading as a 12 bit value (0 to
                        4095).
                     </dd>
@@ -5530,7 +5532,7 @@ int main()
                   <td><code>get_create_battery_capacity</code> [Category: Create Sensor Function]
                     <dl>
                       <dd>
-                        <dd>Format: <code>int get_create_battery_capacity();</code><br/>
+                        <dd>Format: <code>int get_create_battery_capacity();</code><br>
                            Returns the battery capacity in mAh. This function is seldom used in
                            practice.
                         </dd>
@@ -5543,7 +5545,7 @@ int main()
                   <td><code>get_create_battery_charge</code> [Category: Create Sensor Function]
                     <dl>
                       <dd>
-                        <dd>Format: <code>int get_create_battery_charge();</code><br/> Returns the battery charge in mAh.</dd>
+                        <dd>Format: <code>int get_create_battery_charge();</code><br> Returns the battery charge in mAh.</dd>
                       </dd>
                     </dl>
                   </td>
@@ -5553,7 +5555,7 @@ int main()
                   <td><code>get_create_battery_charging_state</code> [Category: Create Sensor Function]
                     <dl>
                       <dd>
-                        <dd>Format: <code>int get_create_charging_state();</code><br/>
+                        <dd>Format: <code>int get_create_charging_state();</code><br>
                            0-not charging; 1-recondition charging; 2-full charging; 3-trickle charging;
                            4-waiting; 5-charge fault. This function is seldom used in practice.
                         </dd>
@@ -5566,7 +5568,7 @@ int main()
                   <td><code>get_create_battery_current</code> [Category: Create Sensor Function]
                     <dl>
                       <dd>
-                        <dd>Format: <code>int get_create_battery_current();</code><br/> Returns the current flow in mA.</dd>
+                        <dd>Format: <code>int get_create_battery_current();</code><br> Returns the current flow in mA.</dd>
                       </dd>
                     </dl>
                   </td>
@@ -5576,7 +5578,7 @@ int main()
                   <td><code>get_create_battery_temp</code> [Category: Create Sensor Function]
                     <dl>
                       <dd>
-                        <dd>Format: <code>int get_create_battery_temp();</code><br/> Returns the battery temperature in degrees C.</dd>
+                        <dd>Format: <code>int get_create_battery_temp();</code><br> Returns the battery temperature in degrees C.</dd>
                       </dd>
                     </dl>
                   </td>
@@ -5586,7 +5588,7 @@ int main()
                   <td><code>get_create_battery_voltage</code> [Category: Create Sensor Function]
                     <dl>
                       <dd>
-                        <dd>Format: <code>int get_create_battery_voltage();</code><br/> Returns the battery voltage in mV.</dd>
+                        <dd>Format: <code>int get_create_battery_voltage();</code><br> Returns the battery voltage in mV.</dd>
                       </dd>
                     </dl>
                   </td>
@@ -5601,7 +5603,7 @@ int main()
                   <td><a name="create_create_spot"></a></td>
                   <td><code>create_spot </code> [Category: Create Built In Script]
                     <dl>
-                      <dd>Format: <code>void  create_spot();</code><br/> Simulates a Roomba doing a spot clean.</dd>
+                      <dd>Format: <code>void  create_spot();</code><br> Simulates a Roomba doing a spot clean.</dd>
                     </dl>
                   </td>
                 </tr>
@@ -5609,7 +5611,7 @@ int main()
                   <td><a name="create_cover"></a></td>
                   <td><code>create_cover </code> [Category: Create Function]
                     <dl>
-                      <dd>Format: <code>void  create_cover();</code><br/> Simulates a Roomba covering a room.</dd>
+                      <dd>Format: <code>void  create_cover();</code><br> Simulates a Roomba covering a room.</dd>
                     </dl>
                   </td>
                 </tr>
@@ -5617,7 +5619,7 @@ int main()
                   <td><a name="create_demo"></a></td>
                   <td><code>create_demo </code> [Category: Create Function]
                     <dl>
-                      <dd>Format: <code>void  create_demo(int  d);</code><br/> Runs built in demos (see (<a href="http://www.irobot.com/filelibrary/pdfs/hrd/create/Create%20Open%20Interface_v2.pdf">Create Open Interface Manual</a>).</dd>
+                      <dd>Format: <code>void  create_demo(int  d);</code><br> Runs built in demos (see (<a href="http://www.irobot.com/filelibrary/pdfs/hrd/create/Create%20Open%20Interface_v2.pdf">Create Open Interface Manual</a>).</dd>
                     </dl>
                   </td>
                 </tr>
@@ -5625,7 +5627,7 @@ int main()
                   <td><a name="create_cover_dock"></a></td>
                   <td><code>create_cover_dock </code> [Category: Create Function]
                     <dl>
-                      <dd>Format: <code>void create_cover_dock();</code><br/>
+                      <dd>Format: <code>void create_cover_dock();</code><br>
                          Create roams around until its IR detects an iRobot IR docking station and
                          then attempts to dock for recharging.
                       </dd>
@@ -5642,7 +5644,7 @@ int main()
                   <td><a name="create_advance_led"></a></td>
                   <td><code>create_advance_led </code> [Category: Create Music/LED Function]
                     <dl>
-                      <dd>Format: <code>void create_advance_led(int on);</code><br/> The value 1 causes the Advance LED light ( <code>&gt;&gt;</code>
+                      <dd>Format: <code>void create_advance_led(int on);</code><br> The value 1 causes the Advance LED light ( <code>&gt;&gt;</code>
                         |) to turn on,
                          0 to turn it off.
                       </dd>
@@ -5653,7 +5655,7 @@ int main()
                   <td><a name="create_play_led"></a></td>
                   <td><code>create_play_led </code> [Category: Create Music/LED Function]
                     <dl>
-                      <dd>Format: <code>void create_play_led(int on);</code><br/> The value 1 causes the Play LED (&gt;) to turn on, 0 to turn it off.</dd>
+                      <dd>Format: <code>void create_play_led(int on);</code><br> The value 1 causes the Play LED (&gt;) to turn on, 0 to turn it off.</dd>
                     </dl>
                   </td>
                 </tr>
@@ -5661,7 +5663,7 @@ int main()
                   <td><a name="create_play_song"></a></td>
                   <td><code>create_play_song </code> [Category: Create Music/LED Function]
                     <dl>
-                      <dd>Format: <code>void create_play_song(int num);</code><br/> Plays the specified song that has been loaded onto the Create.</dd>
+                      <dd>Format: <code>void create_play_song(int num);</code><br> Plays the specified song that has been loaded onto the Create.</dd>
                     </dl>
                   </td>
                 </tr>
@@ -5669,7 +5671,7 @@ int main()
                   <td><a name="create_power_led"></a></td>
                   <td><code>create_power_led </code> [Category: Create Music/LED Function]
                     <dl>
-                      <dd>Format: <code>void create_power_led(int color, int brightness);</code><br/>
+                      <dd>Format: <code>void create_power_led(int color, int brightness);</code><br>
                          The value 0 causes the I/O power LED to turn red, 255 to turn green. Brightness
                          ranges from 0 to 255 with 0 representing off.
                       </dd>
@@ -5681,7 +5683,7 @@ int main()
                   <td><code>get_create_song_number</code> [Category: Create Music/LED Function]
                     <dl>
                       <dd>
-                        <dd>Format: <code>int get_create_song_number();</code><br/> Returns the number of the song currently selected (0 to 15).</dd>
+                        <dd>Format: <code>int get_create_song_number();</code><br> Returns the number of the song currently selected (0 to 15).</dd>
                       </dd>
                     </dl>
                   </td>
@@ -5691,7 +5693,7 @@ int main()
                   <td><code>get_create_song_playing</code> [Category: Create Music/LED Function]
                     <dl>
                       <dd>
-                        <dd>Format: <code>int get_create_song_playing();</code><br/> Returns 1 if a song is playing, 0 otherwise.</dd>
+                        <dd>Format: <code>int get_create_song_playing();</code><br> Returns 1 if a song is playing, 0 otherwise.</dd>
                       </dd>
                     </dl>
                   </td>
@@ -5700,7 +5702,7 @@ int main()
                   <td><a name="create_load_song"></a></td>
                   <td><code>create_load_song </code> [Category: Create Music/LED Function]
                     <dl>
-                      <dd>Format: <code>void create_load_song(int num);</code><br/>
+                      <dd>Format: <code>void create_load_song(int num);</code><br>
                          Loads a song from an internal 16 by 33 working array of integers to the
                          Create, where the first column for each song is the number of notes (max
                          is 16). The remaining columns alternate between pitch and duration. See
@@ -6243,7 +6245,7 @@ int main()
             <p>The library functions for Botball are:</p>
             <table style="background-color: #f0f0f0;">
               <tr>
-                <td><br/>
+                <td><br>
                   <div class="Indent"><code><a name="run_forx"></a>run_for(&lt;</code><i>time</i><code>&gt;, &lt;</code><i>function_name</i><code>&gt;);</code>
                     <dl>
                       <dd>
@@ -6344,7 +6346,7 @@ int main()
             <p>The library functions for controlling threads are:</p>
             <table style="background-color: #f0f0f0;">
               <tr>
-                <td><br/>
+                <td><br>
                   <div class="Indent"><code><a name="thread_createx"></a>thread_create(&lt;</code><i>function_name</i><code>&gt;);</code>
                     <dl>
                       <dd>
@@ -6411,28 +6413,28 @@ void chksens() {
                 and digital sensor ports are located.
               </p>
               <!-- &lt;img class="center" src="images/Link_sensor_ports.gif" width="70%"&gt;&lt;/img&gt;-->
-              <p class="center"><br/>Examples of digital and analog sensors used with the KIPR Robot Controller</p>
+              <p class="center"><br>Examples of digital and analog sensors used with the KIPR Robot Controller</p>
               <table class="centerTable" border="1" cellpadding="5" cellspacing="0">
                 <tbody>
                   <tr>
-                    <td align="center" valign="center"><a href="#light_sensor"><br/><img border="0" src="images/LightSensor.gif" width="60%"/><br/> IR light sensor<br/></a> (analog)</td>
-                    <td align="center" valign="center"><a href="#reflectance_sensors"><img border="0" src="images/Reflectance_sensors.gif" width="60%"/><br/> IR reflectance sensors<br/></a> (analog)</td>
-                    <td align="center" valign="center"><a href="#ET_sensor"><img border="0" src="images/ET.gif" width="60%"/><br/> IR "E.T." Distance Sensor<br/></a> (floating analog)</td>
+                    <td align="center" valign="center"><a href="#light_sensor"><br><img border="0" src="images/LightSensor.gif" width="60%"><br> IR light sensor<br></a> (analog)</td>
+                    <td align="center" valign="center"><a href="#reflectance_sensors"><img border="0" src="images/Reflectance_sensors.gif" width="60%"><br> IR reflectance sensors<br></a> (analog)</td>
+                    <td align="center" valign="center"><a href="#ET_sensor"><img border="0" src="images/ET.gif" width="60%"><br> IR "E.T." Distance Sensor<br></a> (floating analog)</td>
                   </tr>
                   <tr>
-                    <td align="center" colspan="2" valign="center"><a href="#touch_sensors"><br/><img border="0" src="images/TouchSensors.gif"/><br/> Touch Sensors<br/></a> (digital)</td>
-                    <td align="center" valign="center"><a href="#break_beam_sensor"><br/><img border="0" src="images/BreakBeam.gif"/><br/> IR "Break Beam" Sensor<br/></a> (digital)</td>
+                    <td align="center" colspan="2" valign="center"><a href="#touch_sensors"><br><img border="0" src="images/TouchSensors.gif"><br> Touch Sensors<br></a> (digital)</td>
+                    <td align="center" valign="center"><a href="#break_beam_sensor"><br><img border="0" src="images/BreakBeam.gif"><br> IR "Break Beam" Sensor<br></a> (digital)</td>
                   </tr>
                   <tr>
-                    <td align="center" valign="center"><a href="#analog_slider"><br/><img border="0" src="images/AnalogSlider.gif"/><br/> Slider sensor<br/></a> (analog)</td>
-                    <td align="center" valign="center"><a href="#analog_pot"><br/><img border="0" src="images/AnalogPot.gif"/><br/> Potentiometer (Pot) Sensor<br/></a> (analog)</td>
-                    <td align="center" valign="center"><a href="#sensors"><br/><img border="0" height="120" src="images/sonar.jpg" width="60"/><br/> Ultrasonic rangefinder (SONAR)</a></td>
+                    <td align="center" valign="center"><a href="#analog_slider"><br><img border="0" src="images/AnalogSlider.gif"><br> Slider sensor<br></a> (analog)</td>
+                    <td align="center" valign="center"><a href="#analog_pot"><br><img border="0" src="images/AnalogPot.gif"><br> Potentiometer (Pot) Sensor<br></a> (analog)</td>
+                    <td align="center" valign="center"><a href="#sensors"><br><img border="0" height="120" src="images/sonar.jpg" width="60"><br> Ultrasonic rangefinder (SONAR)</a></td>
                   </tr>
                 </tbody>
               </table>
               <!-- light_sensor-->
               <div class="Indent"><a name="light_sensor"></a>
-                <h4>Infrared light sensor (analog)</h4><img border="0" src="images/LightSensor.gif" width="40%"/><br/>
+                <h4>Infrared light sensor (analog)</h4><img border="0" src="images/LightSensor.gif" width="40%"><br>
                 <ul>
                   <li>Analog sensor</li>
                   <li>Connect to ports 0-7</li>
@@ -6445,7 +6447,7 @@ void chksens() {
                   </li>
                 </ul>
                 <!-- Reflectance Sensors--><a name="reflectance_sensors"></a>
-                <h4>Infrared large and small reflectance sensors (analog)</h4><img border="0" src="images/Reflectance_sensors.gif" width="30%"/><br/>
+                <h4>Infrared large and small reflectance sensors (analog)</h4><img border="0" src="images/Reflectance_sensors.gif" width="30%"><br>
                 <ul>
                   <li>Analog sensor</li>
                   <li>Connect to ports 0-7</li>
@@ -6465,7 +6467,7 @@ void chksens() {
                   <li>Sensor has a reflectance range of about 3 inches</li>
                 </ul>
                 <!-- ET_sensor--><a name="ET_sensor"></a>
-                <h4>Infrared "E.T." Distance Sensor (floating analog)</h4><img border="0" src="images/ET.gif"/><br/>
+                <h4>Infrared "E.T." Distance Sensor (floating analog)</h4><img border="0" src="images/ET.gif"><br>
                 <ul>
                   <li>
                     Floating analog sensor (pullup resistor for port must be disabled for readings to
@@ -6486,7 +6488,7 @@ void chksens() {
                   </li>
                 </ul>
                 <!-- touch_sensor--><a name="touch_sensors"></a>
-                <h4>Touch sensors (digital)</h4><img border="0" src="images/TouchSensors.gif"/><br/>
+                <h4>Touch sensors (digital)</h4><img border="0" src="images/TouchSensors.gif"><br>
                 <ul>
                   <li>Digital switch sensors</li>
                   <li>Connect to ports 8-15</li>
@@ -6496,7 +6498,7 @@ void chksens() {
                   <li>These make good bumpers and can be used for limit switches on an actuator</li>
                 </ul>
                 <!-- break_beam_sensor--><a name="break_beam_sensor"></a>
-                <h4>Infrared "Break Beam" Sensor (digital)</h4><img border="0" src="images/image010.gif"/><br/>
+                <h4>Infrared "Break Beam" Sensor (digital)</h4><img border="0" src="images/image010.gif"><br>
                 <ul>
                   <li>Digital sensor</li>
                   <li>Connect to ports 8-15</li>
@@ -6529,14 +6531,14 @@ void chksens() {
                 &lt;li&gt;The sonar field of view is an approximately 30 degree teardrop:&lt;/li&gt;
                 &lt;/ul&gt;
                 --><a name="analog_slider"></a>
-                <h4>Analog slider</h4><img border="0" height="66" src="images/AnalogSlider.gif" width="200"/><br/>
+                <h4>Analog slider</h4><img border="0" height="66" src="images/AnalogSlider.gif" width="200"><br>
                 <ul>
                   <li>Analog sensor</li>
                   <li>Connect to ports 0-7</li>
                   <li>Access with function <code><a href="#analog">analog</a>(&lt;</code><i>port#</i><code>&gt;);</code></li>
                   <li>Values range from 0 to 2047</li>
                 </ul><a name="analog_pot"></a>
-                <h4>Analog pot (potentiometer)</h4><img border="0" height="128" src="images/AnalogPot.gif" width="100"/><br/>
+                <h4>Analog pot (potentiometer)</h4><img border="0" height="128" src="images/AnalogPot.gif" width="100"><br>
                 <ul>
                   <li>Analog sensor</li>
                   <li>Connect to ports 0-7</li>
@@ -6544,7 +6546,7 @@ void chksens() {
                   <li>Values range from 0 to 2047</li>
                 </ul>
               </div>
-              <!-- USB Sensors--><br/><a name="USB_sensors"></a>
+              <!-- USB Sensors--><br><a name="USB_sensors"></a>
               <h3>USB Sensor Images</h3>
               <p>USB sensors plug into one of the two USB2 ports on the back of the KIPR Robot Controller</p>
               <!-- &lt;img class="center" src="images/Link_back_view_txt.gif" width="80%"&gt;&lt;/img&gt;-->
@@ -6557,17 +6559,17 @@ void chksens() {
                 <tbody>
                   <tr>
                     <td>
-                      <!-- &lt;img class="center" src="images/webcam.gif" width="50%"&gt;&lt;/img&gt;--><br/>
-                      <p class="center">A web camera used with KIPR Robot Controller<br/> (see the <a href="#CategoryVision">Vision Function List</a>)</p>
+                      <!-- &lt;img class="center" src="images/webcam.gif" width="50%"&gt;&lt;/img&gt;--><br>
+                      <p class="center">A web camera used with KIPR Robot Controller<br> (see the <a href="#CategoryVision">Vision Function List</a>)</p>
                     </td>
                     <td>
-                      <!-- &lt;img class="center" src="images/XtionDepth.gif" width="50%"&gt;&lt;/img&gt;--><br/>
-                      <p class="center">ASUS Xtion used with KIPR Robot Controller<br/> (see the <a href="#CategoryVision">Depth Function List</a>)</p>
+                      <!-- &lt;img class="center" src="images/XtionDepth.gif" width="50%"&gt;&lt;/img&gt;--><br>
+                      <p class="center">ASUS Xtion used with KIPR Robot Controller<br> (see the <a href="#CategoryVision">Depth Function List</a>)</p>
                     </td>
                   </tr>
                 </tbody>
               </table>
-              <!-- DC Motors--><br/><a name="DC_motor"></a>
+              <!-- DC Motors--><br><a name="DC_motor"></a>
               <h3>DC Motor Images</h3>
               <p>
                 The image below is the front of the KIPR Robot Controller showing where the DC motor
@@ -6578,10 +6580,10 @@ void chksens() {
                 <tbody>
                   <tr>
                     <td>
-                      <!-- &lt;img class="center" src="images/DC_motor.gif" width="30%"&gt;&lt;/img&gt;--><br/>
-                      <p class="center">Example DC motor used with the KIPR Robot Controller<br/>
+                      <!-- &lt;img class="center" src="images/DC_motor.gif" width="30%"&gt;&lt;/img&gt;--><br>
+                      <p class="center">Example DC motor used with the KIPR Robot Controller<br>
                          (modified servo - potentiometer
-                         removed and wiring with two prong plug installed).<br/><br/>
+                         removed and wiring with two prong plug installed).<br><br>
                          DC motors are controlled
                          using the KIPR Robot Controller <a href="#CategoryMotors">motor functions.</a>
                       </p>
@@ -6589,14 +6591,14 @@ void chksens() {
                   </tr>
                 </tbody>
               </table>
-              <!-- Servos--><br/><br/><a name="Servos"></a>
+              <!-- Servos--><br><br><a name="Servos"></a>
               <h3>Servo Images</h3>
               <p>
                 The image below is the front of the KIPR Robot Controller showing where the servo ports
                 are located.
               </p>
               <!-- &lt;img class="center" src="images/Link_servo_ports.gif" width="80%"&gt;&lt;/img&gt;-->
-              <p class="center"><br/>Example servo motors used with the KIPR Robot Controller<br/>
+              <p class="center"><br>Example servo motors used with the KIPR Robot Controller<br>
                  (hobbyist servo - used
                  as packaged by manufacturer)
               </p>
@@ -6617,7 +6619,7 @@ void chksens() {
               <table class="centerTable">
                 <tbody>
                   <tr>
-                    <td colspan="2"><br/>Servos are controlled by using the KIPR Robot Controller <a href="#CategoryServos">servo functions</a>.</td>
+                    <td colspan="2"><br>Servos are controlled by using the KIPR Robot Controller <a href="#CategoryServos">servo functions</a>.</td>
                   </tr>
                 </tbody>
               </table>
@@ -6753,7 +6755,7 @@ void chksens() {
                   <!-- &lt;img class="center" src="images/SimulatorBoard.jpg" width=80%&gt;&lt;/img&gt;-->
                 </td>
               </tr>
-            </table><br/>
+            </table><br>
             <!-- START FOOTER-->
           </div>
         </div>
