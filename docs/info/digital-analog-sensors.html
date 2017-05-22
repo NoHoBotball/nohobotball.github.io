@@ -17,9 +17,9 @@
     <script type="text/javascript" src="/js/prism.js"></script>
     <script>
       $(document).ready(function () {
-      $('.button-collapse').sideNav({
-      draggable: true
-      });
+        $('.button-collapse').sideNav({
+          draggable: true
+        });
       $('.active').parent().parent().siblings()[0].click() })
     </script>
     <header>
@@ -29,105 +29,102 @@
             <h5 class="white-text"><a class="white-text" href="/docs/index.html">Index</a></h5>
           </div>
         </li>
-        <li><a href="/docs/tutorial.html">Tutorial</a></li>
         <li class="no-padding">
           <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Tutorial</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/tutorial/index.html">Index</a></li>
+                  <li><a href="/docs/tutorial/debugging.html">Debugging</a></li>
+                  <li><a href="/docs/tutorial/style.html">Style</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Create</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/create/index.html">Index</a></li>
+                  <li><a href="/docs/create/battery.html">Battery</a></li>
+                  <li><a href="/docs/create/built-ins.html">Built Ins</a></li>
+                  <li><a href="/docs/create/configuration.html">Configuration</a></li>
+                  <li><a href="/docs/create/movement.html">Movement</a></li>
+                  <li><a href="/docs/create/music-leds.html">Music Leds</a></li>
+                  <li><a href="/docs/create/sensors.html">Sensors</a></li>
+                  <li><a href="/docs/create/serial.html">Serial</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Wallaby</a>
+              <div class="collapsible-body" style="display: block;">
+                <ul>
+                  <li><a href="/docs/wallaby/camera.html">Camera</a></li>
+                  <li><a href="/docs/wallaby/common-functions.html">Common Functions</a></li>
+                  <li><a href="/docs/wallaby/depth.html">Depth</a></li>
+                  <li><a href="/docs/wallaby/functions.html">Functions</a></li>
+                  <li><a href="/docs/wallaby/graphics.html">Graphics</a></li>
+                  <li><a href="/docs/wallaby/usb.html">Usb</a></li>
+                </ul>
+              </div>
+            </li>
             <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Data Objects</a>
               <div class="collapsible-body" style="display: block;">
                 <ul>
-                  <li><a href="/docs/data-objects/index.html">Introduction</a></li>
-                  <li><a href="/docs/data-objects/variables.html">Variables</a></li>
+                  <li><a href="/docs/data-objects/index.html">Index</a></li>
+                  <li><a href="/docs/data-objects/arrays.html">Arrays</a></li>
                   <li><a href="/docs/data-objects/constants.html">Constants</a></li>
                   <li><a href="/docs/data-objects/data-types.html">Data Types</a></li>
-                  <li><a href="/docs/data-objects/arrays.html">Arrays</a></li>
-                  <li><a href="/docs/data-objects/structures.html">Structures</a></li>
                   <li><a href="/docs/data-objects/initialization-examples.html">Initialization Examples</a></li>
+                  <li><a href="/docs/data-objects/pointers.html">Pointers</a></li>
+                  <li><a href="/docs/data-objects/structures.html">Structures</a></li>
+                  <li><a href="/docs/data-objects/variables.html">Variables</a></li>
                 </ul>
               </div>
             </li>
-            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Statements and Expressions</a>
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>General</a>
               <div class="collapsible-body" style="display: block;">
                 <ul>
-                  <li><a href="/docs/statements-and-expressions/index.html">Introduction</a></li>
-                  <li><a href="/docs/statements-and-expressions/operators.html">Operators</a></li>
-                  <li><a href="/docs/statements-and-expressions/control-flow.html">Control Flow</a></li>
+                  <li><a href="/docs/general/botball.html">Botball</a></li>
+                  <li><a href="/docs/general/math.html">Math</a></li>
+                  <li><a href="/docs/general/threads.html">Threads</a></li>
                 </ul>
               </div>
             </li>
-          </ul>
-        </li>
-        <li><a href="/docs/style.html">Style</a></li>
-        <li><a href="/docs/debugging.html">Debugging</a></li>
-        <li class="no-padding">
-          <ul class="collapsible collapsible-accordion">
-            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Printing</a>
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Info</a>
               <div class="collapsible-body" style="display: block;">
                 <ul>
-                  <li><a href="/docs/printing/index.html">Introduction</a></li>
-                  <li><a href="/docs/printing/examples.html">Examples</a></li>
-                  <li><a href="/docs/printing/printf-codes.html">printf Codes</a></li>
+                  <li class="active"><a href="/docs/info/digital-analog-sensors.html">Digital Analog-sensors</a></li>
+                  <li><a href="/docs/info/motors-servos.html">Motors Servos</a></li>
+                  <li><a href="/docs/info/simulator.html">Simulator</a></li>
+                  <li><a href="/docs/info/usb-sensors.html">Usb Sensors</a></li>
                 </ul>
               </div>
             </li>
-          </ul>
-          <ul class="collapsible collapsible-accordion">
             <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Preprocessor</a>
               <div class="collapsible-body" style="display: block;">
                 <ul>
-                  <li><a href="/docs/preprocessor/index.html">Introduction</a></li>
+                  <li><a href="/docs/preprocessor/index.html">Index</a></li>
+                  <li><a href="/docs/preprocessor/conditional-compilation.html">Conditional Compilation</a></li>
                   <li><a href="/docs/preprocessor/directives.html">Directives</a></li>
                   <li><a href="/docs/preprocessor/include.html">Include</a></li>
                   <li><a href="/docs/preprocessor/macros.html">Macros</a></li>
-                  <li><a href="/docs/preprocessor/conditional-compilation.html">Conditional Compilation</a></li>
                 </ul>
               </div>
             </li>
-          </ul>
-        </li>
-        <li><a href="/docs/lib/math.html">Math Library</a></li>
-        <li class="no-padding">
-          <ul class="collapsible collapsible-accordion">
-            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>KIPR Wallaby/Link</a>
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Printing</a>
               <div class="collapsible-body" style="display: block;">
                 <ul>
-                  <li><a href="/docs/lib/kipr/common-functions.html">Common Functions</a></li>
-                  <li><a href="/docs/lib/kipr/functions.html">Functions List</a></li>
-                  <li><a href="/docs/lib/kipr/camera.html">Camera Functions</a></li>
-                  <li><a href="/docs/lib/kipr/graphics.html">Graphics Functions</a></li>
-                  <li><a href="/docs/lib/kipr/depth.html">Depth Sensor Functions</a></li>
-                  <li><a href="/docs/lib/kipr/usb.html">File I/O Functions</a></li>
+                  <li><a href="/docs/printing/index.html">Index</a></li>
+                  <li><a href="/docs/printing/examples.html">Examples</a></li>
+                  <li><a href="/docs/printing/printf-codes.html">Printf Codes</a></li>
                 </ul>
               </div>
             </li>
-          </ul>
-          <ul class="collapsible collapsible-accordion">
-            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>iRobot Create</a>
+            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Statements And-expressions</a>
               <div class="collapsible-body" style="display: block;">
                 <ul>
-                  <li><a href="/docs/lib/kipr/create/index.html">Introduction</a></li>
-                  <li><a href="/docs/lib/kipr/create/serial.html">Serial Functions</a></li>
-                  <li><a href="/docs/lib/kipr/create/configuration.html">Configuration Functions</a></li>
-                  <li><a href="/docs/lib/kipr/create/movement.html">Movement Functions</a></li>
-                  <li><a href="/docs/lib/kipr/create/sensors.html">Sensor Functions</a></li>
-                  <li><a href="/docs/lib/kipr/create/battery.html">Battery Functions</a></li>
-                  <li><a href="/docs/lib/kipr/create/built-ins.html">Built-In Functions</a></li>
-                  <li><a href="/docs/lib/kipr/create/music-leds.html">LED and Music Functions</a></li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </li>
-        <li><a href="/docs/lib/kipr/botball.html">Botball Functions</a></li>
-        <li><a href="/docs/lib/kipr/threads.html">Threads</a></li>
-        <li class="no-padding">
-          <ul class="collapsible collapsible-accordion">
-            <li><a class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Motors and Sensors</a>
-              <div class="collapsible-body" style="display: block;">
-                <ul>
-                  <li class="active"><a href="/docs/lib/kipr/info/digital-analog-sensors.html">Analog and Digital Sensors</a></li>
-                  <li><a href="/docs/lib/kipr/info/usb-sensors.html">USB Sensors</a></li>
-                  <li><a href="/docs/lib/kipr/info/motors-servos.html">Motors and Servos</a></li>
-                  <li><a href="/docs/lib/kipr/info/simulator.html">Simulator</a></li>
+                  <li><a href="/docs/statements-and-expressions/index.html">Index</a></li>
+                  <li><a href="/docs/statements-and-expressions/control-flow.html">Control Flow</a></li>
+                  <li><a href="/docs/statements-and-expressions/operators.html">Operators</a></li>
                 </ul>
               </div>
             </li>
@@ -140,7 +137,7 @@
           <div class="col s12"><a class="button-collapse" href="#" data-activates="slide-out" style="font-size: 50px;"><i class="material-icons">menu</i></a><a class="brand-logo waves-effect" id="top" href="/docs/index.html">Botball Documentation</a></div>
         </div>
         <div class="nav-wrapper">
-          <div class="col s12"><a class="breadcrumb" href="#!">Lib</a><a class="breadcrumb" href="#!">Kipr</a><a class="breadcrumb" href="#!">Info</a><a class="breadcrumb" href="#!">Digital and Analog Sensors</a>
+          <div class="col s12"><a class="breadcrumb" href="#!">Info</a><a class="breadcrumb" href="#!">Digital Analog-sensors</a>
           </div>
         </div>
       </nav>

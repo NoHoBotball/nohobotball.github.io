@@ -1,43 +1,77 @@
 block vars
   - var selected = 'none'
 
-- var color = 'red'
-- var pathDict = {
-  'tutorial': [
-    'index',
-    'debugging',
-    'style'
-  ],
-  'create': [
-    'battery',
-    'built-ins',
-    'configuration',
-    'index',
-    'movement',
-    'music-leds',
-    'sensors',
-    'serial'
-  ],
-  'data-objects': [
-    'arrays',
-    'constants',
-    'data-types',
-    'index',
-    'initialization-examples',
-    'pointers',
-    'structures',
-    'variables'
-  ],
-  'general': [
-    'botball',
-    'math',
-    'threads'
-  ]
-}
+-  
+  var color = 'red'
+  var pathDict = {
+    'tutorial': [
+      'index',
+      'debugging',
+      'style',
+    ],
+    'create': [
+      'index',
+      'battery',
+      'built-ins',
+      'configuration',
+      'movement',
+      'music-leds',
+      'sensors',
+      'serial'
+    ],
+    'wallaby': [
+      'camera',
+      'common-functions',
+      'depth',
+      'functions',
+      'graphics',
+      'usb'
+    ],
+    'data-objects': [
+      'index',
+      'arrays',
+      'constants',
+      'data-types',
+      'initialization-examples',
+      'pointers',
+      'structures',
+      'variables'
+    ],
+    'general': [
+      'botball',
+      'math',
+      'threads'
+    ],
+    'info': [
+      'digital-analog-sensors',
+      'motors-servos',
+      'simulator',
+      'usb-sensors'
+    ],
+    'preprocessor': [
+      'index',
+      'conditional-compilation',
+      'directives',
+      'include',
+      'macros'
+    ],
+    'printing': [
+      'index',
+      'examples',
+      'printf-codes'
+    ],
+    'statements-and-expressions': [
+      'index',
+      'control-flow',
+      'operators'
+    ]
+  }
 
-- var titleParse = function(val) {
-  return val;
-}
+  var titleParse = function(val) {
+    return val.replace('-', ' ').split(' ').map(function(val) {
+      return val.charAt(0).toUpperCase() + val.slice(1);
+    }).join(' ');
+  }
 
 doctype html
 html
@@ -57,9 +91,9 @@ html
     script(type='text/javascript', src='/js/prism.js')
     script.
       $(document).ready(function () {
-      $('.button-collapse').sideNav({
-      draggable: true
-      });
+        $('.button-collapse').sideNav({
+          draggable: true
+        });
       $('.active').parent().parent().siblings()[0].click() })
     header
       ul#slide-out.side-nav.fixed
@@ -69,17 +103,17 @@ html
               a.white-text(href='/docs/index.html') Index
         li.no-padding
           ul.collapsible.collapsible-accordion
-            each topval in pathDict
+            each subvals, topval in pathDict
               li
                 a.collapsible-header
                   i.material-icons arrow_drop_down
                   | #{titleParse(topval)}
                 .collapsible-body(style='display: block')
                   ul
-                    each subval in pathDict[topval]
-                    li(class=(selected == (topval + '/' + subval) ? 'active' : ''))
-                      a(href=('/docs/' + topval + '/' + subval + '.html'))= titleParse(subval)
-      li(class=(selected == 'full' ? 'active' : ''))
+                    each subval in subvals
+                      li(class=(selected == (topval + '/' + subval) ? 'active' : ''))
+                        a(href=('/docs/' + topval + '/' + subval + '.html'))= titleParse(subval)
+        li(class=(selected == 'full' ? 'active' : ''))
           a(href='/docs/full.html') Full Documentation
       nav.nav-extended.lighten-2(class=color)
         .nav-wrapper
@@ -89,8 +123,8 @@ html
             a#top.brand-logo.waves-effect(href='/docs/index.html') Botball Documentation
         .nav-wrapper
           .col.s12
-            each element in path
-                a.breadcrumb(href='#!')= element
+            each element in selected.split('/')
+                a.breadcrumb(href='#!')= titleParse(element)
     main.row
       .container.col.s12
         block content

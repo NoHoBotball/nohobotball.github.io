@@ -5,9 +5,9 @@
   "main": "",
   "scripts": {
     "clean": "find .. -name *.html -delete",
-    "build": "npm run clean && ./node_modules/.bin/pug include --out .. -P",
-    "build-min": "npm run clean && ./node_modules/.bin/pug include --out ..",
-    "watch": "npm run clean && ./node_modules/.bin/pug include --out .. -P --watch",
+    "build": "npm run clean && ./node_modules/.bin/pug include -b exclude --out .. -P",
+    "build-min": "npm run clean && ./node_modules/.bin/pug include -b exclude --out ..",
+    "watch": "npm run clean && ./node_modules/.bin/pug include -b exclude --out .. -P --watch",
     "local": " ./node_modules/http-server/bin/http-server .."
   },
   "author": "",
