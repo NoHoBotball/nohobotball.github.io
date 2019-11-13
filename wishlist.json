@@ -6,4 +6,11 @@
         "description": "Our room gets very dusty with drilling PVC, wood, and metal. We spend much of our valuable time sweeping, when we could have a vacuum to make it easier.",
         "link": "https://www.google.com"
     }
+    {
+        "name": "Chromebooks",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/61mdECoYszL._AC_SL1280_.jpg",
+        "price": 84.95,
+        "description": "Programming our robots requires students to use a web interface to connect to the controller and edit/upload code. Chromebooks are made to support web interfaces, so are perfect for our use-case",
+        "link": "https://www.amazon.com/Dell-ChromeBook-Celeron-1366x768-Renewed/dp/B0742HZW9B/ref=sr_1_7?keywords=chromebook&qid=1573671323&sr=8-7"
+    }
 ]
